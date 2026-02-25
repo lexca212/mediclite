@@ -1,0 +1,734 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+    Tutup</button>
+  <h4 class="modal-title">Lembar Masuk Nicu</h4>
+</div>
+<div class="modal-body">
+  <h4>I. Riwayat Kesehatan</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Nomor Rawat</label>
+        <input type="text" name="no_rawat_lembarMasukNicu" class="form-control" placeholder="Nomor Rawat" required value="{$reg_periksa.no_rawat}" readonly>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Nama Pasien</label>
+        <input type="text" name="nm_pasien" class="form-control" placeholder="" required
+          value="{$pasien.nm_pasien}" readonly />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="kd_dokter">Dokter</label>
+        <input type="text" name="kd_dokter" class="form-control" required value="{$dpjp_ranap.nm_dokter}" readonly>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="tanggal">Tanggal &amp; Jam Pemeriksaan</label>
+        <input type="text" name="tanggal" id="tanggal" class="form-control" placeholder=""
+          value="{?=date('Y-m-d')?} {?=date('H:i:s')?}" readonly>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="diagnosa">Diagnosis Masuk</label>
+        <input type="text" name="diagnosa" id="diagnosa" class="form-control" value="">
+      </div>
+    </div>
+    <h4>1. Tanda Vital</h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">a. Apgar Score "<" "6"</label>
+          <select name="tanda_vital_a" id="tanda_vital_a" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="keterangan_tanda_vital_a">Keterangan</label>
+          <input type="text" name="keterangan_tanda_vital_a" id="keterangan_tanda_vital_a" class="form-control"
+            value="">
+        </div>
+      </div>
+      <!-- B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">b. Denyut Jantung "<" "120" - ">" "140" kali/menit</label>
+          <select name="tanda_vital_b" id="tanda_vital_b" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_tanda_vital_b" id="keterangan_tanda_vital_b" class="form-control"
+            value="">
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">c. Laju respirasi "<" " 40" - ">" " 60" kali/menit</label>
+          <select name="tanda_vital_c" id="tanda_vital_c" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_tanda_vital_c" id="keterangan_tanda_vital_c" class="form-control"
+            value="">
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_d">d. suhu axilla "<" " 36.5" Celcius - ">" " 37.5" Celcius</label>
+          <select name="tanda_vital_d" id="tanda_vital_d" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_tanda_vital_d" id="keterangan_tanda_vital_d" class="form-control"
+            value="">
+        </div>
+      </div>
+      <!--E-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">e. Saturasi Oksigen perifer (SpO2) "<" " 95%"</label>
+          <select name="tanda_vital_e" id="tanda_vital_e" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_tanda_vital_e" id="keterangan_tanda_vital_e" class="form-control"
+            value="">
+        </div>
+      </div>
+    </div>
+    <!--END TANDA VITAL-->
+    <h4>2. Pemeriksaan Fisik</h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_a">a. Neonatus dengan aktivitas, tonus, refleks, tangis lemah</label>
+          <select name="pemeriksaan_fisik_a" id="pemeriksaan_fisik_a" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_a" id="keterangan_pemeriksaan_fisik_a"
+            class="form-control" value="">
+        </div>
+      </div>
+      <!--B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_b">b. Refleks pupil anisokor</label>
+          <select name="pemeriksaan_fisik_b" id="pemeriksaan_fisik_b" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_b" id="keterangan_pemeriksaan_fisik_b"
+            class="form-control" value="">
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_c">c. Kejang</label>
+          <select name="pemeriksaan_fisik_c" id="pemeriksaan_fisik_c" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_c" id="keterangan_pemeriksaan_fisik_c"
+            class="form-control" value="">
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_d">d. Retrraksi Dinding dada</label>
+          <select name="pemeriksaan_fisik_d" id="pemeriksaan_fisik_d" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_d" id="keterangan_pemeriksaan_fisik_d"
+            class="form-control" value="">
+        </div>
+      </div>
+      <!--E-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_e">e. Sianosis</label>
+          <select name="pemeriksaan_fisik_e" id="pemeriksaan_fisik_e" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_e" id="keterangan_pemeriksaan_fisik_e"
+            class="form-control" value="">
+        </div>
+      </div>
+      <!--F-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_f">f. Ikterik</label>
+          <select name="pemeriksaan_fisik_f" id="pemeriksaan_fisik_f" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_f" id="keterangan_pemeriksaan_fisik_f"
+            class="form-control" value="">
+        </div>
+      </div>
+      <!--G-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_g">g. Anuria</label>
+          <select name="pemeriksaan_fisik_g" id="pemeriksaan_fisik_g" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_g" id="keterangan_pemeriksaan_fisik_g"
+            class="form-control" value="">
+        </div>
+      </div>
+      <!--H-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_h">h. Waktu Pengisian Kapiler ">" " 3" detik</label>
+          <select name="pemeriksaan_fisik_h" id="pemeriksaan_fisik_h" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_pemeriksaan_fisik_h" id="keterangan_pemeriksaan_fisik_h"
+            class="form-control" value="">
+        </div>
+      </div>
+    </div>
+    <!--END PEMERIKSAAN FISIK-->
+    <h4>
+      <center>3. Nilai Laboratorium</center>
+    </h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_a">a. Kadar hemoglobin "<" " 7" g/Dl</label>
+          <select name="nilai_lab_a" id="nilai_lab_a" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_a" id="keterangan_nilai_lab_a" class="form-control" value="">
+        </div>
+      </div>
+      <!--B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_b">b. Kadar hemoatokrit ">" " 65%"</label>
+          <select name="nilai_lab_b" id="nilai_lab_b" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_b" id="keterangan_nilai_lab_b" class="form-control" value="">
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_c">b. Kadar leukosit ">" " 25.000/ml"</label>
+          <select name="nilai_lab_c" id="nilai_lab_c" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_c" id="keterangan_nilai_lab_c" class="form-control" value="">
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_d">d. PH "<" "7.2" atau ">" " 7.7"</label>
+          <select name="nilai_lab_d" id="nilai_lab_d" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_d" id="keterangan_nilai_lab_d" class="form-control" value="">
+        </div>
+      </div>
+      <!--E-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_e">e. (PaO₂) "<" " 80 mmHg"</label>
+          <select name="nilai_lab_e" id="nilai_lab_e" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_e" id="keterangan_nilai_lab_e" class="form-control" value="">
+        </div>
+      </div>
+      <!--F-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_f">f. (PaCO₂) ">" " 50 mmHg"</label>
+          <select name="nilai_lab_f" id="nilai_lab_f" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_f" id="keterangan_nilai_lab_f" class="form-control" value="">
+        </div>
+      </div>
+      <!--G-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_g">g. (HCO₃) "<" " 15"</label>
+          <select name="nilai_lab_g" id="nilai_lab_g" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_g" id="keterangan_nilai_lab_g" class="form-control" value="">
+        </div>
+      </div>
+      <!--H-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_h">h. Kadar glukosa serum "<" " 47 mg/dL" atau ">" " 150mg/dL"</label>
+          <select name="nilai_lab_h" id="nilai_lab_h" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_h" id="keterangan_nilai_lab_h" class="form-control" value="">
+        </div>
+      </div>
+      <!--I-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_i">i. Kadar natrium serum "<" " 110 mEq/L" atau ">" " 160 mEq/L"</label>
+          <select name="nilai_lab_i" id="nilai_lab_i" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_i" id="keterangan_nilai_lab_i" class="form-control" value="">
+        </div>
+      </div>
+      <!--J-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_j">j. Kadar kalium serum "<" " 2.5 mEq/L" atau ">" " 6.0 mEq/L"</label>
+          <select name="nilai_lab_j" id="nilai_lab_j" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_j" id="keterangan_nilai_lab_j" class="form-control" value="">
+        </div>
+      </div>
+      <!--K-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_k">k. Kadar kalsium serum "<" " 6 mg/dL" atau ">" " 15 mg/dL"</label>
+          <select name="nilai_lab_k" id="nilai_lab_k" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_nilai_lab_k" id="keterangan_nilai_lab_k" class="form-control" value="">
+        </div>
+      </div>
+    </div>
+    <!--END LABORQATTTT-->
+    <h4>
+      <center>4. Kondisi Lain</center>
+    </h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="kondisi_lain_a">a. BBL "<" " 2000" gram atau ">" " 4000" gram</label>
+          <select name="kondisi_lain_a" id="kondisi_lain_a" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_kondisi_lain_a" id="keterangan_kondisi_lain_a" class="form-control"
+            value="">
+        </div>
+      </div>
+      <!--B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="kondisi_lain_b">b. Bayi Baru Lahir dengan ibu dalam perawatan intensif</label>
+          <select name="kondisi_lain_b" id="kondisi_lain_b" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_kondisi_lain_b" id="keterangan_kondisi_lain_b" class="form-control"
+            value="">
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="kondisi_lain_c">c. Kelainan kongenital(bibir sumbing,
+            atresiani,anencephaly,polydactyly,dll)</label>
+          <select name="kondisi_lain_c" id="kondisi_lain_c" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_kondisi_lain_c" id="keterangan_kondisi_lain_c" class="form-control"
+            value="">
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="kondisi_lain_d">d. Bayi usia ">" " 30" hari yang masih bisa dirawat di NICU</label>
+          <select name="kondisi_lain_d" id="kondisi_lain_d" class="form-control">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input type="text" name="keterangan_kondisi_lain_d" id="keterangan_kondisi_lain_d" class="form-control"
+            value="">
+        </div>
+      </div>
+    </div>
+    <!--END KONDISI LAIN-->
+    <div class="col-sm-12">
+      <h4>KESIMPULAN</h4>
+      <div class="form-group">
+        <!--
+        <textarea name="ket_lokalis" id="ket_lokalis" class="form-control" cols="5"
+          rows="5">{if: $penilaian_medis_igd}{?=isset_or($penilaian_medis_igd.ket_lokalis,'')?}{else}{?=isset_or($data_medisIGD.penilaian_medis_igd.ket_lokalis,'')?}{/if}</textarea>
+      -->
+        <P>Berdasarkan kondisi diatas maka pasien ini memnuhi indukasi diruang perinatologi level : <input type="text"
+            name="kesimpulan_level" id="kesimpulan_level"><br>Alat trasnport yang digunakan : <input type="text"
+            name="kesimpulan_transport" id="kesimpulan_transport" placeholder="Incubator / Box Bayi"><br>Pendamping
+          selama transfer : <input type="text" name="kesimpulan_pendamping" id="kesimpulan_pendamping"
+            placeholder="Dokter/Paramedis/POS"><br>Alat medis yang dibawa selama transfer : <input type="text"
+            name="kesimpulan_alat" id="kesimpulan_alat" placeholder="JIka YA sebutkan, Jika tidak isi (-)"> </P>
+
+      </div>
+    </div>
+
+
+    <div class="col-md-12">
+      <button class="btn btn-success" id="saveLembarMasukNicu">Simpan</button>
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Kembali</button>
+      <button class="btn btn-primary" id="cetak_hasil" data-no_rawat="{$reg_periksa.no_rawat}">cETAK</button>
+      <!--<button type="button" ><a href="{?=url([ADMIN,'dokter_ranap','masuknicu', {$reg_periksa.no_rawat}])?}" target="_blank"></a>Cetak</button>-->
+    </div>
+
+    <br>
+    <div class="tampildata">
+      <table class="table" width="100%">
+        <thead>
+          <tr>
+            <th>Nomor Rawat</th>
+            <th>Keluhan</th>
+            <th>Hubungan</th>
+            <th>Dokter</th>
+          </tr>
+        </thead>
+        <tbody>
+          {if: $reg_periksa}
+          <tr>
+            <td>{$reg_periksa.no_rawat}</td>
+            <td>{$reg_periksa.no_rkm_medis}</td>
+            <td>{$reg_periksa.kd_dokter}</td>
+            <td>{$reg_periksa.kd_poli}</td>
+          </tr>
+          {else}
+          <tr>
+            <td colspan="6">Tidak ada data</td>
+          </tr>
+          {/if}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript">
+    $('select').selectator();
+    $(document).ready(function () {
+      $("#saveLembarMasukNicu").click(function () {
+        var baseURL = mlite.url + '/' + mlite.admin;
+        var no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val();
+        var set_no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val().replace(/\//g, '');
+        var kd_dokter = $('#kd_dokter').val();
+        var tanggal = $('#tanggal').val();
+        var diagnosa = $('#diagnosa').val();
+        var tanda_vital_a = $('select[name=tanda_vital_a]').val();
+        var tanda_vital_b = $('select[name=tanda_vital_b]').val();
+        var tanda_vital_c = $('select[name=tanda_vital_c]').val();
+        var tanda_vital_d = $('select[name=tanda_vital_d]').val();
+        var tanda_vital_e = $('select[name=tanda_vital_e]').val();
+        var keterangan_tanda_vital_a = $('#keterangan_tanda_vital_a').val();
+        var keterangan_tanda_vital_b = $('#keterangan_tanda_vital_b').val();
+        var keterangan_tanda_vital_c = $('#keterangan_tanda_vital_c').val();
+        var keterangan_tanda_vital_d = $('#keterangan_tanda_vital_d').val();
+        var keterangan_tanda_vital_e = $('#keterangan_tanda_vital_e').val();
+        var pemeriksaan_fisik_a = $('select[name=pemeriksaan_fisik_a]').val();
+        var pemeriksaan_fisik_b = $('select[name=pemeriksaan_fisik_b]').val();
+        var pemeriksaan_fisik_c = $('select[name=pemeriksaan_fisik_c]').val();
+        var pemeriksaan_fisik_d = $('select[name=pemeriksaan_fisik_d]').val();
+        var pemeriksaan_fisik_e = $('select[name=pemeriksaan_fisik_e]').val();
+        var pemeriksaan_fisik_f = $('select[name=pemeriksaan_fisik_f]').val();
+        var pemeriksaan_fisik_g = $('select[name=pemeriksaan_fisik_g]').val();
+        var pemeriksaan_fisik_h = $('select[name=pemeriksaan_fisik_h]').val();
+        var keterangan_pemeriksaan_fisik_a = $('#keterangan_pemeriksaan_fisik_a').val();
+        var keterangan_pemeriksaan_fisik_b = $('#keterangan_pemeriksaan_fisik_b').val();
+        var keterangan_pemeriksaan_fisik_c = $('#keterangan_pemeriksaan_fisik_c').val();
+        var keterangan_pemeriksaan_fisik_d = $('#keterangan_pemeriksaan_fisik_d').val();
+        var keterangan_pemeriksaan_fisik_e = $('#keterangan_pemeriksaan_fisik_e').val();
+        var keterangan_pemeriksaan_fisik_f = $('#keterangan_pemeriksaan_fisik_f').val();
+        var keterangan_pemeriksaan_fisik_g = $('#keterangan_pemeriksaan_fisik_g').val();
+        var keterangan_pemeriksaan_fisik_h = $('#keterangan_pemeriksaan_fisik_h').val();
+        var nilai_lab_a = $('select[name=nilai_lab_a]').val();
+        var nilai_lab_b = $('select[name=nilai_lab_b]').val();
+        var nilai_lab_c = $('select[name=nilai_lab_c]').val();
+        var nilai_lab_d = $('select[name=nilai_lab_d]').val();
+        var nilai_lab_e = $('select[name=nilai_lab_e]').val();
+        var nilai_lab_f = $('select[name=nilai_lab_f]').val();
+        var nilai_lab_g = $('select[name=nilai_lab_g]').val();
+        var nilai_lab_h = $('select[name=nilai_lab_h]').val();
+        var nilai_lab_i = $('select[name=nilai_lab_i]').val();
+        var nilai_lab_j = $('select[name=nilai_lab_j]').val();
+        var nilai_lab_k = $('select[name=nilai_lab_k]').val();
+        var keterangan_nilai_lab_a = $('#keterangan_nilai_lab_a').val();
+        var keterangan_nilai_lab_b = $('#keterangan_nilai_lab_b').val();
+        var keterangan_nilai_lab_c = $('#keterangan_nilai_lab_c').val();
+        var keterangan_nilai_lab_d = $('#keterangan_nilai_lab_d').val();
+        var keterangan_nilai_lab_e = $('#keterangan_nilai_lab_e').val();
+        var keterangan_nilai_lab_f = $('#keterangan_nilai_lab_f').val();
+        var keterangan_nilai_lab_g = $('#keterangan_nilai_lab_g').val();
+        var keterangan_nilai_lab_h = $('#keterangan_nilai_lab_h').val();
+        var keterangan_nilai_lab_i = $('#keterangan_nilai_lab_i').val();
+        var keterangan_nilai_lab_j = $('#keterangan_nilai_lab_j').val();
+        var keterangan_nilai_lab_k = $('#keterangan_nilai_lab_k').val();
+        var kondisi_lain_a = $('select[name=kondisi_lain_a]').val();
+        var kondisi_lain_b = $('select[name=kondisi_lain_b]').val();
+        var kondisi_lain_c = $('select[name=kondisi_lain_c]').val();
+        var kondisi_lain_d = $('select[name=kondisi_lain_d]').val();
+        var keterangan_kondisi_lain_a = $('#keterangan_kondisi_lain_a').val();
+        var keterangan_kondisi_lain_b = $('#keterangan_kondisi_lain_b').val();
+        var keterangan_kondisi_lain_c = $('#keterangan_kondisi_lain_c').val();
+        var keterangan_kondisi_lain_d = $('#keterangan_kondisi_lain_d').val();
+        var kesimpulan_level = $('#kesimpulan_level').val();
+        var kesimpulan_transport = $('#kesimpulan_transport').val();
+        var kesimpulan_pendamping = $('#kesimpulan_pendamping').val();
+        var kesimpulan_alat = $('#kesimpulan_alat').val();
+
+        var url = baseURL + '/dokter_ranap/lembarmasuknicu/?t=' + mlite.token;
+        $.post(url, {
+          no_rawat:no_rawat,
+          kd_dokter:kd_dokter,
+          tanggal:tanggal,
+          diagnosa:diagnosa,
+          tanda_vital_a:tanda_vital_a,
+          tanda_vital_b:tanda_vital_b,
+          tanda_vital_c:tanda_vital_c,
+          tanda_vital_d:tanda_vital_d,
+          tanda_vital_e:tanda_vital_e,
+          keterangan_tanda_vital_a:keterangan_tanda_vital_a,
+          keterangan_tanda_vital_b:keterangan_tanda_vital_b,
+          keterangan_tanda_vital_c:keterangan_tanda_vital_c,
+          keterangan_tanda_vital_d:keterangan_tanda_vital_d,
+          keterangan_tanda_vital_e:keterangan_tanda_vital_e,
+          pemeriksaan_fisik_a:pemeriksaan_fisik_a,
+          pemeriksaan_fisik_b:pemeriksaan_fisik_b,
+          pemeriksaan_fisik_c:pemeriksaan_fisik_c,
+          pemeriksaan_fisik_d:pemeriksaan_fisik_d,
+          pemeriksaan_fisik_e:pemeriksaan_fisik_e,
+          pemeriksaan_fisik_f:pemeriksaan_fisik_f,
+          pemeriksaan_fisik_g:pemeriksaan_fisik_g,
+          pemeriksaan_fisik_h:pemeriksaan_fisik_h,
+          keterangan_pemeriksaan_fisik_a:keterangan_pemeriksaan_fisik_a,
+          keterangan_pemeriksaan_fisik_b:keterangan_pemeriksaan_fisik_b,
+          keterangan_pemeriksaan_fisik_c:keterangan_pemeriksaan_fisik_c,
+          keterangan_pemeriksaan_fisik_d:keterangan_pemeriksaan_fisik_d,
+          keterangan_pemeriksaan_fisik_e:keterangan_pemeriksaan_fisik_e,
+          keterangan_pemeriksaan_fisik_f:keterangan_pemeriksaan_fisik_f,
+          keterangan_pemeriksaan_fisik_g:keterangan_pemeriksaan_fisik_g,
+          keterangan_pemeriksaan_fisik_h:keterangan_pemeriksaan_fisik_h,
+          nilai_lab_a:nilai_lab_a,
+          nilai_lab_b:nilai_lab_b,
+          nilai_lab_c:nilai_lab_c,
+          nilai_lab_d:nilai_lab_d,
+          nilai_lab_e:nilai_lab_e,
+          nilai_lab_f:nilai_lab_f,
+          nilai_lab_g:nilai_lab_g,
+          nilai_lab_h:nilai_lab_h,
+          nilai_lab_i:nilai_lab_i,
+          nilai_lab_j:nilai_lab_j,
+          nilai_lab_k:nilai_lab_k,
+          keterangan_nilai_lab_a:keterangan_nilai_lab_a,
+          keterangan_nilai_lab_b:keterangan_nilai_lab_b,
+          keterangan_nilai_lab_c:keterangan_nilai_lab_c,
+          keterangan_nilai_lab_d:keterangan_nilai_lab_d,
+          keterangan_nilai_lab_e:keterangan_nilai_lab_e,
+          keterangan_nilai_lab_f:keterangan_nilai_lab_f,
+          keterangan_nilai_lab_g:keterangan_nilai_lab_g,
+          keterangan_nilai_lab_h:keterangan_nilai_lab_h,
+          keterangan_nilai_lab_i:keterangan_nilai_lab_i,
+          keterangan_nilai_lab_j:keterangan_nilai_lab_j,
+          keterangan_nilai_lab_k:keterangan_nilai_lab_k,
+          kondisi_lain_a:kondisi_lain_a,
+          kondisi_lain_b:kondisi_lain_b,
+          kondisi_lain_c:kondisi_lain_c,
+          kondisi_lain_d:kondisi_lain_d,
+          keterangan_kondisi_lain_a:keterangan_kondisi_lain_a,
+          keterangan_kondisi_lain_b:keterangan_kondisi_lain_b,
+          keterangan_kondisi_lain_c:keterangan_kondisi_lain_c,
+          keterangan_kondisi_lain_d:keterangan_kondisi_lain_d,
+          kesimpulan_level:kesimpulan_level,
+          kesimpulan_transport:kesimpulan_transport,
+          kesimpulan_pendamping:kesimpulan_pendamping,
+          kesimpulan_alat:kesimpulan_alat,
+        }, function (data) {
+          console.log(data);
+          $('.tampildata').load(baseURL + '/dokter_ranap/lembarmasuknicutampil/' + set_no_rawat + '?t=' + mlite.token);
+        });
+      });
+
+    });
+  </script>
+  <!-- Tombol cetak -->
+  <script>
+    $("#cetak_hasil").click(function (event) {
+
+      var baseURL = mlite.url + '/' + mlite.admin;
+      event.preventDefault();
+      var no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val();
+      var set_no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val().replace(/\//g, '');
+
+      window.open(baseURL + '/dokter_ranap/masuknicu/' + set_no_rawat + '?t=' + mlite.token);
+    });
+  </script>

@@ -1,0 +1,46 @@
+<article class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{$updatetaskid.title}</h3>
+            </div>
+            <div class="panel-body">
+    		<form name="updatetaskid" action="{?=url(ADMIN.'/jkn_mobile/updatetaskidsave/'.@$updatetaskid.form.nomor_referensi)?}" method="POST">
+    			<fieldset>
+                    <div class="form-group">
+                        <label>Tanggal Periksa</label>
+                        <input type="text" name="tanggal_periksa" class="form-control" value="{$updatetaskid.form.tanggal_periksa}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>No Referensi</label>
+                        <input type="text" name="nomor_referensi" class="form-control" value="{$updatetaskid.form.nomor_referensi}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>Task Id</label>
+                        <input type="text" name="taskid" class="form-control" value="{$updatetaskid.form.taskid}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>Waktu</label>
+                        <input type="text" name="waktu" class="form-control" value="{$updatetaskid.form.waktu}"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select class="form-control" data-use-search="true" data-options-height="10px" name="status">
+                            <option value="Sudah" {if: $updatetaskid.form.status == 'Sudah'} selected {/if}>Sudah</option>
+                            <option value="Belum" {if: $updatetaskid.form.status == 'Belum'} selected {/if}>Belum</option>
+                            <option value="Gagal" {if: $updatetaskid.form.status == 'Gagal'} selected {/if}>Gagal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Keterangan</label>
+                        <input type="text" name="keterangan" class="form-control" value="{$updatetaskid.form.keterangan}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="save" class="btn btn-primary" value="Simpan" />
+                    </div>
+                </fieldset>
+            </form>
+            </div>
+        </div>
+    </div>
+</article>

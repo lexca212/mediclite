@@ -1,0 +1,8 @@
+2025-01-09 18:07:40 pid:27541 Workerman[workerman.php] start in DAEMON mode
+2025-01-09 18:15:22 pid:27566 Workerman[workerman.php] status 
+2025-01-14 04:34:01 pid:8397 Workerman[workerman.php] status 
+2025-01-14 04:34:01 pid:8397 Workerman[workerman.php] not run
+2025-01-14 04:34:06 pid:8398 Workerman[workerman.php] start in DEBUG mode
+2025-01-14 07:41:42 pid:8398 Workerman[workerman.php] stopping ...
+2025-01-14 07:41:42 pid:8398 Workerman[workerman.php] has been stopped
+2025-01-14 07:41:52 pid:11632 Workerman[workerman.php] start in DAEMON mode

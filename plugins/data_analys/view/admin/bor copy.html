@@ -1,0 +1,57 @@
+<div class="row" id="bor" style="margin-bottom:100px;">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <!-- Tombol Dropdown Periode -->
+                <div class="btn-group pull-right" style="height: 38px; margin-top:-8px; background-color: #ffffff;
+                    border: 1px solid #dddddd; border-bottom: none;">
+                    <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-calendar"></i>
+                        <span class="hidden-xs" style="font-size: 14px;"> Periode</span>
+                    </span>
+
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu dropdown-menu-right" style="padding:10px; width:260px;">
+
+                        <!-- Periode Awal -->
+                        <li class="mb-2">
+                            <label for="periode_rawat_jalan" class="control-label">Tanggal Awal:</label>
+                            <input type="text" id="tgl_awal" class="form-control tanggal" name="tgl_awal" required>
+                        </li>
+
+                        <!-- Periode Akhir -->
+                        <li class="mb-2">
+                            <label for="tgl_akhir" class="control-label">Tanggal Akhir:</label>
+                            <input type="text" id="tgl_akhir" class="form-control tanggal" name="tgl_akhir" required>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+
+                <h3 class="panel-title">Kelola Pasien</h3>
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div id="notif"></div>
+                </div>
+
+                <div id="display" class="display">
+                    {include: ../plugins/data_analys/view/admin/displaybor.html}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <script>
+  $( function() {
+    $('.tanggal').datetimepicker({
+      defaultDate: '{?=date('Y-m-d')?}',
+      format: 'YYYY-MM-DD',
+      locale: 'id'
+    });
+  } );
+  $('.gallery').lightbox();
+</script> -->

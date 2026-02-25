@@ -1,0 +1,897 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Kelola Data Barang</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div id="notif"></div>
+        </div>
+        <div class="row">
+          <div class="col col-md-6">
+            <div class="searchbox-input form-inline padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group" id="index">
+                <input class="btn btn-default" type="button" id="bukaform" value="Buka Form" />
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-6">
+            <div class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group">
+                <input type="text" name="cari" minlength="3" class="form-control" placeholder="Pencarian..." required>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="form"></div>
+        <div class="display">
+          <div id="display">
+  <div class="table-responsive no-margin">
+    <table class="table table-striped no-padding nowrap">
+      <thead>
+        <tr>
+          <th>Kode Barang</th>
+          <th>Nama Barang</th>
+          <th>Satuan</th>
+          <th>Letak Barang</th>
+          <th>Harga Dasar</th>
+          <th>Harga Beli</th>
+          <!-- <th>Harga Ralan</th>
+          <th>Harga Kelas 1</th>
+          <th>Harga Kelas 2</th>
+          <th>Harga Kelas 3</th>
+          <th>Harga Utama</th>
+          <th>Harga VIP</th>
+          <th>Harga VVIP</th>
+          <th>Harga Beli Luar</th>
+          <th>Harga Jual Bebas</th>
+          <th>Harga Karyawan</th> -->
+          <th>Stok Minimal</th>
+          <th>Jenis</th>
+          <th>Isi</th>
+          <th>Kapasitas</th>
+          <th>Expired</th>
+          <th>Status</th>
+          <th>Industri</th>
+          <th>Kategori</th>
+          <th>Golongan</th>
+        </tr>
+      </thead>
+      <tbody>
+                        <tr class="edit" data-kode_brng="XX1-FF-306">
+          <td>XX1-FF-306</td>
+          <td>ETABION</td>
+          <td>Tab</td>
+          <td>VITAMIN DAN MINERAL</td>
+          <td>350</td>
+          <td>350</td>
+          <!-- <td>500</td>
+          <td>538</td>
+          <td>500</td>
+          <td>412</td>
+          <td>412</td>
+          <td>700</td>
+          <td>700</td>
+          <td>438</td>
+          <td>473</td>
+          <td>389</td> -->
+          <td>0</td>
+          <td>OBAT ORAL</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2024-01-29</td>
+          <td>Tidak Aktif</td>
+          <td>CV. SAMUDERA INDAH</td>
+          <td>Non Fornas</td>
+          <td>VITAMIN</td>
+        </tr>
+                <tr class="edit" data-kode_brng="R-55-X-007">
+          <td>R-55-X-007</td>
+          <td>GENOINT SALEP MATA</td>
+          <td>Pieces</td>
+          <td>GENTAMYCIN 1MG BASE</td>
+          <td>13000</td>
+          <td>13000</td>
+          <!-- <td>18850</td>
+          <td>22750</td>
+          <td>21450</td>
+          <td>19500</td>
+          <td>13000</td>
+          <td>24050</td>
+          <td>26000</td>
+          <td>16250</td>
+          <td>17550</td>
+          <td>14300</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2027-08-11</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>Non Formularium RS</td>
+          <td>-</td>
+        </tr>
+                <tr class="edit" data-kode_brng="NOV-SP-2023">
+          <td>NOV-SP-2023</td>
+          <td>Q10</td>
+          <td>Tab</td>
+          <td>COENZYM Q10</td>
+          <td>6900</td>
+          <td>6900</td>
+          <!-- <td>9857</td>
+          <td>10615</td>
+          <td>9857</td>
+          <td>8118</td>
+          <td>8118</td>
+          <td>13800</td>
+          <td>13800</td>
+          <td>8625</td>
+          <td>9315</td>
+          <td>7667</td> -->
+          <td>0</td>
+          <td>Tablet</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2023-08-24</td>
+          <td>Tidak Aktif</td>
+          <td>PT GRACIA PHARMINDO</td>
+          <td>Non Fornas</td>
+          <td>-</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L5-XX-004">
+          <td>L5-XX-004</td>
+          <td>DEXTROSE 40%</td>
+          <td>Fles</td>
+          <td>DEXTROSE 40 %</td>
+          <td>8547</td>
+          <td>8547</td>
+          <!-- <td>12393</td>
+          <td>14957</td>
+          <td>14103</td>
+          <td>12821</td>
+          <td>8547</td>
+          <td>15812</td>
+          <td>17094</td>
+          <td>10684</td>
+          <td>11538</td>
+          <td>9402</td> -->
+          <td>1</td>
+          <td>Infus</td>
+          <td>1</td>
+          <td>40</td>
+          <td>2027-06-01</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-80-XXI-21">
+          <td>L-80-XXI-21</td>
+          <td>TANTUM VERDE </td>
+          <td>Botol</td>
+          <td>benzydamine HCl dan alkohol</td>
+          <td>45000</td>
+          <td>45000</td>
+          <!-- <td>64286</td>
+          <td>69231</td>
+          <td>64286</td>
+          <td>52941</td>
+          <td>52941</td>
+          <td>90000</td>
+          <td>90000</td>
+          <td>56250</td>
+          <td>60750</td>
+          <td>50000</td> -->
+          <td>0</td>
+          <td>-</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2024-05-29</td>
+          <td>Tidak Aktif</td>
+          <td>CV. SAMUDERA INDAH</td>
+          <td>Non Formularium RS</td>
+          <td>-</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-79-XXI-21">
+          <td>L-79-XXI-21</td>
+          <td>BETADIN GARGLE</td>
+          <td>Botol</td>
+          <td>-</td>
+          <td>24854</td>
+          <td>24854</td>
+          <!-- <td>36038</td>
+          <td>43495</td>
+          <td>41009</td>
+          <td>37281</td>
+          <td>24854</td>
+          <td>45980</td>
+          <td>49708</td>
+          <td>31068</td>
+          <td>33553</td>
+          <td>27339</td> -->
+          <td>0</td>
+          <td>OBAT NON ORAL</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2028-04-01</td>
+          <td>Aktif</td>
+          <td>PT. KIMIA FARMA</td>
+          <td>Non Formularium RS</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-5-XXI-012">
+          <td>L-5-XXI-012</td>
+          <td>NEBACETIN 5 GR POWDER</td>
+          <td>Box/Dus/Kotak</td>
+          <td>NEOMYCIN,BACITRACIN</td>
+          <td>24253</td>
+          <td>24253</td>
+          <!-- <td>34647</td>
+          <td>37312</td>
+          <td>34647</td>
+          <td>28533</td>
+          <td>28533</td>
+          <td>48506</td>
+          <td>48506</td>
+          <td>30316</td>
+          <td>32742</td>
+          <td>26948</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2026-12-15</td>
+          <td>Tidak Aktif</td>
+          <td>PT NOVELL</td>
+          <td>Formularioum RS</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-48-XX-011">
+          <td>L-48-XX-011</td>
+          <td>MATERAI</td>
+          <td>Pieces</td>
+          <td>-</td>
+          <td>10000</td>
+          <td>10000</td>
+          <!-- <td>14286</td>
+          <td>15385</td>
+          <td>14286</td>
+          <td>11765</td>
+          <td>11765</td>
+          <td>20000</td>
+          <td>20000</td>
+          <td>12500</td>
+          <td>13500</td>
+          <td>11111</td> -->
+          <td>0</td>
+          <td>ALKES HABIS PAKAI</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2021-11-30</td>
+          <td>Tidak Aktif</td>
+          <td>PT. BUMI SARANA MAJU</td>
+          <td>Formularioum RS</td>
+          <td>ALKES</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-39-X-058">
+          <td>L-39-X-058</td>
+          <td>MALTOFER DROP</td>
+          <td>Botol</td>
+          <td>IRON POLYMALTOSE</td>
+          <td>62937</td>
+          <td>62937</td>
+          <!-- <td>89910</td>
+          <td>96826</td>
+          <td>89910</td>
+          <td>74044</td>
+          <td>74044</td>
+          <td>125874</td>
+          <td>125874</td>
+          <td>78671</td>
+          <td>84965</td>
+          <td>69930</td> -->
+          <td>0</td>
+          <td>Syrup</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2024-09-27</td>
+          <td>Tidak Aktif</td>
+          <td>PT. DARYA VARIA</td>
+          <td>Formularioum RS</td>
+          <td>SUPLEMEN MAKANAN</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-38-X-058">
+          <td>L-38-X-058</td>
+          <td>MALTIRON SYRUP</td>
+          <td>Fles</td>
+          <td>FE,B1,B6,B12</td>
+          <td>31080</td>
+          <td>31080</td>
+          <!-- <td>44400</td>
+          <td>47815</td>
+          <td>44400</td>
+          <td>36565</td>
+          <td>36565</td>
+          <td>57498</td>
+          <td>62160</td>
+          <td>38850</td>
+          <td>41958</td>
+          <td>34533</td> -->
+          <td>0</td>
+          <td>Syrup</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2025-02-10</td>
+          <td>Aktif</td>
+          <td>PT. MEPRO</td>
+          <td>Formularioum RS</td>
+          <td>VITAMIN</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-38-X-057">
+          <td>L-38-X-057</td>
+          <td>FERRIZ DROP</td>
+          <td>Botol</td>
+          <td>-</td>
+          <td>33022</td>
+          <td>33022</td>
+          <!-- <td>47174</td>
+          <td>50803</td>
+          <td>47174</td>
+          <td>38849</td>
+          <td>38849</td>
+          <td>61091</td>
+          <td>66044</td>
+          <td>41278</td>
+          <td>44580</td>
+          <td>36691</td> -->
+          <td>0</td>
+          <td>OBAT ORAL</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2026-05-01</td>
+          <td>Aktif</td>
+          <td>PT. AMS</td>
+          <td>Formularioum RS</td>
+          <td>SUPLEMEN MAKANAN</td>
+        </tr>
+                <tr class="edit" data-kode_brng="L-22-XXII-005">
+          <td>L-22-XXII-005</td>
+          <td>CALADINE LOT</td>
+          <td>Botol</td>
+          <td>CALAMIN</td>
+          <td>16500</td>
+          <td>16500</td>
+          <!-- <td>23571</td>
+          <td>25385</td>
+          <td>23571</td>
+          <td>19412</td>
+          <td>19412</td>
+          <td>30525</td>
+          <td>33000</td>
+          <td>20625</td>
+          <td>22275</td>
+          <td>18333</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>0</td>
+          <td>2022-03-16</td>
+          <td>Tidak Aktif</td>
+          <td>PT. ENSEVAL PUTRA MEGATRADING Tbk</td>
+          <td>Non Formularium RS</td>
+          <td>OBAT BEBAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-97-III-112">
+          <td>J-97-III-112</td>
+          <td>BEDAK SALICYL</td>
+          <td>Pieces</td>
+          <td>-</td>
+          <td>6000</td>
+          <td>6000</td>
+          <!-- <td>8571</td>
+          <td>9231</td>
+          <td>8571</td>
+          <td>7059</td>
+          <td>7059</td>
+          <td>12000</td>
+          <td>12000</td>
+          <td>7500</td>
+          <td>8100</td>
+          <td>6667</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2023-09-16</td>
+          <td>Tidak Aktif</td>
+          <td>PT. IFARS</td>
+          <td>Non Formularium RS</td>
+          <td>LAIN LAIN</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-97-III-111">
+          <td>J-97-III-111</td>
+          <td>LACTACYD BABY LIQ 60 ML</td>
+          <td>Botol</td>
+          <td>-</td>
+          <td>29585</td>
+          <td>29585</td>
+          <!-- <td>42898</td>
+          <td>51774</td>
+          <td>48815</td>
+          <td>44378</td>
+          <td>29585</td>
+          <td>54732</td>
+          <td>59170</td>
+          <td>36981</td>
+          <td>39940</td>
+          <td>32544</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2028-04-01</td>
+          <td>Aktif</td>
+          <td>PT. APL</td>
+          <td>Non Formularium RS</td>
+          <td>OBAT BEBAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-79-XXI-001">
+          <td>J-79-XXI-001</td>
+          <td>LANAKELOID-E</td>
+          <td>Tube</td>
+          <td>-</td>
+          <td>172050</td>
+          <td>172050</td>
+          <!-- <td>245786</td>
+          <td>264692</td>
+          <td>245786</td>
+          <td>202412</td>
+          <td>202412</td>
+          <td>318293</td>
+          <td>344100</td>
+          <td>215063</td>
+          <td>232268</td>
+          <td>191167</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>0</td>
+          <td>2026-07-31</td>
+          <td>Aktif</td>
+          <td>PT. LAPI</td>
+          <td>Formularioum RS</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-71-III-253">
+          <td>J-71-III-253</td>
+          <td>KALCINOL N</td>
+          <td>Tube</td>
+          <td>-</td>
+          <td>10450</td>
+          <td>10450</td>
+          <!-- <td>14929</td>
+          <td>16077</td>
+          <td>14929</td>
+          <td>12294</td>
+          <td>12294</td>
+          <td>19400</td>
+          <td>21000</td>
+          <td>13100</td>
+          <td>14200</td>
+          <td>11611</td> -->
+          <td>0</td>
+          <td>Salep</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0000-00-00</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>Formularioum RS</td>
+          <td>OBAT BEBAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-6-XXI-007">
+          <td>J-6-XXI-007</td>
+          <td>HIDROCORTISON 1%</td>
+          <td>SALEP</td>
+          <td>-</td>
+          <td>6054</td>
+          <td>7568</td>
+          <!-- <td>10974</td>
+          <td>13244</td>
+          <td>12487</td>
+          <td>11352</td>
+          <td>7568</td>
+          <td>14001</td>
+          <td>15136</td>
+          <td>9460</td>
+          <td>10217</td>
+          <td>8325</td> -->
+          <td>0</td>
+          <td>Salep</td>
+          <td>1</td>
+          <td>0</td>
+          <td>2030-05-10</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>Formularioum RS</td>
+          <td>OBAT BEBAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-6-XXI-001">
+          <td>J-6-XXI-001</td>
+          <td>HIDROCORTISON 2,5</td>
+          <td>SALEP</td>
+          <td>-</td>
+          <td>6660</td>
+          <td>6660</td>
+          <!-- <td>9514</td>
+          <td>10246</td>
+          <td>9514</td>
+          <td>7835</td>
+          <td>7835</td>
+          <td>12321</td>
+          <td>13320</td>
+          <td>8325</td>
+          <td>8991</td>
+          <td>7400</td> -->
+          <td>0</td>
+          <td>Salep</td>
+          <td>1</td>
+          <td>0</td>
+          <td>2028-06-30</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>Formularioum RS</td>
+          <td>OBAT BEBAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-6-III-007">
+          <td>J-6-III-007</td>
+          <td>GENALTEN CREAM</td>
+          <td>Tube</td>
+          <td>GENTAMYCIN</td>
+          <td>6700</td>
+          <td>6700</td>
+          <!-- <td>9571</td>
+          <td>10308</td>
+          <td>9571</td>
+          <td>7882</td>
+          <td>7882</td>
+          <td>12395</td>
+          <td>13400</td>
+          <td>8375</td>
+          <td>9045</td>
+          <td>7444</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2026-12-17</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-59-XI-93">
+          <td>J-59-XI-93</td>
+          <td>KALMICETIN CR</td>
+          <td>Tube</td>
+          <td>CHLORAMPHENICOL CR</td>
+          <td>18000</td>
+          <td>18000</td>
+          <!-- <td>25714</td>
+          <td>27692</td>
+          <td>25714</td>
+          <td>21176</td>
+          <td>21176</td>
+          <td>33300</td>
+          <td>36000</td>
+          <td>22500</td>
+          <td>24300</td>
+          <td>20000</td> -->
+          <td>0</td>
+          <td>Salep</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2022-12-30</td>
+          <td>Tidak Aktif</td>
+          <td>PT. KALBE FARMA</td>
+          <td>Formularioum RS</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="j-59-XI-92">
+          <td>j-59-XI-92</td>
+          <td>ERLAMYCETIN TETES MATA</td>
+          <td>Fles</td>
+          <td>CHLORAMPHENICOL </td>
+          <td>11388</td>
+          <td>11388</td>
+          <!-- <td>16513</td>
+          <td>19929</td>
+          <td>18790</td>
+          <td>17082</td>
+          <td>11388</td>
+          <td>21068</td>
+          <td>22776</td>
+          <td>14235</td>
+          <td>15374</td>
+          <td>12527</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2025-11-07</td>
+          <td>Aktif</td>
+          <td>PT. SIMEX</td>
+          <td>Formularioum RS</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-58-XX-006">
+          <td>J-58-XX-006</td>
+          <td>MELANOX 15 GR</td>
+          <td>Tube</td>
+          <td>-</td>
+          <td>31635</td>
+          <td>31635</td>
+          <!-- <td>45193</td>
+          <td>48669</td>
+          <td>45193</td>
+          <td>37218</td>
+          <td>37218</td>
+          <td>58525</td>
+          <td>63270</td>
+          <td>39544</td>
+          <td>42707</td>
+          <td>35150</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2022-12-31</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>Non Formularium RS</td>
+          <td>LAIN LAIN</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-58-X-091">
+          <td>J-58-X-091</td>
+          <td>INSTO REG</td>
+          <td>Tube</td>
+          <td>-</td>
+          <td>13631</td>
+          <td>13631</td>
+          <!-- <td>19765</td>
+          <td>23854</td>
+          <td>22491</td>
+          <td>20447</td>
+          <td>13631</td>
+          <td>25217</td>
+          <td>27262</td>
+          <td>17039</td>
+          <td>18402</td>
+          <td>14994</td> -->
+          <td>0</td>
+          <td>Botol</td>
+          <td>1</td>
+          <td>0</td>
+          <td>2029-02-02</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>Formularioum RS</td>
+          <td>OBAT BEBAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-58-V-068">
+          <td>J-58-V-068</td>
+          <td>INSTO MOIST</td>
+          <td>Tube</td>
+          <td>-</td>
+          <td>13000</td>
+          <td>13000</td>
+          <!-- <td>18571</td>
+          <td>20000</td>
+          <td>18571</td>
+          <td>15294</td>
+          <td>15294</td>
+          <td>26000</td>
+          <td>26000</td>
+          <td>16200</td>
+          <td>17500</td>
+          <td>14444</td> -->
+          <td>0</td>
+          <td>Botol</td>
+          <td>1</td>
+          <td>0</td>
+          <td>2022-05-11</td>
+          <td>Tidak Aktif</td>
+          <td>PT. HEXPHARM JAYA</td>
+          <td>Formularioum RS</td>
+          <td>OBAT BEBAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-55XX-001">
+          <td>J-55XX-001</td>
+          <td>MEBO</td>
+          <td>SALEP</td>
+          <td>-</td>
+          <td>88245</td>
+          <td>88245</td>
+          <!-- <td>127955</td>
+          <td>154429</td>
+          <td>145604</td>
+          <td>132368</td>
+          <td>88245</td>
+          <td>163253</td>
+          <td>176490</td>
+          <td>110306</td>
+          <td>119131</td>
+          <td>97070</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2028-07-30</td>
+          <td>Aktif</td>
+          <td>PT. COMBIPHAR</td>
+          <td>Formularioum RS</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-55-XXE-0041">
+          <td>J-55-XXE-0041</td>
+          <td>NEOCENTA GEL</td>
+          <td>Tube</td>
+          <td>NEOMYCIN SULFATE, BOVINE PLACENTA EXTRACT</td>
+          <td>15025</td>
+          <td>15025</td>
+          <!-- <td>21786</td>
+          <td>26294</td>
+          <td>24791</td>
+          <td>22538</td>
+          <td>15025</td>
+          <td>27796</td>
+          <td>30050</td>
+          <td>18781</td>
+          <td>20284</td>
+          <td>16528</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2028-04-23</td>
+          <td>Aktif</td>
+          <td>ASR</td>
+          <td>Non Formularium RS</td>
+          <td>-</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-55-XX-111">
+          <td>J-55-XX-111</td>
+          <td>DUODERM GEL</td>
+          <td>Tube</td>
+          <td>HYDROACTIVE GEL</td>
+          <td>162000</td>
+          <td>162000</td>
+          <!-- <td>231429</td>
+          <td>249231</td>
+          <td>231429</td>
+          <td>190588</td>
+          <td>190588</td>
+          <td>324000</td>
+          <td>324000</td>
+          <td>202500</td>
+          <td>218700</td>
+          <td>180000</td> -->
+          <td>0</td>
+          <td>OBAT NON ORAL</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2024-04-06</td>
+          <td>Tidak Aktif</td>
+          <td>-</td>
+          <td>Non Formularium RS</td>
+          <td>LAIN LAIN</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-55-XX-0101">
+          <td>J-55-XX-0101</td>
+          <td>MEDERMA</td>
+          <td>Tube</td>
+          <td>-</td>
+          <td>221445</td>
+          <td>221445</td>
+          <!-- <td>316350</td>
+          <td>340685</td>
+          <td>316350</td>
+          <td>260524</td>
+          <td>260524</td>
+          <td>442890</td>
+          <td>442890</td>
+          <td>276806</td>
+          <td>298951</td>
+          <td>246050</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2023-04-01</td>
+          <td>Tidak Aktif</td>
+          <td>PT. DARYA VARIA</td>
+          <td>Non Formularium RS</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-55-XX-004">
+          <td>J-55-XX-004</td>
+          <td>ERLA TETES TELINGA</td>
+          <td>Pieces</td>
+          <td>-</td>
+          <td>16000</td>
+          <td>16000</td>
+          <!-- <td>23200</td>
+          <td>28000</td>
+          <td>26400</td>
+          <td>24000</td>
+          <td>16000</td>
+          <td>29600</td>
+          <td>32000</td>
+          <td>20000</td>
+          <td>21600</td>
+          <td>17600</td> -->
+          <td>0</td>
+          <td>OBAT NON ORAL</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2025-01-29</td>
+          <td>Aktif</td>
+          <td>-</td>
+          <td>Non Fornas</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                <tr class="edit" data-kode_brng="J-55-XX-002">
+          <td>J-55-XX-002</td>
+          <td>OTOPAIN TETES TELINGA</td>
+          <td>Botol</td>
+          <td>-</td>
+          <td>118000</td>
+          <td>118000</td>
+          <!-- <td>168571</td>
+          <td>181538</td>
+          <td>168571</td>
+          <td>138824</td>
+          <td>138824</td>
+          <td>218300</td>
+          <td>236000</td>
+          <td>147500</td>
+          <td>159300</td>
+          <td>131111</td> -->
+          <td>0</td>
+          <td>OBAT LUAR</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2023-01-02</td>
+          <td>Aktif</td>
+          <td>PT. OTTO</td>
+          <td>Non Fornas</td>
+          <td>OBAT KERAS</td>
+        </tr>
+                      </tbody>
+    </table>
+  </div>
+  <nav class="clearfix m-t-xs">
+    <div class="col">
+      <ul class="pagination no-margin pull-right">
+                      <li class="disabled"><a href="#">&laquo;</a></li>
+                        <li class="disabled"><a href="#">&larr;</a></li>
+                <li class="disabled"><a href="#">Hal : 1 dari 48 Hal</a></li>
+                <li class="halaman" data-hal="2"><a href="#">&rarr;</a></li>
+                        <li class="halaman" data-hal="48"><a href="#">&raquo;</a></li>
+                    </ul>
+    </div>
+  </nav>
+</div>
+<script type="text/javascript">
+  $(".alert-dismissible").fadeTo(3000, 500).slideUp(500);
+</script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

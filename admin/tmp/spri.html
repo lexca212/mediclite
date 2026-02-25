@@ -1,0 +1,133 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Tutup</button>
+    <h4 class="modal-title">Riwayat SPRI</h4>
+</div>
+<div class="modal-body">
+
+  <div id="form_spri">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row clearfix">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label>Dokter</label>
+                      <select class="form-control" name="dokter" id="dokter" data-use-search="true">
+                                                <option value="443415">dr. ADHI PRAMONO, Sp. OG</option>
+                                                <option value="10968">dr. Benny Marganda A P, Sp.B</option>
+                                                <option value="119673">dr. M. Guntur Adriadi Nugroho Sp.OG</option>
+                                                <option value="25413">dr. Vera Irawati Kurnia, Sp.A, M.Kes</option>
+                                                <option value="38347">dr. Nugroho Kuswardono, Sp.B</option>
+                                                <option value="38250">dr. Agung Nugroho, Sp.S</option>
+                                                <option value="375740">dr. Diksi Novritasari Budyastuti, Sp.PD</option>
+                                                <option value="357451">Dr. Dwi Retnoningsih Sp.OG</option>
+                                                <option value="446327">dr. BAYU ABHIYOGA, Sp. PD</option>
+                                                <option value="232799">DR. ZUSTAIN NOOR ADHIM,SP.A</option>
+                                                <option value="494580">NORUTUS SANIYAH</option>
+                                                <option value="639385">TRI INDRIASWATI, SP. PD</option>
+                                              </select>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label>Poli/Unit</label>
+                      <select class="form-control" name="poli" id="poli" data-use-search="true">
+                                                <option value="ANA">ANAK</option>
+                                                <option value="BED">BEDAH</option>
+                                                <option value="OBG">OBGYN</option>
+                                                <option value="INT">PENYAKIT DALAM</option>
+                                                <option value="SAR">SARAF</option>
+                                              </select>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label>Tanggal Surat</label>
+                      <input type="text" name="tanggal_rujukan" id="tanggal_rujukan" class="form-control tanggal" value="2025-09-12" />
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label>Tanggal Kontrol</label>
+                      <input type="text" name="tanggal_datang" id="tanggal_datang" class="form-control tanggal" />
+                  </div>
+              </div>
+          </div>
+          <div class="row clearfix">
+              <div class="col-md-12">
+                  <button type="button" class="btn btn-primary" id="simpan_spri">Simpan</button>
+                  <button type="button" class="btn btn-primary" id="load_spri">Load</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div id="spridisplay">
+  </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>
+<script type="text/javascript">
+   $('select').selectator();
+   $(function () {
+       $('.tanggal').datetimepicker({
+         format: 'YYYY-MM-DD',
+         locale: 'id'
+       });
+   });
+   $(function () {
+       $('.jam').datetimepicker({
+         format: 'HH:mm:ss',
+         locale: 'id'
+       });
+   });
+</script>
+<script type="text/javascript">
+  $("#form_spri").on("click","#load_spri", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    $("#spridisplay").show().load(baseURL + '/vclaim/spridisplay/0002130668752/20250905000003?t=' + mlite.token);
+  });
+
+  $(document).ready(function() {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    $("#spridisplay").show().load(baseURL + '/vclaim/spridisplay/0002130668752/20250905000003?t=' + mlite.token);
+  });
+
+  $("#form_spri").on("click","#simpan_spri", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+
+    var tanggal_surat   = $('#tanggal_rujukan').val();
+    var tanggal_periksa = $('#tanggal_datang').val();
+    var poli            = $('#poli').val();
+    var dokter          = $('#dokter').val();
+
+    var url = baseURL + '/vclaim/savespri/0002130668752/20250905000003?t=' + mlite.token;
+
+    $.post(url,{
+      tanggal_surat : tanggal_surat,
+      tanggal_periksa : tanggal_periksa,
+      dokter : dokter,
+      poli : poli
+    } ,function(data) {
+        alert(data);
+        $("#spridisplay").show().load(baseURL + '/vclaim/spridisplay/0002130668752/20250905000003?t=' + mlite.token);
+        $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+        "Data SPRI telah disimpan!"+
+        "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+        "</div>").show();
+    });
+
+  });
+
+  $("#spridisplay").on("click", ".pilih_nosurat", function(event){
+    var no_surat = $(this).attr("data-no_surat");
+    $('input:text[name=sep_nomor_skdp]').val(no_surat);
+    $('#spriModal').modal('hide');
+  });
+</script>

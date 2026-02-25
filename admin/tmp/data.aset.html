@@ -1,0 +1,638 @@
+<form action="https://simrsfitricandra.site/admin/inventaris/saveaset?t=e5c7aca617f6" method="POST">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+              Data Aset
+            </h3>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="https://simrsfitricandra.site/admin/inventaris/dataaset?t=e5c7aca617f6" role="tab">Data Aset</a>
+                </li>
+                <li>
+                    <a href="https://simrsfitricandra.site/admin/inventaris/inventarisbarang?t=e5c7aca617f6" role="tab">Data Barang</a>
+                </li>
+                 <li>
+                    <a href="https://simrsfitricandra.site/admin/inventaris/pemindahan?t=e5c7aca617f6" role="tab">Data Pemindahan</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nomor Inventaris</label>
+                        <input type="text" name="no_inventaris" class="form-control" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Data Barang</label>
+                        <select name="kode_barang" id="kode_barang" class="form-control" data-use-search="true">
+                                                        <option value="101HACK">101HACK | HACK | </option>
+                                                        <option value="BI00000001">BI00000001 | barang 1 | </option>
+                                                        <option value="BI00000002">BI00000002 | barang 2345 | </option>
+                                                        <option value="BI00000003">BI00000003 | Komputer LG 1010 | </option>
+                                                        <option value="BI00000004">BI00000004 | KOMPUTER LENOVO | </option>
+                                                        <option value="BI00000005">BI00000005 | UJI COBA | </option>
+                                                        <option value="BI00000006">BI00000006 | Stetoskop | </option>
+                                                        <option value="BI00000007">BI00000007 | KURSI MERAH | </option>
+                                                        <option value="BI00000008">BI00000008 | LCD PROYEKTOR | </option>
+                                                        <option value="SHR001">SHR001 | Shering Pump | </option>
+                                                        <option value="SHR002">SHR002 | Shering Pump | </option>
+                                                        <option value="T0001">T0001 | TENSIMETER | </option>
+                                                        <option value="TNS001">TNS001 | Tensi Meter | </option>
+                                                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Pengadaan</label>
+                        <input type="text" name="tgl_pengadaan" class="form-control tanggal" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Asal Barang</label>
+                        <select name="asal_barang" id="asal_barang" class="form-control" data-use-search="true">
+                            <option value="Beli">Beli</option>
+                            <option value="Bantuan">Bantuan</option>
+                            <option value="Hibah">Hibah</option>
+                            <option value="-">-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga</label>
+                        <input type="text" name="harga" class="form-control" value="" required />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Status Barang</label>
+                        <select name="status_barang" id="status_barang" class="form-control" data-use-search="true">
+                            <option value="Ada">Ada</option>
+                            <option value="Rusak">Rusak</option>
+                            <option value="Hilang">Hilang</option>
+                            <option value="Perbaikan">Perbaikan</option>
+                            <option value="Dipinjam">Dipinjam</option>
+                            <option value="-">-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ruangan</label>
+                        <select name="id_ruang" id="id_ruang" class="form-control" data-use-search="true">
+                                                        <option value="R4">AULA</option>
+                                                        <option value="IT">IT</option>
+                                                        <option value="Ka">Kresna</option>
+                                                        <option value="RD">Radiologi</option>
+                                                        <option value="02">Rajal</option>
+                                                        <option value="RA">Rama</option>
+                                                        <option value="01">Ranap</option>
+                                                        <option value="IBS">Ruang Opersai</option>
+                                                        <option value="R3">RUANG SIMRS</option>
+                                                        <option value="SH">Shinta</option>
+                                                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Nomor Rak</label>
+                        <input type="text" name="no_rak" class="form-control" value="" />
+                    </div>
+                    <div class="form-group">
+                        <label>Nomor Box</label>
+                        <input type="text" name="no_box" class="form-control" value="" />
+                    </div>
+                </div>
+                <div class="col-md-12" style="padding-top: 20px;">
+                    <input type="submit" name="simpan" class="btn btn-success" value="Simpan" />
+                    <input type="submit" name="update" class="btn btn-info" value="Update" />
+                    <input type="submit" name="hapus" class="btn btn-danger" value="Hapus" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive no-margin" id="inventaris">
+      <table class="table table-striped table-bordered no-padding nowrap dataTables" width="100%">
+        <thead>
+          <tr>
+            <th>No. Inventaris</th>
+            <th>Kode Barang</th>
+            <th>Nama Barang</th>
+            <th>Asal Barang</th>
+            <th>Tgl. Pengadaan</th>
+            <th>Harga</th>
+            <th>Status Barang</th>
+            <th>Id Ruang</th>
+            <th>Nama Ruang</th>
+            <th>No. Rak</th>
+            <th>No. Box</th>
+          </tr>
+        </thead>
+        <tbody>
+                    <tr class="inventaris"
+          data-no_inventaris="01.0001"
+          data-kode_barang="T0001"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2019-10-16"
+          data-harga="1000000"
+          data-status_barang="-"
+          data-id_ruang="IT"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>01.0001</td>
+            <td>T0001</td>
+            <td>TENSIMETER</td>
+            <td>Beli</td>
+            <td>2019-10-16</td>
+            <td>1000000</td>
+            <td>-</td>
+            <td>IT</td>
+            <td>IT</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="202602001"
+          data-kode_barang="101HACK"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2026-01-01"
+          data-harga="6500000"
+          data-status_barang="Dipinjam"
+          data-id_ruang="IT"
+          data-no_rak="1"
+          data-no_box="1"
+          >
+            <td>202602001</td>
+            <td>101HACK</td>
+            <td>HACK</td>
+            <td>Beli</td>
+            <td>2026-01-01</td>
+            <td>6500000</td>
+            <td>Dipinjam</td>
+            <td>IT</td>
+            <td>IT</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000001"
+          data-kode_barang="BI00000002"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2017-02-10"
+          data-harga="0"
+          data-status_barang="Dipinjam"
+          data-id_ruang="01"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000001</td>
+            <td>BI00000002</td>
+            <td>barang 2345</td>
+            <td>Beli</td>
+            <td>2017-02-10</td>
+            <td>0</td>
+            <td>Dipinjam</td>
+            <td>01</td>
+            <td>Ranap</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000002"
+          data-kode_barang="BI00000002"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2017-02-10"
+          data-harga="0"
+          data-status_barang="Dipinjam"
+          data-id_ruang="01"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000002</td>
+            <td>BI00000002</td>
+            <td>barang 2345</td>
+            <td>Beli</td>
+            <td>2017-02-10</td>
+            <td>0</td>
+            <td>Dipinjam</td>
+            <td>01</td>
+            <td>Ranap</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000003"
+          data-kode_barang="BI00000002"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2017-09-19"
+          data-harga="0"
+          data-status_barang="Dipinjam"
+          data-id_ruang="R3"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000003</td>
+            <td>BI00000002</td>
+            <td>barang 2345</td>
+            <td>Beli</td>
+            <td>2017-09-19</td>
+            <td>0</td>
+            <td>Dipinjam</td>
+            <td>R3</td>
+            <td>RUANG SIMRS</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000004"
+          data-kode_barang="BI00000001"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2017-09-28"
+          data-harga="10000000"
+          data-status_barang="Dipinjam"
+          data-id_ruang="02"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000004</td>
+            <td>BI00000001</td>
+            <td>barang 1</td>
+            <td>Beli</td>
+            <td>2017-09-28</td>
+            <td>10000000</td>
+            <td>Dipinjam</td>
+            <td>02</td>
+            <td>Rajal</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000005"
+          data-kode_barang="BI00000003"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2017-09-29"
+          data-harga="0"
+          data-status_barang="Dipinjam"
+          data-id_ruang="01"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000005</td>
+            <td>BI00000003</td>
+            <td>Komputer LG 1010</td>
+            <td>Beli</td>
+            <td>2017-09-29</td>
+            <td>0</td>
+            <td>Dipinjam</td>
+            <td>01</td>
+            <td>Ranap</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000006"
+          data-kode_barang="BI00000003"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2017-09-29"
+          data-harga="0"
+          data-status_barang="Dipinjam"
+          data-id_ruang="02"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000006</td>
+            <td>BI00000003</td>
+            <td>Komputer LG 1010</td>
+            <td>Beli</td>
+            <td>2017-09-29</td>
+            <td>0</td>
+            <td>Dipinjam</td>
+            <td>02</td>
+            <td>Rajal</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000007"
+          data-kode_barang="BI00000005"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2019-07-11"
+          data-harga="0"
+          data-status_barang="Rusak"
+          data-id_ruang="R3"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000007</td>
+            <td>BI00000005</td>
+            <td>UJI COBA</td>
+            <td>Beli</td>
+            <td>2019-07-11</td>
+            <td>0</td>
+            <td>Rusak</td>
+            <td>R3</td>
+            <td>RUANG SIMRS</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="I000000008"
+          data-kode_barang="BI00000005"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2019-07-11"
+          data-harga="200000"
+          data-status_barang="Ada"
+          data-id_ruang="02"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>I000000008</td>
+            <td>BI00000005</td>
+            <td>UJI COBA</td>
+            <td>Beli</td>
+            <td>2019-07-11</td>
+            <td>200000</td>
+            <td>Ada</td>
+            <td>02</td>
+            <td>Rajal</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="KAR/2019/02/01/001"
+          data-kode_barang="BI00000007"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2019-11-13"
+          data-harga="0"
+          data-status_barang="Ada"
+          data-id_ruang="01"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>KAR/2019/02/01/001</td>
+            <td>BI00000007</td>
+            <td>KURSI MERAH</td>
+            <td>Beli</td>
+            <td>2019-11-13</td>
+            <td>0</td>
+            <td>Ada</td>
+            <td>01</td>
+            <td>Ranap</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="KAR/2019/02/01/002"
+          data-kode_barang="BI00000007"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2019-11-13"
+          data-harga="0"
+          data-status_barang="Ada"
+          data-id_ruang="R4"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>KAR/2019/02/01/002</td>
+            <td>BI00000007</td>
+            <td>KURSI MERAH</td>
+            <td>Beli</td>
+            <td>2019-11-13</td>
+            <td>0</td>
+            <td>Ada</td>
+            <td>R4</td>
+            <td>AULA</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="KAR/2019/02/01/003"
+          data-kode_barang="BI00000007"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2019-11-13"
+          data-harga="0"
+          data-status_barang="Dipinjam"
+          data-id_ruang="R4"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>KAR/2019/02/01/003</td>
+            <td>BI00000007</td>
+            <td>KURSI MERAH</td>
+            <td>Beli</td>
+            <td>2019-11-13</td>
+            <td>0</td>
+            <td>Dipinjam</td>
+            <td>R4</td>
+            <td>AULA</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="LCD/0001"
+          data-kode_barang="BI00000008"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2020-03-08"
+          data-harga="4000000"
+          data-status_barang="Ada"
+          data-id_ruang="R4"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>LCD/0001</td>
+            <td>BI00000008</td>
+            <td>LCD PROYEKTOR</td>
+            <td>Beli</td>
+            <td>2020-03-08</td>
+            <td>4000000</td>
+            <td>Ada</td>
+            <td>R4</td>
+            <td>AULA</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="LENOV.01"
+          data-kode_barang="BI00000004"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2018-12-21"
+          data-harga="5000000"
+          data-status_barang="Perbaikan"
+          data-id_ruang="R3"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>LENOV.01</td>
+            <td>BI00000004</td>
+            <td>KOMPUTER LENOVO</td>
+            <td>Beli</td>
+            <td>2018-12-21</td>
+            <td>5000000</td>
+            <td>Perbaikan</td>
+            <td>R3</td>
+            <td>RUANG SIMRS</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="LENOV.02"
+          data-kode_barang="BI00000004"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2018-12-21"
+          data-harga="5000000"
+          data-status_barang="Ada"
+          data-id_ruang="R3"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>LENOV.02</td>
+            <td>BI00000004</td>
+            <td>KOMPUTER LENOVO</td>
+            <td>Beli</td>
+            <td>2018-12-21</td>
+            <td>5000000</td>
+            <td>Ada</td>
+            <td>R3</td>
+            <td>RUANG SIMRS</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="LENOV.03"
+          data-kode_barang="BI00000004"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2018-12-21"
+          data-harga="5000000"
+          data-status_barang="Ada"
+          data-id_ruang="R3"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>LENOV.03</td>
+            <td>BI00000004</td>
+            <td>KOMPUTER LENOVO</td>
+            <td>Beli</td>
+            <td>2018-12-21</td>
+            <td>5000000</td>
+            <td>Ada</td>
+            <td>R3</td>
+            <td>RUANG SIMRS</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="LENOV.04"
+          data-kode_barang="BI00000004"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2018-12-21"
+          data-harga="5000000"
+          data-status_barang="Dipinjam"
+          data-id_ruang="R3"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>LENOV.04</td>
+            <td>BI00000004</td>
+            <td>KOMPUTER LENOVO</td>
+            <td>Beli</td>
+            <td>2018-12-21</td>
+            <td>5000000</td>
+            <td>Dipinjam</td>
+            <td>R3</td>
+            <td>RUANG SIMRS</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="PC/RT/001"
+          data-kode_barang="BI00000003"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2026-02-16"
+          data-harga="650000"
+          data-status_barang="Ada"
+          data-id_ruang="IT"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>PC/RT/001</td>
+            <td>BI00000003</td>
+            <td>Komputer LG 1010</td>
+            <td>Beli</td>
+            <td>2026-02-16</td>
+            <td>650000</td>
+            <td>Ada</td>
+            <td>IT</td>
+            <td>IT</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="RSFC/RT/26/001"
+          data-kode_barang="SHR001"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2026-02-16"
+          data-harga="250000"
+          data-status_barang="Ada"
+          data-id_ruang="Ka"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>RSFC/RT/26/001</td>
+            <td>SHR001</td>
+            <td>Shering Pump</td>
+            <td>Beli</td>
+            <td>2026-02-16</td>
+            <td>250000</td>
+            <td>Ada</td>
+            <td>Ka</td>
+            <td>Kresna</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                    <tr class="inventaris"
+          data-no_inventaris="RT001"
+          data-kode_barang="TNS001"
+          data-asal_barang="Beli"
+          data-tgl_pengadaan="2026-02-16"
+          data-harga="250000"
+          data-status_barang="Ada"
+          data-id_ruang="01"
+          data-no_rak="-"
+          data-no_box="-"
+          >
+            <td>RT001</td>
+            <td>TNS001</td>
+            <td>Tensi Meter</td>
+            <td>Beli</td>
+            <td>2026-02-16</td>
+            <td>250000</td>
+            <td>Ada</td>
+            <td>01</td>
+            <td>Ranap</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+                  </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $("#inventaris").on("click", ".inventaris", function(event){
+    var no_inventaris  = $(this).attr("data-no_inventaris");
+    var kode_barang  = $(this).attr("data-kode_barang");
+    var asal_barang  = $(this).attr("data-asal_barang");
+    var tgl_pengadaan  = $(this).attr("data-tgl_pengadaan");
+    var harga  = $(this).attr("data-harga");
+    var status_barang  = $(this).attr("data-status_barang");
+    var id_ruang  = $(this).attr("data-id_ruang");
+    var no_rak  = $(this).attr("data-no_rak");
+    var no_box  = $(this).attr("data-no_box");
+    $('input:text[name=no_inventaris]').val(no_inventaris);
+    $('#kode_barang').val(kode_barang).change();
+    $('#asal_barang').val(asal_barang).change();
+    $('input:text[name=tgl_pengadaan]').val(tgl_pengadaan);
+    $('input:text[name=harga]').val(harga);
+    $('#status_barang').val(status_barang).change();
+    $('#id_ruang').val(id_ruang).change();
+    $('input:text[name=no_rak]').val(no_rak);
+    $('input:text[name=no_box]').val(no_box);
+    $('input:text[name=no_inventaris]').prop('readonly', true);
+  });
+</script>

@@ -1,0 +1,287 @@
+
+<!doctype html>
+<html lang="id">
+	<head>
+		<title>Bukti Pembayaran </title>
+		<meta charset="UTF-8">
+		<link href="http://114.141.58.226/mlite/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<script src="http://114.141.58.226/mlite/assets/jscripts/jquery.min.js"></script>
+		<script src="http://114.141.58.226/mlite/assets/jscripts/bootstrap.min.js"></script>
+	<style>
+	body {
+		margin-top:20px;
+	}
+	th,td {padding:0px 0px 0px 10px;}
+	</style>
+
+	<script>
+	function printContent(el){
+	var restorepage = document.body.innerHTML;
+	var printcontent = document.getElementById(el).innerHTML;
+	document.body.innerHTML = printcontent;
+	window.print();
+	document.body.innerHTML = restorepage; window.close();
+	}
+	</script>
+	</head>
+
+	<body>
+		<div id="faktur">
+		<center>
+		<table  rules='rows' width="700px" style="font-size: 11px;font-family: verdana, sans-serif;">
+			<tr>
+			<td colspan="3">
+				<strong style="font-size: 15pt;" >RSU FITRI CANDRA WONOGIRI</strong>
+			</td>
+			</tr>
+			<tr>
+			<td width="80px">
+				<img width="70px" src='http://114.141.58.226/mlite/uploads/settings/logo.png' />
+			</td>
+			<td>
+				<p style="font-size: 10px;">
+				Jl. Perintis Kemerdekaan 45<br>
+				 Telp : 0812345678<br>
+         E-Mail : info@mlite.id<br>
+				Website : https://mlite.id</p></td>
+			<td align="right"><strong   style="font-size: 12px" >BUKTI PEMBAYARAN</strong>
+				<p align="right" style="font-size: 10px;">
+				Kode Faktur : RJ.11.01.2025.23.23.13<br>
+				Nama Pasien : IRMA YUSROTUN FATHUL JANNAH <br>
+				No RM : 034631<br>
+				Alamat : NGEMBUNG 005/002<br></p>
+			</td>
+			</tr>
+		</table>
+		<br><br>
+		<table  rules='rows' width="700px" style="font-size: 11px;font-family: verdana, sans-serif;">
+		  <tr align="left" height='30px'>
+			<th>No</th>
+			<th>Item</th>
+			<th>Tarif</th>
+			<th>Jumlah</th>
+			<th>Total</th>
+		  </tr>
+			<tr border='1', height='20px'>
+				<td>I</td>
+				<td colspan="1">Biaya Pendaftaran Poliklinik</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr border='0', height='20px'>
+				<td></td>
+				<td>- Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+				<td>Rp. <span class="pull-right">35.000,00</span></td>
+				<td>1</td>
+				<td>Rp. <span class="pull-right">35.000,00</span></td>
+			</tr>
+			<tr border='1', height='20px'>
+				<td>II</td>
+				<td colspan="1">Biaya Obat & BHP</td>
+				<td></td>
+				<td></td>
+				 
+				<td>Rp. <span class="pull-right">0,00</span></td>
+							</tr>
+						<tr border='1', height='20px'>
+				<td>III</td>
+				<td colspan="1">Jasa Dokter</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+						<tr border='0', height='20px'>
+				<td></td>
+				<td>- KONSUL DOKTER KANDUNGAN</td>
+				<td>Rp. <span class="pull-right">70.000,00</span></td>
+				<td>1</td>
+				<td>Rp. <span class="pull-right">70.000,00</span></td>
+			</tr>
+						<tr border='0', height='20px'>
+				<td></td>
+				<td>- USG</td>
+				<td>Rp. <span class="pull-right">80.000,00</span></td>
+				<td>1</td>
+				<td>Rp. <span class="pull-right">80.000,00</span></td>
+			</tr>
+						<tr border='1', height='20px'>
+				<td>IV</td>
+				<td colspan="1">Jasa Perawat</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+						<tr border='1', height='20px'>
+				<td>V</td>
+				<td colspan="1">Jasa Dokter & Perawat</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+						<tr border='1', height='20px'>
+				<td>VI</td>
+				<td colspan="1">Jasa Laboratorium</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+						<tr border='1', height='20px'>
+				<td>VII</td>
+				<td colspan="1">Jasa Radiologi</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+						<tr border='1', height='20px'>
+				<td>VIII</td>
+				<td colspan="1">Jasa Operasi</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+						<tr border='1', height='20px'>
+				<td>IX</td>
+				<td colspan="1">Obat dan BHP Operasi</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+						<tr >
+				<td colspan="2"></td>
+				<td colspan="2">Jumlah</td>
+				<td>Rp. <span class="pull-right">185.000,00</span></td>
+			</tr>
+			<tr >
+				<td colspan="2"></td>
+				<td colspan="2">Potongan</td>
+				<td>Rp. <span class="pull-right">0,00</span></td>
+			</tr>
+			<tr >
+				<td colspan="2"></td>
+				<td colspan="2">Jumlah Bayar</td>
+				<td>Rp. <span class="pull-right">185.000,00</span></td>
+			</tr>
+			<tr >
+				<td style="font-size: 9pt;" colspan="6"><i>Terbilang : # Seratus Delapan Puluh Lima Ribu Rupiah # </i></td>
+			</tr>
+			<tr>
+				<td colspan="3"></td>
+				<td colspan=3>
+					<br><br>
+				<p align="center" ><strong>WONOGIRI, 11-01-2025</strong><br>
+				 Kasir<br><br>
+				 <img src="http://114.141.58.226/mlite/admin/tmp/qrcode.png">
+				 <br><br>
+				Administrator<br>
+				</p>
+				</td>
+			</tr>
+		</table></center>
+		</div>
+		<br><br><br>
+		<del>
+			<center>
+				<button type="button" class="btn btn-warning" data-toggle="modal" href="#emailModal"><span class="glyphicon glyphicon-send"></span> Kirim Email</button>
+				<button type="button" class="btn btn-info" data-toggle="modal" href="#waModal"><span class="glyphicon glyphicon-send"></span> Kirim WA</button>
+				<button onclick="printContent('faktur')" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-print"></span> Cetak</button>
+			</center>	
+		</del>
+
+		<!-- Modal -->
+	  <div class="modal fade" id="waModal" tabindex="-1" role="dialog" aria-labelledby="waModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <h4 class="modal-title">Kirim WhatsApp</h4>
+	        </div>
+	        <div class="modal-body">
+		        <div class="form-floating number">
+							<label for="floatingPassword">Nomor</label>
+		          <input type="text" name="number" class="form-control" id="number" placeholder="Nomor WhatsApp Tujuan" value="085747776920">
+		        </div>
+		        <div class="form-floating message">
+							<label for="floatingPassword">Pesan</label>
+		          <input type="text" name="message" class="form-control" id="message" placeholder="Tulis pesan anda.." value="Bukti Pembayaran">
+		        </div>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+	          <button type="button" class="btn btn-primary" onclick="KirimWA()" data-dismiss="modal">Kirim</button>
+	        </div>
+	      </div><!-- /.modal-content -->
+	    </div><!-- /.modal-dialog -->
+	  </div><!-- /.modal -->
+
+		<!-- Modal -->
+	  <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <h4 class="modal-title">Kirim Email</h4>
+	        </div>
+	        <div class="modal-body">
+		        <div class="form-floating number">
+							<label for="floatingPassword">Email</label>
+		          <input type="text" name="email" class="form-control" id="email" placeholder="Email Tujuan" value="-">
+		        </div>
+		        <div class="form-floating message">
+							<label for="floatingPassword">Nama Pasien</label>
+		          <input type="text" name="receiver" class="form-control" id="receiver" placeholder="Nama Pasien" value="IRMA YUSROTUN FATHUL JANNAH ">
+		        </div>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+	          <button type="button" class="btn btn-primary" onclick="KirimEmail()" data-dismiss="modal">Kirim</button>
+	        </div>
+	      </div><!-- /.modal-content -->
+	    </div><!-- /.modal-dialog -->
+	  </div><!-- /.modal -->
+
+</body>
+<script>
+function KirimEmail() {
+	var xhttp = new XMLHttpRequest();
+	var email = document.getElementById("email").value;
+	var receiver = document.getElementById("receiver").value;
+	var file = "http://114.141.58.226/mlite/uploads/invoices/RJ.11.01.2025.23.23.13.pdf";
+	xhttp.open("POST", "http://114.141.58.226/mlite/admin/kasir_rawat_jalan/kirimemail?t=9f06ac0b3614", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("email=" + email + "&receiver=" + receiver + "&file=" + file);
+}
+function KirimWA() {
+	var xhttp = new XMLHttpRequest();
+	var api_key = '-';
+	var sender = '-';
+	var number = document.getElementById("number").value;
+	var message = document.getElementById("message").value;
+	var tipe = 'pdf';
+	var file = "http://114.141.58.226/mlite/uploads/invoices/RJ.11.01.2025.23.23.13.pdf";
+	console.log(number + " - " + message);
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var data=xhttp.responseText;
+			var timeout = '504 Gateway Time-out';
+			if(data.indexOf(timeout) != -1) {
+    			alert('Timeout!!! Gagal mengirim pesan.');
+			} else {
+    			var jsonResponse = JSON.parse(data);
+    			if(jsonResponse["status"] == true) {
+    				alert('Sukses mengirim pesan.');
+    			} else {
+					alert('Gagal mengirim pesan.\n' + jsonResponse["msg"]);
+    			}
+			}
+		}
+	};
+	xhttp.open("POST", "http://114.141.58.226/mlite/admin/api/kirimwa?t=9f06ac0b3614", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("api_key=" + api_key + "&sender=" + sender + "&number=" + number + "&message=" + message);
+	xhttp.open("POST", "http://114.141.58.226/mlite/admin/api/kirimwadocument?t=9f06ac0b3614", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("api_key=" + api_key + "&sender=" + sender + "&number=" + number + "&message=" + message + "&tipe=" + tipe + "&file=" + file);
+}
+</script>
+</html>

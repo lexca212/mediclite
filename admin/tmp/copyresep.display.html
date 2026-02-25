@@ -1,0 +1,32 @@
+<div id="display_copy_resep">
+  <div class="table-responsive no-margin">
+    <table class="table table-striped no-padding">
+      <thead>
+        <tr>
+          <th>Nama Obat</th>
+          <th>Jumlah</th>
+          <th>Stok</th>
+          <th>Aturan Pakai</th>
+        </tr>
+      </thead>
+      <tbody>
+                <form id="form_copy_resep">
+                <tr>
+            <td><input type="hidden" name="kode_brng_copyresep" value="A-23-IV-0041">AMLODIPIN 10 MG</td>
+            <td><input type="text" name="jml_copyresep" value="10" size="5"></td>
+            <td>357</td>
+            <td><input type="text" name="aturan_copyresep" value="1-0-0"></td>
+        </tr>
+                </form>
+        <tr>
+          <td colspan="4" class="text-center" id="simpan_copy_resep"><button type="submit" class="btn btn-primary">Simpan Copy Resep</button></td>
+        </tr>
+              </tbody>
+    </table>
+  </div>
+</div>
+<script>
+  $("td.selisih").each(function() {
+    bootbox.alert("Stok "+ $(this).text() +" tidak mencukupi!");
+  });
+</script>

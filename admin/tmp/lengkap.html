@@ -1,0 +1,213 @@
+<article class="row" id="display">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="btn-group pull-right" style="margin-top:-8px;">
+                  <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-calendar"></i><span class="hidden-xs"> Pilihan dan Pemilahan</span>
+                  </span>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <form class="" action="http://192.168.0.212/admin/vedika/lengkap?t=8d1efe701f7c" method="">
+                    <li style="padding-left:5px;padding-right:5px;">
+                      <input type="text" id="start_date" class="form-control tanggal" name="start_date" required>
+                    </li>
+                    <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                      <input type="text" id="end_date" class="form-control tanggal" name="end_date" required>
+                    </li>
+                    <li class="" style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                        <a href="http://192.168.0.212/admin/vedika/lengkap/ralan/1?s=056600&start_date=2026-02-01&end_date=2026-02-25&t=8d1efe701f7c" class="btn btn-primary btn-block" role="tab">Rawat Jalan</a>
+                    </li>
+                    <li class="active" style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                        <a href="http://192.168.0.212/admin/vedika/lengkap/ranap/1?s=056600&start_date=2026-02-01&end_date=2026-02-25&t=8d1efe701f7c" class="btn btn-primary btn-block" role="tab">Rawat Inap</a>
+                    </li>
+                    <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                      <input type="submit" name="submit" class="btn btn-primary btn-block" value="Submit">
+                      <input type="hidden" name="t" value="8d1efe701f7c">
+                    </li>
+                    </form>
+                  </ul>
+                </div>
+                <h3 class="panel-title">Kelola Lengkap e-Vedika</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row clearfix">
+                  <div class="col col-md-6">
+                    <h3 style="margin-top:5px;margin-bottom:15px;">Jumlah: 1                      <a href="http://192.168.0.212/admin/vedika/lengkapexcel?start_date=2026-02-01&end_date=2026-02-25&t=8d1efe701f7c" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Semua</a>
+                      <a href="http://192.168.0.212/admin/vedika/lengkapexcel?jenis=2&start_date=2026-02-01&end_date=2026-02-25&t=8d1efe701f7c" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Ralan</a>
+                      <a href="http://192.168.0.212/admin/vedika/lengkapexcel?jenis=1&start_date=2026-02-01&end_date=2026-02-25&t=8d1efe701f7c" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Ranap</a>
+                    </h3>
+                  </div>
+                  <div class="col col-md-6">
+                    <form action="http://192.168.0.212/admin/vedika/lengkap/ranap/1?s=056600&start_date=2026-02-01&end_date=2026-02-25&t=8d1efe701f7c" class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+                        <div class="input-group">
+                            <input type="text" name="s" minlength="3" class="form-control" placeholder="Search" required>
+                            <input type="hidden" name="start_date" value="2026-02-01">
+                            <input type="hidden" name="end_date" value="2026-02-25">
+                            <input type="hidden" name="t" value="8d1efe701f7c">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+      					<div class="table-responsive no-margin">
+      						<table class="table table-striped no-margin">
+      							<thead>
+      								<tr>
+                        <th>Aksi dan Proses</th>
+                        <th>Data Pasien</th>
+                        <th>Data Registrasi</th>
+                        <th>Data Kunjungan</th>
+                        <th>Berkas Digital</th>
+      								</tr>
+      							</thead>
+      							<tbody>
+              			      								      								<tr>
+                        <td>
+                                                      <button class="btn btn-info btn-xs">
+                              <i class="fa fa-file-o"></i> 0152R0110226V000353                            </button>
+                                                    <br/>
+                          <a href="http://192.168.0.212/admin/vedika/pdf/20260222000002?t=8d1efe701f7c" target="_blank" class="btn btn-primary btn-xs">
+      											<i class="fa fa-print"></i> Lihat Data Klaim
+      										</a><br/>
+                                                      <a href="http://192.168.0.212/admin/vedika/setstatus/0152R0110226V000353?t=8d1efe701f7c" class="btn btn-success btn-xs" data-toggle="modal" data-target="#statusModal">
+        											<i class="fa fa-check"></i> Status
+        										</a>
+                                                        <span class="badge badge-warning">Lengkap</span>
+                                                        <br>
+                            <a href="#" class="btn btn-danger btn-xs bridging_inacbgs" data-no_rawat="20260222000002">
+                              <i class="fa fa-refresh"></i> Grouping Inacbgs
+                            </a>
+                            <br><br><br>
+                            <div class="">
+                                                              <i class="fa fa-user"></i> Ratih Saraswati, A.Md.Kes                                                          </div>
+                                                  </td>
+      									<td>
+                          <table>
+                            <tr>
+                              <td width='120px'>No.Rawat</td><td>: 2026/02/22/000002</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'>No.RM</td><td>: 056600</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'>Nama Pasien</td><td>: KARSIMAN</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'>Umur</td><td>: 67 Th</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'>Jenis Kelamin</td><td>: Laki-Laki</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'>Alamat Pasien</td><td>: NGROPOH</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table>
+                            <tr>
+                              <td width='120px'>Tgl.Pulang</td><td>: 2026-02-24 15:56:25</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'>Bangsal/kamar</td><td>: RAMA KELAS 3/RAMA 3B BED 4</td>
+                            </tr>
+                            <tr>
+                                                                                          <td width='120px'>Dokter</td>
+                              <td>:
+                                                                  - dr. Bayu Abhiyoga B,Sp.Pd<br>
+                                                              </td>
+                                                          </tr>
+                            <tr>
+                              <td width='120px'>Status</td><td>: Ranap (BPJS)</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table>
+                            <tr>
+                              <td width='120px'>No. Kunjungan</td><td>: 0152R0110226K000284</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'>No. Kartu</td><td>: 0000565737939</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'><a href="http://192.168.0.212/admin/vedika/ubahdiagnosa/Ranap/20260222000002?t=8d1efe701f7c" data-toggle="modal" data-target="#statusModal">Dx. Utama</a></td><td>: D64.9 - Anaemia, unspecified</td>
+                            </tr>
+                            <tr>
+                              <td width='120px'><a href="http://192.168.0.212/admin/vedika/ubahprosedur/Ranap/20260222000002?t=8d1efe701f7c" data-toggle="modal" data-target="#statusModal">Pros. Utama</a></td><td>: 99.04 - Transfusion of packed cells</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table>
+                            <tr><td><br><a href="http://192.168.0.212/admin/vedika/berkasperawatan/20260222000002?t=8d1efe701f7c"  data-toggle="modal" data-target="#moduleModal" class="btn btn-info btn-xs" target="_blank">Unggah Berkas Perawatan</a></td></tr>
+                                                        <tr>
+                              <td>- <a href="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/IC_tranfusi_.pdf" class="gallery">BERKAS EKLAIM</a></td>
+                            </tr>
+                                                        <tr>
+                              <td>- <a href="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/EKG_TN.KARSIMAN.jpeg" class="gallery">BERKAS PEMERIKSAAN PENUNJANG</a></td>
+                            </tr>
+                                                        <tr>
+                              <td>- <a href="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/triage_form_1771741341.png" class="gallery">TRIASE IGD</a></td>
+                            </tr>
+                                                      </table>
+                        </td>
+      								</tr>
+      								      								      							</tbody>
+      						</table>
+      					</div>
+                            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="moduleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:1120px;" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="statusModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="inacbgsModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<script>
+  $( function() {
+    $('.tanggal').datetimepicker({
+      defaultDate: '2026-02-25',
+      format: 'YYYY-MM-DD',
+      locale: 'id'
+    });
+  } );
+  $('.gallery').lightbox();
+</script>
+<script type="text/javascript">
+  $("#display").on("click",".bridging_inacbgs", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $(this).attr("data-no_rawat");
+    var loadURL =  baseURL + '/vedika/bridginginacbgs/' + no_rawat + '?t=' + mlite.token;
+
+    var modal = $('#inacbgsModal');
+    var modalContent = $('#inacbgsModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>

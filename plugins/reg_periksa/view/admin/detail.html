@@ -1,0 +1,37 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail reg_periksa</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_reg_periksa" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>No Reg</td><td>{$value.no_reg}</td><tr>
+<tr><td>No Rawat</td><td>{$value.no_rawat}</td><tr>
+<tr><td>Tgl Registrasi</td><td>{$value.tgl_registrasi}</td><tr>
+<tr><td>Jam Reg</td><td>{$value.jam_reg}</td><tr>
+<tr><td>Kd Dokter</td><td>{$value.kd_dokter}</td><tr>
+<tr><td>No Rkm Medis</td><td>{$value.no_rkm_medis}</td><tr>
+<tr><td>Kd Poli</td><td>{$value.kd_poli}</td><tr>
+<tr><td>P Jawab</td><td>{$value.p_jawab}</td><tr>
+<tr><td>Almt Pj</td><td>{$value.almt_pj}</td><tr>
+<tr><td>Hubunganpj</td><td>{$value.hubunganpj}</td><tr>
+<tr><td>Biaya Reg</td><td>{$value.biaya_reg}</td><tr>
+<tr><td>Stts</td><td>{$value.stts}</td><tr>
+<tr><td>Stts Daftar</td><td>{$value.stts_daftar}</td><tr>
+<tr><td>Status Lanjut</td><td>{$value.status_lanjut}</td><tr>
+<tr><td>Kd Pj</td><td>{$value.kd_pj}</td><tr>
+<tr><td>Umurdaftar</td><td>{$value.umurdaftar}</td><tr>
+<tr><td>Sttsumur</td><td>{$value.sttsumur}</td><tr>
+<tr><td>Status Bayar</td><td>{$value.status_bayar}</td><tr>
+<tr><td>Status Poli</td><td>{$value.status_poli}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>

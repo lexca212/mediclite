@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="btn-group pull-right" style="margin-top:-8px;">
+                  <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-calendar"></i><span class="hidden-xs"> Pilihan dan Pemilahan</span>
+                  </span>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <form class="" action="https://simrsfitricandra.site/admin/vedika/pengajuan?t=401886679761" method="">
+                    <li style="padding-left:5px;padding-right:5px;">
+                      <input type="text" id="start_date" class="form-control tanggal" name="start_date" required>
+                    </li>
+                    <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                      <input type="text" id="end_date" class="form-control tanggal" name="end_date" required>
+                    </li>
+                    <li class="active" style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                        <a href="https://simrsfitricandra.site/admin/vedika/pengajuan/ralan/1?s=&start_date=2026-02-02&end_date=2026-02-02&t=401886679761" class="btn btn-primary btn-block" role="tab">Rawat Jalan</a>
+                    </li>
+                    <li class="" style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                        <a href="https://simrsfitricandra.site/admin/vedika/pengajuan/ranap/1?s=&start_date=2026-02-02&end_date=2026-02-02&t=401886679761" class="btn btn-primary btn-block" role="tab">Rawat Inap</a>
+                    </li>
+                    <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                      <input type="submit" name="submit" class="btn btn-primary btn-block" value="Submit">
+                      <input type="hidden" name="t" value="401886679761">
+                    </li>
+                    </form>
+                  </ul>
+                </div>
+                <h3 class="panel-title">Kelola Pengajuan e-Vedika</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row clearfix">
+                  <div class="col col-md-6">
+                    <h3 style="margin-top:5px;margin-bottom:15px;">Jumlah: 0                      <a href="https://simrsfitricandra.site/admin/vedika/pengajuanexcel?start_date=2026-02-02&end_date=2026-02-02&t=401886679761" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Semua</a>
+                      <a href="https://simrsfitricandra.site/admin/vedika/pengajuanexcel?jenis=2&start_date=2026-02-02&end_date=2026-02-02&t=401886679761" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Ralan</a>
+                      <a href="https://simrsfitricandra.site/admin/vedika/pengajuanexcel?jenis=1&start_date=2026-02-02&end_date=2026-02-02&t=401886679761" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Ranap</a>
+                    </h3>
+                  </div>
+                  <div class="col col-md-6">
+                    <form action="https://simrsfitricandra.site/admin/vedika/pengajuan/ralan/1?s=&start_date=2026-02-02&end_date=2026-02-02&t=401886679761" class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+                        <div class="input-group">
+                            <input type="text" name="s" minlength="3" class="form-control" placeholder="Search" required>
+                            <input type="hidden" name="start_date" value="2026-02-02">
+                            <input type="hidden" name="end_date" value="2026-02-02">
+                            <input type="hidden" name="t" value="401886679761">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+      					<div class="table-responsive no-margin">
+      						<table class="table table-striped no-margin">
+      							<thead>
+      								<tr>
+                        <th>Aksi dan Proses</th>
+                        <th>Data Pasien</th>
+                        <th>Data Registrasi</th>
+                        <th>Data Kunjungan</th>
+                        <th>Berkas Digital</th>
+      								</tr>
+      							</thead>
+      							<tbody>
+              			      								<tr><td colspan="5" class="text-center">Data pasien tidak ditemukan</td></tr>
+      							      							</tbody>
+      						</table>
+      					</div>
+                            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="moduleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:1120px;" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="statusModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<script>
+  $( function() {
+    $('.tanggal').datetimepicker({
+      defaultDate: '2026-02-02',
+      format: 'YYYY-MM-DD',
+      locale: 'id'
+    });
+  } );
+  $('.gallery').lightbox();
+</script>

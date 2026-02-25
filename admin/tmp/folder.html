@@ -1,0 +1,292 @@
+<style>
+.file-man-box {
+    padding: 20px;
+    border: 1px solid #e3eaef;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 20px
+}
+
+.file-man-box .file-close {
+    color: #f1556c;
+    position: absolute;
+    line-height: 24px;
+    font-size: 24px;
+    right: 10px;
+    top: 10px;
+    visibility: hidden
+}
+
+.file-man-box .file-img-box {
+    line-height: 120px;
+    text-align: center
+}
+
+.file-man-box .file-img-box img {
+    height: 64px
+}
+
+.file-man-box .file-download {
+    font-size: 32px;
+    color: #98a6ad;
+    position: absolute;
+    right: 10px
+}
+
+.file-man-box .file-download:hover {
+    color: #313a46
+}
+
+.file-man-box .file-man-title {
+    padding-right: 25px
+}
+
+.file-man-box:hover {
+    -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02)
+}
+
+.file-man-box:hover .file-close {
+    visibility: visible
+}
+.text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+h5 {
+    font-size: 15px;
+}    
+</style>
+<div class="row" style="margin-bottom:100px;" id="folder_pasien">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Kelola Folder Pasien</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="bg-white">
+                                <img src="http://192.168.0.212/plugins/pasien/img/P.png" class="img-fluid" width="70%" alt="Responsive image" />
+                                <div class="p-3 border-bottom">
+                                    <h4 class="font-weight-bold text-dark">Nama: RACHEL PRASETYO SARI</h4>
+                                    <h4 class="font-weight-bold text-dark">Nomor RM: 057185</h4>
+                                    <h4 class="font-weight-bold text-dark">Umur: 40 Th 1 Bl 29 Hr</h4>
+                                    <p class="mb-0 text-muted">SIYONO 001/009</p>
+                                </div>
+                            </div>        
+                        </li>
+                         
+                        <li class="list-group-item">
+                            <a href="http://192.168.0.212/admin/pasien/folder/057185/20240701000034?t=b9cae6a64b8a">
+                                Tanggal: 2024-07-01<br>
+                                No. Rawat: 2024/07/01/000034<br>
+                                Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan<br>
+                                Dokter: dr. Guntur,Sp.OG                            </a>
+                        </li>
+                         
+                        <li class="list-group-item">
+                            <a href="http://192.168.0.212/admin/pasien/folder/057185/20240715000018?t=b9cae6a64b8a">
+                                Tanggal: 2024-07-15<br>
+                                No. Rawat: 2024/07/15/000018<br>
+                                Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan<br>
+                                Dokter: dr. Guntur,Sp.OG                            </a>
+                        </li>
+                         
+                        <li class="list-group-item">
+                            <a href="http://192.168.0.212/admin/pasien/folder/057185/20250201000020?t=b9cae6a64b8a">
+                                Tanggal: 2025-02-01<br>
+                                No. Rawat: 2025/02/01/000020<br>
+                                Poliklinik: Unit IGD<br>
+                                Dokter: dr. Guntur,Sp.OG                            </a>
+                        </li>
+                         
+                        <li class="list-group-item">
+                            <a href="http://192.168.0.212/admin/pasien/folder/057185/20250210000023?t=b9cae6a64b8a">
+                                Tanggal: 2025-02-10<br>
+                                No. Rawat: 2025/02/10/000023<br>
+                                Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan<br>
+                                Dokter: dr. Guntur,Sp.OG                            </a>
+                        </li>
+                         
+                        <li class="list-group-item">
+                            <a href="http://192.168.0.212/admin/pasien/folder/057185/20260206000039?t=b9cae6a64b8a">
+                                Tanggal: 2026-02-06<br>
+                                No. Rawat: 2026/02/06/000039<br>
+                                Poliklinik: Unit IGD<br>
+                                Dokter: dr. Alifa Indriana                            </a>
+                        </li>
+                                            </ul>
+                </div>
+                <div class="col-md-9">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="http://192.168.0.212/admin/pasien/manage?t=b9cae6a64b8a">Pasien</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="http://192.168.0.212/admin/pasien/folder/057185?t=b9cae6a64b8a">057185</a>
+                        </li>
+                                            </ol>
+                    <div class="row">
+                         
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/RACHEL_CTG.jpg"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/RACHEL_CTG.jpg" target="_blank"><img src="http://192.168.0.212/assets/svg/jpg.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/RACHEL_CTG.jpg"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2025/02/01/000020</h5>
+                                    <p class="mb-0"><small>BERKAS PEMERIKSAAN PENUNJANG</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/RACHEL_LAKMUS.jpg"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/RACHEL_LAKMUS.jpg" target="_blank"><img src="http://192.168.0.212/assets/svg/jpg.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/RACHEL_LAKMUS.jpg"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2025/02/01/000020</h5>
+                                    <p class="mb-0"><small>BERKAS PEMERIKSAAN PENUNJANG</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/RACHEL_SPRI.jpg"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/RACHEL_SPRI.jpg" target="_blank"><img src="http://192.168.0.212/assets/svg/jpg.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/RACHEL_SPRI.jpg"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2025/02/01/000020</h5>
+                                    <p class="mb-0"><small>BERKAS PEMERIKSAAN PENUNJANG</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/triage_form_1770384560.png"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/triage_form_1770384560.png" target="_blank"><img src="http://192.168.0.212/assets/svg/png.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/triage_form_1770384560.png"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2026/02/06/000039</h5>
+                                    <p class="mb-0"><small>TRIASE IGD</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/triage_form_1770726617.png"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/triage_form_1770726617.png" target="_blank"><img src="http://192.168.0.212/assets/svg/png.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/triage_form_1770726617.png"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2026/02/06/000039</h5>
+                                    <p class="mb-0"><small>TRIASE IGD</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/triage_form_1770863176.png"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/triage_form_1770863176.png" target="_blank"><img src="http://192.168.0.212/assets/svg/png.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/triage_form_1770863176.png"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2026/02/06/000039</h5>
+                                    <p class="mb-0"><small>TRIASE IGD</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/ic_SC_Rachel_.pdf"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/ic_SC_Rachel_.pdf" target="_blank"><img src="http://192.168.0.212/assets/svg/pdf.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/ic_SC_Rachel_.pdf"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2026/02/06/000039</h5>
+                                    <p class="mb-0"><small>BERKAS EKLAIM</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="col-md-4 col-lg-2 col-xl-2">
+                            <div class="file-man-box">
+                                                                <a href="" class="file-close hapus_berkas_digital" data-lokasi_file="pages/upload/LAKMUS_NY._HIKMAH.jpeg"><i class="fa fa-times-circle"></i></a>
+                                                                <div class="file-img-box"><a href="http://192.168.0.212/uploads/berkasrawat/pages/upload/LAKMUS_NY._HIKMAH.jpeg" target="_blank"><img src="http://192.168.0.212/assets/svg/_HIKMAH.svg" alt="icon"></a></div><a href="#" class="file-download download_berkas_digital" data-lokasi_file="pages/upload/LAKMUS_NY._HIKMAH.jpeg"><i class="fa fa-download"></i></a>
+                                <div class="file-man-title">
+                                    <h5 class="mb-0 text-overflow">2026/02/06/000039</h5>
+                                    <p class="mb-0"><small>BERKAS EKLAIM</small></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $("#form_berkasdigital").on("click", "#simpan_berkas_digital", function(event){
+        var property = document.getElementById('berkas').files[0];
+        var image_name = property.name;
+        var image_extension = image_name.split('.').pop().toLowerCase();
+  
+        if(jQuery.inArray(image_extension,['gif','jpg','jpeg','png','pdf','doc','docx','xls','xlsx']) == -1){
+          alert("Invalid file type");
+          return false;
+        }
+  
+        var form_data = new FormData();
+        var no_rawat = $('input:text[name=no_rawat]').val();
+        form_data.append("file",property);
+        form_data.append("no_rawat",$('#no_rawat').val());
+        form_data.append("kode",$('#kode').val());
+        $.ajax({
+          url:'http://192.168.0.212/admin/pasien/saveberkasdigital?t=b9cae6a64b8a',
+          method:'POST',
+          data:form_data,
+          contentType:false,
+          cache:false,
+          processData:false,
+          beforeSend:function(){
+            $('#berkasdigitalstatus').html('Loading......');
+          },
+          success:function(data){  
+            console.log(data);
+            // $('#berkasdigitalstatus').html(data);
+            location.reload();
+          }
+        });
+  
+    });
+    $("#folder_pasien").on("click", ".hapus_berkas_digital", function(event){
+        // alert(lokasi_file);
+        var baseURL = mlite.url + '/' + mlite.admin;
+        event.preventDefault();
+        var url = baseURL + '/pasien/hapusberkasdigital?t=' + mlite.token;
+        var lokasi_file = $(this).attr("data-lokasi_file");;
+        // tampilkan dialog konfirmasi
+        bootbox.confirm("Apakah anda yakin ingin menghapus berkas ini?", function(result){
+            // ketika ditekan tombol ok
+            if (result){
+               // mengirimkan perintah penghapusan
+                $.post(url, {
+                    lokasi_file: lokasi_file
+                } ,function(data) {
+                    location.reload();
+                });
+            }
+        });        
+    });
+    $("#folder_pasien").on("click", ".download_berkas_digital", function(event){
+        // alert(lokasi_file);
+        var baseURL = mlite.url + '/' + mlite.admin;
+        event.preventDefault();
+        var lokasi_file = $(this).attr("data-lokasi_file");
+        var url = baseURL + '/pasien/downloadberkasdigital?lokasi_file=' + lokasi_file + '&t=' + mlite.token;
+        // tampilkan dialog konfirmasi
+        bootbox.confirm("Apakah anda ingin mengunduh berkas ini?", function(result){
+            // ketika ditekan tombol ok
+            if (result){
+               // mengirimkan perintah penghapusan
+               window.location.href = url;
+            }
+        });        
+    });    
+  </script>

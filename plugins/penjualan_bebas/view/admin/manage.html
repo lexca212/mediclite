@@ -1,0 +1,159 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class='col-md-6 text-left'>
+                      <div class="btn-group" role="group" aria-label="Toolbar">
+                          <button id='lihat_data_penjualan' class='btn btn-info' data-toggle='tooltip' data-placement='top' title='Lihat Data penjualan' style='color:white;'>
+                          <i class='fa fa-eye' style='font-size: 15px;'></i><span class="hidden-xs"> Lihat</span> </button>
+                          <button id='tambah_data_penjualan' class='btn btn-success' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-plus-square' style='font-size: 15px;'></i><span class="hidden-xs"> Tambah</span>
+                          </button>
+                          <button id='edit_data_penjualan' class='btn btn-primary' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-edit' style='font-size: 15px;'></i><span class="hidden-xs"> Edit</span>
+                          </button>
+                          <button id='hapus_data_penjualan' class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Hapus Data'>
+                          <i class='fa fa-trash' style='font-size: 15px;'></i><span class="hidden-xs"> Hapus</span>
+                          </button>
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="hidden-xs">More</span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" id="lihat_detail_penjualan">View Detail</a></li>
+                              <li><a href="#">Other link</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <div class='col-md-6 text-right'>
+                      <div class="input-group" style="width:100%">
+                          <span class="input-group-addon">Cari :</span>
+                          <span class="input-group-addon" style="width:150px;padding:0 !important;background-color: #cccccc;border: 0px;text-align: left !important;">
+                          <select class="form-control" id='search_field_penjualan' name='search_field_penjualan' style="margin: 0 !important;"> 
+                              <option value='nota_jual'>Nota Jual</option>
+<option value='tgl_jual'>Tgl Jual</option>
+<option value='nip'>Nip</option>
+<option value='no_rkm_medis'>No Rkm Medis</option>
+<option value='nm_pasien'>Nm Pasien</option>
+<option value='keterangan'>Keterangan</option>
+<option value='jns_jual'>Jns Jual</option>
+<option value='ongkir'>Ongkir</option>
+<option value='ppn'>Ppn</option>
+<option value='status'>Status</option>
+<option value='kd_bangsal'>Kd Bangsal</option>
+<option value='kd_rek'>Kd Rek</option>
+<option value='nama_bayar'>Nama Bayar</option>
+
+                          </select>
+                          </span>
+                          <input class='form-control' name='search_text_penjualan' id='search_text_penjualan' type='search' placeholder='Masukkan Kata Kunci Pencarian' />  
+                          <span class="input-group-addon">
+                          <span id='searchclear_penjualan' data-toggle='tooltip' data-placement='top' title='Clear'><i class="fa fa-times text-danger"></i></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tbl_penjualan" class="table table-bordered table-striped display dataTable" style="width:100%">
+                        <thead>
+                        <tr> 
+                            <th>Nota Jual</th>
+<th>Tgl Jual</th>
+<th>Nip</th>
+<th>No Rkm Medis</th>
+<th>Nm Pasien</th>
+<th>Keterangan</th>
+<th>Jns Jual</th>
+<th>Ongkir</th>
+<th>Ppn</th>
+<th>Status</th>
+<th>Kd Bangsal</th>
+<th>Kd Rek</th>
+<th>Nama Bayar</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>        
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Modal -->
+<div id="modal_penjualan" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Edit Data Penjualan bebas</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form name="form_penjualan">
+          <input type="hidden" class="form-control" id="typeact" /> 
+          <label>Nota Jual<br /></label><input type='text' class='form-control' id='nota_jual' name='nota_jual' /><div><span class='error'></span></div>
+<label>Tgl Jual<br /></label><input type='text' class='form-control' id='tgl_jual' name='tgl_jual' /><div><span class='error'></span></div>
+<label>Nip<br /></label><input type='text' class='form-control' id='nip' name='nip' /><div><span class='error'></span></div>
+<label>No Rkm Medis<br /></label><input type='text' class='form-control' id='no_rkm_medis' name='no_rkm_medis' /><div><span class='error'></span></div>
+<label>Nm Pasien<br /></label><input type='text' class='form-control' id='nm_pasien' name='nm_pasien' /><div><span class='error'></span></div>
+<label>Keterangan<br /></label><input type='text' class='form-control' id='keterangan' name='keterangan' /><div><span class='error'></span></div>
+<label>Jns Jual<br /></label><input type='text' class='form-control' id='jns_jual' name='jns_jual' /><div><span class='error'></span></div>
+<label>Ongkir<br /></label><input type='text' class='form-control' id='ongkir' name='ongkir' /><div><span class='error'></span></div>
+<label>Ppn<br /></label><input type='text' class='form-control' id='ppn' name='ppn' /><div><span class='error'></span></div>
+<label>Status<br /></label><input type='text' class='form-control' id='status' name='status' /><div><span class='error'></span></div>
+<label>Kd Bangsal<br /></label><input type='text' class='form-control' id='kd_bangsal' name='kd_bangsal' /><div><span class='error'></span></div>
+<label>Kd Rek<br /></label><input type='text' class='form-control' id='kd_rek' name='kd_rek' /><div><span class='error'></span></div>
+<label>Nama Bayar<br /></label><input type='text' class='form-control' id='nama_bayar' name='nama_bayar' /><div><span class='error'></span></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="simpan_data_penjualan" class="btn btn-primary">Simpan Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_lihat_penjualan" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Lihat Data Penjualan bebas</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="forTable_penjualan"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="export_pdf" class="btn btn-primary">
+          <i class="fa fa-file-pdf-o"></i>&nbsp;PDF </button>
+        <button type="submit" id="export_xlsx" class="btn btn-primary">
+          <i class="fa fa-file-excel-o"></i>&nbsp;XLSX </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_detail_penjualan" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Kelola Kelompok Jabatan</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div id="notif"></div>
+        </div>
+        <div class="row">
+          <div class="col col-md-6">
+            <div class="searchbox-input form-inline padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group" id="index">
+                <input class="btn btn-default" type="button" id="bukaform" value="Buka Form" />
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-6">
+            <div class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group">
+                <input type="text" name="cari" minlength="3" class="form-control" placeholder="Pencarian..." required>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="form"></div>
+        <div class="display">
+          <div id="display">
+  <div class="table-responsive no-margin">
+    <table class="table table-striped no-padding">
+      <thead>
+        <tr>
+          <th>Kode Kelompok Jabatan</th>
+          <th>Nama Kelompok Jabatan</th>
+        </tr>
+      </thead>
+      <tbody>
+                        <tr class="edit" data-kode_kelompok="WKT">
+          <td>WKT</td>
+          <td>WAKIL KETUA TIM</td>
+        </tr>
+                <tr class="edit" data-kode_kelompok="SKP">
+          <td>SKP</td>
+          <td>SEKRETARIS/KETUA POKJA</td>
+        </tr>
+                <tr class="edit" data-kode_kelompok="SDB">
+          <td>SDB</td>
+          <td>SEKRETARIS DAN BENDAHARA</td>
+        </tr>
+                <tr class="edit" data-kode_kelompok="KTA">
+          <td>KTA</td>
+          <td>KETUA TIM AKREDITASI</td>
+        </tr>
+                <tr class="edit" data-kode_kelompok="KP">
+          <td>KP</td>
+          <td>KETUA TIM /PANITIA</td>
+        </tr>
+                <tr class="edit" data-kode_kelompok="AP">
+          <td>AP</td>
+          <td>ANGGOTA POKJA</td>
+        </tr>
+                <tr class="edit" data-kode_kelompok="AG">
+          <td>AG</td>
+          <td>ANGGOTA</td>
+        </tr>
+                <tr class="edit" data-kode_kelompok="-">
+          <td>-</td>
+          <td>-</td>
+        </tr>
+                      </tbody>
+    </table>
+  </div>
+  <nav class="clearfix m-t-xs">
+    <div class="col">
+      <ul class="pagination no-margin pull-right">
+                      <li class="disabled"><a href="#">&laquo;</a></li>
+                        <li class="disabled"><a href="#">&larr;</a></li>
+                <li class="disabled"><a href="#">Hal : 1 dari 1 Hal</a></li>
+                <li class="disabled"><a href="#">&rarr;</a></li>
+                        <li class="disabled"><a href="#">&raquo;</a></li>
+                    </ul>
+    </div>
+  </nav>
+</div>
+<script type="text/javascript">
+  $(".alert-dismissible").fadeTo(3000, 500).slideUp(500);
+</script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

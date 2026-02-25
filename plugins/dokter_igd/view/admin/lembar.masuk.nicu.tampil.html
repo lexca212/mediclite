@@ -1,0 +1,26 @@
+<table class="table" width="100%">
+    <thead>
+      <tr>
+        <th>Nomor Rawat</th>
+        <th>Keluhan</th>
+        <th>Hubungan</th>
+        <th>Dokter</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      {if: $mlite_masuk_nicu}
+      <tr>
+        <td>{$mlite_masuk_nicu.no_rawat}</td>
+        <td>{$mlite_masuk_nicu.diagnosa}</td>
+        <td>{$mlite_masuk_nicu.nm_dokter}</td>
+        <td>{$mlite_masuk_nicu.tanggal}</td>
+      </tr>
+      {else}
+      <tr>
+        <td colspan="5">Tidak ada data</td>
+      </tr>
+      {/if}
+    </tbody>
+</table>
+  

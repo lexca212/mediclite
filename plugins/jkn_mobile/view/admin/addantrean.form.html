@@ -1,0 +1,62 @@
+<article class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{$addantrean.title}</h3>
+            </div>
+            <div class="panel-body">
+    		<form name="addantrean" action="{?=url(ADMIN.'/jkn_mobile/addantreansave/'.@$addantrean.form.kodebooking)?}" method="POST">
+    			<fieldset>
+                    <div class="form-group">
+                        <label>Tanggal Periksa</label>
+                        <input type="text" name="tanggal_periksa" class="form-control" value="{$addantrean.form.tanggal_periksa}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>No RM</label>
+                        <input type="text" name="no_rkm_medis" class="form-control" value="{$addantrean.form.no_rkm_medis}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>Kode Booking</label>
+                        <input type="text" name="kodebooking" class="form-control" value="{$addantrean.form.kodebooking}" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <label>Nomor Referensi</label>
+                        <input type="text" name="referensi" class="form-control" value="{$addantrean.form.nomor_referensi}"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select class="form-control" data-use-search="true" data-options-height="10px" name="status_kirim">
+                            <option value="Sudah" {if: $addantrean.form.status_kirim == 'Sudah'} selected {/if}>Sudah</option>
+                            <option value="Belum" {if: $addantrean.form.status_kirim == 'Belum'} selected {/if}>Belum</option>
+                            <option value="Gagal" {if: $addantrean.form.status_kirim == 'Gagal'} selected {/if}>Gagal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="save" class="btn btn-primary" value="Simpan" />
+                    </div>
+                </fieldset>
+            </form>
+            </div>
+            <div class="table-responsive no-margin">
+                <table class="table table-striped no-margin">
+                    <thead>
+                        <tr>
+                            <th>Nomor Referensi</th>
+                            <th>Nomor SKDP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     {if: !empty($addantrean.sep)}
+                        <tr>
+                            <td>{$addantrean.sep.no_rujukan}</td>
+                            <td>{$addantrean.sep.noskdp}</td>
+                        </tr>
+                    {else}
+                        <tr><td colspan="5" class="text-center">Kosong</td></tr>
+                    {/if}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</article>

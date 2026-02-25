@@ -1,0 +1,189 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class='col-md-6 text-left'>
+                      <div class="btn-group" role="group" aria-label="Toolbar">
+                          <button id='lihat_data_referensi_mobilejkn_bpjs' class='btn btn-info' data-toggle='tooltip' data-placement='top' title='Lihat Data referensi_mobilejkn_bpjs' style='color:white;'>
+                          <i class='fa fa-eye' style='font-size: 15px;'></i><span class="hidden-xs"> Lihat</span> </button>
+                          <button id='tambah_data_referensi_mobilejkn_bpjs' class='btn btn-success' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-plus-square' style='font-size: 15px;'></i><span class="hidden-xs"> Tambah</span>
+                          </button>
+                          <button id='edit_data_referensi_mobilejkn_bpjs' class='btn btn-primary' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-edit' style='font-size: 15px;'></i><span class="hidden-xs"> Edit</span>
+                          </button>
+                          <button id='hapus_data_referensi_mobilejkn_bpjs' class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Hapus Data'>
+                          <i class='fa fa-trash' style='font-size: 15px;'></i><span class="hidden-xs"> Hapus</span>
+                          </button>
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="hidden-xs">More</span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" id="lihat_detail_referensi_mobilejkn_bpjs">View Detail</a></li>
+                              <li><a href="#">Other link</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <div class='col-md-6 text-right'>
+                      <div class="input-group" style="width:100%">
+                          <span class="input-group-addon">Cari :</span>
+                          <span class="input-group-addon" style="width:150px;padding:0 !important;background-color: #cccccc;border: 0px;text-align: left !important;">
+                          <select class="form-control" id='search_field_referensi_mobilejkn_bpjs' name='search_field_referensi_mobilejkn_bpjs' style="margin: 0 !important;"> 
+                              <option value='nobooking'>Nobooking</option>
+<option value='no_rawat'>No Rawat</option>
+<option value='nomorkartu'>Nomorkartu</option>
+<option value='nik'>Nik</option>
+<option value='nohp'>Nohp</option>
+<option value='kodepoli'>Kodepoli</option>
+<option value='pasienbaru'>Pasienbaru</option>
+<option value='norm'>Norm</option>
+<option value='tanggalperiksa'>Tanggalperiksa</option>
+<option value='kodedokter'>Kodedokter</option>
+<option value='jampraktek'>Jampraktek</option>
+<option value='jeniskunjungan'>Jeniskunjungan</option>
+<option value='nomorreferensi'>Nomorreferensi</option>
+<option value='nomorantrean'>Nomorantrean</option>
+<option value='angkaantrean'>Angkaantrean</option>
+<option value='estimasidilayani'>Estimasidilayani</option>
+<option value='sisakuotajkn'>Sisakuotajkn</option>
+<option value='kuotajkn'>Kuotajkn</option>
+<option value='sisakuotanonjkn'>Sisakuotanonjkn</option>
+<option value='kuotanonjkn'>Kuotanonjkn</option>
+<option value='status'>Status</option>
+<option value='validasi'>Validasi</option>
+<option value='statuskirim'>Statuskirim</option>
+
+                          </select>
+                          </span>
+                          <input class='form-control' name='search_text_referensi_mobilejkn_bpjs' id='search_text_referensi_mobilejkn_bpjs' type='search' placeholder='Masukkan Kata Kunci Pencarian' />  
+                          <span class="input-group-addon">
+                          <span id='searchclear_referensi_mobilejkn_bpjs' data-toggle='tooltip' data-placement='top' title='Clear'><i class="fa fa-times text-danger"></i></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tbl_referensi_mobilejkn_bpjs" class="table table-bordered table-striped display dataTable" style="width:100%">
+                        <thead>
+                        <tr> 
+                            <th>Nobooking</th>
+<th>No Rawat</th>
+<th>Nomorkartu</th>
+<th>Nik</th>
+<th>Nohp</th>
+<th>Kodepoli</th>
+<th>Pasienbaru</th>
+<th>Norm</th>
+<th>Tanggalperiksa</th>
+<th>Kodedokter</th>
+<th>Jampraktek</th>
+<th>Jeniskunjungan</th>
+<th>Nomorreferensi</th>
+<th>Nomorantrean</th>
+<th>Angkaantrean</th>
+<th>Estimasidilayani</th>
+<th>Sisakuotajkn</th>
+<th>Kuotajkn</th>
+<th>Sisakuotanonjkn</th>
+<th>Kuotanonjkn</th>
+<th>Status</th>
+<th>Validasi</th>
+<th>Statuskirim</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>        
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Modal -->
+<div id="modal_referensi_mobilejkn_bpjs" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Edit Data khanza referensi mjkn bpjs</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form name="form_referensi_mobilejkn_bpjs">
+          <input type="hidden" class="form-control" id="typeact" /> 
+          <label>Nobooking<br /></label><input type='text' class='form-control' id='nobooking' name='nobooking' /><div><span class='error'></span></div>
+<label>No Rawat<br /></label><input type='text' class='form-control' id='no_rawat' name='no_rawat' /><div><span class='error'></span></div>
+<label>Nomorkartu<br /></label><input type='text' class='form-control' id='nomorkartu' name='nomorkartu' /><div><span class='error'></span></div>
+<label>Nik<br /></label><input type='text' class='form-control' id='nik' name='nik' /><div><span class='error'></span></div>
+<label>Nohp<br /></label><input type='text' class='form-control' id='nohp' name='nohp' /><div><span class='error'></span></div>
+<label>Kodepoli<br /></label><input type='text' class='form-control' id='kodepoli' name='kodepoli' /><div><span class='error'></span></div>
+<label>Pasienbaru<br /></label><input type='text' class='form-control' id='pasienbaru' name='pasienbaru' /><div><span class='error'></span></div>
+<label>Norm<br /></label><input type='text' class='form-control' id='norm' name='norm' /><div><span class='error'></span></div>
+<label>Tanggalperiksa<br /></label><input type='text' class='form-control' id='tanggalperiksa' name='tanggalperiksa' /><div><span class='error'></span></div>
+<label>Kodedokter<br /></label><input type='text' class='form-control' id='kodedokter' name='kodedokter' /><div><span class='error'></span></div>
+<label>Jampraktek<br /></label><input type='text' class='form-control' id='jampraktek' name='jampraktek' /><div><span class='error'></span></div>
+<label>Jeniskunjungan<br /></label><input type='text' class='form-control' id='jeniskunjungan' name='jeniskunjungan' /><div><span class='error'></span></div>
+<label>Nomorreferensi<br /></label><input type='text' class='form-control' id='nomorreferensi' name='nomorreferensi' /><div><span class='error'></span></div>
+<label>Nomorantrean<br /></label><input type='text' class='form-control' id='nomorantrean' name='nomorantrean' /><div><span class='error'></span></div>
+<label>Angkaantrean<br /></label><input type='text' class='form-control' id='angkaantrean' name='angkaantrean' /><div><span class='error'></span></div>
+<label>Estimasidilayani<br /></label><input type='text' class='form-control' id='estimasidilayani' name='estimasidilayani' /><div><span class='error'></span></div>
+<label>Sisakuotajkn<br /></label><input type='text' class='form-control' id='sisakuotajkn' name='sisakuotajkn' /><div><span class='error'></span></div>
+<label>Kuotajkn<br /></label><input type='text' class='form-control' id='kuotajkn' name='kuotajkn' /><div><span class='error'></span></div>
+<label>Sisakuotanonjkn<br /></label><input type='text' class='form-control' id='sisakuotanonjkn' name='sisakuotanonjkn' /><div><span class='error'></span></div>
+<label>Kuotanonjkn<br /></label><input type='text' class='form-control' id='kuotanonjkn' name='kuotanonjkn' /><div><span class='error'></span></div>
+<label>Status<br /></label><input type='text' class='form-control' id='status' name='status' /><div><span class='error'></span></div>
+<label>Validasi<br /></label><input type='text' class='form-control' id='validasi' name='validasi' /><div><span class='error'></span></div>
+<label>Statuskirim<br /></label><input type='text' class='form-control' id='statuskirim' name='statuskirim' /><div><span class='error'></span></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="simpan_data_referensi_mobilejkn_bpjs" class="btn btn-primary">Simpan Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_lihat_referensi_mobilejkn_bpjs" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Lihat Data khanza referensi mjkn bpjs</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="forTable_referensi_mobilejkn_bpjs"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="export_pdf" class="btn btn-primary">
+          <i class="fa fa-file-pdf-o"></i>&nbsp;PDF </button>
+        <button type="submit" id="export_xlsx" class="btn btn-primary">
+          <i class="fa fa-file-excel-o"></i>&nbsp;XLSX </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_detail_referensi_mobilejkn_bpjs" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>

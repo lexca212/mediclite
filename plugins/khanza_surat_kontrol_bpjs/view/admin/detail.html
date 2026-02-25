@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail bridging_surat_kontrol_bpjs</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_bridging_surat_kontrol_bpjs" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>No Sep</td><td>{$value.no_sep}</td><tr>
+<tr><td>Tgl Surat</td><td>{$value.tgl_surat}</td><tr>
+<tr><td>No Surat</td><td>{$value.no_surat}</td><tr>
+<tr><td>Tgl Rencana</td><td>{$value.tgl_rencana}</td><tr>
+<tr><td>Kd Dokter Bpjs</td><td>{$value.kd_dokter_bpjs}</td><tr>
+<tr><td>Nm Dokter Bpjs</td><td>{$value.nm_dokter_bpjs}</td><tr>
+<tr><td>Kd Poli Bpjs</td><td>{$value.kd_poli_bpjs}</td><tr>
+<tr><td>Nm Poli Bpjs</td><td>{$value.nm_poli_bpjs}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>

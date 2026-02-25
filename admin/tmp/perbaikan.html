@@ -1,0 +1,140 @@
+<article class="row" id="display">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="btn-group pull-right" style="margin-top:-8px;">
+                  <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-calendar"></i><span class="hidden-xs"> Pilihan dan Pemilahan</span>
+                  </span>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <form class="" action="http://192.168.0.212/admin/vedika/perbaikan?t=8b912ec09272" method="">
+                    <li style="padding-left:5px;padding-right:5px;">
+                      <input type="text" id="start_date" class="form-control tanggal" name="start_date" required>
+                    </li>
+                    <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                      <input type="text" id="end_date" class="form-control tanggal" name="end_date" required>
+                    </li>
+                    <li class="active" style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                        <a href="http://192.168.0.212/admin/vedika/perbaikan/ralan/1?s=&start_date=2025-10-10&end_date=2025-10-10&t=8b912ec09272" class="btn btn-primary btn-block" role="tab">Rawat Jalan</a>
+                    </li>
+                    <li class="" style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                        <a href="http://192.168.0.212/admin/vedika/perbaikan/ranap/1?s=&start_date=2025-10-10&end_date=2025-10-10&t=8b912ec09272" class="btn btn-primary btn-block" role="tab">Rawat Inap</a>
+                    </li>
+                    <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                      <input type="submit" name="submit" class="btn btn-primary btn-block" value="Submit">
+                      <input type="hidden" name="t" value="8b912ec09272">
+                    </li>
+                    </form>
+                  </ul>
+                </div>
+                <h3 class="panel-title">Kelola Perbaikan e-Vedika</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row clearfix">
+                  <div class="col col-md-6">
+                    <h3 style="margin-top:5px;margin-bottom:15px;">
+                      Jumlah: 0                      <a href="http://192.168.0.212/admin/vedika/perbaikanexcel?start_date=2025-10-10&end_date=2025-10-10&t=8b912ec09272" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Semua</a>
+                      <a href="http://192.168.0.212/admin/vedika/perbaikanexcel?jenis=2&start_date=2025-10-10&end_date=2025-10-10&t=8b912ec09272" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Ralan</a>
+                      <a href="http://192.168.0.212/admin/vedika/perbaikanexcel?jenis=1&start_date=2025-10-10&end_date=2025-10-10&t=8b912ec09272" class="btn btn-sm btn-success" style="margin:0;padding:1px 4px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Ranap</a>
+                    </h3>
+                  </div>
+                  <div class="col col-md-6">
+                    <form action="http://192.168.0.212/admin/vedika/perbaikan/ralan/1?s=&start_date=2025-10-10&end_date=2025-10-10&t=8b912ec09272" class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+                        <div class="input-group">
+                            <input type="text" name="s" minlength="3" class="form-control" placeholder="Search" required>
+                            <input type="hidden" name="start_date" value="2025-10-10">
+                            <input type="hidden" name="end_date" value="2025-10-10">
+                            <input type="hidden" name="t" value="8b912ec09272">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+      					<div class="table-responsive no-margin">
+      						<table class="table table-striped no-margin">
+      							<thead>
+      								<tr>
+                        <th>Aksi dan Proses</th>
+                        <th>Data Pasien</th>
+                        <th>Data Registrasi</th>
+                        <th>Data Kunjungan</th>
+                        <th>Berkas Digital</th>
+      								</tr>
+      							</thead>
+      							<tbody>
+              			      								<tr><td colspan="5" class="text-center">Data pasien tidak ditemukan</td></tr>
+      							      							</tbody>
+      						</table>
+      					</div>
+                            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="moduleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:1120px;" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="statusModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  var no_rawat = $(this).attr("data-no_rawat");
+  $('input:text[name=no_rawat]').val(no_rawat);
+</script>
+<script>
+  $( function() {
+    $('.tanggal').datetimepicker({
+      defaultDate: '2025-10-10',
+      format: 'YYYY-MM-DD',
+      locale: 'id'
+    });
+  } );
+  $('.gallery').lightbox();
+</script>
+<script type="text/javascript">
+  // ketika tombol hapus ditekan
+  $("#display").on("click",".hapus_vedika", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var url = baseURL + '/vedika/hapus?t=' + mlite.token;
+    var no_sep = $(this).attr("data-no_sep");
+
+    bootbox.confirm("Apakah Anda yakin ingin menghapus data ini?", function(result){
+      // ketika ditekan tombol ok
+      if (result){
+        window.open(baseURL + '/vedika/hapus/' + no_sep + '?t=' + mlite.token, '_blank');
+      }
+    });
+    event.stopPropagation();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  // ketika tombol hapus ditekan
+  $("#display").on("click",".hapus_berkas", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var url = baseURL + '/vedika/hapusberkas?t=' + mlite.token;
+    var no_rawat = $(this).attr("data-no_rawat");
+    var nama_file = $(this).attr("data-nama_file");
+
+    bootbox.confirm("Apakah Anda yakin ingin menghapus data ini?", function(result){
+      // ketika ditekan tombol ok
+      if (result){
+        window.open(baseURL + '/vedika/hapusberkas/' + no_rawat + '/' + nama_file + '?t=' + mlite.token, '_blank');
+      }
+    });
+    event.stopPropagation();
+    return false;
+  });
+</script>

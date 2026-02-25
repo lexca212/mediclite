@@ -1,0 +1,249 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class='col-md-6 text-left'>
+                      <div class="btn-group" role="group" aria-label="Toolbar">
+                          <button id='lihat_data_pasien_bayi' class='btn btn-info' data-toggle='tooltip' data-placement='top' title='Lihat Data pasien_bayi' style='color:white;'>
+                          <i class='fa fa-eye' style='font-size: 15px;'></i><span class="hidden-xs"> Lihat</span> </button>
+                          <button id='tambah_data_pasien_bayi' class='btn btn-success' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-plus-square' style='font-size: 15px;'></i><span class="hidden-xs"> Tambah</span>
+                          </button>
+                          <button id='edit_data_pasien_bayi' class='btn btn-primary' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-edit' style='font-size: 15px;'></i><span class="hidden-xs"> Edit</span>
+                          </button>
+                          <button id='hapus_data_pasien_bayi' class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Hapus Data'>
+                          <i class='fa fa-trash' style='font-size: 15px;'></i><span class="hidden-xs"> Hapus</span>
+                          </button>
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="hidden-xs">More</span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" id="lihat_detail_pasien_bayi">View Detail</a></li>
+                              <li><a href="#">Other link</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <div class='col-md-6 text-right'>
+                      <div class="input-group" style="width:100%">
+                          <span class="input-group-addon">Cari :</span>
+                          <span class="input-group-addon" style="width:150px;padding:0 !important;background-color: #cccccc;border: 0px;text-align: left !important;">
+                          <select class="form-control" id='search_field_pasien_bayi' name='search_field_pasien_bayi' style="margin: 0 !important;"> 
+                              <option value='no_rkm_medis'>No Rkm Medis</option>
+<option value='umur_ibu'>Umur Ibu</option>
+<option value='nama_ayah'>Nama Ayah</option>
+<option value='umur_ayah'>Umur Ayah</option>
+<option value='berat_badan'>Berat Badan</option>
+<option value='panjang_badan'>Panjang Badan</option>
+<option value='lingkar_kepala'>Lingkar Kepala</option>
+<option value='proses_lahir'>Proses Lahir</option>
+<option value='anakke'>Anakke</option>
+<option value='jam_lahir'>Jam Lahir</option>
+<option value='keterangan'>Keterangan</option>
+<option value='diagnosa'>Diagnosa</option>
+<option value='penyulit_kehamilan'>Penyulit Kehamilan</option>
+<option value='ketuban'>Ketuban</option>
+<option value='lingkar_perut'>Lingkar Perut</option>
+<option value='lingkar_dada'>Lingkar Dada</option>
+<option value='penolong'>Penolong</option>
+<option value='no_skl'>No Skl</option>
+<option value='g'>G</option>
+<option value='p'>P</option>
+<option value='a'>A</option>
+<option value='f1'>F1</option>
+<option value='u1'>U1</option>
+<option value='t1'>T1</option>
+<option value='r1'>R1</option>
+<option value='w1'>W1</option>
+<option value='n1'>N1</option>
+<option value='f5'>F5</option>
+<option value='u5'>U5</option>
+<option value='t5'>T5</option>
+<option value='r5'>R5</option>
+<option value='w5'>W5</option>
+<option value='n5'>N5</option>
+<option value='f10'>F10</option>
+<option value='u10'>U10</option>
+<option value='t10'>T10</option>
+<option value='r10'>R10</option>
+<option value='w10'>W10</option>
+<option value='n10'>N10</option>
+<option value='resusitas'>Resusitas</option>
+<option value='obat_diberikan'>Obat Diberikan</option>
+<option value='mikasi'>Mikasi</option>
+<option value='mikonium'>Mikonium</option>
+
+                          </select>
+                          </span>
+                          <input class='form-control' name='search_text_pasien_bayi' id='search_text_pasien_bayi' type='search' placeholder='Masukkan Kata Kunci Pencarian' />  
+                          <span class="input-group-addon">
+                          <span id='searchclear_pasien_bayi' data-toggle='tooltip' data-placement='top' title='Clear'><i class="fa fa-times text-danger"></i></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tbl_pasien_bayi" class="table table-bordered table-striped display dataTable" style="width:100%">
+                        <thead>
+                        <tr> 
+                            <th>No Rkm Medis</th>
+<th>Umur Ibu</th>
+<th>Nama Ayah</th>
+<th>Umur Ayah</th>
+<th>Berat Badan</th>
+<th>Panjang Badan</th>
+<th>Lingkar Kepala</th>
+<th>Proses Lahir</th>
+<th>Anakke</th>
+<th>Jam Lahir</th>
+<th>Keterangan</th>
+<th>Diagnosa</th>
+<th>Penyulit Kehamilan</th>
+<th>Ketuban</th>
+<th>Lingkar Perut</th>
+<th>Lingkar Dada</th>
+<th>Penolong</th>
+<th>No Skl</th>
+<th>G</th>
+<th>P</th>
+<th>A</th>
+<th>F1</th>
+<th>U1</th>
+<th>T1</th>
+<th>R1</th>
+<th>W1</th>
+<th>N1</th>
+<th>F5</th>
+<th>U5</th>
+<th>T5</th>
+<th>R5</th>
+<th>W5</th>
+<th>N5</th>
+<th>F10</th>
+<th>U10</th>
+<th>T10</th>
+<th>R10</th>
+<th>W10</th>
+<th>N10</th>
+<th>Resusitas</th>
+<th>Obat Diberikan</th>
+<th>Mikasi</th>
+<th>Mikonium</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>        
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Modal -->
+<div id="modal_pasien_bayi" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Edit Data kelahiran bayo</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form name="form_pasien_bayi">
+          <input type="hidden" class="form-control" id="typeact" /> 
+          <label>No Rkm Medis<br /></label><input type='text' class='form-control' id='no_rkm_medis' name='no_rkm_medis' /><div><span class='error'></span></div>
+<label>Umur Ibu<br /></label><input type='text' class='form-control' id='umur_ibu' name='umur_ibu' /><div><span class='error'></span></div>
+<label>Nama Ayah<br /></label><input type='text' class='form-control' id='nama_ayah' name='nama_ayah' /><div><span class='error'></span></div>
+<label>Umur Ayah<br /></label><input type='text' class='form-control' id='umur_ayah' name='umur_ayah' /><div><span class='error'></span></div>
+<label>Berat Badan<br /></label><input type='text' class='form-control' id='berat_badan' name='berat_badan' /><div><span class='error'></span></div>
+<label>Panjang Badan<br /></label><input type='text' class='form-control' id='panjang_badan' name='panjang_badan' /><div><span class='error'></span></div>
+<label>Lingkar Kepala<br /></label><input type='text' class='form-control' id='lingkar_kepala' name='lingkar_kepala' /><div><span class='error'></span></div>
+<label>Proses Lahir<br /></label><input type='text' class='form-control' id='proses_lahir' name='proses_lahir' /><div><span class='error'></span></div>
+<label>Anakke<br /></label><input type='text' class='form-control' id='anakke' name='anakke' /><div><span class='error'></span></div>
+<label>Jam Lahir<br /></label><input type='text' class='form-control' id='jam_lahir' name='jam_lahir' /><div><span class='error'></span></div>
+<label>Keterangan<br /></label><input type='text' class='form-control' id='keterangan' name='keterangan' /><div><span class='error'></span></div>
+<label>Diagnosa<br /></label><input type='text' class='form-control' id='diagnosa' name='diagnosa' /><div><span class='error'></span></div>
+<label>Penyulit Kehamilan<br /></label><input type='text' class='form-control' id='penyulit_kehamilan' name='penyulit_kehamilan' /><div><span class='error'></span></div>
+<label>Ketuban<br /></label><input type='text' class='form-control' id='ketuban' name='ketuban' /><div><span class='error'></span></div>
+<label>Lingkar Perut<br /></label><input type='text' class='form-control' id='lingkar_perut' name='lingkar_perut' /><div><span class='error'></span></div>
+<label>Lingkar Dada<br /></label><input type='text' class='form-control' id='lingkar_dada' name='lingkar_dada' /><div><span class='error'></span></div>
+<label>Penolong<br /></label><input type='text' class='form-control' id='penolong' name='penolong' /><div><span class='error'></span></div>
+<label>No Skl<br /></label><input type='text' class='form-control' id='no_skl' name='no_skl' /><div><span class='error'></span></div>
+<label>G<br /></label><input type='text' class='form-control' id='g' name='g' /><div><span class='error'></span></div>
+<label>P<br /></label><input type='text' class='form-control' id='p' name='p' /><div><span class='error'></span></div>
+<label>A<br /></label><input type='text' class='form-control' id='a' name='a' /><div><span class='error'></span></div>
+<label>F1<br /></label><input type='text' class='form-control' id='f1' name='f1' /><div><span class='error'></span></div>
+<label>U1<br /></label><input type='text' class='form-control' id='u1' name='u1' /><div><span class='error'></span></div>
+<label>T1<br /></label><input type='text' class='form-control' id='t1' name='t1' /><div><span class='error'></span></div>
+<label>R1<br /></label><input type='text' class='form-control' id='r1' name='r1' /><div><span class='error'></span></div>
+<label>W1<br /></label><input type='text' class='form-control' id='w1' name='w1' /><div><span class='error'></span></div>
+<label>N1<br /></label><input type='text' class='form-control' id='n1' name='n1' /><div><span class='error'></span></div>
+<label>F5<br /></label><input type='text' class='form-control' id='f5' name='f5' /><div><span class='error'></span></div>
+<label>U5<br /></label><input type='text' class='form-control' id='u5' name='u5' /><div><span class='error'></span></div>
+<label>T5<br /></label><input type='text' class='form-control' id='t5' name='t5' /><div><span class='error'></span></div>
+<label>R5<br /></label><input type='text' class='form-control' id='r5' name='r5' /><div><span class='error'></span></div>
+<label>W5<br /></label><input type='text' class='form-control' id='w5' name='w5' /><div><span class='error'></span></div>
+<label>N5<br /></label><input type='text' class='form-control' id='n5' name='n5' /><div><span class='error'></span></div>
+<label>F10<br /></label><input type='text' class='form-control' id='f10' name='f10' /><div><span class='error'></span></div>
+<label>U10<br /></label><input type='text' class='form-control' id='u10' name='u10' /><div><span class='error'></span></div>
+<label>T10<br /></label><input type='text' class='form-control' id='t10' name='t10' /><div><span class='error'></span></div>
+<label>R10<br /></label><input type='text' class='form-control' id='r10' name='r10' /><div><span class='error'></span></div>
+<label>W10<br /></label><input type='text' class='form-control' id='w10' name='w10' /><div><span class='error'></span></div>
+<label>N10<br /></label><input type='text' class='form-control' id='n10' name='n10' /><div><span class='error'></span></div>
+<label>Resusitas<br /></label><input type='text' class='form-control' id='resusitas' name='resusitas' /><div><span class='error'></span></div>
+<label>Obat Diberikan<br /></label><input type='text' class='form-control' id='obat_diberikan' name='obat_diberikan' /><div><span class='error'></span></div>
+<label>Mikasi<br /></label><input type='text' class='form-control' id='mikasi' name='mikasi' /><div><span class='error'></span></div>
+<label>Mikonium<br /></label><input type='text' class='form-control' id='mikonium' name='mikonium' /><div><span class='error'></span></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="simpan_data_pasien_bayi" class="btn btn-primary">Simpan Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_lihat_pasien_bayi" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Lihat Data kelahiran bayo</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="forTable_pasien_bayi"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="export_pdf" class="btn btn-primary">
+          <i class="fa fa-file-pdf-o"></i>&nbsp;PDF </button>
+        <button type="submit" id="export_xlsx" class="btn btn-primary">
+          <i class="fa fa-file-excel-o"></i>&nbsp;XLSX </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_detail_pasien_bayi" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>

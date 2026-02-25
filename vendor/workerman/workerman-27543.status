@@ -1,0 +1,11 @@
+a:1:{i:27544;a:2:{s:4:"name";s:4:"none";s:6:"listen";s:24:"websocket://0.0.0.0:3892";}}
+----------------------------------------------GLOBAL STATUS----------------------------------------------------
+Workerman version:4.1.15          PHP version:7.3.4
+start time:2025-01-09 18:07:40   run 0 days 0 hours   
+load average: 0.08, 0.06, 0.08   event-loop:\Workerman\Events\Select
+1 workers       1 processes
+worker_name  exit_status      exit_count
+none         0                0
+----------------------------------------------PROCESS STATUS---------------------------------------------------
+pid	memory  listening                worker_name  connections send_fail timers  total_request qps    status
+27544	0.92M   websocket://0.0.0.0:3892 none         0           0         0       0            

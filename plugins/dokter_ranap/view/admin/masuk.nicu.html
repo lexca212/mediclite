@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Kriteria Pasien Masuk NICU</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 6px;
+      vertical-align: top;
+    }
+    th {
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    .section-title {
+      font-weight: bold;
+      background-color: #e6e6e6;
+    }
+    .no-border {
+      border: none;
+    }
+    .select {
+      border: none;
+    }
+  @media print {
+    #saveButton, #printPageButton {
+      display: none;
+    }
+    textarea {
+      border: none;
+      resize: none;
+    }
+    select {
+      border: none;
+      resize: none;
+      -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    pointer-events: none;
+    }
+    select::-ms-expand {
+    display: none;
+  }
+  }
+  </style>
+  <script type="text/javascript" src="{?=url()?}/assets/jscripts/jquery.min.js"></script>
+<script type="text/javascript" src="{?=url()?}/assets/jscripts/jquery.qrcode.js"></script>
+<script type="text/javascript" src="{?=url()?}/assets/jscripts/qrcode.js"></script>
+</head>
+<table class="no-border">
+    <thead class="no-border">
+      <tr>
+        <th>
+          <img src="{?=url()?}/{$settings.logo}" height="100px" style="margin-right: 20px;" alt="">
+        </th>
+        <th colspan="2" width="100%">
+            <p><span style="font-size: 20px;">{$settings.nama_instansi}</span><br>
+            <span style="font-size: 14px;">Alamat: {$settings.alamat} - {$settings.kota} - {$settings.propinsi}</span><br>
+            <span style="font-size: 14px;">Telepon: {$settings.nomor_telepon} - Email: {$settings.email}</span></p>
+        </th>
+      </tr>
+      <tr>
+        <th colspan="3">
+          <hr style="border-bottom: 2px solid #000;padding-top:3px;">
+        </th>
+      </tr>
+    </thead>
+  </table>
+<body>
+
+  <h2 style="text-align: center;">FORMULIR KRITERIA PASIEN MASUK NICU</h2>
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <label for="">Nama</label><br>
+        <label> No RM</label><br>
+        <label> Tanggal Lahir</label><br>
+        <label> Jenis Kelamin</label>
+       
+    </td>
+      <td colspan="2">
+    
+      <input type="text" value="{$pasien.nm_pasien}" class="no-border" style="width: 50%; box-sizing: border-box;" readonly><br>
+       
+      <input type="text" value="{$pasien.no_rkm_medis}" class="no-border" style="width: 50%; box-sizing: border-box;" readonly><br>
+        
+       <input type="text" value="{$pasien.tgl_lahir}" class="no-border" style="width: 50%; box-sizing: border-box;" readonly><br>
+
+       <input type="text" value="{if: $pasien.jk == 'L'}Laki-Laki{else}Perempuan{/if}" class="no-border" style="width: 50%; box-sizing: border-box;" readonly><br>
+      </td>
+    </tr>
+  </table>
+
+  <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kriteria NICU</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 6px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .sub-header {
+            font-weight: bold;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td colspan="4">
+      <label><strong> Diagnosa Masuk</strong></label><br>
+    <textarea id="diagnosa_masuk" name="diagnosa_masuk" value="{$masuk_nicu.diagnosa}" class="no-border" style="width: 100%; box-sizing: border-box;">{$masuk_nicu.diagnosa}</textarea>
+    </td>
+  </tr>
+    <tr class="sub-header">
+        <td colspan="2">KRITERIA MASUK</td>
+        <td width="10%">CHECK LIST</td>
+        <td>KETERANGAN</td>
+    </tr>
+   <tr>
+     <td colspan="4"><strong>1. TANDA VITAL</strong><br></td>
+    </tr>
+    <tr>
+        <td colspan="2">a. Apgar score &lt; 6</td>
+        <td>
+          {$masuk_nicu.tanda_vital_a}
+        </td>
+         <td><textarea id="keterangan1" name="keterangan1" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_tanda_vital_a}</textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">b. Denyut Jantung &lt; 120 - &gt; 140 kali/menit</td>
+        <td>
+          {$masuk_nicu.tanda_vital_b}
+        </td>
+        <td><textarea id="" name="keterangan2" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_tanda_vital_b}</textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">c. Laju respirasi &lt; 40 - &gt; 60 kali/menit</td>
+         <td>
+        {$masuk_nicu.tanda_vital_c}
+        </td>
+        <td><textarea id="keterangan3" name="keterangan3" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_tanda_vital_c}</textarea> </td>
+    </tr>
+  <tr>
+        <td colspan="2">d. Suhu axilla &lt; 36,5º Celsius - &gt; 37,5º Celsius</td>
+         <td>
+          {$masuk_nicu.tanda_vital_d}
+          </select>
+        </td>
+        <td><textarea id="keterangan3" name="keterangan3" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_tanda_vital_d}</textarea> </td>
+    </tr>
+  <tr>
+        <td colspan="2">e. Saturasi oxigen perifer (SpO2)&lt; 95%</td>
+         <td>
+          {$masuk_nicu.tanda_vital_e}
+        </td>
+        <td><textarea id="keterangan3" name="keterangan3" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_tanda_vital_e}</textarea> </td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>2. PEMERIKSAAN FISIK</strong><br>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">a.	Neonatus dengan aktivitas, tonus, refleks, tangis lemah</td>
+         <td>
+         {$masuk_nicu.pemeriksaan_fisik_a}
+        </td>
+        <td><textarea id="Keterangan4" name="keterangan4" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_pemeriksaan_fisik_a}</textarea> </td>
+    </tr>
+     <tr>
+        <td colspan="2">b.	Refleks pupil anisokor</td>
+         <td>
+          {$masuk_nicu.pemeriksaan_fisik_b}
+        </td>
+        <td><textarea id="keterangan5" name="keterangan5" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_pemeriksaan_fisik_b}</textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">c.	Kejang</td>
+         <td>
+         {$masuk_nicu.pemeriksaan_fisik_c}
+        </td>
+        <td><textarea id="keterangan6" name="keterangan6" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_pemeriksaan_fisik_c}</textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">d.	Retraksi dinding dada</td>
+         <td>
+         {$masuk_nicu.pemeriksaan_fisik_d}
+        </td>
+        <td><textarea id="keterangan7" name="keterangan7" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_pemeriksaan_fisik_d}</textarea> </td>
+    </tr>
+  <tr>
+        <td colspan="2">e	Sianosis</td>
+         <td>
+         {$masuk_nicu.pemeriksaan_fisik_e}
+        </td>
+        <td><textarea id="keterangan7" name="keterangan7" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_pemeriksaan_fisik_e}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">f.	Ikterik</td>
+         <td>
+          {$masuk_nicu.pemeriksaan_fisik_f}
+        </td>
+        <td><textarea id="keterangan7" name="keterangan7" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_pemeriksaan_fisik_f}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">g.	Anuria</td>
+         <td>
+          {$masuk_nicu.pemeriksaan_fisik_g}
+        </td>
+        <td><textarea id="keterangan7" name="keterangan7" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.pemeriksaan_fisik_g}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">h.	Waktu pengisian Kapiler &gt;3 detik</td>
+         <td>
+          {$masuk_nicu.pemeriksaan_fisik_h}
+        </td>
+        <td><textarea id="keterangan7" name="keterangan7" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_pemeriksaan_fisik_h}</textarea> </td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>3. NILAI LABORATORIUM</strong><br>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">a.	Kadar hemoglobin &lt;7 g/Dl</td>
+         <td>
+          {$masuk_nicu.nilai_lab_a}
+        </td>
+        <td><textarea id="keterangan8" name="keterangan8" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_a}</textarea> </td>
+    </tr>
+     <tr>
+        <td colspan="2">b.	Kadar hematokrit &gt; 65%</td>
+         <td>
+          {$masuk_nicu.nilai_lab_b}
+        </td>
+        <td><textarea id="keterangan9" name="keterangan9" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_b}</textarea> </td>
+    </tr>
+     <tr>
+        <td colspan="2">c.	Kadar leukosit &gt;25.000/ml</td>
+         <td>
+          {$masuk_nicu.nilai_lab_c}
+        </td>
+        <td><textarea id="keterangan10" name="keterangan10" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_c}</textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">d.	PH &lt; 7,2 atau &gt; 7,7</td>
+         <td>
+          {$masuk_nicu.nilai_lab_d}
+        </td>
+        <td><textarea id="keterangan11" name="keterangan11" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_d}</textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">e.	PaO₂ &lt; 80 mmHg</td>
+         <td>
+          {$masuk_nicu.nilai_lab_e}
+        </td>
+        <td><textarea id="keterangan12" name="keterangan12" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_e}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">f.	PaCO₂&gt; 50 mmHg</td>
+         <td>
+          {$masuk_nicu.nilai_lab_f}
+        </td>
+        <td><textarea id="keterangan12" name="keterangan12" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_f}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">g.	HCO₃&lt; 15</td>
+         <td>
+          {$masuk_nicu.nilai_lab_g}
+        </td>
+        <td><textarea id="keterangan12" name="keterangan12" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_g}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">h.	Kadar glukosa serum &lt; 47 mg/dL atau &gt; 150mg/dL</td>
+         <td>
+          {$masuk_nicu.nilai_lab_h}
+        </td>
+        <td><textarea id="keterangan12" name="keterangan12" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_h}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">i.	Kadar natrium serum &lt; 110 mEq/L atau &gt; 160m Eq/L</td>
+         <td>
+          {$masuk_nicu.nilai_lab_i}
+        </td>
+        <td><textarea id="keterangan12" name="keterangan12" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.nilai_lab_i}</textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">j.	Kadar kalium serum &lt; 2,5 mEq/L atau &gt; 6.0 mEq/L</td>
+         <td>
+          {$masuk_nicu.nilai_lab_j}
+        </td>
+        <td><textarea id="keterangan12" name="keterangan12" class="no-border" style="width: 100%; box-sizing: border-box;">{$masuk_nicu.keterangan_nilai_lab_j}</textarea> </td>
+    </tr>
+   <tr>
+        <td colspan="2">k.	Kadar kalsium serum &lt; 6 mg/dL atau &gt; 15 mg/dL</td>
+         <td>
+          {$masuk_nicu.nilai_lab_k}
+        </td>
+        <td><textarea id="keterangan12" name="keterangan12" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_nilai_lab_k}</textarea> </td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>4. KONDISI LAIN</strong><br>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="2">a.	BBL &lt;2000 gram atau &gt;4000 gram</td>
+      <td>
+        {$masuk_nicu.kondisi_lain_a}
+    </td>
+    <td><textarea id="keterangan13" name="keterangan13" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_kondisi_lain_a}</textarea> </td>
+    </tr>
+    <tr>
+      <td colspan="2">b.	Bayi Baru lahir dengan ibu dalam perawatan intensif</td>
+      <td>
+        {$masuk_nicu.kondisi_lain_b}
+      </td>
+       <td><textarea id="keterangan14" name="keterangan14" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_kondisi_lain_b}</textarea> </td>
+    </tr>
+    <tr>
+      <td colspan="2">c.	Kelainan kongenital (bibir sumbing, atresi ani, anencephaly, polydactyly, dll)</td>
+      <td>
+        {$masuk_nicu.kondisi_lain_c}
+      </td>
+       <td><textarea id="keterangan15" name="keterangan15" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_kondisi_lain_c}</textarea> </td>
+    </tr>
+    <tr>
+      <td colspan="2">d.     Bayi usia &gt;30 hari yang masih bisa dirawat di NICU</td>
+      <td>
+        {$masuk_nicu.kondisi_lain_d}
+      </td>
+       <td><textarea id="keterangan16" name="keterangan16" class="no-border" style="width: 100%; box-sizing: border-box;" readonly>{$masuk_nicu.keterangan_kondisi_lain_d}</textarea> </td>
+    </tr>
+  <!--  
+  <tr>
+      <td colspan="2">• Malas minum</td>
+      <td>
+        <select name="kriteria17" id="kriteria17">
+           <option value="Ya">Ya</option>
+          <option value="Tidak">tidak</option>
+       </select>
+      </td>
+       <td><textarea id="keterangan17" name="keterangan17" class="no-border" style="width: 100%; box-sizing: border-box;"></textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">7. Tetanus neonatorum</td>
+        <td>
+        <select name="kriteria18" id="kriteria18">
+           <option value="Ya">Ya</option>
+          <option value="Tidak">tidak</option>
+       </select>
+      </td>
+       <td><textarea id="keterangan18" name="keterangan18" class="no-border" style="width: 100%; box-sizing: border-box;"></textarea> </td>
+    </tr>
+    <tr>
+        <td colspan="2">8. Kejang pada bayi / neonatal seizure</td>
+       <td>
+        <select name="kriteria19" id="kriteria19">
+           <option value="Ya">Ya</option>
+          <option value="Tidak">tidak</option>
+       </select>
+      </td>
+       <td><textarea id="keterangan19" name="keterangan19" class="no-border" style="width: 100%; box-sizing: border-box;"></textarea> </td>
+    </tr>
+ --> 
+ <!--
+ <tr class="sub-header">
+        <td colspan="2">KRITERIA KELUAR</td>
+        <td>CHECK LIST</td>
+        <td>KETERANGAN</td>
+    </tr>
+    <tr>
+        <td colspan="2">1. BBLR yang sudah normal berat badannya: ≥1800 gr</td>
+        <td></td><td></td>
+    </tr>
+    <tr>
+        <td colspan="2">2. Kondisi sudah membaik</td>
+        <td></td><td></td>
+    </tr>
+    <tr>
+        <td colspan="2">3. Apgar score 7-10</td>
+        <td></td><td></td>
+    </tr>
+    <tr>
+        <td colspan="2">4. Kadar bilirubin normal</td>
+        <td></td><td></td>
+    </tr>
+    <tr>
+        <td colspan="2">5. Gerakan aktif, refleks hisap kuat</td>
+        <td></td><td></td>
+    </tr>
+</table>
+-->
+<br><br>
+ <table class="no-border">
+      <tr class="no-border">
+        <td colspan="2" width="700" class="no-border">
+          <label><strong>Kesimpulan</strong></label><br>
+          <p>Berdasarkan kondisi diatas, maka pasien ini memenuhi indikasi diruang Perinatologi level : {$masuk_nicu.kesimpulan_level}<br>
+            Alat Transport yang digunakan : {$masuk_nicu.kesimpulan_transport}<br>
+            Pendamping selama transfer : {$masuk_nicu.kesimpulan_pendamping}<br>
+            Alat yang dibawa selama transfer : {$masuk_nicu.kesimpulan_alat}
+          </p>
+        </td>
+        <td width="180" class="no-border"><br><br>
+         <!--{$settings.kota}, {?=date('d-m-Y')?}<br><br>-->
+          {$settings.kota}, {$masuk_nicu.tanggal}<br><br>
+          <div id="qrcode_dokter" style="margin-top:10px;width:80px;"></div><br>
+          {$masuk_nicu.nm_dokter}
+        </td>
+      </tr>
+  </table>
+</div>
+<script>
+  	jQuery('#qrcode_dokter').qrcode({
+  		text	: "Ditanda tangani secara elektronik oleh Dokter: {$masuk_nicu.kd_dokter}"
+  	});
+</script>
+
+</body>
+</html>
+

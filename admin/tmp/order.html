@@ -1,0 +1,1831 @@
+<div class="continer-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Informasi Penjualan</h3>
+        </div>
+        <div class="panel-body">
+          <div class="form-horizontal" id="form_penjualan">
+            <input type="hidden" name="id" value="">
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Tanggal</label>
+              <div class="col-sm-4">
+                <input type="text" id="tanggal" name="tanggal" class="form-control tanggal" value="2025-10-24">
+              </div>
+              <label for="" class="col-sm-1 control-label">Jam</label>
+              <div class="col-sm-4">
+                <input type="text" id="jam" name="jam" class="form-control jam" value="09:08:47">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Nama Pembeli</label>
+              <div class="col-sm-9">
+                <input type="text" name="nama_pembeli" placeholder="Nama Pembeli" class="form-control" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Alamat Pembeli</label>
+              <div class="col-sm-9">
+                <input type="text" name="alamat_pembeli" placeholder="Alamat Pembeli" class="form-control" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">No. Telepon</label>
+              <div class="col-sm-4">
+                <input type="text" name="nomor_telepon" placeholder="Nomor Telepon" class="form-control" value="">
+              </div>
+              <label for="" class="col-sm-1 control-label">Email</label>
+              <div class="col-sm-4">
+                <input type="text" name="email" placeholder="Email" class="form-control" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Nama Barang</label>
+              <div class="col-sm-7">
+                <select class="form-control" id="barang" name="barang">
+                  <option value="">Select</option>
+                                    <option value="1" data-subtitle="1000" data-right="99">roti</option>
+                                    <option value="001" data-subtitle="100000" data-right="0">PAKET IMUN BOOSTER</option>
+                                    <option value="A- 21-IV-238" data-subtitle="2240" data-right="0">FOLAMIL CAPS</option>
+                                    <option value="A-007-III-10" data-subtitle="8448" data-right="22">OSTEOR PLUS</option>
+                                    <option value="A-07-III-198" data-subtitle="9450" data-right="0">VOCEFA</option>
+                                    <option value="A-07-III-199" data-subtitle="1122" data-right="0">THIAMPENICOL 500 MG</option>
+                                    <option value="A-08-II-0038" data-subtitle="1221" data-right="151">MELIDOX TAB</option>
+                                    <option value="A-08-III-200" data-subtitle="1122" data-right="94">DIONICOL  500 MG TAB</option>
+                                    <option value="A-1-IV-21" data-subtitle="1355" data-right="0">GLUCOSAMIN 500MG TAB</option>
+                                    <option value="A-1-V-002" data-subtitle="7000" data-right="0">GLAUSETA</option>
+                                    <option value="A-1-XI-001" data-subtitle="294" data-right="167">MELOXICAM 7,5 MG</option>
+                                    <option value="A-1-XXI-002" data-subtitle="1515" data-right="80">DEXKETOPROFEN 25 MG KAP</option>
+                                    <option value="A-1-XXI-003" data-subtitle="6244" data-right="87">DEXPROFEN 25 MG OTTO TABLET </option>
+                                    <option value="A-100-I-0098" data-subtitle="829" data-right="26">CODEIN 10 MG</option>
+                                    <option value="A-100-I-099" data-subtitle="2500" data-right="0">CODEIN 20 MG</option>
+                                    <option value="A-100-I-100" data-subtitle="15762" data-right="15">MST 10</option>
+                                    <option value="A-100-I-101" data-subtitle="1224" data-right="0">CODIKAF 10 MG</option>
+                                    <option value="A-100-II-062" data-subtitle="182" data-right="252">PHENOBARBITAL 30MG TAB</option>
+                                    <option value="A-100-IV-099" data-subtitle="146" data-right="105">VITAMIN B 6</option>
+                                    <option value="A-100-IV-100" data-subtitle="97" data-right="126">VITAMIN B KOMPLEK</option>
+                                    <option value="A-100-XXI-005" data-subtitle="4689" data-right="57">URSODEOXYCHOLIC ACID</option>
+                                    <option value="A-101-V-24" data-subtitle="194" data-right="111">VITAMIN B1</option>
+                                    <option value="A-11-V1-241" data-subtitle="1672" data-right="0">REBAMIPIDE GENERIK</option>
+                                    <option value="A-11-VII-215" data-subtitle="400" data-right="93">METAMIZOLE  500MG TAB</option>
+                                    <option value="A-11-X-214" data-subtitle="97" data-right="0">CTM </option>
+                                    <option value="A-115-XX-006" data-subtitle="0" data-right="0">PAKET  OAT ANAK</option>
+                                    <option value="A-12-X-002" data-subtitle="2500" data-right="0">PIROXICAM 10 MG </option>
+                                    <option value="A-12-X-215" data-subtitle="76" data-right="58">ALERMAX TAB</option>
+                                    <option value="A-12-XI-001" data-subtitle="622" data-right="68">BETAHISTINE MESILATE 6 MG</option>
+                                    <option value="A-12-XI-002" data-subtitle="4246" data-right="14">BETAHISTIN HCL 24 MG</option>
+                                    <option value="A-12-XVI-210" data-subtitle="2498" data-right="32">ONDANSETRON 8 TABLET</option>
+                                    <option value="A-12-XX-006" data-subtitle="661" data-right="0">MECOBALAMIN 500 MCG CAPSUL </option>
+                                    <option value="A-120-XX-007" data-subtitle="1" data-right="8">PAKET OAT DEWASA</option>
+                                    <option value="A-120-XX-008" data-subtitle="1000" data-right="0">PAKET OAT DEWASA DKK</option>
+                                    <option value="A-13-XX-0061" data-subtitle="2035" data-right="0">PROSTACOM</option>
+                                    <option value="A-14-IV-200" data-subtitle="4200" data-right="0">MOLOCO B12</option>
+                                    <option value="A-14-XII-001" data-subtitle="3108" data-right="20">TELMISARTAN 40 MG</option>
+                                    <option value="A-14-XII-002" data-subtitle="4329" data-right="0">TELMISARTAN 80 MG</option>
+                                    <option value="A-14-XX-019" data-subtitle="4995" data-right="100">MISOPROSTOL 200 TAB</option>
+                                    <option value="A-14-XX-1082" data-subtitle="6716" data-right="0">CHANA</option>
+                                    <option value="A-15-VI-005" data-subtitle="784" data-right="0">TB VIT 6</option>
+                                    <option value="A-15-XX-001" data-subtitle="2062" data-right="7">BIOCHANNA</option>
+                                    <option value="A-15-XX-005" data-subtitle="2166" data-right="0">RIFAMPICIN 450</option>
+                                    <option value="A-15-XX-1083" data-subtitle="5661" data-right="0">PRO ALB </option>
+                                    <option value="A-17-XI-054" data-subtitle="1507" data-right="0">AMBEVEN</option>
+                                    <option value="A-17-XXIX-051" data-subtitle="100" data-right="0">VITAMIN C 50 MG</option>
+                                    <option value="A-18-111-031" data-subtitle="21490" data-right="0">FLUCONAZOLE 150 MG</option>
+                                    <option value="A-18-III-030" data-subtitle="755" data-right="40">ACYCLOVIR 400 mg Tablet</option>
+                                    <option value="A-19-II-021" data-subtitle="1000" data-right="0">KAPSUL GARAM</option>
+                                    <option value="A-19-IV-031" data-subtitle="94350" data-right="0">ALLOCLAIR GEL</option>
+                                    <option value="A-2-V-22" data-subtitle="1248" data-right="118">GLUCOSAMIN 250MG TAB</option>
+                                    <option value="A-20-VI-005" data-subtitle="428" data-right="59">BISOPROLOL 2,5 MG</option>
+                                    <option value="A-20-VI-006" data-subtitle="7651" data-right="0">CONCOR 2,5</option>
+                                    <option value="A-20-XX-202" data-subtitle="1962" data-right="55">KSR 600MG</option>
+                                    <option value="A-21-II-001" data-subtitle="2310" data-right="0">ATARAX 1MG TABLET</option>
+                                    <option value="A-21-II-002" data-subtitle="2003" data-right="16">ATARAX 0,5 MG TABLET</option>
+                                    <option value="A-21-II-093" data-subtitle="2140" data-right="0">SANPRIMA FORTE</option>
+                                    <option value="A-21-III-002" data-subtitle="356" data-right="114">TABLET TAMBAH DARAH</option>
+                                    <option value="A-21-III-003" data-subtitle="8500" data-right="50">PRORENAL</option>
+                                    <option value="A-21-IV-001" data-subtitle="4884" data-right="103">CELECOXIB 200mg</option>
+                                    <option value="A-21-IV-238" data-subtitle="4800" data-right="0">FOLAMIL GENIO</option>
+                                    <option value="A-21-IX-001" data-subtitle="11600" data-right="33">ESOLA 20 MG TABLET</option>
+                                    <option value="A-21-IX-002" data-subtitle="8880" data-right="0">ESOMEPRAZOL 40 MG TABLET</option>
+                                    <option value="A-21-IX-003" data-subtitle="7104" data-right="0">ESOMEPRAZOL 20 MG TABLET</option>
+                                    <option value="A-21-V-001" data-subtitle="128" data-right="12">FARIDEXON  0.5 MGTAB</option>
+                                    <option value="A-21-VII-0005" data-subtitle="833" data-right="41">METHYLPREDNISOLON 8 MG TAB</option>
+                                    <option value="A-21-VII-002" data-subtitle="350" data-right="114">NATRIUM DICLOFENAC 50 TAB</option>
+                                    <option value="A-21-VII-003" data-subtitle="700" data-right="0">DICLOFENAC POTASIUM 50 MG</option>
+                                    <option value="A-21-VII-004" data-subtitle="222" data-right="0">SIRPLUS TAB</option>
+                                    <option value="A-21-VII-005" data-subtitle="218" data-right="45">METHYLPREDNISOLON 4 MG TAB</option>
+                                    <option value="A-21-VIII-112" data-subtitle="1000" data-right="0">GEMFIBROZIL</option>
+                                    <option value="A-21-X-1035" data-subtitle="5005" data-right="0">URICRAN</option>
+                                    <option value="A-21-X-1075" data-subtitle="460" data-right="311">DOMPERIDONE  10 MG</option>
+                                    <option value="A-21-X1-189" data-subtitle="1600" data-right="0">VITAZYM</option>
+                                    <option value="A-21-XI-187" data-subtitle="197" data-right="58">ANTASIDA DOEN TABLET</option>
+                                    <option value="A-21-XI-188" data-subtitle="2664" data-right="0">XEPAZYM</option>
+                                    <option value="A-21-XI-189" data-subtitle="2250" data-right="0">ENZYPLEX</option>
+                                    <option value="A-21-XV-124" data-subtitle="2800" data-right="0">DOPAMET 250 MG</option>
+                                    <option value="A-21-XX-006" data-subtitle="8450" data-right="0">TRIOCHOL</option>
+                                    <option value="A-21-XX-007" data-subtitle="14291" data-right="0">ASTIN FORCE 12MG</option>
+                                    <option value="A-21-XXI-003" data-subtitle="10000" data-right="10">HYSTOLAN 20 MG</option>
+                                    <option value="A-21-XXI-004" data-subtitle="1610" data-right="6">FRIGOUT 0.5 MG</option>
+                                    <option value="A-21-XXI-238" data-subtitle="3520" data-right="0">PREMASTON</option>
+                                    <option value="A-21-XXIII-003" data-subtitle="7681" data-right="0">IMUNOS</option>
+                                    <option value="A-21-XXVIII-006" data-subtitle="645" data-right="207">GABAPENTIN 300 CAPS</option>
+                                    <option value="A-21-XXXIII-002" data-subtitle="4840" data-right="0">BENOCETAM 1200MG TABLET</option>
+                                    <option value="A-22-I-001" data-subtitle="53000" data-right="0">ZIBRAMAX 500 MG</option>
+                                    <option value="A-22-II-003" data-subtitle="353" data-right="60">ZEVASK 10 MG</option>
+                                    <option value="A-22-II-0088" data-subtitle="417" data-right="100">RAMIPRIL 5MG</option>
+                                    <option value="A-22-II-0093" data-subtitle="734" data-right="19">RAMIPRIL 10mg</option>
+                                    <option value="A-22-II-107" data-subtitle="310" data-right="34">COTRIMOXAZOLE TAB</option>
+                                    <option value="A-22-III-001" data-subtitle="22165" data-right="0">NOCOVIR</option>
+                                    <option value="A-22-III-002" data-subtitle="212" data-right="100">ZEVASK 5 MG</option>
+                                    <option value="A-22-III-0087" data-subtitle="120" data-right="212">AMLODIPIN 5 MG</option>
+                                    <option value="A-22-III-0089" data-subtitle="249" data-right="37">VITAMIN K</option>
+                                    <option value="A-22-III-022" data-subtitle="14299" data-right="0">OSELTAMIVIR 75MG</option>
+                                    <option value="A-22-III-027" data-subtitle="11322" data-right="0">LAPICEF 500MG</option>
+                                    <option value="A-22-III-028" data-subtitle="9990" data-right="36">OPICEF 500 MG</option>
+                                    <option value="A-22-III-032" data-subtitle="9700" data-right="0">QINOX</option>
+                                    <option value="A-22-III-036" data-subtitle="1054" data-right="86">CEFADROXIL 500 MG TAB</option>
+                                    <option value="A-22-III-038" data-subtitle="567" data-right="42">KETOCONAZOLE 200MG TABLET</option>
+                                    <option value="A-22-III-248" data-subtitle="680" data-right="113">AMOXICILLIN 500 MG TABLET</option>
+                                    <option value="A-22-IV-077" data-subtitle="7548" data-right="15">QUEENVIT</option>
+                                    <option value="A-22-IV-110" data-subtitle="3939" data-right="17">OSFIT PLATINUM</option>
+                                    <option value="A-22-V11-155" data-subtitle="37000" data-right="0">LAPIFED SIRUP</option>
+                                    <option value="A-22-VI-163" data-subtitle="5920" data-right="0">LIPROLAC VANILA KID</option>
+                                    <option value="A-22-VII-006" data-subtitle="664" data-right="44">TRIAMCINOLON 4MG TAB</option>
+                                    <option value="A-22-VII-098" data-subtitle="6818" data-right="0">CATAFLAM 50 MG</option>
+                                    <option value="A-22-VII-152" data-subtitle="2613" data-right="0">LAPIFED</option>
+                                    <option value="A-22-VII-153" data-subtitle="1776" data-right="0">TREMENZA </option>
+                                    <option value="A-22-X-003" data-subtitle="211" data-right="13">Allopurinol 100 mg</option>
+                                    <option value="A-22-X-116" data-subtitle="303" data-right="0">LORATADIN 10 MG</option>
+                                    <option value="A-22-X-117" data-subtitle="228" data-right="103">CETIRIZIN 10 mg</option>
+                                    <option value="A-22-X-118" data-subtitle="3747" data-right="43">CETIRGI</option>
+                                    <option value="A-22-XI-001" data-subtitle="314" data-right="80">ZANTIFAR 150MG</option>
+                                    <option value="A-22-XI-188" data-subtitle="277" data-right="26">RANITIDIN TABLET</option>
+                                    <option value="A-22-XI-192" data-subtitle="8966" data-right="19">LACTO B</option>
+                                    <option value="A-22-XVIII-013" data-subtitle="1500" data-right="0">ARCAPEC TAB</option>
+                                    <option value="A-22-XVIII-014" data-subtitle="1500" data-right="0">LODIA</option>
+                                    <option value="A-22-XVIII-015" data-subtitle="129" data-right="53">LOPERAMIDE HCL 2 MG</option>
+                                    <option value="A-22-XX-001" data-subtitle="1321" data-right="0">V-BLOC 6,25 mg</option>
+                                    <option value="A-22-XX-0011" data-subtitle="1813" data-right="0">BLOCAND 8 MG</option>
+                                    <option value="A-22-XX-004" data-subtitle="394" data-right="13">ALLOPURINOL 300</option>
+                                    <option value="A-22-XX-005" data-subtitle="3830" data-right="0">BLOCAND 16</option>
+                                    <option value="A-22-XX-0057" data-subtitle="242" data-right="49">SIMVASTATIN 10MG </option>
+                                    <option value="A-22-XX-0058" data-subtitle="256" data-right="10">SIMVASTATIN 20MG TAB</option>
+                                    <option value="A-22-XX-0091" data-subtitle="27750" data-right="0">ROZET20</option>
+                                    <option value="A-22-XX-010" data-subtitle="918" data-right="0">GALTENIX 300 MG</option>
+                                    <option value="A-22-XX-0109" data-subtitle="25530" data-right="0">TEZA 50MG</option>
+                                    <option value="A-22-XX3-007" data-subtitle="731" data-right="14">GABAPENTIN 100MG</option>
+                                    <option value="A-22-XXI-002" data-subtitle="3644" data-right="0">LEVOBEN </option>
+                                    <option value="A-22-XXI-0023" data-subtitle="10000" data-right="0">LEPARSON</option>
+                                    <option value="A-22-XXI-003" data-subtitle="9350" data-right="0">KETOS</option>
+                                    <option value="A-22-XXI-03" data-subtitle="4500" data-right="0">LACTASIN</option>
+                                    <option value="A-22-XXI-235" data-subtitle="19076" data-right="8">DUPHASTON</option>
+                                    <option value="A-22-XXI210" data-subtitle="3545" data-right="10">IMBOOST</option>
+                                    <option value="A-22-XXIII-233" data-subtitle="20000" data-right="0">MICROGYNON </option>
+                                    <option value="A-22-XXIII-234" data-subtitle="10000" data-right="0">LEVAZIDE</option>
+                                    <option value="A-22-XXVII-232" data-subtitle="7700" data-right="0">ANDALAN TABLET</option>
+                                    <option value="A-22-XXX-004" data-subtitle="4440" data-right="0">SIMDUVA TABLET</option>
+                                    <option value="A-22IV-094" data-subtitle="979" data-right="0">ETAMBUTOL</option>
+                                    <option value="A-23-III-003" data-subtitle="3515" data-right="30">CO-AMOXICLAV</option>
+                                    <option value="A-23-III-005" data-subtitle="4156" data-right="104">AZITROMISIN 500MG TAB</option>
+                                    <option value="A-23-III-006" data-subtitle="708" data-right="12">CLINDAMYCIN 150 MG</option>
+                                    <option value="A-23-IV-0041" data-subtitle="126" data-right="194">AMLODIPIN 10 MG</option>
+                                    <option value="A-23-IV-100" data-subtitle="1337" data-right="50">GLIQUIDONE 30 MG</option>
+                                    <option value="A-23-IV-112" data-subtitle="8880" data-right="0">GLISODIN</option>
+                                    <option value="A-23-VI-114" data-subtitle="797" data-right="60">BRONCHITIN TAB</option>
+                                    <option value="A-23-VIII-154" data-subtitle="1170" data-right="0">QUANTIDEX TAB</option>
+                                    <option value="A-23-X-120" data-subtitle="310" data-right="75">WINATIN TABLET</option>
+                                    <option value="A-23-XX-015" data-subtitle="8600" data-right="0">ERICAF TABLET</option>
+                                    <option value="A-23-XX1211" data-subtitle="2000" data-right="0">REDAXIN </option>
+                                    <option value="A-24-II-005" data-subtitle="358" data-right="64">FARIZOL500 MG</option>
+                                    <option value="A-24-III-011" data-subtitle="1845" data-right="0">TRICHODAZOL 500</option>
+                                    <option value="A-24-IV-007" data-subtitle="4200" data-right="0">L-VIT D3 5000</option>
+                                    <option value="A-24-IV-075" data-subtitle="708" data-right="0">ERITROMYCIN 250MG</option>
+                                    <option value="A-24-X-007" data-subtitle="15343" data-right="0">PUMPITOR TABLET</option>
+                                    <option value="A-24-XI-001" data-subtitle="1000" data-right="0">OTEDE</option>
+                                    <option value="A-24-XX-021" data-subtitle="4440" data-right="71">MERLOPAM 2MG</option>
+                                    <option value="A-24-XX-1" data-subtitle="2808" data-right="0">DOLOGESIC 50 TAB</option>
+                                    <option value="A-24-XX-2" data-subtitle="666" data-right="106">TRAMADOL</option>
+                                    <option value="A-24-XX1-1000" data-subtitle="2193" data-right="99">VILDAGLIPTIN 50</option>
+                                    <option value="A-24-XX1-212" data-subtitle="5273" data-right="0">VILDI 50</option>
+                                    <option value="A-24-XXI-105" data-subtitle="4000" data-right="0">LACTAFIT</option>
+                                    <option value="A-24-XXI-24" data-subtitle="33022" data-right="1">FERRIZ SYR</option>
+                                    <option value="A-25-IV-075" data-subtitle="1723" data-right="102">ERITROMYCIN 500MG</option>
+                                    <option value="A-25-IV-25" data-subtitle="8436" data-right="0">LACOSIB </option>
+                                    <option value="A-26-XXI-243" data-subtitle="247" data-right="198">CLONIDINE 0,15mg</option>
+                                    <option value="A-27-V-110" data-subtitle="3300" data-right="0">LANTUROL 200MG</option>
+                                    <option value="A-29-XX-0029" data-subtitle="23400" data-right="0">ESOLA 40 MG TABLET</option>
+                                    <option value="A-30-IV-045" data-subtitle="1750" data-right="136">CLINDAMYCIN 300</option>
+                                    <option value="A-30-XX-0156" data-subtitle="7548" data-right="20">KING VIT</option>
+                                    <option value="A-31-III-204" data-subtitle="1541" data-right="80">FG TROCHES</option>
+                                    <option value="A-32-III-205" data-subtitle="2300" data-right="0">THYROZOL 5MG</option>
+                                    <option value="A-33-III-100" data-subtitle="3500" data-right="0">MERLOPAM 5 MG</option>
+                                    <option value="A-33-XX-001" data-subtitle="889" data-right="100">THIAMAZOL 10 MG</option>
+                                    <option value="A-33-XX-007" data-subtitle="264" data-right="84">SALBRON 2 MG</option>
+                                    <option value="A-33-XX-0158" data-subtitle="578" data-right="7">THIAMAZOL 5 MG</option>
+                                    <option value="A-33-XXI-002" data-subtitle="474" data-right="107">DOHIXAT 100 MG TAB</option>
+                                    <option value="A-34-V-229" data-subtitle="479" data-right="0">OXICOBAL CAPS</option>
+                                    <option value="A-34-XX-0098" data-subtitle="483" data-right="50">LISINOPRIL DIHYDRATE 5MG</option>
+                                    <option value="A-34-XXI-247" data-subtitle="2547" data-right="22">MEDIAMER</option>
+                                    <option value="A-36-XXIX-001" data-subtitle="655" data-right="114">ASPILET 100 MG TAB</option>
+                                    <option value="A-37-XX-005" data-subtitle="3960" data-right="0">L-CISIN</option>
+                                    <option value="A-37-XX-006" data-subtitle="2442" data-right="0">COLCHICINE 0,5MG</option>
+                                    <option value="A-37-XXX-007" data-subtitle="538" data-right="0">CARDIO ASPIRIN</option>
+                                    <option value="A-38-VI-002" data-subtitle="5545" data-right="0">CITICOLINE 500 MG TAB</option>
+                                    <option value="A-38-VI-003" data-subtitle="1998" data-right="22">ASAM TRANEKSAMAT 500 MG</option>
+                                    <option value="A-38-VI-004" data-subtitle="1753" data-right="39">NEXITRA 500 MG</option>
+                                    <option value="A-38-VI-0094" data-subtitle="2830" data-right="0">LAPIBAL-500</option>
+                                    <option value="A-38-VII-001" data-subtitle="4125" data-right="0">VOSTRIN</option>
+                                    <option value="A-38-VII-005" data-subtitle="2771" data-right="0">DIKLOVIT</option>
+                                    <option value="A-38-VII-009" data-subtitle="6500" data-right="0">VESTEIN</option>
+                                    <option value="A-38-VIII-009" data-subtitle="9900" data-right="0">GLINOV 150</option>
+                                    <option value="A-38-VIII-09" data-subtitle="6800" data-right="65">PREGABALIN 75 MG TAB</option>
+                                    <option value="A-38-XV-001" data-subtitle="3394" data-right="30">IRBESARTAN 300 MG</option>
+                                    <option value="A-38-XV-004" data-subtitle="9900" data-right="0">CO IRVELL</option>
+                                    <option value="A-38-XV-005" data-subtitle="500" data-right="72">BISOPROLOL 5MG TABLET</option>
+                                    <option value="A-38-XV-006" data-subtitle="6160" data-right="0">IRVEL 150</option>
+                                    <option value="A-38-XV-010" data-subtitle="3500" data-right="0">IRBESARTAN 150 MG</option>
+                                    <option value="A-38-XX-003" data-subtitle="4103" data-right="0">TRILAC 4 MG TAB</option>
+                                    <option value="A-38-XXI-001" data-subtitle="11275" data-right="0">CHOLINAAR 500mg</option>
+                                    <option value="A-38-XXXIII-001" data-subtitle="1248" data-right="99">PIRACETAM 1200 mg </option>
+                                    <option value="A-38-XXXIII-004" data-subtitle="730" data-right="53">PIRACETAM 800</option>
+                                    <option value="A-39-III-037" data-subtitle="10885" data-right="0">CEFAT 500 MG</option>
+                                    <option value="A-39-IV-021" data-subtitle="1265" data-right="0">BIOSANBE</option>
+                                    <option value="A-39-IV-052" data-subtitle="177" data-right="42">NORVOM 10MG</option>
+                                    <option value="A-39-IV-082" data-subtitle="1100" data-right="60">FOLAVIT</option>
+                                    <option value="A-39-IV-083" data-subtitle="3330" data-right="90">VITAMULTI DHA</option>
+                                    <option value="A-39-IV-166" data-subtitle="1443" data-right="0">NEUROSANBE TAB</option>
+                                    <option value="A-39-VI-001" data-subtitle="1264" data-right="13">SANTA E 100MG</option>
+                                    <option value="A-39-VI-95" data-subtitle="2528" data-right="85">SANTA E 200MG</option>
+                                    <option value="A-39-VI-96" data-subtitle="321" data-right="0">TOKOVIN 100 IU</option>
+                                    <option value="A-39-VII-001" data-subtitle="1603" data-right="0">LAPISTAN TAB</option>
+                                    <option value="A-39-VII-246" data-subtitle="1469" data-right="0">MEFINAL 500</option>
+                                    <option value="A-39-VIII-10" data-subtitle="6215" data-right="0">GLINOV 75MG</option>
+                                    <option value="A-39-XX-021" data-subtitle="18150" data-right="0">PROFERTIL</option>
+                                    <option value="A-39-XX-025" data-subtitle="12464" data-right="0">BLESIFEN</option>
+                                    <option value="A-39-XXI-002" data-subtitle="13320" data-right="0">BRAINACT O-DIS 500 MG</option>
+                                    <option value="A-39-XXI-003" data-subtitle="16878" data-right="0">TEBOKAN FORTE</option>
+                                    <option value="A-39-XXII-006" data-subtitle="2914" data-right="74">OPIMOX 500 MG</option>
+                                    <option value="A-39-XXVI-024" data-subtitle="777" data-right="0">BLEDSTOP 125 MCG TAB</option>
+                                    <option value="A-4-IV-157" data-subtitle="137" data-right="0">VITAMIN A TAB</option>
+                                    <option value="A-4-VI-141" data-subtitle="671" data-right="13">NUTRALIX</option>
+                                    <option value="A-4-VI-198" data-subtitle="999" data-right="0">NEURALGIN RX</option>
+                                    <option value="A-4-VIII-064" data-subtitle="500" data-right="19">SANMOL</option>
+                                    <option value="A-4-XI-076" data-subtitle="460" data-right="3">KADITIC  50 MGTAB</option>
+                                    <option value="A-4-XI-077" data-subtitle="296" data-right="39">ARFLAM  50 MG</option>
+                                    <option value="A-4-XV-083" data-subtitle="245" data-right="0">FUROSEMID  40 MGTAB</option>
+                                    <option value="A-4-XV-103" data-subtitle="382" data-right="119">ISDN 5 mg</option>
+                                    <option value="A-4-XV-203" data-subtitle="1826" data-right="7">SPIRONOLACTON 100</option>
+                                    <option value="A-4-XV-214" data-subtitle="4736" data-right="0">TYARIT</option>
+                                    <option value="A-4-XV-215" data-subtitle="5900" data-right="0">URISPAS</option>
+                                    <option value="A-4-XX-200" data-subtitle="2997" data-right="12">TAMSULOSIN TAB</option>
+                                    <option value="A-4-XXI-101" data-subtitle="9251" data-right="0">INFELON</option>
+                                    <option value="A-40-IV-080" data-subtitle="5400" data-right="0">HY-FOLIC</option>
+                                    <option value="A-40-V-053" data-subtitle="500" data-right="0">METOCLOPERAMID TABLET</option>
+                                    <option value="A-40-X-001" data-subtitle="1221" data-right="60">METHYLERGOMETRIN TABLET</option>
+                                    <option value="A-40-XXCV-011" data-subtitle="419" data-right="36">RHEMAFAR 4MG TAB</option>
+                                    <option value="A-41-XX-005" data-subtitle="3700" data-right="0">SIBITAL 50 MG</option>
+                                    <option value="A-41-XX-047" data-subtitle="10890" data-right="0">NATTO-10</option>
+                                    <option value="A-41-XX-050" data-subtitle="14520" data-right="0">FASTOR 10 MG</option>
+                                    <option value="A-42-III-005" data-subtitle="1074" data-right="0">STESOLID 2 MG</option>
+                                    <option value="A-42-VII-003" data-subtitle="7437" data-right="0">RHINOS SR</option>
+                                    <option value="A-42-XX-094" data-subtitle="265" data-right="3306">METFORMIN 500</option>
+                                    <option value="A-43-VII-024" data-subtitle="82000" data-right="0">RHINOS NEO DROP</option>
+                                    <option value="A-43-XX-096" data-subtitle="395" data-right="170">METFORMIN 850</option>
+                                    <option value="A-43-XX-098" data-subtitle="950" data-right="82">PIOGLITAZONE 15 MG</option>
+                                    <option value="A-44-XX--0084" data-subtitle="16983" data-right="0">PEPZOL 40 MG</option>
+                                    <option value="A-44-XX-0083" data-subtitle="12987" data-right="0">PEPZOL 20 MG</option>
+                                    <option value="A-5-VI-001" data-subtitle="530" data-right="55">VITAMIN C 500MG</option>
+                                    <option value="A-5-VI-208" data-subtitle="7382" data-right="0">LAMESON 8MG</option>
+                                    <option value="A-5-VI-220" data-subtitle="122" data-right="0">VITAMIN C 100 MG</option>
+                                    <option value="A-5-VI-221" data-subtitle="2090" data-right="0">LAVIT-C 500</option>
+                                    <option value="A-5-VI-222" data-subtitle="4180" data-right="0">LAVIT C 1000</option>
+                                    <option value="A-5-VI-225" data-subtitle="2310" data-right="0">D3 1000 MG</option>
+                                    <option value="A-5-VII-003" data-subtitle="358" data-right="87">FASIDOL 500 MG</option>
+                                    <option value="A-5-VII-066" data-subtitle="5100" data-right="0">SUPERHOID SUPP</option>
+                                    <option value="A-5-VII-076" data-subtitle="6532" data-right="0">FLUIMUCYL</option>
+                                    <option value="A-5-VII-077" data-subtitle="816" data-right="93">ACETYLCYSTEINE</option>
+                                    <option value="A-5-VII-080" data-subtitle="300" data-right="499">AMITRIPTILIN 25 MG TAB</option>
+                                    <option value="A-5-VII-164" data-subtitle="210" data-right="112">PARACETAMOL 500 MG TAB</option>
+                                    <option value="A-5-VIII-077" data-subtitle="3100" data-right="0">THEOBRRON</option>
+                                    <option value="A-5-X- 022" data-subtitle="2000" data-right="105">LODOMER TAB</option>
+                                    <option value="A-5-X-024" data-subtitle="364" data-right="1">HALOPERIDOL 5MG</option>
+                                    <option value="A-5-X-055" data-subtitle="128" data-right="65">DEXAMETHASONE 0.5 MGTAB</option>
+                                    <option value="A-5-X-056" data-subtitle="190" data-right="0">DEXAHARSEN</option>
+                                    <option value="A-5-XI-001" data-subtitle="447" data-right="85">LOKEV 20 MG</option>
+                                    <option value="A-5-XI-002" data-subtitle="1700" data-right="0">ALINAMIN F tablet</option>
+                                    <option value="A-5-XI-160" data-subtitle="309" data-right="189">OMEPRAZOL KAPSUL</option>
+                                    <option value="A-5-XI-161" data-subtitle="1199" data-right="100">ULSIDEX TAB </option>
+                                    <option value="A-5-XII-008" data-subtitle="216" data-right="0">AMINOPHILIN Tablet</option>
+                                    <option value="A-5-XII-009" data-subtitle="310" data-right="0">ERPHAFILIN TAB</option>
+                                    <option value="A-5-XV-001" data-subtitle="5549" data-right="121">ADALAT OROS jkn</option>
+                                    <option value="A-5-XV-033" data-subtitle="104" data-right="21">CAPTOPRIL 12,5 MG</option>
+                                    <option value="A-5-XV-034" data-subtitle="133" data-right="44">CAPTOPRIL 25 MG</option>
+                                    <option value="A-5-XV-060" data-subtitle="305" data-right="105">DIGOXIN 0.25 MG</option>
+                                    <option value="A-5-XV-144" data-subtitle="218" data-right="104">NIFEDIPINE 10 MG</option>
+                                    <option value="A-5-XV-215" data-subtitle="1950" data-right="0">AMIODARONE </option>
+                                    <option value="A-5-XVI-004" data-subtitle="3066" data-right="100">CYSTONE </option>
+                                    <option value="A-5-XVI-008" data-subtitle="6237" data-right="0">CILOSTAZOL 100MG</option>
+                                    <option value="A-5-XVII-065" data-subtitle="2429" data-right="46">DULCOLAX  5 MG</option>
+                                    <option value="A-5-XVII-115" data-subtitle="232" data-right="0">LOPAMID </option>
+                                    <option value="A-5-XVII-189" data-subtitle="453" data-right="0">PRONICY</option>
+                                    <option value="A-5-XVIII-142" data-subtitle="265" data-right="47">AKITA</option>
+                                    <option value="A-5-XX-001" data-subtitle="13320" data-right="0">CITAZ</option>
+                                    <option value="A-5-XX-002" data-subtitle="17982" data-right="0">LANCID 30 MG</option>
+                                    <option value="A-5-XX-007" data-subtitle="1250" data-right="0">ARKINE TABLET</option>
+                                    <option value="A-5-XX-0079" data-subtitle="6216" data-right="0">SULCOLON</option>
+                                    <option value="A-5-XX-077" data-subtitle="425" data-right="5">FARSIRETIC  40 MG TABLET</option>
+                                    <option value="A-5-XXI-002" data-subtitle="5861" data-right="36">DONEPEZIL 5MG TAB</option>
+                                    <option value="A-5-XXI-018" data-subtitle="3580" data-right="9">NORESTIL</option>
+                                    <option value="A-5-XXI-118" data-subtitle="1556" data-right="17">FLUNARIZIN 5MG</option>
+                                    <option value="A-5-XXI-175" data-subtitle="5728" data-right="0">PRIMOLUT N</option>
+                                    <option value="A-5-XXV-128" data-subtitle="519" data-right="47">MELOXICAM15 MG</option>
+                                    <option value="A-5-XXVIII-178" data-subtitle="638" data-right="55">LANSOPRAZOLE 30 MG KAPSUL</option>
+                                    <option value="A-54-VIII-001" data-subtitle="810" data-right="60">INTUNAL FORTE</option>
+                                    <option value="A-54-VIII-004" data-subtitle="870" data-right="85">ALPARA</option>
+                                    <option value="A-54-XX-034" data-subtitle="108" data-right="86">PROPRANOLOL 10 MG TAB</option>
+                                    <option value="A-55-IV-239" data-subtitle="2357" data-right="37">NORETHISTERONE 5 MG TAB</option>
+                                    <option value="A-55-V-1049" data-subtitle="1100" data-right="0">CURCUMA TAB</option>
+                                    <option value="A-55-VI-101" data-subtitle="1100" data-right="0">CURCUMA FORCE TAB</option>
+                                    <option value="A-55-VI-102" data-subtitle="637" data-right="100">CAVICUR</option>
+                                    <option value="A-55-XX-0011" data-subtitle="16872" data-right="0">LASGAN</option>
+                                    <option value="A-55-XX-0038" data-subtitle="12391" data-right="0">NEUCITI 500</option>
+                                    <option value="A-55-XX-0058" data-subtitle="2026" data-right="120">ATORVASTATIN 10MG TAB</option>
+                                    <option value="A-55-XX-0059" data-subtitle="1054" data-right="7">ATORVASTATIN 20 MG TABLET</option>
+                                    <option value="A-55-XX-0115" data-subtitle="1709" data-right="7">TIZANIDIN 2MG</option>
+                                    <option value="A-55-XX-0150" data-subtitle="932" data-right="0">VELTHROM</option>
+                                    <option value="A-55-XX-060" data-subtitle="5800" data-right="0">ATORVASTATIN 40 MG TABLET</option>
+                                    <option value="A-55-XX-47N" data-subtitle="961" data-right="76">PROSTIMIX 100MG TAB</option>
+                                    <option value="A-55-XX1-110" data-subtitle="2218" data-right="87">FLUNARIZIN 10MG</option>
+                                    <option value="A-55-XXI-00802" data-subtitle="9950" data-right="0">FREGO 5MG</option>
+                                    <option value="A-55-XXXII-001" data-subtitle="12009" data-right="0">DISOLF EC</option>
+                                    <option value="A-56-III-001" data-subtitle="1038" data-right="185">CEFIXIM 200MG</option>
+                                    <option value="A-56-III-004" data-subtitle="20660" data-right="0">SPORETIK 100</option>
+                                    <option value="A-56-III-005" data-subtitle="24124" data-right="0">CEFSPAN 100</option>
+                                    <option value="A-56-IV-001" data-subtitle="80919" data-right="0">FERROSPLUS</option>
+                                    <option value="A-56-VI-053" data-subtitle="1780" data-right="290">NITROCAF RETARD CAPS</option>
+                                    <option value="A-56-VIII-007" data-subtitle="5700" data-right="0">FORTIBOOST </option>
+                                    <option value="A-56-X-002" data-subtitle="1000" data-right="0">HUFAGRIB TAB</option>
+                                    <option value="A-56-XCV-44" data-subtitle="4034" data-right="0">ORASIC 50 TAB</option>
+                                    <option value="A-56-XX-001" data-subtitle="10346" data-right="0">L-ACYS EFFERVESCENT</option>
+                                    <option value="A-57-III-006" data-subtitle="42180" data-right="13">CEFSPAN 200</option>
+                                    <option value="A-57-III-007" data-subtitle="1096" data-right="90">HELIXIM 100 MG TABLET</option>
+                                    <option value="A-58-III-004" data-subtitle="18700" data-right="0">FAVIKAL</option>
+                                    <option value="A-58-III-042" data-subtitle="733" data-right="59">CIPROFLOXACIN 500 mg TABLET</option>
+                                    <option value="A-58-III-092" data-subtitle="6160" data-right="0">INVERMECTIN</option>
+                                    <option value="A-58-IV-001" data-subtitle="3168" data-right="0">MEGAZING</option>
+                                    <option value="A-58-IV-002" data-subtitle="7548" data-right="0">ZEGAVIT</option>
+                                    <option value="A-58-VI-142" data-subtitle="3415" data-right="0">NEUROBION 5000</option>
+                                    <option value="A-58-XI-001" data-subtitle="7000" data-right="0">LIPROLAC</option>
+                                    <option value="A-58-XI-021" data-subtitle="11722" data-right="0">INVITEC</option>
+                                    <option value="A-58-XXI-100" data-subtitle="17760" data-right="0">PEDILAX 17 GR SACH</option>
+                                    <option value="A-59-XX-005" data-subtitle="15263" data-right="0">ROSTIN 20 MG</option>
+                                    <option value="A-59-XX-006" data-subtitle="800" data-right="0">ROSUVASTATIN CALCIUM 10MG</option>
+                                    <option value="A-59-XX-007" data-subtitle="2477" data-right="90">ROSUVASTATIN 20 MG</option>
+                                    <option value="A-59-XX-0110" data-subtitle="1000" data-right="100">CEPEZET TAB</option>
+                                    <option value="A-59-XXI-101" data-subtitle="8800" data-right="0">PANTOPRAZOLE 20 MG</option>
+                                    <option value="A-6-11-059" data-subtitle="278" data-right="6">DIAZEPAM 5MG</option>
+                                    <option value="A-6-II-058" data-subtitle="500" data-right="0">DIAZEPAM 2 MG</option>
+                                    <option value="A-6-VI-114" data-subtitle="858" data-right="107">CAVIPLEX TABLET</option>
+                                    <option value="A-6-VII-007" data-subtitle="216" data-right="18">AMBROXOL 30 MG</option>
+                                    <option value="A-6-VII-0075" data-subtitle="189" data-right="173">TEOSAL TAB</option>
+                                    <option value="A-6-VII-008" data-subtitle="23000" data-right="0">CRIPSA</option>
+                                    <option value="A-6-VII-009" data-subtitle="3608" data-right="5">VERTIKAF 24MG TAB</option>
+                                    <option value="A-6-VII-010" data-subtitle="162" data-right="0">BRONKRIS </option>
+                                    <option value="A-6-VII-099" data-subtitle="550" data-right="42">IBU PROFEN</option>
+                                    <option value="A-6-VIII-909" data-subtitle="700" data-right="0">GRANTUSIF</option>
+                                    <option value="A-6-XI-198" data-subtitle="513" data-right="6">ORALIT</option>
+                                    <option value="A-6-XI-201" data-subtitle="1059" data-right="86">SPASMINAL</option>
+                                    <option value="A-6-XII-001" data-subtitle="278" data-right="91">GRAFALIN 4 MG</option>
+                                    <option value="A-6-XII-191" data-subtitle="190" data-right="84">SALBUTAMOL 2 MG</option>
+                                    <option value="A-6-XII-195" data-subtitle="273" data-right="0">SALBUTAMOL 4 MG</option>
+                                    <option value="A-6-XIII-001" data-subtitle="165" data-right="0">MANTINO</option>
+                                    <option value="A-6-XIII-097" data-subtitle="2664" data-right="32">VASTIGO</option>
+                                    <option value="A-6-XV-095" data-subtitle="204" data-right="0">HCT 25 MG</option>
+                                    <option value="A-6-XXI-086" data-subtitle="532" data-right="0">SPIRONOLACTONE 25</option>
+                                    <option value="A-61-X-003" data-subtitle="1190" data-right="36">ACARBOSE 50 MG</option>
+                                    <option value="A-61-X-004" data-subtitle="1998" data-right="50">ACARBOSE 100</option>
+                                    <option value="A-61-XI-001" data-subtitle="4725" data-right="0">ASAM VALPROAT 250MG </option>
+                                    <option value="A-61-XI-002" data-subtitle="2800" data-right="30">ASAM VALPROAT 500 MG</option>
+                                    <option value="A-61-XX-001" data-subtitle="3497" data-right="15">OPICORT 4 MG</option>
+                                    <option value="A-61-XX-007" data-subtitle="533" data-right="42">ZILOVEN 4MG</option>
+                                    <option value="A-62-IV-074" data-subtitle="1760" data-right="0">PROVE E</option>
+                                    <option value="A-62-XX-003" data-subtitle="585" data-right="60">NEPHROLIT</option>
+                                    <option value="A-62-XXIX-003" data-subtitle="1332" data-right="8">CLOPIDOGRELl 75 mg TABLET</option>
+                                    <option value="A-62-XXIX-004" data-subtitle="2590" data-right="0">ANGITRIZ MR</option>
+                                    <option value="A-62-XXIX-005" data-subtitle="5045" data-right="0">TANAPRES 10MG</option>
+                                    <option value="A-62-XXIX-006" data-subtitle="2725" data-right="0">TANAPRES 5 MG</option>
+                                    <option value="A-62-XXIX-010" data-subtitle="15096" data-right="0">CPG 75</option>
+                                    <option value="A-62-XXX-092" data-subtitle="4824" data-right="46">URINTER</option>
+                                    <option value="A-64-III-054" data-subtitle="14300" data-right="0">MEIACT 30MG</option>
+                                    <option value="A-64-III-135" data-subtitle="10816" data-right="0">STAFORIN</option>
+                                    <option value="A-64-IV-010" data-subtitle="72520" data-right="0">VIP ALBUMIN</option>
+                                    <option value="A-64-XXIX-001" data-subtitle="13442" data-right="0">PLETAAL 100</option>
+                                    <option value="A-64-XXVIII-241" data-subtitle="3000" data-right="100">BAMGETOL 200MG TABLET</option>
+                                    <option value="A-65-III-123" data-subtitle="48500" data-right="0">LEVOCIN TAB</option>
+                                    <option value="A-65-VII-011" data-subtitle="8675" data-right="0">VIP ALBUMIN KAPSUL</option>
+                                    <option value="A-65-XVI-094" data-subtitle="6500" data-right="0">ELIZAC 20 MG</option>
+                                    <option value="A-65-XVI-095" data-subtitle="560" data-right="30">FLUOXETIN 20 MG</option>
+                                    <option value="A-65-XVI-211" data-subtitle="2498" data-right="52">ONDANSETRON 4 MG TABLET</option>
+                                    <option value="A-66-III-011" data-subtitle="961" data-right="46">LEVOFLOXACIN 500 TABLET</option>
+                                    <option value="A-66-III-075" data-subtitle="696" data-right="104">CEFIXIM 100 MG CAPS</option>
+                                    <option value="A-66-X-009" data-subtitle="400" data-right="0">DAILY C 500MG TAB</option>
+                                    <option value="A-66-X-24" data-subtitle="777" data-right="86">GLICLAZIDE 80</option>
+                                    <option value="A-66-X-25" data-subtitle="3220" data-right="0">GLICLAZIDE 60</option>
+                                    <option value="A-666-X-24" data-subtitle="850" data-right="0">MYLANTA TABLET</option>
+                                    <option value="A-69-III-002" data-subtitle="3400" data-right="0">LAPIMOX 500 MG</option>
+                                    <option value="A-69-IV-012" data-subtitle="2004" data-right="0">NONEMI</option>
+                                    <option value="A-69-IV-112" data-subtitle="2136" data-right="0">LEVOTIROKSIN TAB</option>
+                                    <option value="A-69-IV-113" data-subtitle="2136" data-right="0">EUTHYROX</option>
+                                    <option value="A-69-V-003" data-subtitle="3200" data-right="1">MALTOFER FOL</option>
+                                    <option value="A-69-VI-048" data-subtitle="5134" data-right="0">KAPIKACHHU</option>
+                                    <option value="A-69-VII-003" data-subtitle="4950" data-right="0">RECOLFAR</option>
+                                    <option value="A-69-X-001" data-subtitle="400" data-right="0">LEXIGO  6 MGTAB </option>
+                                    <option value="A-69-XV-45" data-subtitle="660" data-right="0">FARMALAT 10 MG</option>
+                                    <option value="A-69-XXIX-001" data-subtitle="1360" data-right="0">NOTISIL 2 MG</option>
+                                    <option value="A-7-V-1049" data-subtitle="3940" data-right="0">HYDROXYUREA</option>
+                                    <option value="A-7-VIII-008" data-subtitle="1290" data-right="0">EPERISONE 50 MG</option>
+                                    <option value="A-7-XX1-099" data-subtitle="2188" data-right="101">NORESTHISTERONE TAB</option>
+                                    <option value="A-7-XXI-007" data-subtitle="165" data-right="10">DIMENHYDRINATE 50MG TAB</option>
+                                    <option value="A-70-XX-00100" data-subtitle="1864" data-right="0">TRIMETAZIDINE 35 MG</option>
+                                    <option value="A-71-III-005" data-subtitle="10400" data-right="0">FAVIPIRAVIR 200 MG</option>
+                                    <option value="A-71-III-030" data-subtitle="2860" data-right="0">KALMOXILLIN 500 mg tab</option>
+                                    <option value="A-71-XIV-001" data-subtitle="588" data-right="0">GLUCODEX 80 MG</option>
+                                    <option value="A-71-XIV-0092" data-subtitle="461" data-right="5">GLIMEPIRIDE 1MG</option>
+                                    <option value="A-71-XIV-0093" data-subtitle="493" data-right="159">GLIMEPIRIDE 3MG</option>
+                                    <option value="A-71-XIV-0095" data-subtitle="350" data-right="44">GLIBENCLAMIDE 5MG</option>
+                                    <option value="A-71-XX-013" data-subtitle="975" data-right="106">SCOPMA</option>
+                                    <option value="A-71-XXIII-010" data-subtitle="1673" data-right="0">KALNEX 500 mg Tablet</option>
+                                    <option value="A-72--XVI-0094" data-subtitle="788" data-right="60">GLIMEPIRIDE 4 MG</option>
+                                    <option value="A-75-XXV1-143" data-subtitle="793" data-right="474">PHENYTOIN 100 MG</option>
+                                    <option value="A-75-XXVIII-145" data-subtitle="1399" data-right="0">IKHAPEN 100MG</option>
+                                    <option value="A-77-X-001" data-subtitle="1105" data-right="257">BIOMETIS TABLET</option>
+                                    <option value="A-78-XI-159" data-subtitle="424" data-right="0">CIMETIDIN TABLET</option>
+                                    <option value="A-78-XXIX-002" data-subtitle="34870" data-right="0">XARELTO 10 MG</option>
+                                    <option value="A-79-II-002" data-subtitle="1864" data-right="0">STESOLID 5 MG</option>
+                                    <option value="A-79-XIV-0104" data-subtitle="1102" data-right="412">GLIMEPIRIDE 2MG</option>
+                                    <option value="A-8-IV-180" data-subtitle="4009" data-right="0">PROMAVIT</option>
+                                    <option value="A-8-V-007" data-subtitle="810" data-right="42">ESTALEX TAB</option>
+                                    <option value="A-8-XX-016" data-subtitle="3467" data-right="0">BUSCOPAN</option>
+                                    <option value="A-80-XX-014" data-subtitle="7548" data-right="0">LABUMIN CAPS</option>
+                                    <option value="A-80-XXI-002" data-subtitle="286" data-right="0">MINIASPI 80 MG</option>
+                                    <option value="A-80-XXI-005" data-subtitle="1086" data-right="101">SCOPMA PLUS</option>
+                                    <option value="A-81-IV-071" data-subtitle="3774" data-right="0">PROVE D 5000</option>
+                                    <option value="A-81-IV-072" data-subtitle="3164" data-right="0">L-VIT D 1000</option>
+                                    <option value="A-85-VII-171" data-subtitle="165" data-right="99">PREDNISON 5 MG</option>
+                                    <option value="A-88-XVI-029" data-subtitle="8095" data-right="0">KALITAKE</option>
+                                    <option value="A-90-XXI-0056" data-subtitle="933" data-right="180">CANDESARTAN 16 MG</option>
+                                    <option value="A-90-XXI-0071" data-subtitle="666" data-right="225">CANDESARTAN 8 MG</option>
+                                    <option value="A-93-XI-181" data-subtitle="10560" data-right="0">L-BIO</option>
+                                    <option value="A-93-XII-182" data-subtitle="12740" data-right="0">SIMILAC SACHET</option>
+                                    <option value="A-93-XXI-001" data-subtitle="6133" data-right="0">CAL-95</option>
+                                    <option value="A-93-XXI-005" data-subtitle="48217" data-right="0">NEUROAID</option>
+                                    <option value="A-93-XXVI-11" data-subtitle="7076" data-right="0">TOFEDEX</option>
+                                    <option value="A-93-XXVI-12" data-subtitle="833" data-right="10">KETOROLAC 10 MG TAB</option>
+                                    <option value="A-93-XXVIII-195" data-subtitle="1776" data-right="0">SIPENTIN 100MG</option>
+                                    <option value="A-94-XXI-188" data-subtitle="24000" data-right="0">DAYLAX SACHET</option>
+                                    <option value="A-96-IV-001" data-subtitle="1581" data-right="0">EMINETON</option>
+                                    <option value="A-97-II-059" data-subtitle="1554" data-right="214">PRONEURON</option>
+                                    <option value="A-97-II-085" data-subtitle="1554" data-right="173">PROCLOZAM</option>
+                                    <option value="A-97-III-005" data-subtitle="708" data-right="46">CHLORAMPHENICOL</option>
+                                    <option value="A-97-III-131" data-subtitle="516" data-right="70">METRONIDAZOL 500 mg TABLET</option>
+                                    <option value="A-97-IV-002" data-subtitle="5377" data-right="0">PSIDII</option>
+                                    <option value="A-97-VII-001" data-subtitle="8700" data-right="0">X-CAM 15MG</option>
+                                    <option value="A-97-VII-002" data-subtitle="327" data-right="92">FARGETIX 500 MG</option>
+                                    <option value="A-97-VII-236" data-subtitle="284" data-right="62">ASAM MEFENAMAT 500 MG TAB</option>
+                                    <option value="A-97-VIII-009" data-subtitle="113" data-right="101">GUAIFENESIN  100 MG TAB</option>
+                                    <option value="A-97-XI-004" data-subtitle="611" data-right="27">ZINC 20</option>
+                                    <option value="A-97-XII-001" data-subtitle="880" data-right="0">MUCOS 30 MG</option>
+                                    <option value="A-97-XX-001" data-subtitle="664" data-right="0">WARFARIN </option>
+                                    <option value="A-97-XXI-002" data-subtitle="3996" data-right="40">MYORES</option>
+                                    <option value="A-97XXI-017" data-subtitle="414" data-right="50">PYRAZINAMINE 500</option>
+                                    <option value="A-99-4-007" data-subtitle="78" data-right="6">ASAM FOLAT 1MG</option>
+                                    <option value="A-99-4-008" data-subtitle="196" data-right="40">ANELAT 1 MG</option>
+                                    <option value="A-99-5-007" data-subtitle="163" data-right="31">ASAM FOLAT 400MCG</option>
+                                    <option value="A-G-XII-001" data-subtitle="1943" data-right="10">HI-BONE KIDS</option>
+                                    <option value="A-G-XII-190" data-subtitle="162" data-right="0">CALCIFAR</option>
+                                    <option value="A-G-XII-191" data-subtitle="963" data-right="0">CALOS 500 MG</option>
+                                    <option value="A-G-XII-192" data-subtitle="202" data-right="140">CALCIFAR PLUS</option>
+                                    <option value="A-G-XII-193" data-subtitle="4163" data-right="35">HI-BONE ACTIVE CHEW ANGGUR</option>
+                                    <option value="A-G-XII-194" data-subtitle="4163" data-right="35">HI-BONE ACTIVE CHEW STROBERY</option>
+                                    <option value="A-G-XIX-666" data-subtitle="611" data-right="42">CALCIDIN TABLET</option>
+                                    <option value="A-II-VII-216" data-subtitle="1850" data-right="0">NOVALGIN 500MG</option>
+                                    <option value="A-XX-008" data-subtitle="850" data-right="47">HEXYMER TAB</option>
+                                    <option value="A-XX-009" data-subtitle="1000" data-right="0">TRIHEXYPHENIDYL</option>
+                                    <option value="A31-XVI-079" data-subtitle="10313" data-right="0">ISPRINOL</option>
+                                    <option value="B 98-V-051" data-subtitle="75000" data-right="0">SILEX SYRUP</option>
+                                    <option value="B-02-25-01" data-subtitle="63936" data-right="0">GRAPHALAC 120 ML SYR</option>
+                                    <option value="B-02-25-02" data-subtitle="26640" data-right="0">PROSINAL 60ML SUSP</option>
+                                    <option value="B-03-XC-004" data-subtitle="35853" data-right="0">TURPAS FORTE SYR</option>
+                                    <option value="B-1-V-001" data-subtitle="73649" data-right="2">ASAM VALPROAT SYR</option>
+                                    <option value="B-1-V-002" data-subtitle="91575" data-right="3">VALEPTIK SYR</option>
+                                    <option value="B-100-IV-098" data-subtitle="22638" data-right="10">SAN B PLEX</option>
+                                    <option value="B-100-IV-099" data-subtitle="35520" data-right="10">VITAPLEX DROP</option>
+                                    <option value="B-12-XI-009" data-subtitle="35897" data-right="0">ULTILOC SYR</option>
+                                    <option value="B-21-III-001" data-subtitle="23513" data-right="0">AMOXAN DRY SYRUP</option>
+                                    <option value="B-21-III-002" data-subtitle="109890" data-right="0">FARMABES</option>
+                                    <option value="B-21-V-002" data-subtitle="7825" data-right="0">KRALIX SYR 60ML</option>
+                                    <option value="B-21-VI-001" data-subtitle="29500" data-right="0">PRORIS SYR</option>
+                                    <option value="B-21-VII-002" data-subtitle="5118" data-right="1">AMBROXOL SYR</option>
+                                    <option value="B-21-VII-021" data-subtitle="35000" data-right="0">SANPRIMA SYRUP</option>
+                                    <option value="B-21-VIII-005" data-subtitle="84500" data-right="0">RYVELL DROP</option>
+                                    <option value="B-21-X-021" data-subtitle="122100" data-right="0">ODR SYRUP</option>
+                                    <option value="B-21-X-1075" data-subtitle="4329" data-right="4">DOMPERIDON SIRUP</option>
+                                    <option value="B-21-XI-186" data-subtitle="3614" data-right="6">ANTASID SYRUP</option>
+                                    <option value="B-21-XI-1867" data-subtitle="6501" data-right="1">SALBUTAMOL SYRUP</option>
+                                    <option value="B-21-XVII-001" data-subtitle="54000" data-right="0">LAXADIN SYR</option>
+                                    <option value="B-21-XVII-002" data-subtitle="10500" data-right="0">KOMPOLAX SIRUP</option>
+                                    <option value="B-21-XVIII-001" data-subtitle="23320" data-right="3">STARLAX</option>
+                                    <option value="B-22-III-008" data-subtitle="4367" data-right="1">AMOXICILLIN SYR</option>
+                                    <option value="B-22-III-070" data-subtitle="10989" data-right="4">CEFIXIM DRY 100 MG SYRUP</option>
+                                    <option value="B-22-VI-01" data-subtitle="20500" data-right="0">LACTULOSE</option>
+                                    <option value="B-22-VII-001" data-subtitle="44816" data-right="0">APIALIS DROP</option>
+                                    <option value="B-22-VII-002" data-subtitle="52000" data-right="0">APIALIS SYRUP</option>
+                                    <option value="B-22-VII-003" data-subtitle="151250" data-right="0">APIBAN DROP</option>
+                                    <option value="B-22-VIII-002" data-subtitle="36575" data-right="0">LAPIMUC DROP</option>
+                                    <option value="B-22-VIII-226" data-subtitle="11000" data-right="0">IBU PROFEN SYR</option>
+                                    <option value="B-22-VIII-227" data-subtitle="9768" data-right="1">FARSIFEN FORTE</option>
+                                    <option value="B-22-VIII-228" data-subtitle="8103" data-right="3">FARSIFEN SYR</option>
+                                    <option value="B-22-XVIII-001" data-subtitle="24500" data-right="0">ARCAPEC SIRUP</option>
+                                    <option value="B-22-XVIII-245" data-subtitle="30700" data-right="0">APETIC SYR</option>
+                                    <option value="B-23-IV-071" data-subtitle="13500" data-right="0">HELIXIM DRY SYR</option>
+                                    <option value="B-23-v-001" data-subtitle="6261" data-right="0">LERZIN SYR</option>
+                                    <option value="B-23-XVII-35" data-subtitle="25946" data-right="0">APETIC DROPS</option>
+                                    <option value="B-24-X-69" data-subtitle="14795" data-right="0">PIMTRAKOL SIRUP 60ML</option>
+                                    <option value="B-27-III-001" data-subtitle="29138" data-right="0">OXOPI SYR</option>
+                                    <option value="B-27-III-99" data-subtitle="14397" data-right="0">INTUNAL SYRUP</option>
+                                    <option value="B-27-VII-001" data-subtitle="22700" data-right="0">SANMOL 120 MG SYR</option>
+                                    <option value="B-27-VII-045" data-subtitle="42457" data-right="0">LASAL EXPECTORAN 100ML</option>
+                                    <option value="B-28-VII-002" data-subtitle="30053" data-right="0">SANMOL FORTE 250 MG</option>
+                                    <option value="B-28-VII-003" data-subtitle="24975" data-right="3">OTTOPAN  120 MG SYR</option>
+                                    <option value="B-28-VII-004" data-subtitle="48600" data-right="3">OTTOPAN DROP 60 MG </option>
+                                    <option value="B-28-VIII-046" data-subtitle="33022" data-right="0">LASAL 2MG SYR BRONKODILATOR</option>
+                                    <option value="B-29-VIII-001" data-subtitle="6300" data-right="0">ITRAMOL</option>
+                                    <option value="B-29-VIII-003" data-subtitle="4980" data-right="1">PARACETAMOL SYR</option>
+                                    <option value="B-36-XX-001" data-subtitle="41625" data-right="2">GERDILIUM  5 MG SYR</option>
+                                    <option value="B-36-XX-002" data-subtitle="54000" data-right="2">GERDILIUM 5 MG DROP</option>
+                                    <option value="B-36-XX-110" data-subtitle="15000" data-right="0">VESPERUM DROP</option>
+                                    <option value="B-37-III-092" data-subtitle="13502" data-right="0">AMOXICILLIN DROP</option>
+                                    <option value="B-37-VIII-056" data-subtitle="16317" data-right="0">SANADRYL DMP</option>
+                                    <option value="B-37-XI-001" data-subtitle="33849" data-right="0">VOSEDON SYR</option>
+                                    <option value="B-37-XI-053" data-subtitle="10140" data-right="0">DAMABEN SIRUP</option>
+                                    <option value="B-37-XI-1056" data-subtitle="14447" data-right="0">NEO KAOLANA SYR</option>
+                                    <option value="B-37-XX-112" data-subtitle="7437" data-right="1">VESPERUM SYR 60CC</option>
+                                    <option value="B-39-VII-94" data-subtitle="19370" data-right="0">SANMOL DROP</option>
+                                    <option value="B-39-VII-95" data-subtitle="13487" data-right="1">SANADRYL EXP</option>
+                                    <option value="B-39-XX-10" data-subtitle="44660" data-right="0">TEMPRA F</option>
+                                    <option value="B-39-XXII-006" data-subtitle="33300" data-right="0">LAPIMOX SYR 125</option>
+                                    <option value="B-39-XXII-007" data-subtitle="24975" data-right="1">OPIMOX SYR 125 D.S</option>
+                                    <option value="B-39-XXII-008" data-subtitle="33300" data-right="0">OPIMOX FORTE DS</option>
+                                    <option value="B-4-VIII-001" data-subtitle="30370" data-right="0">TRIFED SYR</option>
+                                    <option value="B-4-VIII-002" data-subtitle="24975" data-right="1">TRIFEDRIN SYR</option>
+                                    <option value="B-4-XII-017" data-subtitle="31371" data-right="0">MALTIRON SYR</option>
+                                    <option value="B-4-XXII-016" data-subtitle="40100" data-right="0">MAXPOFER SYR</option>
+                                    <option value="B-42-VII-002" data-subtitle="57720" data-right="0">RHINOS JUNIOR SYR</option>
+                                    <option value="B-5-III-001" data-subtitle="64991" data-right="0">CLANEKSI 125 MG SYR</option>
+                                    <option value="B-5-III-002" data-subtitle="61050" data-right="0">LAPICEF SYR 125</option>
+                                    <option value="B-5-III-003" data-subtitle="83250" data-right="3">CLAMIXIN FORTE DS</option>
+                                    <option value="B-5-III-004" data-subtitle="64935" data-right="1">CLAMIXIN DS 125 MG</option>
+                                    <option value="B-5-III-090" data-subtitle="5635" data-right="4">YUSIMOX SYR</option>
+                                    <option value="B-5-VI-067" data-subtitle="10877" data-right="0">PARACETAMOL DROP</option>
+                                    <option value="B-5-VI-069" data-subtitle="12130" data-right="4">FASIDOL DROP</option>
+                                    <option value="B-5-VI-209" data-subtitle="78375" data-right="0">LAMESON SIRUP</option>
+                                    <option value="B-5-X-001" data-subtitle="44000" data-right="0">PEDIALYTE</option>
+                                    <option value="B-5-XVI-007" data-subtitle="8000" data-right="6">OBH</option>
+                                    <option value="B-5-XXI-017" data-subtitle="35381" data-right="0">MAXPOFER DROP</option>
+                                    <option value="B-5-XXVII177" data-subtitle="29500" data-right="0">PRAXION drop</option>
+                                    <option value="B-54-F33-027" data-subtitle="77838" data-right="0">LAPICEF 250MG DRY SYR </option>
+                                    <option value="B-54-VIII-005" data-subtitle="25950" data-right="0">NILACELIN SYR</option>
+                                    <option value="B-55-V-105" data-subtitle="15000" data-right="0">KURKUMEX SYR</option>
+                                    <option value="B-55-V-1084" data-subtitle="6827" data-right="0">CURVIPLEX SYR</option>
+                                    <option value="B-55-X-001" data-subtitle="61959" data-right="0">ALCO  FLU SYR</option>
+                                    <option value="B-55-X-007" data-subtitle="12000" data-right="0">COMPOLAX SYR</option>
+                                    <option value="B-56-X-002" data-subtitle="102000" data-right="0">ALCO DROPS</option>
+                                    <option value="B-56-X-008" data-subtitle="49550" data-right="0">ATAROC SYRUP</option>
+                                    <option value="B-57-X-002" data-subtitle="15000" data-right="0">SAKATONIC ACTIVE SYR</option>
+                                    <option value="B-57-XX-002" data-subtitle="37463" data-right="2">FUZIDE SYRUP</option>
+                                    <option value="B-58-III-003" data-subtitle="13000" data-right="1">CEFADROXIL 125 MG DRY SYRUP</option>
+                                    <option value="B-58-III-004" data-subtitle="12500" data-right="1">CEFADROXIL DRY SYRUP FORTE 250 MG</option>
+                                    <option value="B-58-III-006" data-subtitle="61327" data-right="0">LAPICEF DROP</option>
+                                    <option value="B-58-III-007" data-subtitle="48285" data-right="2">OPICEF 125 MG D.S </option>
+                                    <option value="B-58-XI-002" data-subtitle="220613" data-right="4">LIPROLAC BABY</option>
+                                    <option value="B-58-XI-003" data-subtitle="279720" data-right="0">INTERLAC DROP</option>
+                                    <option value="B-59-IV-007" data-subtitle="35853" data-right="0">APETIC FORTE SYR</option>
+                                    <option value="B-59-XX-001" data-subtitle="21507" data-right="1">ONDANSETRON SYR</option>
+                                    <option value="B-62-III-005" data-subtitle="91840" data-right="0">TIRIZ DROP</option>
+                                    <option value="B-62-III-006" data-subtitle="5791" data-right="3">CETIRIZIN SYRUP</option>
+                                    <option value="B-62-VIII-005" data-subtitle="33000" data-right="0">VOSTRIN DRY 60ML</option>
+                                    <option value="B-62-XXVII-001" data-subtitle="14300" data-right="0">SIRPLUS MELON</option>
+                                    <option value="B-69-III-002" data-subtitle="122507" data-right="2">CEFSPAN DRY SYRUP</option>
+                                    <option value="B-7-XI-010" data-subtitle="45455" data-right="0">ULTILOX FORTE</option>
+                                    <option value="B-70-IV-003" data-subtitle="77700" data-right="0">SIMFIX DRY SYRUP</option>
+                                    <option value="B-75-XI-002" data-subtitle="60928" data-right="0">ULFAT SYR</option>
+                                    <option value="B-75-XI-003" data-subtitle="69708" data-right="0">KALPEPSA SYR</option>
+                                    <option value="B-75-XI-087" data-subtitle="7150" data-right="3">SUCRALFAT SYR</option>
+                                    <option value="B-76-XX-0030" data-subtitle="31080" data-right="0">PROCELES</option>
+                                    <option value="B-77-X-001" data-subtitle="128000" data-right="0">ACLAM FORTE SYR</option>
+                                    <option value="B-77-XI-001" data-subtitle="44400" data-right="0">EDRIN DROP</option>
+                                    <option value="B-78-III-001" data-subtitle="4662" data-right="2">COTRIMOXAZOLE SIRUP</option>
+                                    <option value="B-78-IV-001" data-subtitle="62438" data-right="2">METHOPI 250 MG SYR</option>
+                                    <option value="B-78-IV-008" data-subtitle="37185" data-right="0">IMBOOST SYRUP</option>
+                                    <option value="B-78-IV-010" data-subtitle="66600" data-right="0">ISPRINOL SYRUP</option>
+                                    <option value="B-78-IV-011" data-subtitle="128000" data-right="0">ISOPRINOSIN</option>
+                                    <option value="B-78-IV-015" data-subtitle="72150" data-right="0">METHISOPRINOL SYR</option>
+                                    <option value="B-80-VII-003" data-subtitle="17243" data-right="0">MUCOS SYR</option>
+                                    <option value="B-93-XXVII-002" data-subtitle="13200" data-right="0">SIRPLUS ANGGUR</option>
+                                    <option value="B-96-VI 050" data-subtitle="7330" data-right="0">HUFAVIT</option>
+                                    <option value="B-97-VI-053" data-subtitle="10899" data-right="1">CAVIPLEX SYRUP</option>
+                                    <option value="B-97-VI-054" data-subtitle="28500" data-right="0">ELKANA SYR</option>
+                                    <option value="B-97-VI-055" data-subtitle="57997" data-right="0">CAL-95 SYR</option>
+                                    <option value="B-97-VI-060" data-subtitle="2950" data-right="0">BECOM ZET</option>
+                                    <option value="B-97-XI-001" data-subtitle="37000" data-right="0">ZINC PRO SYR</option>
+                                    <option value="B-97-XI-002" data-subtitle="28215" data-right="0">ZINC PRO DROP</option>
+                                    <option value="B-97-XI-003" data-subtitle="8492" data-right="3">ZINC 20MG/5ML SYR</option>
+                                    <option value="B-97-XII-005" data-subtitle="41514" data-right="0">L-ZINC SYR</option>
+                                    <option value="B-98-VI-054" data-subtitle="6160" data-right="0">CURCUMA SIRUP</option>
+                                    <option value="B-98-XII-001" data-subtitle="26640" data-right="0">ZIRCUM KID SYR</option>
+                                    <option value="B-99-XV-001" data-subtitle="19536" data-right="0">SUPRALYCIN SYR</option>
+                                    <option value="B-XVI-001" data-subtitle="97500" data-right="0">MAXPRINOL</option>
+                                    <option value="B000008018" data-subtitle="8125" data-right="0">RECUSTEIN </option>
+                                    <option value="B000008021" data-subtitle="2750" data-right="0">FENO FIBRAT 100MG</option>
+                                    <option value="B000008026" data-subtitle="7500" data-right="2">CURCUMA SYR</option>
+                                    <option value="B000008028" data-subtitle="140000" data-right="0">ETHYLCHLORIDE</option>
+                                    <option value="B000008032" data-subtitle="0" data-right="0">FDC TLD</option>
+                                    <option value="BHP- 007" data-subtitle="50000" data-right="0">DOT PIGEON</option>
+                                    <option value="BHP-001" data-subtitle="30500" data-right="0">PAKET PERAWATAN</option>
+                                    <option value="BHP-002" data-subtitle="123000" data-right="0">PAKET PERSALINAN</option>
+                                    <option value="BHP-005" data-subtitle="9000" data-right="0">TISU BASAH</option>
+                                    <option value="BHP-006" data-subtitle="17000" data-right="0">PEMPERS</option>
+                                    <option value="BHP-008" data-subtitle="25000" data-right="0">JOHNSON</option>
+                                    <option value="BHP-009" data-subtitle="25000" data-right="0">DOT HUKI KECIL</option>
+                                    <option value="C-58-XX-004" data-subtitle="38526" data-right="0">BEBELOVE GOLD SOYA 1</option>
+                                    <option value="C-58-XXX-001" data-subtitle="60000" data-right="0">SGM SOYA</option>
+                                    <option value="C-58-XXX-0011" data-subtitle="32334" data-right="0">SGM GAIN</option>
+                                    <option value="C-58-XXX-006" data-subtitle="24500" data-right="0">BEBELOVE GOLD</option>
+                                    <option value="C-58-XXX-008" data-subtitle="137504" data-right="0">NUTRIBABY ROYAL PREMATURE</option>
+                                    <option value="C-58-XXX-076" data-subtitle="111000" data-right="0">LACTOGEN PREMATUR</option>
+                                    <option value="C-58-XXX-105" data-subtitle="45000" data-right="0">SGM LLM</option>
+                                    <option value="C-59-XXX-0011" data-subtitle="289344" data-right="0">NUTRIBABY ROYAL PEPTI</option>
+                                    <option value="C-59-XXX-0020" data-subtitle="30700" data-right="0">LACTAMIL PREGNASIS CKT</option>
+                                    <option value="C-59-XXX-0021" data-subtitle="110283" data-right="0">NUTRIBABY ROYAL DUOBIO 400 g</option>
+                                    <option value="C-59-XXX-0023" data-subtitle="145658" data-right="0">NUTRIBABYCESABIO 0-6 BLN</option>
+                                    <option value="C-59-XXX-003" data-subtitle="33118" data-right="0">BEBELOVE 1</option>
+                                    <option value="C-59-XXX-004" data-subtitle="276043" data-right="0">INFATRINI</option>
+                                    <option value="C-59-XXX-006" data-subtitle="151570" data-right="0">FRISOLAC GOLD 1</option>
+                                    <option value="C-59-XXX-015" data-subtitle="88000" data-right="0">PEPTIBREN</option>
+                                    <option value="C-59-XXX-100" data-subtitle="30700" data-right="0">LACTAMIL PREGNASIS STRW</option>
+                                    <option value="C-60-XXX-009" data-subtitle="49000" data-right="0">SGM BBLR 200</option>
+                                    <option value="C-60-XXX-011" data-subtitle="74578" data-right="0">SGM BBLR 400</option>
+                                    <option value="C-60-XXX-016" data-subtitle="15800" data-right="0">SGM BUNDA</option>
+                                    <option value="C-60-XXX-017" data-subtitle="9083" data-right="0">SGM ANANDA</option>
+                                    <option value="C-60-XXX-018" data-subtitle="116000" data-right="0">HEPATOSOL 240G</option>
+                                    <option value="C-61-XXX-007" data-subtitle="19025" data-right="0">SUSU HMF</option>
+                                    <option value="CCING-ALASKA" data-subtitle="18164" data-right="0">COMBANTRIN TAB 250</option>
+                                    <option value="D-21-VII-002" data-subtitle="7000" data-right="0">PRORIS SUPP</option>
+                                    <option value="D-21-XVII-001" data-subtitle="21867" data-right="2">MICROLAX</option>
+                                    <option value="D-21-XVII-003" data-subtitle="22200" data-right="0">DULCOLAX 5 MG</option>
+                                    <option value="D-21-XXV-1002" data-subtitle="29333" data-right="0">CYGEST 400 MG</option>
+                                    <option value="D-22-III-036" data-subtitle="21867" data-right="1">CAZETIN DROP</option>
+                                    <option value="D-22-XIX-199" data-subtitle="11500" data-right="0">BORAGINOL N SUPP</option>
+                                    <option value="D-22-XVII-003" data-subtitle="29477" data-right="0">DULCOLAX 10 MG</option>
+                                    <option value="D-24-III-001" data-subtitle="17316" data-right="7">NEO GYNOXA</option>
+                                    <option value="D-24-VII-081" data-subtitle="16606" data-right="0">KALTROFEN </option>
+                                    <option value="D-31-XXV-001" data-subtitle="10656" data-right="10">KALGESTIN 100 MG</option>
+                                    <option value="D-31-XXV-1006" data-subtitle="11322" data-right="0">MICROGEST 100</option>
+                                    <option value="D-32-XXV-1007" data-subtitle="20757" data-right="0">MICROGEST 200</option>
+                                    <option value="D-4-XI-167" data-subtitle="29748" data-right="0">DUMIN RECTAL 250MG</option>
+                                    <option value="D-4-XI-168" data-subtitle="8000" data-right="0">DUMIN RECTAL 125 MG </option>
+                                    <option value="D-4-XI-169" data-subtitle="11400" data-right="0">PARACETAMOL RECTAL 125 MG</option>
+                                    <option value="D-4-XI-170" data-subtitle="14617" data-right="0">PAMOL SUP 125 MG</option>
+                                    <option value="D-50-III-0069" data-subtitle="57600" data-right="0">NYSTATIN DROP</option>
+                                    <option value="D-6-II-003" data-subtitle="50394" data-right="2">STESOLID 10 MG SUPP</option>
+                                    <option value="D-72-XIX-001" data-subtitle="6334" data-right="3">SUPERHOID</option>
+                                    <option value="D-72-XIX-200" data-subtitle="13861" data-right="0">BORAGINOL S SUP</option>
+                                    <option value="D-72-XIX-201" data-subtitle="7500" data-right="0">ANTIHEMOROID</option>
+                                    <option value="D-80-VII-001" data-subtitle="8800" data-right="0">PYREXIN 160 SUP</option>
+                                    <option value="D-80-VII-002" data-subtitle="7200" data-right="0">PYREXIN 80 SUPP</option>
+                                    <option value="D-88-II-001" data-subtitle="33744" data-right="1">STESOLID 5 MG RECTAL</option>
+                                    <option value="D-XX-1036" data-subtitle="108225" data-right="1">FLEET ENEMA</option>
+                                    <option value="DKK001" data-subtitle="14850" data-right="0">FAVIPIRAVIR DKK</option>
+                                    <option value="DKK003" data-subtitle="373" data-right="0">ACETYLCYSTEINE DKK</option>
+                                    <option value="E - 58 -XXI-068" data-subtitle="262238" data-right="0">ANTITEN -A 60 MG</option>
+                                    <option value="E- 21-XX-23" data-subtitle="30000" data-right="0">VIT C INJ 1000 MG/ 5 ML</option>
+                                    <option value="E- 69-XI-0151" data-subtitle="27417" data-right="0">INDOP 200</option>
+                                    <option value="E-0032" data-subtitle="11988" data-right="0">DOLOGESIK 100</option>
+                                    <option value="E-1-XX-0012" data-subtitle="15651" data-right="0">DOBUTAMIN 250 MG/5ML</option>
+                                    <option value="E-1-XX-002" data-subtitle="2501" data-right="0">OXYTOCIN INJ</option>
+                                    <option value="E-100-III-001" data-subtitle="7975" data-right="0">WATER FOR INJECTION 250 ML</option>
+                                    <option value="E-11-VII-025" data-subtitle="5422" data-right="0">METAMIZOL INJEKSI</option>
+                                    <option value="E-11-XXIX-002" data-subtitle="73750" data-right="0">HEPARIN SODIUM</option>
+                                    <option value="E-12-XV-1213" data-subtitle="14546" data-right="0">ONDANSETRON 8 MG INJ</option>
+                                    <option value="E-12-XVI-212" data-subtitle="4995" data-right="0">ONDANSETRON 4 MG INJ</option>
+                                    <option value="E-17-III-015" data-subtitle="6966" data-right="0">CEFTRIAXON</option>
+                                    <option value="E-17-III-055" data-subtitle="19980" data-right="0">CEFOPERAZONE INJ</option>
+                                    <option value="E-17-III-060" data-subtitle="109890" data-right="0">CEPRAZ INJ</option>
+                                    <option value="E-21-III-003" data-subtitle="230880" data-right="0">CEFXON</option>
+                                    <option value="E-21-IV-001" data-subtitle="389610" data-right="0">CERNEVIT INJ</option>
+                                    <option value="E-21-IV-100" data-subtitle="173576" data-right="0">PROVE VIT </option>
+                                    <option value="E-21-IX-002" data-subtitle="199800" data-right="0">ESOLA</option>
+                                    <option value="E-21-IX-003" data-subtitle="205000" data-right="0">EZOMEB</option>
+                                    <option value="E-21-XX-22" data-subtitle="23310" data-right="0">PROVE C 1000</option>
+                                    <option value="E-21-XX-23" data-subtitle="5000" data-right="0">SIDIADRYL</option>
+                                    <option value="E-21-XX-24" data-subtitle="14300" data-right="0">LAVIT-C 1000 INJ</option>
+                                    <option value="E-22-III-013" data-subtitle="7215" data-right="0">CEFOTAXIME </option>
+                                    <option value="E-23-III-002" data-subtitle="106241" data-right="0">CLANEXI INJ</option>
+                                    <option value="E-23-XX-005" data-subtitle="126500" data-right="0">PANTOTIS</option>
+                                    <option value="E-23-XX-0095" data-subtitle="34965" data-right="0">TRIAMCINOLON 10MG INJEKSI</option>
+                                    <option value="E-23-XXI-001" data-subtitle="217560" data-right="0">ENOXRIN 4000 IU</option>
+                                    <option value="E-23-XXI-002" data-subtitle="284715" data-right="0">ENOXRIN 6000 IU</option>
+                                    <option value="E-24-XI-040" data-subtitle="7326" data-right="0">ISORANE</option>
+                                    <option value="E-24-XI-041" data-subtitle="2979" data-right="0">ISOFLUFANE 250 ML</option>
+                                    <option value="E-24-XXI-107" data-subtitle="6044" data-right="0">ANTRAIN INJ</option>
+                                    <option value="E-24-XXI-133" data-subtitle="54540" data-right="0">BUCAIN</option>
+                                    <option value="E-24-XXI-251" data-subtitle="274170" data-right="0">LACEDIM INJ</option>
+                                    <option value="E-24-XXI-300" data-subtitle="18038" data-right="0">CEFTAZIDIME</option>
+                                    <option value="E-24-XXX-007" data-subtitle="255744" data-right="0">ULCAN INJ</option>
+                                    <option value="E-24-XXX-212" data-subtitle="202364" data-right="1">VAKSIN CERVARIX</option>
+                                    <option value="E-29-II-004" data-subtitle="1700" data-right="0">DIAZEPAM 5 MG/2 ML</option>
+                                    <option value="E-29-II-049" data-subtitle="41000" data-right="0">AMOXICILLIN INJ</option>
+                                    <option value="E-29-III--044" data-subtitle="33189" data-right="0">AMOXAN INJ</option>
+                                    <option value="E-30-XXVI-005" data-subtitle="156300" data-right="0">DILTIAZEM HCL</option>
+                                    <option value="E-31-XVI-080" data-subtitle="83250" data-right="0">BUNASCAN INJ</option>
+                                    <option value="E-33-III-011" data-subtitle="49728" data-right="0">BACTESYN</option>
+                                    <option value="E-36-XX-0216" data-subtitle="142147" data-right="2">HEPA-MERZ</option>
+                                    <option value="E-36-XXI-001" data-subtitle="204600" data-right="0">VENOVER INJ</option>
+                                    <option value="E-36-XXIII-200" data-subtitle="814000" data-right="0">SOMATOSTATIN L</option>
+                                    <option value="E-37-III-002" data-subtitle="46750" data-right="0">LEVICA INJ</option>
+                                    <option value="E-37-III-0045" data-subtitle="23820" data-right="0">COLSANCETIN INJ</option>
+                                    <option value="E-37-III-0046" data-subtitle="24500" data-right="0">CHLORAMPENICOL INJ</option>
+                                    <option value="E-38-VI-004" data-subtitle="13534" data-right="0">MECOBALAMIN INJ</option>
+                                    <option value="E-38-VI-006" data-subtitle="19980" data-right="0">CITICOLINE 500 MG INJEKSI</option>
+                                    <option value="E-38-VI-105" data-subtitle="4796" data-right="0">CITICOLINE 250 mg INJEKSI</option>
+                                    <option value="E-38-XXI-005" data-subtitle="73260" data-right="0">CHOLINAAR INJ 1 g</option>
+                                    <option value="E-38-XXX-001" data-subtitle="110000" data-right="0">TRILAC 10 MG</option>
+                                    <option value="E-38-XXX-002" data-subtitle="90659" data-right="0">TRILAC 40 MG</option>
+                                    <option value="E-38-XXXIII-002" data-subtitle="19425" data-right="0">PIRACETAM 3 gr INJEKSI</option>
+                                    <option value="E-38-XXXIII-003" data-subtitle="2997" data-right="0">PIRACETAM 1 g INJEKSI</option>
+                                    <option value="E-39-III-0030" data-subtitle="27750" data-right="0">BACTESIN INJ</option>
+                                    <option value="E-39-III-018" data-subtitle="13000" data-right="0">GENTAMICIN 40 MG/ML</option>
+                                    <option value="E-39-VII-026" data-subtitle="22034" data-right="0">VALISANBE</option>
+                                    <option value="E-39-X-063" data-subtitle="10545" data-right="0">SAGESTAM</option>
+                                    <option value="E-39-XX-028" data-subtitle="57720" data-right="0">ODR 8MG INJEKSI</option>
+                                    <option value="E-39-XX-029" data-subtitle="35520" data-right="0">ODR 4MG INJEKSI</option>
+                                    <option value="E-4-III-072" data-subtitle="256410" data-right="0">BROADCED</option>
+                                    <option value="E-4-VI-052" data-subtitle="4440" data-right="0">BIOCOMBIN 5000</option>
+                                    <option value="E-4-VII-064" data-subtitle="27400" data-right="0">SANKORBIN</option>
+                                    <option value="E-4-XII-0005" data-subtitle="11600" data-right="8">BUDESONIDE 0,25MG</option>
+                                    <option value="E-4-XII-027" data-subtitle="30000" data-right="0">EPHEDRIN HCL</option>
+                                    <option value="E-4-XII-03" data-subtitle="14872" data-right="0">FLEXOTIDE NEBUL</option>
+                                    <option value="E-4-XII-077" data-subtitle="11688" data-right="0">VENTOLIN NEBULE</option>
+                                    <option value="E-4-XII-078" data-subtitle="11850" data-right="0">PULMICORT 0,25MG/ML</option>
+                                    <option value="E-4-XII-079" data-subtitle="180900" data-right="0">VENTOLIN inhaler </option>
+                                    <option value="E-4-XII-080" data-subtitle="3882" data-right="0">COMBIVENT</option>
+                                    <option value="E-4-XV-048" data-subtitle="5661" data-right="0">MGSO4 40%</option>
+                                    <option value="E-4-XV-049" data-subtitle="6667" data-right="0">MgSO4 20%</option>
+                                    <option value="E-4-XXI-011" data-subtitle="14504" data-right="8">CALCII GLUCONAS</option>
+                                    <option value="E-4-XXIII-020" data-subtitle="105311" data-right="0">ANTIPEC</option>
+                                    <option value="E-4-XXIII-0200" data-subtitle="6900" data-right="0">VITAMIN K 10MG INJ</option>
+                                    <option value="E-4-XXVII-023" data-subtitle="9158" data-right="0">DOPAMIN 200 MG/5 ML</option>
+                                    <option value="E-4-XXVII-034" data-subtitle="5148" data-right="0">HALOTHANE 1CC</option>
+                                    <option value="E-40-XX-005" data-subtitle="19451" data-right="0">AMIKACIN SULFAT</option>
+                                    <option value="E-41-XX-023" data-subtitle="90314" data-right="1">APIDRA BPJS</option>
+                                    <option value="E-41-XX-024" data-subtitle="139000" data-right="3">NOVORAPID</option>
+                                    <option value="E-41-XX-025" data-subtitle="92042" data-right="7">SANSULIN</option>
+                                    <option value="E-41-XX-026" data-subtitle="142968" data-right="1">NOVOMIX</option>
+                                    <option value="E-41-XX-051" data-subtitle="41070" data-right="0">ETHANYL</option>
+                                    <option value="E-41-XX-052" data-subtitle="245600" data-right="0">DIVITI 2.5 MG/0.5 ML</option>
+                                    <option value="E-41-XX-053" data-subtitle="10490" data-right="0">DAMABEN INJ</option>
+                                    <option value="E-41-XX-054" data-subtitle="4995" data-right="0">METOCLOPRAMIDE INJ</option>
+                                    <option value="E-41-XX-055" data-subtitle="127500" data-right="0">LANSOPRAZOLE INJ</option>
+                                    <option value="E-41-XX-078" data-subtitle="192300" data-right="0">RYZODEG </option>
+                                    <option value="E-41-XXI-001" data-subtitle="3500" data-right="0">NEO K</option>
+                                    <option value="E-41-XXI-046" data-subtitle="7300" data-right="0">VITAMIN K 2 MG INJ</option>
+                                    <option value="E-42-XX-054" data-subtitle="3434" data-right="0">DIPHENHYDRAMINE HCL10 MG/ML INJ</option>
+                                    <option value="E-42-XXI-020" data-subtitle="311992" data-right="0">LANTUS XR</option>
+                                    <option value="E-42-XXI-021" data-subtitle="88333" data-right="6">LANTUS BPJS</option>
+                                    <option value="E-42-XXI-039" data-subtitle="81030" data-right="0">BEROTEC</option>
+                                    <option value="E-43-XXI-040" data-subtitle="144402" data-right="4">SYMBICORT 160/60 DOSIS</option>
+                                    <option value="E-43-XXI-065" data-subtitle="397120" data-right="0">SERETIDE DISCUS 250</option>
+                                    <option value="E-44-XX-0077" data-subtitle="5273" data-right="8">SALBUTAMOL SOL 1MG/ML</option>
+                                    <option value="E-44-XX-0078" data-subtitle="10000" data-right="0">VENTASAL</option>
+                                    <option value="E-44-XX-0079" data-subtitle="3885" data-right="0">MEPROVENT</option>
+                                    <option value="E-44-XXI-0001" data-subtitle="20500" data-right="0">BUDESMA 0,25MG</option>
+                                    <option value="E-44-XXI-0002" data-subtitle="20500" data-right="0">BUDESMA 0,5 MG</option>
+                                    <option value="E-45-XXII-024" data-subtitle="13923" data-right="0">SANTAGESIK INJ</option>
+                                    <option value="E-5-VII-081" data-subtitle="4121" data-right="0">TRAMADOL INJ</option>
+                                    <option value="E-5-X-023" data-subtitle="3366" data-right="0">DEXAMETHASONE 5 MG INJ</option>
+                                    <option value="E-5-X-025" data-subtitle="41000" data-right="0">LODOMER INJ</option>
+                                    <option value="E-5-XI-061" data-subtitle="2775" data-right="0">RANITIDIN INJ</option>
+                                    <option value="E-5-XI-224" data-subtitle="697635" data-right="0">HEXAXIM</option>
+                                    <option value="E-5-XII-006" data-subtitle="7770" data-right="0">AMINOPHILIN INJ</option>
+                                    <option value="E-5-XV-008" data-subtitle="4329" data-right="0">DIUTENSI</option>
+                                    <option value="E-5-XX-0001" data-subtitle="18000" data-right="0">SONIDE 0,5MG</option>
+                                    <option value="E-5-XXI-067" data-subtitle="7550" data-right="1">MEYLON</option>
+                                    <option value="E-5-XXI-112" data-subtitle="4930" data-right="0">FUROSEMID INJ</option>
+                                    <option value="E-5-XXI-175" data-subtitle="72428" data-right="0">FOSFOMYCIN SODIUM 1 G</option>
+                                    <option value="E-5-XXI-176" data-subtitle="72150" data-right="0">FOSMICIN 1 G INJ</option>
+                                    <option value="E-5-XXII-003" data-subtitle="23088" data-right="0">ADONA Injeksi 10 ml</option>
+                                    <option value="E-5-XXIV-007" data-subtitle="4575" data-right="0">ATROPIN SULFAT</option>
+                                    <option value="E-5-XXVII-022" data-subtitle="8800" data-right="0">DEPO PROGESTIN</option>
+                                    <option value="E-5-XXVII-084" data-subtitle="1701" data-right="6">LIDOKAIN INJ</option>
+                                    <option value="E-51-XX-090" data-subtitle="16250" data-right="0">BENZATIN BENZIL PENICILLIN</option>
+                                    <option value="E-55-CIE-077" data-subtitle="15795" data-right="0">BUDESONIDE 0,5MG </option>
+                                    <option value="E-55-VII-050" data-subtitle="1998" data-right="0">KETOROLAC 30 MG/ML INJ</option>
+                                    <option value="E-55-x-26" data-subtitle="23400" data-right="0">HALOPERIDOL INJ</option>
+                                    <option value="E-55-XII-079" data-subtitle="15607" data-right="0">PULMICORT 0,5MG/ML</option>
+                                    <option value="E-55-XX-001" data-subtitle="210900" data-right="0">FORIXTRA</option>
+                                    <option value="E-55-XX-092" data-subtitle="9089" data-right="1">FLUIMUCYL INJ</option>
+                                    <option value="E-55-XX-093" data-subtitle="182235" data-right="0">RESFAR</option>
+                                    <option value="E-55-XXI-001" data-subtitle="177600" data-right="0">FONDAPARINUX</option>
+                                    <option value="E-56-VI-051" data-subtitle="58700" data-right="0">ROCULAX INJ</option>
+                                    <option value="E-56-VI-052" data-subtitle="15400" data-right="0">AMIODARONE INJ</option>
+                                    <option value="E-56-VII-010" data-subtitle="26550" data-right="0">NEOSTIGMIN</option>
+                                    <option value="E-56-VII-011" data-subtitle="26356" data-right="0">PROSTIGMIN INJEKSI</option>
+                                    <option value="E-58 -III-038" data-subtitle="84940" data-right="1">ANBACIM</option>
+                                    <option value="E-58-III-037" data-subtitle="166500" data-right="0">LAPIXIME INJEKSI</option>
+                                    <option value="E-58-VI-001" data-subtitle="13073" data-right="0">NEUROBION INJ</option>
+                                    <option value="E-58-VII-005" data-subtitle="165000" data-right="0">KALFOXIM</option>
+                                    <option value="E-58-VII-010" data-subtitle="39416" data-right="0">TORASIC 30 MG</option>
+                                    <option value="E-58-VII-011" data-subtitle="41625" data-right="0">TERANOL</option>
+                                    <option value="E-58-VII-015" data-subtitle="41580" data-right="0">REMOPAIN</option>
+                                    <option value="E-58-X-1014" data-subtitle="34100" data-right="0">VOMCERAN 4 MG</option>
+                                    <option value="E-58-XX-005" data-subtitle="47452" data-right="0">BROMEX</option>
+                                    <option value="E-58-XXI-001" data-subtitle="10560" data-right="0">VITADION</option>
+                                    <option value="E-58-XXI-002" data-subtitle="6600" data-right="0">POSPARGIN INJEKSI</option>
+                                    <option value="E-58-XXI-003" data-subtitle="13431" data-right="0">INDUXIN</option>
+                                    <option value="E-58-XXI-030" data-subtitle="10500" data-right="0">MYOTONIC INJEKSI</option>
+                                    <option value="E-59-VII-011" data-subtitle="44400" data-right="0">TOFEDEX INJ</option>
+                                    <option value="E-59-XXI-10" data-subtitle="29970" data-right="0">PANTOPRAZOL INJ</option>
+                                    <option value="E-6-VI-115" data-subtitle="180000" data-right="0">EZELIN</option>
+                                    <option value="E-6-XI-067" data-subtitle="250000" data-right="0">AVAMYS SPRAY</option>
+                                    <option value="E-6-XI-068" data-subtitle="137000" data-right="0">NASALIN SPRAY 100ML</option>
+                                    <option value="E-6-XI-199" data-subtitle="1700000" data-right="0">FACILLE BLUSH LIGHT</option>
+                                    <option value="E-6-XIII-007" data-subtitle="100100" data-right="0">AZITRHOMYCIN INJ</option>
+                                    <option value="E-6-XVII-001" data-subtitle="38500" data-right="0">DMPA INJ</option>
+                                    <option value="E-6-XX-002" data-subtitle="13000" data-right="0">HYOSCINE BUTYLBROMIDE INJ </option>
+                                    <option value="E-6-XXII-007" data-subtitle="10188" data-right="0">CARBAZOCHROME INJ</option>
+                                    <option value="E-6-XXVII-062" data-subtitle="5273" data-right="0">RECOFOL 1 CC</option>
+                                    <option value="E-61-XXI-024" data-subtitle="13320" data-right="0">NOREPINEHRINE BITARTRATE</option>
+                                    <option value="E-61-XXIV-029" data-subtitle="9851" data-right="0">EPHINEPRIN</option>
+                                    <option value="E-62-III-047" data-subtitle="74925" data-right="0">MEROPENEM</option>
+                                    <option value="E-62-XX-113" data-subtitle="4440" data-right="0">FARSIX INJEKSI</option>
+                                    <option value="E-62-XXI-1002" data-subtitle="583" data-right="0">PROPOFOL 20ML</option>
+                                    <option value="E-64-II-001" data-subtitle="3885" data-right="0">PHENOBARBITAL INJ</option>
+                                    <option value="E-64-II-009" data-subtitle="23000" data-right="0">SIBITAL</option>
+                                    <option value="E-64-III-001" data-subtitle="41997" data-right="0">VICILLIN SX</option>
+                                    <option value="E-64-III-002" data-subtitle="24300" data-right="0">AMPICILIN SULBACTAM</option>
+                                    <option value="E-64-III-007" data-subtitle="15400" data-right="6">KANAMYCIN injeksi</option>
+                                    <option value="E-64-XVI-093" data-subtitle="8652" data-right="0">CEPEZET 50 INJ</option>
+                                    <option value="E-64-XXII-001" data-subtitle="3790" data-right="0">KCL 7,46</option>
+                                    <option value="E-65-I-173" data-subtitle="55500" data-right="0">LAPIMOX SYR 250</option>
+                                    <option value="E-65-I-174" data-subtitle="27173" data-right="0">FENTANYL GENERIK</option>
+                                    <option value="E-65-I-175" data-subtitle="41070" data-right="0">ETANYL </option>
+                                    <option value="E-66-II-028" data-subtitle="37500" data-right="0">SEDACUM</option>
+                                    <option value="E-66-XVI-049" data-subtitle="3544" data-right="0">METHYLERGOMETHRIN INJ</option>
+                                    <option value="E-66-XVI-050" data-subtitle="9089" data-right="0">DEXKETOPROFEN 50 MG INJEKSI</option>
+                                    <option value="E-66-XX-24" data-subtitle="68500" data-right="0">PEINLOS 400</option>
+                                    <option value="E-69-XX-02" data-subtitle="192500" data-right="0">UMARONE</option>
+                                    <option value="E-69-XXI-061" data-subtitle="94050" data-right="0">VASCON</option>
+                                    <option value="E-69-XXV-012" data-subtitle="66000" data-right="0">FARSORBID INJ</option>
+                                    <option value="E-69-XXV-013" data-subtitle="110880" data-right="0">CEDOCARD</option>
+                                    <option value="E-69-XXVI-158" data-subtitle="66600" data-right="0">FARGOXIN</option>
+                                    <option value="E-69-XXVI-160" data-subtitle="48000" data-right="0">DIGOXIN  0.25MG/ 2 ML INJ</option>
+                                    <option value="E-7-111-001" data-subtitle="167666" data-right="0">GOFORAN</option>
+                                    <option value="E-7-XI-068" data-subtitle="89700" data-right="0">ILIADYN SPRAY</option>
+                                    <option value="E-7-XII-005" data-subtitle="49000" data-right="0">CITICOLIN 1000MG</option>
+                                    <option value="E-7-XXVI-1020" data-subtitle="9240" data-right="0">CYCLOFEM</option>
+                                    <option value="E-70-XXV-013" data-subtitle="32052" data-right="0">ISDN INJ</option>
+                                    <option value="E-71-XX-056" data-subtitle="6660" data-right="0">ASAM TRANEKSAMAT 500 INJ</option>
+                                    <option value="E-71-XXIII-063" data-subtitle="16500" data-right="0">KALNEX 500 mg inj</option>
+                                    <option value="E-71-XXIII-064" data-subtitle="15263" data-right="0">PLASMINEX 500 MG INJ</option>
+                                    <option value="E-78-IV-001" data-subtitle="22000" data-right="0">LARCE 1000</option>
+                                    <option value="E-78-XXI-009" data-subtitle="20346" data-right="0">BUPIVACAIN 5ML</option>
+                                    <option value="E-8-III-078" data-subtitle="17588" data-right="0">VICILLIN</option>
+                                    <option value="E-8-IV-072" data-subtitle="19148" data-right="0">KTM 1 CC</option>
+                                    <option value="E-8-XVI-040" data-subtitle="29150" data-right="0">KLIRAN 4MG </option>
+                                    <option value="E-8-XXVI-046" data-subtitle="61328" data-right="0">LIDODEX</option>
+                                    <option value="E-8-XXVII-1021" data-subtitle="11000" data-right="0">ANDALAN INJ</option>
+                                    <option value="E-80-XXI-001" data-subtitle="213675" data-right="0">VASOLA INJ</option>
+                                    <option value="E-80-XXI-002" data-subtitle="4368" data-right="0">SEVOFLURANE INHALASI 250 ML</option>
+                                    <option value="E-80-XXI-006" data-subtitle="154001" data-right="18">VAKSIN MENIVAX</option>
+                                    <option value="E-80-XXI-007" data-subtitle="555000" data-right="0">VAKSIN MR 10 ds</option>
+                                    <option value="E-80-XXI-008" data-subtitle="208810" data-right="6">VAKSIN ATS- BIOSAT 1.5</option>
+                                    <option value="E-80-XXI-009" data-subtitle="1059439" data-right="0">VAKSIN BIOSAVE</option>
+                                    <option value="E-80-XXI-010" data-subtitle="315629" data-right="2">VAKSIN BCG 20 DOSIS</option>
+                                    <option value="E-80-XXI-012" data-subtitle="168720" data-right="0">VAKSIN PENTABIO 1 DOSIS</option>
+                                    <option value="E-80-XXI-015" data-subtitle="1300000" data-right="1">vaksin prevenar inj 13</option>
+                                    <option value="E-80-XXI-016" data-subtitle="286000" data-right="0">ROTATEQ</option>
+                                    <option value="E-81-XXI-001" data-subtitle="487546" data-right="11">VAKSIN IPV(POLIO DEWASA INJ)</option>
+                                    <option value="E-81-XXI-009" data-subtitle="101539" data-right="2">VAKSIN POLIO</option>
+                                    <option value="E-83-XI-071" data-subtitle="11100" data-right="0">OMEPRAZOL INJ</option>
+                                    <option value="E-83-XI-072" data-subtitle="166189" data-right="0">PUMPITOR INJ</option>
+                                    <option value="E-85-VII-170" data-subtitle="19980" data-right="0">METHYLPREDNISOLON INJ</option>
+                                    <option value="E-85-XI-017" data-subtitle="14500" data-right="0">FURAMIN INJ</option>
+                                    <option value="E-86-V-00171" data-subtitle="112000" data-right="0">LAMESON 125 MG</option>
+                                    <option value="E-86-V-0172" data-subtitle="33300" data-right="0">PHADILON 125MG INJ</option>
+                                    <option value="E-88-II-002" data-subtitle="12584" data-right="0">STESOLID INJ</option>
+                                    <option value="E-88-XXI-665" data-subtitle="18310" data-right="0">NICARDIPIN INJ</option>
+                                    <option value="E-9-III-004" data-subtitle="143000" data-right="0">CEFAZOL</option>
+                                    <option value="E-9-XXVI-047" data-subtitle="10100" data-right="0">PEHACAIN</option>
+                                    <option value="E-90-III-001" data-subtitle="178200" data-right="0">CEFOJECT INJ</option>
+                                    <option value="E-90-III-002" data-subtitle="4440" data-right="0">PHENYTOIN INJ</option>
+                                    <option value="E-90-III-003" data-subtitle="88000" data-right="0">CEFOPERAZONE SULBACTAM</option>
+                                    <option value="E-90-XX1-001" data-subtitle="470085" data-right="0">VAKSIN GARDASIL</option>
+                                    <option value="E-91-III-005" data-subtitle="33300" data-right="0">CEFAZOLIN INJ</option>
+                                    <option value="E-93-III-194" data-subtitle="19425" data-right="0">ESOMEPRAZOL 40 MG</option>
+                                    <option value="E-93-VII-011" data-subtitle="9269" data-right="1">NORAGES INJEKSI</option>
+                                    <option value="E-93-VII-012" data-subtitle="10656" data-right="0">METZOL</option>
+                                    <option value="E-93-XXI-007" data-subtitle="2527470" data-right="0">VAKSIN HYPERHEP</option>
+                                    <option value="E-99-XXX-009" data-subtitle="139999" data-right="0">FORMENING VAKSIN MENINGITIS</option>
+                                    <option value="E-I-100-174" data-subtitle="19658" data-right="3">PETHIDINE HCL INJ</option>
+                                    <option value="EI-69-XXX-202" data-subtitle="2861000" data-right="0">VAKSIN ROTATEQ</option>
+                                    <option value="F 55-XX-154" data-subtitle="80000" data-right="1">MODRES FOAM 20 </option>
+                                    <option value="F-1-XX-001" data-subtitle="7770" data-right="4">POVIDON 60ML</option>
+                                    <option value="F-1-XX-070" data-subtitle="800" data-right="0">GELANG KUNING</option>
+                                    <option value="F-100-XX-001" data-subtitle="17200" data-right="0">SCENTED FACE MASK BAYI</option>
+                                    <option value="F-100-XX-002" data-subtitle="9235" data-right="0">POVIDON IODIN 30 ml</option>
+                                    <option value="F-11-XX-231" data-subtitle="2220" data-right="0">WADAH P.A</option>
+                                    <option value="F-2-XX-037" data-subtitle="10000" data-right="0">HANDUK BORDIR</option>
+                                    <option value="F-21-VII-002" data-subtitle="13875" data-right="0">REBREATHING ANAK</option>
+                                    <option value="F-21-XX-001" data-subtitle="82500" data-right="0">FILTER HMEF</option>
+                                    <option value="F-21-XXV-1002" data-subtitle="123210" data-right="0">PD CREPE 6 INC</option>
+                                    <option value="F-22-IX-106" data-subtitle="20428" data-right="0">HIGH ELASTIC BANDAGE 15CM X 4,5 M</option>
+                                    <option value="F-22-IX-107" data-subtitle="55932" data-right="0">SOFFBAND 6INCHI</option>
+                                    <option value="F-22-X-009" data-subtitle="400000" data-right="0">HIGH FLOW NASAL CANNULA</option>
+                                    <option value="F-22-XX-004" data-subtitle="19250" data-right="0">PAPPER ECG FKD 50X30</option>
+                                    <option value="F-23-10-110" data-subtitle="13618" data-right="0">HIGH ELASTIC BANDAGE 10 X 4,5CM</option>
+                                    <option value="F-24-XXI-033" data-subtitle="71500" data-right="0">HYPAFIX 5 CM X 5 M</option>
+                                    <option value="F-25-XX-001" data-subtitle="11880" data-right="0">HANDSCOON 7,5 GAN</option>
+                                    <option value="F-27-III-125" data-subtitle="3885" data-right="19">MICROFINE</option>
+                                    <option value="F-29-XXX-110" data-subtitle="0" data-right="0">COPER T</option>
+                                    <option value="F-37-X-023" data-subtitle="300" data-right="20">PLESTERIN </option>
+                                    <option value="F-37-XX-065" data-subtitle="10779" data-right="1">LOMATULLE/FRAMYCETIN SULFATE</option>
+                                    <option value="F-37-XX-066" data-subtitle="10779" data-right="0">FRAMYCETIN SULFATE</option>
+                                    <option value="F-38-XX-021" data-subtitle="87000" data-right="0">SCENTED FACE MASK ANAK</option>
+                                    <option value="F-39-XX-09" data-subtitle="500" data-right="0">NURSE CAP</option>
+                                    <option value="F-4-XX-035" data-subtitle="6660" data-right="0">HANDSCOON 7,5</option>
+                                    <option value="F-4-XX-072" data-subtitle="27972" data-right="0">STOMACHTUBE / NGT  NO 16</option>
+                                    <option value="F-40-X-027" data-subtitle="833" data-right="0">GELANG DEWASA BIRU</option>
+                                    <option value="F-40-X-028" data-subtitle="1172" data-right="0">GELANG MERAH DEWASA</option>
+                                    <option value="F-40-XX-001" data-subtitle="13320" data-right="0">NELATHON CATH 8</option>
+                                    <option value="F-40-XX-002" data-subtitle="16650" data-right="0">NELATHON CATH 10</option>
+                                    <option value="F-40-XX-003" data-subtitle="15000" data-right="0">NELATHON CATH 14</option>
+                                    <option value="F-40-XX-004" data-subtitle="15000" data-right="0">NELATHON CATH 16</option>
+                                    <option value="F-40-XX-018" data-subtitle="600" data-right="0">NEEDLE 23G</option>
+                                    <option value="F-40-XX-019" data-subtitle="16853" data-right="0">NEBULIZER MASK DEWASA</option>
+                                    <option value="F-40-XX-020" data-subtitle="9213" data-right="0">ABOCATH 22</option>
+                                    <option value="F-40-XX-021" data-subtitle="16650" data-right="0">MASKER N-95</option>
+                                    <option value="F-40-XX-066" data-subtitle="25000" data-right="0">MASKER TALI</option>
+                                    <option value="F-40-XX-108" data-subtitle="65000" data-right="0">GELITASPON</option>
+                                    <option value="F-40-XX-109" data-subtitle="333000" data-right="0">PAPPER CTG BIST</option>
+                                    <option value="F-40-XX-110" data-subtitle="122100" data-right="0">PAPPER CTG CARD</option>
+                                    <option value="F-41-XX-0042" data-subtitle="7800" data-right="0">SUCTION CATH 14</option>
+                                    <option value="F-41-XX-007" data-subtitle="10165" data-right="0">AQUASONIC</option>
+                                    <option value="F-41-XX-009" data-subtitle="2250" data-right="0">GELANG SNAPS UNGU</option>
+                                    <option value="F-41-XX-015" data-subtitle="65000" data-right="0">CONECTING TUBE</option>
+                                    <option value="F-41-XX-016" data-subtitle="7200" data-right="1">CANUL O2 ANAK</option>
+                                    <option value="F-41-XX-017" data-subtitle="7200" data-right="0">CANUL O2 DEWASA</option>
+                                    <option value="F-41-XX-020" data-subtitle="16853" data-right="0">NEBULIZER NEONATE</option>
+                                    <option value="F-41-XX-033" data-subtitle="6105" data-right="0">HANDSCOON NO 7</option>
+                                    <option value="F-41-XX-034" data-subtitle="7000" data-right="0">HANDSCOON NO 8</option>
+                                    <option value="F-41-XX-035" data-subtitle="94350" data-right="0">PAPPER INNOMED</option>
+                                    <option value="F-41-XX-037" data-subtitle="33300" data-right="0">HANDSCOON BOX</option>
+                                    <option value="F-41-XX-040" data-subtitle="203725" data-right="0">HYPAFIX 10 CM X 5M</option>
+                                    <option value="F-41-XX-041" data-subtitle="16445" data-right="0">HYPAFIX SACHET</option>
+                                    <option value="F-41-XX-042" data-subtitle="258458" data-right="0">HYPAFIX 15CM X 5 M</option>
+                                    <option value="F-41-XX-058" data-subtitle="45738" data-right="0">T-SILK 2/0 26MM</option>
+                                    <option value="F-41-XX-059" data-subtitle="52470" data-right="0">T-SILK 2/0 35M</option>
+                                    <option value="F-41-XX-064" data-subtitle="10000" data-right="0">KERTAS PUYER ROLL CSSD</option>
+                                    <option value="F-41-XX-067" data-subtitle="4500" data-right="0">MESS BB20</option>
+                                    <option value="F-41-XX-068" data-subtitle="4500" data-right="0">MESS BB10</option>
+                                    <option value="F-41-XX-069" data-subtitle="6700" data-right="0">MESS BB15</option>
+                                    <option value="F-41-XX-075" data-subtitle="63936" data-right="0">PLESTER ROLL</option>
+                                    <option value="F-41-XX-081" data-subtitle="16853" data-right="1">NEBULIZER MASK ANAK</option>
+                                    <option value="F-41-XX-082" data-subtitle="2975" data-right="6">UNDERPAD</option>
+                                    <option value="F-41-XX-083" data-subtitle="5600" data-right="0">SILET SCAREN</option>
+                                    <option value="F-41-XX-085" data-subtitle="42181" data-right="0">SPINOCAN</option>
+                                    <option value="F-41-XX-092" data-subtitle="18315" data-right="0">NRM MASK DEWASA</option>
+                                    <option value="F-41-XX-093" data-subtitle="22200" data-right="0">NRM MASK ANAK</option>
+                                    <option value="F-41-XX-094" data-subtitle="7047" data-right="0">SUCTION CATH 10</option>
+                                    <option value="F-41-XX-095" data-subtitle="7049" data-right="0">SUCTION CATH 12</option>
+                                    <option value="F-41-XX-104" data-subtitle="4995" data-right="0">URIN BAG</option>
+                                    <option value="F-41-XX-106" data-subtitle="11000" data-right="0">WING NEEDLE</option>
+                                    <option value="F-41-XX-107" data-subtitle="580" data-right="0">NEEDLE TERUMO 27</option>
+                                    <option value="F-41-XX-110" data-subtitle="109999" data-right="0">PAPPER CTG BIONET</option>
+                                    <option value="F-41-XX-185" data-subtitle="23088" data-right="0">SELANG SUCTION DISPOSIBLE</option>
+                                    <option value="F-41-XXI-172" data-subtitle="7770" data-right="0">SUCTION CATH 16</option>
+                                    <option value="F-42-X-020" data-subtitle="24419" data-right="0">FOLLEY CATH 12</option>
+                                    <option value="F-42-X-021" data-subtitle="88000" data-right="0">FOLLEY CATH 22 TREE WAY</option>
+                                    <option value="F-42-X-022" data-subtitle="10989" data-right="0">FOLLEY CATH 16</option>
+                                    <option value="F-42-X-024" data-subtitle="24419" data-right="0">FOLLEY CATH 14</option>
+                                    <option value="F-42-X-025" data-subtitle="833" data-right="0">GELANG BAYI BLUE</option>
+                                    <option value="F-42-X-026" data-subtitle="760" data-right="0">GELANG BAYI PINK</option>
+                                    <option value="F-42-XX-008" data-subtitle="225000" data-right="0">AUTOCLAVE TIP</option>
+                                    <option value="F-42-XX-012" data-subtitle="7200" data-right="0">CANUL O2 NEONAT</option>
+                                    <option value="F-42-XX-030" data-subtitle="900" data-right="0">GELANG DEWASA PINK</option>
+                                    <option value="F-42-XX-032" data-subtitle="14000" data-right="0">HANDSCOON 8 GAN</option>
+                                    <option value="F-42-XX-061" data-subtitle="200000" data-right="0">KASA LIPAT</option>
+                                    <option value="F-42-XX-086" data-subtitle="28999" data-right="0">SPINOCAN (EGEMEN)</option>
+                                    <option value="F-42-XX-097" data-subtitle="21000" data-right="0">TRANFUSI SET TERUMO</option>
+                                    <option value="F-42-XX-1O7" data-subtitle="9500" data-right="0">WING NEEDLE 25</option>
+                                    <option value="F-43-X-022" data-subtitle="55500" data-right="0">FOLLEY CATH 10</option>
+                                    <option value="F-43-X-023" data-subtitle="24420" data-right="0">FOLLEY CATH 18</option>
+                                    <option value="F-43-X-042" data-subtitle="200000" data-right="0">FORMALIN CAIR</option>
+                                    <option value="F-43-XX-033" data-subtitle="35564" data-right="0">HANDSCOON 7,5 OBGYN</option>
+                                    <option value="F-43-XX-060" data-subtitle="25000" data-right="0">KAPAS GULUNG</option>
+                                    <option value="F-43-XX-062" data-subtitle="3000" data-right="4">KASA HIDROFIL</option>
+                                    <option value="F-43-XX-098" data-subtitle="8880" data-right="0">TRANFUSI SET </option>
+                                    <option value="F-44-XX-100" data-subtitle="7187" data-right="0">URIN BAG (HANGER)</option>
+                                    <option value="F-45-XXX-088" data-subtitle="100000" data-right="0">PEINLOS INJEKSI</option>
+                                    <option value="F-47-XX-002" data-subtitle="9213" data-right="0">ABOCATH 20</option>
+                                    <option value="F-47-XX-029" data-subtitle="11501" data-right="0">MASKER KARET</option>
+                                    <option value="F-47-XX-041" data-subtitle="5800" data-right="0">INFUS SET DEWASA TYPE Y</option>
+                                    <option value="F-48-XX-003" data-subtitle="6660" data-right="0">ABOCATH 20 N3</option>
+                                    <option value="F-49-XX-002" data-subtitle="38162" data-right="0">H2O2 3% 800 ML</option>
+                                    <option value="F-49-XX-003" data-subtitle="34133" data-right="0">ALKOHOL 70% 1 LITERAN</option>
+                                    <option value="F-49-XX-0101" data-subtitle="2000" data-right="0">APRON N3</option>
+                                    <option value="F-49-XX-0102" data-subtitle="499500" data-right="1">SURGICAL DRAPE UNIVERSAL SET</option>
+                                    <option value="F-49-XX-083" data-subtitle="1332" data-right="4">SPUIT 10 CC</option>
+                                    <option value="F-49-XX-084" data-subtitle="914" data-right="45">SPUIT 1 CC</option>
+                                    <option value="F-49-XX-085" data-subtitle="830" data-right="1">SPUIT 3 CC</option>
+                                    <option value="F-49-XX-086" data-subtitle="5328" data-right="0">SPUIT 50 CC LUBANG TENGAH</option>
+                                    <option value="F-49-XX-096" data-subtitle="855" data-right="26">SPUIT 5 CC</option>
+                                    <option value="F-49-XX-99" data-subtitle="5328" data-right="0">SPUIT 50 CC EC SAMPING</option>
+                                    <option value="F-5-XI-137" data-subtitle="26000" data-right="0">RAPID TEST ANTI BODI</option>
+                                    <option value="F-5-XI-138" data-subtitle="0" data-right="0">RAPID ANTIGEN</option>
+                                    <option value="F-5-XI-140" data-subtitle="13900" data-right="0">TAMPON 4 X1 </option>
+                                    <option value="F-5-XI-141" data-subtitle="14599" data-right="0">TAMPON 4X340 CM/1,5</option>
+                                    <option value="F-5-XX-004" data-subtitle="4662" data-right="0">ALKOHOL 70% 100ml</option>
+                                    <option value="F-5-XX-038" data-subtitle="14500" data-right="0">HANSAPLAST</option>
+                                    <option value="F-5-XX-139" data-subtitle="7300" data-right="2">TAMPON 1X150 CM</option>
+                                    <option value="F-50-XX-085" data-subtitle="65000" data-right="0">NON WOVEN FIXATION 10 X5</option>
+                                    <option value="F-50-XX-087" data-subtitle="38900" data-right="0">FEEDING TUBE NO 3,5</option>
+                                    <option value="F-50-XX-088" data-subtitle="530" data-right="0">SPUIT 5 CC (NAM)</option>
+                                    <option value="F-50-XX-089" data-subtitle="89000" data-right="0">NON WOVEN FIXATION 15 X5 </option>
+                                    <option value="F-51-XX-088" data-subtitle="29900" data-right="0">FEEDING TUBE NO 5</option>
+                                    <option value="F-52-XX-089" data-subtitle="42735" data-right="0">FEEDING TUBE NO 8</option>
+                                    <option value="F-53-XX-064" data-subtitle="215500" data-right="0">KERTAS USG</option>
+                                    <option value="F-53-XX-090" data-subtitle="19500" data-right="0">THERMOMETER</option>
+                                    <option value="F-53-XX-109" data-subtitle="2797" data-right="0">UMBILICAL</option>
+                                    <option value="F-54-XX-091" data-subtitle="27972" data-right="0">STOMACHTUBE / NGT NO 18</option>
+                                    <option value="F-55-XX-002" data-subtitle="94350" data-right="0">PAPPER EKG 8 CM</option>
+                                    <option value="F-55-XX-011" data-subtitle="384000" data-right="1">NOVA T 380</option>
+                                    <option value="F-55-XX-012" data-subtitle="23310" data-right="0">MEDIBAN 4 INC</option>
+                                    <option value="F-55-XX-0157" data-subtitle="71500" data-right="0">MODRES FOAM 10</option>
+                                    <option value="F-55-XX-074" data-subtitle="19425" data-right="3">DERMAFIX  10 X 25 cm</option>
+                                    <option value="F-55-XX-075" data-subtitle="23400" data-right="0">OPSITE 9,5 </option>
+                                    <option value="F-55-XX-076" data-subtitle="2176" data-right="0">DERMAFIX 6 X 7CM</option>
+                                    <option value="F-55-XX-081" data-subtitle="594000" data-right="0">OPTIFLOW</option>
+                                    <option value="F-55-XX-092" data-subtitle="25531" data-right="0">STOMACHTUBE / NGT NO 14</option>
+                                    <option value="F-55-XX-093" data-subtitle="27972" data-right="0">STOMACHTUBE/NGT NO 12</option>
+                                    <option value="F-58-XX-001" data-subtitle="110000" data-right="0">ECG PAPPER CARDIOCARE</option>
+                                    <option value="F-58-XXII-002" data-subtitle="56628" data-right="0">TUTOFUSIN</option>
+                                    <option value="F-59-XXX-0022" data-subtitle="130000" data-right="0">JACKSON REES MODIFICATION</option>
+                                    <option value="F-62-XXIX-001" data-subtitle="17000" data-right="0">REBREATHING DEWASA</option>
+                                    <option value="F-64-XX-001" data-subtitle="25000" data-right="0">GUEDEL NO 3</option>
+                                    <option value="F-64-XX-003" data-subtitle="35000" data-right="0">GUEDEL NO 00</option>
+                                    <option value="F-64-XX-005" data-subtitle="15900" data-right="0">AQUA FOR IRRIGATION 1 L WIDATRA</option>
+                                    <option value="F-64-XX-010" data-subtitle="3162" data-right="0">AQUABIDEST 25CC OTSUKA</option>
+                                    <option value="F-65-XX-186" data-subtitle="64885" data-right="0">PD CREPE 3 INC</option>
+                                    <option value="F-65-XX-187" data-subtitle="84360" data-right="0">PD CREPE 4 INC</option>
+                                    <option value="F-65-XXX-187" data-subtitle="87" data-right="0">ONE SCRUB</option>
+                                    <option value="F-66-XX-010" data-subtitle="6104" data-right="0">INFUS SET MICRO</option>
+                                    <option value="F-66-XX-013" data-subtitle="9529" data-right="0">ABOCATH 24</option>
+                                    <option value="F-66-XX-031" data-subtitle="166500" data-right="0">PRESARIUM 6,5</option>
+                                    <option value="F-66-XX-032" data-subtitle="90000" data-right="0">PRESARIUM 7,5</option>
+                                    <option value="F-66-XX-033" data-subtitle="166500" data-right="0">PRESARIUM 7</option>
+                                    <option value="F-66-XX-069" data-subtitle="125" data-right="0">KERTAS PUYER PRESS</option>
+                                    <option value="F-66-XX-100" data-subtitle="17067" data-right="0">NRM NEONATE</option>
+                                    <option value="F-67-XX-019" data-subtitle="37000" data-right="0">ABOCATH 26</option>
+                                    <option value="F-67-XX-077" data-subtitle="7000" data-right="0">KERTAS PUYER POTONG MANUAL</option>
+                                    <option value="F-74-XX-027" data-subtitle="7500" data-right="0">3 WAY STOPCOCKS</option>
+                                    <option value="F-75-X-011" data-subtitle="33001" data-right="0">DISPOSIBLE ELECTOGICAL PENCIL</option>
+                                    <option value="F-75-XX-066" data-subtitle="1443" data-right="5">KASA 10 CM</option>
+                                    <option value="F-76-XX-020" data-subtitle="18354" data-right="0">ABOCATH 16</option>
+                                    <option value="F-76-XX-025" data-subtitle="33300" data-right="0">PERFUSOR TUBE/EXTENSION TUBE</option>
+                                    <option value="F-76-XX-026" data-subtitle="4667" data-right="0">ECG ELECTRODE ANAK</option>
+                                    <option value="F-76-XX-028" data-subtitle="3834" data-right="0">ECG ELECTRODE GENERAL</option>
+                                    <option value="F-76-XX-029" data-subtitle="2550" data-right="0">TEGADERM</option>
+                                    <option value="F-76-XX-030" data-subtitle="160" data-right="0">ALKOHOL SWAB</option>
+                                    <option value="F-76-XX-039" data-subtitle="666" data-right="4">KASA 5 CM</option>
+                                    <option value="F-76-XX-079" data-subtitle="5000" data-right="0">ECG ELECTRODA BAYI</option>
+                                    <option value="F-77-XX-007" data-subtitle="90000" data-right="0">KASA ROL PANJANG SPALK</option>
+                                    <option value="F-77-XX-028" data-subtitle="676500" data-right="0">PARAFILM 4INCI</option>
+                                    <option value="F-77-XX-029" data-subtitle="27750" data-right="0">ENDOTRACEAL 6,5</option>
+                                    <option value="F-77-XX-030" data-subtitle="38500" data-right="0">ENDOTRACEAL 7</option>
+                                    <option value="F-77-XX-040" data-subtitle="37296" data-right="0">POLIGYP 10CM</option>
+                                    <option value="F-77-XX-041" data-subtitle="23500" data-right="0">ARM SLING </option>
+                                    <option value="F-78-XX-041" data-subtitle="27750" data-right="0">MEDIBAN 10 CM </option>
+                                    <option value="F-78-XX-188" data-subtitle="671550" data-right="0">GIGAZYME</option>
+                                    <option value="F-79-XX-184" data-subtitle="34400" data-right="0">COLLACURE</option>
+                                    <option value="F-8-XX-69" data-subtitle="935000" data-right="0">SELANG BREATING SIRKUIT</option>
+                                    <option value="F-99-XX-212" data-subtitle="10000" data-right="0">ABOCATH 18</option>
+                                    <option value="F-XX-760-28" data-subtitle="2219" data-right="0">SPUIT 20 CC</option>
+                                    <option value="G-21-XXI-001" data-subtitle="47250" data-right="0">PLAIN 3/0</option>
+                                    <option value="G-22-XX-018" data-subtitle="48563" data-right="0">BIOSILK 2</option>
+                                    <option value="G-25-XXI-184" data-subtitle="87120" data-right="0">T-VIO 2-0</option>
+                                    <option value="G-40-XX-005" data-subtitle="70000" data-right="0">ATRAMAT PGA 2/0</option>
+                                    <option value="G-40-XX-96" data-subtitle="66045" data-right="0">ATRAMAT CROMIC 2/0</option>
+                                    <option value="G-41-XX-001" data-subtitle="66045" data-right="0">ATRAMAT CROMIC 0</option>
+                                    <option value="G-41-XX-002" data-subtitle="54113" data-right="0">ATRAMAT CROMIC 2</option>
+                                    <option value="G-41-XX-003" data-subtitle="46898" data-right="0">ATRAMAT CROMIC 3/0</option>
+                                    <option value="G-41-XX-004" data-subtitle="63132" data-right="0">ATRAMAT PGA 0</option>
+                                    <option value="G-41-XX-046" data-subtitle="60218" data-right="0">ATRAMAT PGA 3/0</option>
+                                    <option value="G-41-XX-080" data-subtitle="32900" data-right="0">BIO SILK 4-0</option>
+                                    <option value="G-42-XX-0000" data-subtitle="71040" data-right="0">BIOLENE 5/0</option>
+                                    <option value="G-42-XX-004" data-subtitle="76450" data-right="0">T- LENE  4/0</option>
+                                    <option value="G-42-XX-006" data-subtitle="73260" data-right="0">T-CROMIC 2</option>
+                                    <option value="G-42-XX-007" data-subtitle="78572" data-right="0">SILK 3-0 TAPER</option>
+                                    <option value="G-42-XX-008" data-subtitle="118500" data-right="0">BIOLENE 2/0 TAPER</option>
+                                    <option value="G-42-XX-009" data-subtitle="50850" data-right="0">T-SILK 3-0 S23</option>
+                                    <option value="G-42-XX-017" data-subtitle="45000" data-right="0">SILK 2/0 CUTTING</option>
+                                    <option value="G-42-XX-018" data-subtitle="74250" data-right="0">SILK 3/0 TP</option>
+                                    <option value="G-42-XX-020" data-subtitle="154000" data-right="0">SURGICRYL (PGA) 3/0 TAPPER</option>
+                                    <option value="G-42-XX-109" data-subtitle="44678" data-right="0">SILK 2/0 TAPER</option>
+                                    <option value="G-43-XX-009" data-subtitle="72150" data-right="0">ATRAMAT PGA 2</option>
+                                    <option value="G-93-XXI-002" data-subtitle="79200" data-right="0">T-VIO 3-0</option>
+                                    <option value="H-12-IX-138" data-subtitle="8436" data-right="1">MICONAZOLE ZALF</option>
+                                    <option value="H-22-XXII-035" data-subtitle="7126" data-right="0">NACL 100</option>
+                                    <option value="H-24-XX-237" data-subtitle="87000" data-right="0">MANITOL</option>
+                                    <option value="H-24-XXII-010" data-subtitle="114972" data-right="0">TRICHODASOL INF</option>
+                                    <option value="H-37-XXI-083" data-subtitle="277090" data-right="0">RENOSAN</option>
+                                    <option value="H-37-XXII-001" data-subtitle="291500" data-right="0">CRAVOX 500MG</option>
+                                    <option value="H-37-XXII-0012" data-subtitle="392600" data-right="0">SMOFKABIVEN PERIBHERAL 1206 ML</option>
+                                    <option value="H-37-XXII-016" data-subtitle="77500" data-right="0">VALAMIN 500 ML</option>
+                                    <option value="H-38-XXII-011" data-subtitle="84700" data-right="0">TRIOFUSIN 500</option>
+                                    <option value="H-39-VII-065" data-subtitle="72983" data-right="0">SANMOL INFUS</option>
+                                    <option value="H-39-XX-003" data-subtitle="9450" data-right="0">DEXTROSE 5%</option>
+                                    <option value="H-39-XXII-001" data-subtitle="31968" data-right="0">LEVOFLOXACIN INFUS 500</option>
+                                    <option value="H-39-XXII-002" data-subtitle="7741" data-right="0">NACL 500</option>
+                                    <option value="H-39-XXII-005" data-subtitle="121000" data-right="0">LEVOFLOXACIN INF 750</option>
+                                    <option value="H-39-XXII-010" data-subtitle="7630" data-right="0">RL SANBE</option>
+                                    <option value="H-39-XXII-012" data-subtitle="8500" data-right="0">RL WIDA</option>
+                                    <option value="H-39-XXII-013" data-subtitle="49950" data-right="0">WIDAHES</option>
+                                    <option value="H-39-XXII-016" data-subtitle="43500" data-right="0">MANITOL 250ML</option>
+                                    <option value="H-39-XXII-017" data-subtitle="23100" data-right="0">TRIDEX 27A</option>
+                                    <option value="H-4-III-003" data-subtitle="13530" data-right="0">RING AS</option>
+                                    <option value="H-4-XXII-007" data-subtitle="12770" data-right="0">KAEN 3B</option>
+                                    <option value="H-4-XXII-015" data-subtitle="16650" data-right="0">PARACETAMOL INF</option>
+                                    <option value="H-4-XXII-016" data-subtitle="123939" data-right="0">MAXIGESIC</option>
+                                    <option value="H-4-XXII-020" data-subtitle="22200" data-right="0">TAMOLIV</option>
+                                    <option value="H-4-XXIII-020" data-subtitle="39683" data-right="0">MORETIC INF</option>
+                                    <option value="H-40-XII-003" data-subtitle="36100" data-right="0">NACL 3% 500 ML</option>
+                                    <option value="H-40-XXII-011" data-subtitle="11990" data-right="0">KAEN 1B</option>
+                                    <option value="H-41-XX-001" data-subtitle="140000" data-right="0">HERMESH</option>
+                                    <option value="H-51-XX-003" data-subtitle="73000" data-right="0">TENSOCREPE 6"</option>
+                                    <option value="H-51-XXII-009" data-subtitle="12765" data-right="0">METRONIDAZOL INFUS</option>
+                                    <option value="H-52-XIII-010" data-subtitle="90500" data-right="0">FLUCONAZOLE INF</option>
+                                    <option value="H-52-XX-004" data-subtitle="25000" data-right="0">TENSOCREPE 4</option>
+                                    <option value="H-53-XXII-011" data-subtitle="140000" data-right="0">BFLUID</option>
+                                    <option value="H-53-XXII-012" data-subtitle="358974" data-right="0">CLINIMIX </option>
+                                    <option value="H-53-XXXI-02" data-subtitle="85026" data-right="0">HYDROMAL INF</option>
+                                    <option value="H-56-XX-0066" data-subtitle="46400" data-right="0">TUTOSOL</option>
+                                    <option value="H-58-XX-1101" data-subtitle="78499" data-right="0">AMINOFUSIN HEPAR (AHEP)</option>
+                                    <option value="H-58-XXI-084" data-subtitle="49800" data-right="0">RENXAMIN</option>
+                                    <option value="H-59-XX-102" data-subtitle="53002" data-right="0">AMINOSTERIL 6%INFUSAN</option>
+                                    <option value="H-59-XXII-02" data-subtitle="231000" data-right="0">COMAFUSIN HEPAR INFUS</option>
+                                    <option value="H-6-XX-004" data-subtitle="9981" data-right="0">DEXTROSE 10%</option>
+                                    <option value="H-60-XX-0050" data-subtitle="97900" data-right="2">INTRAFLUID 500ML</option>
+                                    <option value="H-61-XXII-059" data-subtitle="38436" data-right="0">FUTROLIT</option>
+                                    <option value="H-64-XXI-004" data-subtitle="8751" data-right="0">ASERING INFUS</option>
+                                    <option value="H-64-XXI-1005" data-subtitle="10460" data-right="0">D5 1/2 NS </option>
+                                    <option value="H-64-XXI-1006" data-subtitle="11052" data-right="0">WIDA D5 1/2 NS </option>
+                                    <option value="H-64-XXII-003" data-subtitle="11052" data-right="0">WIDA D5 1/4 NS</option>
+                                    <option value="H-65-IV-011" data-subtitle="1260000" data-right="0">PLASBUMIN 20%</option>
+                                    <option value="H-66-V-011" data-subtitle="1747051" data-right="0">PLASBUMIN 25%</option>
+                                    <option value="H-66-XXI-013" data-subtitle="26620" data-right="0">KAEN4A</option>
+                                    <option value="H-66-XXI-015" data-subtitle="21978" data-right="0">KAEN4B</option>
+                                    <option value="H-71-XXII-053" data-subtitle="95535" data-right="0">KALBAMIN</option>
+                                    <option value="H-71-XXIII-O67" data-subtitle="54620" data-right="0">KIDMIN</option>
+                                    <option value="H-99-24-01" data-subtitle="33300" data-right="0">CIPROFLOXACIN INFUS 100ML</option>
+                                    <option value="H6-66-XXI-014" data-subtitle="13409" data-right="0">KAEN 3A</option>
+                                    <option value="I-24-69-AH" data-subtitle="146" data-right="105">VITAMIN D 1000</option>
+                                    <option value="I-24-X-244" data-subtitle="4000" data-right="0">AMINORAL TABLET</option>
+                                    <option value="I-F-24-07" data-subtitle="85" data-right="170">KAPSUL KOSONG 0</option>
+                                    <option value="I-F-24-08" data-subtitle="85" data-right="33">KAPSUL KOSONG 00</option>
+                                    <option value="I-F-25-10" data-subtitle="60" data-right="787">KAPSUL KOSONG 2</option>
+                                    <option value="IDR-0009" data-subtitle="220" data-right="0">FARSORBID</option>
+                                    <option value="IDR-0010" data-subtitle="2404" data-right="0">RENAPAR</option>
+                                    <option value="IDR-00101" data-subtitle="14850" data-right="0">VOMETRON 4 MG</option>
+                                    <option value="IDR-00102" data-subtitle="26918" data-right="0">POLYCROL FORTE</option>
+                                    <option value="IDR-00107" data-subtitle="3614" data-right="30">FENOFIBRATE 300MG TAB</option>
+                                    <option value="IDR-0011" data-subtitle="957" data-right="0">SANPRIMA</option>
+                                    <option value="IDR-0015" data-subtitle="20243" data-right="0">PROSOGAN FD 30</option>
+                                    <option value="IDR-0016" data-subtitle="900" data-right="60">TETRASIKLIN</option>
+                                    <option value="IDR-0017" data-subtitle="2200" data-right="0">DORBIGOT</option>
+                                    <option value="IDR-0019" data-subtitle="39600" data-right="0">OXOPECT SYR</option>
+                                    <option value="IDR-0021" data-subtitle="800" data-right="38">LISINOPRIL 10MG</option>
+                                    <option value="IDR-00213" data-subtitle="14850" data-right="0">VOXATIC</option>
+                                    <option value="IDR-0023" data-subtitle="2475" data-right="0">LODIPAS 5</option>
+                                    <option value="IDR-0024" data-subtitle="21700" data-right="0">CEFILA 100</option>
+                                    <option value="IDR-0025" data-subtitle="4746" data-right="0">LACTRIN</option>
+                                    <option value="IDR-0026" data-subtitle="5330" data-right="0">PROLIVER</option>
+                                    <option value="IDR-0027" data-subtitle="15000" data-right="0">ERLAMYCETIN SALEP MATA</option>
+                                    <option value="IDR-0028" data-subtitle="207995" data-right="0">LANTUS</option>
+                                    <option value="IDR-0031" data-subtitle="7992" data-right="0">SINCRONIK</option>
+                                    <option value="IDR-0032" data-subtitle="114689" data-right="0">TRACETATE</option>
+                                    <option value="IDR-0033" data-subtitle="1100" data-right="0">METFORMIN XR</option>
+                                    <option value="IDR-0035" data-subtitle="1125" data-right="0">TROMBO ASPILET</option>
+                                    <option value="IDR-0037" data-subtitle="1445" data-right="0">BRAXIDIN</option>
+                                    <option value="IDR-004" data-subtitle="243" data-right="0">FARGOXIN 0,25</option>
+                                    <option value="IDR-0040" data-subtitle="2797" data-right="0">LODIPAS 10</option>
+                                    <option value="IDR-0043" data-subtitle="7950" data-right="0">STOBLED</option>
+                                    <option value="IDR-0045" data-subtitle="1595" data-right="0">AZITRHOMYCIN</option>
+                                    <option value="IDR-0047" data-subtitle="3500" data-right="0">TANTUM</option>
+                                    <option value="IDR-0048" data-subtitle="2500" data-right="0">GARAM INGGRIS</option>
+                                    <option value="IDR-005" data-subtitle="33022" data-right="0">CEFILA 200</option>
+                                    <option value="IDR-0051" data-subtitle="8702" data-right="0">NEPATIC 300</option>
+                                    <option value="IDR-0052" data-subtitle="4550" data-right="0">TIARYT</option>
+                                    <option value="IDR-0053" data-subtitle="633" data-right="6">PROPYLTHIOURACIL</option>
+                                    <option value="IDR-0057" data-subtitle="9028" data-right="0">URDAHEX</option>
+                                    <option value="IDR-006" data-subtitle="4482" data-right="0">LAMESON 4 MG</option>
+                                    <option value="IDR-0060" data-subtitle="3164" data-right="0">PLASMINEX 500 mg TABLET</option>
+                                    <option value="IDR-0062" data-subtitle="405" data-right="0">NORIT</option>
+                                    <option value="IDR-0064" data-subtitle="9023" data-right="0">HERBESER 100</option>
+                                    <option value="IDR-0065" data-subtitle="15200" data-right="0">HYTRIN 2</option>
+                                    <option value="IDR-007-IH" data-subtitle="5485" data-right="40">HERBESSER 200MG</option>
+                                    <option value="IDR-0074" data-subtitle="35500" data-right="0">MEIACT 200 MG</option>
+                                    <option value="IDR-0080" data-subtitle="1215" data-right="0">NEO MERCAZOL</option>
+                                    <option value="IDR-0081" data-subtitle="10545" data-right="0">CIFLON</option>
+                                    <option value="IDR-0085" data-subtitle="6327" data-right="0">RECOLFAR</option>
+                                    <option value="IDR-0093" data-subtitle="170" data-right="0">PROPRANOLOL 40 MG</option>
+                                    <option value="IDR-0099" data-subtitle="9415" data-right="0">PRELIN 75</option>
+                                    <option value="IDR-0100" data-subtitle="22990" data-right="0">TRACETATE TAB</option>
+                                    <option value="IDR-0102" data-subtitle="24558" data-right="0">MYCOZOL CR</option>
+                                    <option value="IDR-0111" data-subtitle="17766" data-right="0">POLYCROL SYR</option>
+                                    <option value="IDR-0112" data-subtitle="4007" data-right="0">MIOZIDINE</option>
+                                    <option value="IDR-0113" data-subtitle="15035" data-right="0">PYSOLAN</option>
+                                    <option value="IDR-0130" data-subtitle="4494" data-right="0">SYSMUCO</option>
+                                    <option value="IDR-0155" data-subtitle="43450" data-right="0">ULSIDEX SUSPENSI</option>
+                                    <option value="IDR-0170" data-subtitle="6327" data-right="0">HYTOFAR</option>
+                                    <option value="IDR-10000" data-subtitle="7700" data-right="0">SIKSTOP</option>
+                                    <option value="IDR-OO14" data-subtitle="16222" data-right="0">PROSOGAN FD 15</option>
+                                    <option value="IH-24-XXX-069" data-subtitle="160000" data-right="0">SOFT CERVICAL COLLAR</option>
+                                    <option value="J-04-III-001" data-subtitle="3003" data-right="26">ENBATIC SACH</option>
+                                    <option value="J-04-III-073" data-subtitle="11300" data-right="3">ENBATIC</option>
+                                    <option value="J-12-XI-001" data-subtitle="15784" data-right="0">CALADIN LOTION</option>
+                                    <option value="J-20-II-002" data-subtitle="6116" data-right="3">CENDO TOBROSON MD </option>
+                                    <option value="J-21-III-001" data-subtitle="42569" data-right="0">SAGESTAM SALEP MATA</option>
+                                    <option value="J-21-III-003" data-subtitle="82000" data-right="0">BURNAZIN KRIM</option>
+                                    <option value="J-21-III-057" data-subtitle="5972" data-right="5">CENDO XITROL </option>
+                                    <option value="J-21-XX-001" data-subtitle="6327" data-right="2">NISAGON CREAM 5 GR</option>
+                                    <option value="J-21-XX-005" data-subtitle="29800" data-right="0">SILVER SULFADIAZIN</option>
+                                    <option value="J-21-XX-1004" data-subtitle="17033" data-right="2">BETASON N CR</option>
+                                    <option value="J-21-XX-1005" data-subtitle="44000" data-right="0">KINDEREN CR</option>
+                                    <option value="J-21-XXI-003" data-subtitle="88134" data-right="7">INERSON CREAM</option>
+                                    <option value="J-21-XXI-004" data-subtitle="12155" data-right="0">BETHASON N CREAM</option>
+                                    <option value="J-21-XXI-078" data-subtitle="4500" data-right="3">BETAMETHASON</option>
+                                    <option value="J-21-XXI-1005" data-subtitle="833" data-right="1">POT SALEP</option>
+                                    <option value="J-22-VII-005" data-subtitle="72600" data-right="0">TROMBOPHOP OINT</option>
+                                    <option value="J-22-XVIII-234" data-subtitle="39235" data-right="0">VITACID CREAM 0,05</option>
+                                    <option value="J-22-XX-104" data-subtitle="6500" data-right="2">SYNALTEN CR</option>
+                                    <option value="J-22-XXI-003" data-subtitle="6570" data-right="0">KETOCONAZOL ZALF</option>
+                                    <option value="J-22-XXI-009" data-subtitle="40000" data-right="0">SOFT U DERM </option>
+                                    <option value="J-22-XXI-011" data-subtitle="44400" data-right="0">TROMBO GEL 10GR</option>
+                                    <option value="J-22-XXII-120" data-subtitle="183150" data-right="0">TERASTARCH</option>
+                                    <option value="J-24-QQ-007" data-subtitle="31360" data-right="4">SALTICIN CR 5 GRAM</option>
+                                    <option value="J-24-XXI-008" data-subtitle="7115" data-right="0">GENTAMICIN SALEP MATA 0,3%</option>
+                                    <option value="J-27-III-005" data-subtitle="11100" data-right="0">GENTAMYCIN TETES MATA</option>
+                                    <option value="J-27-III-127" data-subtitle="53500" data-right="0">ELOX CREAM</option>
+                                    <option value="J-28-III-006" data-subtitle="16428" data-right="3">ALLETROL TM</option>
+                                    <option value="J-33-II-060" data-subtitle="14000" data-right="1">GENOINT TETES MATA </option>
+                                    <option value="J-33-II-156" data-subtitle="75000" data-right="0">BETAM OPHTAL</option>
+                                    <option value="J-33-III-001" data-subtitle="69236" data-right="0">PIROTOP 10GR</option>
+                                    <option value="J-33-III-0055" data-subtitle="4600" data-right="7">CENDO LYTEERS </option>
+                                    <option value="J-33-XX-11" data-subtitle="12000" data-right="0">NONCORT MD TM</option>
+                                    <option value="J-37--VII-001" data-subtitle="13764" data-right="0">LAFALOS</option>
+                                    <option value="J-39-III-001" data-subtitle="91353" data-right="1">MYCO -Z</option>
+                                    <option value="J-39-III-009" data-subtitle="23040" data-right="0">NEBACETIN CR</option>
+                                    <option value="J-39-III-083" data-subtitle="17483" data-right="0">MUPIROCIN 2% 5G</option>
+                                    <option value="J-39-III-084" data-subtitle="57000" data-right="0">SCABIMITE 5%</option>
+                                    <option value="J-39-III-101" data-subtitle="305500" data-right="0">PRONTOSAN GEL</option>
+                                    <option value="J-5-III-001" data-subtitle="6001" data-right="5">ACYCLOVIR CRAEM</option>
+                                    <option value="J-5-III-002" data-subtitle="80500" data-right="0">KENALOG IN ORABASE</option>
+                                    <option value="J-5-III-003" data-subtitle="32000" data-right="0">BUFACOMB</option>
+                                    <option value="J-5-III-006" data-subtitle="4912" data-right="2">GENTAMICIN CREAM</option>
+                                    <option value="J-5-III-007" data-subtitle="13919" data-right="0">SAGESTAM CREAM</option>
+                                    <option value="J-5-III-008" data-subtitle="10330" data-right="5">ACDAT</option>
+                                    <option value="J-5-IV-006" data-subtitle="17300" data-right="0">KALMICETIN CREAM</option>
+                                    <option value="J-5-XX1-007" data-subtitle="20195" data-right="1">HICO GEL</option>
+                                    <option value="J-5-XXI-004" data-subtitle="28000" data-right="0">BIOPLACENTON</option>
+                                    <option value="J-5-XXI-0045" data-subtitle="28860" data-right="0">BIOPLACENTON</option>
+                                    <option value="J-5-XXI-005" data-subtitle="94350" data-right="0">ALOCLAIR GEL</option>
+                                    <option value="J-5-XXI-250" data-subtitle="41965" data-right="0">TEKASOL OINMT</option>
+                                    <option value="J-55-III-008" data-subtitle="12101" data-right="1">MOMETASON CREAM</option>
+                                    <option value="J-55-XX-002" data-subtitle="118000" data-right="1">OTOPAIN TETES TELINGA</option>
+                                    <option value="J-55-XX-004" data-subtitle="9158" data-right="2">ERLA TETES TELINGA</option>
+                                    <option value="J-55-XX-0101" data-subtitle="221445" data-right="0">MEDERMA</option>
+                                    <option value="J-55-XX-111" data-subtitle="162000" data-right="0">DUODERM GEL</option>
+                                    <option value="J-55-XXE-0041" data-subtitle="15025" data-right="3">NEOCENTA GEL</option>
+                                    <option value="J-58-V-068" data-subtitle="13000" data-right="0">INSTO MOIST</option>
+                                    <option value="J-58-X-091" data-subtitle="13631" data-right="3">INSTO REG</option>
+                                    <option value="J-58-XX-006" data-subtitle="31635" data-right="0">MELANOX 15 GR</option>
+                                    <option value="j-59-XI-92" data-subtitle="11388" data-right="3">ERLAMYCETIN TETES MATA</option>
+                                    <option value="J-59-XI-93" data-subtitle="18000" data-right="0">KALMICETIN CR</option>
+                                    <option value="J-6-III-007" data-subtitle="6700" data-right="0">GENALTEN CREAM</option>
+                                    <option value="J-6-XXI-001" data-subtitle="6660" data-right="0">HIDROCORTISON 2,5</option>
+                                    <option value="J-6-XXI-007" data-subtitle="6055" data-right="1">HIDROCORTISON 1%</option>
+                                    <option value="J-71-III-253" data-subtitle="10450" data-right="0">KALCINOL N</option>
+                                    <option value="J-79-XXI-001" data-subtitle="172050" data-right="0">LANAKELOID-E</option>
+                                    <option value="J-97-III-111" data-subtitle="29584" data-right="1">LACTACYD BABY LIQ 60 ML</option>
+                                    <option value="J-97-III-112" data-subtitle="6000" data-right="0">BEDAK SALICYL</option>
+                                    <option value="L-38-X-057" data-subtitle="33022" data-right="0">FERRIZ DROP</option>
+                                    <option value="L-39-X-058" data-subtitle="62937" data-right="0">MALTOFER DROP</option>
+                                    <option value="L-48-XX-011" data-subtitle="10000" data-right="0">MATERAI</option>
+                                    <option value="L-5-XXI-012" data-subtitle="24253" data-right="0">NEBACETIN 5 GR POWDER</option>
+                                    <option value="L-79-XXI-21" data-subtitle="25201" data-right="0">BETADIN GARGLE</option>
+                                    <option value="L-80-XXI-21" data-subtitle="45000" data-right="0">TANTUM VERDE </option>
+                                    <option value="L5-XX-004" data-subtitle="8547" data-right="0">DEXTROSE 40%</option>
+                                    <option value="NOV-SP-2023" data-subtitle="6900" data-right="0">Q10</option>
+                                    <option value="R-55-X-007" data-subtitle="13000" data-right="0">GENOINT SALEP MATA</option>
+                                    <option value="XX1-FF-306" data-subtitle="350" data-right="0">ETABION</option>
+                                  </select>
+              </div>
+              <div class="col-sm-2">
+                <input type="text" name="jumlah" class="form-control" placeholder="Jml" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Keterangan</label>
+              <div class="col-sm-9">
+                <input type="text" name="keterangan" placeholder="Keterangan" class="form-control" value="">
+              </div>
+            </div>
+            <div class="pull-right">
+              <button type="button" name="button" class="btn btn-primary" id="simpan_penjualan"><i class="fa fa-save"></i><span class="hidden-xs"> Masukkan Rincian</span></button>
+              <a href="https://simrsfitricandra.site/admin/penjualan/order?t=0b7453602159" class="btn btn-danger"><i class="fa fa-edit"></i><span class="hidden-xs"> Order Baru</span></a>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Rincian Penjualan</h3>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive no-margin" id="rincian_penjualan">
+            <table class="table table-striped table-bordered no-padding" width="100%">
+              <thead>
+                <tr>
+                  <th width="20px;">No.</th>
+                  <th>Nama Barang</th>
+                  <th>Jumlah</th>
+                  <th>Harga</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                                </tbody>
+            </table>
+          </div>    
+          <div class="form-horizontal">
+            <div class="container-fluid" id="form_rincian_penjualan">
+              <div class="form-group">
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Jumlah Tagihan</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" style="text-align:right;font-weight:bold" placeholder="0" value="0" name="jumlah_total" maxlength="11" disabled>
+                </div>
+                <input type="text" class="form-control" style="background-color:white;border:none;box-shadow:none;text-align:right;font-weight:bold;" placeholder="jumlah total"  value="" name="terbilang_jumlah_total" disabled >
+                </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Potongan</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" style="text-align:right;font-weight:bold" placeholder="Potongan Faktur" value="" name="potongan_faktur" id="potongan_faktur2" maxlength="15" tabindex="1" />
+                </div>
+                </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Jumlah Harus Bayar</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" style="text-align:right;font-weight:bold" placeholder="0" value="0" name="jumlah_harus_bayar" maxlength="11" disabled />
+                </div>
+                <input type="text" class="form-control" style="background-color:white;color:blue;border:none;box-shadow:none;text-align:right;font-weight:bold" placeholder="jumlah total"  value="" name="terbilang_jumlah_harus_bayar" disabled >
+                </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Jumlah Bayar</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" style="text-align:right;font-weight:bold" placeholder="Jumlah Bayar" value="0" name="jumlah_bayar" id="jumlah_bayar2" maxlength="15" tabindex="2" />
+                </div>
+                </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Kembalian</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" style="text-align:right;font-weight:bold"  placeholder="Kembalian" value="0" name="kembalian" disabled maxlength="11" />
+                </div>
+                <input type="text" class="form-control" style="background-color:white;color:blue;border:none;box-shadow:none;text-align:right;font-weight:bold" name="terbilang_kembalian" disabled >
+                </div>
+                <div class="form-group">
+                    <label for="keterangan" class="col-sm-5 control-label">Cara Bayar</label>
+                    <div class="col-sm-7">
+                    <select class="form-control" name="keterangan" id="keterangan">
+                        <option value="Tunai">Tunai</option>
+                        <option value="Kurang Bayar">Kurang Bayar</option>
+                        <option value="Belum Bayar">Belum Bayar</option>
+                    </select>
+                    </div>
+                </div>
+              </div>
+              <div class="pull-right">
+                <button type="button" name="button" class="btn btn-success" id="simpan_billing_penjualan"><span class="fa fa-save"></span><span class="hidden-xs"> Simpan</span></button>
+                <button type="button" name="button" class="btn btn-primary" id="cetak_billing_kecil_penjualan"><span class="fa fa-file-o"></span><span class="hidden-xs"> Nota</span></button>
+                <button type="button" name="button" class="btn btn-info" id="cetak_billing_penjualan"><span class="fa fa-file"></span><span class="hidden-xs"> Invoice</span></button>
+                <a href="https://simrsfitricandra.site/admin/penjualan/order?t=0b7453602159" class="btn btn-warning"><span class="fa fa-check"></span><span class="hidden-xs"> Selesai</span></a>
+              </div>               
+            </div>      
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$('.dataTables').DataTable();
+// ketika inputbox pencarian diisi
+$('input:text[name=layanan]').on('input',function(e){
+  var baseURL = mlite.url + '/' + mlite.admin;
+  var url    = baseURL + '/penjualan/barang?t=' + mlite.token;
+
+  $.post(url, {} ,function(data) {
+  // tampilkan data yang sudah di perbaharui
+    $("#barang").html(data).show();
+  });
+
+});
+// end pencarian  
+
+$('select').selectator();
+// var potongan_faktur2 = document.getElementById('potongan_faktur2');
+// potongan_faktur2.addEventListener('keyup', function(e){
+//   potongan_faktur2.value = formatRupiah(this.value, 'Rp.');
+// });
+
+// var jumlah_bayar2 = document.getElementById('jumlah_bayar2');
+// jumlah_bayar2.addEventListener('keyup', function(e){
+//   jumlah_bayar2.value = formatRupiah(this.value, 'Rp.');
+// });
+
+
+$("#form_penjualan").on("click", "#simpan_penjualan", function(event){
+  var baseURL = mlite.url + '/' + mlite.admin;
+  event.preventDefault();
+
+  var id          = $('input:hidden[name=id]').val();
+  var nama_pembeli = $('input:text[name=nama_pembeli]').val();
+  var alamat_pembeli = $('input:text[name=alamat_pembeli]').val();
+  var nomor_telepon = $('input:text[name=nomor_telepon]').val();
+  var email = $('input:text[name=email]').val();
+  var tanggal = $('input:text[name=tanggal]').val();
+  var jam = $('input:text[name=jam]').val();
+  var id_barang = $('#barang').val();
+  var nama_barang = $('#barang option:selected').text();
+  var jumlah = $('input:text[name=jumlah]').val();
+  var keterangan = $('input:text[name=keterangan]').val();
+
+  var url = baseURL + '/penjualan/simpanpenjualan?t=' + mlite.token;
+  $.post(url, {id : id, 
+    nama_pembeli : nama_pembeli, 
+    alamat_pembeli : alamat_pembeli, 
+    nomor_telepon : nomor_telepon, 
+    email : email, 
+    tanggal : tanggal, 
+    jam : jam, 
+    id_barang: id_barang, 
+    nama_barang: nama_barang, 
+    jumlah: jumlah , 
+    keterangan : keterangan
+  }, function(data) {
+    // console.log(data);
+    $('input:hidden[name=id]').val(data);
+    // tampilkan data
+    var url = baseURL + '/penjualan/rincianpenjualan?t=' + mlite.token;
+    $.post(url, {id_penjualan : data,
+    }, function(data) {
+      // console.log(data);
+      // tampilkan data
+      $("#rincian_penjualan").html(data).show();
+    });
+    var url = baseURL + '/penjualan/formrincianpenjualan?t=' + mlite.token;
+    $.post(url, {id_penjualan : data,
+    }, function(data) {
+      // console.log(data);
+      // tampilkan data
+      $("#form_rincian_penjualan").html(data).show();
+    });
+  });
+});
+
+$("#rincian_penjualan").on("click",".hapus_rincian_penjualan", function(event) {
+  var id = $(this).attr("data-id");
+  var baseURL = mlite.url + '/' + mlite.admin;
+  event.preventDefault();
+  bootbox.confirm("Apakah ada ingin mengahous item dengan id = " + id + "?", function(result){
+      // ketika ditekan tombol ok
+      if (result){
+        // mengirimkan perintah penghapusan
+        var url = baseURL + '/penjualan/hapusitempenjualan?t=' + mlite.token;
+        $.post(url, {id : id
+        } ,function(data) {
+          location.reload();
+        });
+      }
+    });
+});
+
+$("#form_rincian_penjualan").on("click","#simpan_billing_penjualan", function(event){
+  var baseURL = mlite.url + '/' + mlite.admin;
+  event.preventDefault();
+  var id          = $('input:hidden[name=id]').val();
+  var jumlah_total       = $('input:text[name=jumlah_total]').val();
+  var potongan_faktur    = $('input:text[name=potongan_faktur]').val();
+  var jumlah_harus_bayar = $('input:text[name=jumlah_harus_bayar]').val();
+  var jumlah_bayar       = $('input:text[name=jumlah_bayar]').val();
+  var tanggal            = $('#tanggal').val();
+  var jam            = $('#jam').val();
+
+  // alert(id + ' - ' + jumlah_total + ' - ' + potongan_faktur + ' - ' + jumlah_harus_bayar + ' - ' + jumlah_bayar + ' - ' + tanggal + ' - ' + jam);
+
+  if 	(potongan_faktur == "" )
+  {
+    alert ("potongan belum diisi ");
+    $('input:text[name=potongan_faktur]').focus();
+
+  }
+  else if ( Number(jumlah_bayar) < Number(jumlah_harus_bayar && keterangan != 'Tunai'))
+  {
+    alert ("Jumlah bayar masih kurang ! ");
+    $('input:text[name=jumlah_bayar]').focus();
+  }
+  else
+  {
+    // tampilkan dialog konfirmasi
+    bootbox.confirm("Apakah data faktur sudah sesuai?", function(result){
+      // ketika ditekan tombol ok
+      if (result){
+        // mengirimkan perintah penghapusan
+        var url = baseURL + '/penjualan/simpanbilling?t=' + mlite.token;
+        $.post(url, {id_penjualan : id,
+        jumlah_total       : jumlah_total,
+        potongan    : potongan_faktur,
+        tanggal   		   : tanggal,
+        jam: jam,
+        jumlah_harus_bayar : jumlah_harus_bayar,
+        jumlah_bayar       : jumlah_bayar
+        } ,function(data) {
+          $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+          "Data rincian penjualan telah disimpan!"+
+          "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+          "</div>").show();
+        });
+      }
+    });
+
+  }
+
+});
+
+// ketika inputbox potongan faktur diisi
+$("#form_rincian_penjualan").on("input","#potongan_faktur2", function(event){
+  event.preventDefault();
+
+  var jumlah_total_belanja = $('input:text[name=jumlah_total]').val()
+  var potongan_faktur      = $('input:text[name=potongan_faktur]').val();
+  potongan_faktur = potongan_faktur.replace(/\.|R|p/g,'');
+  var jumlah_diskon               = (Number(jumlah_total_belanja)) - (Number(potongan_faktur));
+
+  $('input:text[name=jumlah_harus_bayar]').val(jumlah_diskon);
+  $('input:text[name=terbilang_jumlah_harus_bayar]').val(terbilang(Number(jumlah_diskon)));
+
+
+  var jumlah_bayar        = $('input:text[name=jumlah_bayar]').val();
+  jumlah_bayar = jumlah_bayar.replace(/\.|R|p/g,'')
+  var kembalian           = (Number(jumlah_bayar)) - (Number(jumlah_diskon));
+
+  if (kembalian  < 0 ){
+    $('input:text[name=kembalian]').val("");
+    $('input:text[name=terbilang_kembalian]').val("Kurang Bayar");
+  }
+  else if (jumlah_bayar == "" || jumlah_bayar == 0)
+  {
+    $('input:text[name=kembalian]').val(0);
+    $('input:text[name=jumlah_bayar]').val(0);
+    $('input:text[name=terbilang_kembalian]').val("");
+  } else
+  {
+    $('input:text[name=kembalian]').val(kembalian);
+    $('input:text[name=terbilang_kembalian]').val(terbilang(Number(kembalian)));
+  }
+});
+// end potongan faktur
+
+// ketika inputbox jumlah bayar diisi
+$("#form_rincian_penjualan").on("input","#jumlah_bayar2", function(event){
+  event.preventDefault();
+
+  var jumlah_harus_bayar  = $('input:text[name=jumlah_harus_bayar]').val();
+  var jumlah_bayar        = $('input:text[name=jumlah_bayar]').val();
+    jumlah_bayar = jumlah_bayar.replace(/\.|R|p/g,'')
+  var kembalian           = (Number(jumlah_bayar)) - (Number(jumlah_harus_bayar));
+
+  if (kembalian  < 0 ){
+    $('input:text[name=kembalian]').val("");
+    $('input:text[name=terbilang_kembalian]').val("Kurang Bayar");
+  }
+  else if (jumlah_bayar == "" || jumlah_bayar == 0)
+  {
+    $('input:text[name=kembalian]').val(0);
+    $('input:text[name=jumlah_bayar]').val(0);
+    $('input:text[name=terbilang_kembalian]').val("");
+  } else
+  {
+    $('input:text[name=kembalian]').val(kembalian);
+    $('input:text[name=terbilang_kembalian]').val(terbilang(Number(kembalian)));
+  }
+
+});
+// end jumlah bayar
+
+// ketika tombol antrian ditekan
+$("#form_rincian_penjualan").on("click","#cetak_billing_penjualan", function(event){
+  var baseURL = mlite.url + '/' + mlite.admin;
+  event.preventDefault();
+  var url = baseURL + '/penjualan/faktur?t=' + mlite.token;
+  var id_penjualan = $('input:hidden[name=id]').val();
+  $.post(url, {id_penjualan : id_penjualan,
+  }, function(data) {
+    // tampilkan data
+    if(data == 'OK') {
+      bootbox.confirm("Apakah data penjualan sudah sesuai? Jika berbeda, silahkan simpan dulu sebelum mencetak!", function(result){
+        // ketika ditekan tombol ok
+        if (result){
+          window.open(baseURL + '/penjualan/faktur?show=besar&id_penjualan=' + id_penjualan + '&t=' + mlite.token);
+        }
+      });
+    } else {
+      bootbox.alert("Data penjualan belum disimpan. Silahkan simpan dulu sebelum mencetak?");
+    }
+  });
+});
+
+// ketika tombol antrian ditekan
+$("#form_rincian_penjualan").on("click","#cetak_billing_kecil_penjualan", function(event){
+  var baseURL = mlite.url + '/' + mlite.admin;
+  event.preventDefault();
+  var url = baseURL + '/penjualan/faktur?t=' + mlite.token;
+  var id_penjualan = $('input:hidden[name=id]').val();
+  $.post(url, {id_penjualan : id_penjualan,
+  }, function(data) {
+    // tampilkan data
+    if(data == 'OK') {
+      bootbox.confirm("Apakah data penjualan sudah sesuai? Jika berbeda, silahkan simpan dulu sebelum mencetak!", function(result){
+        // ketika ditekan tombol ok
+        if (result){
+          window.open(baseURL + '/penjualan/faktur?show=kecil&id_penjualan=' + id_penjualan + '&t=' + mlite.token);
+        }
+      });
+    } else {
+      bootbox.alert("Data penjualan belum disimpan. Silahkan simpan dulu sebelum mencetak!");
+    }
+  });
+});
+
+/* Fungsi formatRupiah */
+function formatRupiah(angka, prefix){
+	var number_string = angka.replace(/[^,\d]/g, '').toString(),
+	split   		= number_string.split(','),
+	sisa     		= split[0].length % 3,
+	rupiah     		= split[0].substr(0, sisa),
+	ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+
+	// tambahkan titik jika yang di input sudah menjadi angka ribuan
+	if(ribuan){
+		separator = sisa ? '.' : '';
+		rupiah += separator + ribuan.join('.');
+	}
+
+	rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+	return prefix == undefined ? rupiah : (rupiah ? 'Rp.' + rupiah : '');
+}
+
+function terbilang(a){
+	var bilangan = ['','Satu','Dua','Tiga','Empat','Lima','Enam','Tujuh','Delapan','Sembilan','Sepuluh','Sebelas'];
+
+	// 1 - 11
+	if(a < 12){
+		var kalimat = bilangan[a];
+	}
+	// 12 - 19
+	else if(a < 20){
+		var kalimat = bilangan[a-10]+' Belas';
+	}
+	// 20 - 99
+	else if(a < 100){
+		var utama = a/10;
+		var depan = parseInt(String(utama).substr(0,1));
+		var belakang = a%10;
+		var kalimat = bilangan[depan]+' Puluh '+bilangan[belakang];
+	}
+	// 100 - 199
+	else if(a < 200){
+		var kalimat = 'Seratus '+ terbilang(a - 100);
+	}
+	// 200 - 999
+	else if(a < 1000){
+		var utama = a/100;
+		var depan = parseInt(String(utama).substr(0,1));
+		var belakang = a%100;
+		var kalimat = bilangan[depan] + ' Ratus '+ terbilang(belakang);
+	}
+	// 1,000 - 1,999
+	else if(a < 2000){
+		var kalimat = 'Seribu '+ terbilang(a - 1000);
+	}
+	// 2,000 - 9,999
+	else if(a < 10000){
+		var utama = a/1000;
+		var depan = parseInt(String(utama).substr(0,1));
+		var belakang = a%1000;
+		var kalimat = bilangan[depan] + ' Ribu '+ terbilang(belakang);
+	}
+	// 10,000 - 99,999
+	else if(a < 100000){
+		var utama = a/100;
+		var depan = parseInt(String(utama).substr(0,2));
+		var belakang = a%1000;
+		var kalimat = terbilang(depan) + ' Ribu '+ terbilang(belakang);
+	}
+	// 100,000 - 999,999
+	else if(a < 1000000){
+		var utama = a/1000;
+		var depan = parseInt(String(utama).substr(0,3));
+		var belakang = a%1000;
+		var kalimat = terbilang(depan) + ' Ribu '+ terbilang(belakang);
+	}
+	// 1,000,000 - 	99,999,999
+	else if(a < 100000000){
+		var utama = a/1000000;
+		var depan = parseInt(String(utama).substr(0,4));
+		var belakang = a%1000000;
+		var kalimat = terbilang(depan) + ' Juta '+ terbilang(belakang);
+	}
+	else if(a < 1000000000){
+		var utama = a/1000000;
+		var depan = parseInt(String(utama).substr(0,4));
+		var belakang = a%1000000;
+		var kalimat = terbilang(depan) + ' Juta '+ terbilang(belakang);
+	}
+	else if(a < 10000000000){
+		var utama = a/1000000000;
+		var depan = parseInt(String(utama).substr(0,1));
+		var belakang = a%1000000000;
+		var kalimat = terbilang(depan) + ' Milyar '+ terbilang(belakang);
+	}
+	else if(a < 100000000000){
+		var utama = a/1000000000;
+		var depan = parseInt(String(utama).substr(0,2));
+		var belakang = a%1000000000;
+		var kalimat = terbilang(depan) + ' Milyar '+ terbilang(belakang);
+	}
+	else if(a < 1000000000000){
+		var utama = a/1000000000;
+		var depan = parseInt(String(utama).substr(0,3));
+		var belakang = a%1000000000;
+		var kalimat = terbilang(depan) + ' Milyar '+ terbilang(belakang);
+	}
+	else if(a < 10000000000000){
+		var utama = a/10000000000;
+		var depan = parseInt(String(utama).substr(0,1));
+		var belakang = a%10000000000;
+		var kalimat = terbilang(depan) + ' Triliun '+ terbilang(belakang);
+	}
+	else if(a < 100000000000000){
+		var utama = a/1000000000000;
+		var depan = parseInt(String(utama).substr(0,2));
+		var belakang = a%1000000000000;
+		var kalimat = terbilang(depan) + ' Triliun '+ terbilang(belakang);
+	}
+
+	else if(a < 1000000000000000){
+		var utama = a/1000000000000;
+		var depan = parseInt(String(utama).substr(0,3));
+		var belakang = a%1000000000000;
+		var kalimat = terbilang(depan) + ' Triliun '+ terbilang(belakang);
+	}
+
+  else if(a < 10000000000000000){
+		var utama = a/1000000000000000;
+		var depan = parseInt(String(utama).substr(0,1));
+		var belakang = a%1000000000000000;
+		var kalimat = terbilang(depan) + ' Kuadriliun '+ terbilang(belakang);
+	}
+
+	var pisah = kalimat.split(' ');
+	var full = [];
+	for(var i=0;i<pisah.length;i++){
+	 if(pisah[i] != ""){full.push(pisah[i]);}
+	}
+	return full.join(' ');
+}
+
+</script>

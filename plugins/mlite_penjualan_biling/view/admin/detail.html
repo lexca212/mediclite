@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail mlite_penjualan_billing</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_mlite_penjualan_billing" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>Id</td><td>{$value.id}</td><tr>
+<tr><td>Id Penjualan</td><td>{$value.id_penjualan}</td><tr>
+<tr><td>Jumlah Total</td><td>{$value.jumlah_total}</td><tr>
+<tr><td>Potongan</td><td>{$value.potongan}</td><tr>
+<tr><td>Jumlah Harus Bayar</td><td>{$value.jumlah_harus_bayar}</td><tr>
+<tr><td>Jumlah Bayar</td><td>{$value.jumlah_bayar}</td><tr>
+<tr><td>Tanggal</td><td>{$value.tanggal}</td><tr>
+<tr><td>Jam</td><td>{$value.jam}</td><tr>
+<tr><td>Id User</td><td>{$value.id_user}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>

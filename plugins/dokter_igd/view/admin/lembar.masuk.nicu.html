@@ -1,0 +1,734 @@
+<div class="modal-header">
+  <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span>
+    Tutup</button>
+  <h4 class="modal-title">Lembar Masuk Nicu</h4>
+</div>
+<div class="modal-body">
+  <h4>I. Riwayat Kesehatan</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Nomor Rawat</label>
+        <input class="form-control" name="no_rawat_lembarMasukNicu" placeholder="Nomor Rawat" readonly="" required=""
+          type="text" value="{$reg_periksa.no_rawat}" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Nama Pasien</label>
+        <input class="form-control" name="nm_pasien" placeholder="" readonly="" required="" type="text"
+          value="{$pasien.nm_pasien}">
+        </input>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="kd_dokter">Dokter</label>
+        <input class="form-control" name="kd_dokter" readonly="" required="" type="text"
+          value="{$dpjp_ranap.nm_dokter}" />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="tanggal">Tanggal &amp; Jam Pemeriksaan</label>
+        <input class="form-control" id="tanggal" name="tanggal" placeholder="" type="text"
+          value="{?=date('Y-m-d')?} {?=date('H:i:s')?}" />
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="diagnosa">Diagnosis Masuk</label>
+        <input class="form-control" id="diagnosa" name="diagnosa" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.diagnosa,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.diagnosa,'')?}{/if}" />
+      </div>
+    </div>
+    <h4>1. Tanda Vital</h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">a. Apgar Score &lt; 6</label>
+          <select class="form-control" id="tanda_vital_a" name="tanda_vital_a">
+            <option value="YA" {if: $mlite_masuk_nicu.tanda_vital_a == 'YA'}selected{/if} >YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.tanda_vital_a == 'TIDAK'}selected{/if} >TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="keterangan_tanda_vital_a">Keterangan</label>
+          <input class="form-control" id="keterangan_tanda_vital_a" name="keterangan_tanda_vital_a" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_tanda_vital_a,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_tanda_vital_a,'')?}{/if}" />
+        </div>
+      </div>
+      <!-- B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">b. Denyut Jantung &lt; 120 - &gt; 140 kali/menit</label>
+          <select class="form-control" id="tanda_vital_b" name="tanda_vital_b">
+            <option value="YA"  {if: $mlite_masuk_nicu.tanda_vital_b == 'YA'}selected{/if} >YA</option>
+            <option value="TIDAK"  {if: $mlite_masuk_nicu.tanda_vital_b == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_tanda_vital_b" name="keterangan_tanda_vital_b" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_tanda_vital_b,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_tanda_vital_b,'')?}{/if}"" />
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">c. Laju respirasi &lt; 40 - &gt; 60 kali/menit</label>
+          <select class="form-control" id="tanda_vital_c" name="tanda_vital_c">
+            <option value="YA" {if: $mlite_masuk_nicu.tanda_vital_c == 'YA'}selected{/if} >YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.tanda_vital_c == 'TIDAK'}selected{/if} >TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_tanda_vital_c" name="keterangan_tanda_vital_c" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_tanda_vital_c,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_tanda_vital_c,'')?}{/if}"" />
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_d">d. suhu axilla &lt; 36.5 Celcius - &gt; 37.5 Celcius</label>
+          <select class="form-control" id="tanda_vital_d" name="tanda_vital_d">
+            <option value="YA" {if: $mlite_masuk_nicu.tanda_vital_d == 'YA'}selected{/if} >YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.tanda_vital_d == 'TIDAK'}selected{/if} >TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_tanda_vital_d" name="keterangan_tanda_vital_d" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_tanda_vital_d,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_tanda_vital_d,'')?}{/if}"" />
+        </div>
+      </div>
+      <!--E-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tanda_vital_a">e. Saturasi Oksigen perifer (SpO2) &lt; 95%</label>
+          <select class="form-control" id="tanda_vital_e" name="tanda_vital_e">
+            <option value="YA" {if: $mlite_masuk_nicu.tanda_vital_e == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.tanda_vital_e == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_tanda_vital_e" name="keterangan_tanda_vital_e" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_tanda_vital_e,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_tanda_vital_e,'')?}{/if}"" />
+        </div>
+      </div>
+    </div>
+    <!--END TANDA VITAL-->
+    <h4>2. Pemeriksaan Fisik</h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_a">a. Neonatus dengan aktivitas, tonus, refleks, tangis lemah</label>
+          <select class="form-control" id="pemeriksaan_fisik_a" name="pemeriksaan_fisik_a">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_a == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_a == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_a" name="keterangan_pemeriksaan_fisik_a"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_a,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_a,'')?}{/if}" />
+        </div>
+      </div>
+      <!--B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_b">b. Refleks pupil anisokor</label>
+          <select class="form-control" id="pemeriksaan_fisik_b" name="pemeriksaan_fisik_b">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_b == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_b == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_b" name="keterangan_pemeriksaan_fisik_b"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_b,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_b,'')?}{/if}" />
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_c">c. Kejang</label>
+          <select class="form-control" id="pemeriksaan_fisik_c" name="pemeriksaan_fisik_c">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_c == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_c == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_c" name="keterangan_pemeriksaan_fisik_c"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_c,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_c,'')?}{/if}" />
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_d">d. Retrraksi Dinding dada</label>
+          <select class="form-control" id="pemeriksaan_fisik_d" name="pemeriksaan_fisik_d">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_d == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_d == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_d" name="keterangan_pemeriksaan_fisik_d"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_d,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_d,'')?}{/if}" />
+        </div>
+      </div>
+      <!--E-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_e">e. Sianosis</label>
+          <select class="form-control" id="pemeriksaan_fisik_e" name="pemeriksaan_fisik_e">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_e == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_e == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_e" name="keterangan_pemeriksaan_fisik_e"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_e,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_e,'')?}{/if}" />
+        </div>
+      </div>
+      <!--F-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_f">f. Ikterik</label>
+          <select class="form-control" id="pemeriksaan_fisik_f" name="pemeriksaan_fisik_f">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_f == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_f == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_f" name="keterangan_pemeriksaan_fisik_f"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_f,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_f,'')?}{/if}" />
+        </div>
+      </div>
+      <!--G-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_g">g. Anuria</label>
+          <select class="form-control" id="pemeriksaan_fisik_g" name="pemeriksaan_fisik_g">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_g == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_g == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_g" name="keterangan_pemeriksaan_fisik_g"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_g,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_g,'')?}{/if}" />
+        </div>
+      </div>
+      <!--H-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="pemeriksaan_fisik_h">h. Waktu Pengisian Kapiler &gt; 3 detik</label>
+          <select class="form-control" id="pemeriksaan_fisik_h" name="pemeriksaan_fisik_h">
+            <option value="YA" {if: $mlite_masuk_nicu.pemeriksaan_fisik_h == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.pemeriksaan_fisik_h == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_pemeriksaan_fisik_h" name="keterangan_pemeriksaan_fisik_h"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_pemeriksaan_fisik_h,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_h,'')?}{/if}" />
+        </div>
+      </div>
+    </div>
+    <!--END PEMERIKSAAN FISIK-->
+    <h4>
+      <center>3. Nilai Laboratorium</center>
+    </h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_a">a. Kadar hemoglobin &lt; 7 g/Dl</label>
+          <select class="form-control" id="nilai_lab_a" name="nilai_lab_a">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_a == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_a == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_a" name="keterangan_nilai_lab_a" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_a,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_a,'')?}{/if}" />
+        </div>
+      </div>
+      <!--B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_b">b. Kadar hemoatokrit &gt; 65%</label>
+          <select class="form-control" id="nilai_lab_b" name="nilai_lab_b">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_b == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_b == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_b" name="keterangan_nilai_lab_b" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_b,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_b,'')?}{/if}" />
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_c">b. Kadar leukosit &gt; 25.000/ml</label>
+          <select class="form-control" id="nilai_lab_c" name="nilai_lab_c">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_c == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_c == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_c" name="keterangan_nilai_lab_c" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_c,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_c,'')?}{/if}" />
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_d">d. PH &amp;lt; 7.2 atau &gt; 7.7</label>
+          <select class="form-control" id="nilai_lab_d" name="nilai_lab_d">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_d == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_d == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_d" name="keterangan_nilai_lab_d" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_d,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_d,'')?}{/if}" />
+        </div>
+      </div>
+      <!--E-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_e">e. (PaO₂) &lt; 80 mmHg</label>
+          <select class="form-control" id="nilai_lab_e" name="nilai_lab_e">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_e == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_e == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_e" name="keterangan_nilai_lab_e" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_e,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_e,'')?}{/if}" />
+        </div>
+      </div>
+      <!--F-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_f">f. (PaCO₂) &gt; 50 mmHg</label>
+          <select class="form-control" id="nilai_lab_f" name="nilai_lab_f">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_f == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK"{if: $mlite_masuk_nicu.nilai_lab_f == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_f" name="keterangan_nilai_lab_f" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_f,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_f,'')?}{/if}" />
+        </div>
+      </div>
+      <!--G-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_g">g. (HCO₃) &lt; 15</label>
+          <select class="form-control" id="nilai_lab_g" name="nilai_lab_g">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_g == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_g == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_g" name="keterangan_nilai_lab_g" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_g,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_g,'')?}{/if}" />
+        </div>
+      </div>
+      <!--H-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_h">h. Kadar glukosa serum &lt; 47 mg/dL atau &gt; 150mg/dL</label>
+          <select class="form-control" id="nilai_lab_h" name="nilai_lab_h">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_h == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_h == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_h" name="keterangan_nilai_lab_h" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_h,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_h,'')?}{/if}" />
+        </div>
+      </div>
+      <!--I-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_i">i. Kadar natrium serum &lt; 110 mEq/L atau &gt; 160 mEq/L</label>
+          <select class="form-control" id="nilai_lab_i" name="nilai_lab_i">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_i == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_i == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_i" name="keterangan_nilai_lab_i" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_i,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_i,'')?}{/if}" />
+        </div>
+      </div>
+      <!--J-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_j">j. Kadar kalium serum &lt; 2.5 mEq/L atau &amp;gt; 6.0 mEq/L</label>
+          <select class="form-control" id="nilai_lab_j" name="nilai_lab_j">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_j == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_j == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_j" name="keterangan_nilai_lab_j" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_j,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_j,'')?}{/if}" />
+        </div>
+      </div>
+      <!--K-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="nilai_lab_k">k. Kadar kalsium serum &lt; 6 mg/dL atau &gt; 15 mg/dL</label>
+          <select class="form-control" id="nilai_lab_k" name="nilai_lab_k">
+            <option value="YA" {if: $mlite_masuk_nicu.nilai_lab_k == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.nilai_lab_k == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_nilai_lab_k" name="keterangan_nilai_lab_k" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_nilai_lab_k,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_nilai_lab_k,'')?}{/if}" />
+        </div>
+      </div>
+    </div>
+    <!--END LABORQATTTT-->
+    <h4>
+      <center>4. Kondisi Lain</center>
+    </h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="kondisi_lain_a">a. BBL &lt; 2000 gram atau &gt; 4000 gram</label>
+          <select class="form-control" id="kondisi_lain_a" name="kondisi_lain_a">
+            <option value="YA" {if: $mlite_masuk_nicu.kondisi_lain_a == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.kondisi_lain_a == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_kondisi_lain_a" name="keterangan_kondisi_lain_a" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_kondisi_lain_a,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_kondisi_lain_a,'')?}{/if}" />
+        </div>
+      </div>
+      <!--B-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="kondisi_lain_b">b. Bayi Baru Lahir dengan ibu dalam perawatan intensif</label>
+          <select class="form-control" id="kondisi_lain_b" name="kondisi_lain_b">
+            <option value="YA" {if: $mlite_masuk_nicu.kondisi_lain_b == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.kondisi_lain_b == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_kondisi_lain_b" name="keterangan_kondisi_lain_b" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_kondisi_lain_b,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_kondisi_lain_b,'')?}{/if}" />
+        </div>
+      </div>
+      <!--C-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="kondisi_lain_c">c. Kelainan kongenital(bibir sumbing,
+            atresiani,anencephaly,polydactyly,dll)</label>
+          <select class="form-control" id="kondisi_lain_c" name="kondisi_lain_c">
+            <option value="YA" {if: $mlite_masuk_nicu.kondisi_lain_c == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK" {if: $mlite_masuk_nicu.kondisi_lain_c == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_kondisi_lain_c" name="keterangan_kondisi_lain_c" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_kondisi_lain_c,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_kondisi_lain_c,'')?}{/if}" />
+        </div>
+      </div>
+      <!--D-->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="kondisi_lain_d">d. Bayi usia &gt; 30 hari yang masih bisa dirawat di NICU</label>
+          <select class="form-control" id="kondisi_lain_d" name="kondisi_lain_d">
+            <option value="YA"  {if: $mlite_masuk_nicu.kondisi_lain_d == 'YA'}selected{/if}>YA</option>
+            <option value="TIDAK"  {if: $mlite_masuk_nicu.kondisi_lain_d == 'TIDAK'}selected{/if}>TIDAK</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="">Keterangan</label>
+          <input class="form-control" id="keterangan_kondisi_lain_d" name="keterangan_kondisi_lain_d" type="text"
+            value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.keterangan_kondisi_lain_d,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.keterangan_kondisi_lain_d,'')?}{/if}" />
+        </div>
+      </div>
+    </div>
+    <!--END KONDISI LAIN-->
+    <div class="col-sm-12">
+      <h4>KESIMPULAN</h4>
+      <div class="form-group">
+
+
+        <p>Berdasarkan kondisi diatas maka pasien ini memnuhi indukasi diruang perinatologi level : <input
+            id="kesimpulan_level" name="kesimpulan_level" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.kesimpulan_level,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.kesimpulan_level,'')?}{/if}" /><br />
+            Alat trasnport yang digunakan : <input
+            id="kesimpulan_transport" name="kesimpulan_transport" placeholder="Incubator / Box Bayi"
+            type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.kesimpulan_alat,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.kesimpulan_alat,'')?}{/if}" /><br />
+            Pendamping selama transfer : <input id="kesimpulan_pendamping" name="kesimpulan_pendamping"
+            placeholder="Dokter/Paramedis/POS" type="text" value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.kesimpulan_pendamping,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.kesimpulan_pendamping,'')?}{/if}" /><br />
+            Alat medis yang dibawa selama transfer : <input
+            id="kesimpulan_alat" name="kesimpulan_alat" placeholder="JIka YA sebutkan, Jika tidak isi (-)"
+            type="text"  value="{if: $mlite_masuk_nicu}{?=isset_or($mlite_masuk_nicu.kesimpulan_alat,'')?}{else}{?=isset_or($data_lembarNicu.mlite_masuk_nicu.kesimpulan_alat,'')?}{/if}"/> </p>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <button class="btn btn-success" id="saveLembarMasukNicu">Simpan</button>
+      <button class="btn btn-danger" data-dismiss="modal" type="button">Kembali</button>
+      <button class="btn btn-primary" data-no_rawat="{$value.mlite_masuk_nicu.no_rawat}" id="cetak_hasil">cETAK</button>
+
+    </div>
+    <br />
+    <div class="tampildata">
+      <table class="table" width="100%">
+        <thead>
+          <tr>
+            <th>Nomor Rawat</th>
+            <th>Keluhan</th>
+            <th>Hubungan</th>
+            <th>Dokter</th>
+          </tr>
+        </thead>
+        <tbody>
+          {if: $mlite_masuk_nicu}
+          <tr>
+            <td>{$mlite_masuk_nicu.no_rawat}</td>
+            <td>{$mlite_masuk_nicu.diagnosa}</td>
+            <td>{$mlite_masuk_nicu.kd_dokter}</td>
+            <td>{$mlite_masuk_nicu.tanggal}</td>
+          </tr>
+          {else}
+          <tr>
+            <td colspan="6">Tidak ada data</td>
+          </tr>
+          {/if}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $('select').selectator();
+  $(document).ready(function () {
+    $("#saveLembarMasukNicu").click(function () {
+      var baseURL = mlite.url + '/' + mlite.admin;
+      var no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val();
+      var set_no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val().replace(/\//g, '');
+      var kd_dokter = $('#kd_dokter').val();
+      var tanggal = $('#tanggal').val();
+      var diagnosa = $('#diagnosa').val();
+      var tanda_vital_a = $('select[name=tanda_vital_a]').val();
+      var tanda_vital_b = $('select[name=tanda_vital_b]').val();
+      var tanda_vital_c = $('select[name=tanda_vital_c]').val();
+      var tanda_vital_d = $('select[name=tanda_vital_d]').val();
+      var tanda_vital_e = $('select[name=tanda_vital_e]').val();
+      var keterangan_tanda_vital_a = $('#keterangan_tanda_vital_a').val();
+      var keterangan_tanda_vital_b = $('#keterangan_tanda_vital_b').val();
+      var keterangan_tanda_vital_c = $('#keterangan_tanda_vital_c').val();
+      var keterangan_tanda_vital_d = $('#keterangan_tanda_vital_d').val();
+      var keterangan_tanda_vital_e = $('#keterangan_tanda_vital_e').val();
+      var pemeriksaan_fisik_a = $('select[name=pemeriksaan_fisik_a]').val();
+      var pemeriksaan_fisik_b = $('select[name=pemeriksaan_fisik_b]').val();
+      var pemeriksaan_fisik_c = $('select[name=pemeriksaan_fisik_c]').val();
+      var pemeriksaan_fisik_d = $('select[name=pemeriksaan_fisik_d]').val();
+      var pemeriksaan_fisik_e = $('select[name=pemeriksaan_fisik_e]').val();
+      var pemeriksaan_fisik_f = $('select[name=pemeriksaan_fisik_f]').val();
+      var pemeriksaan_fisik_g = $('select[name=pemeriksaan_fisik_g]').val();
+      var pemeriksaan_fisik_h = $('select[name=pemeriksaan_fisik_h]').val();
+      var keterangan_pemeriksaan_fisik_a = $('#keterangan_pemeriksaan_fisik_a').val();
+      var keterangan_pemeriksaan_fisik_b = $('#keterangan_pemeriksaan_fisik_b').val();
+      var keterangan_pemeriksaan_fisik_c = $('#keterangan_pemeriksaan_fisik_c').val();
+      var keterangan_pemeriksaan_fisik_d = $('#keterangan_pemeriksaan_fisik_d').val();
+      var keterangan_pemeriksaan_fisik_e = $('#keterangan_pemeriksaan_fisik_e').val();
+      var keterangan_pemeriksaan_fisik_f = $('#keterangan_pemeriksaan_fisik_f').val();
+      var keterangan_pemeriksaan_fisik_g = $('#keterangan_pemeriksaan_fisik_g').val();
+      var keterangan_pemeriksaan_fisik_h = $('#keterangan_pemeriksaan_fisik_h').val();
+      var nilai_lab_a = $('select[name=nilai_lab_a]').val();
+      var nilai_lab_b = $('select[name=nilai_lab_b]').val();
+      var nilai_lab_c = $('select[name=nilai_lab_c]').val();
+      var nilai_lab_d = $('select[name=nilai_lab_d]').val();
+      var nilai_lab_e = $('select[name=nilai_lab_e]').val();
+      var nilai_lab_f = $('select[name=nilai_lab_f]').val();
+      var nilai_lab_g = $('select[name=nilai_lab_g]').val();
+      var nilai_lab_h = $('select[name=nilai_lab_h]').val();
+      var nilai_lab_i = $('select[name=nilai_lab_i]').val();
+      var nilai_lab_j = $('select[name=nilai_lab_j]').val();
+      var nilai_lab_k = $('select[name=nilai_lab_k]').val();
+      var keterangan_nilai_lab_a = $('#keterangan_nilai_lab_a').val();
+      var keterangan_nilai_lab_b = $('#keterangan_nilai_lab_b').val();
+      var keterangan_nilai_lab_c = $('#keterangan_nilai_lab_c').val();
+      var keterangan_nilai_lab_d = $('#keterangan_nilai_lab_d').val();
+      var keterangan_nilai_lab_e = $('#keterangan_nilai_lab_e').val();
+      var keterangan_nilai_lab_f = $('#keterangan_nilai_lab_f').val();
+      var keterangan_nilai_lab_g = $('#keterangan_nilai_lab_g').val();
+      var keterangan_nilai_lab_h = $('#keterangan_nilai_lab_h').val();
+      var keterangan_nilai_lab_i = $('#keterangan_nilai_lab_i').val();
+      var keterangan_nilai_lab_j = $('#keterangan_nilai_lab_j').val();
+      var keterangan_nilai_lab_k = $('#keterangan_nilai_lab_k').val();
+      var kondisi_lain_a = $('select[name=kondisi_lain_a]').val();
+      var kondisi_lain_b = $('select[name=kondisi_lain_b]').val();
+      var kondisi_lain_c = $('select[name=kondisi_lain_c]').val();
+      var kondisi_lain_d = $('select[name=kondisi_lain_d]').val();
+      var keterangan_kondisi_lain_a = $('#keterangan_kondisi_lain_a').val();
+      var keterangan_kondisi_lain_b = $('#keterangan_kondisi_lain_b').val();
+      var keterangan_kondisi_lain_c = $('#keterangan_kondisi_lain_c').val();
+      var keterangan_kondisi_lain_d = $('#keterangan_kondisi_lain_d').val();
+      var kesimpulan_level = $('#kesimpulan_level').val();
+      var kesimpulan_transport = $('#kesimpulan_transport').val();
+      var kesimpulan_pendamping = $('#kesimpulan_pendamping').val();
+      var kesimpulan_alat = $('#kesimpulan_alat').val();
+
+      var url = baseURL + '/dokter_ranap/lembarmasuknicu/?t=' + mlite.token;
+      $.post(url, {
+        no_rawat: no_rawat,
+        kd_dokter: kd_dokter,
+        tanggal: tanggal,
+        diagnosa: diagnosa,
+        tanda_vital_a: tanda_vital_a,
+        tanda_vital_b: tanda_vital_b,
+        tanda_vital_c: tanda_vital_c,
+        tanda_vital_d: tanda_vital_d,
+        tanda_vital_e: tanda_vital_e,
+        keterangan_tanda_vital_a: keterangan_tanda_vital_a,
+        keterangan_tanda_vital_b: keterangan_tanda_vital_b,
+        keterangan_tanda_vital_c: keterangan_tanda_vital_c,
+        keterangan_tanda_vital_d: keterangan_tanda_vital_d,
+        keterangan_tanda_vital_e: keterangan_tanda_vital_e,
+        pemeriksaan_fisik_a: pemeriksaan_fisik_a,
+        pemeriksaan_fisik_b: pemeriksaan_fisik_b,
+        pemeriksaan_fisik_c: pemeriksaan_fisik_c,
+        pemeriksaan_fisik_d: pemeriksaan_fisik_d,
+        pemeriksaan_fisik_e: pemeriksaan_fisik_e,
+        pemeriksaan_fisik_f: pemeriksaan_fisik_f,
+        pemeriksaan_fisik_g: pemeriksaan_fisik_g,
+        pemeriksaan_fisik_h: pemeriksaan_fisik_h,
+        keterangan_pemeriksaan_fisik_a: keterangan_pemeriksaan_fisik_a,
+        keterangan_pemeriksaan_fisik_b: keterangan_pemeriksaan_fisik_b,
+        keterangan_pemeriksaan_fisik_c: keterangan_pemeriksaan_fisik_c,
+        keterangan_pemeriksaan_fisik_d: keterangan_pemeriksaan_fisik_d,
+        keterangan_pemeriksaan_fisik_e: keterangan_pemeriksaan_fisik_e,
+        keterangan_pemeriksaan_fisik_f: keterangan_pemeriksaan_fisik_f,
+        keterangan_pemeriksaan_fisik_g: keterangan_pemeriksaan_fisik_g,
+        keterangan_pemeriksaan_fisik_h: keterangan_pemeriksaan_fisik_h,
+        nilai_lab_a: nilai_lab_a,
+        nilai_lab_b: nilai_lab_b,
+        nilai_lab_c: nilai_lab_c,
+        nilai_lab_d: nilai_lab_d,
+        nilai_lab_e: nilai_lab_e,
+        nilai_lab_f: nilai_lab_f,
+        nilai_lab_g: nilai_lab_g,
+        nilai_lab_h: nilai_lab_h,
+        nilai_lab_i: nilai_lab_i,
+        nilai_lab_j: nilai_lab_j,
+        nilai_lab_k: nilai_lab_k,
+        keterangan_nilai_lab_a: keterangan_nilai_lab_a,
+        keterangan_nilai_lab_b: keterangan_nilai_lab_b,
+        keterangan_nilai_lab_c: keterangan_nilai_lab_c,
+        keterangan_nilai_lab_d: keterangan_nilai_lab_d,
+        keterangan_nilai_lab_e: keterangan_nilai_lab_e,
+        keterangan_nilai_lab_f: keterangan_nilai_lab_f,
+        keterangan_nilai_lab_g: keterangan_nilai_lab_g,
+        keterangan_nilai_lab_h: keterangan_nilai_lab_h,
+        keterangan_nilai_lab_i: keterangan_nilai_lab_i,
+        keterangan_nilai_lab_j: keterangan_nilai_lab_j,
+        keterangan_nilai_lab_k: keterangan_nilai_lab_k,
+        kondisi_lain_a: kondisi_lain_a,
+        kondisi_lain_b: kondisi_lain_b,
+        kondisi_lain_c: kondisi_lain_c,
+        kondisi_lain_d: kondisi_lain_d,
+        keterangan_kondisi_lain_a: keterangan_kondisi_lain_a,
+        keterangan_kondisi_lain_b: keterangan_kondisi_lain_b,
+        keterangan_kondisi_lain_c: keterangan_kondisi_lain_c,
+        keterangan_kondisi_lain_d: keterangan_kondisi_lain_d,
+        kesimpulan_level: kesimpulan_level,
+        kesimpulan_transport: kesimpulan_transport,
+        kesimpulan_pendamping: kesimpulan_pendamping,
+        kesimpulan_alat: kesimpulan_alat,
+      }, function (data) {
+        console.log(data);
+        $('.tampildata').load(baseURL + '/dokter_ranap/lembarmasuknicutampil/' + set_no_rawat + '?t=' + mlite.token);
+      });
+    });
+
+  });
+</script>
+<!-- Tombol cetak -->
+<script>
+  $("#cetak_hasil").click(function (event) {
+
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val();
+    var set_no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val().replace(/\//g, '');
+
+    window.open(baseURL + '/dokter_ranap/masuknicu/' + set_no_rawat + '?t=' + mlite.token);
+  });
+</script>

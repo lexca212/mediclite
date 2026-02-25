@@ -1,0 +1,21 @@
+#tbl_perkiraan_biaya_ranap th, #tbl_perkiraan_biaya_ranap td, #forTable_perkiraan_biaya_ranap th, #forTable_perkiraan_biaya_ranap td {
+  white-space: nowrap; 
+}
+.dataTables_wrapper th, .dataTables_wrapper td {
+  white-space: nowrap; 
+}
+.pmd-datatable-pagination {
+  padding-top: 10px !important;
+}
+.dataTables_length {
+  display: inline;
+}
+.dataTables_paginate {
+  display: inline;
+  float: right;
+}
+@media (max-width:767px) {
+  .dataTables_length{
+    display: none !important;
+  }
+}

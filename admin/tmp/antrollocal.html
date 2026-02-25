@@ -1,0 +1,74 @@
+<style media="screen">
+  th,
+  td {
+    white-space: nowrap;
+    vertical-align: top !important;
+  }
+</style>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="btn-group pull-right" style="margin-top:-8px;">
+          <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-calendar"></i><span class="hidden-xs"> Periode Antrol</span>
+          </span>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <form class="" action="http://192.168.0.212/admin/jkn_mobile/antrollocal?t=6b2ebb8ecf2f" method="POST">
+              <li style="padding-left:5px;padding-right:5px;">
+                <input type="text" id="periode_antrol" class="form-control periode_antrol" name="periode_antrol"
+                  required>
+              </li>
+              <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                <input type="submit" name="" class="btn btn-primary btn-block" value="Submit">
+              </li>
+            </form>
+          </ul>
+        </div>
+        <h3 class="panel-title">Dashboard Antrian Online Local JKN Mobile</h3>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive no-margin">
+          <table class="table table-striped table-condensed no-margin display no-wrap" width="100%">
+            <thead>
+              <tr>
+                <th>No RM</th>
+                <th>Tanggal</th>
+                <th>No Rawat</th>
+                <th>Keterangan</th>
+                <th>Nomor Referensi</th>
+                <th>Kode Booking</th>
+              </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                <td>057002 DHIAN ANGGRAENI</td>
+                <td>2025-09-01</td>
+                <td>2025/09/01/000009</td>
+                <td>data kodepoli, namapoli, kodedokter, namadokter, jampraktek  belum sesuai.</td>
+                <td>20250901000009001</td>
+                <td>0152r01120250901000009001</td>
+              </tr>
+                          </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="modal fade" id="asuransiModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function () {
+    $('.periode_antrol').datetimepicker({
+      defaultDate: "2025-09-30",
+      format: 'YYYY-MM-DD',
+      locale: 'id'
+    });
+  });
+</script>

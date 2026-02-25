@@ -1,0 +1,54 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail penilaian_medis_igd</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_penilaian_medis_igd" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>No Rawat</td><td>{$value.no_rawat}</td><tr>
+<tr><td>Tanggal</td><td>{$value.tanggal}</td><tr>
+<tr><td>Kd Dokter</td><td>{$value.kd_dokter}</td><tr>
+<tr><td>Anamnesis</td><td>{$value.anamnesis}</td><tr>
+<tr><td>Hubungan</td><td>{$value.hubungan}</td><tr>
+<tr><td>Keluhan Utama</td><td>{$value.keluhan_utama}</td><tr>
+<tr><td>Rps</td><td>{$value.rps}</td><tr>
+<tr><td>Rpd</td><td>{$value.rpd}</td><tr>
+<tr><td>Rpk</td><td>{$value.rpk}</td><tr>
+<tr><td>Rpo</td><td>{$value.rpo}</td><tr>
+<tr><td>Alergi</td><td>{$value.alergi}</td><tr>
+<tr><td>Keadaan</td><td>{$value.keadaan}</td><tr>
+<tr><td>Gcs</td><td>{$value.gcs}</td><tr>
+<tr><td>Kesadaran</td><td>{$value.kesadaran}</td><tr>
+<tr><td>Td</td><td>{$value.td}</td><tr>
+<tr><td>Nadi</td><td>{$value.nadi}</td><tr>
+<tr><td>Rr</td><td>{$value.rr}</td><tr>
+<tr><td>Suhu</td><td>{$value.suhu}</td><tr>
+<tr><td>Spo</td><td>{$value.spo}</td><tr>
+<tr><td>Bb</td><td>{$value.bb}</td><tr>
+<tr><td>Tb</td><td>{$value.tb}</td><tr>
+<tr><td>Kepala</td><td>{$value.kepala}</td><tr>
+<tr><td>Mata</td><td>{$value.mata}</td><tr>
+<tr><td>Gigi</td><td>{$value.gigi}</td><tr>
+<tr><td>Leher</td><td>{$value.leher}</td><tr>
+<tr><td>Thoraks</td><td>{$value.thoraks}</td><tr>
+<tr><td>Abdomen</td><td>{$value.abdomen}</td><tr>
+<tr><td>Genital</td><td>{$value.genital}</td><tr>
+<tr><td>Ekstremitas</td><td>{$value.ekstremitas}</td><tr>
+<tr><td>Ket Fisik</td><td>{$value.ket_fisik}</td><tr>
+<tr><td>Ket Lokalis</td><td>{$value.ket_lokalis}</td><tr>
+<tr><td>Ekg</td><td>{$value.ekg}</td><tr>
+<tr><td>Rad</td><td>{$value.rad}</td><tr>
+<tr><td>Lab</td><td>{$value.lab}</td><tr>
+<tr><td>Diagnosis</td><td>{$value.diagnosis}</td><tr>
+<tr><td>Tata</td><td>{$value.tata}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>

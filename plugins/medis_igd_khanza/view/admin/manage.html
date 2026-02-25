@@ -1,0 +1,228 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class='col-md-6 text-left'>
+                      <div class="btn-group" role="group" aria-label="Toolbar">
+                          <button id='lihat_data_penilaian_medis_igd' class='btn btn-info' data-toggle='tooltip' data-placement='top' title='Lihat Data penilaian_medis_igd' style='color:white;'>
+                          <i class='fa fa-eye' style='font-size: 15px;'></i><span class="hidden-xs"> Lihat</span> </button>
+                          <button id='tambah_data_penilaian_medis_igd' class='btn btn-success' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-plus-square' style='font-size: 15px;'></i><span class="hidden-xs"> Tambah</span>
+                          </button>
+                          <button id='edit_data_penilaian_medis_igd' class='btn btn-primary' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-edit' style='font-size: 15px;'></i><span class="hidden-xs"> Edit</span>
+                          </button>
+                          <button id='hapus_data_penilaian_medis_igd' class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Hapus Data'>
+                          <i class='fa fa-trash' style='font-size: 15px;'></i><span class="hidden-xs"> Hapus</span>
+                          </button>
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="hidden-xs">More</span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" id="lihat_detail_penilaian_medis_igd">View Detail</a></li>
+                              <li><a href="#">Other link</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <div class='col-md-6 text-right'>
+                      <div class="input-group" style="width:100%">
+                          <span class="input-group-addon">Cari :</span>
+                          <span class="input-group-addon" style="width:150px;padding:0 !important;background-color: #cccccc;border: 0px;text-align: left !important;">
+                          <select class="form-control" id='search_field_penilaian_medis_igd' name='search_field_penilaian_medis_igd' style="margin: 0 !important;"> 
+                              <option value='no_rawat'>No Rawat</option>
+<option value='tanggal'>Tanggal</option>
+<option value='kd_dokter'>Kd Dokter</option>
+<option value='anamnesis'>Anamnesis</option>
+<option value='hubungan'>Hubungan</option>
+<option value='keluhan_utama'>Keluhan Utama</option>
+<option value='rps'>Rps</option>
+<option value='rpd'>Rpd</option>
+<option value='rpk'>Rpk</option>
+<option value='rpo'>Rpo</option>
+<option value='alergi'>Alergi</option>
+<option value='keadaan'>Keadaan</option>
+<option value='gcs'>Gcs</option>
+<option value='kesadaran'>Kesadaran</option>
+<option value='td'>Td</option>
+<option value='nadi'>Nadi</option>
+<option value='rr'>Rr</option>
+<option value='suhu'>Suhu</option>
+<option value='spo'>Spo</option>
+<option value='bb'>Bb</option>
+<option value='tb'>Tb</option>
+<option value='kepala'>Kepala</option>
+<option value='mata'>Mata</option>
+<option value='gigi'>Gigi</option>
+<option value='leher'>Leher</option>
+<option value='thoraks'>Thoraks</option>
+<option value='abdomen'>Abdomen</option>
+<option value='genital'>Genital</option>
+<option value='ekstremitas'>Ekstremitas</option>
+<option value='ket_fisik'>Ket Fisik</option>
+<option value='ket_lokalis'>Ket Lokalis</option>
+<option value='ekg'>Ekg</option>
+<option value='rad'>Rad</option>
+<option value='lab'>Lab</option>
+<option value='diagnosis'>Diagnosis</option>
+<option value='tata'>Tata</option>
+
+                          </select>
+                          </span>
+                          <input class='form-control' name='search_text_penilaian_medis_igd' id='search_text_penilaian_medis_igd' type='search' placeholder='Masukkan Kata Kunci Pencarian' />  
+                          <span class="input-group-addon">
+                          <span id='searchclear_penilaian_medis_igd' data-toggle='tooltip' data-placement='top' title='Clear'><i class="fa fa-times text-danger"></i></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tbl_penilaian_medis_igd" class="table table-bordered table-striped display dataTable" style="width:100%">
+                        <thead>
+                        <tr> 
+                            <th>No Rawat</th>
+<th>Tanggal</th>
+<th>Kd Dokter</th>
+<th>Anamnesis</th>
+<th>Hubungan</th>
+<th>Keluhan Utama</th>
+<th>Rps</th>
+<th>Rpd</th>
+<th>Rpk</th>
+<th>Rpo</th>
+<th>Alergi</th>
+<th>Keadaan</th>
+<th>Gcs</th>
+<th>Kesadaran</th>
+<th>Td</th>
+<th>Nadi</th>
+<th>Rr</th>
+<th>Suhu</th>
+<th>Spo</th>
+<th>Bb</th>
+<th>Tb</th>
+<th>Kepala</th>
+<th>Mata</th>
+<th>Gigi</th>
+<th>Leher</th>
+<th>Thoraks</th>
+<th>Abdomen</th>
+<th>Genital</th>
+<th>Ekstremitas</th>
+<th>Ket Fisik</th>
+<th>Ket Lokalis</th>
+<th>Ekg</th>
+<th>Rad</th>
+<th>Lab</th>
+<th>Diagnosis</th>
+<th>Tata</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>        
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Modal -->
+<div id="modal_penilaian_medis_igd" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Edit Data medis igd khanza</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form name="form_penilaian_medis_igd">
+          <input type="hidden" class="form-control" id="typeact" /> 
+          <label>No Rawat<br /></label><input type='text' class='form-control' id='no_rawat' name='no_rawat' /><div><span class='error'></span></div>
+<label>Tanggal<br /></label><input type='text' class='form-control' id='tanggal' name='tanggal' /><div><span class='error'></span></div>
+<label>Kd Dokter<br /></label><input type='text' class='form-control' id='kd_dokter' name='kd_dokter' /><div><span class='error'></span></div>
+<label>Anamnesis<br /></label><input type='text' class='form-control' id='anamnesis' name='anamnesis' /><div><span class='error'></span></div>
+<label>Hubungan<br /></label><input type='text' class='form-control' id='hubungan' name='hubungan' /><div><span class='error'></span></div>
+<label>Keluhan Utama<br /></label><input type='text' class='form-control' id='keluhan_utama' name='keluhan_utama' /><div><span class='error'></span></div>
+<label>Rps<br /></label><input type='text' class='form-control' id='rps' name='rps' /><div><span class='error'></span></div>
+<label>Rpd<br /></label><input type='text' class='form-control' id='rpd' name='rpd' /><div><span class='error'></span></div>
+<label>Rpk<br /></label><input type='text' class='form-control' id='rpk' name='rpk' /><div><span class='error'></span></div>
+<label>Rpo<br /></label><input type='text' class='form-control' id='rpo' name='rpo' /><div><span class='error'></span></div>
+<label>Alergi<br /></label><input type='text' class='form-control' id='alergi' name='alergi' /><div><span class='error'></span></div>
+<label>Keadaan<br /></label><input type='text' class='form-control' id='keadaan' name='keadaan' /><div><span class='error'></span></div>
+<label>Gcs<br /></label><input type='text' class='form-control' id='gcs' name='gcs' /><div><span class='error'></span></div>
+<label>Kesadaran<br /></label><input type='text' class='form-control' id='kesadaran' name='kesadaran' /><div><span class='error'></span></div>
+<label>Td<br /></label><input type='text' class='form-control' id='td' name='td' /><div><span class='error'></span></div>
+<label>Nadi<br /></label><input type='text' class='form-control' id='nadi' name='nadi' /><div><span class='error'></span></div>
+<label>Rr<br /></label><input type='text' class='form-control' id='rr' name='rr' /><div><span class='error'></span></div>
+<label>Suhu<br /></label><input type='text' class='form-control' id='suhu' name='suhu' /><div><span class='error'></span></div>
+<label>Spo<br /></label><input type='text' class='form-control' id='spo' name='spo' /><div><span class='error'></span></div>
+<label>Bb<br /></label><input type='text' class='form-control' id='bb' name='bb' /><div><span class='error'></span></div>
+<label>Tb<br /></label><input type='text' class='form-control' id='tb' name='tb' /><div><span class='error'></span></div>
+<label>Kepala<br /></label><input type='text' class='form-control' id='kepala' name='kepala' /><div><span class='error'></span></div>
+<label>Mata<br /></label><input type='text' class='form-control' id='mata' name='mata' /><div><span class='error'></span></div>
+<label>Gigi<br /></label><input type='text' class='form-control' id='gigi' name='gigi' /><div><span class='error'></span></div>
+<label>Leher<br /></label><input type='text' class='form-control' id='leher' name='leher' /><div><span class='error'></span></div>
+<label>Thoraks<br /></label><input type='text' class='form-control' id='thoraks' name='thoraks' /><div><span class='error'></span></div>
+<label>Abdomen<br /></label><input type='text' class='form-control' id='abdomen' name='abdomen' /><div><span class='error'></span></div>
+<label>Genital<br /></label><input type='text' class='form-control' id='genital' name='genital' /><div><span class='error'></span></div>
+<label>Ekstremitas<br /></label><input type='text' class='form-control' id='ekstremitas' name='ekstremitas' /><div><span class='error'></span></div>
+<label>Ket Fisik<br /></label><input type='text' class='form-control' id='ket_fisik' name='ket_fisik' /><div><span class='error'></span></div>
+<label>Ket Lokalis<br /></label><input type='text' class='form-control' id='ket_lokalis' name='ket_lokalis' /><div><span class='error'></span></div>
+<label>Ekg<br /></label><input type='text' class='form-control' id='ekg' name='ekg' /><div><span class='error'></span></div>
+<label>Rad<br /></label><input type='text' class='form-control' id='rad' name='rad' /><div><span class='error'></span></div>
+<label>Lab<br /></label><input type='text' class='form-control' id='lab' name='lab' /><div><span class='error'></span></div>
+<label>Diagnosis<br /></label><input type='text' class='form-control' id='diagnosis' name='diagnosis' /><div><span class='error'></span></div>
+<label>Tata<br /></label><input type='text' class='form-control' id='tata' name='tata' /><div><span class='error'></span></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="simpan_data_penilaian_medis_igd" class="btn btn-primary">Simpan Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_lihat_penilaian_medis_igd" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Lihat Data medis igd khanza</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="forTable_penilaian_medis_igd"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="export_pdf" class="btn btn-primary">
+          <i class="fa fa-file-pdf-o"></i>&nbsp;PDF </button>
+        <button type="submit" id="export_xlsx" class="btn btn-primary">
+          <i class="fa fa-file-excel-o"></i>&nbsp;XLSX </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_detail_penilaian_medis_igd" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>

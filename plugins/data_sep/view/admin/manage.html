@@ -1,0 +1,276 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class='col-md-6 text-left'>
+                      <div class="btn-group" role="group" aria-label="Toolbar">
+                          <button id='lihat_data_bridging_sep' class='btn btn-info' data-toggle='tooltip' data-placement='top' title='Lihat Data bridging_sep' style='color:white;'>
+                          <i class='fa fa-eye' style='font-size: 15px;'></i><span class="hidden-xs"> Lihat</span> </button>
+                          <button id='tambah_data_bridging_sep' class='btn btn-success' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-plus-square' style='font-size: 15px;'></i><span class="hidden-xs"> Tambah</span>
+                          </button>
+                          <button id='edit_data_bridging_sep' class='btn btn-primary' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-edit' style='font-size: 15px;'></i><span class="hidden-xs"> Edit</span>
+                          </button>
+                          <button id='hapus_data_bridging_sep' class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Hapus Data'>
+                          <i class='fa fa-trash' style='font-size: 15px;'></i><span class="hidden-xs"> Hapus</span>
+                          </button>
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="hidden-xs">More</span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" id="lihat_detail_bridging_sep">View Detail</a></li>
+                              <li><a href="#">Other link</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <div class='col-md-6 text-right'>
+                      <div class="input-group" style="width:100%">
+                          <span class="input-group-addon">Cari :</span>
+                          <span class="input-group-addon" style="width:150px;padding:0 !important;background-color: #cccccc;border: 0px;text-align: left !important;">
+                          <select class="form-control" id='search_field_bridging_sep' name='search_field_bridging_sep' style="margin: 0 !important;"> 
+                              <option value='no_sep'>No Sep</option>
+<option value='no_rawat'>No Rawat</option>
+<option value='tglsep'>Tglsep</option>
+<option value='tglrujukan'>Tglrujukan</option>
+<option value='no_rujukan'>No Rujukan</option>
+<option value='kdppkrujukan'>Kdppkrujukan</option>
+<option value='nmppkrujukan'>Nmppkrujukan</option>
+<option value='kdppkpelayanan'>Kdppkpelayanan</option>
+<option value='nmppkpelayanan'>Nmppkpelayanan</option>
+<option value='jnspelayanan'>Jnspelayanan</option>
+<option value='catatan'>Catatan</option>
+<option value='diagawal'>Diagawal</option>
+<option value='nmdiagnosaawal'>Nmdiagnosaawal</option>
+<option value='kdpolitujuan'>Kdpolitujuan</option>
+<option value='nmpolitujuan'>Nmpolitujuan</option>
+<option value='klsrawat'>Klsrawat</option>
+<option value='klsnaik'>Klsnaik</option>
+<option value='pembiayaan'>Pembiayaan</option>
+<option value='pjnaikkelas'>Pjnaikkelas</option>
+<option value='lakalantas'>Lakalantas</option>
+<option value='user'>User</option>
+<option value='nomr'>Nomr</option>
+<option value='nama_pasien'>Nama Pasien</option>
+<option value='tanggal_lahir'>Tanggal Lahir</option>
+<option value='peserta'>Peserta</option>
+<option value='jkel'>Jkel</option>
+<option value='no_kartu'>No Kartu</option>
+<option value='tglpulang'>Tglpulang</option>
+<option value='asal_rujukan'>Asal Rujukan</option>
+<option value='eksekutif'>Eksekutif</option>
+<option value='cob'>Cob</option>
+<option value='notelep'>Notelep</option>
+<option value='katarak'>Katarak</option>
+<option value='tglkkl'>Tglkkl</option>
+<option value='keterangankkl'>Keterangankkl</option>
+<option value='suplesi'>Suplesi</option>
+<option value='no_sep_suplesi'>No Sep Suplesi</option>
+<option value='kdprop'>Kdprop</option>
+<option value='nmprop'>Nmprop</option>
+<option value='kdkab'>Kdkab</option>
+<option value='nmkab'>Nmkab</option>
+<option value='kdkec'>Kdkec</option>
+<option value='nmkec'>Nmkec</option>
+<option value='noskdp'>Noskdp</option>
+<option value='kddpjp'>Kddpjp</option>
+<option value='nmdpdjp'>Nmdpdjp</option>
+<option value='tujuankunjungan'>Tujuankunjungan</option>
+<option value='flagprosedur'>Flagprosedur</option>
+<option value='penunjang'>Penunjang</option>
+<option value='asesmenpelayanan'>Asesmenpelayanan</option>
+<option value='kddpjplayanan'>Kddpjplayanan</option>
+<option value='nmdpjplayanan'>Nmdpjplayanan</option>
+
+                          </select>
+                          </span>
+                          <input class='form-control' name='search_text_bridging_sep' id='search_text_bridging_sep' type='search' placeholder='Masukkan Kata Kunci Pencarian' />  
+                          <span class="input-group-addon">
+                          <span id='searchclear_bridging_sep' data-toggle='tooltip' data-placement='top' title='Clear'><i class="fa fa-times text-danger"></i></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tbl_bridging_sep" class="table table-bordered table-striped display dataTable" style="width:100%">
+                        <thead>
+                        <tr> 
+                            <th>No Sep</th>
+<th>No Rawat</th>
+<th>Tglsep</th>
+<th>Tglrujukan</th>
+<th>No Rujukan</th>
+<th>Kdppkrujukan</th>
+<th>Nmppkrujukan</th>
+<th>Kdppkpelayanan</th>
+<th>Nmppkpelayanan</th>
+<th>Jnspelayanan</th>
+<th>Catatan</th>
+<th>Diagawal</th>
+<th>Nmdiagnosaawal</th>
+<th>Kdpolitujuan</th>
+<th>Nmpolitujuan</th>
+<th>Klsrawat</th>
+<th>Klsnaik</th>
+<th>Pembiayaan</th>
+<th>Pjnaikkelas</th>
+<th>Lakalantas</th>
+<th>User</th>
+<th>Nomr</th>
+<th>Nama Pasien</th>
+<th>Tanggal Lahir</th>
+<th>Peserta</th>
+<th>Jkel</th>
+<th>No Kartu</th>
+<th>Tglpulang</th>
+<th>Asal Rujukan</th>
+<th>Eksekutif</th>
+<th>Cob</th>
+<th>Notelep</th>
+<th>Katarak</th>
+<th>Tglkkl</th>
+<th>Keterangankkl</th>
+<th>Suplesi</th>
+<th>No Sep Suplesi</th>
+<th>Kdprop</th>
+<th>Nmprop</th>
+<th>Kdkab</th>
+<th>Nmkab</th>
+<th>Kdkec</th>
+<th>Nmkec</th>
+<th>Noskdp</th>
+<th>Kddpjp</th>
+<th>Nmdpdjp</th>
+<th>Tujuankunjungan</th>
+<th>Flagprosedur</th>
+<th>Penunjang</th>
+<th>Asesmenpelayanan</th>
+<th>Kddpjplayanan</th>
+<th>Nmdpjplayanan</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>        
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Modal -->
+<div id="modal_bridging_sep" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Edit Data Data SEP</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form name="form_bridging_sep">
+          <input type="hidden" class="form-control" id="typeact" /> 
+          <label>No Sep<br /></label><input type='text' class='form-control' id='no_sep' name='no_sep' /><div><span class='error'></span></div>
+<label>No Rawat<br /></label><input type='text' class='form-control' id='no_rawat' name='no_rawat' /><div><span class='error'></span></div>
+<label>Tglsep<br /></label><input type='text' class='form-control' id='tglsep' name='tglsep' /><div><span class='error'></span></div>
+<label>Tglrujukan<br /></label><input type='text' class='form-control' id='tglrujukan' name='tglrujukan' /><div><span class='error'></span></div>
+<label>No Rujukan<br /></label><input type='text' class='form-control' id='no_rujukan' name='no_rujukan' /><div><span class='error'></span></div>
+<label>Kdppkrujukan<br /></label><input type='text' class='form-control' id='kdppkrujukan' name='kdppkrujukan' /><div><span class='error'></span></div>
+<label>Nmppkrujukan<br /></label><input type='text' class='form-control' id='nmppkrujukan' name='nmppkrujukan' /><div><span class='error'></span></div>
+<label>Kdppkpelayanan<br /></label><input type='text' class='form-control' id='kdppkpelayanan' name='kdppkpelayanan' /><div><span class='error'></span></div>
+<label>Nmppkpelayanan<br /></label><input type='text' class='form-control' id='nmppkpelayanan' name='nmppkpelayanan' /><div><span class='error'></span></div>
+<label>Jnspelayanan<br /></label><input type='text' class='form-control' id='jnspelayanan' name='jnspelayanan' /><div><span class='error'></span></div>
+<label>Catatan<br /></label><input type='text' class='form-control' id='catatan' name='catatan' /><div><span class='error'></span></div>
+<label>Diagawal<br /></label><input type='text' class='form-control' id='diagawal' name='diagawal' /><div><span class='error'></span></div>
+<label>Nmdiagnosaawal<br /></label><input type='text' class='form-control' id='nmdiagnosaawal' name='nmdiagnosaawal' /><div><span class='error'></span></div>
+<label>Kdpolitujuan<br /></label><input type='text' class='form-control' id='kdpolitujuan' name='kdpolitujuan' /><div><span class='error'></span></div>
+<label>Nmpolitujuan<br /></label><input type='text' class='form-control' id='nmpolitujuan' name='nmpolitujuan' /><div><span class='error'></span></div>
+<label>Klsrawat<br /></label><input type='text' class='form-control' id='klsrawat' name='klsrawat' /><div><span class='error'></span></div>
+<label>Klsnaik<br /></label><input type='text' class='form-control' id='klsnaik' name='klsnaik' /><div><span class='error'></span></div>
+<label>Pembiayaan<br /></label><input type='text' class='form-control' id='pembiayaan' name='pembiayaan' /><div><span class='error'></span></div>
+<label>Pjnaikkelas<br /></label><input type='text' class='form-control' id='pjnaikkelas' name='pjnaikkelas' /><div><span class='error'></span></div>
+<label>Lakalantas<br /></label><input type='text' class='form-control' id='lakalantas' name='lakalantas' /><div><span class='error'></span></div>
+<label>User<br /></label><input type='text' class='form-control' id='user' name='user' /><div><span class='error'></span></div>
+<label>Nomr<br /></label><input type='text' class='form-control' id='nomr' name='nomr' /><div><span class='error'></span></div>
+<label>Nama Pasien<br /></label><input type='text' class='form-control' id='nama_pasien' name='nama_pasien' /><div><span class='error'></span></div>
+<label>Tanggal Lahir<br /></label><input type='text' class='form-control' id='tanggal_lahir' name='tanggal_lahir' /><div><span class='error'></span></div>
+<label>Peserta<br /></label><input type='text' class='form-control' id='peserta' name='peserta' /><div><span class='error'></span></div>
+<label>Jkel<br /></label><input type='text' class='form-control' id='jkel' name='jkel' /><div><span class='error'></span></div>
+<label>No Kartu<br /></label><input type='text' class='form-control' id='no_kartu' name='no_kartu' /><div><span class='error'></span></div>
+<label>Tglpulang<br /></label><input type='text' class='form-control' id='tglpulang' name='tglpulang' /><div><span class='error'></span></div>
+<label>Asal Rujukan<br /></label><input type='text' class='form-control' id='asal_rujukan' name='asal_rujukan' /><div><span class='error'></span></div>
+<label>Eksekutif<br /></label><input type='text' class='form-control' id='eksekutif' name='eksekutif' /><div><span class='error'></span></div>
+<label>Cob<br /></label><input type='text' class='form-control' id='cob' name='cob' /><div><span class='error'></span></div>
+<label>Notelep<br /></label><input type='text' class='form-control' id='notelep' name='notelep' /><div><span class='error'></span></div>
+<label>Katarak<br /></label><input type='text' class='form-control' id='katarak' name='katarak' /><div><span class='error'></span></div>
+<label>Tglkkl<br /></label><input type='text' class='form-control' id='tglkkl' name='tglkkl' /><div><span class='error'></span></div>
+<label>Keterangankkl<br /></label><input type='text' class='form-control' id='keterangankkl' name='keterangankkl' /><div><span class='error'></span></div>
+<label>Suplesi<br /></label><input type='text' class='form-control' id='suplesi' name='suplesi' /><div><span class='error'></span></div>
+<label>No Sep Suplesi<br /></label><input type='text' class='form-control' id='no_sep_suplesi' name='no_sep_suplesi' /><div><span class='error'></span></div>
+<label>Kdprop<br /></label><input type='text' class='form-control' id='kdprop' name='kdprop' /><div><span class='error'></span></div>
+<label>Nmprop<br /></label><input type='text' class='form-control' id='nmprop' name='nmprop' /><div><span class='error'></span></div>
+<label>Kdkab<br /></label><input type='text' class='form-control' id='kdkab' name='kdkab' /><div><span class='error'></span></div>
+<label>Nmkab<br /></label><input type='text' class='form-control' id='nmkab' name='nmkab' /><div><span class='error'></span></div>
+<label>Kdkec<br /></label><input type='text' class='form-control' id='kdkec' name='kdkec' /><div><span class='error'></span></div>
+<label>Nmkec<br /></label><input type='text' class='form-control' id='nmkec' name='nmkec' /><div><span class='error'></span></div>
+<label>Noskdp<br /></label><input type='text' class='form-control' id='noskdp' name='noskdp' /><div><span class='error'></span></div>
+<label>Kddpjp<br /></label><input type='text' class='form-control' id='kddpjp' name='kddpjp' /><div><span class='error'></span></div>
+<label>Nmdpdjp<br /></label><input type='text' class='form-control' id='nmdpdjp' name='nmdpdjp' /><div><span class='error'></span></div>
+<label>Tujuankunjungan<br /></label><input type='text' class='form-control' id='tujuankunjungan' name='tujuankunjungan' /><div><span class='error'></span></div>
+<label>Flagprosedur<br /></label><input type='text' class='form-control' id='flagprosedur' name='flagprosedur' /><div><span class='error'></span></div>
+<label>Penunjang<br /></label><input type='text' class='form-control' id='penunjang' name='penunjang' /><div><span class='error'></span></div>
+<label>Asesmenpelayanan<br /></label><input type='text' class='form-control' id='asesmenpelayanan' name='asesmenpelayanan' /><div><span class='error'></span></div>
+<label>Kddpjplayanan<br /></label><input type='text' class='form-control' id='kddpjplayanan' name='kddpjplayanan' /><div><span class='error'></span></div>
+<label>Nmdpjplayanan<br /></label><input type='text' class='form-control' id='nmdpjplayanan' name='nmdpjplayanan' /><div><span class='error'></span></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="simpan_data_bridging_sep" class="btn btn-primary">Simpan Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_lihat_bridging_sep" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Lihat Data Data SEP</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="forTable_bridging_sep"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="export_pdf" class="btn btn-primary">
+          <i class="fa fa-file-pdf-o"></i>&nbsp;PDF </button>
+        <button type="submit" id="export_xlsx" class="btn btn-primary">
+          <i class="fa fa-file-excel-o"></i>&nbsp;XLSX </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_detail_bridging_sep" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>

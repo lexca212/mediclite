@@ -1,0 +1,919 @@
+<div class="modal-header" style="border-bottom: 0px #fff solid;">
+    <div class="row">
+      <div class="col col-md-12">
+          <div class="input-group">
+            <input type="text" id="cari_modul" minlength="3" class="form-control" placeholder="Pencarian modul..." required>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"  data-dismiss="modal"><i class="fa fa-close"></i></button>
+            </span>
+          </div>
+      </div>
+    </div>
+</div>
+<div class="modal-body" style="height: 90vh;overflow-y: auto;">
+    <div class="row">
+        <ul id="list_modul" class="modules" style="padding:0;margin:0;">
+            <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/dashboard/main?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-cubes"></i>
+                            <div class="desc">
+                                Dashboard                            </div>
+                        </div>
+                        <h4><b>Dashboard</b></h4>
+                    </a>
+                </div>
+            </li>                    
+                                                            <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/master/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-cubes"></i>
+                            <div class="desc">
+                                Data master awal mLITE                            </div>
+                        </div>
+                        <h4><b>Master Data</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/wagateway/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-whatsapp"></i>
+                            <div class="desc">
+                                Modul Whatsapp Gateway mLITE                            </div>
+                        </div>
+                        <h4><b>WA Gateway</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div class="desc">
+                                Modul apotek rawat jalan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Apotek Ralan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/dokter_ralan/index?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-user-md"></i>
+                            <div class="desc">
+                                Modul dokter rawat jalan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Dokter Ralan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/igd/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-ambulance"></i>
+                            <div class="desc">
+                                Modul igd untuk mLITE                            </div>
+                        </div>
+                        <h4><b>IGD</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/dokter_igd/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-user-md"></i>
+                            <div class="desc">
+                                Modul dokter IGD untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Dokter IGD</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/laboratorium/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-flask"></i>
+                            <div class="desc">
+                                Modul Laboratorium untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Laboratorium</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/radiologi/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-film"></i>
+                            <div class="desc">
+                                Modul Radiologi untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Radiologi</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/icd_10/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul penyakit untuk mLITE                            </div>
+                        </div>
+                        <h4><b>ICD 10</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/rawat_inap/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-hotel"></i>
+                            <div class="desc">
+                                Modul rawat inap untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Rawat Inap</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/apotek_ranap/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div class="desc">
+                                Modul apotek rawat inap untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Apotek Ranap</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/pasien/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-users"></i>
+                            <div class="desc">
+                                Modul data pasien untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Pendaftaran Pasien</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/dokter_ranap/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-user-md"></i>
+                            <div class="desc">
+                                Modul dokter rawat inap untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Dokter Ranap</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/kasir_rawat_inap/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-money"></i>
+                            <div class="desc">
+                                Modul kasir rawat inap untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Kasir Rawat Inap</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/operasi/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-bolt"></i>
+                            <div class="desc">
+                                Modul operasi dan VK di mLITE                            </div>
+                        </div>
+                        <h4><b>Operasi</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/anjungan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-desktop"></i>
+                            <div class="desc">
+                                Modul anjungan pasien rawat jalan                            </div>
+                        </div>
+                        <h4><b>Anjungan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/api/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-database"></i>
+                            <div class="desc">
+                                Katalog API mLITE                            </div>
+                        </div>
+                        <h4><b>API</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/jkn_mobile/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-tasks"></i>
+                            <div class="desc">
+                                Modul mLITE JKN Mobile API                            </div>
+                        </div>
+                        <h4><b>JKN Mobile</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/vclaim/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-database"></i>
+                            <div class="desc">
+                                Modul vclaim api untuk mLITE                            </div>
+                        </div>
+                        <h4><b>VClaim Request</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/keuangan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-money"></i>
+                            <div class="desc">
+                                Modul Keuangan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Keuangan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/manajemen/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-dashboard"></i>
+                            <div class="desc">
+                                Modul manajemen untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Manajemen</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/presensi/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-user-o"></i>
+                            <div class="desc">
+                                Modul presensi                            </div>
+                        </div>
+                        <h4><b>Presensi</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/rawat_jalan/index?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-wheelchair"></i>
+                            <div class="desc">
+                                Modul pendaftaran layanan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Rawat Jalan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/vedika/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul klaim online Vedika BPJS                            </div>
+                        </div>
+                        <h4><b>Vedika</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/profil/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-address-book"></i>
+                            <div class="desc">
+                                Modul profil                            </div>
+                        </div>
+                        <h4><b>Profil</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/orthanc/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-bolt"></i>
+                            <div class="desc">
+                                Bridging PACS via Orthanc                            </div>
+                        </div>
+                        <h4><b>Orthanc</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/veronisa/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-medkit"></i>
+                            <div class="desc">
+                                Modul Verifikasi Obat Kronis                            </div>
+                        </div>
+                        <h4><b>Veronisa</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/icd_9/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul icd9 untuk mLITE                            </div>
+                        </div>
+                        <h4><b>ICD 9</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/crud_generator/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul CRUD Generator untuk mempermudah pembuatan modul baru                            </div>
+                        </div>
+                        <h4><b>CRUD Generator</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/darurat_stok/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul databarang untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Darurat Stok</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/detail_pemberian_obat/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul detail pemberian obat untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Detail Pemberian Obat</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/riwayat_barang_medis/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul riwayat barang medis untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Riwayat Barang Medis</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/khanza_referensi_mjkn_taskid/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul referensi mobilejkn bpjs taskid untuk mLITE                            </div>
+                        </div>
+                        <h4><b>khanza referensi mjkn taskid</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/kasir_rawat_jalan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-money"></i>
+                            <div class="desc">
+                                Modul kasir rawat jalan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Kasir Rawat Jalan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/opm/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul opname untuk mLITE                            </div>
+                        </div>
+                        <h4><b>opm</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/khanzatrackerlogin/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul trackersql untuk mLITE                            </div>
+                        </div>
+                        <h4><b>khanzaTrackerLogin</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/khanza_referensi_mjkn_bpjs/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul referensi mobilejkn bpjs untuk mLITE                            </div>
+                        </div>
+                        <h4><b>khanza referensi mjkn bpjs</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/khanza_surat_kontrol_bpjs/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul bridging surat kontrol bpjs untuk mLITE                            </div>
+                        </div>
+                        <h4><b>khanza surat kontrol bpjs</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/perkiraan_biaya_ranap/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul perkiraan biaya ranap untuk mLITE                            </div>
+                        </div>
+                        <h4><b>perkiraan biaya ranap</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/kelahiran_bayo/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul pasien bayi untuk mLITE                            </div>
+                        </div>
+                        <h4><b>kelahiran bayo</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/grafik_fenton/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite fenton untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Grafik Fenton</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/triase/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite triase untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Triase</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/reg_periksa/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul reg periksa untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Reg periksa</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/kepegawaian/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-group"></i>
+                            <div class="desc">
+                                Pengelolaan data kepegawaian mLITE.                            </div>
+                        </div>
+                        <h4><b>Kepegawaian</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/icare/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-plus-square"></i>
+                            <div class="desc">
+                                Modul iCare BPJS                            </div>
+                        </div>
+                        <h4><b>iCare</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/penjualan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-cart-plus"></i>
+                            <div class="desc">
+                                Modul penjualan bebas                            </div>
+                        </div>
+                        <h4><b>Penjualan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/inventaris/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-cog"></i>
+                            <div class="desc">
+                                Modul inventaris, pemeliharana dan perbaikan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Inventaris</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/jurnal_/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul detailjurnal untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Jurnal </b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/penjualan_bebas/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul penjualan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Penjualan bebas</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/website/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-pencil-square"></i>
+                            <div class="desc">
+                                Membuat website dan berita.                            </div>
+                        </div>
+                        <h4><b>Website</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/bridging_hfis/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-shield"></i>
+                            <div class="desc">
+                                Modul Bridging HFIS di mLITE                            </div>
+                        </div>
+                        <h4><b>Bridging HFIS</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/mutasi_berkas/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mutasi berkas untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Mutasi berkas</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/mlite_penjualan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite penjualan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>mlite penjualan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/mlite_penjualan_biling/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite penjualan billing untuk mLITE                            </div>
+                        </div>
+                        <h4><b>mlite_penjualan_biling</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/farmasi/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-medkit"></i>
+                            <div class="desc">
+                                Pengelolaan data gudang farmasi.                            </div>
+                        </div>
+                        <h4><b>Farmasi</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/mlite_penjualan_detail/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite penjualan detail untuk mLITE                            </div>
+                        </div>
+                        <h4><b>mlite_penjualan_detail</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/afm/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-laptop"></i>
+                            <div class="desc">
+                                Katalog API AFM mLITE                            </div>
+                        </div>
+                        <h4><b>AFM</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/pemeriksaan_ralan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul pemeriksaan ralan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>pemeriksaan ralan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/plafon/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul plafon untuk mLITE                            </div>
+                        </div>
+                        <h4><b>plafon</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/jasa_medis_dokter/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul dokter untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Jasa Medis Dokter</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/jasa_medis_perawat/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul dokter untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Jasa Medis Perawat</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/laporan_bpjs/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite antrian referensi untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Laporan BPJS</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/log_antrian_taskid/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite antrian referensi taskid untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Log Antrian TaskID</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/mlite_antrian_referensi/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite antrian referensi untuk mLITE                            </div>
+                        </div>
+                        <h4><b>mlite_antrian referensi</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/modules/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-plug"></i>
+                            <div class="desc">
+                                Pengelolaan modul                            </div>
+                        </div>
+                        <h4><b>Modul-Modul</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/data_sep/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul bridging sep untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Data SEP</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/surat_sehat/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite surat sehat untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Surat Sehat</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/masuk_nicu/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul mlite masuk nicu untuk mLITE                            </div>
+                        </div>
+                        <h4><b>masuk nicu</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/bpjs_sep/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-code"></i>
+                            <div class="desc">
+                                Modul bridging sep untuk mLITE                            </div>
+                        </div>
+                        <h4><b>BPJS SEP</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/kunjungan_ralan/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-bar-chart"></i>
+                            <div class="desc">
+                                Modul Kunjungan Ralan untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Kunjungan RS</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/data_analys/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-bar-chart"></i>
+                            <div class="desc">
+                                Modul Kunjungan BOR untuk mLITE                            </div>
+                        </div>
+                        <h4><b>Data Analys</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/users/index?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-user"></i>
+                            <div class="desc">
+                                Pengelolaan pengguna                            </div>
+                        </div>
+                        <h4><b>Pengguna</b></h4>
+                    </a>
+                </div>
+            </li>
+                                                <li class="module">
+                <div class="panel panel-default">
+                    <a href="http://localhost/mediclite/admin/settings/manage?t=fb4fad129e7a" class="panel-body text-center">
+                        <div class="panel-thumb">
+                            <i class="fa fa-wrench"></i>
+                            <div class="desc">
+                                Pengelolaan pengaturan                            </div>
+                        </div>
+                        <h4><b>Pengaturan</b></h4>
+                    </a>
+                </div>
+            </li>
+                                </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#cari_modul").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#list_modul li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    $("#moduleModal").on('hidden.bs.modal', function (e) {
+        $("#moduleModal iframe").attr("src", $("#moduleModal iframe").attr("src"));
+    });
+</script>

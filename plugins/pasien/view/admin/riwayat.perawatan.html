@@ -1,0 +1,3860 @@
+<style media="screen">
+  table td,
+  table th {
+    padding: 5px;
+  }
+  
+  /* Styling untuk kotak dialog utama */
+  .custom-confirm-box .modal-content {
+      background-color: #f0f0f0; /* Ganti dengan warna yang diinginkan */
+      color: #333;
+  }
+
+  /* Styling untuk bagian header (opsional) */
+  .custom-confirm-box .modal-header {
+      background-color: #d9edf7; /* Contoh warna lain */
+      color: #31708f;
+  }
+</style>
+<script type="text/javascript">
+  function nWin() {
+    var w = window.open();
+    var html = $("#toNewWindow").html();
+
+      $(w.document.body).html(html);
+      w.print();
+      w.close();
+  }
+
+  $(function() {
+      $("a#print").click(nWin);
+  });
+</script>
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Tutup</button>
+    <h4 class="modal-title">Riwayat Perawatan</h4>
+</div>
+<div class="modal-body">
+  <div id="toNewWindow">
+    <h4>Data Riwayat Perawatan Pasien</h4>
+    <div class="table table-responsive">
+      <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+        <tr class="isi">
+          <td valign="top" width="20%">No.RM</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%"><span id="no_rkm_medis">{$riwayat.pasien.no_rkm_medis}</span></td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Nama Pasien</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.nm_pasien}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Alamat</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.alamat}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Umur</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.umur} Tahun ({if: $riwayat.pasien.jk == 'L'}Laki-Laki{else}Perempuan{/if})</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Tanggal Lahir</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.tgl_lahir}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Ibu Kandung</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.nm_ibu}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Golongan Darah</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.gol_darah}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Status Nikah</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.stts_nikah}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Agama</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.agama}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Pendidikan Terakhir</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.pnd}</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Pertama Daftar</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">{$riwayat.pasien.tgl_daftar}</td>
+        </tr>
+      </table>
+
+      <h4 class="m-t-xl">Data Riwayat</h4>
+
+      {loop: $riwayat.reg_periksa}
+        <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+          <tr class="isi">
+            <td valign="top" width="20%">No.Rawat</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">{$value.no_rawat}</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">No.Registrasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">{$value.no_reg}</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Tanggal Registrasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">{$value.tgl_registrasi}</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Unit/Poliklinik</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">{$value.nm_poli}</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Dokter</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">{$value.nama_dokter}</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Penjamin</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">{$value.png_jawab}</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Status</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">{$value.status_lanjut}</td>
+          </tr>
+          {if: $value.diagnosa_pasien}
+          <tr class="isi">
+            <td valign="top" width="20%">Diagnosa/Penyakit/ICD 10</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="icd">
+                <tr align="center">
+                  <td valign="top" width="100px" bgcolor="#eee">Kode</td>
+                  <td valign="top" bgcolor="#eee">Nama Penyakit</td>
+                  <td valign="top" width="100px" bgcolor="#eee">Prioritas</td>
+                </tr>
+                {loop: $value.diagnosa_pasien as $data}
+                <tr>
+                  <td valign="top" width="100px">{$data.kd_penyakit}</td>
+                  <td valign="top">{$data.nm_penyakit}</td>
+                  <td valign="top" width="100px">{$data.prioritas}</td>
+                </tr>
+                {/loop}
+              </table>
+            </td>
+          </tr>
+          {/if}
+          {if: $value.prosedur_pasien}
+          <tr class="isi">
+            <td valign="top" width="20%">Prosedur Tindakan/ICD 9</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="icd">
+                <tr align="center">
+                  <td valign="top" width="100px" bgcolor="#eee">Kode</td>
+                  <td valign="top" bgcolor="#eee">Nama Prosedur</td>
+                  <td valign="top" width="100px" bgcolor="#eee">Prioritas</td>
+                </tr>
+                {loop: $value.prosedur_pasien as $data}
+                <tr>
+                  <td valign="top" width="100px">{$data.kode}</td>
+                  <td valign="top">{$data.deskripsi_panjang}</td>
+                  <td valign="top" width="10100pxpx">{$data.prioritas}</td>
+                </tr>
+                {/loop}
+              </table>
+            </td>
+          </tr>
+          {/if}
+          {if: $value.penilaian_medis_ralan_kandungan}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan Kebidanan & Kandungan</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_kandungan.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_kandungan.kd_dokter} {$value.penilaian_medis_ralan_kandungan.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_kandungan.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan_kandungan.hubungan)}
+                      , {$value.penilaian_medis_ralan_kandungan.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Keluarga
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.rpk}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Keadaan Umum :</strong> {$value.penilaian_medis_ralan_kandungan.keadaan}<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan_kandungan.bb} kg<br>
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan_kandungan.suhu} °C<br>
+                      <strong>Gigi & Mulut :</strong> {$value.penilaian_medis_ralan_kandungan.gigi}<br>
+                      <strong>Genital & Anus :</strong> {$value.penilaian_medis_ralan_kandungan.genital}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> {$value.penilaian_medis_ralan_kandungan.kesadaran}<br>
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan_kandungan.td} mmHg<br>
+                      <strong>SpO2 :</strong> {$value.penilaian_medis_ralan_kandungan.spo} %<br>
+                      <strong>THT :</strong> {$value.penilaian_medis_ralan_kandungan.tht}<br>
+                      <strong>Ekstremitas :</strong> {$value.penilaian_medis_ralan_kandungan.ekstremitas}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>GCS(E,V,M) :</strong> {$value.penilaian_medis_ralan_kandungan.gcs}<br>
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan_kandungan.nadi} x/menit<br>
+                      <strong>Kepala :</strong> {$value.penilaian_medis_ralan_kandungan.kepala}<br>
+                      <strong>Thoraks :</strong> {$value.penilaian_medis_ralan_kandungan.thoraks}<br>
+                      <strong>Kulit :</strong> {$value.penilaian_medis_ralan_kandungan.kulit}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TB :</strong> {$value.penilaian_medis_ralan_kandungan.tb} cm<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan_kandungan.rr} x/menit<br>
+                      <strong>Mata :</strong> {$value.penilaian_medis_ralan_kandungan.mata}<br>
+                      <strong>Abdomen :</strong> {$value.penilaian_medis_ralan_kandungan.abdomen}<br>
+                      <strong>Keterangan Fisik :</strong> {$value.penilaian_medis_ralan_kandungan.ket_fisik}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS OBSTETRI / GINEKOLOGI</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <strong>TFU :</strong> {$value.penilaian_medis_ralan_kandungan.tfu} cm<br>
+                    </td>
+                    <td valign="top" width="20%" colspan="2">
+                      <strong>TBJ :</strong> {$value.penilaian_medis_ralan_kandungan.tbj} gram<br>
+                    </td>
+                    <td valign="top" width="20%" colspan="2">
+                      <strong>His :</strong> {$value.penilaian_medis_ralan_kandungan.his} x/10 Menit<br>
+                    </td>
+                    <td valign="top" width="20%" colspan="2">
+                      <strong>Kontraksi :</strong> {$value.penilaian_medis_ralan_kandungan.kontraksi}<br>
+                    </td>
+                    <td valign="top" width="20%" colspan="2">
+                      <strong>DJJ :</strong> {$value.penilaian_medis_ralan_kandungan.djj} Dpm<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="50%" colspan="4">
+                      <strong>Inspeksi :</strong> {$value.penilaian_medis_ralan_kandungan.inspeksi}<br>
+                    </td>
+                    <td valign="top" width="50%" colspan="4">
+                      <strong>VT :</strong> {$value.penilaian_medis_ralan_kandungan.vt}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="50%" colspan="4">
+                      <strong>Inspekulo :</strong> {$value.penilaian_medis_ralan_kandungan.inspekulo}<br>
+                    </td>
+                    <td valign="top" width="50%" colspan="4">
+                      <strong>RT :</strong> {$value.penilaian_medis_ralan_kandungan.rt}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      <strong>Ultrasonografi :</strong> {$value.penilaian_medis_ralan_kandungan.ultra}<br>
+                    </td>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Kardiotokografi :</strong> {$value.penilaian_medis_ralan_kandungan.kardio}<br>
+                    </td>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Laboratorium :</strong> {$value.penilaian_medis_ralan_kandungan.lab}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.diagnosis}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.tata}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. KONSUL/RUJUK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_kandungan.konsul}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+
+          <!-- PENILAIAN AWAL MEDIS IGD -->
+          {if: $value.penilaian_medis_igd}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis IGD</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_igd.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_igd.kd_dokter} {$value.penilaian_medis_igd.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_igd.anamnesis}
+                      {if: !empty($value.penilaian_medis_igd.hubungan)}
+                      , {$value.penilaian_medis_igd.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_igd.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_igd.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_igd.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_igd.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Keluarga
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_igd.rpk}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_igd.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Keadaan Umum :</strong> {$value.penilaian_medis_igd.keadaan}<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_igd.bb} kg<br>
+                      <strong>Suhu :</strong> {$value.penilaian_medis_igd.suhu} °C<br>
+                      <strong>Gigi & Mulut :</strong> {$value.penilaian_medis_igd.gigi}<br>
+                      <strong>Genital & Anus :</strong> {$value.penilaian_medis_igd.genital}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> {$value.penilaian_medis_igd.kesadaran}<br>
+                      <strong>TD :</strong> {$value.penilaian_medis_igd.td} mmHg<br>
+                      <strong>SpO2 :</strong> {$value.penilaian_medis_igd.spo} %<br>
+                      <strong>Leher :</strong> {$value.penilaian_medis_igd.leher}<br>
+                      <strong>Ekstremitas :</strong> {$value.penilaian_medis_igd.ekstremitas}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>GCS(E,V,M) :</strong> {$value.penilaian_medis_igd.gcs}<br>
+                      <strong>Nadi :</strong> {$value.penilaian_medis_igd.nadi} x/menit<br>
+                      <strong>Kepala :</strong> {$value.penilaian_medis_igd.kepala}<br>
+                      <strong>Thoraks :</strong> {$value.penilaian_medis_igd.thoraks}<br>
+                      <strong>Keterangan Fisik :</strong> {$value.penilaian_medis_igd.ket_fisik}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TB :</strong> {$value.penilaian_medis_igd.tb} cm<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_igd.rr} x/menit<br>
+                      <strong>Mata :</strong> {$value.penilaian_medis_igd.mata}<br>
+                      <strong>Abdomen :</strong> {$value.penilaian_medis_igd.abdomen}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='{?=url()?}/assets/images/semua.png' width='100%' height='400'/>
+                      <br>
+                      <strong>Keterangan :</strong> {$value.penilaian_medis_igd.ket_lokalis}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      <strong>EKG :</strong> {$value.penilaian_medis_igd.ekg}<br>
+                    </td>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Radiologi :</strong> {$value.penilaian_medis_igd.rad}<br>
+                    </td>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Laboratorium :</strong> {$value.penilaian_medis_igd.lab}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_igd.diagnosis}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_igd.tata}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL MEDIS IGD -->
+
+          <!-- PENILAIAN AWAL RALAN UMUM -->
+          {if: $value.penilaian_medis_ralan}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan Umum</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan.kd_dokter} {$value.penilaian_medis_ralan.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan.hubungan)}
+                      , {$value.penilaian_medis_ralan.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Keluarga
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan.rpk}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Keadaan Umum :</strong> {$value.penilaian_medis_ralan.keadaan}<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan.bb} kg<br>
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan.suhu} °C<br>
+                      <strong>THT :</strong> {$value.penilaian_medis_ralan.tht}<br>
+                      <strong>Ekstremitas :</strong> {$value.penilaian_medis_ralan.ekstremitas}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> {$value.penilaian_medis_ralan.kesadaran}<br>
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan.td} mmHg<br>
+                      <strong>SpO2 :</strong> {$value.penilaian_medis_ralan.spo} %<br>
+                      <strong>Thoraks :</strong> {$value.penilaian_medis_ralan.thoraks}<br>
+                      <strong>Kulit :</strong> {$value.penilaian_medis_ralan.kulit}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>GCS(E,V,M) :</strong> {$value.penilaian_medis_ralan.gcs}<br>
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan.nadi} x/menit<br>
+                      <strong>Kepala :</strong> {$value.penilaian_medis_ralan.kepala}<br>
+                      <strong>Abdomen :</strong> {$value.penilaian_medis_ralan.abdomen}<br>
+                      <strong>Keterangan Fisik :</strong> {$value.penilaian_medis_ralan.ket_fisik}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TB :</strong> {$value.penilaian_medis_ralan.tb} cm<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan.rr} x/menit<br>
+                      <strong>Gigi & Mulut :</strong> {$value.penilaian_medis_ralan.gigi}<br>
+                      <strong>Genital & Anus :</strong> {$value.penilaian_medis_ralan.genital}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='{$mlite.path}/assets/images/semua.png' width='100%' height='400'/>
+                      <br>
+                      <strong>Keterangan :</strong> {$value.penilaian_medis_ralan.ket_lokalis}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan.penunjang}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan.diagnosis}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan.tata}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. KONSUL/RUJUK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan.konsulrujuk}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL RALAN UMUM -->
+
+          <!-- PENILAIAN AWAL RALAN BAYI / ANAK -->
+          {if: $value.penilaian_medis_ralan_anak}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan Bayi/Anak</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_anak.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_anak.kd_dokter} {$value.penilaian_medis_ralan_anak.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_anak.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan_anak.hubungan)}
+                      , {$value.penilaian_medis_ralan_anak.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Keluarga
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.rpk}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Keadaan Umum :</strong> {$value.penilaian_medis_ralan_anak.keadaan}<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan_anak.bb} kg<br>
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan_anak.suhu} °C<br>
+                      <strong>Gigi & Mulut :</strong> {$value.penilaian_medis_ralan_anak.gigi}<br>
+                      <strong>Genital & Anus :</strong> {$value.penilaian_medis_ralan_anak.genital}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> {$value.penilaian_medis_ralan_anak.kesadaran}<br>
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan_anak.td} mmHg<br>
+                      <strong>SpO2 :</strong> {$value.penilaian_medis_ralan_anak.spo} %<br>
+                      <strong>THT :</strong> {$value.penilaian_medis_ralan_anak.tht}<br>
+                      <strong>Ekstremitas :</strong> {$value.penilaian_medis_ralan_anak.ekstremitas}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>GCS(E,V,M) :</strong> {$value.penilaian_medis_ralan_anak.gcs}<br>
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan_anak.nadi} x/menit<br>
+                      <strong>Kepala :</strong> {$value.penilaian_medis_ralan_anak.kepala}<br>
+                      <strong>Thoraks :</strong> {$value.penilaian_medis_ralan_anak.thoraks}<br>
+                      <strong>Kulit :</strong> {$value.penilaian_medis_ralan_anak.kulit}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TB :</strong> {$value.penilaian_medis_ralan_anak.tb} cm<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan_anak.rr} x/menit<br>
+                      <strong>Mata :</strong> {$value.penilaian_medis_ralan_anak.mata}<br>
+                      <strong>Abdomen :</strong> {$value.penilaian_medis_ralan_anak.abdomen}<br>
+                      <strong>Keterangan Fisik :</strong> {$value.penilaian_medis_ralan_anak.ket_fisik}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='{$mlite.path}/assets/images/semua.png' width='100%' height='400'/>
+                      <br>
+                      <strong>Keterangan :</strong> {$value.penilaian_medis_ralan_anak.ket_lokalis}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.penunjang}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.diagnosis}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.tata}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. KONSUL/RUJUK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_anak.konsulrujuk}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL RALAN BAYI / ANAK -->
+
+          <!-- PENILAIAN AWAL RALAN BEDAH -->
+          {if: $value.penilaian_medis_ralan_bedah}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan Bedah</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_bedah.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_bedah.kd_dokter} {$value.penilaian_medis_ralan_bedah.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_bedah.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan_bedah.hubungan)}
+                      , {$value.penilaian_medis_ralan_bedah.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_bedah.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_bedah.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_bedah.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_bedah.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_bedah.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> {$value.penilaian_medis_ralan_bedah.kesadaran}<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan_bedah.rr} x/menit<br>
+                      <strong>GCS(E,V,M) :</strong> {$value.penilaian_medis_ralan_bedah.gcs}<br>
+                      <strong>Ekstremitas :</strong> {$value.penilaian_medis_ralan_bedah.ekstremitas}<br>
+                      <strong>Keterangan Lainnya :</strong> {$value.penilaian_medis_ralan_bedah.lainnya}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan_bedah.td} mmHg<br>
+                      <strong>Status Nutrisi :</strong> {$value.penilaian_medis_ralan_bedah.status}<br>
+                      <strong>Kepala :</strong> {$value.penilaian_medis_ralan_bedah.kepala}<br>
+                      <strong>Columna Vertebralis :</strong> {$value.penilaian_medis_ralan_bedah.columna}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan_bedah.nadi} x/menit<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan_bedah.bb} kg<br>
+                      <strong>Thoraks :</strong> {$value.penilaian_medis_ralan_bedah.thoraks}<br>
+                      <strong>Muskuloskeletal :</strong> {$value.penilaian_medis_ralan_bedah.muskulos}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan_bedah.suhu} °C<br>
+                      <strong>Nyeri :</strong> {$value.penilaian_medis_ralan_bedah.nyeri}<br>
+                      <strong>Abdomen :</strong> {$value.penilaian_medis_ralan_bedah.abdomen}<br>
+                      <strong>Genetalia Os Pubis :</strong> {$value.penilaian_medis_ralan_bedah.genetalia}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='{$mlite.path}/assets/images/LokalisOrtho.png' width='100%' height='400'/>
+                      <br>
+                      <strong>Keterangan :</strong> {$value.penilaian_medis_ralan_bedah.ket_lokalis}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Laboratorium :</strong> {$value.penilaian_medis_ralan_bedah.lab}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Radiologi :</strong> {$value.penilaian_medis_ralan_bedah.rad}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Penunjang Lainnya :</strong> {$value.penilaian_medis_ralan_bedah.pemeriksaan}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Kerja : {$value.penilaian_medis_ralan_bedah.diagnosis}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Banding : {$value.penilaian_medis_ralan_bedah.diagnosis2}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. PERMASALAHAN & TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Permasalahan : {$value.penilaian_medis_ralan_bedah.permasalahan}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Terapi/Pengobatan : {$value.penilaian_medis_ralan_bedah.terapi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Tindakan/Rencana Tindakan : {$value.penilaian_medis_ralan_bedah.tindakan}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. EDUKASI</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_bedah.edukasi}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL RALAN BEDAH -->    
+           
+          <!-- PENILAIAN AWAL RALAN MATA -->
+          {if: $value.penilaian_medis_ralan_mata}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan Mata</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_mata.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_mata.kd_dokter} {$value.penilaian_medis_ralan_mata.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_mata.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan_mata.hubungan)}
+                      , {$value.penilaian_medis_ralan_mata.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_mata.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_mata.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_mata.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_mata.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_mata.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan_mata.td} mmHg<br>
+                      <strong>Nyeri :</strong> {$value.penilaian_medis_ralan_mata.nyeri}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan_mata.bb} kg<br>
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan_mata.suhu} °C<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Status Nutrisi :</strong> {$value.penilaian_medis_ralan_mata.status}<br>
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan_mata.nadi} x/menit<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan_mata.rr} x/menit<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS OFTAMOLOGIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="35%" bgcolor="#eee" style="text-align: center;">OD : Mata Kanan</td>
+                    <td valign="top" width="30%" bgcolor="#eee" style="text-align: center;">Status</td>
+                    <td valign="top" width="35%" bgcolor="#eee" style="text-align: center;">OS : Mata Kiri</td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      <img alt='Gambar Mata Kanan' src='{$mlite.path}/assets/images/mata.png' width='170' height='70'/>
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      <img alt='Gambar Mata Kiri' src='{$mlite.path}/assets/images/mata.png' width='170' height='70'/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.visuskanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Visus SC
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.visuskiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.cckanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      CC
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.cckiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.palkanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Palpebra
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.palkiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.conkanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Conjungtiva
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.conkiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.corneakanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Cornea
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.corneakiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.coakanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      COA
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.coakiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.pupilkanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Pupil
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.pupilkiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.lensakanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Lensa
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.lensakiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.funduskanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Fundus Media
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.funduskiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.papilkanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Papil
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.papilkiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.retinakanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Retina
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.retinakiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.makulakanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      Makula
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.makulakiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.tiokanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      TIO
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.tiokiri}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.mbokanan}
+                    </td>
+                    <td valign="top" width="30%" style="text-align: center;">
+                      MBO
+                    </td>
+                    <td valign="top" width="35%" style="text-align: center;">
+                      {$value.penilaian_medis_ralan_mata.mbokiri}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Laboratorium :</strong> {$value.penilaian_medis_ralan_mata.lab}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Radiologi :</strong> {$value.penilaian_medis_ralan_mata.rad}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Penunjang Lainnya :</strong> {$value.penilaian_medis_ralan_mata.penunjang}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Tes Penglihatan :</strong> {$value.penilaian_medis_ralan_mata.tes}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Pemeriksaan Lain :</strong> {$value.penilaian_medis_ralan_mata.pemeriksaan}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Kerja : {$value.penilaian_medis_ralan_mata.diagnosis}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Banding : {$value.penilaian_medis_ralan_mata.diagnosisbdg}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. PERMASALAHAN & TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Permasalahan : {$value.penilaian_medis_ralan_mata.permasalahan}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Terapi/Pengobatan : {$value.penilaian_medis_ralan_mata.terapi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Tindakan/Rencana Tindakan : {$value.penilaian_medis_ralan_mata.tindakan}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. EDUKASI</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_mata.edukasi}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL RALAN MATA -->
+
+          <!-- PENILAIAN AWAL RALAN ORTHOPEDI -->
+          {if: $value.penilaian_medis_ralan_orthopedi}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan Orthopedi</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_orthopedi.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_orthopedi.kd_dokter} {$value.penilaian_medis_ralan_orthopedi.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_orthopedi.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan_orthopedi.hubungan)}
+                      , {$value.penilaian_medis_ralan_orthopedi.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_orthopedi.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_orthopedi.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_orthopedi.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_orthopedi.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_orthopedi.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> {$value.penilaian_medis_ralan_orthopedi.kesadaran}<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan_orthopedi.rr} x/menit<br>
+                      <strong>GCS(E,V,M) :</strong> {$value.penilaian_medis_ralan_orthopedi.gcs}<br>
+                      <strong>Ekstremitas :</strong> {$value.penilaian_medis_ralan_orthopedi.ekstremitas}<br>
+                      <strong>Keterangan Lainnya :</strong> {$value.penilaian_medis_ralan_orthopedi.lainnya}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan_orthopedi.td} mmHg<br>
+                      <strong>Status Nutrisi :</strong> {$value.penilaian_medis_ralan_orthopedi.status}<br>
+                      <strong>Kepala :</strong> {$value.penilaian_medis_ralan_orthopedi.kepala}<br>
+                      <strong>Columna Vertebralis :</strong> {$value.penilaian_medis_ralan_orthopedi.columna}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan_orthopedi.nadi} x/menit<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan_orthopedi.bb} kg<br>
+                      <strong>Thoraks :</strong> {$value.penilaian_medis_ralan_orthopedi.thoraks}<br>
+                      <strong>Muskuloskeletal :</strong> {$value.penilaian_medis_ralan_orthopedi.muskulos}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan_orthopedi.suhu} °C<br>
+                      <strong>Nyeri :</strong> {$value.penilaian_medis_ralan_orthopedi.nyeri}<br>
+                      <strong>Abdomen :</strong> {$value.penilaian_medis_ralan_orthopedi.abdomen}<br>
+                      <strong>Genetalia Os Pubis :</strong> {$value.penilaian_medis_ralan_orthopedi.genetalia}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='{$mlite.path}/assets/images/LokalisOrtho.png' width='100%' height='400'/>
+                      <br>
+                      <strong>Keterangan :</strong> {$value.penilaian_medis_ralan_orthopedi.ket_lokalis}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Laboratorium :</strong> {$value.penilaian_medis_ralan_orthopedi.lab}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Radiologi :</strong> {$value.penilaian_medis_ralan_orthopedi.rad}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Penunjang Lainnya :</strong> {$value.penilaian_medis_ralan_orthopedi.pemeriksaan}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Kerja : {$value.penilaian_medis_ralan_orthopedi.diagnosis}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Banding : {$value.penilaian_medis_ralan_orthopedi.diagnosis2}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. PERMASALAHAN & TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Permasalahan : {$value.penilaian_medis_ralan_orthopedi.permasalahan}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Terapi/Pengobatan : {$value.penilaian_medis_ralan_orthopedi.terapi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Tindakan/Rencana Tindakan : {$value.penilaian_medis_ralan_orthopedi.tindakan}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. EDUKASI</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_orthopedi.edukasi}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL RALAN ORTHOPEDI --> 
+
+          <!-- PENILAIAN AWAL RALAN PARU -->
+          {if: $value.penilaian_medis_ralan_paru}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan Paru</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_paru.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_paru.kd_dokter} {$value.penilaian_medis_ralan_paru.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_paru.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan_paru.hubungan)}
+                      , {$value.penilaian_medis_ralan_paru.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_paru.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_paru.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_paru.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_paru.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_paru.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> {$value.penilaian_medis_ralan_paru.kesadaran}<br>
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan_paru.suhu} °C<br>
+                      <strong>Status Nutrisi :</strong> {$value.penilaian_medis_ralan_paru.status}<br>
+                      <strong>Kepala :</strong> {$value.penilaian_medis_ralan_paru.kepala}<br>
+                      <strong>Keterangan Lainnya :</strong> {$value.penilaian_medis_ralan_paru.lainnya}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>GCS(E,V,M) :</strong> {$value.penilaian_medis_ralan_paru.gcs}<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan_paru.rr} x/menit<br>
+                      <strong>Thoraks :</strong> {$value.penilaian_medis_ralan_paru.thoraks}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan_paru.td} mmHg<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan_paru.bb} kg<br>
+                      <strong>Nyeri :</strong> {$value.penilaian_medis_ralan_paru.nyeri}<br>
+                      <strong>Abdomen :</strong> {$value.penilaian_medis_ralan_paru.abdomen}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan_paru.nadi} x/menit<br>
+                      <strong>Muskuloskeletal :</strong> {$value.penilaian_medis_ralan_paru.muskulos}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='{$mlite.path}/assets/images/LokalisParu.png' width='267 px' height='358 px'/>
+                      <br>
+                      <strong>Keterangan :</strong> {$value.penilaian_medis_ralan_paru.ket_lokalis}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Laboratorium :</strong> {$value.penilaian_medis_ralan_paru.lab}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Radiologi :</strong> {$value.penilaian_medis_ralan_paru.rad}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Penunjang Lainnya :</strong> {$value.penilaian_medis_ralan_paru.pemeriksaan}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Kerja : {$value.penilaian_medis_ralan_paru.diagnosis}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Banding : {$value.penilaian_medis_ralan_paru.diagnosis2}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. PERMASALAHAN & TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Permasalahan : {$value.penilaian_medis_ralan_paru.permasalahan}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Terapi/Pengobatan : {$value.penilaian_medis_ralan_paru.terapi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Tindakan/Rencana Tindakan : {$value.penilaian_medis_ralan_paru.tindakan}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. EDUKASI</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_paru.edukasi}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL RALAN PARU -->
+
+          <!-- PENILAIAN AWAL RALAN THT -->
+          {if: $value.penilaian_medis_ralan_tht}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis Rawat Jalan THT</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_tht.tanggal}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_tht.kd_dokter} {$value.penilaian_medis_ralan_tht.nm_dokter}
+                    </td>
+                    <td valign="top">
+                      {$value.penilaian_medis_ralan_tht.anamnesis}
+                      {if: !empty($value.penilaian_medis_ralan_tht.hubungan)}
+                      , {$value.penilaian_medis_ralan_tht.hubungan}
+                      {/if}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_tht.keluhan_utama}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_tht.rps}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_tht.rpd}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_tht.alergi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      {$value.penilaian_medis_ralan_tht.rpo}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TD :</strong> {$value.penilaian_medis_ralan_tht.td} mmHg<br>
+                      <strong>Nyeri :</strong> {$value.penilaian_medis_ralan_tht.nyeri}<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TB :</strong> {$value.penilaian_medis_ralan_tht.tb} cm<br>
+                      <strong>BB :</strong> {$value.penilaian_medis_ralan_tht.bb} kg<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Suhu :</strong> {$value.penilaian_medis_ralan_tht.suhu} °C<br>
+                      <strong>Status Nutrisi :</strong> {$value.penilaian_medis_ralan_tht.status}<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Nadi :</strong> {$value.penilaian_medis_ralan_tht.nadi} x/menit<br>
+                      <strong>RR :</strong> {$value.penilaian_medis_ralan_tht.rr} x/menit<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='{$mlite.path}/assets/images/medisawalTHT.png' width='100%' height='400'/>
+                      <br>
+                      <strong>Keterangan :</strong> {$value.penilaian_medis_ralan_tht.ket_lokalis}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Laboratorium :</strong> {$value.penilaian_medis_ralan_tht.lab}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>Radiologi :</strong> {$value.penilaian_medis_ralan_tht.rad}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Tes Pendengaran :</strong> {$value.penilaian_medis_ralan_tht.tes_pendengaran}<br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Penunjang Lainnya :</strong> {$value.penilaian_medis_ralan_tht.pemeriksaan}<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Kerja : {$value.penilaian_medis_ralan_tht.diagnosis}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Asesmen Banding : {$value.penilaian_medis_ralan_tht.diagnosisbanding}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. PERMASALAHAN & TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Permasalahan : {$value.penilaian_medis_ralan_tht.permasalahan}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Terapi/Pengobatan : {$value.penilaian_medis_ralan_tht.terapi}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Tindakan/Rencana Tindakan : {$value.penilaian_medis_ralan_tht.tindakan}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Tatalaksana Lainnya : {$value.penilaian_medis_ralan_tht.tatalaksana}
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VII. EDUKASI</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      {$value.penilaian_medis_ralan_tht.edukasi}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- PENILAIAN AWAL RALAN THT -->
+
+                  <!--LEMBAR MASUK NICU-->
+        {if: $value.mlite_masuk_nicu}
+        <tr class="isi">
+          <td valign="top" width="20%">
+            <strong> Lembar Masuk Nicu </strong>
+          </td>
+          <td valign="top" width="1%" align="Center">
+            :
+          </td>
+          <td valign="top" width="79%">
+            <strong>DIAGNOSA MASUK</strong>
+            <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form"
+              style="margin-bottom:2px;">
+              <tr>
+                <td valign="top" width="40%" colspan="4">
+                  {$value.mlite_masuk_nicu.diagnosa}
+                </td>
+              </tr>
+
+            </table>
+            <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form"
+              style="margin-bottom:2px;">
+              <br>
+              <tr>
+                <td valign="top" width="40%" bgcolor="#eee">Kriteria Masuk</td>
+                <td valign="center" width="30" bgcolor="#eee">Check List</td>
+                <td valign="top" width="40%" bgcolor="#eee">Keterangan</td>
+              </tr>
+              <tr>
+                <td valign="top" width="40%" colspan="4"> <strong>1 Tanda Vital</strong></td>
+              </tr>
+              <tr>
+                <td>a. Apgar score &lt; 6</td>
+                <td>{$value.mlite_masuk_nicu.tanda_vital_a}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_tanda_vital_a}</td>
+              </tr>
+              <tr>
+                <td>b. Denyut Jantung &lt; 120 - &gt; 140 kali/menit</td>
+                <td>{$value.mlite_masuk_nicu.tanda_vital_b}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_tanda_vital_b}</td>
+              </tr>
+              <tr>
+                <td>c. Laju respirasi &lt; 40 - &gt; 60 kali/menit</td>
+                <td>{$value.mlite_masuk_nicu.tanda_vital_c}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_tanda_vital_c}</td>
+              </tr>
+              <tr>
+                <td>d. Suhu Axilla &lt; 36.5&deg;Celcius - &gt; 60 kali/menit</td>
+                <td>{$value.mlite_masuk_nicu.tanda_vital_d}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_tanda_vital_d}</td>
+              </tr>
+              <tr>
+                <td>e. Saturasi Oksigen perifer (SpO2) &lt; 95%</td>
+                <td>{$value.mlite_masuk_nicu.tanda_vital_e}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_tanda_vital_e}</td>
+              </tr>
+              <tr>
+                <td valign="top" width="40%" colspan="4"><strong> 2 Pemeriksaan Fisik</strong></td>
+              </tr>
+              <tr>
+                <td>a. Neonatus dengan aktivitas, tonus, refleks, tangis lemah</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_a}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_a}</td>
+              </tr>
+              <tr>
+                <td>b. Refleks pupil anisokor</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_b}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_b}</td>
+              </tr>
+              <tr>
+                <td>c. Kejang</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_c}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_c}</td>
+              </tr>
+              <tr>
+                <td>d. Retraksi Dinding Dada</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_d}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_d}</td>
+              </tr>
+              <tr>
+                <td>e. Sianosis</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_e}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_e}</td>
+              </tr>
+              <tr>
+                <td>f. Ikterik</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_f}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_f}</td>
+              </tr>
+              <tr>
+                <td>g. Anuria</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_g}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_g}</td>
+              </tr>
+              <tr>
+                <td>h. Waktu pengisian kapiler &gt; 3 Detik</td>
+                <td>{$value.mlite_masuk_nicu.pemeriksaan_fisik_h}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_pemeriksaan_fisik_h}</td>
+              </tr>
+              <tr>
+                <td valign="top" width="40%" colspan="4"><strong>3. Nilai Laboratorium</strong></td>
+              </tr>
+              <tr>
+                <td>a. Kadar hemoglobin &lt; 7 g/Dl</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_a}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_a}</td>
+              </tr>
+              <tr>
+                <td>b. Kadar hematokrit &gt; 6%</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_b}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_b}</td>
+              </tr>
+              <tr>
+                <td>c. Kadar leukosit &gt; 25.000/ml</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_c}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_c}</td>
+              </tr>
+              <tr>
+                <td>d. PH &lt; 7,2 atau &gt; 7,7</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_d}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_d}</td>
+              </tr>
+              <tr>
+                <td>e. P<sub>a</sub>O<sub>2</sub> &lt; 80 mmHg</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_e}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_e}</td>
+              </tr>
+              <tr>
+                <td>f. P<sub>a</sub>CO<sub>2</sub> &gt; 50 mmHg</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_f}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_f}</td>
+              </tr>
+              <tr>
+                <td>g. HCO<sub>2</sub> &lt; 15 </td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_g}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_g}</td>
+              </tr>
+              <tr>
+                <td>h. Kadar glukosa serum &lt; 47 mg/dl atau &gt; 150 mg/dl </td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_h}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_h}</td>
+              </tr>
+              <tr>
+                <td>i. Kadar natrium serum &lt; 110 mEq/L atau &gt; 160 mEq/L</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_i}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_i}</td>
+              </tr>
+              <tr>
+                <td>j. Kadar kalium serum &lt; 2,5 mEq/L atau &gt; 6.0 mEq/L</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_j}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_j}</td>
+              </tr>
+              <tr>
+                <td>k. Kadar kalium serum &lt; 6 mg/dL atau &gt; 15 mg/dL</td>
+                <td>{$value.mlite_masuk_nicu.nilai_lab_k}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_nilai_lab_k}</td>
+              </tr>
+              <tr>
+                <td valign="top" width="40%" colspan="4"><strong>4. Kondisi Lain</strong></td>
+              </tr>
+              <tr>
+                <td>a. BBL &lt; 2000gram atau &gt; 4000gram</td>
+                <td>{$value.mlite_masuk_nicu.kondisi_lain_a}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_kondisi_lain_a}</td>
+              </tr>
+              <tr>
+                <td>b. Bayi baru lahir dengan ibu dalam perawatan intensif</td>
+                <td>{$value.mlite_masuk_nicu.kondisi_lain_b}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_kondisi_lain_b}</td>
+              </tr>
+              <tr>
+                <td>c. Kelainan kongenital (bibir sumbing, atrtesiani, anancephaly, Polydactyly, dll)</td>
+                <td>{$value.mlite_masuk_nicu.kondisi_lain_c}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_kondisi_lain_c}</td>
+              </tr>
+              <tr>
+                <td>d. Bayi usia &gt; 30 Hariyang masih bisa dirawat di NICU</td>
+                <td>{$value.mlite_masuk_nicu.kondisi_lain_d}</td>
+                <td>{$value.mlite_masuk_nicu.keterangan_kondisi_lain_d}</td>
+              </tr>
+            </table>
+            <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form"
+              style="margin-bottom:2px;">
+              <tr>
+                <td valign="top" width="40%" bgcolor="#eee" colspan="2">Kesimpulan</td>
+                <td valign="top" width="40%" bgcolor="#eee" colspan="2">Dokter</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  Berdasarkan kondisi diatas, maka pasien ini memenuhi indikasi diruang perinatologi level :
+                  {$value.mlite_masuk_nicu.kesimpulan_level} <br>
+                  Alat transport yang digunakan : {$value.mlite_masuk_nicu.kesimpulan_transport} <br>
+                  Pendamping selama transfer : {$value.mlite_masuk_nicu.kesimpulan_pendamping} <br>
+                  Alat yang dibawa selama transfer : {$value.mlite_masuk_nicu.kesimpulan_alat}
+                </td>
+                <td>
+                  Tanggal : {$value.mlite_masuk_nicu.tanggal} <br>
+                  Dokter : {$value.mlite_masuk_nicu.nm_dokter}
+                </td>
+              </tr>
+
+            </table>
+            <a href="{?=url([ADMIN,'dokter_ranap','masuknicu', convertNorawat($value.no_rawat)])?}" target="_blank" class="btn btn-primary">Gas Sedot</a>
+
+        </tr>
+        {/if}
+        <!--LEMBAR MASUK NICU-->
+
+          <!-- SKRINING GIZI LANJIUT -->
+          {if: $value.skrining_gizi}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Skrining Gizi Lanjut</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr align='center'>
+                    <td valign='top' width='15%' bgcolor='#FFFAF8'>Tanggal</td>
+                    <td valign='top' width='25%' bgcolor='#FFFAF8'>Pemeriksaan</td>
+                    <td valign='top' width='40%' bgcolor='#FFFAF8'>Parameter</td>
+                    <td valign='top' width='5%' bgcolor='#FFFAF8'>Skor</td>
+                    <td valign='top' width='15%' bgcolor='#FFFAF8'>Ahli Gizi</td>
+                  </tr>           
+                  {loop: $value.skrining_gizi as $data}
+                    <tr>
+                      <td valign='top' rowspan='2'>{$data.tanggal}</td>
+                      <td valign='top'>
+                        BB : {$data.skrining_bb}<br>
+                        TB : {$data.skrining_tb}<br>
+                        Alergi : {$data.alergi}<br>
+                      </td>
+                      <td valign='top'>
+                        1. Skor IMT : {$data.parameter_imt}<br>
+                        2. Skor Kehilangan BB : {$data.parameter_bb}<br>
+                        3. Skor Efek Penyakit Akut : {$data.parameter_penyakit}<br>
+                      </td>
+                      <td valign='top' align='center'>
+                        {$data.skor_imt}<br>
+                        {$data.skor_bb}<br>
+                        {$data.skor_penyakit}<br>
+                      </td>
+                      <td valign='top' align='center' rowspan='2'>{$data.nip}<br>{$data.nama}</td>
+                    </tr>
+                    <tr>
+                      <td valign='top'>Total Skor : </td>
+                      <td valign='top'>{$data.parameter_total}</td>
+                      <td valign='top' align='center'>{$data.skor_total}</td>
+                    </tr>     
+                  {/loop}              
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- SKRINING GIZI LANJIUT -->
+
+          <!-- SKRINING ASUHAN GIZI -->
+          {if: $value.asuhan_gizi}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Asuhan Gizi</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr align='center'>
+                    <td valign='top' width='10%' bgcolor='#FFFAF8'>Tanggal</td>
+                    <td valign='top' width='90%' bgcolor='#FFFAF8'>Penilaian Gizi</td>
+                  </tr>
+                  {loop: $value.asuhan_gizi as $data}
+                    <tr>
+                      <td valign='top' align='center'>{$data.tanggal}</td>
+                      <td valign='top'>
+                        <table width='100%' border='0' align='center' cellpadding='3px' cellspacing='0px' class='tbl_form'>
+                          <tr>
+                            <td width='20%' border='0'>Antropometri</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>
+                              BB : {$data.antropometri_bb} (Kg), 
+                              TB : {$data.antropometri_tb} (Cm), 
+                              IMT : {$data.antropometri_imt} (Kg/Cm), 
+                              LiLA : {$data.antropometri_lla} (Cm), 
+                              TL : {$data.antropometri_tl} (Cm), 
+                              ULNA : {$data.antropometri_ulna} (Cm), 
+                              BB Ideal : {$data.antropometri_bbideal} (Kg), 
+                              BB/U : {$data.antropometri_bbperu} (SD), 
+                              TB/U : {$data.antropometri_tbperu} (SD), 
+                              BB/TB : {$data.antropometri_bbpertb} (SD), 
+                              LiLA/U : {$data.antropometri_llaperu} (SD)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Biokimia</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$data.biokimia}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Fisik/Klinis</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$data.fisik_klinis}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Riwayat Gizi</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>
+                              Alergi Makanan : <br>
+                              <table width='100%' border='0' align='center' cellpadding='3px' cellspacing='0px' class='tbl_form'>
+                                <tr>
+                                  <td width='70%' border='0'>&nbsp;&nbsp;Telur</td>
+                                  <td border='0'>: {$data.alergi_telur}</td>
+                                </tr>
+                                <tr>
+                                  <td width='70%' border='0'>&nbsp;&nbsp;Susu sapi dan produk olahannya</td>
+                                  <td border='0'>: {$data.alergi_susu_sapi}</td>
+                                </tr>
+                                <tr>
+                                  <td width='70%' border='0'>&nbsp;&nbsp;Kacang kedelai / tanah</td>
+                                  <td border='0'>: {$data.alergi_kacang}</td>
+                                </tr>
+                                <tr>
+                                  <td width='70%' border='0'>&nbsp;&nbsp;Gluten / gandum</td>
+                                  <td border='0'>: {$data.alergi_gluten}</td>
+                                </tr>
+                                <tr>
+                                  <td width='70%' border='0'>&nbsp;&nbsp;Udang</td>
+                                  <td border='0'>: {$data.alergi_udang}</td>
+                                </tr>
+                                <tr>
+                                  <td width='70%' border='0'>&nbsp;&nbsp;Ikan</td>
+                                  <td border='0'>: {$data.alergi_ikan}</td>
+                                </tr>
+                                <tr>
+                                  <td width='70%' border='0'>&nbsp;&nbsp;Hazelnut / almont</td>
+                                  <td border='0'>: {$data.alergi_hazelnut}</td>
+                                </tr>
+                              </table><br>
+                              Pola Makan : {$data.pola_makan}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Riwayat Personal</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$data.riwayat_personal}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Diagnosis Gizi</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$data.diagnosis}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Intervensi Gizi</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$data.intervensi_gizi}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Monitoring & Evaluasi</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$data.monitoring_evaluasi}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Petugas</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$data.nip} {$data.nama}</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>    
+                  {/loop}                             
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- SKRINING ASUHAN GIZI -->
+
+          <!-- Resume Pasien Ralan -->
+          {if: $value.resume_pasien}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Resume Pasien Rawat Jalan</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr align='center'>
+                    <td valign='top' width='20%' bgcolor='#FFFAF8'>Kode Dokter</td>
+                    <td valign='top' width='40%' bgcolor='#FFFAF8'>Nama Dokter</td>
+                    <td valign='top' width='20%' bgcolor='#FFFAF8'>Kondisi Pulang</td>
+                  </tr>
+                  <tr>
+                    <td valign='top'>{$value.resume_pasien.kd_dokter}</td>
+                    <td valign='top'>{$value.resume_pasien.nm_dokter}</td>
+                    <td valign='top'>{$value.resume_pasien.kondisi_pulang}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='4'>Keluhan utama riwayat penyakit yang positif :<br>{$value.resume_pasien.keluhan_utama}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='4'>Jalannya penyakit selama perawatan :<br>{$value.resume_pasien.jalannya_penyakit}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='4'>Pemeriksaan penunjang yang positif :<br>{$value.resume_pasien.pemeriksaan_penunjang}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='4'>Hasil laboratorium yang positif :<br>{$value.resume_pasien.hasil_laborat}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='4'>Diagnosa Akhir :<br>
+                      <table width='100%' border='0' align='center' cellpadding='3px' cellspacing='0' class='tbl_form'>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Utama</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.diagnosa_utama}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_diagnosa_utama}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 1</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.diagnosa_sekunder}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_diagnosa_sekunder}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 2</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.diagnosa_sekunder2}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_diagnosa_sekunder2}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 3</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.diagnosa_sekunder3}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_diagnosa_sekunder3}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 4</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.diagnosa_sekunder4}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_diagnosa_sekunder4}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Prosedur Utama</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.prosedur_utama}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_prosedur_utama}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 1</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.prosedur_sekunder}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_prosedur_sekunder}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 2</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.prosedur_sekunder2}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_prosedur_sekunder2}</td>
+                        </tr>
+                        <tr align='left' border='0'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 3</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien.prosedur_sekunder3}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien.kd_prosedur_sekunder3}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='4'>Obat-obatan waktu pulang/nasihat :<br>{$value.resume_pasien.obat_pulang}</td>
+                  </tr>                                                           
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- Resume Pasien Ralan -->
+
+          <!-- Resume Pasien Ranap -->
+          {if: $value.resume_pasien_ranap}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Resume Pasien Rawat Inap</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr align='center'>
+                    <td valign='top' width='15%' bgcolor='#FFFAF8'>Kode Dokter</td>
+                    <td valign='top' width='27%' bgcolor='#FFFAF8'>Nama Dokter</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Keadaan Pulang</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Cara Keluar</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Dilanjutkan</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Tgl.Kontrol</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' align='center'>{$value.resume_pasien_ranap.kd_dokter}</td>
+                    <td valign='top'>{$value.resume_pasien_ranap.nm_dokter}</td>
+                    <td valign='top' align='center'>{$value.resume_pasien_ranap.keadaan}</td>
+                    <td valign='top' align='center'>{$value.resume_pasien_ranap.cara_keluar}</td>
+                    <td valign='top' align='center'>{$value.resume_pasien_ranap.dilanjutkan}</td>
+                    <td valign='top' align='center'>{$value.resume_pasien_ranap.kontrol}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Diagnosa Awal Masuk :<br>{$value.resume_pasien_ranap.diagnosa_awal}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Alasan Masuk Dirawat :<br>{$value.resume_pasien_ranap.alasan}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Keluhan Utama Riwayat Penyakit :<br>{$value.resume_pasien_ranap.keluhan_utama}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Pemeriksaan Fisik :<br>{$value.resume_pasien_ranap.pemeriksaan_fisik}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Jalannya Penyakit Selama Perawatan :<br>{$value.resume_pasien_ranap.jalannya_penyakit}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Pemeriksaan Penunjang Rad Terpenting :<br>{$value.resume_pasien_ranap.pemeriksaan_penunjang}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Pemeriksaan Penunjang Lab Terpenting :<br>{$value.resume_pasien_ranap.hasil_laborat}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Tindakan/Operasi Selama Perawatan :<br>{$value.resume_pasien_ranap.tindakan_dan_operasi}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Obat-obatan Selama Perawatan :<br>{$value.resume_pasien_ranap.obat_di_rs}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Diagnosa Akhir :<br>
+                      <table width='100%' border='0' align='center' cellpadding='3px' cellspacing='0' class='tbl_form'>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Utama</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.diagnosa_utama}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_diagnosa_utama}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 1</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.diagnosa_sekunder}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_diagnosa_sekunder}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 2</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.diagnosa_sekunder2}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_diagnosa_sekunder2}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 3</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.diagnosa_sekunder3}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_diagnosa_sekunder3}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 4</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.diagnosa_sekunder4}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_diagnosa_sekunder4}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Utama</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.prosedur_utama}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_prosedur_utama}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 1</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.prosedur_sekunder}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_prosedur_sekunder}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 2</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.prosedur_sekunder2}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_prosedur_sekunder2}</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 3</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;{$value.resume_pasien_ranap.prosedur_sekunder3}</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;{$value.resume_pasien_ranap.kd_prosedur_sekunder3}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Alergi Obat :<br>{$value.resume_pasien_ranap.alergi}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Diet :<br>{$value.resume_pasien_ranap.diet}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Hasil Lab Yang Belum Selesai (Pending) :<br>{$value.resume_pasien_ranap.lab_belum}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Instruksi/Anjuran Dan Edukasi (Follow Up) :<br>{$value.resume_pasien_ranap.edukasi}</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Obat-obatan Waktu Pulang :<br>{$value.resume_pasien_ranap.obat_pulang}</td>
+                  </tr>                                                                         
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- Resume Pasien Ranap -->
+            <!-- Hasil Pmeriksaan USg -->
+          {if: $value.hasil_pemeriksaan_usg}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Hasil Pemeriksaan USG</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr align='center'>
+                    <td valign='top' width='10%' bgcolor='#FFFAF8'>Tanggal</td>
+                    <td valign='top' width='90%' bgcolor='#FFFAF8'>Hasil Pemeriksaan</td>
+                  </tr>
+                    <tr>
+                      <td valign='top' align='center'>{$value.hasil_pemeriksaan_usg.tanggal}</td>
+                      <td valign='top'>
+                        <table width='100%' border='0' align='center' cellpadding='3px' cellspacing='0px' class='tbl_form'>
+                          <tr>
+                            <td width='20%' border='0'>Kiriman Dari</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.kiriman_dari}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Diagnosa Klinis</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.diagnosa_klinis}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>HTA</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.hta}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Kantong Gestasi(GS) Ukuran</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.kantong_gestasi}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Ukuran Bokong Kepala (CRL)</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.ukuran_bokongkepala}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Jenis Prestasi</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.jenis_prestasi}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Diameter Biparietal (DBP)</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.diameter_biparietal}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Panjang Femur (FL)</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.panjang_femur}</td>
+                          </tr>
+                           <tr>
+                            <td width='20%' border='0'>Lingkaran Abdomen (AC)</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.lingkaran_abdomen}</td>
+                          </tr>
+                           <tr>
+                            <td width='20%' border='0'>Tafsiran Berat Janin(TBJ)</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.tafsiran_berat_janin}</td>
+                          </tr>
+                           <tr>
+                            <td width='20%' border='0'>Usia Kehamilan Sesuai</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.usia_kehamilan}</td>
+                          </tr>
+                           <tr>
+                            <td width='20%' border='0'>Plasenta Berimplatansi DI</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.plasenta_berimplatansi}</td>
+                          </tr>
+                           <tr>
+                            <td width='20%' border='0'>Derajar Maturitas Plasenta</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.derajat_maturitas}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Jumlah Air Ketuban</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.jumlah_air_ketuban}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Indeks Cairan Ketuban (ICK)</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.indek_cairan_ketuban}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Kelainan Kongenital Mayor</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.kelainan_kongenital}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Peluang Sex</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.peluang_sex}</td>
+                          </tr>
+                          <tr>
+                            <td width='20%' border='0'>Dokter</td>
+                            <td border='0'>:</td>
+                            <td width='79%' border='0'>{$value.hasil_pemeriksaan_usg.kd_dokter} {$value.hasil_pemeriksaan_usg.nm_dokter}</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>                         
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- Hasil Pemeriksaan USG -->
+
+          <!-- Resume Laporan Operasi -->
+          {if: $value.laporan_operasi}
+            <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Laporan Operasi</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  {loop: $value.laporan_operasi as $data}
+                    <tr>
+                      <td valign='top' width='21%'>Mulai Operasi</td>
+                      <td valign='top' width='75%'>:&nbsp;{$data.tanggal}</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Diagnosa Pre-operatif</td>
+                      <td valign='top' width='75%'>:&nbsp;{$data.diagnosa_preop}</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Jaringan Yang di-Eksisi/-Insisi</td>
+                      <td valign='top' width='75%'>:&nbsp;{$data.jaringan_dieksekusi}</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Diagnosa Post-operatif</td>
+                      <td valign='top' width='75%'>:&nbsp;{$data.diagnosa_postop}</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Selesai Operasi</td>
+                      <td valign='top' width='75%'>:&nbsp;{$data.selesaioperasi}</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Dikirim Untuk Pemeriksaan PA</td>
+                      <td valign='top' width='75%'>:&nbsp;{$data.permintaan_pa}</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Laporan</td>
+                      <td valign='top' width='75%'>:&nbsp;{$data.laporan_operasi}</td>
+                    </tr>
+
+                    <!-- Pembatas antar data -->
+                    <tr>
+                      <td colspan="2" style="border-top: 1px solid #000; padding-top: 10px;"></td>
+                    </tr>
+                  {/loop}                                                                                 
+                </table>
+              </td>
+            </tr>
+          {/if}
+          <!-- Resume Pasien Ranap -->
+
+          <tr class="isi">
+            <td valign="top" width="20%">Pemeriksaan</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                {if: $value.pemeriksaan_ralan}
+                <tr align="center">
+                    <td valign="top" width="14%" bgcolor="#eee">Unit</td>
+                    <td valign="top" width="14%" bgcolor="#eee">Tanggal</td>
+                    <td valign="top" width="6%" bgcolor="#eee">Jam</td>
+                    <td valign="top" width="3%" bgcolor="#eee">Suhu(C)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tensi(mmHg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Nadi(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">RR(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tinggi(Cm)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Berat(Kg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">GCS(E,V,M)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">SPO2</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Alergi</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Kesadaran</td>
+                </tr>
+                {loop: $value.pemeriksaan_ralan as $data}
+                  <tr>
+                    <td valign="top" rowspan="8">Rawat Jalan</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">{$data.tgl_perawatan}</td>
+                      <td valign="top">{$data.jam_rawat}</td>
+                      <td valign="top">{$data.suhu_tubuh}</td>
+                      <td valign="top">{$data.tensi}</td>
+                      <td valign="top">{$data.nadi}</td>
+                      <td valign="top">{$data.respirasi}</td>
+                      <td valign="top">{$data.tinggi}</td>
+                      <td valign="top">{$data.berat}</td>
+                      <td valign="top">{$data.gcs}</td>
+                      <td valign="top">{$data.spo2}</td>
+                      <td valign="top">{$data.alergi}</td>
+                      <td valign="top">{$data.kesadaran}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : {$data.keluhan}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : {$data.pemeriksaan}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : {$data.penilaian}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : {$data.rtl}</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : {$data.instruksi}</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : {$data.evaluasi}</td>
+                  </tr>
+                {/loop}
+                {/if}
+                {if: $value.pemeriksaan_ranap}
+                <tr align="center">
+                    <td valign="top" width="14%" bgcolor="#eee">Unit</td>
+                    <td valign="top" width="14%" bgcolor="#eee">Tanggal</td>
+                    <td valign="top" width="6%" bgcolor="#eee">Jam</td>
+                    <td valign="top" width="3%" bgcolor="#eee">Suhu(C)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tensi(mmHg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Nadi(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">RR(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tinggi(Cm)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Berat(Kg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">GCS(E,V,M)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">SPO2</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Alergi</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Kesadaran</td>
+                </tr>
+                {loop: $value.pemeriksaan_ranap as $data}
+                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">{$data.tgl_perawatan}</td>
+                      <td valign="top">{$data.jam_rawat}</td>
+                      <td valign="top">{$data.suhu_tubuh}</td>
+                      <td valign="top">{$data.tensi}</td>
+                      <td valign="top">{$data.nadi}</td>
+                      <td valign="top">{$data.respirasi}</td>
+                      <td valign="top">{$data.tinggi}</td>
+                      <td valign="top">{$data.berat}</td>
+                      <td valign="top">{$data.gcs}</td>
+                      <td valign="top">{$data.spo2}</td>
+                      <td valign="top">{$data.alergi}</td>
+                      <td valign="top">{$data.kesadaran}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : {$data.keluhan}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : {$data.pemeriksaan}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : {$data.penilaian}</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : {$data.rtl}</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : {$data.instruksi}</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : {$data.evaluasi}</td>
+                  </tr>
+                {/loop}
+                {/if}
+              </table>
+            </td>
+          </tr>
+          {if: $value.rawat_jl_dr || $value.rawat_jl_pr || $value.rawat_jl_drpr}
+          <tr class="isi">
+            <td valign="top" width="20%">
+              Tindakan Perawatan
+            </td>
+            <td valign="top" width="1%" align="center">
+              :
+            </td>
+            <td valign="top" width="79%">
+              {if: $value.rawat_jl_dr}
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Jalan Dokter
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Dokter
+                  </td>
+                </tr>
+                {loop: $value.rawat_jl_dr as $data}
+                <tr>
+                  <td valign="top">
+                    {$data.tgl_perawatan} {$data.jam_rawat}
+                  </td>
+                  <td valign="top">
+                    {$data.kd_jenis_prw}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_perawatan}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_dokter}
+                  </td>
+                </tr>
+                {/loop}
+              </table>
+              {/if}
+              {if: $value.rawat_jl_pr}
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Jalan Perawat
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Perawat
+                  </td>
+                </tr>
+                {loop: $value.rawat_jl_pr as $data}
+                <tr>
+                  <td valign="top">
+                    {$data.tgl_perawatan} {$data.jam_rawat}
+                  </td>
+                  <td valign="top">
+                    {$data.kd_jenis_prw}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_perawatan}
+                  </td>
+                  <td valign="top">
+                    {$data.nama}
+                  </td>
+                </tr>
+                {/loop}
+              </table>
+              {/if}
+              {if: $value.rawat_jl_drpr}
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Jalan Dokter & Perawat
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Dokter
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Perawat
+                  </td>
+                </tr>
+                {loop: $value.rawat_jl_drpr as $data}
+                <tr>
+                  <td valign="top">
+                    {$data.tgl_perawatan} {$data.jam_rawat}
+                  </td>
+                  <td valign="top">
+                    {$data.kd_jenis_prw}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_perawatan}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_dokter}
+                  </td>
+                  <td valign="top">
+                    {$data.nama}
+                  </td>
+                </tr>
+                {/loop}
+              </table>
+              {/if}
+              {if: $value.rawat_inap_dr}
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Inap Dokter
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Dokter
+                  </td>
+                </tr>
+                {loop: $value.rawat_inap_dr as $data}
+                <tr>
+                  <td valign="top">
+                    {$data.tgl_perawatan} {$data.jam_rawat}
+                  </td>
+                  <td valign="top">
+                    {$data.kd_jenis_prw}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_perawatan}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_dokter}
+                  </td>
+                </tr>
+                {/loop}
+              </table>
+              {/if}
+              {if: $value.rawat_inap_pr}
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Inap Perawat
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Perawat
+                  </td>
+                </tr>
+                {loop: $value.rawat_inap_pr as $data}
+                <tr>
+                  <td valign="top">
+                    {$data.tgl_perawatan} {$data.jam_rawat}
+                  </td>
+                  <td valign="top">
+                    {$data.kd_jenis_prw}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_perawatan}
+                  </td>
+                  <td valign="top">
+                    {$data.nama}
+                  </td>
+                </tr>
+                {/loop}
+              </table>
+              {/if}
+              {if: $value.rawat_inap_drpr}
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Inap Dokter & Perawat
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Dokter
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Perawat
+                  </td>
+                </tr>
+                {loop: $value.rawat_inap_drpr as $data}
+                <tr>
+                  <td valign="top">
+                    {$data.tgl_perawatan} {$data.jam_rawat}
+                  </td>
+                  <td valign="top">
+                    {$data.kd_jenis_prw}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_perawatan}
+                  </td>
+                  <td valign="top">
+                    {$data.nm_dokter}
+                  </td>
+                  <td valign="top">
+                    {$data.nama}
+                  </td>
+                </tr>
+                {/loop}
+              </table>
+              {/if}
+            </td>
+          </tr>
+          {/if}
+
+          {if: !empty($value.pemberian_obat)}
+          <tr class="isi">
+            <td valign="top" width="20%">Pemberian Obat </td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+              <tr align="center">
+                <td valign="top" width="25%" bgcolor="#eee">Tanggal</td>
+                <td valign="top" width="75%" bgcolor="#eee">Detail Resep</td>
+              </tr>
+              {loop: $value.pemberian_obat as $data1}
+              <tr>
+                <td valign="top" width="25%">{$data1.tgl_perawatan} {$data1.jam}<br>{$data1.status}</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                    {loop: $data1.data_pemberian_obat as $data2}
+                    <tr>
+                      <td>{$data2.nama_brng}</td>
+                      <td>{$data2.jml}</td>
+                    </tr>
+                    {/loop}
+                  </table>
+                </td>
+              </tr>
+              {/loop}
+              </table>
+            </td>
+          </tr>
+
+          {/if}
+
+          {if: $value.periksa_lab}
+          <tr class="isi">
+            <td valign="top" width="20%">Laboratorium </td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+              <tr align="center">
+                <td valign="top" width="20%" bgcolor="#eee">Tanggal</td>
+                <td valign="top" width="20%" bgcolor="#eee">Nama Tindakan</td>
+                <td valign="top" width="20%" bgcolor="#eee">Hasil</td>
+                <td valign="top" width="20%" bgcolor="#eee">Nilai Rujukan</td>
+                <td valign="top" width="20%" bgcolor="#eee">Keterangan</td>
+              </tr>
+              {loop: $value.periksa_lab as $data1}
+              <tr>
+                <td valign="top" width="20%">{$data1.tgl_periksa}</td>
+                <td colspan="4" valign="top" width="80%">{$data1.nm_perawatan}</td>
+              </tr>
+                {loop: $data1.detail_periksa_lab as $data2}
+                <tr>
+                  <td></td>
+                  <td>{$data2.Pemeriksaan}</td>
+                  <td>{$data2.nilai} {$data2.satuan}</td>
+                  <td>{$data2.nilai_rujukan}</td>
+                  <td>{?=nl2br($data2.keterangan)?}</td>
+                </tr>
+                {/loop}
+              {/loop}
+              </table>
+            </td>
+          </tr>
+          {/if}
+          {if: $value.periksa_radiologi}
+          <tr class="isi">
+            <td valign="top" width="20%">Radiologi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                <tr align="center">
+                  <td valign="top" width="20%" bgcolor="#eee">Tanggal</td>
+                  <td valign="top" width="30%" bgcolor="#eee">Nama Tindakan</td>
+                </tr>
+                {loop: $value.periksa_radiologi as $data}
+                <tr>
+                  <td colspan="2">{$data.tgl_periksa} {$data.jam}</td>
+                </tr>
+                <tr>
+                  <td valign="top" width="30%">Pemeriksaan</td>
+                  <td valign="top" width="50%">
+                    {loop: $data.pemeriksaan_radiologi as $data0}
+                    {?=nl2br($data0.nm_perawatan)?}<br>
+                    {/loop}
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top" width="30%">Interpretasi</td>
+                  <td valign="top" width="50%">
+                    {loop: $data.hasil_radiologi as $data1}
+                    {?=nl2br($data1.hasil)?}<br>
+                    {/loop}
+                  </td>
+                </tr>
+                {if: $data.gambar_radiologi}
+                <tr>
+                  <td colspan="2">
+                    <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                      <tr align="center">
+                        <td>
+                          <div class="row">
+                              <div class="gallery">
+                              {loop: $data.gambar_radiologi as $data2}
+                                  <div class="col-sm-6 col-md-6">
+                                      <div class="thumbnail" style="padding:0px;">
+                                          <a href="{?=url(WEBAPPS_URL.'/radiologi/'.$data2.lokasi_gambar)?}" class="images">
+                                              <img src="{?=url(WEBAPPS_URL.'/radiologi/'.$data2.lokasi_gambar)?}" width="100%" class="img-responsive">
+                                          </a>
+                                      </div>
+                                  </div>
+                              {/loop}
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                {/if}
+                {/loop}
+              </table>
+            </td>
+          </tr>
+          {/if}
+          {if: $value.operasi}
+          <tr class="isi">
+            <td valign="top" width="20%">Operasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                <tr align="center">
+                  <td valign="top" width="20%" bgcolor="#eee">Tanggal</td>
+                  <td valign="top" width="30%" bgcolor="#eee">Nama Tindakan</td>
+                </tr>
+                {loop: $value.operasi as $data}
+                <tr>
+                  <td valign="top" width="20%">{$data.tgl_operasi}</td>
+                  <td valign="top" width="30%">{$data.nm_perawatan}</td>
+                </tr>
+                {/loop}
+              </table>
+            </td>
+          </tr>
+          {/if}
+          {if: $value.obat_operasi}
+          <tr class="isi">
+            <td valign="top" width="20%">Obat dan BHP Operasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                <tr align="center">
+                  <td valign="top" width="20%" bgcolor="#eee">Tanggal</td>
+                  <td valign="top" width="30%" bgcolor="#eee">Nama Tindakan</td>
+                  <td valign="top" width="50%" bgcolor="#eee">Jumlah</td>
+                </tr>
+                {loop: $value.obat_operasi as $data}
+                <tr>
+                  <td valign="top" width="20%">{$data.tanggal}</td>
+                  <td valign="top" width="30%">{$data.nm_obat}</td>
+                  <td valign="top" width="50%">{$data.jumlah}</td>
+                </tr>
+                {/loop}
+              </table>
+            </td>
+          </tr>
+          {/if}
+          {if: $value.berkas_digital}
+            <tr class="isi">
+              <td valign="top" width="20%">Berkas Digital</td>
+              <td valign="top" width="1%" align="center">:</td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                  <tr align="center">
+                    <td>
+                      <div class="row">
+                          <div class="gallery">
+                            {loop: $value.berkas_digital as $data}
+                              <div class="col-sm-6 col-md-6">
+                                <div class="thumbnail">
+                                  <a href="{?=url(WEBAPPS_URL.'/berkasrawat/'.$data.lokasi_file)?}" 
+                                     data-lightbox="gallery" 
+                                     data-title="{$data.nama}">
+                                    <img src="{?=url(WEBAPPS_URL.'/berkasrawat/'.$data.lokasi_file)?}" 
+                                         class="img-responsive" 
+                                         style="max-width: 100%; height: auto;">
+                                  </a>
+                                </div>
+                                <div class="caption text-center">
+                                  {$data.nama}
+                                </div>
+                                {if: $this->core->getUserInfo('username', $_SESSION['mlite_user']) == 'admin' && $data.kode == '011'}
+                                <div class="pb-5" style="margin: 10px 0 20px 0;">
+                                  <a href="" class="hapus_berkas_digital btn-sm btn-danger" data-lokasi_file="{$data.lokasi_file}"><i class="fa fa-trash"></i> Hapus</a>
+                                </div>
+                                {/if}
+                              </div>
+                            {/loop}
+                          </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          {/if}
+          {if: $value.data_triase_igd}
+            <tr class="isi">
+              <td valign="top" width="20%">Triase IGD</td>
+              <td valign="top" width="1%" align="center">:</td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                  <tr class="isi">
+                    <td valign="top" width="20%">Cara Datang</td>
+                    <td valign="top" width="1%" align="center">:</td>
+                    <td>{$value.data_triase_igd.cara_masuk}</td>
+                  </tr>
+                  <tr class="isi">
+                    <td valign="top" width="20%">Macam Kasus</td>
+                    <td valign="top" width="1%" align="center">:</td>
+                    <td>{$value.data_triase_igd.macam_kasus}</td>
+                  </tr>
+                  {if: $value.data_triase_igd_primer}
+                    <tr>
+                      <td valign="top" width="20%">Keluhan Utama</td>
+                      <td valign="top" width="1%" align="center">:</td>
+                      <td>{$value.data_triase_igd_primer.keluhan_utama}</td>
+                    </tr>
+                  {/if}
+                  {if: $value.data_triase_igd_sekunder}
+                    <tr>
+                      <td valign="top" width="20%">Anamnesa Singkat</td>
+                      <td valign="top" width="1%" align="center">:</td>
+                      <td>{$value.data_triase_igd_sekunder.anamnesa_singkat}</td>
+                    </tr>
+                  {/if}
+                  {if: $value.data_triase_igd_primer}
+                    <tr>
+                      <td valign="top" width="20%">Kebutuhan Khusus</td>
+                      <td valign="top" width="1%" align="center">:</td>
+                      <td>{$value.data_triase_igd_primer.kebutuhan_khusus}</td>
+                    </tr>
+                  {/if}
+                  <tr class="isi">
+                    <td valign="top" width="20%">Tanda Vital</td>
+                    <td valign="top" width="1%" align="center">:</td>
+                    <td valign="top" width="79%">
+                      <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                        <tr>
+                          <td valign="top" width="20%">Suhu (C)</td>
+                          <td valign="top" width="80%"> : {$value.data_triase_igd.suhu}</td>
+                        </tr>
+                        <tr>
+                          <td valign="top" width="20%">Nyeri</td>
+                          <td valign="top" width="80%"> : {$value.data_triase_igd.nyeri}</td>
+                        </tr>
+                        <tr>
+                          <td valign="top" width="20%">Tensi</td>
+                          <td valign="top" width="80%"> : {$value.data_triase_igd.tekanan_darah}</td>
+                        </tr>
+                        <tr>
+                          <td valign="top" width="20%">Nadi (/menit)</td>
+                          <td valign="top" width="80%"> : {$value.data_triase_igd.nadi}</td>
+                        </tr>
+                        <tr>
+                          <td valign="top" width="20%">Saturasi Oksigen (%)</td>
+                          <td valign="top" width="80%"> : {$value.data_triase_igd.saturasi_o2}</td>
+                        </tr>
+                        <tr>
+                          <td valign="top" width="20%">Respirasi (/menit)</td>
+                          <td valign="top" width="80%"> : {$value.data_triase_igd.pernapasan}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  {if: $value.data_triase_igd_primer}
+                    <tr class="isi">
+                      <td valign="top" width="20%">Tanggal & Jam Triase</td>
+                      <td valign="top" width="1%" align="center">:</td>
+                      <td valign="top" width="79%">{$value.data_triase_igd_primer.tanggaltriase}</td>
+                    </tr>
+                    <tr class="isi">
+                      <td valign="top" width="20%">Catatan</td>
+                      <td valign="top" width="1%" align="center">:</td>
+                      <td valign="top" width="79%">{$value.data_triase_igd_primer.catatan}</td>
+                    </tr>
+                    <tr class="isi">
+                      <td valign="top" width="20%" style="background-color: red;">Immediate / Segera</td>
+                      <td valign="top" width="1%" align="center">:</td>
+                      <td valign="top" width="79%">
+                        <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                          <tr>
+                            <td valign="top" width="20%" style="background-color: red;">Plan</td>
+                            <td valign="top" width="80%" style="background-color: red;"> : {$value.data_triase_igd_primer.plan}</td>
+                          </tr>
+                          {if: $value.data_triase_igddetail_skala1}
+                            {loop: $value.data_triase_igddetail_skala1}
+                              <tr>
+                                <td valign="top" width="20%" style="background-color: red;">{$value.nama_pemeriksaan}</td>
+                                <td valign="top" width="80%" style="background-color: red;"> : {$value.pengkajian_skala1}</td>
+                              </tr>
+                            {/loop}
+                          {/if}
+                          {if: $value.data_triase_igddetail_skala2}
+                            {loop: $value.data_triase_igddetail_skala2}
+                              <tr>
+                                <td valign="top" width="20%" style="background-color: red;">{$value.nama_pemeriksaan}</td>
+                                <td valign="top" width="80%" style="background-color: red;"> : {$value.pengkajian_skala2}</td>
+                              </tr>
+                            {/loop}
+                          {/if}
+                          {if: $value.data_triase_igddetail_skala3}
+                            {loop: $value.data_triase_igddetail_skala3}
+                              <tr>
+                                <td valign="top" width="20%" style="background-color: red;">{$value.nama_pemeriksaan}</td>
+                                <td valign="top" width="80%" style="background-color: red;"> : {$value.pengkajian_skala3}</td>
+                              </tr>
+                            {/loop}
+                          {/if}
+                          {if: $value.data_triase_igddetail_skala4}
+                            {loop: $value.data_triase_igddetail_skala4}
+                              <tr>
+                                <td valign="top" width="20%" style="background-color: red;">{$value.nama_pemeriksaan}</td>
+                                <td valign="top" width="80%" style="background-color: red;"> : {$value.pengkajian_skala4}</td>
+                              </tr>
+                            {/loop}
+                          {/if}
+                          {if: $value.data_triase_igddetail_skala5}
+                            {loop: $value.data_triase_igddetail_skala5}
+                              <tr>
+                                <td valign="top" width="20%" style="background-color: red;">{$value.nama_pemeriksaan}</td>
+                                <td valign="top" width="80%" style="background-color: red;"> : {$value.pengkajian_skala5}</td>
+                              </tr>
+                            {/loop}
+                          {/if}
+                        </table>
+                      </td>
+                    </tr>
+                  {/if}
+                  {if: $value.data_triase_igd_sekunder}
+                    {if: $value.data_triase_igd_sekunder.plan == "Zona Kuning"}
+                      <tr class="isi">
+                        <td valign="top" width="20%">Tanggal & Jam Triase</td>
+                        <td valign="top" width="1%" align="center">:</td>
+                        <td valign="top" width="79%">{$value.data_triase_igd_sekunder.tanggaltriase}</td>
+                      </tr>
+                      <tr class="isi">
+                        <td valign="top" width="20%">Catatan</td>
+                        <td valign="top" width="1%" align="center">:</td>
+                        <td valign="top" width="79%">{$value.data_triase_igd_sekunder.catatan}</td>
+                      </tr>
+                      <tr class="isi">
+                        <td valign="top" width="20%" style="background-color: yellow;">Urgensi</td>
+                        <td valign="top" width="1%" align="center">:</td>
+                        <td valign="top" width="79%">
+                          <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                            <tr>
+                              <td valign="top" width="20%" style="background-color: yellow;">Plan</td>
+                              <td valign="top" width="80%" style="background-color: yellow;"> : {$value.data_triase_igd_sekunder.plan}</td>
+                            </tr>
+                            {if: $value.data_triase_igddetail_skala1}
+                              {loop: $value.data_triase_igddetail_skala1}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: yellow;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: yellow;"> : {$value.pengkajian_skala1}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala2}
+                              {loop: $value.data_triase_igddetail_skala2}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: yellow;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: yellow;"> : {$value.pengkajian_skala2}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala3}
+                              {loop: $value.data_triase_igddetail_skala3}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: yellow;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: yellow;"> : {$value.pengkajian_skala3}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala4}
+                              {loop: $value.data_triase_igddetail_skala4}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: yellow;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: yellow;"> : {$value.pengkajian_skala4}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala5}
+                              {loop: $value.data_triase_igddetail_skala5}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: yellow;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: yellow;"> : {$value.pengkajian_skala5}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                          </table>
+                        </td>
+                      </tr>
+                    {/if}
+                    {if: $value.data_triase_igd_sekunder.plan == "Zona Hijau"}
+                      <tr class="isi">
+                        <td valign="top" width="20%" style="background-color: lightgreen;">Semi Urgensi / Urgensi Rendah</td>
+                        <td valign="top" width="1%" align="center">:</td>
+                        <td valign="top" width="79%">
+                          <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                            <tr>
+                              <td valign="top" width="20%" style="background-color: lightgreen;">Plan</td>
+                              <td valign="top" width="80%" style="background-color: lightgreen;"> : {$value.data_triase_igd_sekunder.plan}</td>
+                            </tr>
+                            {if: $value.data_triase_igddetail_skala1}
+                              {loop: $value.data_triase_igddetail_skala1}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: lightgreen;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: lightgreen;"> : {$value.pengkajian_skala1}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala2}
+                              {loop: $value.data_triase_igddetail_skala2}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: lightgreen;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: lightgreen;"> : {$value.pengkajian_skala2}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala3}
+                              {loop: $value.data_triase_igddetail_skala3}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: lightgreen;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: lightgreen;"> : {$value.pengkajian_skala3}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala4}
+                              {loop: $value.data_triase_igddetail_skala4}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: lightgreen;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: lightgreen;"> : {$value.pengkajian_skala4}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                            {if: $value.data_triase_igddetail_skala5}
+                              {loop: $value.data_triase_igddetail_skala5}
+                                <tr>
+                                  <td valign="top" width="20%" style="background-color: lightgreen;">{$value.nama_pemeriksaan}</td>
+                                  <td valign="top" width="80%" style="background-color: lightgreen;"> : {$value.pengkajian_skala5}</td>
+                                </tr>
+                              {/loop}
+                            {/if}
+                          </table>
+                        </td>
+                      </tr>
+                    {/if}
+                  {/if}
+                </table>
+              </td>
+            </tr>
+          {/if}
+        </table>
+        <br>
+      {/loop}
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-danger" href="javascript:;" id="print">Cetak</a>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>
+
+<script>
+  $(document).on("click", ".hapus_berkas_digital", function(event){
+    // alert(lokasi_file);
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var url = baseURL + '/pasien/hapusberkasdigital?t=' + mlite.token;
+    var lokasi_file = $(this).attr("data-lokasi_file");
+    // tampilkan dialog konfirmasi
+    bootbox.confirm({
+      message: "Apakah Anda yakin ingin menghapus data ini?",
+      className: "custom-confirm-box",
+      callback: function (result) {
+        console.log(result);
+        // ketika ditekan tombol ok
+        if (result){
+          // mengirimkan perintah penghapusan
+          $.post(url, {
+              lokasi_file: lokasi_file
+          } ,function(data) {
+              location.reload();
+              console.log(data);
+          });
+        }
+      }
+    });
+  });
+</script>

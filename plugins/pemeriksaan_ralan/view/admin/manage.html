@@ -1,0 +1,183 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class='col-md-6 text-left'>
+                      <div class="btn-group" role="group" aria-label="Toolbar">
+                          <button id='lihat_data_pemeriksaan_ralan' class='btn btn-info' data-toggle='tooltip' data-placement='top' title='Lihat Data pemeriksaan_ralan' style='color:white;'>
+                          <i class='fa fa-eye' style='font-size: 15px;'></i><span class="hidden-xs"> Lihat</span> </button>
+                          <button id='tambah_data_pemeriksaan_ralan' class='btn btn-success' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-plus-square' style='font-size: 15px;'></i><span class="hidden-xs"> Tambah</span>
+                          </button>
+                          <button id='edit_data_pemeriksaan_ralan' class='btn btn-primary' data-toggle='tooltip' data-placement='top' title='Edit Data'>
+                          <i class='fa fa-edit' style='font-size: 15px;'></i><span class="hidden-xs"> Edit</span>
+                          </button>
+                          <button id='hapus_data_pemeriksaan_ralan' class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Hapus Data'>
+                          <i class='fa fa-trash' style='font-size: 15px;'></i><span class="hidden-xs"> Hapus</span>
+                          </button>
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="hidden-xs">More</span>
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" id="lihat_detail_pemeriksaan_ralan">View Detail</a></li>
+                              <li><a href="#">Other link</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <div class='col-md-6 text-right'>
+                      <div class="input-group" style="width:100%">
+                          <span class="input-group-addon">Cari :</span>
+                          <span class="input-group-addon" style="width:150px;padding:0 !important;background-color: #cccccc;border: 0px;text-align: left !important;">
+                          <select class="form-control" id='search_field_pemeriksaan_ralan' name='search_field_pemeriksaan_ralan' style="margin: 0 !important;"> 
+                              <option value='no_rawat'>No Rawat</option>
+<option value='tgl_perawatan'>Tgl Perawatan</option>
+<option value='jam_rawat'>Jam Rawat</option>
+<option value='suhu_tubuh'>Suhu Tubuh</option>
+<option value='tensi'>Tensi</option>
+<option value='nadi'>Nadi</option>
+<option value='respirasi'>Respirasi</option>
+<option value='tinggi'>Tinggi</option>
+<option value='berat'>Berat</option>
+<option value='spo2'>Spo2</option>
+<option value='gcs'>Gcs</option>
+<option value='kesadaran'>Kesadaran</option>
+<option value='keluhan'>Keluhan</option>
+<option value='pemeriksaan'>Pemeriksaan</option>
+<option value='alergi'>Alergi</option>
+<option value='lingkar_perut'>Lingkar Perut</option>
+<option value='rtl'>Rtl</option>
+<option value='penilaian'>Penilaian</option>
+<option value='instruksi'>Instruksi</option>
+<option value='evaluasi'>Evaluasi</option>
+<option value='nip'>Nip</option>
+
+                          </select>
+                          </span>
+                          <input class='form-control' name='search_text_pemeriksaan_ralan' id='search_text_pemeriksaan_ralan' type='search' placeholder='Masukkan Kata Kunci Pencarian' />  
+                          <span class="input-group-addon">
+                          <span id='searchclear_pemeriksaan_ralan' data-toggle='tooltip' data-placement='top' title='Clear'><i class="fa fa-times text-danger"></i></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tbl_pemeriksaan_ralan" class="table table-bordered table-striped display dataTable" style="width:100%">
+                        <thead>
+                        <tr> 
+                            <th>No Rawat</th>
+<th>Tgl Perawatan</th>
+<th>Jam Rawat</th>
+<th>Suhu Tubuh</th>
+<th>Tensi</th>
+<th>Nadi</th>
+<th>Respirasi</th>
+<th>Tinggi</th>
+<th>Berat</th>
+<th>Spo2</th>
+<th>Gcs</th>
+<th>Kesadaran</th>
+<th>Keluhan</th>
+<th>Pemeriksaan</th>
+<th>Alergi</th>
+<th>Lingkar Perut</th>
+<th>Rtl</th>
+<th>Penilaian</th>
+<th>Instruksi</th>
+<th>Evaluasi</th>
+<th>Nip</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>        
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Modal -->
+<div id="modal_pemeriksaan_ralan" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Edit Data pemeriksaan ralan</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form name="form_pemeriksaan_ralan">
+          <input type="hidden" class="form-control" id="typeact" /> 
+          <label>No Rawat<br /></label><input type='text' class='form-control' id='no_rawat' name='no_rawat' /><div><span class='error'></span></div>
+<label>Tgl Perawatan<br /></label><input type='text' class='form-control' id='tgl_perawatan' name='tgl_perawatan' /><div><span class='error'></span></div>
+<label>Jam Rawat<br /></label><input type='text' class='form-control' id='jam_rawat' name='jam_rawat' /><div><span class='error'></span></div>
+<label>Suhu Tubuh<br /></label><input type='text' class='form-control' id='suhu_tubuh' name='suhu_tubuh' /><div><span class='error'></span></div>
+<label>Tensi<br /></label><input type='text' class='form-control' id='tensi' name='tensi' /><div><span class='error'></span></div>
+<label>Nadi<br /></label><input type='text' class='form-control' id='nadi' name='nadi' /><div><span class='error'></span></div>
+<label>Respirasi<br /></label><input type='text' class='form-control' id='respirasi' name='respirasi' /><div><span class='error'></span></div>
+<label>Tinggi<br /></label><input type='text' class='form-control' id='tinggi' name='tinggi' /><div><span class='error'></span></div>
+<label>Berat<br /></label><input type='text' class='form-control' id='berat' name='berat' /><div><span class='error'></span></div>
+<label>Spo2<br /></label><input type='text' class='form-control' id='spo2' name='spo2' /><div><span class='error'></span></div>
+<label>Gcs<br /></label><input type='text' class='form-control' id='gcs' name='gcs' /><div><span class='error'></span></div>
+<label>Kesadaran<br /></label><input type='text' class='form-control' id='kesadaran' name='kesadaran' /><div><span class='error'></span></div>
+<label>Keluhan<br /></label><input type='text' class='form-control' id='keluhan' name='keluhan' /><div><span class='error'></span></div>
+<label>Pemeriksaan<br /></label><input type='text' class='form-control' id='pemeriksaan' name='pemeriksaan' /><div><span class='error'></span></div>
+<label>Alergi<br /></label><input type='text' class='form-control' id='alergi' name='alergi' /><div><span class='error'></span></div>
+<label>Lingkar Perut<br /></label><input type='text' class='form-control' id='lingkar_perut' name='lingkar_perut' /><div><span class='error'></span></div>
+<label>Rtl<br /></label><input type='text' class='form-control' id='rtl' name='rtl' /><div><span class='error'></span></div>
+<label>Penilaian<br /></label><input type='text' class='form-control' id='penilaian' name='penilaian' /><div><span class='error'></span></div>
+<label>Instruksi<br /></label><input type='text' class='form-control' id='instruksi' name='instruksi' /><div><span class='error'></span></div>
+<label>Evaluasi<br /></label><input type='text' class='form-control' id='evaluasi' name='evaluasi' /><div><span class='error'></span></div>
+<label>Nip<br /></label><input type='text' class='form-control' id='nip' name='nip' /><div><span class='error'></span></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="simpan_data_pemeriksaan_ralan" class="btn btn-primary">Simpan Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_lihat_pemeriksaan_ralan" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><span id="modal-title">Lihat Data pemeriksaan ralan</span>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="forTable_pemeriksaan_ralan"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+        <button type="submit" id="export_pdf" class="btn btn-primary">
+          <i class="fa fa-file-pdf-o"></i>&nbsp;PDF </button>
+        <button type="submit" id="export_xlsx" class="btn btn-primary">
+          <i class="fa fa-file-excel-o"></i>&nbsp;XLSX </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal_detail_pemeriksaan_ralan" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>

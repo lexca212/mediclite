@@ -1,0 +1,289 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola Booking Pasien</h3>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="https://simrsfitricandra.site/admin/rawat_jalan/booking?t=b9ae3e6ad412" role="tab">Sekarang</a>
+                    </li>
+                    <li class="">
+                        <a href="https://simrsfitricandra.site/admin/rawat_jalan/booking/?start_date=2026-02-18&end_date=2026-02-19&t=b9ae3e6ad412" role="tab">1 Hari Lagi</a>
+                    </li>
+                    <li class="">
+                        <a href="https://simrsfitricandra.site/admin/rawat_jalan/booking/?start_date=2026-02-18&end_date=2026-02-25&t=b9ae3e6ad412" role="tab">7 Hari Lagi</a>
+                    </li>
+                    <li class="">
+                        <a href="https://simrsfitricandra.site/admin/rawat_jalan/booking/?start_date=2026-02-18&end_date=2026-03-20&t=b9ae3e6ad412" role="tab">30 Hari Lagi</a>
+                    </li>
+				        </ul>
+            </div>
+            <div class="panel-body">
+                <div class="row clearfix">
+                  <div class="col col-md-6">
+                    <h3 style="margin-top:5px;margin-bottom:15px;">Jumlah: 17</h3>
+                  </div>
+                  <div class="col col-md-6">
+                    <form action="https://simrsfitricandra.site/admin/rawat_jalan/booking/1?s=&start_date=2026-02-18&end_date=2026-02-18&t=b9ae3e6ad412" class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+                        <div class="input-group">
+                            <input type="text" name="s" minlength="3" class="form-control" placeholder="Search" required>
+                            <input type="hidden" name="start_date" value="2026-02-18">
+                            <input type="hidden" name="end_date" value="2026-02-18">
+                            <input type="hidden" name="t" value="b9ae3e6ad412">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+                <form method="post">
+                <button type="submit" title="Validasi Booking" name="valid" class="btn btn-danger" data-confirm="Yakin akan menvalidasi pasien ke register?" disabled><i class="fa fa-check"></i> Validasi (<span>0</span>)</button>
+      					<div class="table-responsive no-margin">
+      						<table class="table table-striped no-margin">
+      							<thead>
+      								<tr>
+                        <th><input type="checkbox" class="check-all" /></th>
+                        <th>Nama Pasien</th>
+                        <th>No. RM</th>
+                        <th>No. Reg</th>
+                        <th>Klinik</th>
+                        <th>Dokter</th>
+      									<th>Jenis Bayar</th>
+                        <th>Tgl. Booking</th>
+                        <th>Jam. Booking</th>
+                        <th>Tgl. Periksa</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+      								</tr>
+      							</thead>
+      							<tbody>
+              			      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="050492" /></td>
+      									<td>SAKIYEM</td>
+                        <td>050492</td>
+                        <td>001</td>
+                        <td>Poliklinik Saraf / Neurologi</td>
+      									<td>dr. Patrisia Palmaputri Pinanti, Sp.N</td>
+                        <td>BPJS</td>
+                        <td>2026-02-09</td>
+                        <td>15:22:25</td>
+                        <td>2026-02-18</td>
+                        <td>Terdaftar</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="085229356805" data-nm_pasien="Yang terhormat SAKIYEM dengan nomor rekam medik 050492.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 001 &#013;&#010;Poliklinik: Poliklinik Saraf / Neurologi&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="051961" /></td>
+      									<td>MONIKA WILIS</td>
+                        <td>051961</td>
+                        <td>004</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>BPJS</td>
+                        <td>2026-02-09</td>
+                        <td>16:35:15</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="082221205795" data-nm_pasien="Yang terhormat MONIKA WILIS dengan nomor rekam medik 051961.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 004 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="056517" /></td>
+      									<td>SARTI</td>
+                        <td>056517</td>
+                        <td>003</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>BPJS</td>
+                        <td>2026-02-04</td>
+                        <td>16:25:54</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="082127997776" data-nm_pasien="Yang terhormat SARTI dengan nomor rekam medik 056517.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 003 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="061946" /></td>
+      									<td>SYAFRINA RAHMAH NURUN NISA</td>
+                        <td>061946</td>
+                        <td>007</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>UMUM</td>
+                        <td>2026-02-11</td>
+                        <td>00:00:00</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="0895391979220" data-nm_pasien="Yang terhormat SYAFRINA RAHMAH NURUN NISA dengan nomor rekam medik 061946.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 007 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="062980" /></td>
+      									<td>DEA FITRIKA SILFIANTINI</td>
+                        <td>062980</td>
+                        <td>006</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>UMUM</td>
+                        <td>2026-02-11</td>
+                        <td>17:44:39</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="085768129712" data-nm_pasien="Yang terhormat DEA FITRIKA SILFIANTINI dengan nomor rekam medik 062980.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 006 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="063105" /></td>
+      									<td>NINGRUM CANDRA ROMDHONI</td>
+                        <td>063105</td>
+                        <td>002</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>BPJS</td>
+                        <td>2026-01-21</td>
+                        <td>16:24:41</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="081332843312" data-nm_pasien="Yang terhormat NINGRUM CANDRA ROMDHONI dengan nomor rekam medik 063105.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 002 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="063433" /></td>
+      									<td>CRISHE DEWI MAHARANI</td>
+                        <td>063433</td>
+                        <td>008</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>UMUM</td>
+                        <td>2026-02-11</td>
+                        <td>00:00:00</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="088983857112" data-nm_pasien="Yang terhormat CRISHE DEWI MAHARANI dengan nomor rekam medik 063433.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 008 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="063549" /></td>
+      									<td>SITI UMAMAH</td>
+                        <td>063549</td>
+                        <td>001</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>UMUM</td>
+                        <td>2026-01-20</td>
+                        <td>16:08:01</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="0895324166949" data-nm_pasien="Yang terhormat SITI UMAMAH dengan nomor rekam medik 063549.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 001 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="063576" /></td>
+      									<td>SRI WINARSIH, BY NY</td>
+                        <td>063576</td>
+                        <td>001</td>
+                        <td>Poliklinik Anak</td>
+      									<td>dr. Vera Irawati K,Sp.A,M.Kes</td>
+                        <td>BPJS</td>
+                        <td>2026-02-09</td>
+                        <td>15:48:27</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="083840281201" data-nm_pasien="Yang terhormat SRI WINARSIH, BY NY dengan nomor rekam medik 063576.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 001 &#013;&#010;Poliklinik: Poliklinik Anak&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								<tr>
+                        <td><input type="checkbox" name="no_rkm_medis[]" class="list-item" value="063593" /></td>
+      									<td>INDAH PALUPI</td>
+                        <td>063593</td>
+                        <td>005</td>
+                        <td>Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+      									<td>dr. Guntur,Sp.OG</td>
+                        <td>BPJS</td>
+                        <td>2026-02-09</td>
+                        <td>16:50:33</td>
+                        <td>2026-02-18</td>
+                        <td>Belum</td>
+                        <td><button type="button" class="btn btn-xs btn-success" data-toggle="modal" href="#waModal" data-no_tlp="085941303213" data-nm_pasien="Yang terhormat INDAH PALUPI dengan nomor rekam medik 063593.&#013;&#010;&#013;&#010;Sekedar mengingatkan jadwal kontrol anda: &#013;&#010;Tanggal: 2026-02-18 &#013;&#010;Nomor Antrian: 005 &#013;&#010;Poliklinik: Poliklinik Kebidanan dan Penyakit  Kandungan&#013;&#010;&#013;&#010;Bawalah kartu berobat anda. &#013;&#010;Datanglah 30 menit sebelumnya.&#013;&#010;&#013;&#010;-------------------&#013;&#010;Pesan WhatsApp ini dikirim otomatis oleh RSU FITRI CANDRA WONOGIRI &#013;&#010;Terima Kasih"><i class="fa fa-whatsapp"></i></button></td>
+      								</tr>
+      								      								      							</tbody>
+      						</table>
+      					</div>
+                </form>
+                <nav class="text-center"><ul class="pagination"><li class="disabled"><a href="#">&laquo;</a></li><li class="disabled"><a href="#">-</a></li><li class="active"><a href="#">1</a></li><li><a href="https://simrsfitricandra.site/admin/rawat_jalan/booking/2?s=&start_date=2026-02-18&end_date=2026-02-18&t=b9ae3e6ad412">2</a></li><li><a href="https://simrsfitricandra.site/admin/rawat_jalan/booking/2?s=&start_date=2026-02-18&end_date=2026-02-18&t=b9ae3e6ad412">+</a></li><li><a href="https://simrsfitricandra.site/admin/rawat_jalan/booking/2?s=&start_date=2026-02-18&end_date=2026-02-18&t=b9ae3e6ad412">&raquo;</a></li></ul></nav>            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="waModal" tabindex="-1" role="dialog" aria-labelledby="waModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Kirim WhatsApp</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating number">
+          <label for="floatingPassword">Nomor</label>
+          <input type="text" name="number" class="form-control" id="number" placeholder="Nomor WhatsApp Tujuan">
+        </div>
+        <div class="form-floating message">
+          <label for="floatingPassword">Pesan</label>
+          <textarea name="message" rows="14" cols="100" class="form-control" id="message" placeholder="Tulis pesan anda.."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary" onclick="KirimWA()" data-dismiss="modal">Kirim</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+$(".list-item").change(function() {
+    if($('.list-item:checked').length > 0)
+        $('button[name="valid"]').prop("disabled", false)
+    else
+        $('button[name="valid"]').prop("disabled", true)
+    $('button[name="valid"] span').text($(".list-item:checked").length);
+}).change();
+$(".check-all").change(function(e) {
+    if($(this).is(":checked"))
+        $('.list-item').prop('checked', true);
+    else
+        $('.list-item').prop('checked', false);
+
+    $('.list-item').change();
+});
+//triggered when modal is about to be shown
+$('#waModal').on('show.bs.modal', function(e) {
+    //get data-id attribute of the clicked element
+    var no_tlp = $(e.relatedTarget).data('no_tlp');
+    var nm_pasien = $(e.relatedTarget).data('nm_pasien');
+    //populate the textbox
+    $(e.currentTarget).find('input[name="number"]').val(no_tlp);
+    $(e.currentTarget).find('textarea[name="message"]').val(nm_pasien);
+});
+</script>
+<script>
+  function KirimWA() {
+  	var xhttp = new XMLHttpRequest();
+    var api_key = '3144a0b652d384bbb43b14e53c6e58bf';
+  	var sender = '081369606162';
+  	var number = document.getElementById("number").value;
+  	var message = document.getElementById("message").value;
+  	console.log(api_key + " - " + number + " - " + message);
+  	xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var data=xhttp.responseText;
+        var timeout = '504 Gateway Time-out';
+        if(data.indexOf(timeout) != -1) {
+            alert('Timeout!!! Gagal mengirim pesan.');
+        } else {
+            var jsonResponse = JSON.parse(data);
+            if(jsonResponse["status"] == true) {
+              alert('Sukses mengirim pesan.');
+            } else {
+            alert('Gagal mengirim pesan.\n' + jsonResponse["msg"]);
+            }
+        }
+      }
+  	};
+  	xhttp.open("POST", "https://simrsfitricandra.site/admin/api/kirimwa?t=b9ae3e6ad412", true);
+  	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  	xhttp.send("api_key=" + api_key + "&sender=" + sender + "&number=" + number + "&message=" + message);
+  }
+</script>

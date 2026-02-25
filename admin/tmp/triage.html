@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Formulir Triase</title>
+    <style>
+
+        /* Gaya untuk checkbox yang tidak dicentang */
+        input[type="checkbox"]:not(:checked) {
+            background-color: white; /* Latar belakang putih untuk checkbox yang tidak dicentang */
+            border: 2px solid #888;  /* Border terang agar checkbox tidak dicentang terlihat */
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Gaya untuk checkbox yang dicentang */
+        input[type="checkbox"]:checked {
+            background-color: blue; /* Latar belakang biru untuk checkbox yang dicentang */
+            border: 2px solid blue;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+      
+      	button {
+      		font-size: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 3px;
+            text-align: left;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        body {
+            margin: 0 60px 40px 80px;
+            font-size: 16px;
+            font-family: Georgia, serif;
+        }
+        input, textarea {
+            font-size: 16px;
+            font-family: Georgia, serif;
+        }
+         select {
+            border: none;
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        
+        @media print {
+            #saveButton, #printPageButton {
+                display: none;
+            }
+            textarea {
+                border: none;
+                resize: none;
+            }
+            select::-ms-expand {
+            display: none;
+            }
+            select {
+            border: none;
+            resize: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: none;
+            border: none;
+            box-shadow: none;
+            pointer-events: none;
+            }
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            /* Mengatur warna untuk checkbox */
+            input[type="checkbox"] {
+                -webkit-filter: grayscale(100%) sepia(100%) saturate(0%) hue-rotate(300deg) brightness(102%) contrast(101%);
+                filter: grayscale(100%) sepia(100%) saturate(0%) hue-rotate(300deg) brightness(102%) contrast(101%);
+            }
+            /* Mengatur warna untuk inputan */
+            input[type="text"], textarea {
+                color: black; /* Warna teks hitam */
+                background-color: white; /* Latar belakang putih */
+            }
+            /* Mengatur warna untuk elemen lainnya */
+            .merah {
+                color: red;
+            }
+            .kuning {
+                color: yellow;
+            }
+            .oranye {
+                color: orange;
+            }
+            .hijau {
+                color: green;
+            }
+            .merah-bg {
+                background-color: red;
+            }
+            .kuning-bg {
+                background-color: yellow;
+            }
+            .oranye-bg {
+                background-color: orange;
+            }
+            .hijau-bg {
+                background-color: green;
+            }
+        }
+        .right-table {
+            float: right;
+            margin-left: 20px;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        .right-table th, .right-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .right-table th {
+            background-color: #f2f2f2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        label {
+            display: inline-block;
+            width: 125px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+            width: 200px;
+            border: 0;
+            padding: 1px;
+            margin: 1px 0;
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"][readonly] {
+            background-color: white;
+        }
+    </style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://simrsfitricandra.site/assets/jscripts/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="https://simrsfitricandra.site/assets/jscripts/qrcode.js"></script>
+</head>
+<body>
+    <center><h2>FORMULIR TRIASE</h2></center>
+    <table colspan="5">
+        <tr>
+            <td colspan="5">
+                <label>Nama Pasien &nbsp; :</label>
+                <input type="text" name="nm_pasien" value="SAMIDI" style="border: 0;padding:5px;margin: 2px 0;background-color: white" readonly><br>
+                <label>No RM &emsp;&emsp;&emsp;&nbsp;&nbsp; :</label>
+                <input type="Text" name="nm_pasien" value="063830" style="width: 200px;border: 0;padding:5px;margin: 2px 0;background-color: white" readonly><br>
+                <label>Jenis Kelamin &nbsp;:</label>
+                <input type="Text" name="nm_pasien" value="Laki-Laki" style="border: 0;padding:5px;margin: 2px 0;background-color: white" readonly><br>
+                <label>Tanggal Lahir &nbsp;&nbsp;:</label>
+                <input type="Text" name="nm_pasien" value="1978-12-15" style="width: 200px;border: 0;padding:5px;margin: 2px 0;background-color: white" readonly>
+            </td>
+            <td colspan="5">
+                <label>No. Kunjungan</label>
+                <input type="Text" id="no_rawat" name="no_rawat" value="2026/02/18/000006" style="width: 200px;border: 0;padding:5px;margin: 2px 0;background-color: white" readonly><br>
+                <label>Tanggal Pemeriksaan</label>
+                <input type="date" name="tgl_periksa" style="border: 0;background-color: #f2f2f2"><br>
+                <label for="jam_periksa">Jam Pemeriksaan</label>
+                <input type="time" name="jam_periksa" style="border: 0;background-color: #f2f2f2">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label style="width: 40%; text-align: left">Riwayat Penyakit Dahulu :</label>
+                <input type="textarea" name="rpd_triase" style="width: 55%; text-align: right; border: 0;padding:5px;margin: 2px 0;background-color: #f2f2f2"><br>
+                <label style="width: 40%; text-align: left">Jenis Pasien :</label>
+                <input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">Trauma <span><input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">Nontrauma</span><span><input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">Obstetri</span>
+                <!--<select name="" id="">
+                    <option value="">Trauma</option>
+                    <option value="">Non Trauma</option>
+                    <option value=""> Obstetri</option>
+                </select>-->
+                <!--<input type="textarea" name="jns_pasien" style="width: 55%; text-align: right; border: 0;padding:5px;margin: 2px 0;background-color: #f2f2f2"><br>-->
+            </td>
+            <td rowspan="3" colspan="5">
+                <center style="background-color: gray;"><input style="text-align: center; background-color: gray;" type="checkbox" name="airway" value="bebas_resusitasi">D.O.A (Death On Arrival)<br><br></center><br>
+                <input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">Tanda Kehidupan<br>
+                <input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">Denyut nadi tidak teraba<br>
+                <input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">Akral dingin, sianosis<br>
+                <input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">Pupil midriasis total<br>
+                <input style="text-align: center" type="checkbox" name="airway" value="bebas_resusitasi">EKG Flat<br><br><br>
+                <Label>Pukul </Label>
+                <input type="time" name="jam_doa" style="border: 0;background-color: #f2f2f2">
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle;">
+                <label style="display: flex; align-items: center; height: 100%">Keluhan:</label>
+                <textarea name="keluhan" style="height: 100%; width: 97%"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>TD</label>
+                <input type="Text" name="td" style="width: 80px;border: 0;padding:2px;margin: 2px 0;background-color: #f2f2f2"> mmHg &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>HR &nbsp;</label>
+                <input type="Text" name="hr" style="width: 80px;border: 0;padding:2px;margin: 2px 0;background-color: #f2f2f2"> X/Menit<br>
+                <label>RR</label>
+                <input type="Text" name="rr" style="width: 80px;border: 0;padding:2px;margin: 2px 0;background-color: #f2f2f2"> X/Menit &nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Suhu &nbsp;</label>
+                <input type="Text" name="suhu" style="width: 80px;border: 0;padding:2px;margin: 2px 0;background-color: #f2f2f2"> C<br>
+                <label>SpO2</label>
+                <input type="Text" name="spo" style="width: 80px;border: 0;padding:2px;margin: 2px 0;background-color: #f2f2f2"> %<br>
+            </td>
+        </tr>
+    </table>
+<br>
+    <table>
+        <tr>
+            <th rowspan="2" style="background-color: #f2f2f2;">PEMERIKSAAN</th>
+            <th colspan="5" style="background-color: #f2f2f2; text-align: center;">TRIASE PRIMER</th>
+        </tr>
+        <tr>
+            <th style="text-align: center; background-color: red">RESUSITASI</th>
+            <th style="background-color: pink;">EMERGENCY</th>
+            <th style="background-color: orange;">URGENT</th>
+            <th style="background-color: green;">LESS URGENT</th>
+            <th>NON URGENT</th>
+        </tr>
+        <tr>
+            <td>JALAN NAFAS (AIRWAY)</td>
+            <td>
+                <input type="checkbox" name="airway" value="bebas_resusitasi"> Bebas<br>
+                <input type="checkbox" name="airway" value="sumbatan_resusitasi"> Sumbatan
+            </td>
+            <td>
+                <input type="checkbox" name="airway" value="bebas_emergency"> Bebas<br>
+                <input type="checkbox" name="airway" value="sumbatan_emergency"> Sumbatan
+            </td>
+            <td><input type="checkbox" name="airway_urgent" value="bebas"> Bebas</td>
+            <td><input type="checkbox" name="airway_less_urgent" value="bebas"> Bebas</td>
+            <td><input type="checkbox" name="airway_non_urgent" value="bebas"> Bebas</td>
+        </tr>
+        <tr>
+            <td rowspan="2">PERNAFASAN (BREATHING)</td>
+            <td style="text-align: left;">
+                <input type="checkbox" name="breathing_resusitasi" value="henti nafas"> Henti Nafas<br>
+                <input type="checkbox" name="breathing_resusitasi" value="rr<10x/menit">RR < 10x/Menit<br>
+                <input type="checkbox" name="breathing_resusitasi" value="sianosis"> sianosis<br>
+            </td>
+            <td>
+                <input type="checkbox" name="breathing_emergency" value="rr>=33"> RR ≥ 33x/Menit<br>
+                <input type="checkbox" name="breathing_emergency" value="rr:10-16"> RR: 10 - 16<br>
+            </td>
+            <td>
+                <input type="checkbox" name="breathing_urgent" value="rr29-32">RR 23-32x/Menit<br>
+            </td>
+            <td rowspan="2"><input type="checkbox" name="breathing_less_urgent" value="rr21-24"> RR : ≥ 16-22 x/Menit</td>
+            <td rowspan="2"><input type="checkbox" name="breathing_non_urgent" value="normal"> RR : 16 - 20 x/Menit</td>
+        </tr>
+        <tr>
+            <td>
+                <b><u>Neonatus</u></b><br>
+                <input type="checkbox" name="breathing_resusitasi" value="henti nafas"> Apneu/Mengap-mengap, RR < 40x/Menit<br>
+                <input type="checkbox" name="breathing_resusitasi" value="Sionoisis Sentral Menetap dengan o2"> Sionoisis Sentral Menetap dengan O2
+            </td>
+            <td>
+                <b><u>Neonatus</u></b><br>
+                <input type="checkbox" name="breathing_emergency" value="rr>60x/menit"> RR > 60x/menit<br>
+                <input type="checkbox" name="breathing_emergency" value="rr < 40x/menit"> RR < 40x/menit<br>
+                <input type="checkbox" name="breathing_emergency" value="Sionoisis Sentral Menetap dengan o2">Sianoisis Sentral menetap dengan O2<br>
+            </td>
+            <td>
+                <b><u>Neonatus</u></b><br>
+                <input type="checkbox" name="breathing_urgent" value="rr>60x/menit"> RR > 60x/menit<br>
+                <input type="checkbox" name="breathing_urgent" value="rr < 40x/menit"> RR < 40x/menit<br>
+                <input type="checkbox" name="breathing_urgent" value="Sionoisis Sentral Menetap dengan o2">Sianoisis Sentral menghilang dengan O2<br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">SIRKULASI (CIRCULATION)</td>
+            <td>
+                <input type="checkbox" name="circulation_resusitasi1" value="nadi_tidak_teraba"> Henti Jantung <br>
+                <input type="checkbox" name="circulation_resusitasi2" value="akral_dingin"> Nadi tidak teraba <br>
+                <input type="checkbox" name="circulation_resusitasi3" value="henti jantung"> Akral dingin<br>
+            </td>
+            <td>
+                <input type="checkbox" name="circulation_emergency" value="tds<80"> TDS &lt; 80 mmHg<br>
+                <input type="checkbox" name="circulation_emergency" value="HR < 50x/menit/ > 150x/Menit"> HR < 50x/menit/ > 150x/Menit<br>
+                <input type="checkbox" name="circulation_emergency" value=" Nadi teraba lemah"> Nadi teraba lemah<br>
+                <input type="checkbox" name="circulation_emergency" value="Pendarahan Berat">Pendarahan Berat<br>
+                <input type="checkbox" name="circulation_emergency" value="akral_dingin">Akral Dingin<br>
+                <input type="checkbox" name="circulation_emergency" value="CRT > 2 Detik">CRT > 2 Detik<br>
+            </td>
+            <td>
+                <input type="checkbox" name="circulation_urgent" value="tds>160"> TDS > 160 mmHg<br>
+                <input type="checkbox" name="circulation_urgent" value="HR 120-150x/menit">HR 120-150x/menit<br>
+                <input type="checkbox" name="circulation_urgent" value="TDD > 100 mmHg">TDD > 100 mmHg<br>
+                <input type="checkbox" name="circulation_urgent" value="Pendarahan Sedang">Pendarahan Sedang<br>
+            </td>
+            <td rowspan="2">
+                <input type="checkbox" name="circulation_less_urgent" value="tds>=120-160"> HR : 100-120x/menit<br>
+                <input type="checkbox" name="circulation_less_urgent" value="tdd>=80-100"> TDS : ≥120 - 160 mmHg<br>
+                <input type="checkbox" name="circulation_less_urgent" value="tdd>=80-100"> TDD : ≥80 - 100 mmHg<br>
+                <input type="checkbox" name="circulation_less_urgent" value="Pendarahan Ringan">Pendarahan Ringan<br>
+            </td>
+            <td rowspan="2">
+                <input type="checkbox" name="circulation_non_urgent" value="tds120"> TDS 120 mmHg<br>
+                <input type="checkbox" name="circulation_non_urgent" value="HR : 60-100 x/menit">HR : 60-100 x/menit<br>
+                <input type="checkbox" name="circulation_non_urgent" value="tdd80"> TDD 80 mmHg<br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b><u>Neonatus</u></b><br>
+                <input type="checkbox" name="circulation_resusitasi3" value="henti jantung"> HR < 120x/menit<br>
+            </td>
+            <td>
+                <b><u>Neonatus</u></b><br>
+                <input type="checkbox" name="circulation_resusitasi3" value="henti jantung"> HR < 120x/menit<br>
+                <input type="checkbox" name="circulation_resusitasi3" value="henti jantung"> HR > 160x/menit<br>
+            </td>
+            <td>
+                <b><u>Neonatus</u></b><br>
+                <input type="checkbox" name="circulation_resusitasi3" value="henti jantung"> HR < 120x/menit<br>
+                <input type="checkbox" name="circulation_resusitasi3" value="henti jantung"> HR > 160x/menit<br>
+            </td>
+        </tr>
+        <tr>
+            <td>KESADARAN (DISABILITY)</td>
+            <td><input type="checkbox" name="disability_resusitasi" value="gcs<9"> GCS &lt; 9</td>
+            <td><input type="checkbox" name="disability_emergency" value="gcs9-12"> GCS 9 - 12</td>
+            <td><input type="checkbox" name="disability_urgent" value="gcs>13"> GCS &gt; 13</td>
+            <td><input type="checkbox" name="disability_less_urgent" value="gcs15"> GCS 15</td>
+            <td><input type="checkbox" name="disability_non_urgent" value="gcs15"> GCS 15</td>
+        </tr>
+        <tr>
+            <td>PAPARAN (Exposure)</td>
+            <td>
+                <input type="checkbox" name="">Muntah atau diare dengan dehidrasi berat<br>
+                <input type="checkbox" name="">Nyeri dada khas SKA<br>
+                <input type="checkbox" name="">GDS &lt; 50<br>
+                <input type="checkbox" name=""> Kejang
+            </td>
+            <td>
+                <input type="checkbox" name="disability_emergency" value="gcs9-12"> Nyeri Berat (VAS 7 - 10)<br>
+                <input type="checkbox" name="">Trauma Multiple / trauma lokal berat (co : amputasi, fraktus pelvis)<br>
+                <input type="checkbox" name="" id="">Nyeri dada khas SKA<br>
+                <input type="checkbox" name="" id=""> Hemiparase<br>
+              <input type="checkbox" name="" id=""> Gawat Janin (DJJ > 160 atau < 120 )
+            </td>
+            <td>
+                <input type="checkbox" name="disability_urgent" value="gcs>13"> Nyeri Sedang (VAS 4-6) <br>
+                <input type="checkbox" name="" id=""> Trauma esktremitas dengan deformitas <br>
+                <input type="checkbox" name="" id=""> Muntah atau diare dengan dehidrasi ringan - sedang <br>
+                <input type="checkbox" name="" id=""> Nyeri dada tidak khas SKA <br>
+                <input type="checkbox" name="" id=""> Riwayat kejang sebelumnya <br>
+                <input type="checkbox" name="" id=""> Ketuban Pecah Dini
+            </td>
+            <td>
+                <input type="checkbox" name="disability_less_urgent" value="gcs15"> Nyeri ringan (VAS 1-3) <br>
+                <input type="checkbox" name="" id=""> Trauma ekstremitas minor <br>
+                <input type="checkbox" name="" id=""> Muntah atau diare tanpa dehidrasi
+            </td>
+            <td>
+                <input type="checkbox" name="disability_non_urgent" value="gcs15"> Nyeri tidak ada <br>
+                <input type="checkbox" name="" id=""> Laserasi ringan <br>
+                <input type="checkbox" name="" id=""> Kontrol luka
+            </td>
+        </tr>
+        <tr>
+            <td>RESPON TIME</td>
+            <td style="text-align: center; background-color: red">Immediate/Segera</td>
+            <td style="background-color: pink;"> < 10 Menit</td>
+            <td style="background-color: orange;">30 Menit</td>
+            <td style="background-color: green;">60 Menit</td>
+            <td>120 Menit</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="width: 16.5%;">
+                <p><strong>Resiko Penularan <br> Infeksi </strong></p> 
+            </td>
+            <td style="width: 85%;">
+                Batuk lebih dari 2 minggu dengan demam dan sesak <br>
+                <input type="checkbox" name="infection_risk" value="yes"> Rujukan dengan suspek / konfirmasi airbone disase <br>
+                <input type="checkbox" name="infection_risk" value="yes"> Tidak beresiko penularan airbone disase <br>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="width: 16.5%;">
+                <p><strong>Prioritas</strong></p>
+            </td>
+            <td>
+                <input type="checkbox" name="prioritas" value="p1"> Prioritas 1 adalah kasus gawat darurat dan darurat yang mengancam nyawa -> <i><b>Ruang Resusitasi</b></i><br>
+                <input type="checkbox" name="prioritas" value="p2"> Prioritas 2 adalah kasus gawat tidak darurat -> <i><b>Ruang Observasi biasa / tindakan</b></i><br>
+                <input type="checkbox" name="prioritas" value="p3"> Prioritas 3 adalah kasus tidak gawat dan darurat -> <i><b>Ruang Observasi biasa / tindakan</b></i><br>
+                <input type="checkbox" name="prioritas" value="p4"> Ruang isolasi<br>
+            </td>
+        </tr>
+    </table>
+</table>
+<table>
+    <tr>
+        <td style="width: 16.5%;">
+            <p><strong>Diteruskan kepada Dokter</strong></p>
+        </td>
+        <td>
+            <input type="checkbox" name="prioritas" value="p1"> Dalam<br>
+            <input type="checkbox" name="prioritas" value="p1"> Saraf<br>
+            <input type="checkbox" name="prioritas" value="p1"> Bedah<br>
+            <input type="checkbox" name="prioritas" value="p1"> Anak<br>
+            <input type="checkbox" name="prioritas" value="p1"> Gigi<br>
+            <input type="checkbox" name="prioritas" value="p1"> Obstetri dan Ginekologi<br>
+        </td>
+        <td>
+            <input type="checkbox" name="prioritas" value="p1"> Jantung<br>
+            <input type="checkbox" name="prioritas" value="p1"> Paru<br>
+            <input type="checkbox" name="prioritas" value="p1"> Bedah Orthopedi<br>
+            <input type="checkbox" name="prioritas" value="p1"> Bedah Urologi<br>
+        </td>
+        <td>
+            <input type="checkbox" name="prioritas" value="p1"> Kulit dan Kelamin<br>
+            <input type="checkbox" name="prioritas" value="p1"> Jiwa<br>
+            <input type="checkbox" name="prioritas" value="p1"> THT<br>
+            <input type="checkbox" name="prioritas" value="p1"> Mata<br>
+            <input type="checkbox" name="prioritas" value="p1"> Umum<br>
+        </td>
+        <td>
+            <input type="checkbox" name="prioritas" value="p1"> Isolasi<br>
+            <input type="checkbox" name="prioritas" value="p1"> Non Isolasi<br>
+        </td>   
+    </tr>
+</table>
+    <table style="border-color: white;">
+        <tr>
+          <td colspan="2" width="700" style="border-color: white;">
+          </td>
+          <td width="180" style="border-color: #f2f2f2;"><br><br>
+            <!--WONOGIRI, 25-02-2026<br><br>-->
+            <!--WONOGIRI, <input type="text" name="tgl_periksa" value="25-02-2026" style="border: 0;background-color: #f2f2f2"><br><br><br>-->
+            Dokter Jaga
+            <div id="qrcode_dokter" style="margin-top:10px;width:80px;"></div><br>
+            dr. Edy Rizal Ginting          </td>
+        </tr>
+    </table>
+  <script>
+        jQuery('#qrcode_dokter').qrcode({
+            text	: "ditanda tangani oleh Dokter: dr. Edy Rizal Ginting, SIP: 446.21/1227/SIP.I/IX/2023, di RSU FITRI CANDRA WONOGIRI"
+        });
+  </script>
+  <br><br>
+  <button id="saveButton">&#128424; Simpan</button> &emsp;
+  <button id="printPageButton" onclick="Cetak()">&#128424; Cetak</button>
+    <script>
+      document.getElementById('saveButton').addEventListener('click', function() {
+          // Sembunyikan tombol sebelum mengambil screenshot
+          document.getElementById('saveButton').style.display = 'none';
+          document.getElementById('printPageButton').style.display = 'none';
+
+          // Terapkan border pada semua tabel sebelum mengambil screenshot
+          document.querySelectorAll('table').forEach(table => {
+              table.style.border = "1px solid black"; 
+              table.style.borderCollapse = "collapse"; 
+          });
+
+          // Gunakan html2canvas untuk menangkap elemen body
+          html2canvas(document.body, {
+              useCORS: true,
+              allowTaint: true,
+              backgroundColor: "#ffffff",
+              scale: 2, // Menambah resolusi gambar agar border lebih jelas
+              onclone: (documentClone) => {
+                  documentClone.querySelectorAll('table').forEach(table => {
+                      table.style.border = "1px solid black"; 
+                      table.style.borderCollapse = "collapse"; 
+                  });
+              }
+          }).then(canvas => {
+              if (canvas) {
+                  const imgData = canvas.toDataURL('image/png');
+
+                  const formData = new FormData();
+                  formData.append('image', imgData);
+                  formData.append('no_rawat', document.getElementById('no_rawat').value);
+
+                  $.ajax({
+                      url: 'https://simrsfitricandra.site/dokter_igd/simpantriage',
+                      type: 'POST',
+                      data: formData,
+                      contentType: false,
+                      processData: false,
+                      success: function(response) {
+                          alert('Gambar berhasil disimpan!');
+                      },
+                      error: function() {
+                          alert('Terjadi kesalahan saat menyimpan gambar.');
+                      }
+                  });
+              } else {
+                  console.error('Canvas tidak bisa diambil.');
+                  alert('Terjadi kesalahan saat mengambil screenshot.');
+              }
+          });
+
+          // Tampilkan kembali tombol setelah pengambilan screenshot
+          document.getElementById('saveButton').style.display = 'inline-block';
+          document.getElementById('printPageButton').style.display = 'inline-block';
+      });
+    </script>
+</html>

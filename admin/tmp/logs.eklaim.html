@@ -1,0 +1,648 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="btn-group pull-right" style="margin-top:-8px;">
+          <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-calendar"></i><span class="hidden-xs"> Pilihan dan Pemilahan</span>
+          </span>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <form class="" action="http://192.168.0.212/admin/vedika/logseklaim?t=bd0791e00e5e" method="">
+              <li style="padding-left:5px;padding-right:5px;">
+                <input type="text" id="start_date" class="form-control tanggal" name="start_date" required value="2025-10-20">
+              </li>
+              <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                <input type="text" id="end_date" class="form-control tanggal" name="end_date" required value="2025-10-20">
+              </li>
+              <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+                <input type="submit" name="submit" class="btn btn-primary btn-block" value="Submit">
+                <input type="hidden" name="t" value="bd0791e00e5e">
+              </li>
+            </form>
+          </ul>
+        </div>
+        <h3 class="panel-title">Logs e-Klaim</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row clearfix">
+          <div class="col col-md-6">
+            <h3 style="margin-top:5px;margin-bottom:15px;">Jumlah: 12</h3>
+          </div>
+          <div class="col col-md-6">
+            <form action="http://192.168.0.212/admin/vedika/logseklaim?t=bd0791e00e5e" class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group">
+                <input type="text" name="s" minlength="3" class="form-control" placeholder="Search" required>
+                <input type="hidden" name="start_date" value="2025-10-20">
+                <input type="hidden" name="end_date" value="2025-10-20">
+                <input type="hidden" name="t" value="bd0791e00e5e">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="table-responsive no-margin">
+          <table class="table table-striped no-margin">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Nomor SEP</th>
+                <th>Pengguna</th>
+                <th>Nama Lengkap</th>
+                <th>Request</th>
+                <th>Response</th>
+              </tr>
+            </thead>
+            <tbody>
+                                          <tr>
+                <td>2025-10-20 12:22:44</td>
+                <td>0152R0111025V000187</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="11" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-11">{
+                          "metadata": {
+                              "method": "idrg_procedure_set",
+                              "nomor_sep": "0152R0111025V000187"
+                          },
+                          "data": {
+                              "procedure": "69.09"
+                          }
+                      }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="11" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-11">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 12:22:44</td>
+                <td>0152R0111025V000187</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="12" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-12">{
+                      "metadata": {
+                          "method":"grouper",
+                          "stage":"1",
+                          "grouper":"idrg"
+                      },
+                      "data": {
+                          "nomor_sep":"0152R0111025V000187"
+                      }
+                  }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="12" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-12">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 12:22:43</td>
+                <td>0152R0111025V000187</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="9" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-9">{
+                      "metadata": {
+                          "method": "set_claim_data",
+                          "nomor_sep": "0152R0111025V000187"
+                      },
+                      "data": {
+                          "nomor_sep": "0152R0111025V000187",
+                          "nomor_kartu": "0003416716462",
+                          "tgl_masuk": "2025-10-13 10:37:57",
+                          "tgl_pulang": "2025-10-14 17:01:30",
+                          "cara_masuk": "emd",
+                          "jenis_rawat": "1",
+                          "kelas_rawat": "3",
+                          "adl_sub_acute": "",
+                          "adl_chronic": "",
+                          "icu_indikator": "",
+                          "icu_los": "0",
+                          "ventilator_hour": "",
+                          "ventilator": {
+                              "use_ind": "",
+                              "start_dttm": "",
+                              "stop_dttm": ""
+                          },
+                          "upgrade_class_ind": "0",
+                          "upgrade_class_class": "",
+                          "upgrade_class_los": "0",
+                          "upgrade_class_payor": "",
+                          "add_payment_pct": "0",
+                          "birth_weight": "0",
+                          "sistole": 150,
+                          "diastole": 105,
+                          "discharge_status": "1",
+                          "tarif_rs": {
+                              "prosedur_non_bedah": "0",
+                              "prosedur_bedah": "2525000",
+                              "konsultasi": "440000",
+                              "tenaga_ahli": "0",
+                              "keperawatan": "502500",
+                              "penunjang": "0",
+                              "radiologi": "120000",
+                              "laboratorium": "329500",
+                              "pelayanan_darah": "0",
+                              "rehabilitasi": "0",
+                              "kamar": "1100000",
+                              "rawat_intensif": "0",
+                              "obat": "0484671",
+                              "obat_kronis": "0",
+                              "obat_kemoterapi": "0",
+                              "alkes": "0",
+                              "bmhp": "0",
+                              "sewa_alat": "0"
+                           },
+                           "pemulasaraan_jenazah": "",
+                           "kantong_jenazah": "",
+                           "peti_jenazah": "",
+                           "plastik_erat": "",
+                           "desinfektan_jenazah": "",
+                           "mobil_jenazah": "",
+                           "desinfektan_mobil_jenazah": "",
+                           "covid19_status_cd": "",
+                           "nomor_kartu_t": "",
+                           "episodes": "",
+                           "covid19_cc_ind": "",
+                           "covid19_rs_darurat_ind": "",
+                           "covid19_co_insidense_ind": "",
+                           "covid19_penunjang_pengurang": {
+                              "lab_asam_laktat" : "0",
+                              "lab_procalcitonin" : "0",
+                              "lab_crp" : "0",
+                              "lab_kultur" : "0",
+                              "lab_d_dimer" : "0",
+                              "lab_pt" : "0",
+                              "lab_aptt" : "0",
+                              "lab_waktu_pendarahan" : "0",
+                              "lab_anti_hiv" : "0",
+                              "lab_analisa_gas" : "0",
+                              "lab_albumin" : "0",
+                              "rad_thorax_ap_pa" : "0"
+                           },
+                           "terapi_konvalesen": "",
+                           "akses_naat": "",
+                           "isoman_ind": "",
+                           "bayi_lahir_status_cd": 1,
+                           "dializer_single_use": "",
+                           "kantong_darah": 0,
+                           "apgar": {
+                               "menit_1": {
+                                   "appearance": 0,
+                                   "pulse": 0,
+                                   "grimace": 0,
+                                   "activity": 0,
+                                   "respiration": 0
+                               },
+                               "menit_5": {
+                                   "appearance": 0,
+                                   "pulse": 0,
+                                   "grimace": 0,
+                                   "activity": 0,
+                                   "respiration": 0
+                               }
+                           },
+                           "persalinan": {
+                               "usia_kehamilan": "",
+                               "gravida": "1",
+                               "partus": "1",
+                               "abortus": "0",
+                               "onset_kontraksi": "",
+                               "delivery": [
+                                   {
+                                       "delivery_sequence": "1",
+                                       "delivery_method": "",
+                                       "delivery_dttm": "",
+                                       "letak_janin": "",
+                                       "kondisi": "",
+                                       "use_manual": "",
+                                       "use_forcep": "",
+                                       "use_vacuum": "", 
+                                       "shk_spesimen_ambil": "tidak", 
+                                       "shk_lokasi": "", 
+                                       "shk_alasan": "tidak-dapat", 
+                                       "shk_spesimen_dttm": ""
+                                   }
+                               ]
+                           },
+                          "tarif_poli_eks": "0",
+                          "nama_dokter": "dr. Adhi Pramono,Sp.OG",
+                          "kode_tarif": "DS",
+                          "payor_id": "3",
+                          "payor_cd": "JKN",
+                          "cob_cd": "#",
+                          "coder_nik": "3312126904980001"
+                      }
+                 }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="9" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-9">{"metadata":{"code":200,"message":"Ok"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 12:22:43</td>
+                <td>0152R0111025V000187</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="10" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-10">{
+                          "metadata": {
+                              "method": "idrg_diagnosa_set",
+                              "nomor_sep": "0152R0111025V000187"
+                          },
+                          "data": {
+                              "diagnosa": "N92.4"
+                          }
+                      }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="10" data-sep="0152R0111025V000187" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-10">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 12:08:20</td>
+                <td>0152R0111025V000178</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="6" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-6">{
+                          "metadata": {
+                              "method": "idrg_diagnosa_set",
+                              "nomor_sep": "0152R0111025V000178"
+                          },
+                          "data": {
+                              "diagnosa": "A09.9"
+                          }
+                      }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="6" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-6">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 12:08:20</td>
+                <td>0152R0111025V000178</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="7" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-7">{
+                          "metadata": {
+                              "method": "idrg_procedure_set",
+                              "nomor_sep": "0152R0111025V000178"
+                          },
+                          "data": {
+                              "procedure": "-"
+                          }
+                      }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="7" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-7">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 12:08:20</td>
+                <td>0152R0111025V000178</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="8" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-8">{
+                      "metadata": {
+                          "method":"grouper",
+                          "stage":"1",
+                          "grouper":"idrg"
+                      },
+                      "data": {
+                          "nomor_sep":"0152R0111025V000178"
+                      }
+                  }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="8" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-8">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 12:08:19</td>
+                <td>0152R0111025V000178</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="5" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-5">{
+                      "metadata": {
+                          "method": "set_claim_data",
+                          "nomor_sep": "0152R0111025V000178"
+                      },
+                      "data": {
+                          "nomor_sep": "0152R0111025V000178",
+                          "nomor_kartu": "0000566830978",
+                          "tgl_masuk": "2025-10-11 17:27:29",
+                          "tgl_pulang": "2025-10-14 08:50:55",
+                          "cara_masuk": "emd",
+                          "jenis_rawat": "1",
+                          "kelas_rawat": "3",
+                          "adl_sub_acute": "",
+                          "adl_chronic": "",
+                          "icu_indikator": "",
+                          "icu_los": "0",
+                          "ventilator_hour": "",
+                          "ventilator": {
+                              "use_ind": "",
+                              "start_dttm": "",
+                              "stop_dttm": ""
+                          },
+                          "upgrade_class_ind": "0",
+                          "upgrade_class_class": "",
+                          "upgrade_class_los": "0",
+                          "upgrade_class_payor": "",
+                          "add_payment_pct": "0",
+                          "birth_weight": "0",
+                          "sistole": 135,
+                          "diastole": 58,
+                          "discharge_status": "1",
+                          "tarif_rs": {
+                              "prosedur_non_bedah": "0",
+                              "prosedur_bedah": "0",
+                              "konsultasi": "170000",
+                              "tenaga_ahli": "0",
+                              "keperawatan": "742000",
+                              "penunjang": "0",
+                              "radiologi": "0",
+                              "laboratorium": "217000",
+                              "pelayanan_darah": "0",
+                              "rehabilitasi": "0",
+                              "kamar": "1700000",
+                              "rawat_intensif": "0",
+                              "obat": "488759",
+                              "obat_kronis": "0",
+                              "obat_kemoterapi": "0",
+                              "alkes": "0",
+                              "bmhp": "0",
+                              "sewa_alat": "0"
+                           },
+                           "pemulasaraan_jenazah": "",
+                           "kantong_jenazah": "",
+                           "peti_jenazah": "",
+                           "plastik_erat": "",
+                           "desinfektan_jenazah": "",
+                           "mobil_jenazah": "",
+                           "desinfektan_mobil_jenazah": "",
+                           "covid19_status_cd": "",
+                           "nomor_kartu_t": "",
+                           "episodes": "",
+                           "covid19_cc_ind": "",
+                           "covid19_rs_darurat_ind": "",
+                           "covid19_co_insidense_ind": "",
+                           "covid19_penunjang_pengurang": {
+                              "lab_asam_laktat" : "0",
+                              "lab_procalcitonin" : "0",
+                              "lab_crp" : "0",
+                              "lab_kultur" : "0",
+                              "lab_d_dimer" : "0",
+                              "lab_pt" : "0",
+                              "lab_aptt" : "0",
+                              "lab_waktu_pendarahan" : "0",
+                              "lab_anti_hiv" : "0",
+                              "lab_analisa_gas" : "0",
+                              "lab_albumin" : "0",
+                              "rad_thorax_ap_pa" : "0"
+                           },
+                           "terapi_konvalesen": "",
+                           "akses_naat": "",
+                           "isoman_ind": "",
+                           "bayi_lahir_status_cd": 1,
+                           "dializer_single_use": "",
+                           "kantong_darah": 0,
+                           "apgar": {
+                               "menit_1": {
+                                   "appearance": 0,
+                                   "pulse": 0,
+                                   "grimace": 0,
+                                   "activity": 0,
+                                   "respiration": 0
+                               },
+                               "menit_5": {
+                                   "appearance": 0,
+                                   "pulse": 0,
+                                   "grimace": 0,
+                                   "activity": 0,
+                                   "respiration": 0
+                               }
+                           },
+                           "persalinan": {
+                               "usia_kehamilan": "",
+                               "gravida": "1",
+                               "partus": "1",
+                               "abortus": "0",
+                               "onset_kontraksi": "",
+                               "delivery": [
+                                   {
+                                       "delivery_sequence": "1",
+                                       "delivery_method": "",
+                                       "delivery_dttm": "",
+                                       "letak_janin": "",
+                                       "kondisi": "",
+                                       "use_manual": "",
+                                       "use_forcep": "",
+                                       "use_vacuum": "", 
+                                       "shk_spesimen_ambil": "tidak", 
+                                       "shk_lokasi": "", 
+                                       "shk_alasan": "tidak-dapat", 
+                                       "shk_spesimen_dttm": ""
+                                   }
+                               ]
+                           },
+                          "tarif_poli_eks": "0",
+                          "nama_dokter": "dr. Tri IndriasWati,Sp.PD",
+                          "kode_tarif": "DS",
+                          "payor_id": "3",
+                          "payor_cd": "JKN",
+                          "cob_cd": "#",
+                          "coder_nik": "3312126904980001"
+                      }
+                 }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="5" data-sep="0152R0111025V000178" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-5">{"metadata":{"code":200,"message":"Ok"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 11:54:17</td>
+                <td>0152R0111025V000172</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="2" data-sep="0152R0111025V000172" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-2">{
+                          "metadata": {
+                              "method": "idrg_diagnosa_set",
+                              "nomor_sep": "0152R0111025V000172"
+                          },
+                          "data": {
+                              "diagnosa": "O64.1#O42.1#O82.1#Z37.0"
+                          }
+                      }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="2" data-sep="0152R0111025V000172" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-2">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                            <tr>
+                <td>2025-10-20 11:54:17</td>
+                <td>0152R0111025V000172</td>
+                <td>RM001</td>
+                <td>Ratih Saraswati, A.Md.Kes</td>
+                <td>
+                  <button class="btn btn-xs btn-info btn-view-json" data-type="request" data-id="3" data-sep="0152R0111025V000172" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Request
+                  </button>
+                  <div class="hidden"><script type="application/json" id="req-json-3">{
+                          "metadata": {
+                              "method": "idrg_procedure_set",
+                              "nomor_sep": "0152R0111025V000172"
+                          },
+                          "data": {
+                              "procedure": "74.0"
+                          }
+                      }</script></div>
+                </td>
+                <td>
+                  <button class="btn btn-xs btn-primary btn-view-json" data-type="response" data-id="3" data-sep="0152R0111025V000172" data-toggle="modal" data-target="#jsonModal">
+                    <i class="fa fa-eye"></i> Lihat Response
+                  </button>
+                  <div class="hidden"><script type="application/json" id="res-json-3">{"metadata":{"code":400,"message":"Status bridging belum lolos onboarding. Grouping ditolak.","error_no":"E2106"}}</script></div>
+                </td>
+              </tr>
+                                        </tbody>
+          </table>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="text-center"><ul class="pagination"><li class="disabled"><a href="#">&laquo;</a></li><li class="disabled"><a href="#">-</a></li><li class="active"><a href="#">1</a></li><li><a href="http://192.168.0.212/admin/vedika/logseklaim/2?start_date=2025-10-20&end_date=2025-10-20&s=&t=bd0791e00e5e">2</a></li><li><a href="http://192.168.0.212/admin/vedika/logseklaim/2?start_date=2025-10-20&end_date=2025-10-20&s=&t=bd0791e00e5e">+</a></li><li><a href="http://192.168.0.212/admin/vedika/logseklaim/2?start_date=2025-10-20&end_date=2025-10-20&s=&t=bd0791e00e5e">&raquo;</a></li></ul></nav>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JSON Modal -->
+<div class="modal fade" id="jsonModal" tabindex="-1" role="dialog" aria-labelledby="jsonModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="jsonModalLabel">Detail</h4>
+      </div>
+      <div class="modal-body">
+        <pre id="jsonModalContent" style="white-space: pre-wrap; word-wrap: break-word; max-height: 70vh; overflow:auto;"></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function tryParseJSON(raw){
+    try {
+      return JSON.parse(raw);
+    } catch(e){
+      return null;
+    }
+  }
+  function prettyJSON(raw){
+    var obj = tryParseJSON(raw);
+    if (obj !== null) {
+      return JSON.stringify(obj, null, 2);
+    }
+    // If not JSON, return the raw content
+    return raw;
+  }
+  // jQuery handler
+  if (window.jQuery) {
+    jQuery(function($){
+      $(document).on('click', '.btn-view-json', function(){
+        var id = $(this).data('id');
+        var type = $(this).data('type');
+        var sep = $(this).data('sep');
+        var selector = (type === 'request' ? '#req-json-' : '#res-json-') + id;
+        var raw = $(selector).text();
+        var pretty = prettyJSON(raw);
+        $('#jsonModalLabel').text((type === 'request' ? 'Detail Request' : 'Detail Response') + ' - SEP ' + sep);
+        $('#jsonModalContent').text(pretty);
+      });
+    });
+  } else {
+    // Vanilla JS fallback
+    document.addEventListener('click', function(e){
+      var target = e.target.closest('.btn-view-json');
+      if (!target) return;
+      var id = target.getAttribute('data-id');
+      var type = target.getAttribute('data-type');
+      var sep = target.getAttribute('data-sep');
+      var selector = (type === 'request' ? 'req-json-' : 'res-json-') + id;
+      var scriptEl = document.getElementById(selector);
+      var raw = scriptEl ? scriptEl.textContent : '';
+      var pretty = prettyJSON(raw);
+      var label = document.getElementById('jsonModalLabel');
+      var content = document.getElementById('jsonModalContent');
+      if (label) label.textContent = (type === 'request' ? 'Detail Request' : 'Detail Response') + ' - SEP ' + sep;
+      if (content) content.textContent = pretty;
+    }, false);
+  }
+})();
+</script>

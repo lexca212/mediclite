@@ -1,0 +1,168 @@
+<style>
+  .nowrap th, .nowrap td {
+    white-space: nowrap;
+  }
+</style>
+<form action="http://192.168.0.212/admin/operasi/saveobatoperasi?t=28480def785f" method="POST">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Data Obat Operasi</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Kode Obat</label>
+                        <input type="text" name="kd_obat" class="form-control" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Obat</label>
+                        <input type="text" name="nm_obat" class="form-control" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Satuan</label>
+                        <select name="kode_sat" id="kode_sat" class="form-control" data-use-search="true">
+                                                      <option value="-">-</option>
+                                                      <option value="AMP">Ampul</option>
+                                                      <option value="AMP5">Ampul</option>
+                                                      <option value="S46">BLISTER</option>
+                                                      <option value="S47">BLISTER</option>
+                                                      <option value="BTL">Botol</option>
+                                                      <option value="B010">BOX (100)</option>
+                                                      <option value="BOX">Box/Dus/Kotak</option>
+                                                      <option value="BKS">Bungkus</option>
+                                                      <option value="CM">CC</option>
+                                                      <option value="CRM">Cream</option>
+                                                      <option value="DRP">Drop</option>
+                                                      <option value="Fle">Fles</option>
+                                                      <option value="GLN">Galon</option>
+                                                      <option value="GAR">Gargle/Kumur</option>
+                                                      <option value="GEL">GEL</option>
+                                                      <option value="INF">Infusan Softbag</option>
+                                                      <option value="Item">Item</option>
+                                                      <option value="KAL">Kaleng</option>
+                                                      <option value="KAP">Kaplet</option>
+                                                      <option value="CAP">Kapsul</option>
+                                                      <option value="KG">KILOGRAM</option>
+                                                      <option value="S45">kit</option>
+                                                      <option value="LBR">Lembar</option>
+                                                      <option value="S35">Liter</option>
+                                                      <option value="Lus">Lusin</option>
+                                                      <option value="MG">Mg</option>
+                                                      <option value="ML">Mili Liter</option>
+                                                      <option value="MIN">Minidose</option>
+                                                      <option value="PAC">Pacth</option>
+                                                      <option value="S32">PAKET</option>
+                                                      <option value="PEN">Pen Insulin</option>
+                                                      <option value="PCS">Pieces</option>
+                                                      <option value="PUY">Puyer</option>
+                                                      <option value="SAC">Sachet</option>
+                                                      <option value="SAL">SALEP</option>
+                                                      <option value="SET">Set</option>
+                                                      <option value="S48">SOFT CAPSULE</option>
+                                                      <option value="SUP">Suppositoria</option>
+                                                      <option value="SYR">Syrup</option>
+                                                      <option value="S02">Tab</option>
+                                                      <option value="TAB">Tablet</option>
+                                                      <option value="TUB">Tube</option>
+                                                      <option value="S38">VIAL</option>
+                                                      <option value="VL">Vial</option>
+                                                  </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Harga Satuan</label>
+                        <input type="text" name="hargasatuan" class="form-control" value="0" />
+                    </div>
+                </div>
+                <div class="col-md-12" style="padding-top: 20px;">
+                    <input type="submit" name="simpan" class="btn btn-success" value="Simpan" />
+                    <input type="submit" name="update" class="btn btn-info" value="Update" />
+                    <input type="submit" name="hapus" class="btn btn-danger" value="Hapus" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive no-margin" id="obatoperasi">
+      <table class="table table-striped table-bordered no-padding nowrap dataTables" width="100%">
+        <thead>
+          <tr>
+            <th>Kode Obat</th>
+            <th>Nama Obat</th>
+            <th>Satuan</th>
+            <th>Harga Satuan</th>
+          </tr>
+        </thead>
+        <tbody>
+                    <tr class="obatoperasi"
+          data-kd_obat="OK00000001"
+          data-nm_obat="Bayer"
+          data-kode_sat="-"
+          data-hargasatuan="0"
+          >
+            <td>OK00000001</td>
+            <td>Bayer</td>
+            <td>-</td>
+            <td>0</td>
+          </tr>
+                    <tr class="obatoperasi"
+          data-kd_obat="OK00000002"
+          data-nm_obat="Plat"
+          data-kode_sat="-"
+          data-hargasatuan="0"
+          >
+            <td>OK00000002</td>
+            <td>Plat</td>
+            <td>-</td>
+            <td>0</td>
+          </tr>
+                    <tr class="obatoperasi"
+          data-kd_obat="OK00000003"
+          data-nm_obat="Scruew"
+          data-kode_sat="-"
+          data-hargasatuan="0"
+          >
+            <td>OK00000003</td>
+            <td>Scruew</td>
+            <td>-</td>
+            <td>0</td>
+          </tr>
+                  </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $('.dataTables').DataTable({
+    "order": [[ 3, "desc" ]],
+    "pagingType": "full",
+    "language": {
+      "paginate": {
+        "first": "&laquo;",
+        "last": "&raquo;",
+        "previous": "‹",
+        "next":     "›"
+      },
+      "search": "",
+      "searchPlaceholder": "Search..."
+    },
+    "lengthChange": false,
+    "scrollX": true,
+    dom: "<<'data-table-title'><'datatable-search'f>><'row'<'col-sm-12'tr>><<'pmd-datatable-pagination' l i p>>"
+  });
+  var t = $(".dataTables").DataTable().rows().count();
+  $(".data-table-title").html('<h3 style="display:inline;float:left;margin-top:0;" class="hidden-xs">Total: ' + t + '</h3>');
+  // ketika baris data diklik
+  $("#obatoperasi").on("click", ".obatoperasi", function(event){
+    var kd_obat  = $(this).attr("data-kd_obat");
+    var nm_obat  = $(this).attr("data-nm_obat");
+    var kode_sat  = $(this).attr("data-kode_sat");
+    var hargasatuan  = $(this).attr("data-hargasatuan");
+    $('input:text[name=kd_obat]').val(kd_obat);
+    $('input:text[name=nm_obat]').val(nm_obat);
+    $('#kode_sat').val(kode_sat).change();
+    $('input:text[name=hargasatuan]').val(hargasatuan);
+  });
+</script>

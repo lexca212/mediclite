@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail pemeriksaan_ralan</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_pemeriksaan_ralan" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>No Rawat</td><td>{$value.no_rawat}</td><tr>
+<tr><td>Tgl Perawatan</td><td>{$value.tgl_perawatan}</td><tr>
+<tr><td>Jam Rawat</td><td>{$value.jam_rawat}</td><tr>
+<tr><td>Suhu Tubuh</td><td>{$value.suhu_tubuh}</td><tr>
+<tr><td>Tensi</td><td>{$value.tensi}</td><tr>
+<tr><td>Nadi</td><td>{$value.nadi}</td><tr>
+<tr><td>Respirasi</td><td>{$value.respirasi}</td><tr>
+<tr><td>Tinggi</td><td>{$value.tinggi}</td><tr>
+<tr><td>Berat</td><td>{$value.berat}</td><tr>
+<tr><td>Spo2</td><td>{$value.spo2}</td><tr>
+<tr><td>Gcs</td><td>{$value.gcs}</td><tr>
+<tr><td>Kesadaran</td><td>{$value.kesadaran}</td><tr>
+<tr><td>Keluhan</td><td>{$value.keluhan}</td><tr>
+<tr><td>Pemeriksaan</td><td>{$value.pemeriksaan}</td><tr>
+<tr><td>Alergi</td><td>{$value.alergi}</td><tr>
+<tr><td>Lingkar Perut</td><td>{$value.lingkar_perut}</td><tr>
+<tr><td>Rtl</td><td>{$value.rtl}</td><tr>
+<tr><td>Penilaian</td><td>{$value.penilaian}</td><tr>
+<tr><td>Instruksi</td><td>{$value.instruksi}</td><tr>
+<tr><td>Evaluasi</td><td>{$value.evaluasi}</td><tr>
+<tr><td>Nip</td><td>{$value.nip}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>

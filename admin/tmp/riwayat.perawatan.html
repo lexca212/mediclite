@@ -1,0 +1,2939 @@
+<style media="screen">
+  table td,
+  table th {
+    padding: 5px;
+  }
+  
+  /* Styling untuk kotak dialog utama */
+  .custom-confirm-box .modal-content {
+      background-color: #f0f0f0; /* Ganti dengan warna yang diinginkan */
+      color: #333;
+  }
+
+  /* Styling untuk bagian header (opsional) */
+  .custom-confirm-box .modal-header {
+      background-color: #d9edf7; /* Contoh warna lain */
+      color: #31708f;
+  }
+</style>
+<script type="text/javascript">
+  function nWin() {
+    var w = window.open();
+    var html = $("#toNewWindow").html();
+
+      $(w.document.body).html(html);
+      w.print();
+      w.close();
+  }
+
+  $(function() {
+      $("a#print").click(nWin);
+  });
+</script>
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> Tutup</button>
+    <h4 class="modal-title">Riwayat Perawatan</h4>
+</div>
+<div class="modal-body">
+  <div id="toNewWindow">
+    <h4>Data Riwayat Perawatan Pasien</h4>
+    <div class="table table-responsive">
+      <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+        <tr class="isi">
+          <td valign="top" width="20%">No.RM</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%"><span id="no_rkm_medis">063805</span></td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Nama Pasien</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">WULAN BAKTI PERTIWI</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Alamat</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">JOLOMEGO 001/007 </td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Umur</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">35 Th 0 Bl 0 Hr Tahun (Perempuan)</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Tanggal Lahir</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">1991-02-24</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Ibu Kandung</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">SUMIYEM </td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Golongan Darah</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">-</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Status Nikah</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">MENIKAH</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Agama</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">ISLAM</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Pendidikan Terakhir</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">SMP</td>
+        </tr>
+        <tr class="isi">
+          <td valign="top" width="20%">Pertama Daftar</td>
+          <td valign="top" width="1%" align="center">:</td>
+          <td valign="top" width="79%">2026-02-14</td>
+        </tr>
+      </table>
+
+      <h4 class="m-t-xl">Data Riwayat</h4>
+
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+          <tr class="isi">
+            <td valign="top" width="20%">No.Rawat</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">2026/02/25/000002</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">No.Registrasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">002</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Tanggal Registrasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">2026-02-25</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Unit/Poliklinik</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">Poliklinik Kebidanan dan Penyakit  Kandungan</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Dokter</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">dr. Guntur,Sp.OG</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Penjamin</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">UMUM</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Status</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">Ralan</td>
+          </tr>
+                              
+          <!-- PENILAIAN AWAL MEDIS IGD -->
+                    <!-- PENILAIAN AWAL MEDIS IGD -->
+
+          <!-- PENILAIAN AWAL RALAN UMUM -->
+                    <!-- PENILAIAN AWAL RALAN UMUM -->
+
+          <!-- PENILAIAN AWAL RALAN BAYI / ANAK -->
+                    <!-- PENILAIAN AWAL RALAN BAYI / ANAK -->
+
+          <!-- PENILAIAN AWAL RALAN BEDAH -->
+                    <!-- PENILAIAN AWAL RALAN BEDAH -->    
+           
+          <!-- PENILAIAN AWAL RALAN MATA -->
+                    <!-- PENILAIAN AWAL RALAN MATA -->
+
+          <!-- PENILAIAN AWAL RALAN ORTHOPEDI -->
+                    <!-- PENILAIAN AWAL RALAN ORTHOPEDI --> 
+
+          <!-- PENILAIAN AWAL RALAN PARU -->
+                    <!-- PENILAIAN AWAL RALAN PARU -->
+
+          <!-- PENILAIAN AWAL RALAN THT -->
+                    <!-- PENILAIAN AWAL RALAN THT -->
+
+                  <!--LEMBAR MASUK NICU-->
+                <!--LEMBAR MASUK NICU-->
+
+          <!-- SKRINING GIZI LANJIUT -->
+                    <!-- SKRINING GIZI LANJIUT -->
+
+          <!-- SKRINING ASUHAN GIZI -->
+                    <!-- SKRINING ASUHAN GIZI -->
+
+          <!-- Resume Pasien Ralan -->
+                    <!-- Resume Pasien Ralan -->
+
+          <!-- Resume Pasien Ranap -->
+                    <!-- Resume Pasien Ranap -->
+            <!-- Hasil Pmeriksaan USg -->
+                    <!-- Hasil Pemeriksaan USG -->
+
+          <!-- Resume Laporan Operasi -->
+                    <!-- Resume Pasien Ranap -->
+
+          <tr class="isi">
+            <td valign="top" width="20%">Pemeriksaan</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                                              </table>
+            </td>
+          </tr>
+          
+          
+                                                                    </table>
+        <br>
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+          <tr class="isi">
+            <td valign="top" width="20%">No.Rawat</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">2026/02/14/000022</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">No.Registrasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">002</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Tanggal Registrasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">2026-02-14</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Unit/Poliklinik</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">Unit IGD</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Dokter</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">dr. Guntur,Sp.OG</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Penjamin</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">BPJS</td>
+          </tr>
+          <tr class="isi">
+            <td valign="top" width="20%">Status</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">Ranap</td>
+          </tr>
+                    <tr class="isi">
+            <td valign="top" width="20%">Diagnosa/Penyakit/ICD 10</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="icd">
+                <tr align="center">
+                  <td valign="top" width="100px" bgcolor="#eee">Kode</td>
+                  <td valign="top" bgcolor="#eee">Nama Penyakit</td>
+                  <td valign="top" width="100px" bgcolor="#eee">Prioritas</td>
+                </tr>
+                                <tr>
+                  <td valign="top" width="100px">O14.1</td>
+                  <td valign="top">Severe pre-eclampsia</td>
+                  <td valign="top" width="100px">1</td>
+                </tr>
+                                <tr>
+                  <td valign="top" width="100px">O34.2</td>
+                  <td valign="top">Maternal care due to uterine scar from previous surgery</td>
+                  <td valign="top" width="100px">2</td>
+                </tr>
+                                <tr>
+                  <td valign="top" width="100px">O82.1</td>
+                  <td valign="top">Delivery by emergency caesarean section</td>
+                  <td valign="top" width="100px">3</td>
+                </tr>
+                                <tr>
+                  <td valign="top" width="100px">Z37.0</td>
+                  <td valign="top">Single live birth </td>
+                  <td valign="top" width="100px">4</td>
+                </tr>
+                              </table>
+            </td>
+          </tr>
+                              <tr class="isi">
+            <td valign="top" width="20%">Prosedur Tindakan/ICD 9</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="icd">
+                <tr align="center">
+                  <td valign="top" width="100px" bgcolor="#eee">Kode</td>
+                  <td valign="top" bgcolor="#eee">Nama Prosedur</td>
+                  <td valign="top" width="100px" bgcolor="#eee">Prioritas</td>
+                </tr>
+                                <tr>
+                  <td valign="top" width="100px">74.1</td>
+                  <td valign="top">Low cervical cesarean section</td>
+                  <td valign="top" width="10100pxpx">1</td>
+                </tr>
+                                <tr>
+                  <td valign="top" width="100px">93.96</td>
+                  <td valign="top">Other oxygen enrichment</td>
+                  <td valign="top" width="10100pxpx">2</td>
+                </tr>
+                              </table>
+            </td>
+          </tr>
+                    
+          <!-- PENILAIAN AWAL MEDIS IGD -->
+                      <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Penilaian Awal Medis IGD</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" colspan="4">
+                      <strong>YANG MELAKUKAN PENGKAJIAN</strong>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td valign="top" width="20%" bgcolor="#FFFAF8">
+                      Tanggal
+                    </td>
+                    <td valign="top" width="50%" bgcolor="#FFFAF8">
+                      Dokter
+                    </td>
+                    <td valign="top" width="30%" bgcolor="#FFFAF8">
+                      Anamnesis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      2026-02-14 19:11:30                    </td>
+                    <td valign="top">
+                      DU013 dr. Azhari Hasna Lathifah                    </td>
+                    <td valign="top">
+                      Autoanamnesis                                          </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>I. RIWAYAT KESEHATAN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Keluhan Utama
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      Kenceng2, kaki bengkak                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Sekarang
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      Pasien mengatakan hamil kedua, merasakan kenceng2 jarang. Kaki bengkak (+/+) sejak 1mgg. Pusing (-), nyeri ulu hati (-), dada ampeg (-), pandangan kabur (-)
+Riw SC 12th yg lalu
+HPHT 28-06-2025? Pasien lupa/tidak yakin                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Dahulu
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      HT disangkal                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Alergi
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      Disangkal                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penyakit Keluarga
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      -                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      Riwayat Penggunaan Obat
+                    </td>
+                    <td valign="top" width="1%" colspan="4">
+                      :
+                    </td>
+                    <td valign="top" width="74%" colspan="4">
+                      -                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>II. PEMERIKSAAN FISIK</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Keadaan Umum :</strong> Sakit Sedang<br>
+                      <strong>BB :</strong> 78 kg<br>
+                      <strong>Suhu :</strong> 36,3 °C<br>
+                      <strong>Gigi & Mulut :</strong> Normal<br>
+                      <strong>Genital & Anus :</strong> Abnormal<br>
+                    </td>
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>Kesadaran:</strong> Compos Mentis<br>
+                      <strong>TD :</strong> 171/113 mmHg<br>
+                      <strong>SpO2 :</strong> 98 %<br>
+                      <strong>Leher :</strong> Normal<br>
+                      <strong>Ekstremitas :</strong> Abnormal<br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>GCS(E,V,M) :</strong> 4,5,6<br>
+                      <strong>Nadi :</strong> 92 x/menit<br>
+                      <strong>Kepala :</strong> Normal<br>
+                      <strong>Thoraks :</strong> Normal<br>
+                      <strong>Keterangan Fisik :</strong> TFU 30 cm
+DJJ + 147x/m
+His (+) jarang
+VT belum ada pembukaan <br>
+                    </td>                    
+                    <td valign="top" width="25%" colspan="4">
+                      <strong>TB :</strong> 145 cm<br>
+                      <strong>RR :</strong> 20 x/menit<br>
+                      <strong>Mata :</strong> Normal<br>
+                      <strong>Abdomen :</strong> Abnormal<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>III. STATUS LOKALIS</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="20%" colspan="2">
+                      <img alt='Gambar Lokalis' src='http://192.168.0.212/assets/images/semua.png' width='100%' height='400'/>
+                      <br>
+                      <strong>Keterangan :</strong> -<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>IV. PEMERIKSAAN PENUNJANG</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      <strong>EKG :</strong> -<br>
+                    </td>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Radiologi :</strong> -<br>
+                    </td>
+                    <td valign="top" width="30%" colspan="4">
+                      <strong>Laboratorium :</strong> DR,GDS
+CTG<br>
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>V. DIAGNOSIS/ASESMEN</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      G2P1A0 HAMIL 33 MGGU dgn PEB, riw SC                    </td>
+                  </tr>
+                </table>
+                <br>
+                <strong>VI. TATALAKSANA</strong>
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr>
+                    <td valign="top" width="40%" colspan="4">
+                      Obs KUVS
+Obs his dan DJJ
+Lapor DPJP                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+                    <!-- PENILAIAN AWAL MEDIS IGD -->
+
+          <!-- PENILAIAN AWAL RALAN UMUM -->
+                    <!-- PENILAIAN AWAL RALAN UMUM -->
+
+          <!-- PENILAIAN AWAL RALAN BAYI / ANAK -->
+                    <!-- PENILAIAN AWAL RALAN BAYI / ANAK -->
+
+          <!-- PENILAIAN AWAL RALAN BEDAH -->
+                    <!-- PENILAIAN AWAL RALAN BEDAH -->    
+           
+          <!-- PENILAIAN AWAL RALAN MATA -->
+                    <!-- PENILAIAN AWAL RALAN MATA -->
+
+          <!-- PENILAIAN AWAL RALAN ORTHOPEDI -->
+                    <!-- PENILAIAN AWAL RALAN ORTHOPEDI --> 
+
+          <!-- PENILAIAN AWAL RALAN PARU -->
+                    <!-- PENILAIAN AWAL RALAN PARU -->
+
+          <!-- PENILAIAN AWAL RALAN THT -->
+                    <!-- PENILAIAN AWAL RALAN THT -->
+
+                  <!--LEMBAR MASUK NICU-->
+                <!--LEMBAR MASUK NICU-->
+
+          <!-- SKRINING GIZI LANJIUT -->
+                    <!-- SKRINING GIZI LANJIUT -->
+
+          <!-- SKRINING ASUHAN GIZI -->
+                    <!-- SKRINING ASUHAN GIZI -->
+
+          <!-- Resume Pasien Ralan -->
+                    <!-- Resume Pasien Ralan -->
+
+          <!-- Resume Pasien Ranap -->
+                      <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Resume Pasien Rawat Inap</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                  <tr align='center'>
+                    <td valign='top' width='15%' bgcolor='#FFFAF8'>Kode Dokter</td>
+                    <td valign='top' width='27%' bgcolor='#FFFAF8'>Nama Dokter</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Keadaan Pulang</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Cara Keluar</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Dilanjutkan</td>
+                    <td valign='top' width='13%' bgcolor='#FFFAF8'>Tgl.Kontrol</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' align='center'>DS005</td>
+                    <td valign='top'>dr. Guntur,Sp.OG</td>
+                    <td valign='top' align='center'>Membaik</td>
+                    <td valign='top' align='center'>Atas Izin Dokter</td>
+                    <td valign='top' align='center'>Kembali Ke RS</td>
+                    <td valign='top' align='center'>2026-02-25 15:00:00</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Diagnosa Awal Masuk :<br>G2P1A0 HAMIL 33 MGGU dgn PEB, riw SC</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Alasan Masuk Dirawat :<br>G2P1A0 HAMIL 33 MGGU dgn PEB, riw SC</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Keluhan Utama Riwayat Penyakit :<br>hamil kedua, merasakan kenceng2 jarang. Kaki bengkak (+/+) sejak 1mgg.
+
+Riw SC 12th yg lalu
+HPHT 28-06-2025? Pasien lupa/tidak yakin
+
+RPD:HT DI SANGKAL </td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Pemeriksaan Fisik :<br>KU Cukup 
+Kesadaran : Compos Mentis GCS(E,V,M) : 4,5,6 
+TTV: TD : 171/113 mmHg N : 92 x/m R : 20 x/m S : 36,3° SPO2 : 98 %
+
+TFU 30 cm, puki, preskep, belum masuk PAP
+His 1x/10/20&quot;
+DJJ 142 x/mnt
+VT Belum ada pembukaan
+Urin Protein +1</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Jalannya Penyakit Selama Perawatan :<br>Evaluasi kemajuan persalinan di dapatii:
+Riwayat tensi tinggi sejak 1 bln yll, kaki bengkak 1 minggu yll gerak janin (+)kenceng2 masih jarang ku cukup 
+TFU 30 cm, puki, preskep, belum masuk PAP His 1x/10/20&quot; DJJ 142 x/mnt VT Belum ada pembukaan observasi kemajuan persalinan 8jam tidak ada kemajuan  ---&gt;PRO SC A/I PEB,RIWAYAT SC
+lahir bayi hidup tgl 15-02-2026 jam 07.10 wib BB : 2690 gr PB : 45 cm Jk : perempuan menangis kuat (+),gerak aktif (+), sianosis (+)ekstremitas,cacat(-),lilitan tali pusat (+)</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Pemeriksaan Penunjang Rad Terpenting :<br>TIDAK ADA</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Pemeriksaan Penunjang Lab Terpenting :<br>Leukosit : 13.000, Protein Urine : Positive 1 (+1), Gula Darah Sewaktu : 97, HIV : Non Reaktive, HBsAg : Non Reaktive, CT : 1000&quot;, BT : 130&quot;, Hemoglobin : 11.9, Trombosit : 205.000, Hematokrit : 39.1, Trombosit : 211.000, Hematokrit : 39.3, Leukosit : 18.700, Hemoglobin : 11.2, </td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Tindakan/Operasi Selama Perawatan :<br>SECTIO CAESAREA 
+OKSIGENASI 
+PASANG DC URINE 
+MEDIKASI POST OP </td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Obat-obatan Selama Perawatan :<br>Inj MgSO4 20 % 4gr hbs dlm 45 mnt syringe pump lanjut 1gr/jam syringe pump 
+Inf RL+etanyl 20 tpm
+Inj ceftri 2 gr/24 jam 
+Inj antrain 1 amp/8jam 
+Inj dexa 10mg/12 jam 
+adalat oros 1x1 
+dopamet 3x500mg
+Inj ketorolac/8jam 
+Inj Asam tranexsamat/8jam
+Inj Pct 1gr/6jam</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Diagnosa Akhir :<br>
+                      <table width='100%' border='0' align='center' cellpadding='3px' cellspacing='0' class='tbl_form'>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Utama</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;PEB</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 1</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;RIWAYAT SC</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 2</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 3</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Diagnosa Sekunder 4</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;SECTIO CAESAREA</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Utama</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;OKSIGENASI  </td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 1</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;PASANG DC URINE   </td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 2</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;MEDIKASI POST OP</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                        <tr align='left'>
+                          <td valign='top' width='20%' border='0'>Prosedur Sekunder 3</td>
+                          <td valign='top' width='60%' border='0'>:&nbsp;</td>
+                          <td valign='top' width='20%' border='0'>&nbsp;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Alergi Obat :<br>TIDAK ADA</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Diet :<br>TKTP</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Hasil Lab Yang Belum Selesai (Pending) :<br>TIDAK ADA</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Instruksi/Anjuran Dan Edukasi (Follow Up) :<br>KONTROL SESUAI JADWAL</td>
+                  </tr>
+                  <tr>
+                    <td valign='top' colspan='7'>Obat-obatan Waktu Pulang :<br>CEFIXIM 2X200
+DEXKETO 3X1
+BIOMETIS 2X1</td>
+                  </tr>                                                                         
+                </table>
+              </td>
+            </tr>
+                    <!-- Resume Pasien Ranap -->
+            <!-- Hasil Pmeriksaan USg -->
+                    <!-- Hasil Pemeriksaan USG -->
+
+          <!-- Resume Laporan Operasi -->
+                      <tr class="isi">
+              <td valign="top" width="20%">
+                <strong>Laporan Operasi</strong>
+              </td>
+              <td valign="top" width="1%" align="center">
+                :
+              </td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                                      <tr>
+                      <td valign='top' width='21%'>Mulai Operasi</td>
+                      <td valign='top' width='75%'>:&nbsp;2026-02-15 07:00:10</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Diagnosa Pre-operatif</td>
+                      <td valign='top' width='75%'>:&nbsp;G2P1A0 H 33 MG DG PEB BEKAS SC</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Jaringan Yang di-Eksisi/-Insisi</td>
+                      <td valign='top' width='75%'>:&nbsp;ABDOMEN</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Diagnosa Post-operatif</td>
+                      <td valign='top' width='75%'>:&nbsp;POST RE SC A/I PEB</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Selesai Operasi</td>
+                      <td valign='top' width='75%'>:&nbsp;2026-02-15 07:45:10</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Dikirim Untuk Pemeriksaan PA</td>
+                      <td valign='top' width='75%'>:&nbsp;Tidak</td>
+                    </tr>
+                    <tr>
+                      <td valign='top' width='21%'>Laporan</td>
+                      <td valign='top' width='75%'>:&nbsp;INCISI LINEA MEDIANA
+BAYI DILAHIRKAN
+PLASENTA DILAHIRKAN
+KONTRAKSI UTERUS KUAT
+JAHIT DINDING UTERUS DAN ABDOMEN TAK NAMPAK PERDARAHAN
+OPERASI SELESAI</td>
+                    </tr>
+
+                    <!-- Pembatas antar data -->
+                    <tr>
+                      <td colspan="2" style="border-top: 1px solid #000; padding-top: 10px;"></td>
+                    </tr>
+                                                                                                   
+                </table>
+              </td>
+            </tr>
+                    <!-- Resume Pasien Ranap -->
+
+          <tr class="isi">
+            <td valign="top" width="20%">Pemeriksaan</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                                <tr align="center">
+                    <td valign="top" width="14%" bgcolor="#eee">Unit</td>
+                    <td valign="top" width="14%" bgcolor="#eee">Tanggal</td>
+                    <td valign="top" width="6%" bgcolor="#eee">Jam</td>
+                    <td valign="top" width="3%" bgcolor="#eee">Suhu(C)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tensi(mmHg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Nadi(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">RR(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tinggi(Cm)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Berat(Kg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">GCS(E,V,M)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">SPO2</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Alergi</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Kesadaran</td>
+                </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Jalan</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-14</td>
+                      <td valign="top">19:06:42</td>
+                      <td valign="top">36,2</td>
+                      <td valign="top">171/113</td>
+                      <td valign="top">92</td>
+                      <td valign="top">20</td>
+                      <td valign="top">145</td>
+                      <td valign="top">78</td>
+                      <td valign="top">4,5,6</td>
+                      <td valign="top">98</td>
+                      <td valign="top">Disangkal</td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : Pasien mengatakan hamil kedua, merasakan kenceng2 jarang. Kaki bengkak (+/+), pusing (-), nyeri ulu hati (-), dada ampeg (-), pandangan kabur (-)
+Riw SC 12th yg lalu
+HPHT 28-06-2025? Pasien lupa/tidak yakin</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : TFU 30 cm
+DJJ + 147x/m
+His (+) jarang
+VT belum ada pembukaan </td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : G2P1A0 HAMIL 33 MGGU dgn PEB, riw SC</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : Obs KUVS
+Obs His dan DJJ
+Lapor DPJP Resep : 
+3 WAY STOPCOCKS Jumlah 1 Aturan Pakai 
+ABOCATH 20 Jumlah 1 Aturan Pakai 
+TRANFUSI SET  Jumlah 1 Aturan Pakai 
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : Rawat inap</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : </td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Jalan</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-14</td>
+                      <td valign="top">19:29:09</td>
+                      <td valign="top">36,2</td>
+                      <td valign="top">171/113</td>
+                      <td valign="top">92</td>
+                      <td valign="top">20</td>
+                      <td valign="top">145</td>
+                      <td valign="top">78</td>
+                      <td valign="top">4,5,6</td>
+                      <td valign="top">98</td>
+                      <td valign="top">Disangkal</td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : Pasien mengatakan hamil kedua, merasakan kenceng2 jarang. Kaki bengkak (+/+), tensi tinggi sejak 1 bl yll,  pusing (-), nyeri ulu hati (-), dada ampeg (-), pandangan kabur (-)
+Riw SC 12th yg lalu
+HPHT 28-06-2025? Pasien lupa/tidak yakin</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : TFU 30 cm
+DJJ + 147x/m
+His (+) jarang
+VT belum ada pembukaan </td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : G2P1A0 HAMIL 33 MGGU dgn PEB, riw SC</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : CTG 
+Kolab Dokter JAga
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : Rawat inap</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : MRS +</td>
+                  </tr>
+                                                                <tr align="center">
+                    <td valign="top" width="14%" bgcolor="#eee">Unit</td>
+                    <td valign="top" width="14%" bgcolor="#eee">Tanggal</td>
+                    <td valign="top" width="6%" bgcolor="#eee">Jam</td>
+                    <td valign="top" width="3%" bgcolor="#eee">Suhu(C)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tensi(mmHg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Nadi(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">RR(/menit)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Tinggi(Cm)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Berat(Kg)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">GCS(E,V,M)</td>
+                    <td valign="top" width="9%" bgcolor="#eee">SPO2</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Alergi</td>
+                    <td valign="top" width="9%" bgcolor="#eee">Kesadaran</td>
+                </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-14</td>
+                      <td valign="top">20:00:35</td>
+                      <td valign="top">36.6</td>
+                      <td valign="top">176/101</td>
+                      <td valign="top">88</td>
+                      <td valign="top">22</td>
+                      <td valign="top">145</td>
+                      <td valign="top">78</td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal</td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : Pasien hamil ke 2, riw SC 1x. Perut kenceng, tensi tinggi sejak 1 bulan yll, kaki bengkak +/+, pusing -, nyeri ulu hati -, pandangan kabur -. Pagi ini cek urin protein +2. USG di bidan UK setara 37mg6hr. 
+HPHT 28-06-2025 (ragu)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : KU Cukup 
+TFU 30 cm, puki, preskep, belum masuk PAP
+His 1x/10/20&quot;
+DJJ 142 x/mnt
+VT Belum ada pembukaan
+Urin Protein +1</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : G2P1A0 H 33mg ? dengan PEB, Riw SC</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : Obs KU, VS, Tanda2 impending eklamsi
+Obs DJJ
+Kolab DSOG</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : Adv dr Guntur SpOG
+SC subuh 
+INj MgSO4 20 % 4gr hbs dlm 45 mnt syringe pump lanjut 1gr/jam syringe pump 
+Inj ceftri 2 gr/24 jam
+Inj antrain 1 amp/8jam
+Inj dexa 10mg/12 jam IV
+DC</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : Edukasi hasil pemeriksaan dan rencana perawatan +</td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-14</td>
+                      <td valign="top">21:14:46</td>
+                      <td valign="top">36.6</td>
+                      <td valign="top">180/110</td>
+                      <td valign="top">78</td>
+                      <td valign="top">22</td>
+                      <td valign="top">145</td>
+                      <td valign="top">78</td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal</td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : Pasien hamil ke 2, riw SC 1x. Perut kenceng, tensi tinggi sejak 1 bulan yll, kaki bengkak +/+, pusing -, nyeri ulu hati -, pandangan kabur -. Pagi ini cek urin protein +2. USG di bidan UK setara 37mg6hr. 
+HPHT 28-06-2025 (ragu)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : KU Cukup 
+TFU 30 cm, puki, preskep, belum masuk PAP
+His 1x/10/20&quot;
+DJJ 142 x/mnt
+VT Belum ada pembukaan
+Urin Protein +1</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : G2P1A0 H 33mg ? dengan PEB, Riw SC</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : Obs KU, VS, Tanda2 impending eklamsi
+Obs DJJ
+Kolab DSOG</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : Adv dr Guntur SpOG
+SC subuh 
+INj MgSO4 20 % 1gr/jam syringe pump 
+adalat oros 1x1
+dopamet 3x500mg
+DC</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : Edukasi hasil pemeriksaan dan rencana perawatan +</td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-15</td>
+                      <td valign="top">14:42:10</td>
+                      <td valign="top">36.6</td>
+                      <td valign="top">142/98</td>
+                      <td valign="top">90</td>
+                      <td valign="top">22</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal </td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : P/B PINDAHAN RR JAM 10.00
+ASESSMENT ULANG 
+pasien mngatakan nyeri post sc (+), ppv (+) dbn, belum bisa flatus (-), mobilisasi (-), mual muntah (-)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : terpasang inf asering+entanyl 15 tpm 
+terpsang dc 
+skala nyeri 7
+terpasang O2 3lpm </td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : nyerri aut bd insisis sc 
+	</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : setelah dilakukan tindakan keperawatan selama 3x24 jam diharapkan masalah dapat teratasi dengan kh ku vs dbn </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : obs ku vs 
+- memberikan terapi injeksi 
+- memberikan terapi oral 
+- menjalannkan advs dpjp 
+- R/ cek HB post scjam 13.45 (-)
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : nyeri </td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-15</td>
+                      <td valign="top">17:42:10</td>
+                      <td valign="top">36.5</td>
+                      <td valign="top">130/77</td>
+                      <td valign="top">80</td>
+                      <td valign="top">22</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal </td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : pasien mngatakan nyeri post sc (+), ppv (+) dbn, belum bisa flatus (-), mobilisasi mika miki,  mual muntah (-)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : terpasang inf asering+entanyl 15 tpm 
+terpsang dc 
+skala nyeri 7
+terpasang O2 3lpm </td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : nyerri aut bd insisis sc 
+	</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : setelah dilakukan tindakan keperawatan selama 3x24 jam diharapkan masalah dapat teratasi dengan kh ku vs dbn </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : obs ku vs 
+- memberikan terapi injeksi 
+- memberikan terapi oral 
+- menjalannkan advs dpjp 
+- R/ cek HB post scjam 13.45 (+)
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : nyeri </td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-15</td>
+                      <td valign="top">22:42:10</td>
+                      <td valign="top">36.7</td>
+                      <td valign="top">130/90</td>
+                      <td valign="top">85</td>
+                      <td valign="top">22</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal </td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : pasien mngatakan nyeri post sc (+), ppv (+) dbn, belum bisa flatus (-), mobilisasi mika miki,  mual muntah (-)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : terpasang inf asering+entanyl 15 tpm 
+terpsang dc 
+skala nyeri 5
+terpasang O2 3lpm 
+terpasang mgso4 </td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : nyerri aut bd insisis sc 
+	</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : setelah dilakukan tindakan keperawatan selama 3x24 jam diharapkan masalah dapat teratasi dengan kh ku vs dbn </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : obs ku vs 
+- memberikan terapi injeksi 
+- memberikan terapi oral 
+- menjalannkan advs dpjp 
+- R/ cek HB post scjam 13.45 (+)
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : nyeri </td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-16</td>
+                      <td valign="top">11:06:43</td>
+                      <td valign="top">36,5</td>
+                      <td valign="top">126/76</td>
+                      <td valign="top">82</td>
+                      <td valign="top">21</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal </td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : pasien mngatakan nyeri post sc (+), ppv dbn, sudah flatus (+), mobilisasi duduk, pusing (-), tangan dan kaki bengkak</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : terpasang inf asering+entanyl 15 tpm 
+terpsang dc 
+skala nyeri 5
+terpasang O2 3lpm 
+terpasang MgSO4 1gr/jam</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : nyerri aut bd insisis sc 
+	</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : setelah dilakukan tindakan keperawatan selama 3x24 jam diharapkan masalah dapat teratasi dengan kh ku vs dbn </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : obs ku vs 
+- memberikan terapi injeksi 
+- memberikan terapi oral 
+- menjalannkan advs dpjp 
+
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : nyeri, tangan dan kaki bengkak</td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-16</td>
+                      <td valign="top">18:06:43</td>
+                      <td valign="top">36,5</td>
+                      <td valign="top">145/83</td>
+                      <td valign="top">82</td>
+                      <td valign="top">22</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal </td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : pasien mngatakan nyeri post sc (+), ppv dbn, sudah flatus (+), mobilisasi duduk, pusing (-), tangan dan kaki bengkak, mual muntah (-)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : terpasang inf asering+entanyl 15 tpm 
+terpsang dc 
+skala nyeri 5
+terpasang O2 3lpm 
+terpasang MgSO4 1gr/jam</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : nyerri aut bd insisis sc 
+	</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : setelah dilakukan tindakan keperawatan selama 3x24 jam diharapkan masalah dapat teratasi dengan kh ku vs dbn </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : obs ku vs 
+- memberikan terapi injeksi 
+- memberikan terapi oral 
+- menjalannkan advs dpjp 
+
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : nyeri, tangan dan kaki bengkak</td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-16</td>
+                      <td valign="top">18:32:22</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : FLATUS (+)
+DUDUK(+)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : </td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : POST SCTP
+</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : TX LANJUT</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : </td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-16</td>
+                      <td valign="top">23:06:43</td>
+                      <td valign="top">36,6</td>
+                      <td valign="top">132/77</td>
+                      <td valign="top">89</td>
+                      <td valign="top">22</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal </td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : pasien mngatakan nyeri post sc (+), ppv dbn, sudah flatus (+), mobilisasi duduk, pusing (-), tangan dan kaki bengkak, mual muntah (-), BAK spontan (+), jalan (+)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : terpasang inf asering+entanyl 15 tpm 
+terpsang dc 
+skala nyeri 5
+terpasang O2 3lpm 
+AFF MgSO4 1gr/jam</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : nyerri aut bd insisis sc 
+	</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : setelah dilakukan tindakan keperawatan selama 3x24 jam diharapkan masalah dapat teratasi dengan kh ku vs dbn </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : obs ku vs 
+- memberikan terapi injeksi 
+- memberikan terapi oral 
+- menjalannkan advs dpjp 
+
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : nyeri, tangan dan kaki bengkak</td>
+                  </tr>
+                                  <tr>
+                    <td valign="top" rowspan="8">Rawat Inap</td>
+                  </tr>
+                  <tr>
+                      <td valign="top">2026-02-17</td>
+                      <td valign="top">11:06:43</td>
+                      <td valign="top">36,6</td>
+                      <td valign="top">130/89</td>
+                      <td valign="top">80</td>
+                      <td valign="top">22</td>
+                      <td valign="top"></td>
+                      <td valign="top"></td>
+                      <td valign="top">456</td>
+                      <td valign="top">99</td>
+                      <td valign="top">disangkal </td>
+                      <td valign="top">Compos Mentis</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Subjek</td>
+                      <td valign="top" colspan="10"> : pasien mngatakan nyeri post sc (+), ppv dbn, sudah flatus (+), mobilisasi duduk, pusing (-), tangan dan kaki bengkak, mual muntah (-), BAK spontan (+), jalan (+)</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Objek</td>
+                      <td valign="top" colspan="10"> : terpasang inf asering+entanyl 15 tpm 
+terpsang dc 
+skala nyeri 5
+terpasang O2 3lpm 
+AFF MgSO4 1gr/jam</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Asesment</td>
+                      <td valign="top" colspan="10"> : nyerri aut bd insisis sc 
+	</td>
+                  </tr>
+                  <tr>
+                      <td valign="top" colspan="2">Plan</td>
+                      <td valign="top" colspan="10"> : setelah dilakukan tindakan keperawatan selama 3x24 jam diharapkan masalah dapat teratasi dengan kh ku vs dbn </td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Instruksi</td>
+                      <td valign="top" colspan="10"> : obs ku vs 
+- memberikan terapi injeksi 
+- memberikan terapi oral 
+- menjalannkan advs dpjp 
+
+</td>
+                  </tr>
+                <tr>
+                      <td valign="top" colspan="2">Evaluasi</td>
+                      <td valign="top" colspan="10"> : nyeri, tangan dan kaki bengkak</td>
+                  </tr>
+                                              </table>
+            </td>
+          </tr>
+                    <tr class="isi">
+            <td valign="top" width="20%">
+              Tindakan Perawatan
+            </td>
+            <td valign="top" width="1%" align="center">
+              :
+            </td>
+            <td valign="top" width="79%">
+                            <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Jalan Dokter
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Dokter
+                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:26:49                  </td>
+                  <td valign="top">
+                    IGD001                  </td>
+                  <td valign="top">
+                    PEMERIKSAAN DOKTER UMUM                  </td>
+                  <td valign="top">
+                    dr. Azhari Hasna Lathifah                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:26:49                  </td>
+                  <td valign="top">
+                    IGD042                  </td>
+                  <td valign="top">
+                    KONSUL DPJP                  </td>
+                  <td valign="top">
+                    dr. Azhari Hasna Lathifah                  </td>
+                </tr>
+                              </table>
+                                          <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Jalan Perawat
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Perawat
+                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:15:10                  </td>
+                  <td valign="top">
+                    IGD003                  </td>
+                  <td valign="top">
+                    CTG                  </td>
+                  <td valign="top">
+                    Dyan Asri Primastuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:15:10                  </td>
+                  <td valign="top">
+                    IGD005                  </td>
+                  <td valign="top">
+                    Pasang Infus Dewasa dan Anak                  </td>
+                  <td valign="top">
+                    Dyan Asri Primastuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:15:10                  </td>
+                  <td valign="top">
+                    IGD043                  </td>
+                  <td valign="top">
+                    PEMERIKSAAN VITAL SIGN                  </td>
+                  <td valign="top">
+                    Dyan Asri Primastuti, A.Md.Keb                  </td>
+                </tr>
+                              </table>
+                                                        <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Inap Dokter
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Dokter
+                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:32:22                  </td>
+                  <td valign="top">
+                    TMD003                  </td>
+                  <td valign="top">
+                    KONSULTASI DOKTER SPESIALIS (KELAS 3)                  </td>
+                  <td valign="top">
+                    dr. Guntur,Sp.OG                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:32:22                  </td>
+                  <td valign="top">
+                    TMD007                  </td>
+                  <td valign="top">
+                    VISITE  DOKTER SPESIALIS (KELAS 3)                  </td>
+                  <td valign="top">
+                    dr. Guntur,Sp.OG                  </td>
+                </tr>
+                              </table>
+                                          <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form" style="margin-bottom:2px;">
+                <tr>
+                  <td valign="top" colspan="4">
+                    Tindakan Rawat Inap Perawat
+                  </td>
+                </tr>
+                <tr align="center">
+                  <td valign="top" width="15%" bgcolor="#FFFAF8">
+                    Tanggal
+                  </td>
+                  <td valign="top" width="10%" bgcolor="#FFFAF8">
+                    Kode
+                  </td>
+                  <td valign="top" width="40%" bgcolor="#FFFAF8">
+                    Nama Tindakan/Perawatan
+                  </td>
+                  <td valign="top" width="20%" bgcolor="#FFFAF8">
+                    Perawat
+                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 21:12:52                  </td>
+                  <td valign="top">
+                    AKB001                  </td>
+                  <td valign="top">
+                    PENGUKURAN TANDA VITAL PASIEN                  </td>
+                  <td valign="top">
+                    Dwi Astuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 20:08:26                  </td>
+                  <td valign="top">
+                    AKB001                  </td>
+                  <td valign="top">
+                    PENGUKURAN TANDA VITAL PASIEN                  </td>
+                  <td valign="top">
+                    Isti Maulani, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 20:08:26                  </td>
+                  <td valign="top">
+                    AKB002                  </td>
+                  <td valign="top">
+                    PEMERIKSAAN OBSTETRI MASUK VK                  </td>
+                  <td valign="top">
+                    Isti Maulani, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 21:12:52                  </td>
+                  <td valign="top">
+                    AKB003                  </td>
+                  <td valign="top">
+                    PEMERIKSAAN DOPLER                  </td>
+                  <td valign="top">
+                    Dwi Astuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 20:08:26                  </td>
+                  <td valign="top">
+                    AKB003                  </td>
+                  <td valign="top">
+                    PEMERIKSAAN DOPLER                  </td>
+                  <td valign="top">
+                    Isti Maulani, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 21:12:52                  </td>
+                  <td valign="top">
+                    AKB004                  </td>
+                  <td valign="top">
+                    PEMERIKSAAN VT                  </td>
+                  <td valign="top">
+                    Dwi Astuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 20:08:26                  </td>
+                  <td valign="top">
+                    AKB004                  </td>
+                  <td valign="top">
+                    PEMERIKSAAN VT                  </td>
+                  <td valign="top">
+                    Isti Maulani, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 21:12:52                  </td>
+                  <td valign="top">
+                    AKB006                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS                  </td>
+                  <td valign="top">
+                    Dwi Astuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 20:08:26                  </td>
+                  <td valign="top">
+                    AKB006                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS                  </td>
+                  <td valign="top">
+                    Isti Maulani, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 21:12:52                  </td>
+                  <td valign="top">
+                    AKB007                  </td>
+                  <td valign="top">
+                    INJEKSI                  </td>
+                  <td valign="top">
+                    Dwi Astuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 20:08:26                  </td>
+                  <td valign="top">
+                    AKB007                  </td>
+                  <td valign="top">
+                    INJEKSI                  </td>
+                  <td valign="top">
+                    Isti Maulani, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 20:08:26                  </td>
+                  <td valign="top">
+                    AKB011                  </td>
+                  <td valign="top">
+                    OBSERVASI INPARTU / HARI                  </td>
+                  <td valign="top">
+                    Isti Maulani, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 04:15:57                  </td>
+                  <td valign="top">
+                    AKB017                  </td>
+                  <td valign="top">
+                    PASANG DC                  </td>
+                  <td valign="top">
+                    Dwi Astuti, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 07:00:54                  </td>
+                  <td valign="top">
+                    ANMD001                  </td>
+                  <td valign="top">
+                    ADMINISTRASI LAYANAN NON MEDIK                  </td>
+                  <td valign="top">
+                    Sinta Noerhayati                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 07:00:00                  </td>
+                  <td valign="top">
+                    ANMD001                  </td>
+                  <td valign="top">
+                    ADMINISTRASI LAYANAN NON MEDIK                  </td>
+                  <td valign="top">
+                    Feliska Anastasia Fitriyani                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 07:00:00                  </td>
+                  <td valign="top">
+                    ANMD001                  </td>
+                  <td valign="top">
+                    ADMINISTRASI LAYANAN NON MEDIK                  </td>
+                  <td valign="top">
+                    Feliska Anastasia Fitriyani                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:37:53                  </td>
+                  <td valign="top">
+                    ANMD001                  </td>
+                  <td valign="top">
+                    ADMINISTRASI LAYANAN NON MEDIK                  </td>
+                  <td valign="top">
+                    Dhian Anggraeni, A.Md                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:37:53                  </td>
+                  <td valign="top">
+                    ASMF001                  </td>
+                  <td valign="top">
+                    ADMINISTRASI SMF OBSGYN                  </td>
+                  <td valign="top">
+                    Dhian Anggraeni, A.Md                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 07:00:54                  </td>
+                  <td valign="top">
+                    K3-001                  </td>
+                  <td valign="top">
+                    K3                  </td>
+                  <td valign="top">
+                    Sinta Noerhayati                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 07:00:00                  </td>
+                  <td valign="top">
+                    K3-001                  </td>
+                  <td valign="top">
+                    K3                  </td>
+                  <td valign="top">
+                    Feliska Anastasia Fitriyani                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 07:00:00                  </td>
+                  <td valign="top">
+                    K3-001                  </td>
+                  <td valign="top">
+                    K3                  </td>
+                  <td valign="top">
+                    Feliska Anastasia Fitriyani                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:37:53                  </td>
+                  <td valign="top">
+                    K3-001                  </td>
+                  <td valign="top">
+                    K3                  </td>
+                  <td valign="top">
+                    Dhian Anggraeni, A.Md                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-14 19:37:53                  </td>
+                  <td valign="top">
+                    SARPRAS-001                  </td>
+                  <td valign="top">
+                    SARPRAS                  </td>
+                  <td valign="top">
+                    Dhian Anggraeni, A.Md                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 23:06:43                  </td>
+                  <td valign="top">
+                    TPB003                  </td>
+                  <td valign="top">
+                    TERAPI INJEKSI ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Wahyu Wulandari, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:06:43                  </td>
+                  <td valign="top">
+                    TPB003                  </td>
+                  <td valign="top">
+                    TERAPI INJEKSI ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Ria Patmawati, AMK                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 22:42:10                  </td>
+                  <td valign="top">
+                    TPB003                  </td>
+                  <td valign="top">
+                    TERAPI INJEKSI ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB003                  </td>
+                  <td valign="top">
+                    TERAPI INJEKSI ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 11:06:43                  </td>
+                  <td valign="top">
+                    TPB003                  </td>
+                  <td valign="top">
+                    TERAPI INJEKSI ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 17:42:10                  </td>
+                  <td valign="top">
+                    TPB003                  </td>
+                  <td valign="top">
+                    TERAPI INJEKSI ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    SRI SULASTRI                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 11:06:43                  </td>
+                  <td valign="top">
+                    TPB008                  </td>
+                  <td valign="top">
+                    TERAPI ORAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 23:06:43                  </td>
+                  <td valign="top">
+                    TPB018                  </td>
+                  <td valign="top">
+                    MENGGANTI CAIRAN INFUS ATAU KANTONG DARAH ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Wahyu Wulandari, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:06:43                  </td>
+                  <td valign="top">
+                    TPB018                  </td>
+                  <td valign="top">
+                    MENGGANTI CAIRAN INFUS ATAU KANTONG DARAH ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Ria Patmawati, AMK                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 22:42:10                  </td>
+                  <td valign="top">
+                    TPB018                  </td>
+                  <td valign="top">
+                    MENGGANTI CAIRAN INFUS ATAU KANTONG DARAH ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB018                  </td>
+                  <td valign="top">
+                    MENGGANTI CAIRAN INFUS ATAU KANTONG DARAH ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 11:06:43                  </td>
+                  <td valign="top">
+                    TPB018                  </td>
+                  <td valign="top">
+                    MENGGANTI CAIRAN INFUS ATAU KANTONG DARAH ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 17:42:10                  </td>
+                  <td valign="top">
+                    TPB018                  </td>
+                  <td valign="top">
+                    MENGGANTI CAIRAN INFUS ATAU KANTONG DARAH ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    SRI SULASTRI                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:06:43                  </td>
+                  <td valign="top">
+                    TPB023                  </td>
+                  <td valign="top">
+                    SIBIN PASIEN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Ria Patmawati, AMK                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 11:06:43                  </td>
+                  <td valign="top">
+                    TPB023                  </td>
+                  <td valign="top">
+                    SIBIN PASIEN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB023                  </td>
+                  <td valign="top">
+                    SIBIN PASIEN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 11:06:43                  </td>
+                  <td valign="top">
+                    TPB023                  </td>
+                  <td valign="top">
+                    SIBIN PASIEN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 17:42:10                  </td>
+                  <td valign="top">
+                    TPB023                  </td>
+                  <td valign="top">
+                    SIBIN PASIEN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    SRI SULASTRI                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 23:06:43                  </td>
+                  <td valign="top">
+                    TPB038                  </td>
+                  <td valign="top">
+                    MENGUKUR VITAL SIGN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Wahyu Wulandari, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:06:43                  </td>
+                  <td valign="top">
+                    TPB038                  </td>
+                  <td valign="top">
+                    MENGUKUR VITAL SIGN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Ria Patmawati, AMK                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 22:42:10                  </td>
+                  <td valign="top">
+                    TPB038                  </td>
+                  <td valign="top">
+                    MENGUKUR VITAL SIGN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 11:06:43                  </td>
+                  <td valign="top">
+                    TPB038                  </td>
+                  <td valign="top">
+                    MENGUKUR VITAL SIGN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB038                  </td>
+                  <td valign="top">
+                    MENGUKUR VITAL SIGN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 11:06:43                  </td>
+                  <td valign="top">
+                    TPB038                  </td>
+                  <td valign="top">
+                    MENGUKUR VITAL SIGN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 17:42:10                  </td>
+                  <td valign="top">
+                    TPB038                  </td>
+                  <td valign="top">
+                    MENGUKUR VITAL SIGN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    SRI SULASTRI                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 23:06:43                  </td>
+                  <td valign="top">
+                    TPB043                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Wahyu Wulandari, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:06:43                  </td>
+                  <td valign="top">
+                    TPB043                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Ria Patmawati, AMK                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 22:42:10                  </td>
+                  <td valign="top">
+                    TPB043                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB043                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 11:06:43                  </td>
+                  <td valign="top">
+                    TPB043                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 17:42:10                  </td>
+                  <td valign="top">
+                    TPB043                  </td>
+                  <td valign="top">
+                    PERAWATAN INFUS ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    SRI SULASTRI                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB048                  </td>
+                  <td valign="top">
+                    MENGGANTI LINEN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB053                  </td>
+                  <td valign="top">
+                    MOBILISASI PASIEN ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 11:06:43                  </td>
+                  <td valign="top">
+                    TPB058                  </td>
+                  <td valign="top">
+                    AFF DC ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 11:06:43                  </td>
+                  <td valign="top">
+                    TPB063                  </td>
+                  <td valign="top">
+                    AFF INFUS ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 23:06:43                  </td>
+                  <td valign="top">
+                    TPB083                  </td>
+                  <td valign="top">
+                    OBSERVASI PASIEN BANGSAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Wahyu Wulandari, A.Md.Keb                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 18:06:43                  </td>
+                  <td valign="top">
+                    TPB083                  </td>
+                  <td valign="top">
+                    OBSERVASI PASIEN BANGSAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Ria Patmawati, AMK                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 22:42:10                  </td>
+                  <td valign="top">
+                    TPB083                  </td>
+                  <td valign="top">
+                    OBSERVASI PASIEN BANGSAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 11:06:43                  </td>
+                  <td valign="top">
+                    TPB083                  </td>
+                  <td valign="top">
+                    OBSERVASI PASIEN BANGSAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB083                  </td>
+                  <td valign="top">
+                    OBSERVASI PASIEN BANGSAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-16 11:06:43                  </td>
+                  <td valign="top">
+                    TPB083                  </td>
+                  <td valign="top">
+                    OBSERVASI PASIEN BANGSAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 17:42:10                  </td>
+                  <td valign="top">
+                    TPB083                  </td>
+                  <td valign="top">
+                    OBSERVASI PASIEN BANGSAL ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    SRI SULASTRI                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-15 11:20:56                  </td>
+                  <td valign="top">
+                    TPB088                  </td>
+                  <td valign="top">
+                    ASUHAN PASIEN FISIOTERAPI ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Yesi Prihatin, S.Kep,.Ns                  </td>
+                </tr>
+                                <tr>
+                  <td valign="top">
+                    2026-02-17 11:06:43                  </td>
+                  <td valign="top">
+                    TPB193                  </td>
+                  <td valign="top">
+                    PERAWATAN LUKA OP ( KELAS 3 )                  </td>
+                  <td valign="top">
+                    Pratiwi Setyaningrum, S.Kep,.Ns                  </td>
+                </tr>
+                              </table>
+                                        </td>
+          </tr>
+          
+                    <tr class="isi">
+            <td valign="top" width="20%">Pemberian Obat </td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+              <tr align="center">
+                <td valign="top" width="25%" bgcolor="#eee">Tanggal</td>
+                <td valign="top" width="75%" bgcolor="#eee">Detail Resep</td>
+              </tr>
+                            <tr>
+                <td valign="top" width="25%">2026-02-14 19:44:03<br>Ralan</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                                        <tr>
+                      <td>METAMIZOL INJEKSI</td>
+                      <td>5</td>
+                    </tr>
+                                        <tr>
+                      <td>CEFTRIAXON</td>
+                      <td>6</td>
+                    </tr>
+                                        <tr>
+                      <td>MgSO4 20%</td>
+                      <td>5</td>
+                    </tr>
+                                        <tr>
+                      <td>DEXAMETHASONE 5 MG INJ</td>
+                      <td>5</td>
+                    </tr>
+                                        <tr>
+                      <td>CANUL O2 DEWASA</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>UNDERPAD</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SILET SCAREN</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SUCTION CATH 10</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>FOLLEY CATH 16</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>TRANFUSI SET </td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>URIN BAG (HANGER)</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ABOCATH 20</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 10 CC</td>
+                      <td>4</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 3 CC</td>
+                      <td>10</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 50 CC EC SAMPING</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>UMBILICAL</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>AQUABIDEST 25CC OTSUKA</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>3 WAY STOPCOCKS</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>PERFUSOR TUBE/EXTENSION TUBE</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>NACL 100</td>
+                      <td>3</td>
+                    </tr>
+                                        <tr>
+                      <td>ASERING INFUS</td>
+                      <td>3</td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+                            <tr>
+                <td valign="top" width="25%">2026-02-14 21:19:27<br>Ranap</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                                        <tr>
+                      <td>DOPAMET 250 MG</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ADALAT OROS jkn</td>
+                      <td>1</td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+                            <tr>
+                <td valign="top" width="25%">2026-02-15 07:41:21<br>Ranap</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                                        <tr>
+                      <td>ETANYL </td>
+                      <td>1</td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+                            <tr>
+                <td valign="top" width="25%">2026-02-15 08:26:23<br>Ranap</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                                        <tr>
+                      <td>MISOPROSTOL 200 TAB</td>
+                      <td>3</td>
+                    </tr>
+                                        <tr>
+                      <td>OXYTOCIN INJ</td>
+                      <td>2</td>
+                    </tr>
+                                        <tr>
+                      <td>ONDANSETRON 4 MG INJ</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>REGIVELL 4 ML</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>EPHEDRIN HCL</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>KETOROLAC 30 MG/ML INJ</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>METHYLERGOMETHRIN INJ</td>
+                      <td>2</td>
+                    </tr>
+                                        <tr>
+                      <td>ASAM TRANEKSAMAT 500 INJ</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>POVIDON 60ML</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>PLESTERIN </td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>LOMATULLE/FRAMYCETIN SULFATE</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>NURSE CAP</td>
+                      <td>3</td>
+                    </tr>
+                                        <tr>
+                      <td>HANDSCOON 7,5</td>
+                      <td>2</td>
+                    </tr>
+                                        <tr>
+                      <td>HANDSCOON NO 7</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>HANDSCOON NO 8</td>
+                      <td>3</td>
+                    </tr>
+                                        <tr>
+                      <td>MESS BB20</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SPINOCAN</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SELANG SUCTION DISPOSIBLE</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ALKOHOL 70% 1 LITERAN</td>
+                      <td>100</td>
+                    </tr>
+                                        <tr>
+                      <td>APRON N3</td>
+                      <td>5</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 10 CC</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 3 CC</td>
+                      <td>2</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 5 CC</td>
+                      <td>2</td>
+                    </tr>
+                                        <tr>
+                      <td>DISPOSIBLE ELECTOGICAL PENCIL</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ATRAMAT CROMIC 0</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ATRAMAT CROMIC 2</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ATRAMAT PGA 3/0</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ATRAMAT PGA 2</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>RL WIDA</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>ASERING INFUS</td>
+                      <td>1</td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+                            <tr>
+                <td valign="top" width="25%">2026-02-15 11:41:21<br>Ranap</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                                        <tr>
+                      <td>DEXKETOPROFEN 25 MG KAP</td>
+                      <td>10</td>
+                    </tr>
+                                        <tr>
+                      <td>ASAM TRANEKSAMAT 500 MG</td>
+                      <td>3</td>
+                    </tr>
+                                        <tr>
+                      <td>CEFIXIM 200MG</td>
+                      <td>15</td>
+                    </tr>
+                                        <tr>
+                      <td>BIOMETIS TABLET</td>
+                      <td>10</td>
+                    </tr>
+                                        <tr>
+                      <td>CEFTRIAXON</td>
+                      <td>2</td>
+                    </tr>
+                                        <tr>
+                      <td>KETOROLAC 30 MG/ML INJ</td>
+                      <td>3</td>
+                    </tr>
+                                        <tr>
+                      <td>KASA HIDROFIL</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 10 CC</td>
+                      <td>1</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 3 CC</td>
+                      <td>5</td>
+                    </tr>
+                                        <tr>
+                      <td>SPUIT 5 CC</td>
+                      <td>5</td>
+                    </tr>
+                                        <tr>
+                      <td>RL WIDA</td>
+                      <td>2</td>
+                    </tr>
+                                        <tr>
+                      <td>PARACETAMOL INF</td>
+                      <td>2</td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+                            <tr>
+                <td valign="top" width="25%">2026-02-15 11:41:35<br>Ranap</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                                        <tr>
+                      <td>MgSO4 20%</td>
+                      <td>6</td>
+                    </tr>
+                                        <tr>
+                      <td>LOMATULLE/FRAMYCETIN SULFATE</td>
+                      <td>1</td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+                            <tr>
+                <td valign="top" width="25%">2026-02-15 15:02:21<br>Ranap</td>
+                <td valign="top" width="75%">
+                  <table width="100%" border="0" align="center" cellpadding="3px" cellspacing="0">
+                    <tr>
+                      <td valign="top" width="75%" bgcolor="#eee">Nama Obat</td>
+                      <td valign="top" width="25%" bgcolor="#eee">Jumlah</td>
+                    </tr>
+                                        <tr>
+                      <td>ABOCATH 22</td>
+                      <td>5</td>
+                    </tr>
+                                      </table>
+                </td>
+              </tr>
+                            </table>
+            </td>
+          </tr>
+
+          
+                    <tr class="isi">
+            <td valign="top" width="20%">Laboratorium </td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+              <tr align="center">
+                <td valign="top" width="20%" bgcolor="#eee">Tanggal</td>
+                <td valign="top" width="20%" bgcolor="#eee">Nama Tindakan</td>
+                <td valign="top" width="20%" bgcolor="#eee">Hasil</td>
+                <td valign="top" width="20%" bgcolor="#eee">Nilai Rujukan</td>
+                <td valign="top" width="20%" bgcolor="#eee">Keterangan</td>
+              </tr>
+                            <tr>
+                <td valign="top" width="20%">2026-02-14</td>
+                <td colspan="4" valign="top" width="80%">HEMATOLOGI </td>
+              </tr>
+                                <tr>
+                  <td></td>
+                  <td>Hemoglobin</td>
+                  <td>11.9 g/dl</td>
+                  <td>11.0 - 15.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Leukosit</td>
+                  <td>13.000 /mm3</td>
+                  <td>4.000 - 10.000</td>
+                  <td>H</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Lymph%</td>
+                  <td>18.0 %</td>
+                  <td>20.0 - 40.0</td>
+                  <td>L</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Mid %</td>
+                  <td>7.2 %</td>
+                  <td>3.0 - 15.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Gran%</td>
+                  <td>74.8 %</td>
+                  <td>50.0 - 70.0</td>
+                  <td>H</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Trombosit</td>
+                  <td>205.000 u/L</td>
+                  <td>150.000- 400.000</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Hematokrit</td>
+                  <td>39.1 %</td>
+                  <td>37.0 - 47.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Erytrosit</td>
+                  <td>4.16 juta</td>
+                  <td>3.50 - 5.00</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MCV</td>
+                  <td>94.2 fl</td>
+                  <td>80.0 - 100.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MCH</td>
+                  <td>28.6 pg</td>
+                  <td>27.0 - 34.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MCHC</td>
+                  <td>30.4 g/dl</td>
+                  <td>32.0 - 36.0 </td>
+                  <td>L</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>RDW-CV</td>
+                  <td>15.4 fl</td>
+                  <td>11.0 -  16.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MPV</td>
+                  <td>8.1 fl</td>
+                  <td>6.5 - 12.0</td>
+                  <td></td>
+                </tr>
+                                            <tr>
+                <td valign="top" width="20%">2026-02-15</td>
+                <td colspan="4" valign="top" width="80%">HEMATOLOGI </td>
+              </tr>
+                                <tr>
+                  <td></td>
+                  <td>Hemoglobin</td>
+                  <td>11.2 g/dl</td>
+                  <td>11.0 - 15.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Leukosit</td>
+                  <td>18.700 /mm3</td>
+                  <td>4.000 - 10.000</td>
+                  <td>H</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Lymph%</td>
+                  <td>13.1 %</td>
+                  <td>20.0 - 40.0</td>
+                  <td>L</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Mid %</td>
+                  <td>8.3 %</td>
+                  <td>3.0 - 15.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Gran%</td>
+                  <td>78.6 %</td>
+                  <td>50.0 - 70.0</td>
+                  <td>H</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Trombosit</td>
+                  <td>211.000 u/L</td>
+                  <td>150.000- 400.000</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Hematokrit</td>
+                  <td>39.3 %</td>
+                  <td>37.0 - 47.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>Erytrosit</td>
+                  <td>4.14 juta</td>
+                  <td>3.50 - 5.00</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MCV</td>
+                  <td>95.0 fl</td>
+                  <td>80.0 - 100.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MCH</td>
+                  <td>29.4 pg</td>
+                  <td>27.0 - 34.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MCHC</td>
+                  <td>31.0 g/dl</td>
+                  <td>32.0 - 36.0 </td>
+                  <td>L</td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>RDW-CV</td>
+                  <td>15.0 fl</td>
+                  <td>11.0 -  16.0</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>MPV</td>
+                  <td>8.4 fl</td>
+                  <td>6.5 - 12.0</td>
+                  <td></td>
+                </tr>
+                                            <tr>
+                <td valign="top" width="20%">2026-02-14</td>
+                <td colspan="4" valign="top" width="80%">CT BT</td>
+              </tr>
+                                <tr>
+                  <td></td>
+                  <td>BT</td>
+                  <td>1&apos;30&quot; Menit</td>
+                  <td>1-3</td>
+                  <td></td>
+                </tr>
+                                <tr>
+                  <td></td>
+                  <td>CT</td>
+                  <td>10&apos;00&quot; Menit</td>
+                  <td>9-15</td>
+                  <td></td>
+                </tr>
+                                            <tr>
+                <td valign="top" width="20%">2026-02-14</td>
+                <td colspan="4" valign="top" width="80%">HBsAG</td>
+              </tr>
+                                <tr>
+                  <td></td>
+                  <td>HBsAg</td>
+                  <td>Non Reaktive </td>
+                  <td>Non Reaktive</td>
+                  <td></td>
+                </tr>
+                                            <tr>
+                <td valign="top" width="20%">2026-02-14</td>
+                <td colspan="4" valign="top" width="80%">HIV</td>
+              </tr>
+                                <tr>
+                  <td></td>
+                  <td>HIV</td>
+                  <td>Non Reaktive </td>
+                  <td>Non Reaktive</td>
+                  <td></td>
+                </tr>
+                                            <tr>
+                <td valign="top" width="20%">2026-02-14</td>
+                <td colspan="4" valign="top" width="80%">KIMIA</td>
+              </tr>
+                                <tr>
+                  <td></td>
+                  <td>Gula Darah Sewaktu</td>
+                  <td>97 mg/dl</td>
+                  <td>75 - 115</td>
+                  <td></td>
+                </tr>
+                                            <tr>
+                <td valign="top" width="20%">2026-02-14</td>
+                <td colspan="4" valign="top" width="80%">PROTEIN URINE</td>
+              </tr>
+                                <tr>
+                  <td></td>
+                  <td>Protein Urine</td>
+                  <td>Positive 1 (+1) </td>
+                  <td>Negative</td>
+                  <td>H</td>
+                </tr>
+                                            </table>
+            </td>
+          </tr>
+                                        <tr class="isi">
+            <td valign="top" width="20%">Operasi</td>
+            <td valign="top" width="1%" align="center">:</td>
+            <td valign="top" width="79%">
+              <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                <tr align="center">
+                  <td valign="top" width="20%" bgcolor="#eee">Tanggal</td>
+                  <td valign="top" width="30%" bgcolor="#eee">Nama Tindakan</td>
+                </tr>
+                                <tr>
+                  <td valign="top" width="20%">2026-02-15 07:00:10</td>
+                  <td valign="top" width="30%">Operasi Seksio Sesaria BESAR DENGAN PENYULIT KELAS 3</td>
+                </tr>
+                              </table>
+            </td>
+          </tr>
+                                          <tr class="isi">
+              <td valign="top" width="20%">Berkas Digital</td>
+              <td valign="top" width="1%" align="center">:</td>
+              <td valign="top" width="79%">
+                <table width="100%" border="1" align="center" cellpadding="3px" cellspacing="0" class="tbl_form">
+                  <tr align="center">
+                    <td>
+                      <div class="row">
+                          <div class="gallery">
+                                                          <div class="col-sm-6 col-md-6">
+                                <div class="thumbnail">
+                                  <a href="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/triage_form_1771071297.png" 
+                                     data-lightbox="gallery" 
+                                     data-title="TRIASE IGD">
+                                    <img src="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/triage_form_1771071297.png" 
+                                         class="img-responsive" 
+                                         style="max-width: 100%; height: auto;">
+                                  </a>
+                                </div>
+                                <div class="caption text-center">
+                                  TRIASE IGD                                </div>
+                                                              </div>
+                                                          <div class="col-sm-6 col-md-6">
+                                <div class="thumbnail">
+                                  <a href="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/IC_Ny._Wulan_bakti.pdf" 
+                                     data-lightbox="gallery" 
+                                     data-title="BERKAS EKLAIM">
+                                    <img src="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/IC_Ny._Wulan_bakti.pdf" 
+                                         class="img-responsive" 
+                                         style="max-width: 100%; height: auto;">
+                                  </a>
+                                </div>
+                                <div class="caption text-center">
+                                  BERKAS EKLAIM                                </div>
+                                                              </div>
+                                                          <div class="col-sm-6 col-md-6">
+                                <div class="thumbnail">
+                                  <a href="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/wulan_bakti_ctg.jpeg" 
+                                     data-lightbox="gallery" 
+                                     data-title="BERKAS EKLAIM">
+                                    <img src="http://simrsfitricandra.site/webapps/berkasrawat/pages/upload/wulan_bakti_ctg.jpeg" 
+                                         class="img-responsive" 
+                                         style="max-width: 100%; height: auto;">
+                                  </a>
+                                </div>
+                                <div class="caption text-center">
+                                  BERKAS EKLAIM                                </div>
+                                                              </div>
+                                                      </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+                            </table>
+        <br>
+          </div>
+  </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-danger" href="javascript:;" id="print">Cetak</a>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>
+
+<script>
+  $(document).on("click", ".hapus_berkas_digital", function(event){
+    // alert(lokasi_file);
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var url = baseURL + '/pasien/hapusberkasdigital?t=' + mlite.token;
+    var lokasi_file = $(this).attr("data-lokasi_file");
+    // tampilkan dialog konfirmasi
+    bootbox.confirm({
+      message: "Apakah Anda yakin ingin menghapus data ini?",
+      className: "custom-confirm-box",
+      callback: function (result) {
+        console.log(result);
+        // ketika ditekan tombol ok
+        if (result){
+          // mengirimkan perintah penghapusan
+          $.post(url, {
+              lokasi_file: lokasi_file
+          } ,function(data) {
+              location.reload();
+              console.log(data);
+          });
+        }
+      }
+    });
+  });
+</script>

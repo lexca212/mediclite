@@ -1,0 +1,61 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail pasien_bayi</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_pasien_bayi" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>No Rkm Medis</td><td>{$value.no_rkm_medis}</td><tr>
+<tr><td>Umur Ibu</td><td>{$value.umur_ibu}</td><tr>
+<tr><td>Nama Ayah</td><td>{$value.nama_ayah}</td><tr>
+<tr><td>Umur Ayah</td><td>{$value.umur_ayah}</td><tr>
+<tr><td>Berat Badan</td><td>{$value.berat_badan}</td><tr>
+<tr><td>Panjang Badan</td><td>{$value.panjang_badan}</td><tr>
+<tr><td>Lingkar Kepala</td><td>{$value.lingkar_kepala}</td><tr>
+<tr><td>Proses Lahir</td><td>{$value.proses_lahir}</td><tr>
+<tr><td>Anakke</td><td>{$value.anakke}</td><tr>
+<tr><td>Jam Lahir</td><td>{$value.jam_lahir}</td><tr>
+<tr><td>Keterangan</td><td>{$value.keterangan}</td><tr>
+<tr><td>Diagnosa</td><td>{$value.diagnosa}</td><tr>
+<tr><td>Penyulit Kehamilan</td><td>{$value.penyulit_kehamilan}</td><tr>
+<tr><td>Ketuban</td><td>{$value.ketuban}</td><tr>
+<tr><td>Lingkar Perut</td><td>{$value.lingkar_perut}</td><tr>
+<tr><td>Lingkar Dada</td><td>{$value.lingkar_dada}</td><tr>
+<tr><td>Penolong</td><td>{$value.penolong}</td><tr>
+<tr><td>No Skl</td><td>{$value.no_skl}</td><tr>
+<tr><td>G</td><td>{$value.g}</td><tr>
+<tr><td>P</td><td>{$value.p}</td><tr>
+<tr><td>A</td><td>{$value.a}</td><tr>
+<tr><td>F1</td><td>{$value.f1}</td><tr>
+<tr><td>U1</td><td>{$value.u1}</td><tr>
+<tr><td>T1</td><td>{$value.t1}</td><tr>
+<tr><td>R1</td><td>{$value.r1}</td><tr>
+<tr><td>W1</td><td>{$value.w1}</td><tr>
+<tr><td>N1</td><td>{$value.n1}</td><tr>
+<tr><td>F5</td><td>{$value.f5}</td><tr>
+<tr><td>U5</td><td>{$value.u5}</td><tr>
+<tr><td>T5</td><td>{$value.t5}</td><tr>
+<tr><td>R5</td><td>{$value.r5}</td><tr>
+<tr><td>W5</td><td>{$value.w5}</td><tr>
+<tr><td>N5</td><td>{$value.n5}</td><tr>
+<tr><td>F10</td><td>{$value.f10}</td><tr>
+<tr><td>U10</td><td>{$value.u10}</td><tr>
+<tr><td>T10</td><td>{$value.t10}</td><tr>
+<tr><td>R10</td><td>{$value.r10}</td><tr>
+<tr><td>W10</td><td>{$value.w10}</td><tr>
+<tr><td>N10</td><td>{$value.n10}</td><tr>
+<tr><td>Resusitas</td><td>{$value.resusitas}</td><tr>
+<tr><td>Obat Diberikan</td><td>{$value.obat_diberikan}</td><tr>
+<tr><td>Mikasi</td><td>{$value.mikasi}</td><tr>
+<tr><td>Mikonium</td><td>{$value.mikonium}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>

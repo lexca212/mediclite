@@ -1,0 +1,739 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>mLITE - Dashboard</title>
+    <link rel="icon" href="http://localhost/mediclite/uploads/settings/logo_678611cb1e2eb.png" type="image/x-icon">
+    <link href="http://localhost/mediclite/assets/css/cosmo.min.css?v=4.1.8" rel="stylesheet">
+    <link href="http://localhost/mediclite/assets/css/animate.min.css?v=4.1.8" rel="stylesheet">
+    <link href="http://localhost/mediclite/themes/admin/css/style.css?v=11224.1.8&t=fb4fad129e7a" rel="stylesheet">
+    <link href="http://localhost/mediclite/assets/css/font-awesome.css?v=4.1.8" rel="stylesheet">
+<style>
+.navbar li.menu-icon {
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  margin: 6px 3px;
+}
+.navbar-icon-top .navbar-nav>li>a>.fa, .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+    position: relative;
+    width: 36px;
+    font-size: 24px;
+}
+.menu-top .navbar-nav>li>a {
+    font-size: 14px;
+}
+.menu-top .navbar-nav>li>a>.fa {
+    position: relative;
+    width: 10px !important;
+    font-size: 14px;
+}
+.navbar-icon-top .navbar-nav>li>a>.fa>.badge, .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+    position: absolute;
+    right: 0;
+    font-family: sans-serif;
+}
+.navbar-icon-top .navbar-nav>li>a>.fa {
+    top: 3px;
+    line-height: 12px;
+}
+.navbar-icon-top .navbar-nav>li>a>.fa>.badge {
+    top: -10px;
+}
+.navbar-icon-top .navbar-nav>li>a>.glyphicon {
+    top: 6px;
+    line-height: 6px;
+}
+.navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+    top: -16px;
+}  
+@media (min-width: 768px) {
+    .navbar-icon-top .navbar-brand {
+        padding: 25px 15px;
+    }
+    .navbar-icon-top .navbar-text {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .navbar-icon-top .navbar-btn, .navbar-icon-top .navbar-form {
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    .navbar-icon-top .navbar-nav>li>a {
+        text-align: center;
+        display: table-cell;
+        height: 70px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .menu-top .navbar-nav>li>a {
+        text-align: center;
+        display: table-cell;
+        height: 34px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: #ffffff;
+      }
+    .menu-top .navbar-nav>li>a:hover {
+      border-radius: 5px;
+      background-color: #c4c4c4;
+      color: #000000;
+    }
+    .menu-top .navbar-nav>li>a:focus {
+      color: #efefef !important;
+    }
+    .navbar-icon-top .navbar-nav>li>a>.fa, .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+        display: block;
+        width: 48px;
+        margin: 2px auto 4px auto;
+        top: 0;
+        line-height: 24px;
+    }
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge, .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+        top: -7px;
+    }
+}
+</style>
+    <!-- PWA Support -->
+    <link rel="manifest" href="http://localhost/mediclite/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="mLITE" />
+    <meta name="apple-mobile-web-app-title" content="mLITE" />
+    <meta name="theme-color" content="#222" />
+    <meta name="msapplication-navbutton-color" content="#222" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="green-translucent" />
+    <meta name="msapplication-starturl" content="http://localhost/mediclite" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" sizes="128x128" href="http://localhost/mediclite/assets/images/icon-128x128.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="http://localhost/mediclite/assets/images/icon-128x128.png" />
+    <link rel="icon" sizes="192x192" href="http://localhost/mediclite/assets/images/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="http://localhost/mediclite/assets/images/icon-192x192.png" />
+    <link rel="icon" sizes="256x256" href="http://localhost/mediclite/assets/images/icon-256x256.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="http://localhost/mediclite/assets/images/icon-256x256.png" />
+    <link rel="icon" sizes="384x384" href="http://localhost/mediclite/assets/images/icon-384x384.png" />
+    <link rel="apple-touch-icon" sizes="384x384" href="http://localhost/mediclite/assets/images/icon-384x384.png" />
+    <link rel="icon" sizes="512x512" href="http://localhost/mediclite/assets/images/icon-512x512.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="http://localhost/mediclite/assets/images/icon-512x512.png" />
+    <!-- End PWA Support -->
+
+    <script src="http://localhost/mediclite/assets/jscripts/jquery.min.js?v=4.1.8"></script>
+    <script src="http://localhost/mediclite/assets/jscripts/bootstrap.min.js?v=4.1.8"></script>
+    <script src="http://localhost/mediclite/assets/jscripts/bootbox.min.js?v=4.1.8"></script>
+    <script src="http://localhost/mediclite/assets/jscripts/html.sortable.min.js?v=4.1.8"></script>
+    <script src="http://localhost/mediclite/assets/jscripts/tinynav.min.js?v=4.1.8"></script>
+    <script src="http://localhost/mediclite/themes/admin/js/kalypto.min.js?v=4.1.8&t=fb4fad129e7a"></script>
+    <script src="http://localhost/mediclite/themes/admin/js/selectator.js?v=4.1.8&t=fb4fad129e7a"></script>
+    <script>
+        var mlite = {token:"fb4fad129e7a", url:"http://localhost/mediclite", admin:"admin"};
+    </script>
+    <meta name="generator" content="Medic LITE Indonesia" />
+<script src="http://localhost/mediclite/plugins/dashboard/js/admin/webcam.js?v=4.1.8&t=fb4fad129e7a"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="navbar-wrapper">
+            <nav class="navbar navbar-inverse mobile-fixed-top hidden-lg hidden-md" style="z-index:1000;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#">
+                        <img class="logo" src="http://localhost/mediclite/uploads/settings/logo_678611cb1e2eb.png" alt="">
+                        <span class="navbar-brand truncated"> RSU FITRI CANDRA WONOGIRI </span>
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="http://localhost/mediclite/admin/logout?t=fb4fad129e7a" class="fa fa-power-off" data-toggle="tooltip" data-placement="bottom" title="Keluar"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top visible-lg visible-md" style="margin-bottom:0;font-size:16px;">
+          <div class="container-fluid bg-primary menu-top" style="margin: 0 !important;padding: 0 !important;border-bottom: #b6b6b6 2px solid;">
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://localhost/mediclite/favicon.png" height="20px"></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" data-toggle="modal" data-target="#tentangModal"> Tentang</a></li>
+                    <li><a href="http://localhost/mediclite/admin/dashboard/menu?t=fb4fad129e7a" data-toggle="modal" data-target="#menuModal"> Menu</a></li>
+                    <li><a href="http://localhost/mediclite/admin/logout?t=fb4fad129e7a"> Logout</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layanan</a>
+                  <ul class="dropdown-menu">
+                    <li ><a href="http://localhost/mediclite/admin/igd/manage?t=fb4fad129e7a">IGD</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/rawat_jalan/manage?t=fb4fad129e7a">Rawat Jalan</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/rawat_inap/manage?t=fb4fad129e7a">Rawat Inap</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/dokter_igd/manage?t=fb4fad129e7a">Dokter IGD</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/dokter_ralan/manage?t=fb4fad129e7a">Dokter Rawat Jalan</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/dokter_ranap/manage?t=fb4fad129e7a">Dokter Rawat Inap</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=fb4fad129e7a">Apotek</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/laboratorium/manage?t=fb4fad129e7a">Laboratorium</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/radiologi/manage?t=fb4fad129e7a">Radiologi</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manajemen</a>
+                  <ul class="dropdown-menu">
+                    <li ><a href="http://localhost/mediclite/admin/manajemen/manage?t=fb4fad129e7a">Manajemen Mutu</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/master/manage?t=fb4fad129e7a">Master Data</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/kepegawaian/manage?t=fb4fad129e7a">Kepegawaian</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/master/dokter?t=fb4fad129e7a">Dokter</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/master/petugas?t=fb4fad129e7a">Petugas</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/wagateway/manage?t=fb4fad129e7a">WA Gateway</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/presensi/manage?t=fb4fad129e7a">Presensi Pegawai</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/profil/manage?t=fb4fad129e7a">Akun Pegawai</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/inventaris/manage?t=fb4fad129e7a">Data Inventaris</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Farmasi</a>
+                  <ul class="dropdown-menu">
+                    <li ><a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=fb4fad129e7a">Apotek Rawat Jalan</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/apotek_ranap/manage?t=fb4fad129e7a">Apotek Rawat Inap</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/master/databarang?t=fb4fad129e7a">Inventory Obat</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/farmasi/opname?t=fb4fad129e7a">Stok Opname</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/farmasi/mutasi?t=fb4fad129e7a">Mutasi Obat</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/riwayat_barang_medis/manage?t=fb4fad129e7a">Sirkulasi Obat</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/detail_pemberian_obat/manage?t=fb4fad129e7a">Detail Pemberian Obat</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/darurat_stok/manage?t=fb4fad129e7a">Darurat Stok</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rekam Medik</a>
+                  <ul class="dropdown-menu">
+                    <li ><a href="http://localhost/mediclite/admin/pasien/manage?t=fb4fad129e7a">Data Pasien</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/vedika/manage?t=fb4fad129e7a">Verifikasi Digital Klaim</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/veronisa/manage?t=fb4fad129e7a">Verifikasi Obat Kronis</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/icd_10/manage?t=fb4fad129e7a">Data ICD 10</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/icd_9/manage?t=fb4fad129e7a">Data ICD 9</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bridging</a>
+                  <ul class="dropdown-menu">
+                    <li ><a href="http://localhost/mediclite/admin/vclaim/manage?t=fb4fad129e7a">vClaim BPJS</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/jkn_mobile/manage?t=fb4fad129e7a">Antrol FKTL BPJS</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/laporan_bpjs/manage?t=fb4fad129e7a">Laporan Pengiriman BPJS</a></li>
+                    <li class="disabled"><a href="">PCare BPJS</a></li>
+                    <li class="disabled"><a href="">Antrol FKTP BPJS</a></li>
+                    <li><a href="#" style="color: red !important">Aplicare BPJS</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/icare/manage?t=fb4fad129e7a">iCare BPJS</a></li>
+                    <li><a href="#" style="color: red !important">Siranap Kemkes</a></li>
+                    <li class="disabled"><a href="">Satu Sehat Kemkes</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/orthanc/manage?t=fb4fad129e7a">Radiologi Orthanc</a></li>
+                    <li><a href="#" style="color: red !important">Laborarotium MyLIMS</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Laporan</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" style="color: red !important">Penggunaan Obat</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/jasa_medis_dokter/manage?t=fb4fad129e7a">Jasa Medik Dokter</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/jasa_medis_perawat/manage?t=fb4fad129e7a">Jasa Medik Petugas</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/kunjungan_ralan/manage?t=fb4fad129e7a">Kunjungan Rumah Sakit</a></li>
+                    <li><a href="#" style="color: red !important">Pembayaran Rawat Jalan</a></li>
+                    <li><a href="#" style="color: red !important">Pembayaran Rawat Inap</a></li>
+                    <li><a href="#" style="color: red !important">Kunjungan Rawat Jalan</a></li>
+                    <li><a href="#" style="color: red !important">Kunjungan Rawat Inap</a></li>
+                    <li><a href="#" style="color: red !important">Sensus Harian</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Keuangan</a>
+                  <ul class="dropdown-menu">
+                    <li ><a href="http://localhost/mediclite/admin/penjualan/manage?t=fb4fad129e7a">Penjualan</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/keuangan/jurnalharian?t=fb4fad129e7a">Jurnal Harian</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/keuangan/postingjurnal?t=fb4fad129e7a">Posting Jurnal</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/keuangan/bukubesar?t=fb4fad129e7a">Buku Besar</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/keuangan/cashflow?t=fb4fad129e7a">Cash Flow</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/keuangan/neraca?t=fb4fad129e7a">Neraca Rugi Laba</a></li>
+                  </ul>  
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Anjungan</a>
+                  <ul class="dropdown-menu">
+                                        <li><a href="http://localhost/mediclite/anjungan/presensi" target="_blank">Presensi Pegawai</a></li>
+                                        <li><a href="http://localhost/mediclite/anjungan/bed" target="_blank">Ketersediaan Kamar</a></li>
+                    <li><a href="http://localhost/mediclite/anjungan/pasien" target="_blank">Anjungan Pasien Mandiri</a></li>
+                    <li><a href="http://localhost/mediclite/anjungan/sep" target="_blank">Anjungan Cetak SEP</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="http://localhost/mediclite/anjungan/loket" target="_blank">Antrian Loket</a></li>
+                    <li><a href="http://localhost/mediclite/anjungan/laboratorium" target="_blank">Antrian Laboratorium</a></li>
+                    <li><a href="http://localhost/mediclite/anjungan/apotek" target="_blank">Antrian Apotek</a></li>
+                    <li><a href="http://localhost/mediclite/anjungan/poli" target="_blank">Antrian Poliklinik</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="http://localhost/mediclite/anjungan/poli/all" target="_blank">Antrian Poliklinik Alternatif</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li><a href="http://localhost/mediclite/anjungan/poli/PAN" target="_blank">Antrian Poliklinik Anak</a></li>
+                                                                                        <li><a href="http://localhost/mediclite/anjungan/poli/PBD" target="_blank">Antrian Poliklinik Bedah</a></li>
+                                                                                                                                  <li><a href="http://localhost/mediclite/anjungan/poli/POG" target="_blank">Antrian Poliklinik Kebidanan dan Penyakit  Kandungan</a></li>
+                                                                                        <li><a href="http://localhost/mediclite/anjungan/poli/PPD" target="_blank">Antrian Poliklinik Penyakit Dalam</a></li>
+                                                                                        <li><a href="http://localhost/mediclite/anjungan/poli/PSF" target="_blank">Antrian Poliklinik Saraf / Neurologi</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bantuan</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" data-toggle="modal" data-target="#bantuanModal"> Bantuan</a></li>
+                  </ul>  
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>          
+          <div class="container-fluid navbar-icon-top">
+            <ul class="nav navbar-nav">
+              <li class="menu-icon"><a href="http://localhost/mediclite/admin/dashboard/menu?t=fb4fad129e7a" data-toggle="modal" data-target="#menuModal" style="border-radius: 5px !important;"><i class="fa fa-home text-primary"></i> Menu</a></li>
+                            <li class="menu-icon"><a href="http://localhost/mediclite/admin/pasien/manage?t=fb4fad129e7a" style="border-radius: 5px !important;"><i class="fa fa-users text-success"></i> Pasien</a></li>
+                                                            <li class="menu-icon"><a href="http://localhost/mediclite/admin/igd/manage?t=fb4fad129e7a" style="border-radius: 5px !important;"><i class="fa fa-ambulance text-danger"></i> IGD</a></li>
+                                                <li class="menu-icon"><a href="http://localhost/mediclite/admin/rawat_jalan/manage?t=fb4fad129e7a" style="border-radius: 5px !important;"><i class="fa fa-wheelchair text-warning"></i> Poliklinik</a></li>
+                                                <li class="menu-icon"><a href="http://localhost/mediclite/admin/rawat_inap/manage?t=fb4fad129e7a" style="border-radius: 5px !important;"><i class="fa fa-hotel text-info"></i> Rawat Inap</a></li>
+                                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=fb4fad129e7a" style="border-radius: 5px !important;"><i class="fa fa-medkit text-success"></i> Apotek</a></li>
+                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/laboratorium/manage?t=fb4fad129e7a" style="border-radius: 5px !important;"><i class="fa fa-flask text-warning"></i> Laboratorium</a></li>
+                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/radiologi/manage?t=fb4fad129e7a" style="border-radius: 5px !important;"><i class="fa fa-film text-info"></i> Radiologi</a></li>
+                          </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="menu-icon"><a href="http://localhost/mediclite/admin/logout?t=fb4fad129e7a" class="btn" style="border-radius: 5px !important;" title="Logout"><i class="fa fa-power-off"></i> Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+    		
+                  <style>
+  html {
+    height: 0;
+    background: url('http://localhost/mediclite/uploads/settings/wallpaper_67872946ec81e.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  body {
+    height: 0;
+  }
+
+  #content-wrapper {
+    top: 0;
+    background: transparent;
+  }
+
+  .dashboard_wall {
+    position: fixed;
+    bottom: 120px;
+    left: 80px;
+    width: 100%;
+    color: #44813e !important;
+  }
+
+  p.title {
+    position: absolute;
+    bottom: 30px;
+    left: 140px;
+    font-size: 32px;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  }
+
+  p.alamat {
+    position: absolute;
+    bottom: 0px;
+    left: 140px;
+    font-size: 16px;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  }
+
+  div.coba {
+    position: relative !important;
+    top: 120px;
+    margin: 0 15px;
+    /* display: none; */
+  }
+
+  @media (max-width: 600px) {
+    .dashboard_wall {
+      position: fixed;
+      bottom: 100px;
+      left: 0px;
+      min-width: 600px;
+    }
+
+    img.logo {
+      width: 80px;
+    }
+
+    p.title {
+      position: absolute;
+      bottom: 20px;
+      left: 80px;
+      font-size: 18px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    p.alamat {
+      position: absolute;
+      bottom: 10px;
+      left: 80px;
+      font-size: 10px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    div.coba.halo {
+      position: absolute;
+      width: 82px;
+      height: 20px;
+      left: 80px;
+      top: 80px;
+
+      font-family: Graphik;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      /* identical to box height */
+
+
+      color: #FFFFFF;
+    }
+
+    div.coba {
+      position: relative;
+      width: 250px;
+      height: 144px;
+      left: 0px;
+      top: 130px;
+      margin: 0;
+
+      /* background: linear-gradient(269.6deg, #56549E 0.35%, #AEA1E6 101.48%); */
+      border-radius: 0px 20px 20px 0px;
+
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 601px) {
+    .dashboard_wall {
+      position: fixed;
+      bottom: 100px;
+      left: 0px;
+      min-width: 600px;
+    }
+
+    img.logo {
+      width: 80px;
+    }
+
+    p.title {
+      position: absolute;
+      bottom: 20px;
+      left: 80px;
+      font-size: 18px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    p.alamat {
+      position: absolute;
+      bottom: 10px;
+      left: 80px;
+      font-size: 10px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    div.coba.halo {
+      position: absolute;
+      width: 152px;
+      height: 20px;
+      left: 160px;
+      top: 420px;
+
+      font-family: Graphik;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      /* identical to box height */
+
+
+      color: #FFFFFF;
+    }
+
+    div.coba {
+      position: relative;
+      width: 365px;
+      height: 84px;
+      left: 0px;
+      top: 424px;
+      margin: 0;
+
+      /* background: linear-gradient(269.6deg, #56549E 0.35%, #AEA1E6 101.48%); */
+      border-radius: 0px 20px 20px 0px;
+
+    }
+  }
+
+  .badge-success {
+    background-color: #222;
+  }
+
+  .btn-group .btn-fab {
+    position: fixed !important;
+    right: 20px;
+    bottom: 60px;
+  }
+</style>
+
+<div class="dashboard_wall">
+  <img src="http://localhost/mediclite/uploads/settings/logo_678611cb1e2eb.png" class="logo" width="120px" alt="">
+  <p class="title">RSU FITRI CANDRA WONOGIRI</p>
+  <p class="alamat">Brigjen Katamso, Pancuran, Kaliancar, Kec. Selogiri, Kabupaten Wonogiri, Jawa Tengah 57652 - WONOGIRI - JAWA TENGAH</p>
+</div>
+<div class="btn-group">
+  <a href="javascript:void(0)" onclick="getDistanceFromLatLonInKm()" class="btn btn-danger btn-fab">
+    <i class="fa fa-camera"></i> Presensi Online
+  </a>
+</div>
+  <!-- The Modal -->
+<div class="modal" id="myModal" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"><a href="http://localhost/mediclite/admin">Close <span
+              aria-hidden="true">&times;</span></a></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <center>
+          <div id="camera"></div><br>
+          <select class="form-control" id="shift" style="width:240px;">
+            <option>Pilih Shift</option>
+                      </select><br><br>
+          <input type="button" class="btn btn-info"
+            value="Presensi Masuk" data-dismiss="modal">
+          <input type="hidden" name="image" id="image-tag">
+          <div id="results"></div>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    function getDistanceFromLatLonInKm() {
+    window.navigator.geolocation.getCurrentPosition(function(pos) {
+      console.log(pos);
+      var units = 'm';
+      var latitude2 = '-7.7843056955868635';
+      var longitude2 = '110.9082954613063';
+      var latitude1 = pos.coords.latitude;
+      var longitude1 = pos.coords.longitude;
+      var theta = longitude1 - longitude2;
+      var p = Math.PI;
+      var degradlat1 = latitude1 * p / 180;
+      var degradlat2 = latitude2 * p / 180;
+      var degradtheta = theta * p / 180;
+      var c = Math.cos;
+      var s = Math.sin;
+      var a = (s(degradlat1) * s(degradlat2)) + (c(degradlat1) * c(degradlat2) * c(degradtheta));
+      var a = Math.acos(a);
+      var a = a * 180 / p;
+      var a = a * 60 * 1.1515;
+      var kilometers = a * 1.609344;
+      var meters = kilometers * 1000;
+
+      if(meters > 1000) {
+        alert('Presensi harus di area Rumah Sakit!!')
+      } else {
+        $('#myModal').modal('show', function () {
+        });
+      }
+    },
+   	function handleError(error) {
+      // Display error based on the error code.
+      const { code } = error;
+      switch (code) {
+        case GeolocationPositionError.TIMEOUT:
+          // Handle timeout.
+          alert('Koneksi Terputus')
+          break;
+        case GeolocationPositionError.PERMISSION_DENIED:
+          // User denied the request.
+        alert('Aktifkan GPS dan Izin Lokasi!!')
+          break;
+        case GeolocationPositionError.POSITION_UNAVAILABLE:
+          // Position not available.
+              alert('Lokasi Tidak Ditemukan!!')
+          break;
+      }
+    },
+    {timeout: 5000 , maximumAge: 0});
+  }
+  
+  $(document).ready(function () {
+
+    $('#shift').selectator('destroy');
+
+    $('#shift').on('change', function () {
+      var shift = this.value;
+    });
+
+    $('#myModal').on('show.bs.modal', function () {
+      Webcam.set({
+        width: 240,
+        height: 240,
+        image_format: 'jpeg',
+        jpeg_quality: 90,
+        facingMode: {
+          exact: 'environment'
+        }
+      });
+      Webcam.attach('#camera');
+      getDistanceFromLatLonInKm();
+    });
+    $("#myModal").on("hidden.bs.modal", function () {
+
+      var getshift = shift.value;
+      var shutter = new Audio();
+      shutter.autoplay = false;
+      shutter.src = navigator.userAgent.match(/Firefox/) ? 'http://localhost/mediclite/plugins/dashboard/audio/shutter.ogg' : 'http://localhost/mediclite/plugins/dashboard/audio/shutter.mp3';
+      shutter.play();
+
+      Webcam.snap(function (data_uri) {
+        document.getElementById('results').innerHTML = '<img id="imageprev" src="' + data_uri + '"/>';
+      });
+
+      var base64image = document.getElementById("imageprev").src;
+
+      Webcam.upload(base64image, 'http://localhost/mediclite/admin/dashboard/upload?t=fb4fad129e7a&shift=' + getshift, function (code, text) {
+      });
+
+      Webcam.reset();
+
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          $.post('http://localhost/mediclite/admin/dashboard/geolocation?t=fb4fad129e7a', { lat: position.coords.latitude, lng: position.coords.longitude });
+        },
+        function error(err) { },
+        { enableHighAccuracy: true, timeout: 5000 }
+      );
+
+      window.location.href = 'http://localhost/mediclite/admin';
+
+    });
+  });
+</script>
+        
+    </div>
+
+    <footer class="visible-lg visible-md bg-primary" style="padding-bottom:30px;z-index:1000;">
+      <p class="pull-right">
+        Made with <i class="fa fa-heart text-danger"></i> by <a href="https://basoro.id/" target="_blank"><b>drg. F. Basoro</b>.</a>
+        Powered by <a href="https://mlite.id/">mLITE</a>.
+      </p>
+      <p><i class="fa fa-fw fa-calendar"></i> <span>Rabu, 25 Februari 2026</span> <i class="fa fa-fw fa-clock-o"></i><span id="clock"></span> <i class="fa fa-fw fa-user"></i> <span>Login sebagai <strong>Administrator</strong></span></p>
+    </footer>
+
+        <div class="icon-bar hidden-lg hidden-md">
+      <a href="http://localhost/mediclite/admin/dashboard/menu?t=fb4fad129e7a" data-toggle="modal" data-target="#menuModal"><i class="fa fa-home"></i></a>
+      <a href="http://localhost/mediclite/admin/pasien/manage?t=fb4fad129e7a"><i class="fa fa-users"></i></a>
+      <a href="http://localhost/mediclite/admin/igd/manage?t=fb4fad129e7a"><i class="fa fa-ambulance"></i></a>
+      <a href="http://localhost/mediclite/admin/rawat_jalan/manage?t=fb4fad129e7a"><i class="fa fa-wheelchair"></i></a>
+      <a href="http://localhost/mediclite/admin/rawat_inap/manage?t=fb4fad129e7a"><i class="fa fa-hotel"></i></a>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="moduleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-fullscreen" id="menuModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              ...
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="bantuanModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Bantuan mLITE</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="text-center">
+                    <img src="http://localhost/mediclite/themes/admin/img/logo.png" width="100px" alt="">
+                    <h4>
+                      Telegram Group mLITE Indonesia
+                      <div class="">
+                        <small>
+                          4.1.8                        </small>
+                      </div>
+                    </h4>
+                    <p>
+                      Sistem Informasi Manajemen Kesehatan yang Aman, Ringan &amp; Modular.<br/>
+                      Info lebih lanjut di <a href="https://mlite.id" target="_blank">https://mlite.id</a>.<br><br>
+                    </p>
+                      <a href="tg://join?invite=fEeIXLsi5jc5YzZl" class="btn btn-primary"><span class="fa fa-send"></span> Join Group</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tentangModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Tentang mLITE</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="text-center">
+                    <img src="http://localhost/mediclite/themes/admin/img/logo.png" width="50px" alt="">
+                    <h4>
+                      mLITE
+                      <div class="">
+                        <small>
+                          4.1.8                        </small>
+                      </div>
+                    </h4>
+                    <p><b>Medic LITE Indonesia</b><br>
+                      Clean, Light and Modular Medical Management Systems</p>
+                    <p>Made with <i class="fa fa-heart text-danger"></i> and <i class="fa fa-coffee text-primary"></i> by <a href="https://basoro.id/" target="_blank"><b>drg. F. Basoro</b></a> & Friends.</p>
+                    <p>Thank you to our main sponsors <span class="badge badge-info badge-style-light">RSUD H. Damanhuri Barabai</span> and <span class="badge badge-warning badge-style-light">RS Aura Syifa Kediri</span>. Also Klinik Utama Cahaya Imani Kandangan, RSUD Datu Sanggul Rantau, RSUD Daha Sejahtera Kandangan and other hospitals that we cannot mention one by one. Also contributors who have been involved in development.</p>
+                    <p>Email: dentix.id@gmail.com - Telegram: @basoro</p>
+                    <p>Copyright © 2018 - 2026</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PWA Support -->
+    <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+        .register("http://localhost/mediclite/service-worker.js")
+        .then((swReg) => {
+        })
+        .catch((err) => {
+        });
+      });
+    }
+    </script>
+    <!-- End PWA Support -->
+    <script src="http://localhost/mediclite/themes/admin/js/scripts.js?v=4.1.8&t=fb4fad129e7a"></script>
+    </body>
+</html>

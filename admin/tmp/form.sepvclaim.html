@@ -1,0 +1,109 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Ambil Data SEP dari VClaim</h4>
+</div>
+<div class="modal-body">
+  <div class="row">
+  	<form name="vedika" action="http://192.168.0.212/admin/vedika/savesep?t=97ffd7bdd96c" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="no_rawat" class="form-control" value="2025/12/09/000014" />
+      <div class="col-md-6">
+        <div class="form-group">
+            <label>Nomor SEP</label>
+            <input type="text" name="no_sep" class="form-control" placeholder="Nomor SEP" required value="" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            <label>Asal Rujukan</label>
+            <select name="asal_rujukan" class="form-control">
+                <option value="1">Faskes 1</option>
+                <option value="2">Faskes 2</option>
+            </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            <label>Tanggal Rujukan</label>
+            <input type="text" name="tgl_kunjungan" class="form-control tanggal" placeholder="Tanggal Rujukan" required value="" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            <label>Kode Diagnosa</label>
+            <input type="text" name="kd_diagnosa" class="form-control" placeholder="Kode ICD-X" required value="" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            <label>Poli Tujuan</label>
+            <select name="kd_poli" class="form-control" data-use-search="true">
+                                <option value="ADM">Admin Rajal Ranap</option>
+                                <option value="FISIO">Fisioterapi</option>
+                                <option value="IGDK">Unit IGD</option>
+                                <option value="LAB">LABORATORIUM</option>
+                                <option value="OK">Instalasi Ruang Bedah</option>
+                                <option value="PAN">Poliklinik Anak</option>
+                                <option value="PBD">Poliklinik Bedah</option>
+                                <option value="PGM">Poliklinik Gigi & Mulut</option>
+                                <option value="POG">Poliklinik Kebidanan dan Penyakit  Kandungan</option>
+                                <option value="PPD">Poliklinik Penyakit Dalam</option>
+                                <option value="PSF">Poliklinik Saraf / Neurologi</option>
+                                <option value="PUM">Poliklinik Umum</option>
+                                <option value="RAD">Radiologi</option>
+                                <option value="RANAP">Rawat Inap</option>
+                                <option value="VK">Instalasi Kamar Bersalin</option>
+                            </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            <label>Dokter Penanggung Jawab</label>
+            <select name="kd_dokter" class="form-control">
+                                <option value="DRG001">drg. Dhony Nurlita Sari</option>
+                                <option value="DS001">dr. Adhi Pramono,Sp.OG</option>
+                                <option value="DS003">dr. Benny Marganda Apul Pardede,Sp.B</option>
+                                <option value="DS005">dr. Guntur,Sp.OG</option>
+                                <option value="DS007">dr. Vera Irawati K,Sp.A,M.Kes</option>
+                                <option value="DS009">dr. Nugroho Kuswardono,Sp.B</option>
+                                <option value="DS010">dr. Agung,Sp.S</option>
+                                <option value="DS012">dr. Girindro Utomo,Sp.An</option>
+                                <option value="DS013">dr. Soeharto,Sp.An</option>
+                                <option value="DS015">dr. Abdul Aziz,Sp.Rad</option>
+                                <option value="DS017">dr. Dwi Retnoningsih,Sp.OG</option>
+                                <option value="DS018">dr. Bayu Abhiyoga B,Sp.Pd</option>
+                                <option value="DS019">dr. Zustain Noor Adhim,Sp.A.,M.Kes</option>
+                                <option value="DS020">dr. Magendi Indra M, Sp.Pk</option>
+                                <option value="DS031">dr. Nurotus Saniyah Sp.N</option>
+                                <option value="DS033">dr. Tri IndriasWati,Sp.PD</option>
+                                <option value="DS034">dr.Yusuf Ari Kusmanto, Sp.Rad.</option>
+                                <option value="DU004">dr. Alifa Indriana</option>
+                                <option value="DU005">dr. Edy Rizal Ginting</option>
+                                <option value="DU008">dr. Dewi Nur Intan Sari</option>
+                                <option value="DU013">dr. Azhari Hasna Lathifah</option>
+                                <option value="DU014">dr. Adimas herlambang</option>
+                                <option value="DU015">dr. Azahra Khoirunnisa</option>
+                                <option value="DU016">dr. Munhidotul Ummah</option>
+                                <option value="DU017">dr. Isna Miftahul Fadhila</option>
+                                <option value="FST001">Diyan Andika Pratiwi,S.Tr.Ftr.</option>
+                                <option value="yulinar">dr. Yulinar Budi Adhi</option>
+                            </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Simpan Ke SIMRS" />
+        </div>
+      </div>
+  	</form>
+  </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>
+<script type="text/javascript">
+  $('select').selectator();
+  $('.tanggal').datetimepicker({
+    format: 'YYYY-MM-DD',
+    locale: 'id'
+  });
+</script>

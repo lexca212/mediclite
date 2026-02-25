@@ -1,0 +1,80 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kelola Data Add Antrean</h3>
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a href="https://simrsfitricandra.site/admin/jkn_mobile/addantreanadd?t=5d2ad9a23cf7" role="tab">Tambah</a>
+                    </li>
+				        </ul>
+            </div>
+            <div class="panel-body">
+              <div class="row clearfix">
+                <div class="col col-md-6">
+                          <h3>Jam terakhir poli : </h3>
+                </div>
+                <div class="col col-md-6">
+                  <form action="" class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+                      <div class="input-group">
+                          <input type="text" name="s" minlength="3" class="form-control" placeholder="Search" required>
+                          <input type="hidden" name="t" value="5d2ad9a23cf7">
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                          </span>
+                      </div>
+                  </form>
+                </div>
+              </div>
+              <div>
+                <button type="button" class = "btn btn-danger btn-xs hapus_antrian" id="hapus_antrian">Hapus Gagal</button>
+              </div>
+    					<div class="table-responsive no-margin">
+    						<table class="table table-striped no-margin">
+    							<thead>
+    								<tr>
+    									<th>Tanggal Periksa</th>
+                      					<th>No RM</th>
+    									<th>Nomor Kartu</th>
+                                        <th>Nomor Referensi</th>
+                                        <th>Kodebooking</th>
+                                        <th>Status Kirim</th>
+                                        <th>Keterangan</th>
+    									<th class="text-right">Aksi</th>
+    								</tr>
+    							</thead>
+    							<tbody>
+            				    								<tr><td colspan="5" class="text-center">Kosong</td></tr>
+    								    							</tbody>
+    						</table>
+    					</div>
+            </div>
+        </div>
+    </div>
+</article>
+<script>
+    $('#hapus_antrian').on('click',function(e){
+        var baseURL = mlite.url + '/' + mlite.admin;
+        event.preventDefault();
+        var url = baseURL + '/jkn_mobile/hapusantrean?t=' + mlite.token;
+        //console.log(no_sep);
+
+        var result = confirm("Apakah kamu yakin ingin menghapus semua data antrean yang gagal ?");
+        if (result) {
+            // Jika pengguna memilih "OK"
+            $.post(url, function(data) {
+            alert(data);
+            $('#notif').html("<div class=\"alert alert-danger alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+            "Data antrean yang gagal telah dihapus!"+
+            "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+            "</div>").show();
+            });
+            // Lanjutkan aksi penghapusan di sini (misalnya mengirim form atau AJAX)
+            return true;
+        } else {
+            // Jika pengguna memilih "Cancel"
+            alert("Penghapusan dibatalkan.");
+            return false;
+        }
+    });
+</script>

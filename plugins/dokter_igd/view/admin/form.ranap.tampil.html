@@ -1,0 +1,26 @@
+<table class="table" width="100%">
+    <thead>
+      <tr>
+        <th>Nomor Rawat</th>
+        <th>Diagnosa</th>
+        <th>Kamar</th>
+        <th>Indikasi / DPJP</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      {if: $permintaan_ranap}
+      <tr>
+        <td>{$permintaan_ranap.no_rawat}</td>
+        <td>{$permintaan_ranap.diagnosa}</td>
+        <td>{$permintaan_ranap.kd_kamar}</td>
+        <td>{$permintaan_ranap.catatan}</td>
+      </tr>
+      {else}
+      <tr>
+        <td colspan="5">Tidak ada data</td>
+      </tr>
+      {/if}
+    </tbody>
+</table>
+  

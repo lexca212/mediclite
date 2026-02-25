@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail detailjurnal</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_detailjurnal" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>No Jurnal</td><td>{$value.no_jurnal}</td><tr>
+<tr><td>Kd Rek</td><td>{$value.kd_rek}</td><tr>
+<tr><td>Debet</td><td>{$value.debet}</td><tr>
+<tr><td>Kredit</td><td>{$value.kredit}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>

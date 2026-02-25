@@ -1,0 +1,107 @@
+<div class="row" id="manage" style="margin-bottom:100px;">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <!-- Tombol Dropdown Periode -->
+        <div class="btn-group pull-right"
+             style="height: 38px; margin-top:-8px; background-color: #ffffff;
+                    border: 1px solid #dddddd; border-bottom: none;">
+          <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-calendar"></i>
+            <span class="hidden-xs" style="font-size: 14px;"> Periode</span>
+          </span>
+
+          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu dropdown-menu-right" style="padding:10px; width:260px;">
+            
+            <!-- Periode Awal -->
+            <li class="mb-2">
+              <label for="periode_rawat_jalan" class="control-label">Tanggal Awal:</label>
+              <input type="text" id="periode_rawat_jalan"
+                     class="form-control periode_rawat_jalan"
+                     name="periode_rawat_jalan" required>
+            </li>
+
+            <!-- Periode Akhir -->
+            <li class="mb-2">
+              <label for="periode_rawat_jalan_akhir" class="control-label">Tanggal Akhir:</label>
+              <input type="text" id="periode_rawat_jalan_akhir"
+                     class="form-control periode_rawat_jalan"
+                     name="periode_rawat_jalan_akhir" required>
+            </li>
+
+            <!-- Pilihan Poli -->
+            <li class="mb-2">
+              <label for="poli" class="control-label">Pilih Poli:</label>
+              <select name="poli" id="poli" class="form-control">
+                <option value="">-- Semua Poli --</option>
+                {loop: $poli}
+                  <option value="{$value.kd_poli}">{$value.kd_poli} - {$value.nm_poli}</option>
+                {/loop}
+              </select>
+            </li>
+
+            <!-- Tombol Filter -->
+            <li class="mb-2">
+              <div id="submit_periode_rawat_jalan" class="btn btn-primary btn-block">
+                Rawat Jalan
+              </div>
+            </li>
+            <li>
+              <div id="belum_periode_rawat_jalan" class="btn btn-primary btn-block">
+                Rawat Inap
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="panel-title">Kelola Pasien</h3>
+      </div>
+
+      <div class="panel-body">
+        <div class="row">
+          <div id="notif"></div>
+        </div>
+
+        <div id="kunjungan_ralan" class="display">
+          {include: ../plugins/kunjungan_ralan/view/admin/display.html}
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div id="notif"></div>
+        </div>
+
+        <div id="kunjungan_ralan" class="display">
+          {include: ../plugins/kunjungan_ralan/view/admin/chart.html}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+  
+  $('.periode_rawat_jalan').datetimepicker({
+    defaultDate: '{?=date("Y-m-d")?}',
+    format: 'YYYY-MM-DD',
+    locale: 'id',
+    widgetParent: 'body',
+    widgetPositioning: {
+      horizontal: 'auto',
+      vertical: 'bottom'
+    }
+  }).on('dp.show', function(e) {
+    // Perbaiki posisi popup
+    var $input = $(this);
+    var widget = $('.bootstrap-datetimepicker-widget');
+    widget.css({
+      top: $input.offset().top + $input.outerHeight(),
+      left: $input.offset().left - (widget.outerWidth() - $input.outerWidth()) / 2,
+    });
+      
+  });
+
+});
+</script>

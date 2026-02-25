@@ -1,0 +1,228 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Kelola Jenis Perawatan Inap</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div id="notif"></div>
+        </div>
+        <div class="row">
+          <div class="col col-md-6">
+            <div class="searchbox-input form-inline padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group" id="index">
+                <input class="btn btn-default" type="button" id="bukaform" value="Buka Form" />
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-6">
+            <div class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group">
+                <input type="text" name="cari" minlength="3" class="form-control" placeholder="Pencarian..." required>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="form"></div>
+        <div class="display">
+          <div id="display">
+  <div class="table-responsive no-margin">
+    <table class="table table-striped no-padding">
+      <thead>
+        <tr>
+          <th>Kode Perawatan</th>
+          <th>Nama Perawatan</th>
+          <th>Kategori</th>
+          <th>Tarif Dokter</th>
+          <th>Tarif Perawat</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+                        <tr class="edit" data-kd_jenis_prw="TPB28">
+          <td>TPB28</td>
+          <td>FOTO BAYI DAN SOUVENIR PERSALINAN</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>60000</td>
+          <td>60000</td>
+          <td>60000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB27">
+          <td>TPB27</td>
+          <td>TINDAKAN TEGAK KERING </td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>250000</td>
+          <td>250000</td>
+          <td>250000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB268">
+          <td>TPB268</td>
+          <td>OBSERVASI 6 JAM (bayi Sakit post SC di PICU) (KHUSUS)</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>60000</td>
+          <td>60000</td>
+          <td>60000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB267">
+          <td>TPB267</td>
+          <td>OBSERVASI PASIEN PICU LEV 2 / HARI</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>50000</td>
+          <td>50000</td>
+          <td>50000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB266">
+          <td>TPB266</td>
+          <td>OBSERVASI 6 JAM (bayi Sakit post SC di NICU) (KHUSUS)</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>60000</td>
+          <td>60000</td>
+          <td>60000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB265">
+          <td>TPB265</td>
+          <td>PROSEDUR BEDAH ( SEDANG ) VIP</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>1600000</td>
+          <td>1600000</td>
+          <td>1600000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB264">
+          <td>TPB264</td>
+          <td>PROSEDUR BEDAH ( SEDANG ) KELAS 3</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>1070000</td>
+          <td>1070000</td>
+          <td>1070000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB263">
+          <td>TPB263</td>
+          <td>PROSEDUR BEDAH ( SEDANG ) KELAS 2</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>1230000</td>
+          <td>1230000</td>
+          <td>1230000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB262">
+          <td>TPB262</td>
+          <td>PROSEDUR BEDAH ( SEDANG ) KELAS 1</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>1330000</td>
+          <td>1330000</td>
+          <td>1330000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB261">
+          <td>TPB261</td>
+          <td>PROSEDUR BEDAH ( KECIL ) VIP</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>1300000</td>
+          <td>1300000</td>
+          <td>1300000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB260">
+          <td>TPB260</td>
+          <td>PROSEDUR BEDAH ( KECIL ) KELAS 3</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>870000</td>
+          <td>870000</td>
+          <td>870000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB259">
+          <td>TPB259</td>
+          <td>PROSEDUR BEDAH ( KECIL ) KELAS 2</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>980000</td>
+          <td>980000</td>
+          <td>980000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB258">
+          <td>TPB258</td>
+          <td>PROSEDUR BEDAH ( KECIL ) KELAS 1</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>1090000</td>
+          <td>1090000</td>
+          <td>1090000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB257">
+          <td>TPB257</td>
+          <td>PUNGSI EXSTRAKSI</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>350000</td>
+          <td>350000</td>
+          <td>350000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB256">
+          <td>TPB256</td>
+          <td>MEDIKASI</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>30000</td>
+          <td>30000</td>
+          <td>30000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB255">
+          <td>TPB255</td>
+          <td>INFUS NEONATUS</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>24500</td>
+          <td>24500</td>
+          <td>24500</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB254">
+          <td>TPB254</td>
+          <td>PERAWATAN LUKA (KHUSUS )</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>35000</td>
+          <td>35000</td>
+          <td>35000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB253">
+          <td>TPB253</td>
+          <td>IMUNISASI  (KHUSUS)</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>75000</td>
+          <td>75000</td>
+          <td>75000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB252">
+          <td>TPB252</td>
+          <td>TINDIK BAYI  (KHUSUS)</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>54000</td>
+          <td>54000</td>
+          <td>54000</td>
+        </tr>
+                <tr class="edit" data-kd_jenis_prw="TPB251">
+          <td>TPB251</td>
+          <td>TINDAKAN DC SYOCK  (KHUSUS)</td>
+          <td>TINDAKAN KEPERAWATAN</td>
+          <td>367500</td>
+          <td>367500</td>
+          <td>367500</td>
+        </tr>
+                      </tbody>
+    </table>
+  </div>
+  <nav class="clearfix m-t-xs">
+    <div class="col">
+      <ul class="pagination no-margin pull-right">
+                      <li class="disabled"><a href="#">&laquo;</a></li>
+                        <li class="disabled"><a href="#">&larr;</a></li>
+                <li class="disabled"><a href="#">Hal : 1 dari 19 Hal</a></li>
+                <li class="halaman" data-hal="2"><a href="#">&rarr;</a></li>
+                        <li class="halaman" data-hal="19"><a href="#">&raquo;</a></li>
+                    </ul>
+    </div>
+  </nav>
+</div>
+<script type="text/javascript">
+  $(".alert-dismissible").fadeTo(3000, 500).slideUp(500);
+</script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

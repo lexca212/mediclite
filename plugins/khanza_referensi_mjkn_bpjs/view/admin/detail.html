@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Detail referensi_mobilejkn_bpjs</h4>
+</div>
+<div class="modal-body">
+    <table id="tbl_detail_referensi_mobilejkn_bpjs" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+            {loop: $detail}
+            <tr><td>Nobooking</td><td>{$value.nobooking}</td><tr>
+<tr><td>No Rawat</td><td>{$value.no_rawat}</td><tr>
+<tr><td>Nomorkartu</td><td>{$value.nomorkartu}</td><tr>
+<tr><td>Nik</td><td>{$value.nik}</td><tr>
+<tr><td>Nohp</td><td>{$value.nohp}</td><tr>
+<tr><td>Kodepoli</td><td>{$value.kodepoli}</td><tr>
+<tr><td>Pasienbaru</td><td>{$value.pasienbaru}</td><tr>
+<tr><td>Norm</td><td>{$value.norm}</td><tr>
+<tr><td>Tanggalperiksa</td><td>{$value.tanggalperiksa}</td><tr>
+<tr><td>Kodedokter</td><td>{$value.kodedokter}</td><tr>
+<tr><td>Jampraktek</td><td>{$value.jampraktek}</td><tr>
+<tr><td>Jeniskunjungan</td><td>{$value.jeniskunjungan}</td><tr>
+<tr><td>Nomorreferensi</td><td>{$value.nomorreferensi}</td><tr>
+<tr><td>Nomorantrean</td><td>{$value.nomorantrean}</td><tr>
+<tr><td>Angkaantrean</td><td>{$value.angkaantrean}</td><tr>
+<tr><td>Estimasidilayani</td><td>{$value.estimasidilayani}</td><tr>
+<tr><td>Sisakuotajkn</td><td>{$value.sisakuotajkn}</td><tr>
+<tr><td>Kuotajkn</td><td>{$value.kuotajkn}</td><tr>
+<tr><td>Sisakuotanonjkn</td><td>{$value.sisakuotanonjkn}</td><tr>
+<tr><td>Kuotanonjkn</td><td>{$value.kuotanonjkn}</td><tr>
+<tr><td>Status</td><td>{$value.status}</td><tr>
+<tr><td>Validasi</td><td>{$value.validasi}</td><tr>
+<tr><td>Statuskirim</td><td>{$value.statuskirim}</td><tr>
+
+            {/loop}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+</div>
