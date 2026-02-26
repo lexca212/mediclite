@@ -5,7 +5,7 @@ if (!version_compare(PHP_VERSION, '7.0.0', '>=')) {
 
 define('DBHOST', 'localhost');
 define('DBPORT', '3306');
-define('DBUSER', 'rsfcwng');
+define('DBUSER', 'user');
 define('DBPASS', 'pass');
 define('DBNAME', 'mlite');
 
