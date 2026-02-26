@@ -1098,8 +1098,8 @@ class Admin extends AdminModule
 
     private function sendToTelegram($norawat, $pasien, $no_rm, $diagnosa, $catatan, $tanggal, $penjab)
 {
-    $botToken = "8339362917:AAEH92MLoRGjFI2y4iSIGmNHo-2cuboNzE4";
-    $chatId   = "-1002504805959"; // Bisa group atau pribadi
+    $botToken = "BOT TOKEN";
+    $chatId   = "CHAT ID"; // Bisa group atau pribadi
     $pesan    = "🛏️ *Permintaan Rawat Inap Baru* \n\n"
               . "📋 No. Rawat : *{$norawat}*\n"
               . "👤 Nama Pasien : *{$pasien}*\n"
