@@ -6,12 +6,12 @@ if (!version_compare(PHP_VERSION, '7.0.0', '>=')) {
 define('DBHOST', 'localhost');
 define('DBPORT', '3306');
 define('DBUSER', 'rsfcwng');
-define('DBPASS', 'S1mrsFC#');
-define('DBNAME', 'sik');
+define('DBPASS', 'pass');
+define('DBNAME', 'mlite');
 
 // URL Webapps
-define('WEBAPPS_URL', 'http://simrsfitricandra.site/webapps');
-//define('WEBAPPS_URL', 'http://192.168.0.212/webapps');
+
+define('WEBAPPS_URL', 'http://192.168.0.212/webapps');
 define('WEBAPPS_PATH', BASE_DIR . '/webapps');
 //define('WEBAPPS_PATH', '/webapps');
 
