@@ -196,7 +196,7 @@ $("#display").on("click", ".sep", function(event){
   var tgl_registrasi = $(this).attr("data-tgl_registrasi");
   var no_peserta = $(this).attr("data-no_peserta");
 
-  var url = baseURL + '/vclaim/bynokartu/' + no_peserta + '/2026-02-24?t=' + mlite.token;
+  var url = baseURL + '/vclaim/bynokartu/' + no_peserta + '/2026-02-26?t=' + mlite.token;
 
   $.get(url,function(data) {
     var data = JSON.parse(data);
@@ -527,9 +527,9 @@ $("#soap").on("click",".hapus_soap", function(event){
         $('textarea[name=instruksi]').val("");
         $('textarea[name=evaluasi]').val("");
         $('input:text[name=spo2]').val("");
-        $('input:text[name=tgl_perawatan]').val("2026-02-24");
-        $('input:text[name=tgl_registrasi]').val("2026-02-24");
-        $('input:text[name=jam_rawat]').val("14:01:14");
+        $('input:text[name=tgl_perawatan]').val("2026-02-26");
+        $('input:text[name=tgl_registrasi]').val("2026-02-26");
+        $('input:text[name=jam_rawat]').val("12:07:40");
         $('#notif').html("<div class=\"alert alert-danger alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
         "Data rincian riwayat telah dihapus!"+
         "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
@@ -818,8 +818,8 @@ function bersih(){
   $('input:text[name=no_rawat]').val("");
   $('input:text[name=no_rkm_medis]').val("");
   $('input:text[name=nm_pasien]').val("");
-  $('input:text[name=tgl_perawatan]').val("2026-02-24");
-  $('input:text[name=tgl_registrasi]').val("2026-02-24");
+  $('input:text[name=tgl_perawatan]').val("2026-02-26");
+  $('input:text[name=tgl_registrasi]').val("2026-02-26");
   $('input:text[name=tgl_lahir]').val("");
   $('input:text[name=jenis_kelamin]').val("");
   $('input:text[name=alamat]').val("");

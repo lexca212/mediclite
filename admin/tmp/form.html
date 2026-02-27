@@ -1,540 +1,439 @@
-<div id="form">
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="form-horizontal">
-          <div class="form-group">
-            <label for="no_rkm_medis" class="col-sm-3 control-label">Nomor RM</label>
-            <div class="col-sm-4">
-              <div class="input-group" style="width: 100%">
-                <input type="text" id="no_rkm_medis" name="no_rkm_medis" class="form-control" value="063686" disabled>
-                <span class="input-group-addon"><input type="checkbox" name="manual" id="norm_manual"></span>
-              </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sunting pengguna</h3>
             </div>
-            <label for="tgl_daftar" class="col-sm-2 control-label">Tgl. Daftar</label>
-            <div class="col-sm-3">
-              <input type="text" id="tgl_daftar" name="tgl_daftar" class="form-control tgl_daftar" value="2026-02-04">
+            <div class="panel-body">
+    		<form name="user" action="http://localhost/mediclite/admin/users/save/1?t=e8f36ce05741" method="POST" enctype="multipart/form-data">
+    			<fieldset>
+    	            <!--<div class="form-group">
+    	                <label>Pengguna</label>
+    	                <input type="text" name="username" class="form-control" required value="admin" />
+    	            </div>-->
+                                    <div class="form-group">
+                      <label>Pengguna</label>
+                      <select name="username" id="username" class="form-control" data-use-search="true" onchange="document.getElementById('fullname').value=this.options[this.selectedIndex].text.split(' -')[0]">
+                                                        <option value="D0000003">Erwan - D0000003</option>
+                                                        <option value="03">Wahyu Nugroho - 03</option>
+                                                        <option value="0002">Rahma - 0002</option>
+                                                        <option value="khl">wesnia - khl</option>
+                                                        <option value="010012345">Rahma Dita - 010012345</option>
+                                                        <option value="015">ANANG HERMANSYAH - 015</option>
+                                                        <option value="12321000123">Mauliza - 12321000123</option>
+                                                        <option value="d10001">abd.rahman - d10001</option>
+                                                        <option value="d10002">feri sugianto - d10002</option>
+                                                        <option value="d1000001229">FADLIAH - d1000001229</option>
+                                                        <option value="15451544172">SITI NURROHMAH - 15451544172</option>
+                                                        <option value="00001">ISTI TRIANINGSIH - 00001</option>
+                                                        <option value="0000000001">dr Hans Mahenta - 0000000001</option>
+                                                        <option value="11111999">Jeaniva Merisca - 11111999</option>
+                                                        <option value="98765432">wellyani - 98765432</option>
+                                                        <option value="010101">KIKI SHAGIRAH - 010101</option>
+                                                        <option value="101010101">Syarifah Aisyiah - 101010101</option>
+                                                        <option value="1">1 - 1</option>
+                                                        <option value="DU004">dr. Alifa Indriana - DU004</option>
+                                                        <option value="DU005">dr. Edy Rizal Ginting - DU005</option>
+                                                        <option value="yulinar">dr. Yulinar Budi Adhi - yulinar</option>
+                                                        <option value="DRG001">drg. Dhony Nurlita Sari - DRG001</option>
+                                                        <option value="DU008">dr. Dewi Nur Intan Sari - DU008</option>
+                                                        <option value="DS001">dr. Adhi Pramono,Sp.OG - DS001</option>
+                                                        <option value="DS003">dr. Benny Marganda Apul Pardede,Sp.B - DS003</option>
+                                                        <option value="DS005">dr. Guntur,Sp.OG - DS005</option>
+                                                        <option value="DS007">dr. Vera Irawati K,Sp.A,M.Kes - DS007</option>
+                                                        <option value="DS009">dr. Nugroho Kuswardono,Sp.B - DS009</option>
+                                                        <option value="MDW001">Siska Hariyani, A.Md.Keb - MDW001</option>
+                                                        <option value="MDW002">Dwi Astuti, A.Md.Keb - MDW002</option>
+                                                        <option value="MDW003">Dyah Ayu Retno Saputri, A.Md.Keb - MDW003</option>
+                                                        <option value="MDW004">Fifit Wijayanti, A.Md.Keb - MDW004</option>
+                                                        <option value="MDW005">Isti Maulani, A.Md.Keb - MDW005</option>
+                                                        <option value="MDW006">Yuliana Purwaningtyas, A.Md.Keb - MDW006</option>
+                                                        <option value="MDW007">Yessy Yuliana - MDW007</option>
+                                                        <option value="MDW008">Nissan Marwadias, A.Md.Keb - MDW008</option>
+                                                        <option value="MDW009">Dyan Asri Primastuti, A.Md.Keb - MDW009</option>
+                                                        <option value="MDW010">Desi Patmasari, A.Md.Keb - MDW010</option>
+                                                        <option value="MDW011">Wahyu Wulandari, A.Md.Keb - MDW011</option>
+                                                        <option value="MDW012">Laila Ahadiyah - MDW012</option>
+                                                        <option value="MDW013">Cicih Pujianti, A.Md.Keb - MDW013</option>
+                                                        <option value="MDW014">Santi Gita Wardani - MDW014</option>
+                                                        <option value="NS001">Heri Sapto Anggoro, AMK - NS001</option>
+                                                        <option value="NS002">Dhanu Indrayana, AMK - NS002</option>
+                                                        <option value="NS003">Galuh Prasetyo, AMK - NS003</option>
+                                                        <option value="NS004">Rissa - NS004</option>
+                                                        <option value="NS005">Al-Fath - NS005</option>
+                                                        <option value="NS006">Ria Patmawati, AMK - NS006</option>
+                                                        <option value="NS007">Destiana Putri Susilowati, A.Md.Kep - NS007</option>
+                                                        <option value="NS008">Sri Widiastuti, AMK - NS008</option>
+                                                        <option value="NS009">Hikmah Nur Septyana, AMK - NS009</option>
+                                                        <option value="NS010">Titut Ardiana Pungki, AMK - NS010</option>
+                                                        <option value="NS011">Ika Widayanti, AMK - NS011</option>
+                                                        <option value="NS012">Agix Wulansari - NS012</option>
+                                                        <option value="NS013">Suparyanti Pamungkas - NS013</option>
+                                                        <option value="NS014">Fitri Nurfitasari, AMK - NS014</option>
+                                                        <option value="NS015">Riska Putri Pertiwi, AMK - NS015</option>
+                                                        <option value="beam">Reha Beam Adhi R, AMK - beam</option>
+                                                        <option value="NS017">Agung Tri Hartanto - NS017</option>
+                                                        <option value="NS018">Daryanti, AMK - NS018</option>
+                                                        <option value="NS019">Dewi Irawati, AMK - NS019</option>
+                                                        <option value="NS020">Artikasari Ningtyastuti, AMK - NS020</option>
+                                                        <option value="NS021">Pratiwi Setyaningrum, S.Kep,.Ns - NS021</option>
+                                                        <option value="NS022">Tri Nuryamtini - NS022</option>
+                                                        <option value="NS023">Ira Dwi Prasetyawati, AMK - NS023</option>
+                                                        <option value="NS024">Umi Handayani, S.Kep,.Ns - NS024</option>
+                                                        <option value="NS025">Sri Lestari, AMK - NS025</option>
+                                                        <option value="NS026">Ida Dwi Safitri, S.Kep,.Ns - NS026</option>
+                                                        <option value="NS027">Nanda Dwi Cahyani, A.Md.Kep - NS027</option>
+                                                        <option value="NS028">Wulan - NS028</option>
+                                                        <option value="RM001">Ratih Saraswati, A.Md.Kes - RM001</option>
+                                                        <option value="RM002">Lulu Septianita Widiyanti, A.Md.Kes - RM002</option>
+                                                        <option value="RM003">Niati Sri Hartani, A.Md.Kes - RM003</option>
+                                                        <option value="RM004">Dwi Wahyuningsih, A.Md.Kes - RM004</option>
+                                                        <option value="RM005">Diva Adinia Cipta, A.Md.RMIK - RM005</option>
+                                                        <option value="GRP001">Moch. Gilang Putra P - GRP001</option>
+                                                        <option value="ttk001">Rahmah Ekawati, S.Farm,.Apt - ttk001</option>
+                                                        <option value="ttk002">Enik Karyani, Amd.Farm - ttk002</option>
+                                                        <option value="ttk003">Sundari, Amd.Farm - ttk003</option>
+                                                        <option value="ttk004">Hartini, S.Farm - ttk004</option>
+                                                        <option value="ttk005">Suci Arita Febriantika, Amd.Farm - ttk005</option>
+                                                        <option value="ttk006">Marhantina Deva Aria, S.Farm - ttk006</option>
+                                                        <option value="ttk007">Yayuk Kastini, S.Farm - ttk007</option>
+                                                        <option value="keu001">Ida Fariyan - keu001</option>
+                                                        <option value="keu002">Berlian Syakuntala R - keu002</option>
+                                                        <option value="keu003">Liya Tri Hartanti - keu003</option>
+                                                        <option value="PG001">Drg. Dhoni Nurlitasari - PG001</option>
+                                                        <option value="NS029">Kiki Aristyawati, AMK - NS029</option>
+                                                        <option value="DS010">dr. Agung,Sp.S - DS010</option>
+                                                        <option value="NS030">Doni - NS030</option>
+                                                        <option value="FST001">Diyan Andika Pratiwi,S.Tr.Ftr. - FST001</option>
+                                                        <option value="IT002">Enrico Noven Nicola - IT002</option>
+                                                        <option value="DS012">dr. Girindro Utomo,Sp.An - DS012</option>
+                                                        <option value="DS013">dr. Soeharto,Sp.An - DS013</option>
+                                                        <option value="NS031">Joko Teguh Santoso - NS031</option>
+                                                        <option value="NS032">Daroji - NS032</option>
+                                                        <option value="NS033">Arif Saifudin - NS033</option>
+                                                        <option value="NS034">Agung Ario Murtika - NS034</option>
+                                                        <option value="NS035">Siti Murwani - NS035</option>
+                                                        <option value="NS036">Sri Haryani - NS036</option>
+                                                        <option value="NS037">Joko Ari Wibowo - NS037</option>
+                                                        <option value="NS038">Gregorius Nunung - NS038</option>
+                                                        <option value="kabid01">Pramudito Budi Adhi, ST, MPH - kabid01</option>
+                                                        <option value="DU010">dr. Ayudyah Rachwati Wibisana - DU010</option>
+                                                        <option value="DS015">dr. Abdul Aziz,Sp.Rad - DS015</option>
+                                                        <option value="ttk008">Yohana Astin Devayani, S.Farm,.Apt - ttk008</option>
+                                                        <option value="AKS005">Yanti - AKS005</option>
+                                                        <option value="NS039">Dwi Purwaningsih, A.Md.Kep - NS039</option>
+                                                        <option value="NS040">Fitri Nurfitasari - NS040</option>
+                                                        <option value="NS041">Yesi Prihatin, S.Kep,.Ns - NS041</option>
+                                                        <option value="LAB005">Hendri Dwi Wulandari - LAB005</option>
+                                                        <option value="DS016">dr. Diksi Novritasari Budyastuti,Sp.Pd - DS016</option>
+                                                        <option value="NS043">Dwi Muslimah - NS043</option>
+                                                        <option value="LAB001">Eti Rahayu, A.Md.A.K - LAB001</option>
+                                                        <option value="LAB002">Sriyanti, A.Md.A.K - LAB002</option>
+                                                        <option value="LAB003">Fatimah - LAB003</option>
+                                                        <option value="LAB004">Zulfa Allaili Hikmah Millah, A.Md.A.K - LAB004</option>
+                                                        <option value="RM006">Nidya Asvita Sari, A.Md.RMIK - RM006</option>
+                                                        <option value="RM007">Martia Saputri, A.Md.Kes - RM007</option>
+                                                        <option value="RM008">Putri Suci Anggita Sari, A.Md.RMIK - RM008</option>
+                                                        <option value="DS017">dr. Dwi Retnoningsih,Sp.OG - DS017</option>
+                                                        <option value="NS044">Maulina Rahmawati H, S.Kep,.Ns - NS044</option>
+                                                        <option value="NS045">Apri Rahmawati, S.Tr.Kep,.Ns - NS045</option>
+                                                        <option value="NS046">Riantika Intan Ramadhanti, S.Kep,.Ns - NS046</option>
+                                                        <option value="NS047">Hartati, S.Kep,.Ns - NS047</option>
+                                                        <option value="NS048">Andre Setya Aji, S.Kep,.Ns - NS048</option>
+                                                        <option value="NS049">Risna Rachmi Ginar Taufiqa, S.Kep,.Ns - NS049</option>
+                                                        <option value="NS050">Aliffia Esprensa, S.Kep,.Ns - NS050</option>
+                                                        <option value="NS051">Jumami Nopita Sari, S.Kep,.Ns - NS051</option>
+                                                        <option value="NS052">Eka Nur Rani, S.Kep,.Ns - NS052</option>
+                                                        <option value="NS053">Aina Khotija, A.Md.Kep - NS053</option>
+                                                        <option value="NS054">Suryanto - NS054</option>
+                                                        <option value="NS055">Trisno Hermoyo, AMK - NS055</option>
+                                                        <option value="NS056">Heri Setiawan, A.Md.Kep - NS056</option>
+                                                        <option value="NS057">Dinar Wahyu Nika O, A.Md.Kep - NS057</option>
+                                                        <option value="NS058">Anisawati Mardhiyah, A.Md.Kep - NS058</option>
+                                                        <option value="NS059">Agustin Kurnia Putri, A.Md.Kep - NS059</option>
+                                                        <option value="NS060">Muchammad Rifai, A.Md.Kep - NS060</option>
+                                                        <option value="NS061">Cut Puja Rizky Tazkya, A.Md.Kep - NS061</option>
+                                                        <option value="NS062">Erfina Fitrianti, AMK - NS062</option>
+                                                        <option value="NS063">Iping Li Ratna Puri, A.Md.Kep - NS063</option>
+                                                        <option value="NS064">Ria Apsari, A.Md.Kep - NS064</option>
+                                                        <option value="NS065">Dita Permatasari, AMK - NS065</option>
+                                                        <option value="keu004">Amelya Dhyan Chahyaningsih - keu004</option>
+                                                        <option value="keu005">Sinta Noerhayati - keu005</option>
+                                                        <option value="LD001">Joko - LD001</option>
+                                                        <option value="LD002">Nur Widarningsih - LD002</option>
+                                                        <option value="CS001">Hendrianto - CS001</option>
+                                                        <option value="CS002">Wawan Widiyanto - CS002</option>
+                                                        <option value="CS003">Sri Harjono - CS003</option>
+                                                        <option value="CS004">Hendra Dwi P - CS004</option>
+                                                        <option value="CS005">Epnu Prayogi - CS005</option>
+                                                        <option value="CS006">Sugiarto - CS006</option>
+                                                        <option value="CS007">Yoga Ade Permana - CS007</option>
+                                                        <option value="CS008">Arif Yoga Panuntun - CS008</option>
+                                                        <option value="GZ001">Sugiarti - GZ001</option>
+                                                        <option value="GZ002">Agita Fitra Anugrah - GZ002</option>
+                                                        <option value="ADM001">Wifa Naba M - ADM001</option>
+                                                        <option value="KL001">Desanta Suciati W - KL001</option>
+                                                        <option value="RM009">Dinda Putri Maharani, A.Md.RMIK - RM009</option>
+                                                        <option value="SHP001">Dhian Anggraeni, A.Md - SHP001</option>
+                                                        <option value="DS018">dr. Bayu Abhiyoga B,Sp.Pd - DS018</option>
+                                                        <option value="ttk009">Irvan Hanafi, Amd.Farm - ttk009</option>
+                                                        <option value="keu006">Feliska Anastasia Fitriyani - keu006</option>
+                                                        <option value="keu007">Fuannessa Nurul Khasanah - keu007</option>
+                                                        <option value="GRP002">Narno - GRP002</option>
+                                                        <option value="GRP003">Dyah Arum Hesti Pratama  - GRP003</option>
+                                                        <option value="NS066">Arrizal Daffa Alfarisyi, A.Md.Kep - NS066</option>
+                                                        <option value="NS067">Nilasari, S.Kep,.Ns - NS067</option>
+                                                        <option value="NS068">Lagesta Destia Ramadhani, A.Md.Kep - NS068</option>
+                                                        <option value="NS069">Deni Ariyanto, A.md.Kep - NS069</option>
+                                                        <option value="ttk010">Ndaru - ttk010</option>
+                                                        <option value="DS019">dr. Zustain Noor Adhim,Sp.A.,M.Kes - DS019</option>
+                                                        <option value="DU013">dr. Azhari Hasna Lathifah - DU013</option>
+                                                        <option value="RM010">Tri Nursita Rini, Amd. PK - RM010</option>
+                                                        <option value="GRP004">Prapti Maulina - GRP004</option>
+                                                        <option value="DU014">dr. Adimas herlambang - DU014</option>
+                                                        <option value="DS020">dr. Magendi Indra M, Sp.Pk - DS020</option>
+                                                        <option value="DU015">dr. Azahra Khoirunnisa - DU015</option>
+                                                        <option value="NS070">Kharisma Yogi Fitriana, A.Md.Kep - NS070</option>
+                                                        <option value="DS031">dr. Nurotus Saniyah Sp.N - DS031</option>
+                                                        <option value="DU016">dr. Munhidotul Ummah - DU016</option>
+                                                        <option value="NS071">Upik Istiningsih, A.Mk - NS071</option>
+                                                        <option value="RM011">Endah Febriana, A.Md.RMIK - RM011</option>
+                                                        <option value="RM012">Windan Mima Auliya.,A.Md.RMIK - RM012</option>
+                                                        <option value="DU017">dr. Isna Miftahul Fadhila - DU017</option>
+                                                        <option value="ttk011">Noviana Lenny Yuspita - ttk011</option>
+                                                        <option value="NS072">RIFKI RESTU FADZILAH - NS072</option>
+                                                        <option value="GIZI001">Salsabila Alifya Ummaya.,S.Tr.GZ - GIZI001</option>
+                                                        <option value="GZ010">Salsabila Alifya Ummaya.,S.Tr.GZ - GZ010</option>
+                                                        <option value="akuntan">akuntan - akuntan</option>
+                                                        <option value="lexca">lexca - lexca</option>
+                                                        <option value="NS073">Jenia Putri Lanjarningtyas.A.Md.Kep - NS073</option>
+                                                        <option value="NS074">Sus Setianing Tiyas.,A.Md.Kep - NS074</option>
+                                                        <option value="NS075">Amanda Maria Regina.,A.Md.Kep - NS075</option>
+                                                        <option value="RM013">Lisdiya Sukmawati Lena., A.Md.RMIK - RM013</option>
+                                                        <option value="ttk012">Salsa Billa Nur Alif - ttk012</option>
+                                                        <option value="DS033">dr. Tri IndriasWati,Sp.PD - DS033</option>
+                                                        <option value="RM014">Riska Putri Pebrianti.,A.Md.RMIK - RM014</option>
+                                                        <option value="NS076">Susilo Adi Nugroho - NS076</option>
+                                                        <option value="NS077">Chezylia Nanda Rizkya - NS077</option>
+                                                        <option value="NS078">AFFIFAH ASNA SHAFA - NS078</option>
+                                                        <option value="KEU008">WIDYA PRATIWI - KEU008</option>
+                                                        <option value="NS079">SRI SULASTRI - NS079</option>
+                                                        <option value="TTK013">Febriana Rahmawati - TTK013</option>
+                                                        <option value="DS034">dr.Yusuf Ari Kusmanto, Sp.Rad. - DS034</option>
+                                                        <option value="RM015">Mareta Indriyastuti - RM015</option>
+                                                        <option value="DS035">dr. Patrisia Palmaputri Pinanti, Sp.N - DS035</option>
+                                                        <option value="NS080">Devina Dara Safitri, S.Kep.NS - NS080</option>
+                                                </select>
+                  </div>
+                      	            <div class="form-group">
+    	                <label>Nama lengkap</label>
+    	                <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Nama lengkap (optional)" value="Administrator" />
+    	            </div>
+					        <div class="form-group">
+    	                <label>Foto</label>
+          						<div>
+          							<img src="http://localhost/mediclite/uploads/users/avatar6422cb573b50c.png" width="96" height="96" class="img-thumbnail" id="photoPreview" style="cursor:pointer;" onclick="$('input[name=photo]').click()" />
+          							<input type="file" name="photo" class="form-control hidden" />
+          						</div>
+    	            </div>
+                  <div class="form-group">
+      	                <label>Deskripsi</label>
+      	                <textarea class="form-control" name="description" placeholder="Deskripsi (optional)" rows="6">Admin ganteng baik hati, suka menabung dan tidak sombong.</textarea>
+    	            </div>
+    	            <div class="form-group">
+    	                <label>Email</label>
+    	                <input type="email" name="email" class="form-control" required value="info@mlite.id" />
+    	            </div>
+    	            <div class="form-group">
+    	                <label>Kata kunci <a href="#" id="passwordChange" class="btn btn-default btn-xs">Ubah</a></label>
+    	                <input type="password" name="password" class="form-control" pattern=".{5,}" title="Kata kunci terlalu pendek" value="********" placeholder="Kata kunci baru" disabled />
+    	            </div>
+                  <div class="form-group">
+                      <label>Role</label>
+                      <select name="role" class="form-control">
+                                                                          <option value="pengguna">pengguna</option>
+                                                  <option value="kasir">kasir</option>
+                                                  <option value="rekammedis">rekammedis</option>
+                                                  <option value="radiologi">radiologi</option>
+                                                  <option value="laboratorium">laboratorium</option>
+                                                  <option value="paramedis">paramedis</option>
+                                                  <option value="apoteker">apoteker</option>
+                                                  <option value="medis">medis</option>
+                                                  <option value="manajemen">manajemen</option>
+                                                  <option value="admin" selected>admin</option>
+                                                                      </select>
+                  </div>
+                                    <div class="form-group">
+                      <label>Capability</label>
+                      <select name="cap[]" multiple class="form-control">
+                                                  <option value="ADM" >Admin Rajal Ranap - ADM</option>
+                                                  <option value="ATG" >Admin Rapid Antigen - ATG</option>
+                                                  <option value="ANA" >ANA Poli Anak tr - ANA</option>
+                                                  <option value="BDS" >BEDAH SARAF - BDS</option>
+                                                  <option value="BSY" >Bedah Syaraf - BSY</option>
+                                                  <option value="BTR" >BEDAH TULANG RSPB - BTR</option>
+                                                  <option value="FISIO" >Fisioterapi - FISIO</option>
+                                                  <option value="IGD" >IGD - IGD</option>
+                                                  <option value="IPD" >Ilmu Penyakit Dalam - IPD</option>
+                                                  <option value="VK" >Instalasi Kamar Bersalin - VK</option>
+                                                  <option value="OK" >Instalasi Ruang Bedah - OK</option>
+                                                  <option value="1." >INT - 1.</option>
+                                                  <option value="INT" >INT Poli Penyakit Dalam - INT</option>
+                                                  <option value="IVP" >Intravena Pydografi - IVP</option>
+                                                  <option value="KGZ" >Klinik Gizi - KGZ</option>
+                                                  <option value="LAB" >LABORATORIUM - LAB</option>
+                                                  <option value="OBG" >OBG Poli Obstetri/Gyn. - OBG</option>
+                                                  <option value="U0016" >ORTHOPEDI - U0016</option>
+                                                  <option value="U0052" >POLI GINJAL - U0052</option>
+                                                  <option value="U0044" >Poli Syaraf - U0044</option>
+                                                  <option value="PAN" >Poliklinik Anak - PAN</option>
+                                                  <option value="PBD" >Poliklinik Bedah - PBD</option>
+                                                  <option value="U0015" >Poliklinik Bedah Plastik - U0015</option>
+                                                  <option value="PGM" >Poliklinik Gigi & Mulut - PGM</option>
+                                                  <option value="U0012" >Poliklinik Jantung - U0012</option>
+                                                  <option value="POG" >Poliklinik Kebidanan dan Penyakit  Kandungan - POG</option>
+                                                  <option value="U0006" >Poliklinik Kulit & Kelamin - U0006</option>
+                                                  <option value="U0005" >Poliklinik Mata - U0005</option>
+                                                  <option value="PPD" >Poliklinik Penyakit Dalam - PPD</option>
+                                                  <option value="PSF" >Poliklinik Saraf / Neurologi - PSF</option>
+                                                  <option value="U0011" >Poliklinik THT - U0011</option>
+                                                  <option value="PUM" >Poliklinik Umum - PUM</option>
+                                                  <option value="RAD" >Radiologi - RAD</option>
+                                                  <option value="RANAP" >Rawat Inap - RANAP</option>
+                                                  <option value="UMU" >UMUM - UMU</option>
+                                                  <option value="IGDK" >Unit IGD - IGDK</option>
+                                                  <option value="-" >- - -</option>
+                                                  <option value="APFIG" >FARMASI IGD - APFIG</option>
+                                                  <option value="APFRI" >FARMASI RAWAT INAP - APFRI</option>
+                                                  <option value="APFRJ" >FARMASI RAWAT JALAN - APFRJ</option>
+                                                  <option value="AP" >GUDANG OBAT FARMASI - AP</option>
+                                                  <option value="L" >INSTALASI KAMAR BERSALIN  - L</option>
+                                                  <option value="H" >INTENSIVE CARE UNIT - H</option>
+                                                  <option value="K" >ISOLASI COVID - K</option>
+                                                  <option value="J" >ISOLASI UMUM - J</option>
+                                                  <option value="M" >KAMAR OPERASI - M</option>
+                                                  <option value="Q" >KRESNA KELAS 1 - Q</option>
+                                                  <option value="R" >KRESNA KELAS 2 - R</option>
+                                                  <option value="S" >KRESNA KELAS 3 - S</option>
+                                                  <option value="I" >NEONATAL INTENSIVE CARE UNIT - I</option>
+                                                  <option value="N" >PEDIATRIC INTENSIVE CARE UNIT - N</option>
+                                                  <option value="O" >PERINATOLOGI - O</option>
+                                                  <option value="N09" >PICUTEST - N09</option>
+                                                  <option value="D" >RAMA KELAS 1 - D</option>
+                                                  <option value="E" >RAMA KELAS 2 - E</option>
+                                                  <option value="F" >RAMA KELAS 3 - F</option>
+                                                  <option value="A" >SHINTA KELAS 1 - A</option>
+                                                  <option value="B" >SHINTA KELAS 2 - B</option>
+                                                  <option value="C" >SHINTA KELAS 3 - C</option>
+                                                  <option value="G" >VIP - G</option>
+                                              </select>
+                  </div>
+                      	            <div class="form-group">
+    	                <label>Akses</label>
+    	                <select name="access[]" multiple class="form-control" data-keep-open="true" data-use-search="true" data-use-dimmer="false" data-options-height="126px" disabled required>
+    	                	    	                	<option value="settings" data-font="<i class='fa fa-wrench'></i>" selected>Pengaturan</option>
+    	                	    	                	<option value="master" data-font="<i class='fa fa-cubes'></i>" selected>Master Data</option>
+    	                	    	                	<option value="pasien" data-font="<i class='fa fa-users'></i>" selected>Pendaftaran Pasien</option>
+    	                	    	                	<option value="rawat_jalan" data-font="<i class='fa fa-wheelchair'></i>" selected>Rawat Jalan</option>
+    	                	    	                	<option value="kasir_rawat_jalan" data-font="<i class='fa fa-money'></i>" selected>Kasir Rawat Jalan</option>
+    	                	    	                	<option value="kepegawaian" data-font="<i class='fa fa-group'></i>" selected>Kepegawaian</option>
+    	                	    	                	<option value="farmasi" data-font="<i class='fa fa-medkit'></i>" selected>Farmasi</option>
+    	                	    	                	<option value="users" data-font="<i class='fa fa-user'></i>" selected>Pengguna</option>
+    	                	    	                	<option value="modules" data-font="<i class='fa fa-plug'></i>" selected>Modul-Modul</option>
+    	                	    	                	<option value="wagateway" data-font="<i class='fa fa-whatsapp'></i>" selected>WA Gateway</option>
+    	                	    	                	<option value="apotek_ralan" data-font="<i class='fa fa-shopping-cart'></i>" selected>Apotek Ralan</option>
+    	                	    	                	<option value="dokter_ralan" data-font="<i class='fa fa-user-md'></i>" selected>Dokter Ralan</option>
+    	                	    	                	<option value="igd" data-font="<i class='fa fa-ambulance'></i>" selected>IGD</option>
+    	                	    	                	<option value="dokter_igd" data-font="<i class='fa fa-user-md'></i>" selected>Dokter IGD</option>
+    	                	    	                	<option value="laboratorium" data-font="<i class='fa fa-flask'></i>" selected>Laboratorium</option>
+    	                	    	                	<option value="radiologi" data-font="<i class='fa fa-film'></i>" selected>Radiologi</option>
+    	                	    	                	<option value="icd_10" data-font="<i class='fa fa-code'></i>" selected>ICD 10</option>
+    	                	    	                	<option value="rawat_inap" data-font="<i class='fa fa-hotel'></i>" selected>Rawat Inap</option>
+    	                	    	                	<option value="apotek_ranap" data-font="<i class='fa fa-shopping-cart'></i>" selected>Apotek Ranap</option>
+    	                	    	                	<option value="dokter_ranap" data-font="<i class='fa fa-user-md'></i>" selected>Dokter Ranap</option>
+    	                	    	                	<option value="kasir_rawat_inap" data-font="<i class='fa fa-money'></i>" selected>Kasir Rawat Inap</option>
+    	                	    	                	<option value="operasi" data-font="<i class='fa fa-bolt'></i>" selected>Operasi</option>
+    	                	    	                	<option value="anjungan" data-font="<i class='fa fa-desktop'></i>" selected>Anjungan</option>
+    	                	    	                	<option value="api" data-font="<i class='fa fa-database'></i>" selected>API</option>
+    	                	    	                	<option value="jkn_mobile" data-font="<i class='fa fa-tasks'></i>" selected>JKN Mobile</option>
+    	                	    	                	<option value="vclaim" data-font="<i class='fa fa-database'></i>" selected>VClaim Request</option>
+    	                	    	                	<option value="keuangan" data-font="<i class='fa fa-money'></i>" selected>Keuangan</option>
+    	                	    	                	<option value="manajemen" data-font="<i class='fa fa-dashboard'></i>" selected>Manajemen</option>
+    	                	    	                	<option value="presensi" data-font="<i class='fa fa-user-o'></i>" selected>Presensi</option>
+    	                	    	                	<option value="vedika" data-font="<i class='fa fa-code'></i>" selected>Vedika</option>
+    	                	    	                	<option value="profil" data-font="<i class='fa fa-address-book'></i>" selected>Profil</option>
+    	                	    	                	<option value="orthanc" data-font="<i class='fa fa-bolt'></i>" selected>Orthanc</option>
+    	                	    	                	<option value="veronisa" data-font="<i class='fa fa-medkit'></i>" selected>Veronisa</option>
+    	                	    	                	<option value="icd_9" data-font="<i class='fa fa-code'></i>" selected>ICD 9</option>
+    	                	    	                	<option value="crud_generator" data-font="<i class='fa fa-code'></i>" selected>CRUD Generator</option>
+    	                	    	                	<option value="darurat_stok" data-font="<i class='fa fa-code'></i>" selected>Darurat Stok</option>
+    	                	    	                	<option value="detail_pemberian_obat" data-font="<i class='fa fa-code'></i>" selected>Detail Pemberian Obat</option>
+    	                	    	                	<option value="riwayat_barang_medis" data-font="<i class='fa fa-code'></i>" selected>Riwayat Barang Medis</option>
+    	                	    	                	<option value="khanza_referensi_mjkn_taskid" data-font="<i class='fa fa-code'></i>" selected>khanza referensi mjkn taskid</option>
+    	                	    	                	<option value="opm" data-font="<i class='fa fa-code'></i>" selected>opm</option>
+    	                	    	                	<option value="khanzatrackerlogin" data-font="<i class='fa fa-code'></i>" selected>khanzaTrackerLogin</option>
+    	                	    	                	<option value="khanza_referensi_mjkn_bpjs" data-font="<i class='fa fa-code'></i>" selected>khanza referensi mjkn bpjs</option>
+    	                	    	                	<option value="khanza_surat_kontrol_bpjs" data-font="<i class='fa fa-code'></i>" selected>khanza surat kontrol bpjs</option>
+    	                	    	                	<option value="perkiraan_biaya_ranap" data-font="<i class='fa fa-code'></i>" selected>perkiraan biaya ranap</option>
+    	                	    	                	<option value="kelahiran_bayo" data-font="<i class='fa fa-code'></i>" selected>kelahiran bayo</option>
+    	                	    	                	<option value="grafik_fenton" data-font="<i class='fa fa-code'></i>" selected>Grafik Fenton</option>
+    	                	    	                	<option value="triase" data-font="<i class='fa fa-code'></i>" selected>Triase</option>
+    	                	    	                	<option value="dokter_ranapxxx" data-font="<i class='fa fa-'></i>" selected></option>
+    	                	    	                	<option value="reg_periksa" data-font="<i class='fa fa-code'></i>" selected>Reg periksa</option>
+    	                	    	                	<option value="icare" data-font="<i class='fa fa-plus-square'></i>" selected>iCare</option>
+    	                	    	                	<option value="penjualan" data-font="<i class='fa fa-cart-plus'></i>" selected>Penjualan</option>
+    	                	    	                	<option value="inventaris" data-font="<i class='fa fa-cog'></i>" selected>Inventaris</option>
+    	                	    	                	<option value="jurnal_" data-font="<i class='fa fa-code'></i>" selected>Jurnal </option>
+    	                	    	                	<option value="penjualan_bebas" data-font="<i class='fa fa-code'></i>" selected>Penjualan bebas</option>
+    	                	    	                	<option value="website" data-font="<i class='fa fa-pencil-square'></i>" selected>Website</option>
+    	                	    	                	<option value="bridging_hfis" data-font="<i class='fa fa-shield'></i>" selected>Bridging HFIS</option>
+    	                	    	                	<option value="mutasi_berkas" data-font="<i class='fa fa-code'></i>" selected>Mutasi berkas</option>
+    	                	    	                	<option value="mlite_penjualan" data-font="<i class='fa fa-code'></i>" selected>mlite penjualan</option>
+    	                	    	                	<option value="mlite_penjualan_biling" data-font="<i class='fa fa-code'></i>" selected>mlite_penjualan_biling</option>
+    	                	    	                	<option value="mlite_penjualan_detail" data-font="<i class='fa fa-code'></i>" selected>mlite_penjualan_detail</option>
+    	                	    	                	<option value="afm" data-font="<i class='fa fa-laptop'></i>" selected>AFM</option>
+    	                	    	                	<option value="pemeriksaan_ralan" data-font="<i class='fa fa-code'></i>" selected>pemeriksaan ralan</option>
+    	                	    	                	<option value="plafon" data-font="<i class='fa fa-code'></i>" selected>plafon</option>
+    	                	    	                	<option value="jasa_medis_dokter" data-font="<i class='fa fa-code'></i>" selected>Jasa Medis Dokter</option>
+    	                	    	                	<option value="jasa_medis_perawat" data-font="<i class='fa fa-code'></i>" selected>Jasa Medis Perawat</option>
+    	                	    	                	<option value="data_ranap_gabung" data-font="<i class='fa fa-'></i>" selected></option>
+    	                	    	                	<option value="laporan_bpjs" data-font="<i class='fa fa-code'></i>" selected>Laporan BPJS</option>
+    	                	    	                	<option value="log_antrian_taskid" data-font="<i class='fa fa-code'></i>" selected>Log Antrian TaskID</option>
+    	                	    	                	<option value="mlite_antrian_referensi" data-font="<i class='fa fa-code'></i>" selected>mlite_antrian referensi</option>
+    	                	    	                	<option value="data_sep" data-font="<i class='fa fa-code'></i>" selected>Data SEP</option>
+    	                	    	                	<option value="surat_sehat" data-font="<i class='fa fa-code'></i>" selected>Surat Sehat</option>
+    	                	    	                	<option value="masuk_nicu" data-font="<i class='fa fa-code'></i>" selected>masuk nicu</option>
+    	                	    	                	<option value="bpjs_sep" data-font="<i class='fa fa-code'></i>" selected>BPJS SEP</option>
+    	                	    	                	<option value="kunjungan_ralan" data-font="<i class='fa fa-bar-chart'></i>" selected>Kunjungan RS</option>
+    	                	    	                	<option value="data_analys" data-font="<i class='fa fa-bar-chart'></i>" selected>Data Analys</option>
+    	                	    	                	<option value="jkn_mobile_fktp" data-font="<i class='fa fa-tasks'></i>" selected>JKN Mobile FKTP</option>
+    	                	    	                	<option value="downtime" data-font="<i class='fa fa-bar-chart'></i>" selected>Downtime Manajemen</option>
+    	                	    	                </select>
+    	            </div>
+    	            <div class="form-group">
+    	                <input type="submit" name="save" class="btn btn-primary" value="Simpan" />
+    	            </div>
+                </fieldset>
+            </form>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="nm_pasien" class="col-sm-3 control-label">Nama</label>
-            <div class="col-sm-9">
-              <input type="text" name="nm_pasien" class="form-control nama" value="JAMIYEM">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="jk" class="col-sm-3 control-label">Sex</label>
-            <div class="col-sm-4">
-              <select class="form-control" name="jk" id="jk">
-                <option value="L" >Laki-Laki</option>
-                <option value="P" selected>Perempuan</option>
-              </select>
-            </div>
-            <label for="tgl_lahir" class="col-sm-2 control-label">Tgl. Lahir</label>
-            <div class="col-sm-3">
-              <input type="text" id="tgl_lahir" name="tgl_lahir" class="form-control tgl_lahir" value="1954-10-15">
-            </div>
-          </div>
-          <div class="">
-            <div class="form-group">
-              <label for="" class="col-sm-3 control-label">Nama Ibu</label>
-              <div class="col-sm-4">
-                <input type="text" name="nm_ibu" class="form-control" value="SATINEM">
-              </div>
-              <label for="gol_darah" class="col-sm-2 control-label">Darah</label>
-              <div class="col-sm-3">
-                <select class="form-control" name="gol_darah" id="gol_darah">
-                  <option value="O" >O</option>
-                  <option value="A" >A</option>
-                  <option value="B" >B</option>
-                  <option value="AB" >AB</option>
-                  <option value="-" selected>-</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="stts_nikah" class="col-sm-3 control-label">Status Nikah</label>
-              <div class="col-sm-4">
-                <select name="stts_nikah" class="form-control">
-                                      <option value="BELUM MENIKAH">BELUM MENIKAH</option>
-                                      <option value="MENIKAH" selected>MENIKAH</option>
-                                      <option value="JANDA">JANDA</option>
-                                      <option value="DUDHA">DUDHA</option>
-                                      <option value="JOMBLO">JOMBLO</option>
-                                  </select>
-              </div>
-              <label for="no_peserta" class="col-sm-2 control-label">Agama</label>
-              <div class="col-sm-3">
-                <select name="agama" class="form-control">
-                                      <option value="ISLAM" selected>ISLAM</option>
-                                      <option value="KRISTEN">KRISTEN</option>
-                                      <option value="PROTESTAN">PROTESTAN</option>
-                                      <option value="HINDU">HINDU</option>
-                                      <option value="BUDHA">BUDHA</option>
-                                      <option value="KONGHUCU">KONGHUCU</option>
-                                      <option value="KEPERCAYAAN">KEPERCAYAAN</option>
-                                  </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="pekerjaan" class="col-sm-3 control-label">Pekerjaan</label>
-              <div class="col-sm-4">
-                <input type="text" name="pekerjaan" class="form-control" value="PETANI ">
-              </div>
-              <label for="pnd" class="col-sm-2 control-label">PND</label>
-              <div class="col-sm-3">
-                <select class="form-control" name="pnd" id="pnd">
-                                    <option value="TS" >TS</option>
-                                    <option value="TK" >TK</option>
-                                    <option value="SD" >SD</option>
-                                    <option value="SMP" >SMP</option>
-                                    <option value="SMA" >SMA</option>
-                                    <option value="SLTA/SEDERAJAT" >SLTA/SEDERAJAT</option>
-                                    <option value="D1" >D1</option>
-                                    <option value="D2" >D2</option>
-                                    <option value="D3" >D3</option>
-                                    <option value="D4" >D4</option>
-                                    <option value="S1" >S1</option>
-                                    <option value="S2" >S2</option>
-                                    <option value="S3" >S3</option>
-                                    <option value="-" selected>-</option>
-                                  </select>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="asuransi" class="col-sm-3 control-label">Penjamin</label>
-            <div class="col-sm-4">
-              <select class="form-control" name="kd_pj">
-                                <option value="A04" >Asuransi Axa Financial</option>
-                                <option value="A06" >Asuransi Garda Medika</option>
-                                <option value="A07" >Asuransi Axa Services/Mandiri</option>
-                                <option value="A08" >Asuransi BNI Life</option>
-                                <option value="A09" >UMUM</option>
-                                <option value="A17" >Asuransi Manulife</option>
-                                <option value="A19" >Asuransi Lippo</option>
-                                <option value="A22" >Asuransi Mega</option>
-                                <option value="A26" >Asuransi Avrist</option>
-                                <option value="A28" >JUMAT BERKAH</option>
-                                <option value="A30" >PT. PLN ADMEDIKA</option>
-                                <option value="A32" >TMS Healthcare</option>
-                                <option value="A33" >Asuransi Sinarmas</option>
-                                <option value="A36" >Cynergy Cares</option>
-                                <option value="A38" >Asuransi Tugu Mandiri</option>
-                                <option value="A58" >Asuransi FWD</option>
-                                <option value="A77" >JAMINAN COVID 19</option>
-                                <option value="A78" >JASA RAHARJA</option>
-                                <option value="BPJ" selected>BPJS</option>
-                                <option value="C00" >Asuransi AIA</option>
-                                <option value="C10" >ADMEDIKA</option>
-                                <option value="C20" >Asuransi Adira ( Medicillin )</option>
-                                <option value="C25" >Asuransi Astra Aviva Life</option>
-                                <option value="C42" >Asuransi ABDA</option>
-                                <option value="C45" >AA International</option>
-                                <option value="C49" >Asuransi Allianz</option>
-                                <option value="CAR" >ASURANSI CAR</option>
-                                <option value="CB1" >Asuransi / Pihak ke - III</option>
-                                <option value="INH" >Mandiri Inhealth</option>
-                                <option value="NM1" >PAKET PERSALINAN NORMAL 1</option>
-                                <option value="NM2" >PAKET PERSALINAN NORMAL 2</option>
-                                <option value="NM3" >PAKET PERSALINAN NORMAL 3</option>
-                                <option value="SC1" >PAKET PERSALINAN SC 1</option>
-                                <option value="SC2" >PAKET PERSALINAN SC2</option>
-                                <option value="SC3" >PAKET PERSALINAN SC 3</option>
-                              </select>
-            </div>
-            <label for="no_peserta" class="col-sm-2 control-label">No. Kartu</label>
-            <div class="col-sm-3">
-              <input type="text" name="no_peserta" id="no_peserta" class="form-control noKartu" value="0000565823283">
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="form-horizontal">
-          <div class="">
-            <div class="form-group">
-              <label for="asuransi" class="col-sm-3 control-label">Keluarga</label>
-              <div class="col-sm-4">
-                <select class="form-control" name="keluarga">
-                                    <option value="AYAH" >AYAH</option>
-                                    <option value="IBU" >IBU</option>
-                                    <option value="ISTRI" >ISTRI</option>
-                                    <option value="SUAMI" >SUAMI</option>
-                                    <option value="SAUDARA" >SAUDARA</option>
-                                    <option value="ANAK" selected>ANAK</option>
-                                  </select>
-              </div>
-              <label for="namakeluarga" class="col-sm-1 control-label">Nama</label>
-              <div class="col-sm-4">
-                <input type="text" name="namakeluarga" class="form-control" value="ANIS APRIATI">
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="no_ktp" class="col-sm-3 control-label">Nomor KTP</label>
-            <div class="col-sm-9">
-              <input type="text" name="no_ktp" id="no_ktp" class="form-control no_ktp" value="3312045510540001">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="alamat" class="col-sm-3 control-label">Alamat</label>
-            <div class="col-sm-9">
-              <textarea name="alamat" rows="3" class="form-control">SUKOSARI 003/006</textarea>
-            </div>
-          </div>
-          <div class="">
-            <div class="form-group">
-              <label for="propinsi" class="col-sm-3 control-label">Propinsi</label>
-              <div class="col-sm-4">
-                <input type="text" name="nm_prop" id="nm_prop" class="form-control" value="JAWA TENGAH" />
-                <input type="hidden" name="kd_prop" id="kd_prop" class="form-control" value="33" />
-                <ul class="list-group" id="propinsiList" style="z-index:1000;position:absolute;width:100%;"></ul>
-              </div>
-              <label for="kota" class="col-sm-1 control-label">Kota</label>
-              <div class="col-sm-4">
-                <input type="text" name="nm_kab" id="nm_kab" class="form-control" value="WONOGIRI" />
-                <input type="hidden" name="kd_kab" id="kd_kab" class="form-control" value="8" />
-                <ul class="list-group" id="kabupatenList" style="z-index:1000;position:absolute;width:100%;"></ul>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="kecamatan" class="col-sm-3 control-label">Kecamatan</label>
-              <div class="col-sm-4">
-                <input type="text" name="nm_kec" id="nm_kec" class="form-control" value="BATUWARNO" />
-                <input type="hidden" name="kd_kec" id="kd_kec" class="form-control" value="508" />
-                <ul class="list-group" id="kecamatanList" style="z-index:1000;position:absolute;width:100%;"></ul>
-              </div>
-              <label for="desa" class="col-sm-1 control-label">Desa</label>
-              <div class="col-sm-4">
-                <input type="text" name="nm_kel" id="nm_kel" class="form-control" value="KUDI" />
-                <input type="hidden" name="kd_kel" id="kd_kel" class="form-control" value="1485" />
-                <ul class="list-group" id="kelurahanList" style="z-index:1000;position:absolute;width:100%;"></ul>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="telepon" class="col-sm-3 control-label">Telepon</label>
-            <div class="col-sm-4">
-              <input type="text" name="no_tlp" class="form-control noTelepon" value="085842369763">
-            </div>
-            <label for="email" class="col-sm-1 control-label">Email</label>
-            <div class="col-sm-4">
-              <input type="text" id="email" name="email" class="form-control" value="-">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="col-md-12 m-b-xl">
-    <div class="text-center">
-      <button type="button" name="button" class="btn btn-success" id="simpan"><i class="fa fa-save"></i><span class="hidden-xs"> Simpan</span></button>
-      <button type="button" name="button" class="btn btn-info hidden" id="kartu" data-no_rkm_medis="063686"><i class="fa fa-address-book-o"></i><span class="hidden-xs"> Kartu</span></button>
-      <a href="https://simrsfitricandra.site/admin/pasien/uploadphoto/063686?t=8e8d20241676" name="button" class="btn btn-warning hidden" id="foto"><i class="fa fa-camera"></i><span class="hidden-xs"> Foto</span></a>
-      <button type="button" name="button" class="btn btn-primary hidden" id="kirimwa" data-toggle="modal" data-target="#waModal" data-no_tlp=085842369763><i class="fa fa-whatsapp"></i><span class="hidden-xs"> Kirim WA</span></button>
-      <button type="button" name="button" class="btn btn-danger hidden" id="hapus"><i class="fa fa-trash"></i><span class="hidden-xs"> Hapus</span></button>
-      <button type="button" name="button" class="btn btn-primary" id="batal"><i class="fa fa-close"></i><span class="hidden-xs"> Batal</span></button>
-    </div>
-  </div>
-  </div>
-<div class="modal" id="myModal" data-keyboard="false" data-backdrop="static">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close"><a href="https://simrsfitricandra.site/admin/pasien/manage?t=8e8d20241676">Close <span aria-hidden="true">&times;</span></a></button>
-      </div>
-      <!-- Modal body -->
-      <div class="modal-body">
-        <center>
-          <div id="camera"></div><br>
-          <input type="button" class="btn btn-info" value="Ambil Foto" data-dismiss="modal">
-          <input type="hidden" name="image" id="image-tag">
-          <div id="results"></div>
-        </center>
-      </div>
-    </div>
-  </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="waModal" tabindex="-1" role="dialog" aria-labelledby="waModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Kirim WhatsApp</h4>
-      </div>
-      <div class="modal-body">
-        <div class="form-floating number">
-          <label for="floatingPassword">Nomor</label>
-          <input type="text" name="number" class="form-control" id="number" placeholder="Nomor WhatsApp Tujuan">
-        </div>
-        <div class="form-floating message">
-          <label for="floatingPassword">Pesan</label>
-          <textarea name="message" rows="14" cols="100" class="form-control" id="message" placeholder="Tulis pesan anda.."></textarea>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-        <button type="button" class="btn btn-primary" onclick="KirimWA()" data-dismiss="modal">Kirim</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<script type="text/javascript">
-  $('#form select').selectator();
-</script>
-<script type="text/javascript">
-   $(function () {
-       $('.tgl_lahir').datetimepicker({
-         format: 'YYYY-MM-DD',
-         locale: 'id'
-       });
-       $('.tgl_daftar').datetimepicker({
-         format: 'YYYY-MM-DD',
-         locale: 'id'
-       });
-   });
-</script>
+
 <script>
-  $('#nm_prop').keyup(function(){
-     var query = $(this).val();
-     if(query != '')
-     {
-        $.ajax({
-           url: "https://simrsfitricandra.site/admin/pasien/wilayah?show=caripropinsi&t=8e8d20241676",
-           method:"POST",
-           data:{query:query},
-           success:function(data)
-           {
-              $('#propinsiList').fadeIn();
-              $('#propinsiList').html(data);
-           }
-        });
-     }
-  });
-  $('#propinsiList').on('click', 'li', function(){
-     $('#nm_prop').val($(this).text().split(': ')[1]);
-     $('#kd_prop').val($(this).text().split(': ')[0]);
-     $('#propinsiList').fadeOut();
-  });
-  $('#nm_kab').keyup(function(){
-     var query = $(this).val();
-     if(query != '')
-     {
-        $.ajax({
-           url: "https://simrsfitricandra.site/admin/pasien/wilayah?show=carikabupaten&t=8e8d20241676",
-           method:"POST",
-           data:{query:query},
-           success:function(data)
-           {
-              $('#kabupatenList').fadeIn();
-              $('#kabupatenList').html(data);
-           }
-        });
-     }
-  });
-  $('#kabupatenList').on('click', 'li', function(){
-       $('#nm_kab').val($(this).text().split(': ')[1]);
-       $('#kd_kab').val($(this).text().split(': ')[0]);
-       $('#kabupatenList').fadeOut();
-  });
-  $('#nm_kec').keyup(function(){
-       var query = $(this).val();
-       if(query != '')
-       {
-            $.ajax({
-                 url: "https://simrsfitricandra.site/admin/pasien/wilayah?show=carikecamatan&t=8e8d20241676",
-                 method:"POST",
-                 data:{query:query},
-                 success:function(data)
-                 {
-                      $('#kecamatanList').fadeIn();
-                      $('#kecamatanList').html(data);
-                 }
-            });
-       }
-  });
-  $('#kecamatanList').on('click', 'li', function(){
-       $('#nm_kec').val($(this).text().split(': ')[1]);
-       $('#kd_kec').val($(this).text().split(': ')[0]);
-       $('#kecamatanList').fadeOut();
-  });
-  $('#nm_kel').keyup(function(){
-       var query = $(this).val();
-       if(query != '')
-       {
-            $.ajax({
-                 url: "https://simrsfitricandra.site/admin/pasien/wilayah?show=carikelurahan&t=8e8d20241676",
-                 method:"POST",
-                 data:{query:query},
-                 success:function(data)
-                 {
-                      $('#kelurahanList').fadeIn();
-                      $('#kelurahanList').html(data);
-                 }
-            });
-       }
-  });
-  $('#kelurahanList').on('click', 'li', function(){
-       $('#nm_kel').val($(this).text().split(': ')[1]);
-       $('#kd_kel').val($(this).text().split(': ')[0]);
-       $('#kelurahanList').fadeOut();
-  });
+	// Avatar
+	var reader  = new FileReader();
+	reader.addEventListener("load", function() {
+		$("#photoPreview").attr('src', reader.result);
+	}, false);
+	$("input[name=photo]").change(function() {
+		reader.readAsDataURL(this.files[0]);
+	});
 
- </script>
-<script>
-    $("#no_ktp").on('keyup', function (event) {
-    var baseURL = mlite.url + '/' + mlite.admin;
-    var tgl = $('input:text[name=tgl_daftar]').val();
-    var no_ktp = $('input:text[name=no_ktp]').val();
-    var url = baseURL + '/vclaim/bynik/' + no_ktp + '/' + tgl + '?t=' + mlite.token;
-
-    if (event.key === 'Enter' || event.keyCode === 13) {
-
-      $.get(url, function(data){
-        var data = JSON.parse(data);
-        var json_obj = [data];
-        if(!json_obj[0]) {
-          alert('Koneksi ke server BPJS terputus. Silahkan ulangi lagi!');
-        } else if(json_obj[0].metaData.code == 200) {
-          $('.nama').val(data.response.peserta.nama);
-          $('.noKartu').val(data.response.peserta.noKartu);
-          $('.sex').val(data.response.peserta.sex);
-          $('.tgl_lahir').val(data.response.peserta.tglLahir);
-          $('.noTelepon').val(data.response.peserta.mr.noTelepon);
-        } else {
-          alert(json_obj[0].metaData.message);
-        }
-      });
-    }
-  });
-      $("#no_peserta").on('keyup', function (event) {
-    var baseURL = mlite.url + '/' + mlite.admin;
-    var tgl = $('input:text[name=tgl_daftar]').val();
-    var no_peserta = $('input:text[name=no_peserta]').val();
-    var url = baseURL + '/vclaim/bynokartu/' + no_peserta + '/' + tgl + '?t=' + mlite.token;
-
-    if (event.key === 'Enter' || event.keyCode === 13) {
-
-      $.get(url, function(data){
-        //console.log(data);
-        var data = JSON.parse(data);
-        var json_obj = [data];
-        if(!json_obj[0]) {
-          alert('Koneksi ke server BPJS terputus. Silahkan ulangi lagi!');
-        } else if(json_obj[0].metaData.code == 200) {
-          $('.nama').val(data.response.peserta.nama);
-          $('.no_ktp').val(data.response.peserta.nik);
-          $('.sex').val(data.response.peserta.sex);
-          $('.tgl_lahir').val(data.response.peserta.tglLahir);
-          $('.noTelepon').val(data.response.peserta.mr.noTelepon);
-        } else {
-          alert(json_obj[0].metaData.message);
-        }
-      });
-    }
-  });
-  </script>
-<script>
-  $(document).ready(function() {
-
-      $('#myModal').on('show.bs.modal', function() {
-          Webcam.set({
-              width:320,
-              height:240,
-              image_format:'jpeg',
-              jpeg_quality:90,
-              facingMode: {
-                exact: 'environment'
-              }
-          });
-          Webcam.attach('#camera');
-      });
-      $("#myModal").on("hidden.bs.modal", function () {
-
-          var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
-          //alert(no_rkm_medis);
-          var shutter = new Audio();
-          shutter.autoplay = false;
-          shutter.src = navigator.userAgent.match(/Firefox/) ? 'https://simrsfitricandra.site/plugins/pasien/audio/shutter.ogg' : 'https://simrsfitricandra.site/plugins/pasien/audio/shutter.mp3';
-          shutter.play();
-
-          Webcam.snap(function(data_uri){
-              document.getElementById('results').innerHTML = '<img id="imageprev" src="'+data_uri+'"/>';
-          });
-
-          var base64image = document.getElementById("imageprev").src;
-
-          //Webcam.upload(base64image, 'https://simrsfitricandra.site/admin/pasien/savephoto/ + no_rkm_medis + ?t=8e8d20241676', function(code, text) {
-          Webcam.upload(base64image, 'https://simrsfitricandra.site/admin/pasien/savephoto/' + no_rkm_medis + '/?t=' + mlite.token, function(code, text) {
-          });
-
-          Webcam.reset();
-
-          window.location.href = 'https://simrsfitricandra.site/admin/pasien/manage?t=8e8d20241676';
-
-      });
-  });
-</script>
-<script>
-  //triggered when modal is about to be shown
-  $('#waModal').on('show.bs.modal', function(e) {
-      //get data-id attribute of the clicked element
-      var no_tlp = $(e.relatedTarget).data('no_tlp');
-      //populate the textbox
-      $(e.currentTarget).find('input[name="number"]').val(no_tlp);
-  });
-  function KirimWA() {
-  	var xhttp = new XMLHttpRequest();
-    var api_key = '3144a0b652d384bbb43b14e53c6e58bf';
-  	var sender = '081369606162';
-  	var number = document.getElementById("number").value;
-  	var message = document.getElementById("message").value;
-  	//console.log(api_key + " - " + number + " - " + message);
-  	xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var data=xhttp.responseText;
-        var timeout = '504 Gateway Time-out';
-        if(data.indexOf(timeout) != -1) {
-            alert('Timeout!!! Gagal mengirim pesan.');
-        } else {
-            var jsonResponse = JSON.parse(data);
-            if(jsonResponse["status"] == true) {
-              alert('Sukses mengirim pesan.');
-            } else {
-            alert('Gagal mengirim pesan.\n' + jsonResponse["msg"]);
-            }
-        }
-      }
-  	};
-  	xhttp.open("POST", "https://simrsfitricandra.site/admin/api/kirimwa?t=8e8d20241676", true);
-  	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  	xhttp.send("api_key=" + api_key + "&sender=" + sender + "&number=" + number + "&message=" + message);
-  }
-</script>
-<script type="text/javascript">
-    var queryString = new Array();
-    $(function () {
-        if (queryString.length == 0) {
-            if (window.location.search.split('?').length > 1) {
-                var params = window.location.search.split('?')[1].split('&');
-                for (var i = 0; i < params.length; i++) {
-                    var key = params[i].split('=')[0];
-                    var value = decodeURIComponent(params[i].split('=')[1]);
-                    queryString[key] = value;
-                }
-            }
-            var baseURL = mlite.url + '/' + mlite.admin;
-        }
-        if (queryString["nama"] != null && queryString["no_telp"] != null) {
-            $('input:text[name=nm_pasien]').val(queryString["nama"]);
-            $('input:text[name=no_tlp]').val(queryString["no_telp"]);
-            $('textarea[name=alamat]').val(queryString["alamat"]);
-        }
-    });
+	// Password
+	$("#passwordChange").on("click", function() {
+		$("input[name=password]").val("").attr('disabled', false);
+		$(this).remove();
+		return false;
+	})
 </script>

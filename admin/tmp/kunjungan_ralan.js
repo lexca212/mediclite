@@ -366,7 +366,7 @@ $(document).ready(function() {
 //   load: function (search, callback) {
 //     if (search.length < this.minSearchLength) return callback();
 //     $.ajax({
-//       url: 'https://simrsfitricandra.site/admin/dokter_ralan/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=430331e43381',
+//       url: 'http://localhost/mediclite/admin/dokter_ralan/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=e8f36ce05741',
 //       type: 'GET',
 //       dataType: 'json',
 //       success: function(data) {
@@ -646,7 +646,7 @@ $(document).ready(function() {
 //   load: function (search, callback) {
 //     if (search.length < this.minSearchLength) return callback();
 //     $.ajax({
-//       url: 'https://simrsfitricandra.site/admin/dokter_ralan/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=430331e43381',
+//       url: 'http://localhost/mediclite/admin/dokter_ralan/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=e8f36ce05741',
 //       type: 'GET',
 //       dataType: 'json',
 //       success: function(data) {
@@ -840,8 +840,8 @@ $(document).ready(function() {
 //   $('input:text[name=no_rawat]').val("");
 //   $('input:text[name=no_rkm_medis]').val("");
 //   $('input:text[name=nm_pasien]').val("");
-//   $('input:text[name=tgl_perawatan]').val("2026-02-20");
-//   $('input:text[name=tgl_registrasi]').val("2026-02-20");
+//   $('input:text[name=tgl_perawatan]').val("2026-02-26");
+//   $('input:text[name=tgl_registrasi]').val("2026-02-26");
 //   $('input:text[name=tgl_lahir]').val("");
 //   $('input:text[name=jenis_kelamin]').val("");
 //   $('input:text[name=alamat]').val("");
@@ -988,8 +988,8 @@ $(document).ready(function() {
 //   $('input:text[name=no_rawat]').val("");
 //   $('input:text[name=no_rkm_medis]').val("");
 //   $('input:text[name=nm_pasien]').val("");
-//   $('input:text[name=tgl_perawatan]').val("2026-02-20");
-//   $('input:text[name=tgl_registrasi]').val("2026-02-20");
+//   $('input:text[name=tgl_perawatan]').val("2026-02-26");
+//   $('input:text[name=tgl_registrasi]').val("2026-02-26");
 //   $('input:text[name=tgl_lahir]').val("");
 //   $('input:text[name=jenis_kelamin]').val("");
 //   $('input:text[name=alamat]').val("");

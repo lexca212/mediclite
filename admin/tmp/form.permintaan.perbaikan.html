@@ -5,39 +5,41 @@
                 <h3 class="panel-title">Form Permintaan Perbaikan</h3>
             </div>
             <div class="panel-body">
-              <form name="user" action="http://192.168.0.212/admin/inventaris/permintaanperbaikansimpan/PPI20200103001?t=34cfd39278f1" method="POST" enctype="multipart/form-data">
+              <form name="user" action="http://localhost/mediclite/admin/inventaris/permintaanperbaikansimpan/PI202602260001?t=e8f36ce05741" method="POST" enctype="multipart/form-data">
               <div class="form-group">
                   <label>No. Permintaan</label>
-                  <input type="text" name="no_permintaan" class="form-control" placeholder="Nomor Permintaan" value="PPI20200103001" readonly/>
+                  <input type="text" name="no_permintaan" class="form-control" placeholder="Nomor Permintaan" value="PI202602260001" readonly/>
               </div>
               <div class="form-group">
                   <label>Data Aset</label>
                   <select name="no_inventaris" class="form-control" data-use-search="true">
+                                            <option value="01.0001" >TENSIMETER</option>
                                             <option value="202602001" >HACK</option>
-                                            <option value="I000000004" >barang 1</option>
                                             <option value="I000000001" >barang 2345</option>
                                             <option value="I000000002" >barang 2345</option>
                                             <option value="I000000003" >barang 2345</option>
+                                            <option value="I000000004" >barang 1</option>
                                             <option value="I000000005" >Komputer LG 1010</option>
                                             <option value="I000000006" >Komputer LG 1010</option>
-                                            <option value="PC/RT/001" >Komputer LG 1010</option>
-                                            <option value="LENOV.01" >KOMPUTER LENOVO</option>
-                                            <option value="LENOV.02" >KOMPUTER LENOVO</option>
-                                            <option value="LENOV.03" >KOMPUTER LENOVO</option>
-                                            <option value="LENOV.04" selected>KOMPUTER LENOVO</option>
                                             <option value="I000000007" >UJI COBA</option>
                                             <option value="I000000008" >UJI COBA</option>
                                             <option value="KAR/2019/02/01/001" >KURSI MERAH</option>
                                             <option value="KAR/2019/02/01/002" >KURSI MERAH</option>
                                             <option value="KAR/2019/02/01/003" >KURSI MERAH</option>
                                             <option value="LCD/0001" >LCD PROYEKTOR</option>
-                                            <option value="01.0001" >TENSIMETER</option>
+                                            <option value="LENOV.01" >KOMPUTER LENOVO</option>
+                                            <option value="LENOV.02" >KOMPUTER LENOVO</option>
+                                            <option value="LENOV.03" >KOMPUTER LENOVO</option>
+                                            <option value="LENOV.04" >KOMPUTER LENOVO</option>
+                                            <option value="PC/RT/001" >Komputer LG 1010</option>
+                                            <option value="RSFC/RT/26/001" >Shering Pump</option>
+                                            <option value="RT001" >Tensi Meter</option>
                                         </select>
               </div>
               <div class="form-group">
                   <label>Pemohon Perbaikan</label>
                   <select name="nik" class="form-control" data-use-search="true">
-                                            <option value="D0000003"selected>Erwan</option>
+                                            <option value="D0000003">Erwan</option>
                                             <option value="03">Wahyu Nugroho</option>
                                             <option value="0002">Rahma</option>
                                             <option value="khl">wesnia</option>
@@ -250,11 +252,11 @@
               </div>
               <div class="form-group">
                   <label>Tanggal</label>
-                  <input type="text" name="tanggal" class="form-control tanggaljam" placeholder="Tanggal" value="2020-01-03 14:35:57" />
+                  <input type="text" name="tanggal" class="form-control tanggaljam" placeholder="Tanggal" value="" />
               </div>
               <div class="form-group">
                     <label>Deskripsi Kerusakan</label>
-                    <textarea class="form-control" name="deskripsi_kerusakan" placeholder="Deskripsi (optional)" rows="6">Monitor pecah</textarea>
+                    <textarea class="form-control" name="deskripsi_kerusakan" placeholder="Deskripsi (optional)" rows="6"></textarea>
               </div>
               <div class="form-group">
                   <input type="submit" name="save" class="btn btn-primary" value="Simpan" />

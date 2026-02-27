@@ -10,7 +10,7 @@
 //         return;
 //     }
 
-//     $.post("https://simrsfitricandra.site/admin/inventaris/getinventarisbyruang?t=e5c7aca617f6", 
+//     $.post("http://localhost/mediclite/admin/inventaris/getinventarisbyruang?t=234998f26a4f", 
 // { id_ruang: id_ruang }, 
 // function(response){
 

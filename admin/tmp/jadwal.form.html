@@ -2,10 +2,10 @@
     <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Edit Jadwal</h3>
+                <h3 class="panel-title">Tambah Jadwal Dokter</h3>
             </div>
             <div class="panel-body">
-    		<form name="pendaftaran" action="https://simrsfitricandra.site/admin/rawat_jalan/jadwalsave/DS018/KAMIS?t=d3617aa48883" method="POST">
+    		<form name="pendaftaran" action="http://localhost/mediclite/admin/rawat_jalan/jadwalsave//?t=c9ec31405212" method="POST">
     			<fieldset>
                   <div class="form-group">
                       <label>Nama Dokter</label>
@@ -49,7 +49,7 @@
                                                   <option value="DS015">dr. Abdul Aziz,Sp.Rad</option>
                                                   <option value="DS016">dr. Diksi Novritasari Budyastuti,Sp.Pd</option>
                                                   <option value="DS017">dr. Dwi Retnoningsih,Sp.OG</option>
-                                                  <option value="DS018" selected>dr. Bayu Abhiyoga B,Sp.Pd</option>
+                                                  <option value="DS018">dr. Bayu Abhiyoga B,Sp.Pd</option>
                                                   <option value="DS019">dr. Zustain Noor Adhim,Sp.A.,M.Kes</option>
                                                   <option value="DS020">dr. Magendi Indra M, Sp.Pk</option>
                                                   <option value="DS021">dr. Adhi Pramono,Sp.OG</option>
@@ -95,7 +95,7 @@
                                                   <option value="SENIN">SENIN</option>
                                                   <option value="SELASA">SELASA</option>
                                                   <option value="RABU">RABU</option>
-                                                  <option value="KAMIS" selected>KAMIS</option>
+                                                  <option value="KAMIS">KAMIS</option>
                                                   <option value="JUMAT">JUMAT</option>
                                                   <option value="SABTU">SABTU</option>
                                                   <option value="AKHAD">AKHAD</option>
@@ -103,11 +103,11 @@
                   </div>
                   <div class="form-group">
                       <label>Jam Mulai</label>
-                      <input type="text" name="jam_mulai" class="form-control timepicker" value="15:00:00" data-time-format="H:i:s" data-step="30" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
+                      <input type="text" name="jam_mulai" class="form-control timepicker" value="" data-time-format="H:i:s" data-step="30" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
                   </div>
                   <div class="form-group">
                       <label>Jam Selesai</label>
-                      <input type="text" name="jam_selesai" class="form-control timepicker" value="17:00:00" data-time-format="H:i:s" data-step="30" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
+                      <input type="text" name="jam_selesai" class="form-control timepicker" value="" data-time-format="H:i:s" data-step="30" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
                   </div>
                   <div class="form-group">
                       <label>Nama poliklinik</label>
@@ -133,7 +133,7 @@
                                                   <option value="PBD">Poliklinik Bedah</option>
                                                   <option value="PGM">Poliklinik Gigi & Mulut</option>
                                                   <option value="POG">Poliklinik Kebidanan dan Penyakit  Kandungan</option>
-                                                  <option value="PPD" selected>Poliklinik Penyakit Dalam</option>
+                                                  <option value="PPD">Poliklinik Penyakit Dalam</option>
                                                   <option value="PSF">Poliklinik Saraf / Neurologi</option>
                                                   <option value="PUM">Poliklinik Umum</option>
                                                   <option value="RAD">Radiologi</option>
@@ -152,7 +152,7 @@
                   </div>
                   <div class="form-group">
                       <label>Kuota</label>
-                      <input type="text" name="kuota" class="form-control" value="20"/>
+                      <input type="text" name="kuota" class="form-control" value=""/>
                   </div>
     	            <div class="form-group">
     	                <input type="submit" name="save" class="btn btn-primary" value="Simpan" />

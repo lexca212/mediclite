@@ -1,4 +1,5 @@
-<form action="http://localhost/mediclite/admin/downtime/savedowntime?t=226888aed3e9" method="POST">
+{if: $this->core->getUserInfo('role') == 'admin'}
+<form action="{?=url(ADMIN.'/downtime/savedowntime')?}" method="POST">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">
@@ -6,13 +7,13 @@
             </h3>
             <!-- <ul class="nav nav-tabs">
                 <li class="active">
-                    <a href="http://localhost/mediclite/admin/inventaris/dataaset?t=226888aed3e9" role="tab">Data Aset</a>
+                    <a href="{?=url([ADMIN,'inventaris','dataaset'])?}" role="tab">Data Aset</a>
                 </li>
                 <li>
-                    <a href="http://localhost/mediclite/admin/inventaris/inventarisbarang?t=226888aed3e9" role="tab">Data Barang</a>
+                    <a href="{?=url([ADMIN,'inventaris','inventarisbarang'])?}" role="tab">Data Barang</a>
                 </li>
                  <li>
-                    <a href="http://localhost/mediclite/admin/inventaris/pemindahan?t=226888aed3e9" role="tab">Data Pemindahan</a>
+                    <a href="{?=url([ADMIN,'inventaris','pemindahan'])?}" role="tab">Data Pemindahan</a>
                 </li>
             </ul> -->
         </div>
@@ -26,7 +27,7 @@
                     </div>
                     <div class="form-group">
                       <label>Jam Mulai</label>
-                      <input type="text" name="jam_mulai" class="form-control timepicker" value="14:44:08" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
+                      <input type="text" name="jam_mulai" class="form-control timepicker" value="{?=date('H:i:s')?}" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
                   </div>
                     <div class="form-group">
                         <label>Tanggal selesai</label>
@@ -34,7 +35,7 @@
                     </div>
                     <div class="form-group">
                       <label for="jam_selesai">Jam Selesai</label>
-                      <input type="text" name="jam_selesai" class="form-control timepicker" value="14:44:08" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
+                      <input type="text" name="jam_selesai" class="form-control timepicker" value="{?=date('H:i:s')?}" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
                     </div>
                     <div class="form-group">
                         <label>Jenis Downtime</label>
@@ -78,14 +79,16 @@
         </div>
     </div>
 </form>
+{/if}
 <br>
 <h4>
   
-  Periode tanggal : 2026-02-27  sampai tanggal 2026-02-27  <span class="pull-right">
+  Periode tanggal : {$tgl_awal}  sampai tanggal {$tgl_akhir}
+  <span class="pull-right">
     <form class="" action="" method="">
       <input type="text" name="tgl_mulai" class="tanggal" value="" placeholder="Tanggal awal">
       <input type="text" name="tgl_selesai" class="tanggal" value="" placeholder="Tanggal akhir">
-      <input type="hidden" name="t" value="226888aed3e9">
+      <input type="hidden" name="t" value="{?=$_SESSION['token']?}">
       <input type="submit" value="Go">
     </form>
   </span>
@@ -112,7 +115,28 @@
                   </tr>
                 </thead>
                 <tbody>
-                                  </tbody>
+                  {loop: $downtime}
+                  <tr class="downtime"
+                  data-tgl_mulai="{$value.tgl_mulai}"
+                  data-jam_mulai="{$value.jam_mulai}"
+                  data-jenis_downtime="{$value.jenis_downtime}"
+                  data-kategori="{$value.kategori}"
+                  data-keterangan_downtime="{$value.keterangan_downtime}"
+                  data-catatan_downtime="{$value.catatan_downtime}"
+                  data-tindak_lanjut="{$value.tindak_lanjut}"
+                  data-tgl_selesai="{$value.tgl_selesai}"
+                  data-jam_selesai="{$value.jam_selesai}">
+                    <td>{$value.tgl_mulai} {$value.jam_mulai}</td>
+                    <td>{$value.jenis_downtime}</td>
+                    <td>{$value.kategori}</td>
+                    <td>{$value.keterangan_downtime}</td>
+                    <td>{$value.catatan_downtime}</td>
+                    <td>{$value.tindak_lanjut}</td>
+                    <td>{$value.tgl_selesai}  {$value.jam_selesai}</td>
+                    <!-- <td class="text-{if: $value.status_perbaikan == 'Sudah'}primary{else}danger{/if}">{$value.status_perbaikan}</td> -->
+                  </tr>
+                  {/loop}
+                </tbody>
               </table>
               </div>
             </div>
