@@ -1,157 +1,296 @@
-<form action="http://localhost/mediclite/admin/downtime/savedowntime?t=226888aed3e9" method="POST">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">
-             Input Data
-            </h3>
-            <!-- <ul class="nav nav-tabs">
+<form action="http://localhost/mediclite/admin/downtime/savedowntime?t=73b7e8b06200" method="POST">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Input Data
+      </h3>
+      <!-- <ul class="nav nav-tabs">
                 <li class="active">
-                    <a href="http://localhost/mediclite/admin/inventaris/dataaset?t=226888aed3e9" role="tab">Data Aset</a>
+                    <a href="http://localhost/mediclite/admin/inventaris/dataaset?t=73b7e8b06200" role="tab">Data Aset</a>
                 </li>
                 <li>
-                    <a href="http://localhost/mediclite/admin/inventaris/inventarisbarang?t=226888aed3e9" role="tab">Data Barang</a>
+                    <a href="http://localhost/mediclite/admin/inventaris/inventarisbarang?t=73b7e8b06200" role="tab">Data Barang</a>
                 </li>
                  <li>
-                    <a href="http://localhost/mediclite/admin/inventaris/pemindahan?t=226888aed3e9" role="tab">Data Pemindahan</a>
+                    <a href="http://localhost/mediclite/admin/inventaris/pemindahan?t=73b7e8b06200" role="tab">Data Pemindahan</a>
                 </li>
             </ul> -->
-        </div>
-        
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Tanggal Mulai</label>
-                        <input type="text" name="tgl_mulai" id="tgl_mulai" class="form-control tanggal" value="" required />
-                    </div>
-                    <div class="form-group">
-                      <label>Jam Mulai</label>
-                      <input type="text" name="jam_mulai" class="form-control timepicker" value="14:44:08" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
-                  </div>
-                    <div class="form-group">
-                        <label>Tanggal selesai</label>
-                        <input type="text" name="tgl_selesai" class="form-control tanggal" value="" required />
-                    </div>
-                    <div class="form-group">
-                      <label for="jam_selesai">Jam Selesai</label>
-                      <input type="text" name="jam_selesai" class="form-control timepicker" value="14:44:08" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
-                    </div>
-                    <div class="form-group">
-                        <label>Jenis Downtime</label>
-                        <select name="jenis_downtime" id="jenis_downtime" class="form-control" data-use-search="true">
-                            <option value="terjadwal">Terjadwal</option>
-                            <option value="tidak terjadwal">Tidak Terjadwal</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Kategori Downtime</label>
-                        <select name="kategori" id="kategori" class="form-control" data-use-search="true">
-                            <option value="internal">internal</option>
-                            <option value="external">external</option>
-                            
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Keterangan Downtime</label>
-                        <textarea name="keterangan_downtime" id="keterangan_downtime" class="form-control"></textarea>
-                        <!-- <input type="text" name="keterangan_downtime" class="form-control" value="" /> -->
-                    </div>
-                    <div class="form-group">
-                        <label>catatan Downtime</label>
-                        <textarea name="catatan_downtime" id="catatan_downtime" class="form-control"></textarea>
-                        <!-- <input type="text" name="no_box" class="form-control" value="" /> -->
-                    </div>
-                    <div class="form-group">
-                        <label>Rencana dan Tindak Lanjut</label>
-                        <textarea name="tindak_lanjut" class="form-control" id="tindak_lanjut"></textarea>
-                        <!-- <input type="text" name="tindak_lanjut" class="form-control" value="" /> -->
-                    </div>
-                </div>
-                <div class="col-md-12" style="padding-top: 20px;">
-                    <input type="submit" name="simpan" class="btn btn-success" value="Simpan" />
-                    <input type="submit" name="update" class="btn btn-info" value="Update" />
-                    <input type="submit" name="hapus" class="btn btn-danger" value="Hapus" />
-                </div>
-            </div>
-        </div>
     </div>
+
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Tanggal Mulai</label>
+            <input type="text" name="tgl_mulai" id="tgl_mulai" class="form-control tanggal" value="" required />
+          </div>
+          <div class="form-group">
+            <label>Jam Mulai</label>
+            <input type="text" name="jam_mulai" class="form-control timepicker" value="13:41:14"
+              data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00"
+              data-show-2400="true" />
+          </div>
+          <div class="form-group">
+            <label>Tanggal selesai</label>
+            <input type="text" name="tgl_selesai" class="form-control tanggal" value="" required />
+          </div>
+          <div class="form-group">
+            <label for="jam_selesai">Jam Selesai</label>
+            <input type="text" name="jam_selesai" class="form-control timepicker" value="13:41:14"
+              data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00"
+              data-show-2400="true" />
+          </div>
+          <div class="form-group">
+            <label>Jenis Downtime</label>
+            <select name="jenis_downtime" id="jenis_downtime" class="form-control" data-use-search="true">
+              <option value="terjadwal">Terjadwal</option>
+              <option value="tidak terjadwal">Tidak Terjadwal</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Kategori Downtime</label>
+            <select name="kategori" id="kategori" class="form-control" data-use-search="true">
+              <option value="internal">internal</option>
+              <option value="external">external</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Keterangan Downtime</label>
+            <textarea name="keterangan_downtime" id="keterangan_downtime" class="form-control"></textarea>
+            <!-- <input type="text" name="keterangan_downtime" class="form-control" value="" /> -->
+          </div>
+          <div class="form-group">
+            <label>catatan Downtime</label>
+            <textarea name="catatan_downtime" id="catatan_downtime" class="form-control"></textarea>
+            <!-- <input type="text" name="no_box" class="form-control" value="" /> -->
+          </div>
+          <div class="form-group">
+            <label>Rencana dan Tindak Lanjut</label>
+            <textarea name="tindak_lanjut" class="form-control" id="tindak_lanjut"></textarea>
+            <!-- <input type="text" name="tindak_lanjut" class="form-control" value="" /> -->
+          </div>
+        </div>
+        <div class="col-md-12" style="padding-top: 20px;">
+          <input type="submit" name="simpan" class="btn btn-success" value="Simpan" />
+          <input type="submit" name="update" class="btn btn-info" value="Update" />
+          <input type="submit" name="hapus" class="btn btn-danger" value="Hapus" />
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
 <br>
 <h4>
-  
-  Periode tanggal : 2026-02-27  sampai tanggal 2026-02-27  <span class="pull-right">
+
+  Periode tanggal : 2026-02-28 sampai tanggal 2026-02-28  <span class="pull-right">
     <form class="" action="" method="">
       <input type="text" name="tgl_mulai" class="tanggal" value="" placeholder="Tanggal awal">
       <input type="text" name="tgl_selesai" class="tanggal" value="" placeholder="Tanggal akhir">
-      <input type="hidden" name="t" value="226888aed3e9">
+      <input type="hidden" name="t" value="73b7e8b06200">
       <input type="submit" value="Go">
     </form>
   </span>
 </h4>
 <br>
 <div class="row">
-    <div class="col-lg-12 col-md-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Data Downtime</h3>
+  <div class="col-lg-12 col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Data Downtime</h3>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive no-margin" id="downtime">
+          <table class="table table-striped no-padding dataTables" width="100%">
+            <thead>
+              <tr>
+                <th>Tanggal Mulai</th>
+                <th>Jenis Downtime</th>
+                <th>Kategori Downtime</th>
+                <th>Keterangan</th>
+                <th>Catatan</th>
+                <th>Tindak Lanjut</th>
+                <th>Tanggal Selesai</th>
+                <th>Durasi</th>
+              </tr>
+            </thead>
+            <tbody>
+                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="10:10:10"
+                data-jenis_downtime="terjadwal" data-kategori="internal"
+                data-keterangan_downtime="asderwewr"
+                data-catatan_downtime="rwewreewr" data-tindak_lanjut="rewewrwer"
+                data-tgl_selesai="2026-02-28" data-jam_selesai="12:00:00">
+                <td>2026-02-28 10:10:10</td>
+                <td>terjadwal</td>
+                <td>internal</td>
+                <td>asderwewr</td>
+                <td>rwewreewr</td>
+                <td>rewewrwer</td>
+                <td>2026-02-28 12:00:00</td>
+                <td>6590</td>
+                <!-- <td class="text-danger"></td> -->
+              </tr>
+                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="01:00:00"
+                data-jenis_downtime="terjadwal" data-kategori="internal"
+                data-keterangan_downtime="INSDA"
+                data-catatan_downtime="asdasd" data-tindak_lanjut="asdasd"
+                data-tgl_selesai="2026-02-28" data-jam_selesai="01:10:00">
+                <td>2026-02-28 01:00:00</td>
+                <td>terjadwal</td>
+                <td>internal</td>
+                <td>INSDA</td>
+                <td>asdasd</td>
+                <td>asdasd</td>
+                <td>2026-02-28 01:10:00</td>
+                <td>00 1am01 10 01UTC11031 00 01UTC3110k</td>
+                <!-- <td class="text-danger"></td> -->
+              </tr>
+                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="10:10:10"
+                data-jenis_downtime="terjadwal" data-kategori="internal"
+                data-keterangan_downtime="asderwewr"
+                data-catatan_downtime="rwewreewr" data-tindak_lanjut="rewewrwer"
+                data-tgl_selesai="2026-02-28" data-jam_selesai="12:00:00">
+                <td>2026-02-28 10:10:10</td>
+                <td>terjadwal</td>
+                <td>internal</td>
+                <td>asderwewr</td>
+                <td>rwewreewr</td>
+                <td>rewewrwer</td>
+                <td>2026-02-28 12:00:00</td>
+                <td>01 1am01 49 01UTC14931 50 01UTC3149k</td>
+                <!-- <td class="text-danger"></td> -->
+              </tr>
+                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="01:00:00"
+                data-jenis_downtime="terjadwal" data-kategori="internal"
+                data-keterangan_downtime="mbuh"
+                data-catatan_downtime="rwewreewr" data-tindak_lanjut="rewewrwer"
+                data-tgl_selesai="2026-02-28" data-jam_selesai="12:00:00">
+                <td>2026-02-28 01:00:00</td>
+                <td>terjadwal</td>
+                <td>internal</td>
+                <td>mbuh</td>
+                <td>rwewreewr</td>
+                <td>rewewrwer</td>
+                <td>2026-02-28 12:00:00</td>
+                <td>11 1am01 00 01UTC10031 00 01UTC3100k</td>
+                <!-- <td class="text-danger"></td> -->
+              </tr>
+                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="13:39:57"
+                data-jenis_downtime="terjadwal" data-kategori="internal"
+                data-keterangan_downtime="asd"
+                data-catatan_downtime="asd" data-tindak_lanjut="asd"
+                data-tgl_selesai="2026-02-28" data-jam_selesai="16:20:00">
+                <td>2026-02-28 13:39:57</td>
+                <td>terjadwal</td>
+                <td>internal</td>
+                <td>asd</td>
+                <td>asd</td>
+                <td>asd</td>
+                <td>2026-02-28 16:20:00</td>
+                <td>2 jam 40 menit 3 detik</td>
+                <!-- <td class="text-danger"></td> -->
+              </tr>
+                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="13:39:57"
+                data-jenis_downtime="terjadwal" data-kategori="internal"
+                data-keterangan_downtime="asd"
+                data-catatan_downtime="asd" data-tindak_lanjut="asd"
+                data-tgl_selesai="2026-03-01" data-jam_selesai="13:40:00">
+                <td>2026-02-28 13:39:57</td>
+                <td>terjadwal</td>
+                <td>internal</td>
+                <td>asd</td>
+                <td>asd</td>
+                <td>asd</td>
+                <td>2026-03-01 13:40:00</td>
+                <td>24 jam 0 menit 3 detik</td>
+                <!-- <td class="text-danger"></td> -->
+              </tr>
+                          </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <button class="btn btn-primary" data-toggle="modal" data-target="#modal-default">tombol</button>
+</div>
+<br>
+<!-- MODAL  -->
+
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+
+      <form action="http://localhost/mediclite/admin/downtime/cetakdowntime?t=73b7e8b06200" method="POST" target="_blank">
+        <div class="modal-body">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Cetak Data Downtime</h3>
             </div>
-            <div class="panel-body">
-              <div class="table-responsive no-margin" id="downtime">
-              <table class="table table-striped no-padding dataTables" width="100%">
-                <thead>
-                  <tr>
-                    <th>Tanggal Mulai</th>
-                    <th>Jenis Downtime</th>
-                    <th>Kategori Downtime</th>
-                    <th>Keterangan</th>
-                    <th>Catatan</th>
-                    <th>Tindak Lanjut</th>
-                    <th>Tanggal Selesai</th>
-                  </tr>
-                </thead>
-                <tbody>
-                                  </tbody>
-              </table>
+            
+            <div class="card-body">
+              <div class="form-group">
+                <label for="tgl_awal">Dari Tanggal</label>
+                <input type="text" name="tgl_awal" class="form-control tanggal" id="tgl_awal" placeholder="YYYY-MM-DD">
+              </div>
+              <div class="form-group">
+                <label for="tgl_akhir">Sampai Tanggal</label>
+                <input type="text" name="tgl_akhir" class="form-control tanggal" id="tgl_akhir" placeholder="YYYY-MM-DD">
               </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<div class="panel-footer"></div>
-<script type="text/javascript">
-   $("#downtime").on("click", ".downtime", function(event){
-    var tgl_mulai  = $(this).attr("data-tgl_mulai");
-    var jam_mulai  = $(this).attr("data-jam_mulai");
-    var jenis_downtime  = $(this).attr("data-jenis_downtime");
-    var kategori  = $(this).attr("data-kategori");
-    var keterangan_downtime  = $(this).attr("data-keterangan_downtime");
-    var catatan_downtime  = $(this).attr("data-catatan_downtime");
-    var tgl_selesai  = $(this).attr("data-tgl_selesai");
-    var jam_selesai  = $(this).attr("data-jam_selesai");
-    var tindak_lanjut  = $(this).attr("data-tindak_lanjut");
-     $('input:text[name=tgl_mulai]').val(tgl_mulai);
-    $('input:text[name=jam_mulai]').val(jam_mulai);
-    $('#jenis_downtime').val(jenis_downtime).change();
-   $('#kategori').val(kategori).change();
-    $('#keterangan_downtime').val(keterangan_downtime);
-     $('#catatan_downtime').val(catatan_downtime);
-    $('input:text[name=tgl_selesai]').val(tgl_selesai);
-    $('input:text[name=jam_selesai]').val(jam_selesai);
-    $('#tindak_lanjut').val(tindak_lanjut);
-    
-   });
-  $( function() {
-    $( ".datepicker" ).datepicker({
-      dateFormat: "yy-mm-dd",
-      changeMonth: true,
-      changeYear: true,
-      yearRange: "-100:+0",
-    });
-  } );
+        
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Simpan Data</button>
+        </div>
+      </form>
 
-  $( function() {
-    $('.timepicker').timepicker();
-  } );  
-</script>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- END MODAL -->
+    <div class="panel-footer"></div>
+    <script type="text/javascript">
+      $("#downtime").on("click", ".downtime", function (event) {
+        var tgl_mulai = $(this).attr("data-tgl_mulai");
+        var jam_mulai = $(this).attr("data-jam_mulai");
+        var jenis_downtime = $(this).attr("data-jenis_downtime");
+        var kategori = $(this).attr("data-kategori");
+        var keterangan_downtime = $(this).attr("data-keterangan_downtime");
+        var catatan_downtime = $(this).attr("data-catatan_downtime");
+        var tgl_selesai = $(this).attr("data-tgl_selesai");
+        var jam_selesai = $(this).attr("data-jam_selesai");
+        var tindak_lanjut = $(this).attr("data-tindak_lanjut");
+        $('input:text[name=tgl_mulai]').val(tgl_mulai);
+        $('input:text[name=jam_mulai]').val(jam_mulai);
+        $('#jenis_downtime').val(jenis_downtime).change();
+        $('#kategori').val(kategori).change();
+        $('#keterangan_downtime').val(keterangan_downtime);
+        $('#catatan_downtime').val(catatan_downtime);
+        $('input:text[name=tgl_selesai]').val(tgl_selesai);
+        $('input:text[name=jam_selesai]').val(jam_selesai);
+        $('#tindak_lanjut').val(tindak_lanjut);
+
+      });
+      $(function () {
+        $(".datepicker").datepicker({
+          dateFormat: "yy-mm-dd",
+          changeMonth: true,
+          changeYear: true,
+          yearRange: "-100:+0",
+        });
+      });
+
+      $(function () {
+        $('.timepicker').timepicker();
+      });  
+    </script>

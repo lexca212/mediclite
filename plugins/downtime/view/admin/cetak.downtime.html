@@ -1,0 +1,51 @@
+<head>
+    <title>Cetak Data Downtime</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        @media print {
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<td>
+    rsd
+</td>
+<td>rsd</td>
+<body>
+    <table>
+    <thead>
+        <tr >
+             <th>Tanggal</th>
+             <th>Jenis Downtime</th>
+             <th>Kategori</th>
+             <th>Keterangan</th>
+             <th>catatan</th>
+             <th>Tindak Lanjut</th>
+        </tr>
+    </thead>
+    <tbody>
+        {loop: $downtime}
+        <tr>
+            <td>{$value.tgl_mulai}</td>
+            <td>{$value.jenis_downtime}</td>
+            <td>{$value.kategori}</td>
+            <td>{$value.keterangan_downtime}</td>
+            <td>{$value.catatan_downtime}</td>
+            <td>{$value.tindak_lanjut}</td>
+        </tr>
+        {/loop}
+    </tbody>
+</table>
+</body>

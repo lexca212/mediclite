@@ -1,11 +1,11 @@
 {if: $this->core->getUserInfo('role') == 'admin'}
 <form action="{?=url(ADMIN.'/downtime/savedowntime')?}" method="POST">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">
-             Input Data
-            </h3>
-            <!-- <ul class="nav nav-tabs">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Input Data
+      </h3>
+      <!-- <ul class="nav nav-tabs">
                 <li class="active">
                     <a href="{?=url([ADMIN,'inventaris','dataaset'])?}" role="tab">Data Aset</a>
                 </li>
@@ -16,74 +16,78 @@
                     <a href="{?=url([ADMIN,'inventaris','pemindahan'])?}" role="tab">Data Pemindahan</a>
                 </li>
             </ul> -->
-        </div>
-        
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Tanggal Mulai</label>
-                        <input type="text" name="tgl_mulai" id="tgl_mulai" class="form-control tanggal" value="" required />
-                    </div>
-                    <div class="form-group">
-                      <label>Jam Mulai</label>
-                      <input type="text" name="jam_mulai" class="form-control timepicker" value="{?=date('H:i:s')?}" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
-                  </div>
-                    <div class="form-group">
-                        <label>Tanggal selesai</label>
-                        <input type="text" name="tgl_selesai" class="form-control tanggal" value="" required />
-                    </div>
-                    <div class="form-group">
-                      <label for="jam_selesai">Jam Selesai</label>
-                      <input type="text" name="jam_selesai" class="form-control timepicker" value="{?=date('H:i:s')?}" data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00" data-show-2400="true"/>
-                    </div>
-                    <div class="form-group">
-                        <label>Jenis Downtime</label>
-                        <select name="jenis_downtime" id="jenis_downtime" class="form-control" data-use-search="true">
-                            <option value="terjadwal">Terjadwal</option>
-                            <option value="tidak terjadwal">Tidak Terjadwal</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Kategori Downtime</label>
-                        <select name="kategori" id="kategori" class="form-control" data-use-search="true">
-                            <option value="internal">internal</option>
-                            <option value="external">external</option>
-                            
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Keterangan Downtime</label>
-                        <textarea name="keterangan_downtime" id="keterangan_downtime" class="form-control"></textarea>
-                        <!-- <input type="text" name="keterangan_downtime" class="form-control" value="" /> -->
-                    </div>
-                    <div class="form-group">
-                        <label>catatan Downtime</label>
-                        <textarea name="catatan_downtime" id="catatan_downtime" class="form-control"></textarea>
-                        <!-- <input type="text" name="no_box" class="form-control" value="" /> -->
-                    </div>
-                    <div class="form-group">
-                        <label>Rencana dan Tindak Lanjut</label>
-                        <textarea name="tindak_lanjut" class="form-control" id="tindak_lanjut"></textarea>
-                        <!-- <input type="text" name="tindak_lanjut" class="form-control" value="" /> -->
-                    </div>
-                </div>
-                <div class="col-md-12" style="padding-top: 20px;">
-                    <input type="submit" name="simpan" class="btn btn-success" value="Simpan" />
-                    <input type="submit" name="update" class="btn btn-info" value="Update" />
-                    <input type="submit" name="hapus" class="btn btn-danger" value="Hapus" />
-                </div>
-            </div>
-        </div>
     </div>
+
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Tanggal Mulai</label>
+            <input type="text" name="tgl_mulai" id="tgl_mulai" class="form-control tanggal" value="" required />
+          </div>
+          <div class="form-group">
+            <label>Jam Mulai</label>
+            <input type="text" name="jam_mulai" class="form-control timepicker" value="{?=date('H:i:s')?}"
+              data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00"
+              data-show-2400="true" />
+          </div>
+          <div class="form-group">
+            <label>Tanggal selesai</label>
+            <input type="text" name="tgl_selesai" class="form-control tanggal" value="" required />
+          </div>
+          <div class="form-group">
+            <label for="jam_selesai">Jam Selesai</label>
+            <input type="text" name="jam_selesai" class="form-control timepicker" value="{?=date('H:i:s')?}"
+              data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00"
+              data-show-2400="true" />
+          </div>
+          <div class="form-group">
+            <label>Jenis Downtime</label>
+            <select name="jenis_downtime" id="jenis_downtime" class="form-control" data-use-search="true">
+              <option value="terjadwal">Terjadwal</option>
+              <option value="tidak terjadwal">Tidak Terjadwal</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Kategori Downtime</label>
+            <select name="kategori" id="kategori" class="form-control" data-use-search="true">
+              <option value="internal">internal</option>
+              <option value="external">external</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Keterangan Downtime</label>
+            <textarea name="keterangan_downtime" id="keterangan_downtime" class="form-control"></textarea>
+            <!-- <input type="text" name="keterangan_downtime" class="form-control" value="" /> -->
+          </div>
+          <div class="form-group">
+            <label>catatan Downtime</label>
+            <textarea name="catatan_downtime" id="catatan_downtime" class="form-control"></textarea>
+            <!-- <input type="text" name="no_box" class="form-control" value="" /> -->
+          </div>
+          <div class="form-group">
+            <label>Rencana dan Tindak Lanjut</label>
+            <textarea name="tindak_lanjut" class="form-control" id="tindak_lanjut"></textarea>
+            <!-- <input type="text" name="tindak_lanjut" class="form-control" value="" /> -->
+          </div>
+        </div>
+        <div class="col-md-12" style="padding-top: 20px;">
+          <input type="submit" name="simpan" class="btn btn-success" value="Simpan" />
+          <input type="submit" name="update" class="btn btn-info" value="Update" />
+          <input type="submit" name="hapus" class="btn btn-danger" value="Hapus" />
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
 {/if}
 <br>
 <h4>
-  
-  Periode tanggal : {$tgl_awal}  sampai tanggal {$tgl_akhir}
+
+  Periode tanggal : {$tgl_awal} sampai tanggal {$tgl_akhir}
   <span class="pull-right">
     <form class="" action="" method="">
       <input type="text" name="tgl_mulai" class="tanggal" value="" placeholder="Tanggal awal">
@@ -95,87 +99,128 @@
 </h4>
 <br>
 <div class="row">
-    <div class="col-lg-12 col-md-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Data Downtime</h3>
+  <div class="col-lg-12 col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Data Downtime</h3>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive no-margin" id="downtime">
+          <table class="table table-striped no-padding dataTables" width="100%">
+            <thead>
+              <tr>
+                <th>Tanggal Mulai</th>
+                <th>Jenis Downtime</th>
+                <th>Kategori Downtime</th>
+                <th>Keterangan</th>
+                <th>Catatan</th>
+                <th>Tindak Lanjut</th>
+                <th>Tanggal Selesai</th>
+                <th>Durasi</th>
+              </tr>
+            </thead>
+            <tbody>
+              {loop: $downtime}
+              <tr class="downtime" data-tgl_mulai="{$value.tgl_mulai}" data-jam_mulai="{$value.jam_mulai}"
+                data-jenis_downtime="{$value.jenis_downtime}" data-kategori="{$value.kategori}"
+                data-keterangan_downtime="{$value.keterangan_downtime}"
+                data-catatan_downtime="{$value.catatan_downtime}" data-tindak_lanjut="{$value.tindak_lanjut}"
+                data-tgl_selesai="{$value.tgl_selesai}" data-jam_selesai="{$value.jam_selesai}">
+                <td>{$value.tgl_mulai} {$value.jam_mulai}</td>
+                <td>{$value.jenis_downtime}</td>
+                <td>{$value.kategori}</td>
+                <td>{$value.keterangan_downtime}</td>
+                <td>{$value.catatan_downtime}</td>
+                <td>{$value.tindak_lanjut}</td>
+                <td>{$value.tgl_selesai} {$value.jam_selesai}</td>
+                <td>{$value.durasi}</td>
+                <!-- <td class="text-{if: $value.status_perbaikan == 'Sudah'}primary{else}danger{/if}">{$value.status_perbaikan}</td> -->
+              </tr>
+              {/loop}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <button class="btn btn-primary" data-toggle="modal" data-target="#modal-default">tombol</button>
+</div>
+<br>
+<!-- MODAL  -->
+
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+
+      <form action="{?=url(ADMIN.'/downtime/cetakdowntime')?}" method="POST" target="_blank">
+        <div class="modal-body">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Cetak Data Downtime</h3>
             </div>
-            <div class="panel-body">
-              <div class="table-responsive no-margin" id="downtime">
-              <table class="table table-striped no-padding dataTables" width="100%">
-                <thead>
-                  <tr>
-                    <th>Tanggal Mulai</th>
-                    <th>Jenis Downtime</th>
-                    <th>Kategori Downtime</th>
-                    <th>Keterangan</th>
-                    <th>Catatan</th>
-                    <th>Tindak Lanjut</th>
-                    <th>Tanggal Selesai</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {loop: $downtime}
-                  <tr class="downtime"
-                  data-tgl_mulai="{$value.tgl_mulai}"
-                  data-jam_mulai="{$value.jam_mulai}"
-                  data-jenis_downtime="{$value.jenis_downtime}"
-                  data-kategori="{$value.kategori}"
-                  data-keterangan_downtime="{$value.keterangan_downtime}"
-                  data-catatan_downtime="{$value.catatan_downtime}"
-                  data-tindak_lanjut="{$value.tindak_lanjut}"
-                  data-tgl_selesai="{$value.tgl_selesai}"
-                  data-jam_selesai="{$value.jam_selesai}">
-                    <td>{$value.tgl_mulai} {$value.jam_mulai}</td>
-                    <td>{$value.jenis_downtime}</td>
-                    <td>{$value.kategori}</td>
-                    <td>{$value.keterangan_downtime}</td>
-                    <td>{$value.catatan_downtime}</td>
-                    <td>{$value.tindak_lanjut}</td>
-                    <td>{$value.tgl_selesai}  {$value.jam_selesai}</td>
-                    <!-- <td class="text-{if: $value.status_perbaikan == 'Sudah'}primary{else}danger{/if}">{$value.status_perbaikan}</td> -->
-                  </tr>
-                  {/loop}
-                </tbody>
-              </table>
+            
+            <div class="card-body">
+              <div class="form-group">
+                <label for="tgl_awal">Dari Tanggal</label>
+                <input type="text" name="tgl_awal" class="form-control tanggal" id="tgl_awal" placeholder="YYYY-MM-DD">
+              </div>
+              <div class="form-group">
+                <label for="tgl_akhir">Sampai Tanggal</label>
+                <input type="text" name="tgl_akhir" class="form-control tanggal" id="tgl_akhir" placeholder="YYYY-MM-DD">
               </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<div class="panel-footer"></div>
-<script type="text/javascript">
-   $("#downtime").on("click", ".downtime", function(event){
-    var tgl_mulai  = $(this).attr("data-tgl_mulai");
-    var jam_mulai  = $(this).attr("data-jam_mulai");
-    var jenis_downtime  = $(this).attr("data-jenis_downtime");
-    var kategori  = $(this).attr("data-kategori");
-    var keterangan_downtime  = $(this).attr("data-keterangan_downtime");
-    var catatan_downtime  = $(this).attr("data-catatan_downtime");
-    var tgl_selesai  = $(this).attr("data-tgl_selesai");
-    var jam_selesai  = $(this).attr("data-jam_selesai");
-    var tindak_lanjut  = $(this).attr("data-tindak_lanjut");
-     $('input:text[name=tgl_mulai]').val(tgl_mulai);
-    $('input:text[name=jam_mulai]').val(jam_mulai);
-    $('#jenis_downtime').val(jenis_downtime).change();
-   $('#kategori').val(kategori).change();
-    $('#keterangan_downtime').val(keterangan_downtime);
-     $('#catatan_downtime').val(catatan_downtime);
-    $('input:text[name=tgl_selesai]').val(tgl_selesai);
-    $('input:text[name=jam_selesai]').val(jam_selesai);
-    $('#tindak_lanjut').val(tindak_lanjut);
-    
-   });
-  $( function() {
-    $( ".datepicker" ).datepicker({
-      dateFormat: "yy-mm-dd",
-      changeMonth: true,
-      changeYear: true,
-      yearRange: "-100:+0",
-    });
-  } );
+        
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Simpan Data</button>
+        </div>
+      </form>
 
-  $( function() {
-    $('.timepicker').timepicker();
-  } );  
-</script>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- END MODAL -->
+    <div class="panel-footer"></div>
+    <script type="text/javascript">
+      $("#downtime").on("click", ".downtime", function (event) {
+        var tgl_mulai = $(this).attr("data-tgl_mulai");
+        var jam_mulai = $(this).attr("data-jam_mulai");
+        var jenis_downtime = $(this).attr("data-jenis_downtime");
+        var kategori = $(this).attr("data-kategori");
+        var keterangan_downtime = $(this).attr("data-keterangan_downtime");
+        var catatan_downtime = $(this).attr("data-catatan_downtime");
+        var tgl_selesai = $(this).attr("data-tgl_selesai");
+        var jam_selesai = $(this).attr("data-jam_selesai");
+        var tindak_lanjut = $(this).attr("data-tindak_lanjut");
+        $('input:text[name=tgl_mulai]').val(tgl_mulai);
+        $('input:text[name=jam_mulai]').val(jam_mulai);
+        $('#jenis_downtime').val(jenis_downtime).change();
+        $('#kategori').val(kategori).change();
+        $('#keterangan_downtime').val(keterangan_downtime);
+        $('#catatan_downtime').val(catatan_downtime);
+        $('input:text[name=tgl_selesai]').val(tgl_selesai);
+        $('input:text[name=jam_selesai]').val(jam_selesai);
+        $('#tindak_lanjut').val(tindak_lanjut);
+
+      });
+      $(function () {
+        $(".datepicker").datepicker({
+          dateFormat: "yy-mm-dd",
+          changeMonth: true,
+          changeYear: true,
+          yearRange: "-100:+0",
+        });
+      });
+
+      $(function () {
+        $('.timepicker').timepicker();
+      });  
+    </script>

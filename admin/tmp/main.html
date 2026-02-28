@@ -299,14 +299,14 @@
 
       var base64image = document.getElementById("imageprev").src;
 
-      Webcam.upload(base64image, 'http://localhost/mediclite/admin/dashboard/upload?t=234998f26a4f&shift=' + getshift, function (code, text) {
+      Webcam.upload(base64image, 'http://localhost/mediclite/admin/dashboard/upload?t=50a1e4776c51&shift=' + getshift, function (code, text) {
       });
 
       Webcam.reset();
 
       navigator.geolocation.getCurrentPosition(
         function (position) {
-          $.post('http://localhost/mediclite/admin/dashboard/geolocation?t=234998f26a4f', { lat: position.coords.latitude, lng: position.coords.longitude });
+          $.post('http://localhost/mediclite/admin/dashboard/geolocation?t=50a1e4776c51', { lat: position.coords.latitude, lng: position.coords.longitude });
         },
         function error(err) { },
         { enableHighAccuracy: true, timeout: 5000 }
