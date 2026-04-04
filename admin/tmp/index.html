@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>mLITE - Downtime Manajemen</title>
+    <title>mLITE - Dokter Ranap</title>
     <link rel="icon" href="http://localhost/mediclite/uploads/settings/logo_678611cb1e2eb.png" type="image/x-icon">
     <link href="http://localhost/mediclite/assets/css/cosmo.min.css?v=4.1.8" rel="stylesheet">
     <link href="http://localhost/mediclite/assets/css/animate.min.css?v=4.1.8" rel="stylesheet">
-    <link href="http://localhost/mediclite/themes/admin/css/style.css?v=11224.1.8&t=73b7e8b06200" rel="stylesheet">
+    <link href="http://localhost/mediclite/themes/admin/css/style.css?v=11224.1.8&t=e8a38071b9a1" rel="stylesheet">
     <link href="http://localhost/mediclite/assets/css/font-awesome.css?v=4.1.8" rel="stylesheet">
 <style>
 .navbar li.menu-icon {
@@ -126,18 +126,16 @@
     <script src="http://localhost/mediclite/assets/jscripts/bootbox.min.js?v=4.1.8"></script>
     <script src="http://localhost/mediclite/assets/jscripts/html.sortable.min.js?v=4.1.8"></script>
     <script src="http://localhost/mediclite/assets/jscripts/tinynav.min.js?v=4.1.8"></script>
-    <script src="http://localhost/mediclite/themes/admin/js/kalypto.min.js?v=4.1.8&t=73b7e8b06200"></script>
-    <script src="http://localhost/mediclite/themes/admin/js/selectator.js?v=4.1.8&t=73b7e8b06200"></script>
+    <script src="http://localhost/mediclite/themes/admin/js/kalypto.min.js?v=4.1.8&t=e8a38071b9a1"></script>
+    <script src="http://localhost/mediclite/themes/admin/js/selectator.js?v=4.1.8&t=e8a38071b9a1"></script>
     <script>
-        var mlite = {token:"73b7e8b06200", url:"http://localhost/mediclite", admin:"admin"};
+        var mlite = {token:"e8a38071b9a1", url:"http://localhost/mediclite", admin:"admin"};
     </script>
     <meta name="generator" content="Medic LITE Indonesia" />
 <link rel="stylesheet" href="http://localhost/mediclite/assets/css/dataTables.bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost/mediclite/assets/css/bootstrap-datetimepicker.css">
-<link rel="stylesheet" href="http://localhost/mediclite/assets/css/jquery.timepicker.css">
-<link rel="stylesheet" href="http://localhost/mediclite/admin/downtime/css?t=73b7e8b06200">
 <script src="http://localhost/mediclite/assets/jscripts/jquery.dataTables.min.js"></script>
 <script src="http://localhost/mediclite/assets/jscripts/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://localhost/mediclite/assets/css/bootstrap-datetimepicker.css">
 <script src="http://localhost/mediclite/assets/jscripts/moment-with-locales.js"></script>
 <script src="http://localhost/mediclite/assets/jscripts/bootstrap-datetimepicker.js"></script>
 </head>
@@ -156,7 +154,7 @@
                         </a>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="http://localhost/mediclite/admin/logout?t=73b7e8b06200" class="fa fa-power-off" data-toggle="tooltip" data-placement="bottom" title="Keluar"></a></li>
+                        <li><a href="http://localhost/mediclite/admin/logout?t=e8a38071b9a1" class="fa fa-power-off" data-toggle="tooltip" data-placement="bottom" title="Keluar"></a></li>
                     </ul>
                 </div>
             </nav>
@@ -169,74 +167,74 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://localhost/mediclite/favicon.png" height="20px"></a>
                   <ul class="dropdown-menu">
                     <li><a href="#" data-toggle="modal" data-target="#tentangModal"> Tentang</a></li>
-                    <li><a href="http://localhost/mediclite/admin/dashboard/menu?t=73b7e8b06200" data-toggle="modal" data-target="#menuModal"> Menu</a></li>
-                    <li><a href="http://localhost/mediclite/admin/logout?t=73b7e8b06200"> Logout</a></li>
+                    <li><a href="http://localhost/mediclite/admin/dashboard/menu?t=e8a38071b9a1" data-toggle="modal" data-target="#menuModal"> Menu</a></li>
+                    <li><a href="http://localhost/mediclite/admin/logout?t=e8a38071b9a1"> Logout</a></li>
                   </ul>  
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layanan</a>
                   <ul class="dropdown-menu">
-                    <li ><a href="http://localhost/mediclite/admin/igd/manage?t=73b7e8b06200">IGD</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/rawat_jalan/manage?t=73b7e8b06200">Rawat Jalan</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/rawat_inap/manage?t=73b7e8b06200">Rawat Inap</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/dokter_igd/manage?t=73b7e8b06200">Dokter IGD</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/dokter_ralan/manage?t=73b7e8b06200">Dokter Rawat Jalan</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/dokter_ranap/manage?t=73b7e8b06200">Dokter Rawat Inap</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=73b7e8b06200">Apotek</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/laboratorium/manage?t=73b7e8b06200">Laboratorium</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/radiologi/manage?t=73b7e8b06200">Radiologi</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/igd/manage?t=e8a38071b9a1">IGD</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/rawat_jalan/manage?t=e8a38071b9a1">Rawat Jalan</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/rawat_inap/manage?t=e8a38071b9a1">Rawat Inap</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/dokter_igd/manage?t=e8a38071b9a1">Dokter IGD</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/dokter_ralan/manage?t=e8a38071b9a1">Dokter Rawat Jalan</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/dokter_ranap/manage?t=e8a38071b9a1">Dokter Rawat Inap</a></li>
+                    <li class="disabled"><a href="">Apotek</a></li>
+                    <li class="disabled"><a href="">Laboratorium</a></li>
+                    <li class="disabled"><a href="">Radiologi</a></li>
                   </ul>  
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manajemen</a>
                   <ul class="dropdown-menu">
-                    <li ><a href="http://localhost/mediclite/admin/manajemen/manage?t=73b7e8b06200">Manajemen Mutu</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/master/manage?t=73b7e8b06200">Master Data</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/kepegawaian/manage?t=73b7e8b06200">Kepegawaian</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/master/dokter?t=73b7e8b06200">Dokter</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/master/petugas?t=73b7e8b06200">Petugas</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/wagateway/manage?t=73b7e8b06200">WA Gateway</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/presensi/manage?t=73b7e8b06200">Presensi Pegawai</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/profil/manage?t=73b7e8b06200">Akun Pegawai</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/inventaris/manage?t=73b7e8b06200">Data Inventaris</a></li>
+                    <li class="disabled"><a href="">Manajemen Mutu</a></li>
+                    <li class="disabled"><a href="">Master Data</a></li>
+                    <li class="disabled"><a href="">Kepegawaian</a></li>
+                    <li class="disabled"><a href="">Dokter</a></li>
+                    <li class="disabled"><a href="">Petugas</a></li>
+                    <li class="disabled"><a href="">WA Gateway</a></li>
+                    <li class="disabled"><a href="">Presensi Pegawai</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/profil/manage?t=e8a38071b9a1">Akun Pegawai</a></li>
+                    <li class="disabled"><a href="">Data Inventaris</a></li>
                   </ul>  
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Farmasi</a>
                   <ul class="dropdown-menu">
-                    <li ><a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=73b7e8b06200">Apotek Rawat Jalan</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/apotek_ranap/manage?t=73b7e8b06200">Apotek Rawat Inap</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/master/databarang?t=73b7e8b06200">Inventory Obat</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/farmasi/opname?t=73b7e8b06200">Stok Opname</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/farmasi/mutasi?t=73b7e8b06200">Mutasi Obat</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/riwayat_barang_medis/manage?t=73b7e8b06200">Sirkulasi Obat</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/detail_pemberian_obat/manage?t=73b7e8b06200">Detail Pemberian Obat</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/darurat_stok/manage?t=73b7e8b06200">Darurat Stok</a></li>
+                    <li class="disabled"><a href="">Apotek Rawat Jalan</a></li>
+                    <li class="disabled"><a href="">Apotek Rawat Inap</a></li>
+                    <li class="disabled"><a href="">Inventory Obat</a></li>
+                    <li class="disabled"><a href="">Stok Opname</a></li>
+                    <li class="disabled"><a href="">Mutasi Obat</a></li>
+                    <li class="disabled"><a href="">Sirkulasi Obat</a></li>
+                    <li class="disabled"><a href="">Detail Pemberian Obat</a></li>
+                    <li class="disabled"><a href="">Darurat Stok</a></li>
                   </ul>  
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rekam Medik</a>
                   <ul class="dropdown-menu">
-                    <li ><a href="http://localhost/mediclite/admin/pasien/manage?t=73b7e8b06200">Data Pasien</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/vedika/manage?t=73b7e8b06200">Verifikasi Digital Klaim</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/veronisa/manage?t=73b7e8b06200">Verifikasi Obat Kronis</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/icd_10/manage?t=73b7e8b06200">Data ICD 10</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/icd_9/manage?t=73b7e8b06200">Data ICD 9</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/pasien/manage?t=e8a38071b9a1">Data Pasien</a></li>
+                    <li class="disabled"><a href="">Verifikasi Digital Klaim</a></li>
+                    <li class="disabled"><a href="">Verifikasi Obat Kronis</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/icd_10/manage?t=e8a38071b9a1">Data ICD 10</a></li>
+                    <li ><a href="http://localhost/mediclite/admin/icd_9/manage?t=e8a38071b9a1">Data ICD 9</a></li>
                   </ul>  
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bridging</a>
                   <ul class="dropdown-menu">
-                    <li ><a href="http://localhost/mediclite/admin/vclaim/manage?t=73b7e8b06200">vClaim BPJS</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/jkn_mobile/manage?t=73b7e8b06200">Antrol FKTL BPJS</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/laporan_bpjs/manage?t=73b7e8b06200">Laporan Pengiriman BPJS</a></li>
+                    <li class="disabled"><a href="">vClaim BPJS</a></li>
+                    <li class="disabled"><a href="">Antrol FKTL BPJS</a></li>
+                    <li class="disabled"><a href="">Laporan Pengiriman BPJS</a></li>
                     <li class="disabled"><a href="">PCare BPJS</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/jkn_mobile_fktp/manage?t=73b7e8b06200">Antrol FKTP BPJS</a></li>
+                    <li class="disabled"><a href="">Antrol FKTP BPJS</a></li>
                     <li><a href="#" style="color: red !important">Aplicare BPJS</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/icare/manage?t=73b7e8b06200">iCare BPJS</a></li>
+                    <li class="disabled"><a href="">iCare BPJS</a></li>
                     <li><a href="#" style="color: red !important">Siranap Kemkes</a></li>
                     <li class="disabled"><a href="">Satu Sehat Kemkes</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/orthanc/manage?t=73b7e8b06200">Radiologi Orthanc</a></li>
+                    <li class="disabled"><a href="">Radiologi Orthanc</a></li>
                     <li><a href="#" style="color: red !important">Laborarotium MyLIMS</a></li>
                   </ul>  
                 </li>
@@ -244,9 +242,9 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Laporan</a>
                   <ul class="dropdown-menu">
                     <li><a href="#" style="color: red !important">Penggunaan Obat</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/jasa_medis_dokter/manage?t=73b7e8b06200">Jasa Medik Dokter</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/jasa_medis_perawat/manage?t=73b7e8b06200">Jasa Medik Petugas</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/kunjungan_ralan/manage?t=73b7e8b06200">Kunjungan Rumah Sakit</a></li>
+                    <li class="disabled"><a href="">Jasa Medik Dokter</a></li>
+                    <li class="disabled"><a href="">Jasa Medik Petugas</a></li>
+                    <li class="disabled"><a href="">Kunjungan Rumah Sakit</a></li>
                     <li><a href="#" style="color: red !important">Pembayaran Rawat Jalan</a></li>
                     <li><a href="#" style="color: red !important">Pembayaran Rawat Inap</a></li>
                     <li><a href="#" style="color: red !important">Kunjungan Rawat Jalan</a></li>
@@ -257,12 +255,12 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Keuangan</a>
                   <ul class="dropdown-menu">
-                    <li ><a href="http://localhost/mediclite/admin/penjualan/manage?t=73b7e8b06200">Penjualan</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/keuangan/jurnalharian?t=73b7e8b06200">Jurnal Harian</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/keuangan/postingjurnal?t=73b7e8b06200">Posting Jurnal</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/keuangan/bukubesar?t=73b7e8b06200">Buku Besar</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/keuangan/cashflow?t=73b7e8b06200">Cash Flow</a></li>
-                    <li ><a href="http://localhost/mediclite/admin/keuangan/neraca?t=73b7e8b06200">Neraca Rugi Laba</a></li>
+                    <li class="disabled"><a href="">Penjualan</a></li>
+                    <li class="disabled"><a href="">Jurnal Harian</a></li>
+                    <li class="disabled"><a href="">Posting Jurnal</a></li>
+                    <li class="disabled"><a href="">Buku Besar</a></li>
+                    <li class="disabled"><a href="">Cash Flow</a></li>
+                    <li class="disabled"><a href="">Neraca Rugi Laba</a></li>
                   </ul>  
                 </li>
                 <li class="dropdown">
@@ -298,327 +296,3255 @@
           </div>          
           <div class="container-fluid navbar-icon-top">
             <ul class="nav navbar-nav">
-              <li class="menu-icon"><a href="http://localhost/mediclite/admin/dashboard/menu?t=73b7e8b06200" data-toggle="modal" data-target="#menuModal" style="border-radius: 5px !important;"><i class="fa fa-home text-primary"></i> Menu</a></li>
-                            <li class="menu-icon"><a href="http://localhost/mediclite/admin/pasien/manage?t=73b7e8b06200" style="border-radius: 5px !important;"><i class="fa fa-users text-success"></i> Pasien</a></li>
-                                                            <li class="menu-icon"><a href="http://localhost/mediclite/admin/igd/manage?t=73b7e8b06200" style="border-radius: 5px !important;"><i class="fa fa-ambulance text-danger"></i> IGD</a></li>
-                                                <li class="menu-icon"><a href="http://localhost/mediclite/admin/rawat_jalan/manage?t=73b7e8b06200" style="border-radius: 5px !important;"><i class="fa fa-wheelchair text-warning"></i> Poliklinik</a></li>
-                                                <li class="menu-icon"><a href="http://localhost/mediclite/admin/rawat_inap/manage?t=73b7e8b06200" style="border-radius: 5px !important;"><i class="fa fa-hotel text-info"></i> Rawat Inap</a></li>
-                                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=73b7e8b06200" style="border-radius: 5px !important;"><i class="fa fa-medkit text-success"></i> Apotek</a></li>
-                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/laboratorium/manage?t=73b7e8b06200" style="border-radius: 5px !important;"><i class="fa fa-flask text-warning"></i> Laboratorium</a></li>
-                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/radiologi/manage?t=73b7e8b06200" style="border-radius: 5px !important;"><i class="fa fa-film text-info"></i> Radiologi</a></li>
+              <li class="menu-icon"><a href="http://localhost/mediclite/admin/dashboard/menu?t=e8a38071b9a1" data-toggle="modal" data-target="#menuModal" style="border-radius: 5px !important;"><i class="fa fa-home text-primary"></i> Menu</a></li>
+                            <li class="menu-icon"><a href="http://localhost/mediclite/admin/pasien/manage?t=e8a38071b9a1" style="border-radius: 5px !important;"><i class="fa fa-users text-success"></i> Pasien</a></li>
+                                                            <li class="menu-icon"><a href="http://localhost/mediclite/admin/dokter_igd/manage?t=e8a38071b9a1" style="border-radius: 5px !important;"><i class="fa fa-ambulance text-danger"></i> Dokter IGD</a></li>
+                                                <li class="menu-icon"><a href="http://localhost/mediclite/admin/dokter_ralan/manage?t=e8a38071b9a1" style="border-radius: 5px !important;"><i class="fa fa-wheelchair text-warning"></i> Dokter Ralan</a></li>
+                 
+                                <li class="menu-icon"><a href="http://localhost/mediclite/admin/dokter_ranap/manage?t=e8a38071b9a1" style="border-radius: 5px !important;"><i class="fa fa-hotel text-info"></i> Dokter Ranap</a></li>
+                                               <li class="menu-icon"><a href="http://localhost/mediclite/admin/operasi/manage?t=e8a38071b9a1" style="border-radius: 5px !important;"><i class="fa fa-bolt text-warning"></i> operasi</a></li>
+                                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/apotek_ralan/manage?t=e8a38071b9a1" class="btn disabled" style="border-radius: 5px !important;"><i class="fa fa-medkit text-muted"></i> Apotek</a></li>
+                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/laboratorium/manage?t=e8a38071b9a1" class="btn disabled" style="border-radius: 5px !important;"><i class="fa fa-flask text-muted"></i> Laboratorium</a></li>
+                                          <li class="menu-icon"><a href="http://localhost/mediclite/admin/radiologi/manage?t=e8a38071b9a1" class="btn disabled" style="border-radius: 5px !important;"><i class="fa fa-film text-muted"></i> Radiologi</a></li>
                           </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="menu-icon"><a href="http://localhost/mediclite/admin/logout?t=73b7e8b06200" class="btn" style="border-radius: 5px !important;" title="Logout"><i class="fa fa-power-off"></i> Logout</a></li>
+              <li class="menu-icon"><a href="http://localhost/mediclite/admin/logout?t=e8a38071b9a1" class="btn" style="border-radius: 5px !important;" title="Logout"><i class="fa fa-power-off"></i> Logout</a></li>
             </ul>
           </div>
         </nav>
-    		            <div id="notify" class="alert alert-success alert-dismissible fade in" role="alert">
-                Data Downtime telah disimpan                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
     		
                 <section id="content-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12" style="margin-bottom:0px !important;">
-                        <h2 class="content-title"><a href="http://localhost/mediclite/admin/downtime/manage?t=73b7e8b06200">Downtime Manajemen</a> <a href="http://localhost/mediclite/admin/dashboard/help/downtime?t=73b7e8b06200" data-toggle="modal" data-target="#moduleModal"><span class="pull-right"><small class="hidden-xs">Help</small> <i class="fa fa-question-circle-o" aria-hidden="true"></i></span></a></h2>
-                        <form action="http://localhost/mediclite/admin/downtime/savedowntime?t=73b7e8b06200" method="POST">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">
-        Input Data
-      </h3>
-      <!-- <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="http://localhost/mediclite/admin/inventaris/dataaset?t=73b7e8b06200" role="tab">Data Aset</a>
-                </li>
-                <li>
-                    <a href="http://localhost/mediclite/admin/inventaris/inventarisbarang?t=73b7e8b06200" role="tab">Data Barang</a>
-                </li>
-                 <li>
-                    <a href="http://localhost/mediclite/admin/inventaris/pemindahan?t=73b7e8b06200" role="tab">Data Pemindahan</a>
-                </li>
-            </ul> -->
-    </div>
-
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Tanggal Mulai</label>
-            <input type="text" name="tgl_mulai" id="tgl_mulai" class="form-control tanggal" value="" required />
-          </div>
-          <div class="form-group">
-            <label>Jam Mulai</label>
-            <input type="text" name="jam_mulai" class="form-control timepicker" value="13:41:14"
-              data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00"
-              data-show-2400="true" />
-          </div>
-          <div class="form-group">
-            <label>Tanggal selesai</label>
-            <input type="text" name="tgl_selesai" class="form-control tanggal" value="" required />
-          </div>
-          <div class="form-group">
-            <label for="jam_selesai">Jam Selesai</label>
-            <input type="text" name="jam_selesai" class="form-control timepicker" value="13:41:14"
-              data-time-format="H:i:s" data-step="05" data-min-time="01:00" data-max-time="24:00"
-              data-show-2400="true" />
-          </div>
-          <div class="form-group">
-            <label>Jenis Downtime</label>
-            <select name="jenis_downtime" id="jenis_downtime" class="form-control" data-use-search="true">
-              <option value="terjadwal">Terjadwal</option>
-              <option value="tidak terjadwal">Tidak Terjadwal</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Kategori Downtime</label>
-            <select name="kategori" id="kategori" class="form-control" data-use-search="true">
-              <option value="internal">internal</option>
-              <option value="external">external</option>
-
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Keterangan Downtime</label>
-            <textarea name="keterangan_downtime" id="keterangan_downtime" class="form-control"></textarea>
-            <!-- <input type="text" name="keterangan_downtime" class="form-control" value="" /> -->
-          </div>
-          <div class="form-group">
-            <label>catatan Downtime</label>
-            <textarea name="catatan_downtime" id="catatan_downtime" class="form-control"></textarea>
-            <!-- <input type="text" name="no_box" class="form-control" value="" /> -->
-          </div>
-          <div class="form-group">
-            <label>Rencana dan Tindak Lanjut</label>
-            <textarea name="tindak_lanjut" class="form-control" id="tindak_lanjut"></textarea>
-            <!-- <input type="text" name="tindak_lanjut" class="form-control" value="" /> -->
-          </div>
-        </div>
-        <div class="col-md-12" style="padding-top: 20px;">
-          <input type="submit" name="simpan" class="btn btn-success" value="Simpan" />
-          <input type="submit" name="update" class="btn btn-info" value="Update" />
-          <input type="submit" name="hapus" class="btn btn-danger" value="Hapus" />
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-<br>
-<h4>
-
-  Periode tanggal : 2026-02-28 sampai tanggal 2026-02-28  <span class="pull-right">
-    <form class="" action="" method="">
-      <input type="text" name="tgl_mulai" class="tanggal" value="" placeholder="Tanggal awal">
-      <input type="text" name="tgl_selesai" class="tanggal" value="" placeholder="Tanggal akhir">
-      <input type="hidden" name="t" value="73b7e8b06200">
-      <input type="submit" value="Go">
-    </form>
-  </span>
-</h4>
-<br>
-<div class="row">
-  <div class="col-lg-12 col-md-12">
+                        <h2 class="content-title"><a href="http://localhost/mediclite/admin/dokter_ranap/manage?t=e8a38071b9a1">Dokter Ranap</a> <a href="http://localhost/mediclite/admin/dashboard/help/dokter_ranap?t=e8a38071b9a1" data-toggle="modal" data-target="#moduleModal"><span class="pull-right"><small class="hidden-xs">Help</small> <i class="fa fa-question-circle-o" aria-hidden="true"></i></span></a></h2>
+                        <div class="row" id="manage" style="margin-bottom:100px;">
+  <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Data Downtime</h3>
+        <div class="btn-group pull-right" style="height: 38px;margin-top:-8px;background-color: #ffffff; border-left: 1px solid #dddddd;border-top: 1px solid #dddddd;border-right: 1px solid #dddddd;border-bottom: 1px solid #ffffff;">
+          <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-calendar"></i><span class="hidden-xs"> Periode Rawat Inap</span>
+          </span>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li style="padding-left:5px;padding-right:5px;">
+              <input type="text" id="periode_rawat_inap" class="form-control periode_rawat_inap" name="periode_rawat_inap" required>
+            </li>
+            <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+              <input type="text" id="periode_rawat_inap_akhir" class="form-control periode_rawat_inap" name="periode_rawat_inap_akhir" required>
+            </li>
+            <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+              <div id="submit_periode_rawat_inap" class="btn btn-primary btn-block" style="text-align: left !important;">Dirawat</div>
+            </li>
+            <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+              <div id="masuk_periode_rawat_inap" class="btn btn-primary btn-block" style="text-align: left !important;">Tanggal Masuk</div>
+            </li>
+            <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+              <div id="pulang_periode_rawat_inap" class="btn btn-primary btn-block" style="text-align: left !important;">Tanggal Pulang</div>
+            </li>
+            <li style="padding-left:5px;padding-right:5px;margin-top:5px;">
+              <div id="lunas_periode_rawat_inap" class="btn btn-primary btn-block" style="text-align: left !important;">Sudah Bayar</div>
+            </li>
+          </ul>
+        </div>
+        <h3 class="panel-title">Kelola Pasien</h3>
       </div>
       <div class="panel-body">
-        <div class="table-responsive no-margin" id="downtime">
-          <table class="table table-striped no-padding dataTables" width="100%">
-            <thead>
-              <tr>
-                <th>Tanggal Mulai</th>
-                <th>Jenis Downtime</th>
-                <th>Kategori Downtime</th>
-                <th>Keterangan</th>
-                <th>Catatan</th>
-                <th>Tindak Lanjut</th>
-                <th>Tanggal Selesai</th>
-                <th>Durasi</th>
-              </tr>
-            </thead>
-            <tbody>
-                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="10:10:10"
-                data-jenis_downtime="terjadwal" data-kategori="internal"
-                data-keterangan_downtime="asderwewr"
-                data-catatan_downtime="rwewreewr" data-tindak_lanjut="rewewrwer"
-                data-tgl_selesai="2026-02-28" data-jam_selesai="12:00:00">
-                <td>2026-02-28 10:10:10</td>
-                <td>terjadwal</td>
-                <td>internal</td>
-                <td>asderwewr</td>
-                <td>rwewreewr</td>
-                <td>rewewrwer</td>
-                <td>2026-02-28 12:00:00</td>
-                <td>6590</td>
-                <!-- <td class="text-danger"></td> -->
-              </tr>
-                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="01:00:00"
-                data-jenis_downtime="terjadwal" data-kategori="internal"
-                data-keterangan_downtime="INSDA"
-                data-catatan_downtime="asdasd" data-tindak_lanjut="asdasd"
-                data-tgl_selesai="2026-02-28" data-jam_selesai="01:10:00">
-                <td>2026-02-28 01:00:00</td>
-                <td>terjadwal</td>
-                <td>internal</td>
-                <td>INSDA</td>
-                <td>asdasd</td>
-                <td>asdasd</td>
-                <td>2026-02-28 01:10:00</td>
-                <td>00 1am01 10 01UTC11031 00 01UTC3110k</td>
-                <!-- <td class="text-danger"></td> -->
-              </tr>
-                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="10:10:10"
-                data-jenis_downtime="terjadwal" data-kategori="internal"
-                data-keterangan_downtime="asderwewr"
-                data-catatan_downtime="rwewreewr" data-tindak_lanjut="rewewrwer"
-                data-tgl_selesai="2026-02-28" data-jam_selesai="12:00:00">
-                <td>2026-02-28 10:10:10</td>
-                <td>terjadwal</td>
-                <td>internal</td>
-                <td>asderwewr</td>
-                <td>rwewreewr</td>
-                <td>rewewrwer</td>
-                <td>2026-02-28 12:00:00</td>
-                <td>01 1am01 49 01UTC14931 50 01UTC3149k</td>
-                <!-- <td class="text-danger"></td> -->
-              </tr>
-                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="01:00:00"
-                data-jenis_downtime="terjadwal" data-kategori="internal"
-                data-keterangan_downtime="mbuh"
-                data-catatan_downtime="rwewreewr" data-tindak_lanjut="rewewrwer"
-                data-tgl_selesai="2026-02-28" data-jam_selesai="12:00:00">
-                <td>2026-02-28 01:00:00</td>
-                <td>terjadwal</td>
-                <td>internal</td>
-                <td>mbuh</td>
-                <td>rwewreewr</td>
-                <td>rewewrwer</td>
-                <td>2026-02-28 12:00:00</td>
-                <td>11 1am01 00 01UTC10031 00 01UTC3100k</td>
-                <!-- <td class="text-danger"></td> -->
-              </tr>
-                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="13:39:57"
-                data-jenis_downtime="terjadwal" data-kategori="internal"
-                data-keterangan_downtime="asd"
-                data-catatan_downtime="asd" data-tindak_lanjut="asd"
-                data-tgl_selesai="2026-02-28" data-jam_selesai="16:20:00">
-                <td>2026-02-28 13:39:57</td>
-                <td>terjadwal</td>
-                <td>internal</td>
-                <td>asd</td>
-                <td>asd</td>
-                <td>asd</td>
-                <td>2026-02-28 16:20:00</td>
-                <td>2 jam 40 menit 3 detik</td>
-                <!-- <td class="text-danger"></td> -->
-              </tr>
-                            <tr class="downtime" data-tgl_mulai="2026-02-28" data-jam_mulai="13:39:57"
-                data-jenis_downtime="terjadwal" data-kategori="internal"
-                data-keterangan_downtime="asd"
-                data-catatan_downtime="asd" data-tindak_lanjut="asd"
-                data-tgl_selesai="2026-03-01" data-jam_selesai="13:40:00">
-                <td>2026-02-28 13:39:57</td>
-                <td>terjadwal</td>
-                <td>internal</td>
-                <td>asd</td>
-                <td>asd</td>
-                <td>asd</td>
-                <td>2026-03-01 13:40:00</td>
-                <td>24 jam 0 menit 3 detik</td>
-                <!-- <td class="text-danger"></td> -->
-              </tr>
-                          </tbody>
-          </table>
+        <div class="row">
+          <div id="notif"></div>
+        </div>
+        <div id="dokter_ranap" class="display">
+          <div id="display">
+  <div class="table-responsive no-margin">
+    <table class="table table-striped no-padding dataTables" width="100%">
+      <thead>
+        <tr>
+          <th style="white-space: nowrap;">No. RM</th>
+          <th style="white-space: nowrap;">Nama Pasien</th>
+          <th style="white-space: nowrap;">Nomor Rawat</th>
+          <th style="white-space: nowrap;">Bangsa/Kamar</th>
+          <th style="white-space: nowrap;">Dokter</th>
+          <th style="white-space: nowrap;">Penjamin</th>
+          <th style="white-space: nowrap;">No. Asuransi</th>
+          <th style="white-space: nowrap;">Tgl. Masuk</th>
+          <th style="white-space: nowrap;">Tgl. Keluar</th>
+          <th style="white-space: nowrap;">Status Bayar</th>
+          <th style="white-space: nowrap;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+                <tr>
+          <td style="white-space: nowrap;">
+            <span class="dropdown-toggle" data-toggle="dropdown" data-disabled="true" aria-expanded="true"><button
+                type="button" name="button" class="btn btn-sm btn-default">061775 <span
+                  class="caret"></span></button></span>
+            <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynokartu/0001829186864/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor Kartu</a></li>
+              <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynik/3311055808990001/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor KTP</a></li>
+                            <li><a href="http://localhost/mediclite/admin/pasien/riwayatperawatan/061775?t=e8a38071b9a1" data-toggle="modal"
+                  data-target="#riwayatModal">📱Elektronik Rekam Medis</a></li>
+                            <li><a href="#soap" data-no_rawat="2026/02/21/000020" data-no_rkm_medis="061775"
+                  data-nm_pasien="WIDY FATMANINGRUM" data-umur="26 Th">📋 SOAPIE &
+                  Pemeriksaan</a></li>
+              <li><a href="#layanan_obat" data-no_rawat="2026/02/21/000020" data-no_rkm_medis="061775"
+                  data-nm_pasien="WIDY FATMANINGRUM">💊 Layanan & Obat</a></li>
+              <!--<li><a href="http://localhost/mediclite/admin/penilaian_medis_ranap/manage?t=e8a38071b9a1&no_rawat=2026/02/21/000020">Penilaian Awal Medis Ranap</a></li>-->
+              <li><a href="#medisRanap" data-no_rawat="2026/02/21/000020">🏥 Awal Medis Ranap</a></li>
+              <li><a href="#lembarMasukNicu" data-no_rawat="2026/02/21/000020">👶 Lembar Masuk Nicu</a></li>
+              <li><a href="#lembarKeluarICU" data-no_rawat="2026/02/21/000020">🚪 Lembar Keluar ICU</a></li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;"><a
+              href="http://localhost/mediclite/admin/pasien/riwayatperawatan/061775?t=e8a38071b9a1" data-toggle="modal"
+              data-target="#riwayatModal">WIDY FATMANINGRUM</a></td>
+          <td style="white-space: nowrap;"><a href="#soap" data-no_rawat="2026/02/21/000020"
+              data-no_rkm_medis="061775" data-nm_pasien="WIDY FATMANINGRUM"
+              data-umur="26 Th">2026/02/21/000020</a></td>
+          <!-- <td class="edit" data-no_rawat="2026/02/21/000020">2026/02/21/000020</td> -->
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">SHINTA KELAS 2 -
+            SHINTA 2D BED 2</td>
+          <td style="white-space: nowrap;">
+            <ul class="list-unstyled">
+                            <li>
+                dr. Guntur,Sp.OG              </li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;">
+                                    <button type="button" name="button" class="btn btn-xs btn-primary sep"
+              data-no_rkm_medis="061775" data-nm_pasien="WIDY FATMANINGRUM"
+              data-no_rawat="2026/02/21/000020" data-no_peserta="0001829186864" disabled><span
+                class="fa fa-send"></span> BPJS</button>
+                                  </td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">0001829186864</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">2026-02-21            17:33:20</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">0000-00-00            00:00:00</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">Belum Bayar</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">-</td>
+          </tr>
+                  <tr>
+          <td style="white-space: nowrap;">
+            <span class="dropdown-toggle" data-toggle="dropdown" data-disabled="true" aria-expanded="true"><button
+                type="button" name="button" class="btn btn-sm btn-default">063849 <span
+                  class="caret"></span></button></span>
+            <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynokartu/0001974304765/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor Kartu</a></li>
+              <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynik/3312246701000001/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor KTP</a></li>
+                            <li><a href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063849?t=e8a38071b9a1" data-toggle="modal"
+                  data-target="#riwayatModal">📱Elektronik Rekam Medis</a></li>
+                            <li><a href="#soap" data-no_rawat="2026/02/23/000022" data-no_rkm_medis="063849"
+                  data-nm_pasien="JEVIKA NUR WIDIAWATI" data-umur="26 Th">📋 SOAPIE &
+                  Pemeriksaan</a></li>
+              <li><a href="#layanan_obat" data-no_rawat="2026/02/23/000022" data-no_rkm_medis="063849"
+                  data-nm_pasien="JEVIKA NUR WIDIAWATI">💊 Layanan & Obat</a></li>
+              <!--<li><a href="http://localhost/mediclite/admin/penilaian_medis_ranap/manage?t=e8a38071b9a1&no_rawat=2026/02/23/000022">Penilaian Awal Medis Ranap</a></li>-->
+              <li><a href="#medisRanap" data-no_rawat="2026/02/23/000022">🏥 Awal Medis Ranap</a></li>
+              <li><a href="#lembarMasukNicu" data-no_rawat="2026/02/23/000022">👶 Lembar Masuk Nicu</a></li>
+              <li><a href="#lembarKeluarICU" data-no_rawat="2026/02/23/000022">🚪 Lembar Keluar ICU</a></li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;"><a
+              href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063849?t=e8a38071b9a1" data-toggle="modal"
+              data-target="#riwayatModal">JEVIKA NUR WIDIAWATI</a></td>
+          <td style="white-space: nowrap;"><a href="#soap" data-no_rawat="2026/02/23/000022"
+              data-no_rkm_medis="063849" data-nm_pasien="JEVIKA NUR WIDIAWATI"
+              data-umur="26 Th">2026/02/23/000022</a></td>
+          <!-- <td class="edit" data-no_rawat="2026/02/23/000022">2026/02/23/000022</td> -->
+          <td class="edit" data-no_rawat="2026/02/23/000022" style="white-space: nowrap;">SHINTA KELAS 1 -
+            SHINTA 1C</td>
+          <td style="white-space: nowrap;">
+            <ul class="list-unstyled">
+                            <li>
+                dr. Guntur,Sp.OG              </li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;">
+                                    <button type="button" name="button" class="btn btn-xs btn-primary sep"
+              data-no_rkm_medis="063849" data-nm_pasien="JEVIKA NUR WIDIAWATI"
+              data-no_rawat="2026/02/23/000022" data-no_peserta="0001974304765" disabled><span
+                class="fa fa-send"></span> BPJS</button>
+                                  </td>
+          <td class="edit" data-no_rawat="2026/02/23/000022" style="white-space: nowrap;">0001974304765</td>
+          <td class="edit" data-no_rawat="2026/02/23/000022" style="white-space: nowrap;">2026-02-25            19:26:26</td>
+          <td class="edit" data-no_rawat="2026/02/23/000022" style="white-space: nowrap;">0000-00-00            00:00:00</td>
+          <td class="edit" data-no_rawat="2026/02/23/000022" style="white-space: nowrap;">Belum Bayar</td>
+          <td class="edit" data-no_rawat="2026/02/23/000022" style="white-space: nowrap;">-</td>
+          </tr>
+                  <tr>
+          <td style="white-space: nowrap;">
+            <span class="dropdown-toggle" data-toggle="dropdown" data-disabled="true" aria-expanded="true"><button
+                type="button" name="button" class="btn btn-sm btn-default">063887 <span
+                  class="caret"></span></button></span>
+            <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynokartu/0001250638525/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor Kartu</a></li>
+              <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynik/3312115703010001/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor KTP</a></li>
+                            <li><a href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063887?t=e8a38071b9a1" data-toggle="modal"
+                  data-target="#riwayatModal">📱Elektronik Rekam Medis</a></li>
+                            <li><a href="#soap" data-no_rawat="2026/02/24/000011" data-no_rkm_medis="063887"
+                  data-nm_pasien="MARDA LUSIYANI" data-umur="24 Th">📋 SOAPIE &
+                  Pemeriksaan</a></li>
+              <li><a href="#layanan_obat" data-no_rawat="2026/02/24/000011" data-no_rkm_medis="063887"
+                  data-nm_pasien="MARDA LUSIYANI">💊 Layanan & Obat</a></li>
+              <!--<li><a href="http://localhost/mediclite/admin/penilaian_medis_ranap/manage?t=e8a38071b9a1&no_rawat=2026/02/24/000011">Penilaian Awal Medis Ranap</a></li>-->
+              <li><a href="#medisRanap" data-no_rawat="2026/02/24/000011">🏥 Awal Medis Ranap</a></li>
+              <li><a href="#lembarMasukNicu" data-no_rawat="2026/02/24/000011">👶 Lembar Masuk Nicu</a></li>
+              <li><a href="#lembarKeluarICU" data-no_rawat="2026/02/24/000011">🚪 Lembar Keluar ICU</a></li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;"><a
+              href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063887?t=e8a38071b9a1" data-toggle="modal"
+              data-target="#riwayatModal">MARDA LUSIYANI</a></td>
+          <td style="white-space: nowrap;"><a href="#soap" data-no_rawat="2026/02/24/000011"
+              data-no_rkm_medis="063887" data-nm_pasien="MARDA LUSIYANI"
+              data-umur="24 Th">2026/02/24/000011</a></td>
+          <!-- <td class="edit" data-no_rawat="2026/02/24/000011">2026/02/24/000011</td> -->
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">SHINTA KELAS 3 -
+            SHINTA 3B BED 1</td>
+          <td style="white-space: nowrap;">
+            <ul class="list-unstyled">
+                            <li>
+                dr. Guntur,Sp.OG              </li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;">
+                                    <button type="button" name="button" class="btn btn-xs btn-primary sep"
+              data-no_rkm_medis="063887" data-nm_pasien="MARDA LUSIYANI"
+              data-no_rawat="2026/02/24/000011" data-no_peserta="0001250638525" disabled><span
+                class="fa fa-send"></span> BPJS</button>
+                                  </td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">0001250638525</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">2026-02-24            14:18:34</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">0000-00-00            00:00:00</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">Belum Bayar</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">-</td>
+          </tr>
+                  <tr>
+          <td style="white-space: nowrap;">
+            <span class="dropdown-toggle" data-toggle="dropdown" data-disabled="true" aria-expanded="true"><button
+                type="button" name="button" class="btn btn-sm btn-default">063890 <span
+                  class="caret"></span></button></span>
+            <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynokartu/-/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor Kartu</a></li>
+              <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynik/-/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor KTP</a></li>
+                            <li><a href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063890?t=e8a38071b9a1" data-toggle="modal"
+                  data-target="#riwayatModal">📱Elektronik Rekam Medis</a></li>
+                            <li><a href="#soap" data-no_rawat="2026/02/21/000020" data-no_rkm_medis="063890"
+                  data-nm_pasien="WIDY FATMANINGRUM, BY NY" data-umur="1 Hr">📋 SOAPIE &
+                  Pemeriksaan</a></li>
+              <li><a href="#layanan_obat" data-no_rawat="2026/02/21/000020" data-no_rkm_medis="063890"
+                  data-nm_pasien="WIDY FATMANINGRUM, BY NY">💊 Layanan & Obat</a></li>
+              <!--<li><a href="http://localhost/mediclite/admin/penilaian_medis_ranap/manage?t=e8a38071b9a1&no_rawat=2026/02/21/000020">Penilaian Awal Medis Ranap</a></li>-->
+              <li><a href="#medisRanap" data-no_rawat="2026/02/21/000020">🏥 Awal Medis Ranap</a></li>
+              <li><a href="#lembarMasukNicu" data-no_rawat="2026/02/21/000020">👶 Lembar Masuk Nicu</a></li>
+              <li><a href="#lembarKeluarICU" data-no_rawat="2026/02/21/000020">🚪 Lembar Keluar ICU</a></li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;"><a
+              href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063890?t=e8a38071b9a1" data-toggle="modal"
+              data-target="#riwayatModal">WIDY FATMANINGRUM, BY NY</a></td>
+          <td style="white-space: nowrap;"><a href="#soap" data-no_rawat="2026/02/21/000020"
+              data-no_rkm_medis="063890" data-nm_pasien="WIDY FATMANINGRUM, BY NY"
+              data-umur="1 Hr">2026/02/21/000020</a></td>
+          <!-- <td class="edit" data-no_rawat="2026/02/21/000020">2026/02/21/000020</td> -->
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">SHINTA KELAS 2 -
+            SHINTA 2D BED 2</td>
+          <td style="white-space: nowrap;">
+            <ul class="list-unstyled">
+                            <li>
+                dr. Guntur,Sp.OG              </li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;">
+                                    <button type="button" name="button" class="btn btn-xs btn-primary sep"
+              data-no_rkm_medis="063890" data-nm_pasien="WIDY FATMANINGRUM, BY NY"
+              data-no_rawat="2026/02/21/000020" data-no_peserta="-" disabled><span
+                class="fa fa-send"></span> BPJS</button>
+                                  </td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">-</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">2026-02-21            17:33:20</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">0000-00-00            00:00:00</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">Belum Bayar</td>
+          <td class="edit" data-no_rawat="2026/02/21/000020" style="white-space: nowrap;">-</td>
+          </tr>
+                  <tr>
+          <td style="white-space: nowrap;">
+            <span class="dropdown-toggle" data-toggle="dropdown" data-disabled="true" aria-expanded="true"><button
+                type="button" name="button" class="btn btn-sm btn-default">063892 <span
+                  class="caret"></span></button></span>
+            <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynokartu/-/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor Kartu</a></li>
+              <li><a href="http://localhost/mediclite/admin/pasien/vclaim_bynik/-/2026-04-04?t=e8a38071b9a1"
+                  data-toggle="modal" data-target="#asuransiModal">💲[BPJS] Cek Nomor KTP</a></li>
+                            <li><a href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063892?t=e8a38071b9a1" data-toggle="modal"
+                  data-target="#riwayatModal">📱Elektronik Rekam Medis</a></li>
+                            <li><a href="#soap" data-no_rawat="2026/02/24/000011" data-no_rkm_medis="063892"
+                  data-nm_pasien="MARDA LUSIYANI, BY NY" data-umur="1 Hr">📋 SOAPIE &
+                  Pemeriksaan</a></li>
+              <li><a href="#layanan_obat" data-no_rawat="2026/02/24/000011" data-no_rkm_medis="063892"
+                  data-nm_pasien="MARDA LUSIYANI, BY NY">💊 Layanan & Obat</a></li>
+              <!--<li><a href="http://localhost/mediclite/admin/penilaian_medis_ranap/manage?t=e8a38071b9a1&no_rawat=2026/02/24/000011">Penilaian Awal Medis Ranap</a></li>-->
+              <li><a href="#medisRanap" data-no_rawat="2026/02/24/000011">🏥 Awal Medis Ranap</a></li>
+              <li><a href="#lembarMasukNicu" data-no_rawat="2026/02/24/000011">👶 Lembar Masuk Nicu</a></li>
+              <li><a href="#lembarKeluarICU" data-no_rawat="2026/02/24/000011">🚪 Lembar Keluar ICU</a></li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;"><a
+              href="http://localhost/mediclite/admin/pasien/riwayatperawatan/063892?t=e8a38071b9a1" data-toggle="modal"
+              data-target="#riwayatModal">MARDA LUSIYANI, BY NY</a></td>
+          <td style="white-space: nowrap;"><a href="#soap" data-no_rawat="2026/02/24/000011"
+              data-no_rkm_medis="063892" data-nm_pasien="MARDA LUSIYANI, BY NY"
+              data-umur="1 Hr">2026/02/24/000011</a></td>
+          <!-- <td class="edit" data-no_rawat="2026/02/24/000011">2026/02/24/000011</td> -->
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">SHINTA KELAS 3 -
+            SHINTA 3B BED 1</td>
+          <td style="white-space: nowrap;">
+            <ul class="list-unstyled">
+                            <li>
+                dr. Guntur,Sp.OG              </li>
+                          </ul>
+          </td>
+          <td style="white-space: nowrap;">
+                                    <button type="button" name="button" class="btn btn-xs btn-primary sep"
+              data-no_rkm_medis="063892" data-nm_pasien="MARDA LUSIYANI, BY NY"
+              data-no_rawat="2026/02/24/000011" data-no_peserta="-" disabled><span
+                class="fa fa-send"></span> BPJS</button>
+                                  </td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">-</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">2026-02-24            14:18:34</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">0000-00-00            00:00:00</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">Belum Bayar</td>
+          <td class="edit" data-no_rawat="2026/02/24/000011" style="white-space: nowrap;">-</td>
+          </tr>
+                </tbody>
+    </table>
+  </div>
+</div>
+<div class="modal fade" id="asuransiModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="riwayatModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-full" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="medisRanap" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-full" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="lembarMasukNicu" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-full" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="lembarKeluarICU" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-full" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+<script>
+
+</script>
+<script type="text/javascript">
+  $('a[href="#soap"]').click(function (event) {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+
+    var no_rawat = $(this).attr("data-no_rawat");
+    var no_rkm_medis = $(this).attr("data-no_rkm_medis");
+    var nm_pasien = $(this).attr("data-nm_pasien");
+    var umur = $(this).attr("data-umur");
+    var tgl_registrasi = $(this).attr("data-tgl_registrasi");
+
+    $('input:text[name=no_rawat]').val(no_rawat);
+    $('input:text[name=no_rkm_medis]').val(no_rkm_medis);
+    $('input:text[name=nm_pasien]').val(nm_pasien);
+    $('input:text[name=umur]').val(umur);
+    $('input:text[name=tgl_registrasi]').val(tgl_registrasi);
+    $("#display").hide();
+
+    var url = baseURL + '/dokter_ranap/soap?t=' + mlite.token;
+    $.post(url, {
+      no_rawat: no_rawat,
+    }, function (data) {
+      // tampilkan data
+      $("#form_rincian").hide();
+      $("#form").hide();
+      $("#notif").hide();
+      $("#form_soap").show();
+      $("#soap").html(data).show();
+    });
+  });
+
+  $('a[href="#medisRanap"]').click(function (event) {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $(this).attr("data-no_rawat").replace(/\//g, '');
+
+    var loadURL = baseURL + '/dokter_ranap/medisranap/' + no_rawat + '?t=' + mlite.token;
+
+    var modal = $('#medisRanap');
+    var modalContent = $('#medisRanap .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+      modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+
+  $('a[href="#lembarMasukNicu"]').click(function (event) {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $(this).attr("data-no_rawat").replace(/\//g, '');
+
+    var loadURL = baseURL + '/dokter_ranap/lembarmasuknicu/' + no_rawat + '?t=' + mlite.token;
+
+    var modal = $('#lembarMasukNicu');
+    var modalContent = $('#lembarMasukNicu .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+      modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+
+  // lembar masuk icu
+
+  $('a[href="#lembarKeluarICU"]').click(function (event) {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $(this).attr("data-no_rawat").replace(/\//g, '');
+
+    var loadURL = baseURL + '/dokter_ranap/lembarKeluarICU/' + no_rawat + '?t=' + mlite.token;
+
+    var modal = $('#lembarKeluarICU');
+    var modalContent = $('#lembarKeluarICU .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+      modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+
+  // end lembar masuk ICU
+
+  $('a[href="#layanan_obat"]').click(function (event) {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+
+    var no_rawat = $(this).attr("data-no_rawat");
+    var no_rkm_medis = $(this).attr("data-no_rkm_medis");
+    var nm_pasien = $(this).attr("data-nm_pasien");
+
+    $('input:text[name=no_rawat]').val(no_rawat);
+    $('input:text[name=no_rkm_medis]').val(no_rkm_medis);
+    $('input:text[name=nm_pasien]').val(nm_pasien);
+    $("#display").hide();
+
+    var url = baseURL + '/dokter_ranap/rincian?t=' + mlite.token;
+    $.post(url, {
+      no_rawat: no_rawat,
+    }, function (data) {
+      // tampilkan data
+      $("#form_rincian").show();
+      $("#form").hide();
+      $("#notif").hide();
+      $("#rincian").html(data).show();
+    });
+  });
+
+  $(".alert-dismissible").fadeTo(3000, 500).slideUp(500);
+  $('.dataTables').DataTable({
+    "order": [[3, "desc"]],
+    "pagingType": "full",
+    "language": {
+      "paginate": {
+        "first": "&laquo;",
+        "last": "&raquo;",
+        "previous": "‹",
+        "next": "›"
+      },
+      "search": "",
+      "searchPlaceholder": "Search..."
+    },
+    "lengthChange": false,
+    "scrollX": true,
+    dom: "<<'data-table-title'><'datatable-search'f>><'row'<'col-sm-12'tr>><<'pmd-datatable-pagination' l i p>>"
+  });
+  var t = $(".dataTables").DataTable().rows().count();
+  $(".data-table-title").html('<h3 style="display:inline;float:left;margin-top:0;" class="hidden-xs">Total: ' + t + '</h3>');
+</script>
+<script type="text/javascript">
+  $(function () {
+    $('.tanggal').datetimepicker({
+      format: 'YYYY-MM-DD',
+      locale: 'id'
+    });
+  });
+  $(function () {
+    $('.jam').datetimepicker({
+      format: 'HH:mm:ss',
+      locale: 'id'
+    });
+  });
+</script>
+<script>
+  $('body').on('hidden.bs.modal', '.modal', function () {
+    $(this).removeData('bs.modal');
+  });
+</script>        </div>
+        <div class="row">
+          <div id="form_rincian">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label for="tgl_perawatan" class="col-sm-3 control-label">Tanggal</label>
+            <div class="col-sm-4">
+              <input type="text" id="tgl_perawatan" name="tgl_perawatan" class="form-control tanggal" value="2026-04-04">
+            </div>
+            <label for="pnd" class="col-sm-1 control-label">Jam</label>
+            <div class="col-sm-4">
+              <input type="text" id="jam_reg" name="jam_reg" class="form-control jam" value="15:29:22">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="taid_pendaftarannggal" class="col-sm-3 control-label">Id Rawat</label>
+            <div class="col-sm-9">
+              <input type="text" name="no_rawat" placeholder="ID Rawat Jalan" class="form-control" value="" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Tindakan</label>
+            <div class="col-sm-9">
+              <input type="text" name="layanan" class="form-control" placeholder="Input tindakan/layanan" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label">Resep Non-Racik</label>
+            <div class="col-sm-4">
+              <input type="text" name="obat" class="form-control" placeholder="Nama obat/BHP" value="">
+            </div>
+            <label for="" class="col-sm-2 control-label">Racikan</label>
+            <div class="col-sm-3">
+              <input type="text" name="racikan" class="form-control" placeholder="Nama racikan" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-3 control-label">Laboratorium</label>
+            <div class="col-sm-4">
+              <input type="text" name="laboratorium" class="form-control" placeholder="Nama Layanan" value="">
+            </div>
+            <label for="" class="col-sm-2 control-label">Radiologi</label>
+            <div class="col-sm-3">
+              <input type="text" name="radiologi" class="form-control" placeholder="Nama Layanan" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div id="layanan"></div>
+    <div id="obat"></div>
+    <div id="racikan"></div>
+    <div id="obat_racikan"></div>
+    <div id="laboratorium"></div>
+    <div id="radiologi"></div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label for="id_pasien" class="col-sm-3 control-label">Nomor RM</label>
+            <div class="col-sm-9">
+              <input type="text" name="no_rkm_medis" class="form-control" placeholder="Nomor Rekam Medik" value="" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nama_pasien" class="col-sm-3 control-label">Nama Pasien</label>
+            <div class="col-sm-9">
+              <input type="text" name="nm_pasien" class="form-control" placeholder="Nama pasien" value="" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tgl_perawatan" class="col-sm-3 control-label">Jenis</label>
+            <div class="col-sm-4">
+              <input type="hidden" name="kd_jenis_prw" class="form-control" value="">
+              <input type="text" name="nm_perawatan" class="form-control" placeholder="Nama tindakan/layanan/obat/BHP" value="" readonly>
+              <input type="hidden" name="kat" class="form-control" value="">
+            </div>
+            <label for="pnd" class="col-sm-1 control-label">Biaya</label>
+            <div class="col-sm-4">
+              <input type="text" id="biaya" name="biaya" class="form-control" value="" readonly>
+            </div>
+          </div>
+          <div id="daftar_racikan">
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Nama Racikan</label>
+              <div class="col-sm-9">
+                <input type="text" id="nama_racik" name="nama_racik" class="form-control" value="">
+              </div>
+            </div>
+            <div id="item_racikan">
+              <div class="form-group">
+                <label class="col-md-3 control-label"><button type="button" class="btn btn-xs btn-primary add_racikan"><span class="fa fa-plus"></span></button> Nama Obat</label>
+                <div class="col-sm-6">
+                  <select name="kode_brng" id="kode_brng" class="form-control databarang_ajax">
+                  </select>
+                  <!--<input type="hidden" name="kode_brng" class="form-control" value="" />
+                  <input type="text" name="nama_brng" class="form-control nama_brng" value="" />-->
+                </div>
+                <label for="" class="col-sm-1 control-label">Knd.</label>
+                <div class="col-sm-2">
+                  <input type="text" name="kandungan" class="form-control" value="" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Keterangan</label>
+              <div class="col-sm-9">
+                <textarea name="keterangan" id="keterangan" rows="2" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" id="aturan_pakai">
+            <label class="col-md-3 control-label">Aturan Pakai</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="aturan_pakai" id="aturan_pakai" value="">
+              <ul class="list-group" id="aturan_pakaiList" style="z-index:1000;position:absolute;width:100%;"></ul>
+            </div>
+            <label for="" class="col-sm-1 control-label">Jml</label>
+            <div class="col-sm-2">
+              <input type="text" name="jml" id="jml" class="form-control" value="10">
+            </div>
+          </div>
+          <div id="info_tambahan">
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Info Tambahan</label>
+              <div class="col-sm-9">
+                <textarea name="informasi_tambahan" id="informasi_tambahan" rows="2" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 control-label">Diagnosa Klinis</label>
+              <div class="col-sm-9">
+                <input type="text" name="diagnosa_klinis" class="form-control" placeholder="Diagnosa Klinis" value="">
+              </div>
+            </div>
+          </div>
+          <div class="m-t-xl">
+            <button type="button" name="button" class="btn btn-primary" id="simpan_rincian"><i class="fa fa-save"></i><span class="hidden-xs"> Masukkan Rincian</span></button>
+            <button type="button" name="button" class="btn btn-info" id="buka_riwayat_rincian"><i class="fa fa-file-o"></i><span class="hidden-xs"> Riwayat</span></button>
+            <button type="button" name="button" class="btn btn-success" id="selesai"><i class="fa fa-check"></i><span class="hidden-xs"> Selesai</span></button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div>
-  <button class="btn btn-primary" data-toggle="modal" data-target="#modal-default">tombol</button>
+<div class="modal fade" id="resumeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
 </div>
-<br>
-<!-- MODAL  -->
+<script>
+  $('input:text[name=aturan_pakai]').on('input',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var url    = baseURL + '/dokter_ranap/aturanpakai?t=' + mlite.token;
+    var query = $('input:text[name=aturan_pakai]').val();
+    if(query!="") {
+        $.ajax({
+             url: url,
+             method:"POST",
+             data:{query:query},
+             success:function(data)
+             {
+                  $('#aturan_pakaiList').fadeIn();
+                  $('#aturan_pakaiList').html(data);
+             }
+        });
+    }
+    $('#aturan_pakaiList').fadeIn();
+  });
 
-<div class="modal fade" id="modal-default">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      
+  $('#aturan_pakaiList').on('click', 'li', function(){
+       $('input:text[name=aturan_pakai]').val($(this).text());
+       $('#aturan_pakaiList').fadeOut();
+  });
+</script>
+<script>
+  $('input:text[name=nama_provider]').on('input',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var url    = baseURL + '/dokter_ranap/providerlist?t=' + mlite.token;
+    var query = $('input:text[name=nama_provider]').val();
+    if(query!="") {
+        $.ajax({
+             url: url,
+             method:"POST",
+             data:{query:query},
+             success:function(data)
+             {
+                  $('#kode_providerList').fadeIn();
+                  $('#kode_providerList').html(data);
+             }
+        });
+    }
+    $('#kode_providerList').fadeIn();
+  });
 
-      <form action="http://localhost/mediclite/admin/downtime/cetakdowntime?t=73b7e8b06200" method="POST" target="_blank">
-        <div class="modal-body">
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">Cetak Data Downtime</h3>
+  $('#kode_providerList').on('click', 'li', function(){
+       $('#nama_provider').val($(this).text().split(': ')[1]);
+       $('#kode_provider').val($(this).text().split(': ')[0]);
+       var kode_provider = $('#kode_provider').val();
+       $('#kode_providerList').fadeOut();
+  });
+</script>
+<script>
+  $('input:text[name=nama_provider2]').on('input',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var url    = baseURL + '/dokter_ranap/providerlist2?t=' + mlite.token;
+    var query = $('input:text[name=nama_provider2]').val();
+    if(query!="") {
+        $.ajax({
+             url: url,
+             method:"POST",
+             data:{query:query},
+             success:function(data)
+             {
+                  $('#kode_providerList2').fadeIn();
+                  $('#kode_providerList2').html(data);
+             }
+        });
+    }
+    $('#kode_providerList2').fadeIn();
+  });
+
+  $('#kode_providerList2').on('click', 'li', function(){
+       $('#nama_provider2').val($(this).text().split(': ')[1]);
+       $('#kode_provider2').val($(this).text().split(': ')[0]);
+       var kode_provider2 = $('#kode_provider2').val();
+       $('#kode_providerList2').fadeOut();
+  });
+</script>
+<script>
+  $(function() {
+      $('#rawat_jl_dr').hide();
+      $('#rawat_jl_pr').hide();
+      $('#pilih_provider').change(function(){
+          if($('#pilih_provider').val() == 'rawat_jl_dr') {
+              $('#rawat_jl_dr').show();
+              $('#rawat_jl_pr').hide();
+          } else if($('#pilih_provider').val() == 'rawat_jl_pr') {
+              $('#rawat_jl_dr').hide();
+              $('#rawat_jl_pr').show();
+          } else {
+              $('#rawat_jl_dr').show();
+              $('#rawat_jl_pr').show();
+          }
+      });
+  });
+</script>
+<script>
+  var count=2;
+  $(document).on('click', '.add_racikan', function(){
+      var html = '';
+      html += '<div class="form-group row_racikan">';
+      html += '    <label class="col-md-3 control-label"><button type="button" class="btn btn-xs btn-danger remove_racikan"><span class="fa fa-minus"></span></button></label>';
+      html += '    <div class="col-md-6">';
+      html += '        <select name="kode_brng" class="form-control databarang_ajax">';
+      html += '        </select>';
+      //html += '        <input type="hidden" name="kode_brng" class="form-control" value="">';
+      //html += '        <input type="text" name="nama_brng" class="form-control nama_brng" value="">';
+      html += '    </div>';
+      html += '    <label for="" class="col-sm-1 control-label">Knd.</label>';
+      html += '    <div class="col-sm-2">';
+      html += '        <input type="text" name="kandungan" id="kandungan" class="form-control" value="">';
+      html += '    </div>';
+      html += '</div>';
+      $('#item_racikan').append(html);
+      count++;
+      console.log(html);
+      var strip_tags = function(str) {
+        return (str + '').replace(/<\/?[^>]+(>|$)/g, '')
+      };
+      var truncate_string = function(str, chars) {
+        if ($.trim(str).length <= chars) {
+          return str;
+        } else {
+          return $.trim(str.substr(0, chars)) + '…';
+        }
+      };
+      $('.databarang_ajax').selectator({
+        labels: {
+          search: 'Cari obat...'
+        },
+        load: function (search, callback) {
+          if (search.length < this.minSearchLength) return callback();
+          $.ajax({
+            url: 'http://localhost/mediclite/admin/dokter_ranap/ajax?show=databarang&nama_brng=' + encodeURIComponent(search) + '&t=e8a38071b9a1',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+              callback(data.slice(0, 100));
+              console.log(data);
+            },
+            error: function() {
+              callback();
+            }
+          });
+        },
+        delay: 300,
+        minSearchLength: 1,
+        valueField: 'kode_brng',
+        textField: 'nama_brng'
+      });
+      $('select').each(function () {
+          var options = {
+              useDimmer: true,
+              useSearch: true,
+              labels: {
+                  search: '...'
+              }
+          };
+          $.each($(this).data(), function (key, value) {
+              options[key] = value;
+          });
+          $(this).selectator(options);
+      });
+
+  });
+
+  $(document).on('click', '.remove_racikan', function(){
+      $(this).closest('.row_racikan').remove();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_rincian").on("click","#buka_riwayat_rincian", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
+    var loadURL =  baseURL + '/pasien/riwayatperawatan/' + no_rkm_medis + '?t=' + mlite.token;
+
+    var modal = $('#resumeModal');
+    var modalContent = $('#resumeModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+          <div id="form_soap">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <div class="form-group">
+            <label for="tanggal">Tanggal</label>
+            <input type="text" id="tgl_perawatan" name="tgl_perawatan" class="form-control tanggal" value="2026-04-04">
+          </div>
+          <div class="form-group">
+            <label for="jam">Jam</label>
+            <input type="text" id="jam_rawat" name="jam_rawat" class="form-control jam" value="15:29:22">
+          </div>
+          <div class="form-group">
+            <label for="id_pendaftaran">Id Rawat</label>
+            <input type="text" name="no_rawat" placeholder="ID Pendaftaran" class="form-control" value="" readonly>
+          </div>
+          <div class="form-group">
+            <label for="id_pasien">Nomor RM</label>
+            <input type="text" name="no_rkm_medis" class="form-control" placeholder="Nomor Rekam Medik" value="" readonly>
+          </div>
+          <div class="form-group">
+            <label for="nama_pasien">Nama Pasien</label>
+            <input type="text" name="nm_pasien" class="form-control" placeholder="Nama pasien" value="" readonly>
+          </div>
+          <div class="form-group">
+            <label for="nama_pasien">Umur</label>
+            <input type="text" name="umur" class="form-control" placeholder="Umur pasien" value="" readonly>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>Pemeriksaan</h4>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-2">
+              <label for="nama_pasien">Tensi(mmHg)</label>
+              <input type="text" name="tensi" class="form-control" placeholder="" value="-">
             </div>
-            
-            <div class="card-body">
-              <div class="form-group">
-                <label for="tgl_awal">Dari Tanggal</label>
-                <input type="text" name="tgl_awal" class="form-control tanggal" id="tgl_awal" placeholder="YYYY-MM-DD">
+            <div class="col-sm-2">
+              <label for="nama_pasien">Suhu(C)</label>
+              <input type="text" name="suhu_tubuh" class="form-control" placeholder="" value="">
+            </div>
+            <div class="col-sm-2">
+              <label for="nama_pasien">Nadi(/mnt)</label>
+              <input type="text" name="nadi" class="form-control" placeholder="" value="">
+            </div>
+            <div class="col-sm-2">
+              <label for="nama_pasien">RR(/mnt)</label>
+              <input type="text" name="respirasi" class="form-control" placeholder="" value="">
+            </div>
+            <div class="col-sm-2">
+              <label for="nama_pasien">Tinggi(cm)</label>
+              <input type="text" name="tinggi" class="form-control" placeholder="" value="">
+            </div>
+            <div class="col-sm-2">
+              <label for="nama_pasien">Berat(kg)</label>
+              <input type="text" name="berat" class="form-control" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-4">
+              <label for="nama_pasien">Kesadaran</label>
+              <input type="text" name="kesadaran" class="form-control" placeholder="" value="Compos Mentis">
+              <ul class="list-group" id="kesadaranList" style="z-index:1000;position:absolute;width:100%;"></ul>
+            </div>
+            <div class="col-sm-2">
+              <label for="nama_pasien">SPO2</label>
+              <input type="text" name="spo2" class="form-control" placeholder="" value="">
+            </div>
+            <div class="col-sm-2">
+              <label for="nama_pasien">GCS(E,V,M)</label>
+              <input type="text" name="gcs" class="form-control" placeholder="" value="">
+            </div>
+            <div class="col-sm-4">
+              <label for="nama_pasien">Alergi</label>
+              <input type="text" name="alergi" class="form-control" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+        <h4>SOAP</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="jenis">Subyektif</label>
+              <textarea name="keluhan" id="keluhan" rows="2" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="jenis">Obyektif</label>
+              <textarea name="pemeriksaan" id="pemeriksaan" rows="2" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="jenis">Assesment</label>
+              <textarea name="penilaian" id="penilaian" rows="2" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="jenis">Plan</label>
+              <textarea name="rtl" id="rtl" rows="2" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="jenis">Instruksi</label>
+              <textarea name="instruksi" id="instruksi" rows="2" class="form-control" value="-"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="jenis">Evaluasi</label>
+              <textarea name="evaluasi" id="evaluasi" rows="2" class="form-control" value="-"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="m-t-xl">
+          <button type="button" name="button" class="btn btn-primary" id="simpan_soap"><i class="fa fa-save"></i><span class="hidden-xs"> Simpan</span></button>
+          <button type="button" name="button" class="btn btn-danger" id="buka_icd10dan9"><i class="fa fa-download"></i><span class="hidden-xs"> ICD 10 & 9</span></button>
+          <button type="button" name="button" class="btn btn-info" id="buka_riwayat"><i class="fa fa-file-o"></i><span class="hidden-xs"> Riwayat</span></button>
+          <button type="button" name="button" class="btn btn-success" id="selesai_soap"><i class="fa fa-check"></i><span class="hidden-xs"> Selesai</span></button>
+          <span class="pull-right">
+            <a href="#" class="btn btn-warning resume"><i class="fa fa-file-text"></i><span class="hidden-xs"> Resume</span></a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="icd10dan9">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group icd10">
+                  <label for="">Diagnosa (ICD 10)</label>
+                  <button id="filter" class="btn btn-default">
+                      <span id="kode_icd10">kode</span>
+                  </button>
+                  <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                      <span data-bind="label" id="prioritas_icd10"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="min-width:0px;">
+                      <li><a>1</a></li>
+                      <li><a>2</a></li>
+                      <li><a>3</a></li>
+                      <li><a>4</a></li>
+                      <li><a>5</a></li>
+                      <li><a>6</a></li>
+                      <li><a>7</a></li>
+                      <li><a>8</a></li>
+                      <li><a>9</a></li>
+                    </ul>
+                  </div>
+                  <div class="input-group">
+                    <input type="text" name="icd10" id="icd10" class="form-control" />
+                    <input type="hidden" name="status" class="form-control" value="Ranap" />
+                    <ul class="list-group" id="icd10List" style="z-index:1000;position:absolute;width:100%;"></ul>
+                    <span class="input-group-btn">
+                      <button id="simpan_icd10" class="btn btn-primary btn-block">
+                          <span class="glyphicon glyphicon-plus simpan_icd10"></span> Simpan
+                      </button>
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="tgl_akhir">Sampai Tanggal</label>
-                <input type="text" name="tgl_akhir" class="form-control tanggal" id="tgl_akhir" placeholder="YYYY-MM-DD">
+              <div class="col-sm-6">
+                <div class="form-group icd9">
+                  <label for="">Prosedur (ICD 9)</label>
+                  <button id="filter" class="btn btn-default">
+                      <span id="kode_icd9">kode</span>
+                  </button>
+                  <div class="btn-group">
+                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                          <span data-bind="label" id="prioritas_icd9"></span> <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" style="min-width:0px;">
+                          <li><a>1</a></li>
+                          <li><a>2</a></li>
+                          <li><a>3</a></li>
+                          <li><a>4</a></li>
+                          <li><a>5</a></li>
+                          <li><a>6</a></li>
+                          <li><a>7</a></li>
+                          <li><a>8</a></li>
+                          <li><a>9</a></li>
+                      </ul>
+                  </div>
+                  <div class="input-group">
+                    <input type="text" name="icd9" id="icd9" class="form-control" />
+                    <input type="hidden" name="status" class="form-control" value="Ranap" />
+                    <ul class="list-group" id="icd9List" style="z-index:1000;position:absolute;width:100%;"></ul>
+                    <span class="input-group-btn">
+                        <button id="simpan_icd9" class="btn btn-primary btn-block">
+                            <span class="glyphicon glyphicon-plus"></span> Simpan
+                        </button>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Simpan Data</button>
-        </div>
-      </form>
-
+      </div>
     </div>
   </div>
 </div>
+<div class="modal fade" id="resumeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  $('input:text[name=kesadaran]').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">Compos Mentis</li>';
+       output+='<li class=\"list-group-item link-class\">Somnolence</li>';
+       output+='<li class=\"list-group-item link-class\">Sopor</li>';
+       output+='<li class=\"list-group-item link-class\">Coma</li>';
+       output+='';
+       $('#kesadaranList').fadeIn();
+       $('#kesadaranList').html(output).show();
+  });
+  $('#kesadaranList').on('click', 'li', function(){
+    $('input:text[name=kesadaran]').val($(this).text());
+    $('#kesadaranList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#icd10dan9").hide();
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".icd9 .dropdown-menu li a").click(function () {
+        var prioritas_icd9 = $(this).text();
+        $(this).closest('.form-group').find('#prioritas_icd9').text(prioritas_icd9);
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".icd10 .dropdown-menu li a").click(function () {
+        var prioritas_icd10 = $(this).text();
+        $(this).closest('.form-group').find('#prioritas_icd10').text(prioritas_icd10);
+    });
+  });
+</script>
+<script>
+  $('#icd9').keyup(function(){
+       var query = $(this).val();
+       if(query != '')
+       {
+            $.ajax({
+                 url: "http://localhost/mediclite/admin/icd_9/icd9?t=e8a38071b9a1",
+                 method:"POST",
+                 data:{query:query},
+                 success:function(data)
+                 {
+                      $('#icd9List').fadeIn();
+                      $('#icd9List').html(data);
+                 }
+            });
+       }
+       $('#icd9List').fadeIn();
+  });
+  $('#icd9List').on('click', 'li', function(){
+       $('#icd9').val($(this).text().split(': ')[1]);
+       $('#kode_icd9').text($(this).text().split(': ')[0]);
+       var kode_icd9 = $('#kode_icd9').val();
+       $('#icd9List').fadeOut();
+  });
+</script>
+<script>
+  $('#icd10').keyup(function(){
+       var query = $(this).val();
+       if(query != '')
+       {
+            $.ajax({
+                 url: "http://localhost/mediclite/admin/icd_10/icd10?t=e8a38071b9a1",
+                 method:"POST",
+                 data:{query:query},
+                 success:function(data)
+                 {
+                      $('#icd10List').fadeIn();
+                      $('#icd10List').html(data);
+                 }
+            });
+       }
+       $('#icd10List').fadeIn();
+  });
+  $('#icd10List').on('click', 'li', function(){
+       $('#icd10').val($(this).text().split(': ')[1]);
+       $('#kode_icd10').text($(this).text().split(': ')[0]);
+       var kode_icd10 = $('#kode_icd10').val();
+       $('#icd10List').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  // tombol simpan diklik
+  $("#form_soap").on("click", "#simpan_icd9", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $('input:text[name=no_rawat]').val();
+    var prioritas = $('#prioritas_icd9').text();
+    var nama = $('input:text[name=icd9]').val();
+    var kode = $('#kode_icd9').text();
+    var status = $('input:hidden[name=status]').val();
 
+    var url = baseURL + '/icd_9/saveicd9?t=' + mlite.token;
 
+    $.post(url,{
+      no_rawat: no_rawat,
+      prioritas: prioritas,
+      nama: nama,
+      status: status,
+      kode: kode
+    } ,function(data) {
+      $("#display_icd").show().load(baseURL + '/icd_10/display?no_rawat=' + no_rawat + '&t=' + mlite.token);
+      //bersih();
+      $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+      "Data ICD 9 (Prosedur) pasien telah disimpan!"+
+      "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+      "</div>").show();
+    });
+  });
+</script>
+<script type="text/javascript">
+  // tombol simpan diklik
+  $("#form_soap").on("click", "#simpan_icd10", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $('input:text[name=no_rawat]').val();
+    var prioritas = $('#prioritas_icd10').text();
+    var nama = $('input:text[name=icd10]').val();
+    var kode = $('#kode_icd10').text();
+    var status = $('input:hidden[name=status]').val();
 
-    <!-- END MODAL -->
-    <div class="panel-footer"></div>
-    <script type="text/javascript">
-      $("#downtime").on("click", ".downtime", function (event) {
-        var tgl_mulai = $(this).attr("data-tgl_mulai");
-        var jam_mulai = $(this).attr("data-jam_mulai");
-        var jenis_downtime = $(this).attr("data-jenis_downtime");
-        var kategori = $(this).attr("data-kategori");
-        var keterangan_downtime = $(this).attr("data-keterangan_downtime");
-        var catatan_downtime = $(this).attr("data-catatan_downtime");
-        var tgl_selesai = $(this).attr("data-tgl_selesai");
-        var jam_selesai = $(this).attr("data-jam_selesai");
-        var tindak_lanjut = $(this).attr("data-tindak_lanjut");
-        $('input:text[name=tgl_mulai]').val(tgl_mulai);
-        $('input:text[name=jam_mulai]').val(jam_mulai);
-        $('#jenis_downtime').val(jenis_downtime).change();
-        $('#kategori').val(kategori).change();
-        $('#keterangan_downtime').val(keterangan_downtime);
-        $('#catatan_downtime').val(catatan_downtime);
-        $('input:text[name=tgl_selesai]').val(tgl_selesai);
-        $('input:text[name=jam_selesai]').val(jam_selesai);
-        $('#tindak_lanjut').val(tindak_lanjut);
+    var url = baseURL + '/icd_10/saveicd10?t=' + mlite.token;
 
-      });
-      $(function () {
-        $(".datepicker").datepicker({
-          dateFormat: "yy-mm-dd",
-          changeMonth: true,
-          changeYear: true,
-          yearRange: "-100:+0",
+    $.post(url,{
+      no_rawat: no_rawat,
+      prioritas: prioritas,
+      nama: nama,
+      status: status,
+      kd_penyakit: kode
+    } ,function(data) {
+      $("#display_icd").show().load(baseURL + '/icd_10/display?no_rawat=' + no_rawat + '&t=' + mlite.token);
+      //bersih();
+      $('#notif').html("<div class=\"alert alert-success alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+      "Data ICD 10 (Diagnosa) pasien telah disimpan!"+
+      "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+      "</div>").show();
+    });
+  });
+</script>
+<script type="text/javascript">
+  $("#form_soap").on("click","#buka_riwayat", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
+    var loadURL =  baseURL + '/pasien/riwayatperawatan/' + no_rkm_medis + '?t=' + mlite.token;
+
+    var modal = $('#resumeModal');
+    var modalContent = $('#resumeModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  // tombol buka form diklik
+  $("#form_soap").on('click', '#buka_icd10dan9', function(){
+    $("#icd10dan9").show();
+    $("#buka_icd10dan9").val("Tutup Form");
+    $("#buka_icd10dan9").attr("id", "tutup_icd10dan9");
+  });
+
+  // tombol tutup form diklik
+  $("#form_soap").on('click', '#tutup_icd10dan9', function(){
+    $("#icd10dan9").hide();
+    $("#tutup_icd10dan9").val("Buka Form");
+    $("#tutup_icd10dan9").attr("id", "buka_icd10dan9");
+  });
+</script>
+
+<script>
+$("#form_soap").on("click",".resume", function(event){
+  var baseURL = mlite.url + '/' + mlite.admin;
+  event.preventDefault();
+  var no_rawat = $('input:text[name=no_rawat]').val().replace(/\//g, '');
+
+  var loadURL =  baseURL + '/dokter_ranap/resume/' + no_rawat + '?t=' + mlite.token;
+
+  var modal = $('#resumeModal');
+  var modalContent = $('#resumeModal .modal-content');
+
+  modal.off('show.bs.modal');
+  modal.on('show.bs.modal', function () {
+      modalContent.load(loadURL);
+  }).modal();
+  return false;
+});
+</script>
+          <div id="form_kontrol">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <div class="form-group">
+            <label for="id_pendaftaran">Id Rawat</label>
+            <input type="text" name="no_rawat" placeholder="ID Pendaftaran" class="form-control" value="" readonly>
+          </div>
+          <div class="form-group">
+            <label for="id_pasien">Nomor RM</label>
+            <input type="text" name="no_rkm_medis" class="form-control" placeholder="Nomor Rekam Medik" value="" readonly>
+          </div>
+          <div class="form-group">
+            <label for="nama_pasien">Nama Pasien</label>
+            <input type="text" name="nm_pasien" class="form-control" placeholder="Nama pasien" value="" readonly>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="clearfix">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Diagnosa</label>
+                    <input type="text" name="diagnosa" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Tindakan / Terapi</label>
+                    <input type="text" name="terapi" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Alasan Kontrol</label>
+                    <textarea name="alasan1" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Rencana Tindak Lanjut</label>
+                    <textarea name="rtl1" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Tanggal Surat</label>
+                    <input type="text" name="tanggal_rujukan" class="form-control tanggal" value="2026-04-04" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Tanggal Datang</label>
+                    <input type="text" name="tanggal_datang" class="form-control tanggal" />
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary" id="simpan_kontrol">Simpan</button>
+                <button type="button" class="btn btn-danger" id="selesai_kontrol">Selesai</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+                      <div id="form_sep">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title text-center">
+              <img src="http://localhost/mediclite/plugins/vclaim/img/default.png" alt="" style="border-radius: 50%;width:150px;">
+              <h5 class="nama_peserta"></h5>
+              <h5 id="no_kartu_peserta"></h5>
+              <h4 style="color:red;"><span class="prolainis_peserta"></span></h4>
+            </div>
+          </div>
+          <div class="panel-body">
+            <h5>NIK: <span id="nik_peserta"></span></h5>
+            <h5>No. MR: <span id="no_mr_peserta"></span></h5>
+            <h5>Tgl. Lahir: <span id="tgl_lahir_peserta"></span></h5>
+            <h5>Peserta: <span id="jenis_peserta"></span></h5>
+            <h5>Status: <span id="status_peserta"></span></h5>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Nomor Rujukan</a>
+                  </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <ul class="nav nav-pills">
+                          <li class="active">
+                              <a href="#pcare-pills" data-toggle="tab">PCare</a>
+                          </li>
+                          <li>
+                              <a href="#rs-pills" data-toggle="tab">Rumah Sakit</a>
+                          </li>
+                      </ul>
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                          <div class="tab-pane fade in active" id="pcare-pills">
+                              <div class="form-group">
+                                <label for="poli">Nomor Rujukan PCare</label>
+                                <input type="text" id="no_rujukan_pcare" name="no_rujukan_pcare" class="form-control" value="">
+                              </div>
+                              <button type="submit" class="btn btn-danger" id="parameter_no_rujukan_pcare">
+                                  Kirim Parameter
+                              </button>
+                          </div>
+                          <div class="tab-pane fade" id="rs-pills">
+                              <div class="form-group">
+                                <label for="poli">Nomor Rujukan RS</label>
+                                <input type="text" id="no_rujukan_rs" name="no_rujukan_rs" class="form-control" value="">
+                              </div>
+                              <button type="submit" class="btn btn-danger" id="parameter_no_rujukan_rs">
+                                  Kirim Parameter
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Nomor Kartu</a>
+                  </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <ul class="nav nav-pills">
+                          <li class="active">
+                              <a href="#pcare2-pills" data-toggle="tab">Pcare</a>
+                          </li>
+                          <li>
+                              <a href="#rs2-pills" data-toggle="tab">Rumah Sakit</a>
+                          </li>
+                      </ul>
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                          <div class="tab-pane fade in active" id="pcare2-pills">
+                              <div class="form-group">
+                                <label for="poli">Nomor Kartu</label>
+                                <input type="text" id="no_kartu_pcare" name="no_kartu_pcare" class="form-control" value="" readonly>
+                              </div>
+                              <button type="submit" class="btn btn-danger" id="parameter_no_kartu_pcare">
+                                  Kirim Parameter
+                              </button>
+                          </div>
+                          <div class="tab-pane fade" id="rs2-pills">
+                              <div class="form-group">
+                                <label for="poli">Nomor Kartu</label>
+                                <input type="text" id="no_kartu_rs" name="no_kartu_rs" class="form-control" value="" readonly>
+                              </div>
+                              <button type="submit" class="btn btn-danger" id="parameter_no_kartu_rs">
+                                  Kirim Parameter
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Histori Pelayanan</a>
+                  </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label for="poli">Nomor Kartu</label>
+                      <input type="text" id="nomor_asuransi" name="nomor_asuransi" class="form-control" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="poli">Tanggal Awal</label>
+                      <input type="text" id="tanggal_awal" name="tanggal_awal" class="form-control tanggal  " value="2026-01-04">
+                    </div>
+                    <div class="form-group">
+                      <label for="poli">Tanggal Akhir</label>
+                      <input type="text" id="tanggal_akhir" name="tanggal_akhir" class="form-control tanggal" value="2026-04-04">
+                    </div>
+                    <button type="submit" class="btn btn-danger" id="parameter_histori_pelayanan">
+                        Kirim Parameter
+                    </button>
+                    <div id="histori_pelayanan"></div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div id="data_sep">
+      <div class="panel panel-default">
+        <div class="form-horizontal">
+          <div class="panel-body">
+            <ul class="nav nav-tabs m-b-xl" role="tablist">
+                <li role="presentation" class="active"><a href="#satu" aria-controls="satu" role="tab" data-toggle="tab">Informasi Rujukan</a></li>
+                <li role="presentation"><a href="#dua" aria-controls="dua" role="tab" data-toggle="tab">Informasi Tambahan</a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="satu">
+                <div class="form-group clearfix" id="no_sep_input" hidden="true">
+                  <label for="" class="col-sm-3 control-label">Nomor SEP</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="get_no_sep" id="get_no_sep" class="form-control" value="" readonly>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Jenis Peserta</label>
+                  <div class="col-sm-6">
+                    <input type="text" id="sep_jenis_peserta" name="sep_jenis_peserta" class="form-control" value="" readonly>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">NoKa</label>
+                  <div class="col-sm-2">
+                    <input type="text" id="sep_no_kartu" name="sep_no_kartu" class="form-control" value="" readonly>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Tangga Lahir</label>
+                  <div class="col-sm-6">
+                    <input type="text" id="sep_tanggal_lahir" name="sep_tanggal_lahir" class="form-control tanggal" value="">
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Sex</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_jenis_kelamin_nama" id="sep_jenis_kelamin_nama" class="form-control" value="">
+                    <div hidden="true">
+                      <input type="text" name="sep_jenis_kelamin_kode" id="sep_jenis_kelamin_kode" class="form-control" value="">
+                    </div>
+                    <ul class="list-group" id="jenis_kelaminList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">ID Pendaftaran</label>
+                  <div class="col-sm-6">
+                    <input type="text" id="sep_no_rawat" name="sep_no_rawat" class="form-control" value="" readonly>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">RM</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_norm" id="sep_norm" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Eksekutif</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_eksekutif_nama" id="sep_eksekutif_nama" class="form-control" value="">
+                    <ul class="list-group" id="eksekutifList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_eksekutif_kode" id="sep_eksekutif_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Asal Rujukan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_asal_faskes_nama" id="sep_asal_faskes_nama" class="form-control" value="">
+                    <ul class="list-group" id="asalfaskesList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_asal_faskes_kode" id="sep_asal_faskes_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Jenis Layanan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_pelayanan_nama" id="sep_pelayanan_nama" class="form-control" value="">
+                    <ul class="list-group" id="pelayananList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_pelayanan_kode" id="sep_pelayanan_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Hak Kelas Rawat</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_kelas_nama" id="sep_kelas_nama" class="form-control" value="">
+                    <ul class="list-group" id="kelasList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_kelas_kode" id="sep_kelas_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">PPK Rujukan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_asal_rujukan_nama" id="sep_asal_rujukan_nama" class="form-control" value="">
+                    <ul class="list-group" id="faskesList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_asal_rujukan_kode" id="sep_asal_rujukan_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Nomor Rujukan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_nomor_rujukan" id="sep_nomor_rujukan" class="form-control" value="">
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Tanggal</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_tanggal_rujukan" id="sep_tanggal_rujukan" class="form-control tanggal" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Spesialis</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_spesialis_nama" id="sep_spesialis_nama" class="form-control" value="">
+                    <ul class="list-group" id="poliList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_spesialis_kode" id="sep_spesialis_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">DPJP</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_dpjp_yang_melayani_nama" id="sep_dpjp_yang_melayani_nama" class="form-control" value="">
+                    <ul class="list-group" id="dokterdpjpList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_dpjp_yang_melayani_kode" id="sep_dpjp_yang_melayani_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">DPJP Pelayanan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_dpjp_pelayanan_nama" id="sep_dpjp_pelayanan_nama" class="form-control" value="">
+                    <ul class="list-group" id="dokterdpjpList2" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_dpjp_pelayanan_kode" id="sep_dpjp_pelayanan_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Tanggal SEP</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_tanggal_sep" id="sep_tanggal_sep" class="form-control tanggal" value="2026-04-04">
+                  </div>
+                  <label for="" class="col-sm-1 control-label">SKDP</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_nomor_skdp" id="sep_nomor_skdp" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label control-label">Tanggal Pulang</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_tanggal_pulang" id="sep_tanggal_pulang" class="form-control tanggal" value="2026-04-04">
+                  </div>
+                  <label for="" class="col-sm-1 control-label">No. Tlp</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_nomor_telepon" id="sep_nomor_telepon" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Diagnosa</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_diagnosa_nama" id="sep_diagnosa_nama" class="form-control" value="">
+                    <ul class="list-group" id="diagnosaList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_diagnosa_kode" id="sep_diagnosa_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Catatan</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="sep_catatan" id="sep_catatan" class="form-control" value="">
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade in" id="dua">
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Naik Kelas Rawat</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_naik_kelas_nama" id="sep_naik_kelas_nama" class="form-control" value="">
+                    <ul class="list-group" id="naikkelasList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_naik_kelas_kode" id="sep_naik_kelas_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">PJ Pembiayaan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_pembiayaan_nama" id="sep_pembiayaan_nama" class="form-control" value="">
+                    <ul class="list-group" id="pembiayaanList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_pembiayaan_kode" id="sep_pembiayaan_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Tujuan Kunjungan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_kunjungan_nama" id="sep_kunjungan_nama" class="form-control" value="">
+                    <ul class="list-group" id="kunjunganList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_kunjungan_kode" id="sep_kunjungan_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Flag Prosedur</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_prosedur_nama" id="sep_prosedur_nama" class="form-control" value="">
+                    <ul class="list-group" id="prosedurList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_prosedur_kode" id="sep_prosedur_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Pelayanan Penunjang</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_penunjang_nama" id="sep_penunjang_nama" class="form-control" value="">
+                    <ul class="list-group" id="penunjangList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_penunjang_kode" id="sep_penunjang_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Assesment Pelayanan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_assesment_nama" id="sep_assesment_nama" class="form-control" value="">
+                    <ul class="list-group" id="assesmentList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_assesment_kode" id="sep_assesment_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">COB</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_cob_nama" id="sep_cob_nama" class="form-control" value="" />
+                    <ul class="list-group" id="cobList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_cob_kode" id="sep_cob_kode" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Katarak</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_katarak_nama" id="sep_katarak_nama" class="form-control" value="" />
+                    <ul class="list-group" id="katarakList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_katarak_kode" id="sep_katarak_kode" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Status Kecelakaan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_status_kecelakaan_nama" id="sep_status_kecelakaan_nama" class="form-control" value="" />
+                    <ul class="list-group" id="status_kecelakaanList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_status_kecelakaan_kode" id="sep_status_kecelakaan_kode" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Nomor Laporan Polisi</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="sep_nomor_laporan_polisi" id="sep_nomor_laporan_polisi" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Penjamin Kecelakaan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_penjamin_kecelakaan_nama" id="sep_penjamin_kecelakaan_nama" class="form-control" value="" />
+                    <ul class="list-group" id="penjamin_kecelakaanList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_penjamin_kecelakaan_kode" id="sep_penjamin_kecelakaan_kode" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Keterangan Kecelakaan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_keterangan_kecelakaan" id="sep_keterangan_kecelakaan" class="form-control" value="">
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Tangal</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_tanggal_kecelakaan" id="sep_tanggal_kecelakaan" class="form-control tanggal" value="2026-04-04">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Suplesi</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sep_suplesi_nama" id="sep_suplesi_nama" class="form-control" value="">
+                    <ul class="list-group" id="listList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="sep_suplesi_kode" id="sep_suplesi_kode" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Nomor Suplesi</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="sep_nomor_suplesi" id="sep_nomor_suplesi" class="form-control" value="">
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Propinsi</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="provinsi" id="provinsi" class="form-control" value="" />
+                    <ul class="list-group" id="provinsiList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="id_provinsi" id="id_provinsi" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Kabupaten</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="kabupaten" id="kabupaten" class="form-control" value="" />
+                    <ul class="list-group" id="kabupatenList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="id_kabupaten" id="id_kabupaten" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label for="" class="col-sm-3 control-label">Kecamatan</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="kecamatan" id="kecamatan" class="form-control" value="" />
+                    <ul class="list-group" id="kecamatanList" style="z-index:1000;position:absolute;width:100%;"></ul>
+                  </div>
+                  <label for="" class="col-sm-1 control-label">Kode</label>
+                  <div class="col-sm-2">
+                    <input type="text" name="id_kecamatan" id="id_kecamatan" class="form-control" value="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <input type="submit" id="simpan" class="btn btn-primary" name="" value="Simpan">
+            <!-- <button type="button" name="button" class="btn btn-success" id="finger">Cek Finger</button> -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biometrik <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="" id="finger">Finger Print</a></li>
+                <li><a href="#" class="" id="frista">Face Recognition</a></li>
+              </ul>
+            </div>
+            <!--<button type="button" name="button" class="btn btn-warning" id="sync_sep">Sync SEP</button>-->
+            <div class="btn-group">
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Antrian <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="add_antrian" data-jenis_kunjungan="1">Rujukan FKTP</a></li>
+                <li><a href="#" class="add_antrian" data-jenis_kunjungan="2">Rujukan Internal</a></li>
+                <li><a href="#" class="add_antrian" data-jenis_kunjungan="3">Kontrol</a></li>
+                <li><a href="#" class="add_antrian" data-jenis_kunjungan="4">Rujukan Antar RS</a></li>
+              </ul>
+            </div>
+            <button type="button" name="button" class="btn btn-warning" id="kontrol">Kontrol</button>
+            <button type="button" name="button" class="btn btn-warning" id="spri">SPRI</button>
+            <button type="button" name="button" class="btn btn-warning" id="rujukkeluar">Rujuk Keluar</button>
+            <button type="button" name="button" class="btn btn-warning" id="prb">PRB</button>
+            <input type="submit" id="selesai" class="btn btn-danger pull-right" name="" value="Selesai">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="syncsepModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="spriModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="add_antrianModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="kontrolModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="rujukkeluarModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          ...
+      </div>
+  </div>
+</div>
+<div class="modal fade" id="prbModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          ...
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sync_sep", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_peserta = $('input:text[name=sep_no_kartu]').val();
+    var find_no_rawat = $('input:text[name=sep_no_rawat]').val();
+    var no_rawat = find_no_rawat.replace(/\//g,'');
+    var loadURL =  baseURL + '/vclaim/sync_sep/' + no_peserta + '/' + no_rawat + '?t=' + mlite.token;
+
+    var modal = $('#syncsepModal');
+    var modalContent = $('#syncsepModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click",".add_antrian", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rkm_medis = $('input:text[name=no_rkm_medis]').val();
+    var no_rujukan = $('input:text[name=sep_nomor_rujukan]').val();
+    var no_skpd = $('input:text[name=sep_nomor_skdp]').val();
+    var find_no_rawat = $('input:text[name=sep_no_rawat]').val();
+    var no_rawat = find_no_rawat.replace(/\//g,'');
+    var jenis_kunjungan = $(this).attr("data-jenis_kunjungan");
+    var nomor_rujukan = '';
+    if (jenis_kunjungan == '1') {
+      nomor_rujukan = no_rujukan
+    } else {
+      nomor_rujukan = no_skpd
+    }
+
+    var loadURL =  baseURL + '/vclaim/addantrian/' + no_rkm_medis + '/' + no_rawat + '/' + nomor_rujukan + '/' + jenis_kunjungan + '?t=' + mlite.token;
+    // alert(loadURL);
+
+    var modal = $('#add_antrianModal');
+    var modalContent = $('#add_antrianModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#spri", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_peserta = $('input:text[name=sep_no_kartu]').val();
+    var find_no_rawat = $('input:text[name=sep_no_rawat]').val();
+    var no_rawat = find_no_rawat.replace(/\//g,'');
+    var loadURL =  baseURL + '/vclaim/spri/' + no_peserta + '/' + no_rawat + '?t=' + mlite.token;
+
+    var modal = $('#spriModal');
+    var modalContent = $('#spriModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#kontrol", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_peserta = $('input:text[name=sep_no_kartu]').val();
+    var loadURL =  baseURL + '/vclaim/kontrol/' + no_peserta + '?t=' + mlite.token;
+
+    var modal = $('#kontrolModal');
+    var modalContent = $('#kontrolModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#rujukkeluar", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_peserta = $('input:text[name=sep_no_kartu]').val();
+    var loadURL =  baseURL + '/vclaim/rujukkeluar/' + no_peserta + '?t=' + mlite.token;
+
+    var modal = $('#rujukkeluarModal');
+    var modalContent = $('#rujukkeluarModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+
+  $("#form_sep").on("click","#prb", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_peserta = $('input:text[name=sep_no_kartu]').val();
+    var find_no_rawat = $('input:text[name=sep_no_rawat]').val();
+    var no_rawat = find_no_rawat.replace(/\//g,'');
+    var loadURL =  baseURL + '/vclaim/srb/' + no_peserta + '/'+no_rawat+'?t=' + mlite.token;
+
+    var modal = $('#prbModal');
+    var modalContent = $('#prbModal .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+        modalContent.load(loadURL);
+    }).modal();
+    return false;
+  });
+</script>
+<script type="text/javascript">
+   $(function () {
+       $('.tanggal').datetimepicker({
+         format: 'YYYY-MM-DD',
+         locale: 'id'
+       });
+   });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#selesai", function(event){
+    bersih();
+    $("#form_rincian").hide();
+    $("#form_soap").hide();
+    $("#form").show();
+    $("#display").show();
+    $("#rincian").hide();
+    $("#soap").hide();
+    $("#form_sep").hide();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click",".print_sep", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_sep = $(this).attr("data-no_sep");
+    var find_no_rawat = $('input:text[name=sep_no_rawat]').val();
+    var no_rawat = find_no_rawat.replace(/\//g,'');
+    window.open(baseURL + '/vclaim/cetaksep/' + no_sep + '/' + no_rawat + '?t=' + mlite.token);
+  });
+  $("#form_sep").on("click",".print_sep_internal", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_sep = $(this).attr("data-no_sep");
+    window.open(baseURL + '/vclaim/cetaksepinternal/' + no_sep + '?t=' + mlite.token);
+  });
+  $("#form_sep").on("click","#finger", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_kartu = $('#sep_no_kartu').val();
+    var url = baseURL + '/vclaim/finger/' + no_kartu + '?t=' + mlite.token
+    $.get(url,function (data) {
+      var data = JSON.parse(data);
+      if(data.response.status == 'Peserta belum melakukan validasi finger print') {
+        openFingerprint(no_kartu);
+      } else {
+        alert(data.response.status)
+      }
+    })
+  });
+  $("#form_sep").on("click","#frista", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_kartu = $('#sep_no_kartu').val();
+    var url = baseURL + '/vclaim/frista/' + no_kartu + '?t=' + mlite.token
+    $.get(url,function (data) {
+      var data = JSON.parse(data);
+      if(data.response.status == 'Peserta belum melakukan validasi frista') {
+        openFrista(no_kartu);
+      } else {
+        alert(data.response.status)
+      }
+    })
+  });
+  $("#form_sep").on("click","#approvefinger", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_kartu = $('#sep_no_kartu').val();
+    var url = baseURL + '/vclaim/approvefinger/' + no_kartu + '?t=' + mlite.token
+    $.get(url,function (data) {
+      // var data = JSON.parse(data);
+      alert(data)
+    })
+  });
+</script>
+<script>
+async function openFingerprint(noka) {
+	const response = await fetch(`http://localhost:3000`, {
+		method: 'POST',
+		body: new URLSearchParams({
+			username: "",
+			password: "",
+			card_number: noka,
+			exit: true, // wait window for exit (optional, default false)
+			wait: 2_000 // wait for login to completed (optional, default 3_593)
+		})
+	});
+
+	if (response.ok) {
+		// Response OK setelah jendela aplikasi sidik jari ditutup
+	} else {
+		const result = await response.json();
+		alert(result.message);
+	}
+} 
+async function openFrista(noka) {
+	const response = await fetch(`http://localhost:3001`, {
+		method: 'POST',
+		body: new URLSearchParams({
+			username: "",
+			password: "",
+			card_number: noka,
+			exit: true, // wait window for exit (optional, default false)
+			wait: 2_000 // wait for login to completed (optional, default 3_593)
+		})
+	});
+
+	if (response.ok) {
+		// Response OK setelah jendela aplikasi sidik jari ditutup
+	} else {
+		const result = await response.json();
+		alert(result.message);
+	}
+} 
+</script>
+<script type="text/javascript">
+  // ketika tombol hapus ditekan
+  $("#form_sep").on("click",".hapus_sep", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var url = baseURL + '/vclaim/hapussep?t=' + mlite.token;
+    var no_sep = $(this).attr("data-no_sep");
+    //console.log(no_sep);
+
+    $.post(url, {
+      no_sep: no_sep
+    } ,function(data) {
+      alert(data);
+      $('#notif').html("<div class=\"alert alert-danger alert-dismissible fade in\" role=\"alert\" style=\"border-radius:0px;margin-top:-15px;\">"+
+      "Data rincian SEP telah dihapus!"+
+      "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>"+
+      "</div>").show();
+    });
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click",".ubah_sep", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_sep = $(this).attr("data-no_sep");
+    var no_rujukan = $(this).attr("data-no_rujukan");
+    var poli = $(this).attr("data-poli");
+    var diagnosa = $(this).attr("data-diagnosa");
+    var tgl_sep = $(this).attr("data-tgl_sep");
+
+    $('input:text[name=get_no_sep]').val(no_sep);
+    $('input:text[name=sep_nomor_rujukan]').val(no_rujukan);
+    if(poli == 'null') {
+      $('input:text[name=sep_spesialis_nama]').val('');
+    } else {
+      $('input:text[name=sep_spesialis_nama]').val(poli);
+    }
+    $('input:text[name=sep_diagnosa_nama]').val(diagnosa);
+    $('input:text[name=sep_tanggal_sep]').val(tgl_sep);
+
+    $("#no_sep_input").removeAttr('hidden');
+  });
+</script>
+<script type="text/javascript">
+  // ketika tombol antrian ditekan
+  $("#form_sep").on("click","#simpan", function(event){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+
+    var url = baseURL + '/vclaim/savesep?t=' + mlite.token;
+
+    var no_rawat = $('#sep_no_rawat').val();
+    var tglsep = $('#sep_tanggal_sep').val();
+    var tglrujukan = $('#sep_tanggal_rujukan').val();
+    var norujukan = $('#sep_nomor_rujukan').val();
+    var kdppkrujukan = $('#sep_asal_rujukan_kode').val();
+    var nmppkrujukan = $('#sep_asal_rujukan_nama').val();
+    var jnspelayanan = $('#sep_pelayanan_kode').val();
+    var catatan = $('#sep_catatan').val();
+    var diagawal = $('#sep_diagnosa_kode').val();
+    var nmdiagnosaawal = $('#sep_diagnosa_nama').val();
+    var kdpolitujuan = $('#sep_spesialis_kode').val();
+    var nmpolitujuan = $('#sep_spesialis_nama').val();
+    var klsrawat = $('#sep_kelas_kode').val();
+    var lakalantas = $('#sep_status_kecelakaan_kode').val();
+    var noLp = $('#sep_nomor_laporan_polisi').val();
+    var pembiayaan = $('#sep_pembiayaan_kode').val();
+    var klsnaik = $('#sep_naik_kelas_kode').val();
+    var pjnaikkelas = $('#sep_penjamin_kecelakaan_kode').val();
+    var tujuanKunj = $('#sep_kunjungan_kode').val();
+    var prosedur = $('#sep_prosedur_kode').val();
+    var penunjang = $('#sep_penunjang_kode').val();
+    var assesment = $('#sep_assesment_kode').val();
+    var nama_peserta = $('.nama_peserta').text();
+    var nomr = $('#sep_norm').val();
+    var tanggal_lahir = $('#sep_tanggal_lahir').val();
+    var peserta = $('#sep_jenis_peserta').val();
+    var jenis_kelamin = $('#sep_jenis_kelamin_kode').val();
+    var no_kartu = $('#sep_no_kartu').val();
+    var tglpulang = $('#sep_tanggal_pulang').val();
+    var asal_rujukan = $('#sep_asal_faskes_kode').val();
+    var eksekutif = $('#sep_eksekutif_kode').val();
+    var cob = $('#sep_cob_kode').val();
+    var penjamin = $('#sep_penjamin_kecelakaan_kode').val();
+    var notelep = $('#sep_nomor_telepon').val();
+    var katarak = $('#sep_katarak_kode').val();
+    var tglkkl = $('#sep_tanggal_kecelakaan').val();
+    var keterangankkl = $('#sep_keterangan_kecelakaan').val();
+    var suplesi = $('#sep_suplesi_kode').val();
+    var no_sep_suplesi = $('#sep_nomor_suplesi').val();
+    var kdprop = $('#id_provinsi').val();
+    var nmprop = $('#provinsi').val();
+    var kdkab = $('#id_kabupaten').val();
+    var nmkab = $('#kabupaten').val();
+    var kdkec = $('#id_kecamatan').val();
+    var nmkec = $('#kecamatan').val();
+    var noskdp = $('#sep_nomor_skdp').val();
+    var kddpjp = $('#sep_dpjp_yang_melayani_kode').val();
+    var nmdpdjp = $('#sep_dpjp_yang_melayani_nama').val();
+    var kddpjppelayanan = $('#sep_dpjp_pelayanan_kode').val();
+    var nmdpjppelayanan = $('#sep_dpjp_pelayanan_nama').val();
+    var prolanis_prb = $('.prolainis_peserta').text();
+
+    $.ajax({
+      type: "POST",
+      url: "http://localhost/mediclite/admin/vclaim/savesep?t=e8a38071b9a1",
+      data: {
+        no_rawat : no_rawat,
+        tglsep: tglsep,
+        tglrujukan: tglrujukan,
+        norujukan: norujukan,
+        kdppkrujukan: kdppkrujukan,
+        nmppkrujukan: nmppkrujukan,
+        jnspelayanan: jnspelayanan,
+        catatan: catatan,
+        diagawal: diagawal,
+        nmdiagnosaawal: nmdiagnosaawal,
+        kdpolitujuan: kdpolitujuan,
+        nmpolitujuan: nmpolitujuan,
+        klsrawat: klsrawat,
+        klsnaik: klsnaik,
+        pjnaikkelas: pjnaikkelas,
+        lakalantas: lakalantas,
+        noLp: noLp,
+        tujuanKunj: tujuanKunj,
+        flagProcedure: prosedur,
+        kdPenunjang: penunjang,
+        assesmentPel: assesment,
+        nama_pasien: nama_peserta,
+        nomr: nomr,
+        tanggal_lahir: tanggal_lahir,
+        peserta: peserta,
+        jenis_kelamin: jenis_kelamin,
+        no_kartu: no_kartu,
+        tglpulang: tglpulang,
+        asal_rujukan: asal_rujukan,
+        eksekutif: eksekutif,
+        cob: cob,
+        pembiayaan: pembiayaan,
+        notelep: notelep,
+        katarak: katarak,
+        tglkkl: tglkkl,
+        keterangankkl: keterangankkl,
+        suplesi: suplesi,
+        no_sep_suplesi: no_sep_suplesi,
+        kdprop : kdprop,
+        nmprop : nmprop,
+        kdkab : kdkab,
+        nmkab : nmkab,
+        kdkec : kdkec,
+        nmkec : nmkec,
+        noskdp: noskdp,
+        kddpjp: kddpjp,
+        nmdpdjp: nmdpdjp,
+        kddpjppelayanan: kddpjppelayanan,
+        nmdpjppelayanan: nmdpjppelayanan,
+        prolanis_prb: prolanis_prb
+      },
+      success: function(result){
+        var messages = result.split(' ');
+        if (messages.length == 1) {
+          window.open(baseURL + '/vclaim/cetaksep/' + result + '?t=' + mlite.token);
+        } else if(messages.length > 1) {
+          alert(result)
+        } else {
+          alert('Gagal menyimpan data ke database SIMRS');
+        }
+      }
+    });
+  });
+</script>
+<script type="text/javascript">
+  // ketika inputbox pencarian diisi
+  $('#parameter_no_rujukan_pcare').on('click',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var no_rujukan_pcare = $('input:text[name=no_rujukan_pcare]').val();
+    var url_vclaim    = baseURL + '/vclaim/caribynorujukan/PCare/' + no_rujukan_pcare + '/?t=' + mlite.token;
+
+    if(no_rujukan_pcare!="") {
+        // tampilkan data yang sudah di perbaharui
+        $.get(url_vclaim,function(data) {
+          var data = JSON.parse(data);
+          var json_obj = [data];
+          if(!json_obj[0]) {
+            alert('Koneksi ke server BPJS terputus. Silahkan ulangi lagi!');
+          } else if(json_obj[0].metaData.code == 200) {
+            var asalFaskes_nama = 'Faskes 1';
+            if(json_obj[0].response.asalFaskes == 2) {
+              var asalFaskes_nama = 'Faskes 2 (RS)';
+            }
+            var jenis_kelamin = 'Laki-Laki';
+            if(json_obj[0].response.rujukan.peserta.sex == 'P') {
+              var jenis_kelamin = 'Perempuan';
+            }
+            $('input:text[name=sep_jenis_kelamin_nama]').val(jenis_kelamin);
+            $('input:text[name=sep_jenis_kelamin_kode]').val(json_obj[0].response.rujukan.peserta.sex);
+            $('input:text[name=sep_tanggal_lahir]').val(json_obj[0].response.rujukan.peserta.tglLahir);
+            $('input:text[name=sep_jenis_peserta]').val(json_obj[0].response.rujukan.peserta.jenisPeserta.keterangan);
+            $('input:text[name=sep_no_kartu]').val(json_obj[0].response.rujukan.peserta.noKartu);
+            $('input:text[name=sep_norm]').val(json_obj[0].response.rujukan.peserta.mr.noMR);
+            $('input:text[name=sep_eksekutif_kode]').val("0");
+            $('input:text[name=sep_eksekutif_nama]').val("Tidak");
+            $('input:text[name=sep_kunjungan_kode]').val("0");
+            $('input:text[name=sep_kunjungan_nama]').val("Normal");
+            $('input:text[name=sep_cob_kode]').val("0");
+            $('input:text[name=sep_cob_nama]').val("Tidak");
+            $('input:text[name=sep_katarak_kode]').val("0");
+            $('input:text[name=sep_katarak_nama]').val("Tidak");
+            $('input:text[name=sep_status_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_status_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_penjamin_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_penjamin_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_suplesi_kode]').val("0");
+            $('input:text[name=sep_suplesi_nama]').val("Tidak");
+            $('input:text[name=sep_pelayanan_kode]').val(json_obj[0].response.rujukan.pelayanan.kode);
+            $('input:text[name=sep_pelayanan_nama]').val(json_obj[0].response.rujukan.pelayanan.nama);
+            $('input:text[name=sep_kelas_kode]').val(json_obj[0].response.rujukan.peserta.hakKelas.kode);
+            $('input:text[name=sep_kelas_nama]').val(json_obj[0].response.rujukan.peserta.hakKelas.keterangan);
+            $('input:text[name=sep_asal_faskes_kode]').val(json_obj[0].response.asalFaskes);
+            $('input:text[name=sep_asal_faskes_nama]').val(asalFaskes_nama);
+            $('input:text[name=sep_asal_rujukan_nama]').val(json_obj[0].response.rujukan.provPerujuk.nama);
+            $('input:text[name=sep_asal_rujukan_kode]').val(json_obj[0].response.rujukan.provPerujuk.kode);
+            $('input:text[name=sep_tanggal_rujukan]').val(json_obj[0].response.rujukan.tglKunjungan);
+            $('input:text[name=sep_nomor_rujukan]').val(json_obj[0].response.rujukan.noKunjungan);
+            $('input:text[name=sep_spesialis_kode]').val(json_obj[0].response.rujukan.poliRujukan.kode);
+            $('input:text[name=sep_spesialis_nama]').val(json_obj[0].response.rujukan.poliRujukan.nama);
+            $('input:text[name=sep_diagnosa_kode]').val(json_obj[0].response.rujukan.diagnosa.kode);
+            $('input:text[name=sep_diagnosa_nama]').val(json_obj[0].response.rujukan.diagnosa.nama);
+            $('input:text[name=sep_nomor_telepon]').val(json_obj[0].response.rujukan.peserta.mr.noTelepon);
+          } else {
+            alert(json_obj[0].metaData.message);
+          }
         });
+    }
+
+  });
+  // end pencarian
+  // ketika inputbox pencarian diisi
+  $('#parameter_no_rujukan_rs').on('click',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var no_rujukan_rs = $('input:text[name=no_rujukan_rs]').val();
+    var url_vclaim    = baseURL + '/vclaim/caribynorujukan/RS/' + no_rujukan_rs + '/?t=' + mlite.token;
+
+    if(no_rujukan_rs!="") {
+        // tampilkan data yang sudah di perbaharui
+        $.get(url_vclaim,function(data) {
+          var data = JSON.parse(data);
+          var json_obj = [data];
+
+          if(!json_obj[0]) {
+            alert('Koneksi ke server BPJS terputus. Silahkan ulangi lagi!');
+          } else if(json_obj[0].metaData.code == 200) {
+            var asalFaskes_nama = 'Faskes 1';
+            if(json_obj[0].response.asalFaskes == 2) {
+              var asalFaskes_nama = 'Faskes 2 (RS)';
+            }
+            var jenis_kelamin = 'Laki-Laki';
+            if(json_obj[0].response.rujukan.peserta.sex == 'P') {
+              var jenis_kelamin = 'Perempuan';
+            }
+            $('input:text[name=sep_jenis_kelamin_nama]').val(jenis_kelamin);
+            $('input:text[name=sep_jenis_kelamin_kode]').val(json_obj[0].response.rujukan.peserta.sex);
+            $('input:text[name=sep_tanggal_lahir]').val(json_obj[0].response.rujukan.peserta.tglLahir);
+            $('input:text[name=sep_jenis_peserta]').val(json_obj[0].response.rujukan.peserta.jenisPeserta.keterangan);
+            $('input:text[name=sep_no_kartu]').val(json_obj[0].response.rujukan.peserta.noKartu);
+            $('input:text[name=sep_norm]').val(json_obj[0].response.rujukan.peserta.mr.noMR);
+            $('input:text[name=sep_eksekutif_kode]').val("0");
+            $('input:text[name=sep_eksekutif_nama]').val("Tidak");
+            $('input:text[name=sep_kunjungan_kode]').val("0");
+            $('input:text[name=sep_kunjungan_nama]').val("Normal");
+            $('input:text[name=sep_cob_kode]').val("0");
+            $('input:text[name=sep_cob_nama]').val("Tidak");
+            $('input:text[name=sep_katarak_kode]').val("0");
+            $('input:text[name=sep_katarak_nama]').val("Tidak");
+            $('input:text[name=sep_status_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_status_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_penjamin_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_penjamin_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_suplesi_kode]').val("0");
+            $('input:text[name=sep_suplesi_nama]').val("Tidak");
+            $('input:text[name=sep_pelayanan_kode]').val(json_obj[0].response.rujukan.pelayanan.kode);
+            $('input:text[name=sep_pelayanan_nama]').val(json_obj[0].response.rujukan.pelayanan.nama);
+            $('input:text[name=sep_kelas_kode]').val(json_obj[0].response.rujukan.peserta.hakKelas.kode);
+            $('input:text[name=sep_kelas_nama]').val(json_obj[0].response.rujukan.peserta.hakKelas.keterangan);
+            $('input:text[name=sep_asal_faskes_kode]').val(json_obj[0].response.asalFaskes);
+            $('input:text[name=sep_asal_faskes_nama]').val(asalFaskes_nama);
+            $('input:text[name=sep_asal_rujukan_nama]').val(json_obj[0].response.rujukan.provPerujuk.nama);
+            $('input:text[name=sep_asal_rujukan_kode]').val(json_obj[0].response.rujukan.provPerujuk.kode);
+            $('input:text[name=sep_tanggal_rujukan]').val(json_obj[0].response.rujukan.tglKunjungan);
+            $('input:text[name=sep_nomor_rujukan]').val(json_obj[0].response.rujukan.noKunjungan);
+            $('input:text[name=sep_spesialis_kode]').val(json_obj[0].response.rujukan.poliRujukan.kode);
+            $('input:text[name=sep_spesialis_nama]').val(json_obj[0].response.rujukan.poliRujukan.nama);
+            $('input:text[name=sep_diagnosa_kode]').val(json_obj[0].response.rujukan.diagnosa.kode);
+            $('input:text[name=sep_diagnosa_nama]').val(json_obj[0].response.rujukan.diagnosa.nama);
+            $('input:text[name=sep_nomor_telepon]').val(json_obj[0].response.rujukan.peserta.mr.noTelepon);
+          } else {
+            alert(json_obj[0].metaData.message);
+          }
+
+        });
+    }
+
+  });
+  // end pencarian
+  // ketika inputbox pencarian diisi
+  $('#parameter_no_kartu_pcare').on('click',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var no_kartu_pcare = $('input:text[name=no_kartu_pcare]').val();
+    var url_vclaim    = baseURL + '/vclaim/caribynokartu/PCare/' + no_kartu_pcare + '/?t=' + mlite.token;
+
+    if(no_kartu_pcare!="") {
+        // tampilkan data yang sudah di perbaharui
+        $.get(url_vclaim,function(data) {
+          var data = JSON.parse(data);
+          var json_obj = [data];
+
+          if(!json_obj[0]) {
+            alert('Koneksi ke server BPJS terputus. Silahkan ulangi lagi!');
+          } else if(json_obj[0].metaData.code == 200) {
+            var asalFaskes_nama = 'Faskes 1';
+            if(json_obj[0].response.asalFaskes == 2) {
+              var asalFaskes_nama = 'Faskes 2 (RS)';
+            }
+            var jenis_kelamin = 'Laki-Laki';
+            if(json_obj[0].response.rujukan.peserta.sex == 'P') {
+              var jenis_kelamin = 'Perempuan';
+            }
+            $('input:text[name=sep_jenis_kelamin_nama]').val(jenis_kelamin);
+            $('input:text[name=sep_jenis_kelamin_kode]').val(json_obj[0].response.rujukan.peserta.sex);
+            $('input:text[name=sep_tanggal_lahir]').val(json_obj[0].response.rujukan.peserta.tglLahir);
+            $('input:text[name=sep_jenis_peserta]').val(json_obj[0].response.rujukan.peserta.jenisPeserta.keterangan);
+            $('input:text[name=sep_no_kartu]').val(json_obj[0].response.rujukan.peserta.noKartu);
+            $('input:text[name=sep_norm]').val(json_obj[0].response.rujukan.peserta.mr.noMR);
+            $('input:text[name=sep_eksekutif_kode]').val("0");
+            $('input:text[name=sep_eksekutif_nama]').val("Tidak");
+            $('input:text[name=sep_kunjungan_kode]').val("0");
+            $('input:text[name=sep_kunjungan_nama]').val("Normal");
+            $('input:text[name=sep_cob_kode]').val("0");
+            $('input:text[name=sep_cob_nama]').val("Tidak");
+            $('input:text[name=sep_katarak_kode]').val("0");
+            $('input:text[name=sep_katarak_nama]').val("Tidak");
+            $('input:text[name=sep_status_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_status_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_penjamin_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_penjamin_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_suplesi_kode]').val("0");
+            $('input:text[name=sep_suplesi_nama]').val("Tidak");
+            $('input:text[name=sep_pelayanan_kode]').val(json_obj[0].response.rujukan.pelayanan.kode);
+            $('input:text[name=sep_pelayanan_nama]').val(json_obj[0].response.rujukan.pelayanan.nama);
+            $('input:text[name=sep_kelas_kode]').val(json_obj[0].response.rujukan.peserta.hakKelas.kode);
+            $('input:text[name=sep_kelas_nama]').val(json_obj[0].response.rujukan.peserta.hakKelas.keterangan);
+            $('input:text[name=sep_asal_faskes_kode]').val(json_obj[0].response.asalFaskes);
+            $('input:text[name=sep_asal_faskes_nama]').val(asalFaskes_nama);
+            $('input:text[name=sep_asal_rujukan_nama]').val(json_obj[0].response.rujukan.provPerujuk.nama);
+            $('input:text[name=sep_asal_rujukan_kode]').val(json_obj[0].response.rujukan.provPerujuk.kode);
+            $('input:text[name=sep_tanggal_rujukan]').val(json_obj[0].response.rujukan.tglKunjungan);
+            $('input:text[name=sep_nomor_rujukan]').val(json_obj[0].response.rujukan.noKunjungan);
+            $('input:text[name=sep_spesialis_kode]').val(json_obj[0].response.rujukan.poliRujukan.kode);
+            $('input:text[name=sep_spesialis_nama]').val(json_obj[0].response.rujukan.poliRujukan.nama);
+            $('input:text[name=sep_diagnosa_kode]').val(json_obj[0].response.rujukan.diagnosa.kode);
+            $('input:text[name=sep_diagnosa_nama]').val(json_obj[0].response.rujukan.diagnosa.nama);
+            $('input:text[name=sep_nomor_telepon]').val(json_obj[0].response.rujukan.peserta.mr.noTelepon);
+          } else {
+            alert(json_obj[0].metaData.message);
+          }
+
+        });
+    }
+
+  });
+  // end pencarian
+  // ketika inputbox pencarian diisi
+  $('#parameter_no_kartu_rs').on('click',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var no_kartu_rs = $('input:text[name=no_kartu_rs]').val();
+    var url_vclaim    = baseURL + '/vclaim/caribynokartu/RS/' + no_kartu_rs + '/?t=' + mlite.token;
+
+    if(no_kartu_rs!="") {
+        // tampilkan data yang sudah di perbaharui
+        $.get(url_vclaim,function(data) {
+          var data = JSON.parse(data);
+          var json_obj = [data];
+
+          if(!json_obj[0]) {
+            alert('Koneksi ke server BPJS terputus. Silahkan ulangi lagi!');
+          } else if(json_obj[0].metaData.code == 200) {
+            var asalFaskes_nama = 'Faskes 1';
+            if(json_obj[0].response.asalFaskes == 2) {
+              var asalFaskes_nama = 'Faskes 2 (RS)';
+            }
+            var jenis_kelamin = 'Laki-Laki';
+            if(json_obj[0].response.rujukan.peserta.sex == 'P') {
+              var jenis_kelamin = 'Perempuan';
+            }
+            $('input:text[name=sep_jenis_kelamin_nama]').val(jenis_kelamin);
+            $('input:text[name=sep_jenis_kelamin_kode]').val(json_obj[0].response.rujukan.peserta.sex);
+            $('input:text[name=sep_tanggal_lahir]').val(json_obj[0].response.rujukan.peserta.tglLahir);
+            $('input:text[name=sep_jenis_peserta]').val(json_obj[0].response.rujukan.peserta.jenisPeserta.keterangan);
+            $('input:text[name=sep_no_kartu]').val(json_obj[0].response.rujukan.peserta.noKartu);
+            $('input:text[name=sep_norm]').val(json_obj[0].response.rujukan.peserta.mr.noMR);
+            $('input:text[name=sep_eksekutif_kode]').val("0");
+            $('input:text[name=sep_eksekutif_nama]').val("Tidak");
+            $('input:text[name=sep_kunjungan_kode]').val("0");
+            $('input:text[name=sep_kunjungan_nama]').val("Normal");
+            $('input:text[name=sep_cob_kode]').val("0");
+            $('input:text[name=sep_cob_nama]').val("Tidak");
+            $('input:text[name=sep_katarak_kode]').val("0");
+            $('input:text[name=sep_katarak_nama]').val("Tidak");
+            $('input:text[name=sep_status_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_status_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_penjamin_kecelakaan_kode]').val("0");
+            $('input:text[name=sep_penjamin_kecelakaan_nama]').val("Tidak");
+            $('input:text[name=sep_suplesi_kode]').val("0");
+            $('input:text[name=sep_suplesi_nama]').val("Tidak");
+            $('input:text[name=sep_pelayanan_kode]').val(json_obj[0].response.rujukan.pelayanan.kode);
+            $('input:text[name=sep_pelayanan_nama]').val(json_obj[0].response.rujukan.pelayanan.nama);
+            $('input:text[name=sep_kelas_kode]').val(json_obj[0].response.rujukan.peserta.hakKelas.kode);
+            $('input:text[name=sep_kelas_nama]').val(json_obj[0].response.rujukan.peserta.hakKelas.keterangan);
+            $('input:text[name=sep_asal_faskes_kode]').val(json_obj[0].response.asalFaskes);
+            $('input:text[name=sep_asal_faskes_nama]').val(asalFaskes_nama);
+            $('input:text[name=sep_asal_rujukan_nama]').val(json_obj[0].response.rujukan.provPerujuk.nama);
+            $('input:text[name=sep_asal_rujukan_kode]').val(json_obj[0].response.rujukan.provPerujuk.kode);
+            $('input:text[name=sep_tanggal_rujukan]').val(json_obj[0].response.rujukan.tglKunjungan);
+            $('input:text[name=sep_nomor_rujukan]').val(json_obj[0].response.rujukan.noKunjungan);
+            $('input:text[name=sep_spesialis_kode]').val(json_obj[0].response.rujukan.poliRujukan.kode);
+            $('input:text[name=sep_spesialis_nama]').val(json_obj[0].response.rujukan.poliRujukan.nama);
+            $('input:text[name=sep_diagnosa_kode]').val(json_obj[0].response.rujukan.diagnosa.kode);
+            $('input:text[name=sep_diagnosa_nama]').val(json_obj[0].response.rujukan.diagnosa.nama);
+            $('input:text[name=sep_nomor_telepon]').val(json_obj[0].response.rujukan.peserta.mr.noTelepon);
+          } else {
+            alert(json_obj[0].metaData.message);
+          }
+
+        });
+    }
+
+  });
+  // end pencarian
+  // ketika inputbox pencarian diisi
+  $('#parameter_histori_pelayanan').on('click',function(e){
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var nomor_asuransi = $('input:text[name=nomor_asuransi]').val();
+    var tanggal_awal = $('input:text[name=tanggal_awal]').val();
+    var tanggal_akhir = $('input:text[name=tanggal_akhir]').val();
+    var url_vclaim    = baseURL + '/vclaim/historipelayanan/' + nomor_asuransi + '/' + tanggal_awal + '/' + tanggal_akhir + '/?t=' + mlite.token;
+
+    if(nomor_asuransi!="") {
+        // tampilkan data yang sudah di perbaharui
+        $.get(url_vclaim,function(data) {
+          var data = JSON.parse(data);
+          //var data = JSON.stringify(data, null, '\t');
+          var json_obj = [data];
+          if(!json_obj[0]) {
+            alert('Koneksi ke server BPJS terputus. Silahkan ulangi lagi!');
+          } else if(json_obj[0].metaData.code == 200) {
+            var histori = json_obj[0].response.histori;
+            console.log(histori);
+            var output="<div class=\"panel panel-default m-t-xl\">";
+            for (var i in histori) {
+                var jnsPelayanan = "Rawat Inap";
+                var poli = "null";
+                if(histori[i].jnsPelayanan == 2) {
+                  var jnsPelayanan = "Rawat Jalan";
+                  var poli = histori[i].poli;
+                }
+                output+="<div class=\"panel-body\">";
+                output+="Diagnosa : " + histori[i].diagnosa + "<br/>";
+                output+="Jenis : " + jnsPelayanan + "<br/>";
+                output+="Kelas : " + histori[i].kelasRawat + "<br/>";
+                output+="Poli : " + poli + "<br/>";
+                output+="Tgl. SEP : " + histori[i].tglSep + "<br/>";
+                output+="No. SEP : " + histori[i].noSep + "<br/>";
+                output+="No. Rjk : " + histori[i].noRujukan + "<br/>";
+                output+="PPK Pelayanan : " + histori[i].ppkPelayanan;
+                output+="</div>";
+                output+="<div class=\"panel-footer\"><button class=\"btn btn-success btn-xs ubah_sep\" data-diagnosa=" + histori[i].diagnosa + " data-poli=" + poli + " data-tgl_sep=" + histori[i].tglSep + " data-no_sep=" + histori[i].noSep + " data-no_rujukan=" + histori[i].noRujukan + ">Ubah</button> <button class=\"btn btn-danger btn-xs hapus_sep\" data-no_sep=" + histori[i].noSep + ">Hapus</button> <button class=\"btn btn-primary btn-xs print_sep\" data-no_sep=" + histori[i].noSep + ">Cetak</button></div>";
+            }
+            output+="</div>";
+            $("#histori_pelayanan").html(output).show();
+          } else {
+            alert(json_obj[0].metaData.message);
+          }
+        });
+    }
+  });
+  // end pencarian
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_cob_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">0: Tidak</li>';
+       output+='<li class=\"list-group-item link-class\">1: Ya</li>';
+       output+='';
+       $('#cobList').fadeIn();
+       $('#cobList').html(output).show();
+  });
+  $('#cobList').on('click', 'li', function(){
+       $('#sep_cob_nama').val($(this).text().split(': ')[1]);
+       $('#sep_cob_kode').val($(this).text().split(': ')[0]);
+       var sep_cob_kode = $('#sep_cob_kode').val();
+       $('#cobList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_katarak_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">0: Tidak</li>';
+       output+='<li class=\"list-group-item link-class\">1: Ya</li>';
+       output+='';
+       $('#katarakList').fadeIn();
+       $('#katarakList').html(output).show();
+  });
+  $('#katarakList').on('click', 'li', function(){
+       $('#sep_katarak_nama').val($(this).text().split(': ')[1]);
+       $('#sep_katarak_kode').val($(this).text().split(': ')[0]);
+       var sep_status_kecelakaan_kode = $('#sep_katarak_kode').val();
+       $('#katarakList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_status_kecelakaan_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">0: Tidak</li>';
+       output+='<li class=\"list-group-item link-class\">1: Ya</li>';
+       output+='';
+       $('#status_kecelakaanList').fadeIn();
+       $('#status_kecelakaanList').html(output).show();
+  });
+  $('#status_kecelakaanList').on('click', 'li', function(){
+       $('#sep_status_kecelakaan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_status_kecelakaan_kode').val($(this).text().split(': ')[0]);
+       var sep_status_kecelakaan_kode = $('#sep_status_kecelakaan_kode').val();
+       $('#status_kecelakaanList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_penjamin_kecelakaan_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">0: Tidak</li>';
+       output+='<li class=\"list-group-item link-class\">1: Ya</li>';
+       output+='';
+       $('#penjamin_kecelakaanList').fadeIn();
+       $('#penjamin_kecelakaanList').html(output).show();
+  });
+  $('#penjamin_kecelakaanList').on('click', 'li', function(){
+       $('#sep_penjamin_kecelakaan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_penjamin_kecelakaan_kode').val($(this).text().split(': ')[0]);
+       var sep_status_kecelakaan_kode = $('#sep_penjamin_kecelakaan_kode').val();
+       $('#penjamin_kecelakaanList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_jenis_kelamin_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">L: Laki-Laki</li>';
+       output+='<li class=\"list-group-item link-class\">P: Perempuan</li>';
+       output+='';
+       $('#jenis_kelaminList').fadeIn();
+       $('#jenis_kelaminList').html(output).show();
+  });
+  $('#jenis_kelaminList').on('click', 'li', function(){
+       $('#sep_jenis_kelamin_nama').val($(this).text().split(': ')[1]);
+       $('#sep_jenis_kelamin_kode').val($(this).text().split(': ')[0]);
+       var sep_jenis_kelamin_kode = $('#sep_jenis_kelamin_kode').val();
+       $('#jenis_kelaminList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_eksekutif_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">0: Tidak</li>';
+       output+='<li class=\"list-group-item link-class\">1: Ya</li>';
+       output+='';
+       $('#eksekutifList').fadeIn();
+       $('#eksekutifList').html(output).show();
+  });
+  $('#eksekutifList').on('click', 'li', function(){
+       $('#sep_eksekutif_nama').val($(this).text().split(': ')[1]);
+       $('#sep_eksekutif_kode').val($(this).text().split(': ')[0]);
+       var sep_eksekutif_kode = $('#sep_eksekutif_kode').val();
+       $('#eksekutifList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_asal_faskes_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">1: Fakses 1</li>';
+       output+='<li class=\"list-group-item link-class\">2: Faskes 2 (RS)</li>';
+       output+='';
+       $('#asalfaskesList').fadeIn();
+       $('#asalfaskesList').html(output).show();
+  });
+  $('#asalfaskesList').on('click', 'li', function(){
+       $('#sep_asal_faskes_nama').val($(this).text().split(': ')[1]);
+       $('#sep_asal_faskes_kode').val($(this).text().split(': ')[0]);
+       var sep_asal_faskes_kode = $('#sep_asal_faskes_kode').val();
+       $('#asalfaskesList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_pelayanan_nama", function(event){
+  //$('#sep_pelayanan_nama').focus(function(){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">1: Rawat Inap</li>';
+       output+='<li class=\"list-group-item link-class\">2: Rawat Jalan</li>';
+       output+='';
+       $('#pelayananList').fadeIn();
+       $('#pelayananList').html(output).show();
+  });
+  $('#pelayananList').on('click', 'li', function(){
+       $('#sep_pelayanan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_pelayanan_kode').val($(this).text().split(': ')[0]);
+       var sep_pelayanan_kode = $('#sep_pelayanan_kode').val();
+       $('#pelayananList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_kelas_nama", function(event){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">1: KELAS 1</li>';
+       output+='<li class=\"list-group-item link-class\">2: KELAS 2</li>';
+       output+='<li class=\"list-group-item link-class\">3: KELAS 3</li>';
+       output+='';
+       $('#kelasList').fadeIn();
+       $('#kelasList').html(output).show();
+  });
+  $('#kelasList').on('click', 'li', function(){
+       $('#sep_kelas_nama').val($(this).text().split(': ')[1]);
+       $('#sep_kelas_kode').val($(this).text().split(': ')[0]);
+       var sep_kelas_kode = $('#sep_kelas_kode').val();
+       $('#kelasList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_naik_kelas_nama", function(event){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">1: VVIP</li>';
+       output+='<li class=\"list-group-item link-class\">2: VIP</li>';
+       output+='<li class=\"list-group-item link-class\">3: KELAS 1</li>';
+       output+='<li class=\"list-group-item link-class\">4: KELAS 2</li>';
+       output+='<li class=\"list-group-item link-class\">5: KELAS 3</li>';
+       output+='<li class=\"list-group-item link-class\">6: ICCU</li>';
+       output+='<li class=\"list-group-item link-class\">7: ICU</li>';
+       output+='';
+       $('#naikkelasList').fadeIn();
+       $('#naikkelasList').html(output).show();
+  });
+  $('#naikkelasList').on('click', 'li', function(){
+       $('#sep_naik_kelas_nama').val($(this).text().split(': ')[1]);
+       $('#sep_naik_kelas_kode').val($(this).text().split(': ')[0]);
+       var sep_naik_kelas_kode = $('#sep_naik_kelas_kode').val();
+       $('#naikkelasList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_pembiayaan_nama", function(event){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">1: Pribadi</li>';
+       output+='<li class=\"list-group-item link-class\">2: Pemberi Kerja</li>';
+       output+='<li class=\"list-group-item link-class\">3: Asuransi Tambahan</li>';
+       output+='';
+       $('#pembiayaanList').fadeIn();
+       $('#pembiayaanList').html(output).show();
+  });
+  $('#pembiayaanList').on('click', 'li', function(){
+       $('#sep_pembiayaan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_pembiayaan_kode').val($(this).text().split(': ')[0]);
+       var sep_pembiayaan_kode = $('#sep_pembiayaan_kode').val();
+       $('#pembiayaanList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_kunjungan_nama", function(event){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">0: Normal</li>';
+       output+='<li class=\"list-group-item link-class\">1: Prosedur</li>';
+       output+='<li class=\"list-group-item link-class\">2: Konsul Dokter</li>';
+       output+='';
+       $('#kunjunganList').fadeIn();
+       $('#kunjunganList').html(output).show();
+  });
+  $('#kunjunganList').on('click', 'li', function(){
+       $('#sep_kunjungan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_kunjungan_kode').val($(this).text().split(': ')[0]);
+       var sep_kunjungan_kode = $('#sep_kunjungan_kode').val();
+       $('#kunjunganList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_prosedur_nama", function(event){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">0: Prosedur Tidak Berkelanjutan</li>';
+       output+='<li class=\"list-group-item link-class\">1: Prosedur dan Terapi Berkelanjutan</li>';
+       output+='';
+       $('#prosedurList').fadeIn();
+       $('#prosedurList').html(output).show();
+  });
+  $('#prosedurList').on('click', 'li', function(){
+       $('#sep_prosedur_nama').val($(this).text().split(': ')[1]);
+       $('#sep_prosedur_kode').val($(this).text().split(': ')[0]);
+       var sep_prosedur_kode = $('#sep_prosedur_kode').val();
+       $('#prosedurList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_penunjang_nama", function(event){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">1: Radioterapi</li>';
+       output+='<li class=\"list-group-item link-class\">2: Kemoterapi</li>';
+       output+='<li class=\"list-group-item link-class\">3: Rehabilitasi Medik</li>';
+       output+='<li class=\"list-group-item link-class\">4: Rehabilitasi Psikososial</li>';
+       output+='<li class=\"list-group-item link-class\">5: Transfusi Darah</li>';
+       output+='<li class=\"list-group-item link-class\">6: Pelayanan Gigi</li>';
+       output+='<li class=\"list-group-item link-class\">7: Laboratorium</li>';
+       output+='<li class=\"list-group-item link-class\">8: USG</li>';
+       output+='<li class=\"list-group-item link-class\">9: Kemoterapi</li>';
+       output+='<li class=\"list-group-item link-class\">10: Lain-Lain</li>';
+       output+='<li class=\"list-group-item link-class\">11: MRI</li>';
+       output+='<li class=\"list-group-item link-class\">12: HEMODIALISA</li>';
+       output+='';
+       $('#penunjangList').fadeIn();
+       $('#penunjangList').html(output).show();
+  });
+  $('#penunjangList').on('click', 'li', function(){
+       $('#sep_penunjang_nama').val($(this).text().split(': ')[1]);
+       $('#sep_penunjang_kode').val($(this).text().split(': ')[0]);
+       var sep_penunjang_kode = $('#sep_penunjang_kode').val();
+       $('#penunjangList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $("#form_sep").on("click","#sep_assesment_nama", function(event){
+       var output='';
+       output+='<li class=\"list-group-item link-class\">1: Poli spesialis tidak tersedia pada hari sebelumnya</li>';
+       output+='<li class=\"list-group-item link-class\">2: Jam Poli telah berakhir pada hari sebelumnya</li>';
+       output+='<li class=\"list-group-item link-class\">3: Dokter Spesialis yang dimaksud tidak praktek pada hari sebelumnya</li>';
+       output+='<li class=\"list-group-item link-class\">4: Atas Instruksi RS</li>';
+       output+='<li class=\"list-group-item link-class\">5: Tujuan Kontrol</li>';
+       output+='';
+       $('#assesmentList').fadeIn();
+       $('#assesmentList').html(output).show();
+  });
+  $('#assesmentList').on('click', 'li', function(){
+       $('#sep_assesment_nama').val($(this).text().split(': ')[1]);
+       $('#sep_assesment_kode').val($(this).text().split(': ')[0]);
+       var sep_assesment_kode = $('#sep_assesment_kode').val();
+       $('#assesmentList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $('#sep_asal_rujukan_nama').keyup(function(){
+       //console.log('Spesialis Nama');
+       var query = $(this).val();
+       var sep_asal_faskes_kode = $('input:text[name=sep_asal_faskes_kode]').val();
+
+       if(query != '')
+       {
+            $.ajax({
+                 url: 'http://localhost/mediclite/admin/vclaim/faskes/' + encodeURIComponent(query) + '/' + encodeURIComponent(sep_asal_faskes_kode) + '?t=e8a38071b9a1',
+                 method:"GET",
+                 data:{},
+                 success:function(data)
+                 {
+                     var data = JSON.parse(data);
+                     var json_obj = [data];
+                     var output='';
+                     if(json_obj[0].metaData.code == 200) {
+                       var faskes = json_obj[0].response.faskes;
+                       for (var i in faskes) {
+                         output+='<li class=\"list-group-item link-class\">' + faskes[i].kode + ': ' + faskes[i].nama + '</li>';
+                       }
+                     } else {
+                       output+='<li class=\"list-group-item link-class\">' + json_obj[0].metaData.message + '</li>';
+                     }
+                     output+='';
+                     //console.log(output);
+                     $('#faskesList').fadeIn();
+                     $('#faskesList').html(output).show();
+                 }
+            });
+       }
+  });
+  $('#faskesList').on('click', 'li', function(){
+       $('#sep_asal_rujukan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_asal_rujukan_kode').val($(this).text().split(': ')[0]);
+       var sep_asal_rujukan_kode = $('#sep_asal_rujukan_kode').val();
+       $('#faskesList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $('#sep_spesialis_nama').keyup(function(){
+       var query = $(this).val();
+       if(query != '')
+       {
+            $.ajax({
+                 url: 'http://localhost/mediclite/admin/vclaim/poli/' + encodeURIComponent(query) + '?t=e8a38071b9a1',
+                 method:"GET",
+                 data:{},
+                 success:function(data)
+                 {
+                     var data = JSON.parse(data);
+                     var json_obj = [data];
+                     var output='';
+                     if(json_obj[0].metaData.code == 200) {
+                       var poli = json_obj[0].response.poli;
+                       for (var i in poli) {
+                         output+='<li class=\"list-group-item link-class\">' + poli[i].kode + ': ' + poli[i].nama + '</li>';
+                       }
+                     } else {
+                       output+='<li class=\"list-group-item link-class\">' + json_obj[0].metaData.message + '</li>';
+                     }
+                     output+='';
+                     //console.log(output);
+                     $('#poliList').fadeIn();
+                     $('#poliList').html(output).show();
+                 }
+            });
+       }
+  });
+  $('#poliList').on('click', 'li', function(){
+       $('#sep_spesialis_nama').val($(this).text().split(': ')[1]);
+       $('#sep_spesialis_kode').val($(this).text().split(': ')[0]);
+       var sep_spesialis_kode = $('#sep_spesialis_kode').val();
+       $('#poliList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $('#sep_spesialis_kode').keyup(function(){
+       var query = $(this).val();
+       var sep_pelayanan_kode = $('input:text[name=sep_pelayanan_kode]').val();
+       if($('#sep_spesialis_kode').val() == 'IGD') {
+         var sep_pelayanan_kode = '1';
+       }
+       var sep_tanggal_sep = $('input:text[name=sep_tanggal_sep]').val();
+
+       if(query != '')
+       {
+            $.ajax({
+                 url: 'http://localhost/mediclite/admin/vclaim/dokterdpjp/' + encodeURIComponent(sep_pelayanan_kode) + '/' + encodeURIComponent(sep_tanggal_sep) + '/' + encodeURIComponent(query) + '?t=e8a38071b9a1',
+                 method:"GET",
+                 data:{},
+                 success:function(data)
+                 {
+                     var data = JSON.parse(data);
+                     var json_obj = [data];
+                     var output='';
+                     if(json_obj[0].metaData.code == 200) {
+                       var dokterdpjp = json_obj[0].response.list;
+                       for (var i in dokterdpjp) {
+                         output+='<li class=\"list-group-item link-class\">' + dokterdpjp[i].kode + ': ' + dokterdpjp[i].nama + '</li>';
+                       }
+                     } else {
+                       output+='<li class=\"list-group-item link-class\">' + json_obj[0].metaData.message + '</li>';
+                     }
+                     output+='';
+                     //console.log(output);
+                     $('#dokterdpjpList').fadeIn();
+                     $('#dokterdpjpList').html(output).show();
+                 }
+            });
+       }
+  });
+  $('#dokterdpjpList').on('click', 'li', function(){
+       $('#sep_dpjp_yang_melayani_nama').val($(this).text().split(': ')[1]);
+       $('#sep_dpjp_yang_melayani_kode').val($(this).text().split(': ')[0]);
+       var sep_dpjp_yang_melayani_kode = $('#sep_dpjp_yang_melayani_kode').val();
+       $('#sep_dpjp_pelayanan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_dpjp_pelayanan_kode').val($(this).text().split(': ')[0]);
+       var sep_dpjp_pelayanan_kode = $('#sep_dpjp_pelayanan_kode').val();
+       $('#dokterdpjpList').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $('#sep_dpjp_pelayanan_nama').keyup(function(){
+       var query = $(this).val();
+       var sep_pelayanan_kode = $('input:text[name=sep_pelayanan_kode]').val();
+       var sep_tanggal_sep = $('input:text[name=sep_tanggal_sep]').val();
+
+       if(query != '')
+       {
+            $.ajax({
+                 url: 'http://localhost/mediclite/admin/vclaim/dokterdpjp/' + encodeURIComponent(sep_pelayanan_kode) + '/' + encodeURIComponent(sep_tanggal_sep) + '/' + encodeURIComponent(query) + '?t=e8a38071b9a1',
+                 method:"GET",
+                 data:{},
+                 success:function(data)
+                 {
+                     var data = JSON.parse(data);
+                     var json_obj = [data];
+                     var output='';
+                     if(json_obj[0].metaData.code == 200) {
+                       var dokterdpjp = json_obj[0].response.list;
+                       for (var i in dokterdpjp) {
+                         output+='<li class=\"list-group-item link-class\">' + dokterdpjp[i].kode + ': ' + dokterdpjp[i].nama + '</li>';
+                       }
+                     } else {
+                       output+='<li class=\"list-group-item link-class\">' + json_obj[0].metaData.message + '</li>';
+                     }
+                     output+='';
+                     //console.log(output);
+                     $('#dokterdpjpList2').fadeIn();
+                     $('#dokterdpjpList2').html(output).show();
+                 }
+            });
+       }
+  });
+  $('#dokterdpjpList2').on('click', 'li', function(){
+       $('#sep_dpjp_pelayanan_nama').val($(this).text().split(': ')[1]);
+       $('#sep_dpjp_pelayanan_kode').val($(this).text().split(': ')[0]);
+       var sep_dpjp_pelayanan_kode = $('#sep_dpjp_pelayanan_kode').val();
+       $('#dokterdpjpList2').fadeOut();
+  });
+</script>
+<script type="text/javascript">
+  $('#sep_diagnosa_nama').keyup(function(){
+       var query = $(this).val();
+       if(query != '')
+       {
+            $.ajax({
+                 url: 'http://localhost/mediclite/admin/vclaim/diagnosa/' + encodeURIComponent(query) + '?t=e8a38071b9a1',
+                 method:"GET",
+                 data:{},
+                 success:function(data)
+                 {
+                     var data = JSON.parse(data);
+                     var json_obj = [data];
+                     var output='';
+                     if(json_obj[0].metaData.code == 200) {
+                       var diagnosa = json_obj[0].response.diagnosa;
+                       for (var i in diagnosa) {
+                         output+='<li class=\"list-group-item link-class\">' + diagnosa[i].kode + ': ' + diagnosa[i].nama + '</li>';
+                       }
+                     } else {
+                       output+='<li class=\"list-group-item link-class\">' + json_obj[0].metaData.message + '</li>';
+                     }
+                     output+='';
+                     //console.log(output);
+                     $('#diagnosaList').fadeIn();
+                     $('#diagnosaList').html(output).show();
+                 }
+            });
+       }
+  });
+  $('#diagnosaList').on('click', 'li', function(){
+       $('#sep_diagnosa_nama').val($(this).text().split(': ')[1]);
+       $('#sep_diagnosa_kode').val($(this).text().split(': ')[0]);
+       var sep_diagnosa_kode = $('#sep_diagnosa_kode').val();
+       $('#diagnosaList').fadeOut();
+  });
+</script>
+<script>
+ $(document).ready(function(){
+      $('#provinsi').keyup(function(){
+           var query = $(this).val();
+           if(query != '')
+           {
+                $.ajax({
+                     url: "http://localhost/mediclite/admin/pasien/wilayah?show=caripropinsi&t=e8a38071b9a1",
+                     method:"POST",
+                     data:{query:query},
+                     success:function(data)
+                     {
+                          //console.log(data);
+                          $('#provinsiList').fadeIn();
+                          $('#provinsiList').html(data);
+                     }
+                });
+           }
+      });
+      $('#provinsiList').on('click', 'li', function(){
+           $('#provinsi').val($(this).text().split(': ')[1]);
+           $('#id_provinsi').val($(this).text().split(': ')[0]);
+           var id_provinsi = $('#id_provinsi').val();
+           $('#provinsiList').fadeOut();
+           //console.log(id_provinsi);
+
+           $('#kabupaten').keyup(function(){
+                var query = $(this).val();
+                if(query != '')
+                {
+                     $.ajax({
+                          url: "http://localhost/mediclite/admin/pasien/wilayah?show=carikabupaten&t=e8a38071b9a1",
+                          method:"POST",
+                          data:{query:query,id_prov:id_provinsi},
+                          success:function(data)
+                          {
+                               $('#kabupatenList').fadeIn();
+                               $('#kabupatenList').html(data);
+                          }
+                     });
+                }
+           });
+
+      });
+      $('#kabupatenList').on('click', 'li', function(){
+           $('#kabupaten').val($(this).text().split(': ')[1]);
+           $('#id_kabupaten').val($(this).text().split(': ')[0]);
+           var id_kabupaten = $('#id_kabupaten').val();
+           $('#kabupatenList').fadeOut();
+           //console.log(id_kabupaten);
+
+           $('#kecamatan').keyup(function(){
+                var query = $(this).val();
+                if(query != '')
+                {
+                     $.ajax({
+                          url: "http://localhost/mediclite/admin/pasien/wilayah?show=carikecamatan&t=e8a38071b9a1",
+                          method:"POST",
+                          data:{query:query,id_kab:id_kabupaten},
+                          success:function(data)
+                          {
+                               $('#kecamatanList').fadeIn();
+                               $('#kecamatanList').html(data);
+                          }
+                     });
+                }
+           });
+
       });
 
-      $(function () {
-        $('.timepicker').timepicker();
-      });  
-    </script>                    </div>
+      $('#kecamatanList').on('click', 'li', function(){
+           $('#kecamatan').val($(this).text().split(': ')[1]);
+           $('#id_kecamatan').val($(this).text().split(': ')[0]);
+           var id_kecamatan = $('#id_kecamatan').val();
+           $('#kecamatanList').fadeOut();
+           //console.log(id_kecamatan);
+
+           $('#kelurahan').keyup(function(){
+                var query = $(this).val();
+                if(query != '')
+                {
+                     $.ajax({
+                          url: "http://localhost/mediclite/admin/pasien/wilayah?show=carikelurahan&t=e8a38071b9a1",
+                          method:"POST",
+                          data:{query:query,id_kec:id_kecamatan},
+                          success:function(data)
+                          {
+                               $('#kelurahanList').fadeIn();
+                               $('#kelurahanList').html(data);
+                          }
+                     });
+                }
+           });
+
+      });
+
+      $('#kelurahanList').on('click', 'li', function(){
+           $('#kelurahan').val($(this).text().split(': ')[1]);
+           $('#id_kelurahan').val($(this).text().split(': ')[0]);
+           $('#kelurahanList').fadeOut();
+           //console.log(id_kelurahan);
+
+      });
+
+ });
+ </script>
+                  </div>
+        <div>
+          <div id="rincian"></div>
+          <div id="soap"></div>
+          <div id="kontrol"></div>
+          <div id="sep"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+   $(function () {
+       $('.periode_rawat_inap').datetimepicker({
+         defaultDate: '2026-04-04',
+         format: 'YYYY-MM-DD',
+         locale: 'id'
+       });
+   });
+</script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -630,15 +3556,15 @@
         Made with <i class="fa fa-heart text-danger"></i> by <a href="https://basoro.id/" target="_blank"><b>drg. F. Basoro</b>.</a>
         Powered by <a href="https://mlite.id/">mLITE</a>.
       </p>
-      <p><i class="fa fa-fw fa-calendar"></i> <span>Sabtu, 28 Februari 2026</span> <i class="fa fa-fw fa-clock-o"></i><span id="clock"></span> <i class="fa fa-fw fa-user"></i> <span>Login sebagai <strong>Administrator</strong></span></p>
+      <p><i class="fa fa-fw fa-calendar"></i> <span>Sabtu, 04 April 2026</span> <i class="fa fa-fw fa-clock-o"></i><span id="clock"></span> <i class="fa fa-fw fa-user"></i> <span>Login sebagai <strong>dr. Guntur,Sp.OG</strong></span></p>
     </footer>
 
         <div class="icon-bar hidden-lg hidden-md">
-      <a href="http://localhost/mediclite/admin/dashboard/menu?t=73b7e8b06200" data-toggle="modal" data-target="#menuModal"><i class="fa fa-home"></i></a>
-      <a href="http://localhost/mediclite/admin/pasien/manage?t=73b7e8b06200"><i class="fa fa-users"></i></a>
-      <a href="http://localhost/mediclite/admin/igd/manage?t=73b7e8b06200"><i class="fa fa-ambulance"></i></a>
-      <a href="http://localhost/mediclite/admin/rawat_jalan/manage?t=73b7e8b06200"><i class="fa fa-wheelchair"></i></a>
-      <a href="http://localhost/mediclite/admin/rawat_inap/manage?t=73b7e8b06200"><i class="fa fa-hotel"></i></a>
+      <a href="#" data-toggle="modal" data-target="#menuModal"><i class="fa fa-home"></i></a>
+      <a href="http://localhost/mediclite/admin/pasien/manage?t=e8a38071b9a1"><i class="fa fa-users"></i></a>
+      <a href="http://localhost/mediclite/admin/dokter_igd/manage?t=e8a38071b9a1"><i class="fa fa-ambulance"></i></a>
+      <a href="http://localhost/mediclite/admin/dokter_ralan/manage?t=e8a38071b9a1"><i class="fa fa-wheelchair"></i></a>
+      <a href="http://localhost/mediclite/admin/dokter_ranap/manage?t=e8a38071b9a1"><i class="fa fa-hotel"></i></a>
     </div>
     
     <!-- Modal -->
@@ -731,8 +3657,7 @@
     }
     </script>
     <!-- End PWA Support -->
-    <script src="http://localhost/mediclite/themes/admin/js/scripts.js?v=4.1.8&t=73b7e8b06200"></script>
-    <script src="http://localhost/mediclite/assets/jscripts/jquery.timepicker.js"></script>
-<script src="http://localhost/mediclite/admin/downtime/javascript?t=73b7e8b06200"></script>
+    <script src="http://localhost/mediclite/themes/admin/js/scripts.js?v=4.1.8&t=e8a38071b9a1"></script>
+    <script src="http://localhost/mediclite/admin/dokter_ranap/javascript?t=e8a38071b9a1"></script>
 </body>
 </html>

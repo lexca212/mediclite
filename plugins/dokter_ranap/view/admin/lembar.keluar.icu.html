@@ -1,0 +1,265 @@
+<div class="modal-header">
+    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+        <span aria-hidden="true">×</span> Tutup
+    </button>
+    <h4 class="modal-title">Lembar Keluar ICU</h4>
+</div>
+
+<div class="modal-body">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Nomor Rawat</label>
+                <input class="form-control" id="no_rawat" name="no_rawat" readonly type="text"
+                    value="{$pasien.no_rawat}">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Nama Pasien</label>
+                <input class="form-control" id="nm_pasien" name="nm_pasien" readonly type="text"
+                    value="{$pasien.nm_pasien}">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Nomor Rekam Medis</label>
+                <input class="form-control" id="no_rkm_medis" name="no_rkm_medis" readonly type="text"
+                    value="{$pasien.no_rkm_medis}">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Tanggal dan Jam</label>
+                <input class="form-control" id="tanggal_jam" name="tanggal_jam" readonly type="text"
+                    value="{?=date('Y-m-d')?} {?=date('H:i:s')?}">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Dokter</label>
+                <input class="form-control" id="kd_dokter" name="kd_dokter" type="text" value="{$dpjp.nm_dokter}">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Diagnosa</label>
+                <input class="form-control" id="diagnosa" name="diagnosa" type="text"
+                    value="{$existing.diagnosa}"
+                    placeholder="Silahkan Masukan diagnosa">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="dokter_konsultan">Dokter Konsultan ICU</label>
+            <select name="dokter_konsultan" id="dokter_konsultan" class="form-control">
+                {loop: $dokter_konsultan}
+                <option value="{$value.kd_dokter}"
+                    {if: $value.kd_dokter == $existing.dokter_konsultan}selected{/if}>
+                    {$value.nm_dokter}
+                </option>
+                {/loop}
+            </select>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <h4>Kesadaran</h4>
+            <div class="form-group">
+                <input type="checkbox" id="k1" name="kesadaran[]" value="GCS 15"
+                    {if: in_array('GCS 15', $existing['kesadaran'])}checked{/if}>
+                <label for="k1"> GCS 15</label><br>
+
+                <input type="checkbox" id="k2" name="kesadaran[]" value="GCS 8 - 14"
+                    {if: in_array('GCS 8 - 14', $existing['kesadaran'])}checked{/if}>
+                <label for="k2"> GCS 8 - 14</label><br>
+
+                <input type="checkbox" id="k3" name="kesadaran[]" value="GCS < 8"
+                    {if: in_array('GCS < 8', $existing['kesadaran'])}checked{/if}>
+                <label for="k3"> GCS &lt; 8</label><br>
+            </div>
+
+            <h4>Jalan Napas</h4>
+            <div class="form-group">
+                <input type="checkbox" id="jn1" name="jalan_nafas[]"
+                    value="Sumbatan partial jalan nafas (snoring, gargaling, stidor)"
+                    {if: in_array('Sumbatan partial jalan nafas (snoring, gargaling, stidor)', $existing['jalan_nafas'])}checked{/if}>
+                <label for="jn1">Sumbatan partial jalan nafas (snoring, gargaling, stidor)</label><br>
+
+                <input type="checkbox" id="jn2" name="jalan_nafas[]" value="jalan napas paten"
+                    {if: in_array('jalan napas paten', $existing['jalan_nafas'])}checked{/if}>
+                <label for="jn2">jalan napas paten</label>
+            </div>
+
+            <h4>Pernapasan</h4>
+            <div class="form-group">
+                <input type="checkbox" id="pn1" name="pernapasan[]" value="Frekuensi nafas 12 - 20 x/menit"
+                    {if: in_array('Frekuensi nafas 12 - 20 x/menit', $existing['pernapasan'])}checked{/if}>
+                <label for="pn1">Frekuensi nafas 12 - 20 x/menit</label><br>
+
+                <input type="checkbox" id="pn2" name="pernapasan[]" value="Ancaman Gagal Nafas"
+                    {if: in_array('Ancaman Gagal Nafas', $existing['pernapasan'])}checked{/if}>
+                <label for="pn2">Ancaman Gagal Nafas</label><br>
+
+                <input type="checkbox" id="pn3" name="pernapasan[]" value="Saturasi perifer O2 > 95 %"
+                    {if: in_array('Saturasi perifer O2 > 95 %', $existing['pernapasan'])}checked{/if}>
+                <label for="pn3">Saturasi perifer O2 &gt; 95 %</label><br>
+
+                <input type="checkbox" id="pn4" name="pernapasan[]" value="saturasi O2 < 95%"
+                    {if: in_array('saturasi O2 < 95%', $existing['pernapasan'])}checked{/if}>
+                <label for="pn4">saturasi O2 &lt; 95%</label><br>
+
+                <input type="checkbox" id="pn5" name="pernapasan[]" value="Memerlukan Ventilasi Mekanik"
+                    {if: in_array('Memerlukan Ventilasi Mekanik', $existing['pernapasan'])}checked{/if}>
+                <label for="pn5">Memerlukan Ventilasi Mekanik</label>
+            </div>
+
+            <h4>Sirkulasi</h4>
+            <div class="form-group">
+                <input type="checkbox" id="s1" name="sirkulasi[]"
+                    value="Denyut Jantung 60 - 100 x/menit dengan pulsasi kuat"
+                    {if: in_array('Denyut Jantung 60 - 100 x/menit dengan pulsasi kuat', $existing['sirkulasi'])}checked{/if}>
+                <label for="s1">Denyut Jantung 60 - 100 x/menit dengan pulsasi kuat</label><br>
+
+                <input type="checkbox" id="s2" name="sirkulasi[]" value="Denyut Jantung < 50 x/menit"
+                    {if: in_array('Denyut Jantung < 50 x/menit', $existing['sirkulasi'])}checked{/if}>
+                <label for="s2">Denyut Jantung &lt; 50 x/menit</label><br>
+
+                <input type="checkbox" id="s3" name="sirkulasi[]" value="MAP 65 - 110 mmHg"
+                    {if: in_array('MAP 65 - 110 mmHg', $existing['sirkulasi'])}checked{/if}>
+                <label for="s3">MAP 65 - 110 mmHg</label><br>
+
+                <input type="checkbox" id="s4" name="sirkulasi[]" value="MAP > 110 mmHg"
+                    {if: in_array('MAP > 110 mmHg', $existing['sirkulasi'])}checked{/if}>
+                <label for="s4">MAP &gt; 110 mmHg</label><br>
+
+                <input type="checkbox" id="s5" name="sirkulasi[]" value="MAP < 65 mmHg"
+                    {if: in_array('MAP < 65 mmHg', $existing['sirkulasi'])}checked{/if}>
+                <label for="s5">MAP &lt; 65 mmHg</label><br>
+
+                <input type="checkbox" id="s6" name="sirkulasi[]" value="CRT > 2 Detik"
+                    {if: in_array('CRT > 2 Detik', $existing['sirkulasi'])}checked{/if}>
+                <label for="s6">CRT &gt; 2 Detik</label><br>
+
+                <input type="checkbox" id="s7" name="sirkulasi[]" value="CRT < 2 Detik"
+                    {if: in_array('CRT < 2 Detik', $existing['sirkulasi'])}checked{/if}>
+                <label for="s7">CRT &lt; 2 Detik</label><br>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <h4>Kondisi Lain</h4>
+            <div class="form-group">
+                <input type="checkbox" id="kl1" name="kondisi_lain[]"
+                    value="Indikasi Keluar ICU Jika memenuhi minimal 3 kriteria di atas"
+                    {if: in_array('Indikasi Keluar ICU Jika memenuhi minimal 3 kriteria di atas', $existing['kondisi_lain'])}checked{/if}>
+                <label for="kl1">Indikasi Keluar ICU Jika memenuhi minimal 3 kriteria di atas</label><br>
+
+                <input type="checkbox" id="kl2" name="kondisi_lain[]"
+                    value="Keluar ICU (jika kondisi pasien membaik pindah ruangan)"
+                    {if: in_array('Keluar ICU (jika kondisi pasien membaik pindah ruangan)', $existing['kondisi_lain'])}checked{/if}>
+                <label for="kl2">Keluar ICU (jika kondisi pasien membaik pindah ruangan)</label><br>
+
+                <input type="checkbox" id="kl3" name="kondisi_lain[]"
+                    value="Menolak intervensi aktif, terapi bantuan hidup (menandatangani form penolakan tindakan)"
+                    {if: in_array('Menolak intervensi aktif, terapi bantuan hidup (menandatangani form penolakan tindakan)', $existing['kondisi_lain'])}checked{/if}>
+                <label for="kl3">Menolak intervensi aktif, terapi bantuan hidup (menandatangani form penolakan tindakan)</label><br>
+
+                <input type="checkbox" id="kl4" name="kondisi_lain[]"
+                    value="Pasien / Keluarga menghendaki dirawat diluar ruang rawat intensif"
+                    {if: in_array('Pasien / Keluarga menghendaki dirawat diluar ruang rawat intensif', $existing['kondisi_lain'])}checked{/if}>
+                <label for="kl4">Pasien / Keluarga menghendaki dirawat diluar ruang rawat intensif</label><br>
+            </div>
+
+            <h4>Lainnya</h4>
+            <div class="form-group">
+                <textarea name="lainnya" id="lainnya" class="form-control">{$existing.lainnya}</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-danger" data-dismiss="modal" type="button">⬅️Kembali</button>
+    <button class="btn btn-primary" id="simpanICU">💾Simpan</button>
+</div>
+<div class="">
+    <table class="table" width="100%">
+        <thead>
+            <tr>
+                <th>Nomer Rawat</th>
+                <th>Dokter</th>
+                <th>Diagnosa</th>
+                <th>DOkter Konsultan</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {if: $existing}
+            <tr>
+                <td>{$existing.no_rawat}</td>
+                <td>{$existing.nm_dokter}</td>
+                <td>{$existing.diagnosa}</td>
+                <td>{$existing.dokter_konsultan}</td>
+            </tr>
+            {else}
+            <tr>
+                <td colspan="6">Tidak ada data</td>
+            </tr>
+            {/if}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $('select').selectator();
+    $(document).ready(function () {
+        $('#simpanICU').click(function () {
+
+            var baseURL = mlite.url + '/' + mlite.admin;
+            var no_rawat = $('#no_rawat').val();
+            var tanggal_jam = $('#tanggal_jam').val();
+            var diagnosa = $('#diagnosa').val();
+            var kd_dokter = $('#kd_dokter').val();
+            var dokter_konsultan = $('select[name=dokter_konsultan]').val();
+            var lainnya = $('#lainnya').val();
+
+            var kesadaran    = $('input[name="kesadaran[]"]:checked').map((i, e) => e.value).get();
+            var jalan_nafas  = $('input[name="jalan_nafas[]"]:checked').map((i, e) => e.value).get();
+            var pernapasan   = $('input[name="pernapasan[]"]:checked').map((i, e) => e.value).get();
+            var sirkulasi    = $('input[name="sirkulasi[]"]:checked').map((i, e) => e.value).get();
+            var kondisi_lain = $('input[name="kondisi_lain[]"]:checked').map((i, e) => e.value).get();
+
+            var url = baseURL + '/dokter_ranap/lembarkeluaricu/?t=' + mlite.token;
+
+            $.post(url, {
+                no_rawat         : no_rawat,
+                tanggal_jam      : tanggal_jam,
+                diagnosa         : diagnosa,
+                kd_dokter        : kd_dokter,
+                dokter_konsultan : dokter_konsultan,
+                lainnya          : lainnya,
+                kesadaran        : kesadaran,
+                jalan_nafas      : jalan_nafas,
+                pernapasan       : pernapasan,
+                sirkulasi        : sirkulasi,
+                kondisi_lain     : kondisi_lain,
+            }, function (data) {
+                console.log(data);
+                alert('Data berhasil disimpan!');
+            });
+        });
+    });
+</script>
