@@ -5,11 +5,11 @@
                 <h3 class="panel-title">Sunting pengguna</h3>
             </div>
             <div class="panel-body">
-    		<form name="user" action="http://localhost/mediclite/admin/users/save/1?t=e8f36ce05741" method="POST" enctype="multipart/form-data">
+    		<form name="user" action="http://localhost/mediclite/admin/users/save/83?t=2c4f149e287e" method="POST" enctype="multipart/form-data">
     			<fieldset>
     	            <!--<div class="form-group">
     	                <label>Pengguna</label>
-    	                <input type="text" name="username" class="form-control" required value="admin" />
+    	                <input type="text" name="username" class="form-control" required value="LAB001" />
     	            </div>-->
                                     <div class="form-group">
                       <label>Pengguna</label>
@@ -127,7 +127,7 @@
                                                         <option value="LAB005">Hendri Dwi Wulandari - LAB005</option>
                                                         <option value="DS016">dr. Diksi Novritasari Budyastuti,Sp.Pd - DS016</option>
                                                         <option value="NS043">Dwi Muslimah - NS043</option>
-                                                        <option value="LAB001">Eti Rahayu, A.Md.A.K - LAB001</option>
+                                                        <option value="LAB001" selected>Eti Rahayu, A.Md.A.K - LAB001</option>
                                                         <option value="LAB002">Sriyanti, A.Md.A.K - LAB002</option>
                                                         <option value="LAB003">Fatimah - LAB003</option>
                                                         <option value="LAB004">Zulfa Allaili Hikmah Millah, A.Md.A.K - LAB004</option>
@@ -227,22 +227,22 @@
                   </div>
                       	            <div class="form-group">
     	                <label>Nama lengkap</label>
-    	                <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Nama lengkap (optional)" value="Administrator" />
+    	                <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Nama lengkap (optional)" value="Eti Rahayu, A.Md.A.K" />
     	            </div>
 					        <div class="form-group">
     	                <label>Foto</label>
           						<div>
-          							<img src="http://localhost/mediclite/uploads/users/avatar6422cb573b50c.png" width="96" height="96" class="img-thumbnail" id="photoPreview" style="cursor:pointer;" onclick="$('input[name=photo]').click()" />
+          							<img src="http://localhost/mediclite/uploads/users/avatar69d717025910d.png" width="96" height="96" class="img-thumbnail" id="photoPreview" style="cursor:pointer;" onclick="$('input[name=photo]').click()" />
           							<input type="file" name="photo" class="form-control hidden" />
           						</div>
     	            </div>
                   <div class="form-group">
       	                <label>Deskripsi</label>
-      	                <textarea class="form-control" name="description" placeholder="Deskripsi (optional)" rows="6">Admin ganteng baik hati, suka menabung dan tidak sombong.</textarea>
+      	                <textarea class="form-control" name="description" placeholder="Deskripsi (optional)" rows="6"></textarea>
     	            </div>
     	            <div class="form-group">
     	                <label>Email</label>
-    	                <input type="email" name="email" class="form-control" required value="info@mlite.id" />
+    	                <input type="email" name="email" class="form-control" required value="terserah@co.id" />
     	            </div>
     	            <div class="form-group">
     	                <label>Kata kunci <a href="#" id="passwordChange" class="btn btn-default btn-xs">Ubah</a></label>
@@ -255,12 +255,12 @@
                                                   <option value="kasir">kasir</option>
                                                   <option value="rekammedis">rekammedis</option>
                                                   <option value="radiologi">radiologi</option>
-                                                  <option value="laboratorium">laboratorium</option>
+                                                  <option value="laboratorium" selected>laboratorium</option>
                                                   <option value="paramedis">paramedis</option>
                                                   <option value="apoteker">apoteker</option>
                                                   <option value="medis">medis</option>
                                                   <option value="manajemen">manajemen</option>
-                                                  <option value="admin" selected>admin</option>
+                                                  <option value="admin">admin</option>
                                                                       </select>
                   </div>
                                     <div class="form-group">
@@ -281,7 +281,7 @@
                                                   <option value="INT" >INT Poli Penyakit Dalam - INT</option>
                                                   <option value="IVP" >Intravena Pydografi - IVP</option>
                                                   <option value="KGZ" >Klinik Gizi - KGZ</option>
-                                                  <option value="LAB" >LABORATORIUM - LAB</option>
+                                                  <option value="LAB" selected>LABORATORIUM - LAB</option>
                                                   <option value="OBG" >OBG Poli Obstetri/Gyn. - OBG</option>
                                                   <option value="U0016" >ORTHOPEDI - U0016</option>
                                                   <option value="U0052" >POLI GINJAL - U0052</option>
@@ -330,7 +330,7 @@
                   </div>
                       	            <div class="form-group">
     	                <label>Akses</label>
-    	                <select name="access[]" multiple class="form-control" data-keep-open="true" data-use-search="true" data-use-dimmer="false" data-options-height="126px" disabled required>
+    	                <select name="access[]" multiple class="form-control" data-keep-open="true" data-use-search="true" data-use-dimmer="false" data-options-height="126px"  required>
     	                	    	                	<option value="settings" data-font="<i class='fa fa-wrench'></i>" selected>Pengaturan</option>
     	                	    	                	<option value="master" data-font="<i class='fa fa-cubes'></i>" selected>Master Data</option>
     	                	    	                	<option value="pasien" data-font="<i class='fa fa-users'></i>" selected>Pendaftaran Pasien</option>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Kriteria Keluar Ruang ICU - {$pasien.nm_pasien}</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #000;
+      background: #f0f0f0;
+    }
+
+    /* ══ TOMBOL CETAK ══ */
+    .btn-print-wrap {
+      text-align: center;
+      padding: 10px 0;
+      background: #e8e8e8;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 24px;
+      background: #1a3c6e;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-print:hover { background: #255090; }
+
+    @media print {
+      .btn-print-wrap { display: none !important; }
+      body { background: #fff; margin: 0; }
+      .page { box-shadow: none; margin: 0; width: 100%; }
+    }
+
+    /* ══ HALAMAN ══ */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 12px auto;
+      padding: 10mm 12mm;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    }
+
+    /* ══ HEADER ══ */
+    .header {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 0;
+      gap: 12px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .logo-wrap {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-wrap img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .logo-placeholder {
+      width: 72px;
+      height: 72px;
+      border: 1px dashed #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #aaa;
+      text-align: center;
+    }
+
+    .header-title-wrap {
+      flex: 1;
+    }
+
+    .header-rs-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a3c6e;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .instansi-alamat {
+      font-size: 11px;
+      color: #555;
+      margin-top: 3px;
+      line-height: 1.6;
+    }
+
+    .header-formulir-title {
+      font-size: 17px;
+      font-weight: bold;
+      color: #000;
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* Kotak identitas kanan */
+    .header-right {
+      width: 210px;
+      flex-shrink: 0;
+      border: 1px solid #000;
+      padding: 4px 7px 5px;
+    }
+
+    .stiker-note {
+      text-align: right;
+      font-size: 8px;
+      font-style: italic;
+      color: #666;
+      margin-bottom: 3px;
+    }
+
+    .id-row {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 4px;
+      gap: 3px;
+      font-size: 10px;
+    }
+
+    .id-label {
+      min-width: 52px;
+      flex-shrink: 0;
+    }
+
+    .id-colon { flex-shrink: 0; }
+
+    .id-value {
+      flex: 1;
+      border-bottom: 1px dotted #666;
+      min-height: 13px;
+      padding-bottom: 1px;
+      font-size: 10px;
+    }
+
+    /* ══ INFO ATAS ══ */
+    .info-top {
+      border: 1px solid #000;
+      border-top: 1px solid #000;
+      margin-top: 6px;
+      padding: 4px 8px 3px;
+    }
+
+    .info-top-row {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 2px;
+      font-size: 11px;
+      gap: 4px;
+    }
+
+    .info-top-row:last-child { margin-bottom: 0; }
+
+    .info-top-label {
+      min-width: 130px;
+      flex-shrink: 0;
+    }
+
+    .info-top-colon { flex-shrink: 0; }
+
+    .info-top-value {
+      flex: 1;
+      border-bottom: 1px solid #bbb;
+      min-height: 14px;
+      padding-bottom: 1px;
+    }
+
+    /* ══ TABEL KLINIS ══ */
+    .klinis-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #000;
+      border-top: none;
+    }
+
+    .klinis-table > tbody > tr > td {
+      vertical-align: top;
+      padding: 6px 8px 8px;
+      border-right: 1px solid #000;
+      width: 50%;
+    }
+
+    .klinis-table > tbody > tr > td:last-child {
+      border-right: none;
+    }
+
+    /* Judul seksi */
+    .sec-title {
+      font-weight: bold;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-top: 9px;
+      margin-bottom: 3px;
+      color: #1a3c6e;
+      background: #eef2f9;
+    }
+
+    .sec-title:first-child { margin-top: 0; }
+
+    /* Checkbox item */
+    .ci {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      margin-bottom: 3px;
+      font-size: 11px;
+      line-height: 1.35;
+      padding-left: 2px;
+    }
+
+    .cb {
+      width: 11px;
+      height: 11px;
+      border: 1px solid #000;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: inline-block;
+      position: relative;
+      background: #fff;
+    }
+
+    .cb.checked { background: #000; }
+
+    .cb.checked::after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 0px;
+      width: 6px;
+      height: 3px;
+      border-left: 1.5px solid #fff;
+      border-bottom: 1.5px solid #fff;
+      transform: rotate(-45deg);
+    }
+
+    /* Lainnya */
+    .lainnya-label {
+      font-size: 11px;
+      margin-top: 10px;
+      margin-bottom: 3px;
+    }
+
+    .lainnya-line {
+      border-bottom: 1px dotted #666;
+      min-height: 16px;
+      margin-bottom: 5px;
+      font-size: 11px;
+      padding-bottom: 1px;
+      padding-top: 1px;
+    }
+
+    /* ══ TANDA TANGAN ══ */
+    .ttd-section {
+      display: flex;
+      margin-top: 14px;
+      gap: 0;
+    }
+
+    .ttd-box {
+      flex: 1;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .ttd-kota-tgl {
+      font-size: 10px;
+      margin-bottom: 2px;
+    }
+
+    .ttd-role {
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .ttd-qr-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 3px 0 2px;
+    }
+
+    .ttd-qr-label {
+      font-size: 8px;
+      color: #777;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .ttd-space { height: 60px; }
+
+    .ttd-name-line {
+      display: inline-block;
+      min-width: 150px;
+      border-top: 1px solid #000;
+      padding-top: 3px;
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ══ FOOTER ══ */
+    .footer-doc {
+      margin-top: 10px;
+      border-top: 1px solid #ccc;
+      padding-top: 4px;
+      font-size: 9px;
+      color: #999;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media print {
+      .cb.checked {
+        background: #000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="btn-print-wrap">
+  <button class="btn-print" onclick="window.print()">
+    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex-shrink:0">
+      <rect x="3" y="1" width="10" height="7" rx="1" stroke="white" stroke-width="1.4"/>
+      <rect x="1" y="5" width="14" height="7" rx="1.5" stroke="white" stroke-width="1.4"/>
+      <rect x="4" y="10" width="8" height="4" rx="0.5" stroke="white" stroke-width="1.4"/>
+      <circle cx="12" cy="8" r="1" fill="white"/>
+    </svg>
+    Cetak Dokumen
+  </button>
+</div>
+
+<div class="page">
+
+  <!-- ════ HEADER ════ -->
+  <div class="header">
+
+    <div class="header-left">
+        <div class="logo-wrap">
+            {if: $settings.logo_rs}
+            <img src="{$settings.logo_rs}" alt="Logo RS">
+            {else}
+            <div class="logo-placeholder">LOGO<br>RS</div>
+            {/if}
+        </div>
+        <div class="header-title-wrap">
+            <div class="header-rs-name">{$settings.nama_instansi}</div>
+            <div class="instansi-alamat">
+                {$settings.alamat}<br>
+                {if: $settings.nomor_telepon}Telp: {$settings.nomor_telepon}&nbsp;|&nbsp;{/if}
+                {if: $settings.email}Email: {$settings.email}{/if}
+            </div>
+            <!-- <div class="header-formulir-title">Formulir Kriteria<br>Keluar Ruang ICU</div> -->
+        </div>
+    </div>
+
+    <div class="header-right">
+      <!-- <div class="stiker-note">(tabel atau tempel label)</div> -->
+      <div class="id-row">
+        <span class="id-label">No RM</span>
+        <span class="id-colon">:</span>
+        <span class="id-value">{$pasien.no_rkm_medis}</span>
+      </div>
+      <div class="id-row">
+        <span class="id-label">Nama</span>
+        <span class="id-colon">:</span>
+        <span class="id-value">{$pasien.nm_pasien}</span>
+      </div>
+      <div class="id-row">
+        <span class="id-label">Sex/Umur</span>
+        <span class="id-colon">:</span>
+        <span class="id-value">{$pasien.jk} / {$pasien.umur}</span>
+      </div>
+      <div class="id-row">
+        <span class="id-label">Alamat</span>
+        <span class="id-colon">:</span>
+        <span class="id-value">{$pasien.alamat}</span>
+      </div>
+      <div class="id-row">
+        <span class="id-label">Pekerjaan</span>
+        <span class="id-colon">:</span>
+        <span class="id-value">{$pasien.pekerjaan}</span>
+      </div>
+    </div>
+
+  </div>    
+  <!-- NUNGGU NOMER FIX DARI MBAK RATIH<div class="" style="text-align: right;"><h5>nomor</h5></div> -->
+
+   <div class="header-formulir-title">Formulir Kriteria<br>Keluar Ruang ICU</div>
+
+  <!-- ════ INFO ATAS ════ -->
+  <div class="info-top">
+    <div class="info-top-row">
+      <span class="info-top-label">Tanggal dan jam</span>
+      <span class="info-top-colon">:</span>
+      <span class="info-top-value">{$existing.tanggal_jam}</span>
+    </div>
+    <div class="info-top-row">
+      <span class="info-top-label">Diagnosis</span>
+      <span class="info-top-colon">:</span>
+      <span class="info-top-value">{$existing.diagnosa}</span>
+    </div>
+    <div class="info-top-row">
+      <span class="info-top-label">Dokter DPJP</span>
+      <span class="info-top-colon">:</span>
+      <span class="info-top-value">{$existing.nm_dokter}</span>
+    </div>
+    <div class="info-top-row">
+      <span class="info-top-label">Dokter Konsultan ICU</span>
+      <span class="info-top-colon">:</span>
+      <span class="info-top-value">
+        {loop: $dokter_konsultan}
+          {if: $value.kd_dokter == $existing.dokter_konsultan}{$value.nm_dokter}{/if}
+        {/loop}
+      </span>
+    </div>
+  </div>
+
+  <!-- ════ TABEL KLINIS DUA KOLOM ════ -->
+  <table class="klinis-table">
+    <tbody>
+      <tr>
+
+        <!-- KOLOM KIRI -->
+        <td>
+
+          <div class="sec-title">Kesadaran</div>
+          <div class="ci">
+            <div class="cb{if: in_array('GCS 15', $existing['kesadaran'])} checked{/if}"></div>
+            <span>GCS 15</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('GCS 8 - 14', $existing['kesadaran'])} checked{/if}"></div>
+            <span>GCS 8 &ndash; 14</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('GCS < 8', $existing['kesadaran'])} checked{/if}"></div>
+            <span>GCS &lt;8</span>
+          </div>
+
+          <div class="sec-title">Jalan Napas</div>
+          <div class="ci">
+            <div class="cb{if: in_array('Sumbatan partial jalan nafas (snoring, gargaling, stidor)', $existing['jalan_nafas'])} checked{/if}"></div>
+            <span>Sumbatan parsial jalan napas (snoring, gargling, stridor)</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('jalan napas paten', $existing['jalan_nafas'])} checked{/if}"></div>
+            <span>Jalan napas paten</span>
+          </div>
+
+          <div class="sec-title">Pernafasan</div>
+          <div class="ci">
+            <div class="cb{if: in_array('Frekuensi nafas 12 - 20 x/menit', $existing['pernapasan'])} checked{/if}"></div>
+            <span>Frekuensi nafas 12 &ndash; 20 x/menit</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('Ancaman Gagal Nafas', $existing['pernapasan'])} checked{/if}"></div>
+            <span>Ancaman gagal nafas</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('Saturasi perifer O2 > 95 %', $existing['pernapasan'])} checked{/if}"></div>
+            <span>Saturasi perifer O2 &gt; 95%</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('saturasi O2 < 95%', $existing['pernapasan'])} checked{/if}"></div>
+            <span>Saturasi O2 &lt; 95%</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('Memerlukan Ventilasi Mekanik', $existing['pernapasan'])} checked{/if}"></div>
+            <span>Memerlukan ventilasi mekanik</span>
+          </div>
+
+          <div class="sec-title">Sirkulasi</div>
+          <div class="ci">
+            <div class="cb{if: in_array('Denyut Jantung 60 - 100 x/menit dengan pulsasi kuat', $existing['sirkulasi'])} checked{/if}"></div>
+            <span>Denyut jantung 60 &ndash; 100 x/menit dengan pulsasi kuat</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('Denyut Jantung < 50 x/menit', $existing['sirkulasi'])} checked{/if}"></div>
+            <span>Denyut jantung &lt;50 x/menit</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('MAP 65 - 110 mmHg', $existing['sirkulasi'])} checked{/if}"></div>
+            <span>MAP 65 &ndash; 110 mmHg</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('MAP > 110 mmHg', $existing['sirkulasi'])} checked{/if}"></div>
+            <span>MAP &gt;110 mmHg</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('MAP < 65 mmHg', $existing['sirkulasi'])} checked{/if}"></div>
+            <span>MAP &lt;65 mmHg</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('CRT > 2 Detik', $existing['sirkulasi'])} checked{/if}"></div>
+            <span>CRT &gt;2 detik</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('CRT < 2 Detik', $existing['sirkulasi'])} checked{/if}"></div>
+            <span>CRT &lt;2 detik</span>
+          </div>
+
+        </td>
+
+        <!-- KOLOM KANAN -->
+        <td>
+
+          <div class="sec-title" style="margin-top:0;">Kondisi Lain :</div>
+          <div class="ci">
+            <div class="cb{if: in_array('Indikasi Keluar ICU Jika memenuhi minimal 3 kriteria di atas', $existing['kondisi_lain'])} checked{/if}"></div>
+            <span>Indikasi keluar ICU bila memenuhi minimal 3 kriteria di atas.</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('Keluar ICU (jika kondisi pasien membaik pindah ruangan)', $existing['kondisi_lain'])} checked{/if}"></div>
+            <span>Keluar ICU (jika kondisi pasien membaik pindah keruangan).</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('Menolak intervensi aktif, terapi bantuan hidup (menandatangani form penolakan tindakan)', $existing['kondisi_lain'])} checked{/if}"></div>
+            <span>Menolak intervensi aktif, terapi bantuan hidup (menandatangani form penolakan tindakan).</span>
+          </div>
+          <div class="ci">
+            <div class="cb{if: in_array('Pasien / Keluarga menghendaki dirawat diluar ruang rawat intensif', $existing['kondisi_lain'])} checked{/if}"></div>
+            <span>Pasien / keluarga menghendaki dirawat diluar ruang rawat intensif</span>
+          </div>
+
+          <div class="lainnya-label">Lainnya</div>
+          {if: $existing.lainnya}
+            <div class="lainnya-line">{$existing.lainnya}</div>
+          {else}
+            <div class="lainnya-line"></div>
+            <div class="lainnya-line"></div>
+            <div class="lainnya-line"></div>
+          {/if}
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- NUNGGU NOMER DARI MBAK RATIH<div class="" style="text-align: left;"><p>Nomor Dokumen</p></div> -->
+
+  <!-- ════ TANDA TANGAN ════ -->
+ <div class="ttd-section" style="justify-content: flex-end;">
+ 
+    <div class="ttd-box" style="flex: 0 0 auto; width: 220px; text-align: center;">
+      <div class="ttd-kota-tgl">{$settings.kota}, {?=date('d/m/Y')?}</div>
+      <div class="ttd-role">Dokter</div>
+      <div class="ttd-qr-wrap">
+        <div id="qrcode_dokter"></div>
+      </div>
+      <div class="ttd-qr-label">Ditandatangani secara elektronik</div>
+      <div class="ttd-name-line">{$existing.nm_dokter} {$settings.logo} </div>
+    </div>
+    <!-- <div class="ttd-box">
+      <div class="ttd-kota-tgl">{$settings.nama_instansi}, {?=date('d/m/Y')?}</div>
+      <div class="ttd-role">Dokter Konsultan ICU</div>
+      <div class="ttd-space"></div>
+      <div class="ttd-name-line">
+        {loop: $dokter_konsultan}
+          {if: $value.kd_dokter == $existing.dokter_konsultan}{$value.nm_dokter}{/if}
+        {/loop}
+      </div>
+    </div> -->
+
+  </div>
+
+  <!-- ════ FOOTER ════ -->
+  <!-- <div class="footer-doc">
+    <span>Dicetak oleh: {$settings.nama_instansi}</span>
+    <span>Tanggal cetak: {?=date('d/m/Y H:i:s')?}</span>
+  </div> -->
+
+</div><!-- /page -->
+
+<script>
+  $(document).ready(function () {
+    $('#qrcode_dokter').qrcode({
+      width  : 60,
+      height : 60,
+      text   : "Ditanda tangani secara elektronik oleh Dokter: {$existing.kd_dokter}"
+    });
+  });
+</script>
+
+</body>
+</html>

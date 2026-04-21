@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Surat Keterangan Sakit</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 20mm 25mm 20mm 25mm;
+  }
+
+  /* ===== KOP ===== */
+  .kop {
+    display: flex;
+    align-items: center;
+    gap: 12pt;
+    margin-bottom: 6pt;
+  }
+  .kop-logo {
+    flex-shrink: 0;
+    width: 62pt;
+    height: 62pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7pt;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .kop-tengah {
+    flex: 1;
+    text-align: center;
+  }
+  .kop-kanan {
+    width: 62pt; /* penyeimbang logo agar teks benar-benar di tengah */
+    flex-shrink: 0;
+  }
+  .rs-nama {
+    font-size: 17pt;
+    font-weight: bold;
+    letter-spacing: 0.5pt;
+    line-height: 1.2;
+  }
+  .rs-alamat {
+    font-size: 9.5pt;
+    line-height: 1.7;
+    margin-top: 3pt;
+  }
+
+  .garis-kop {
+    border: none;
+    border-top: 4pt double #000;
+    margin: 7pt 0 16pt;
+  }
+
+  /* ===== JUDUL ===== */
+  .judul {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 2pt;
+    margin-bottom: 5pt;
+  }
+  .nomor {
+    text-align: center;
+    font-size: 11pt;
+    margin-bottom: 22pt;
+  }
+
+  /* ===== ISI ===== */
+  .pembuka {
+    font-size: 12pt;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 12pt;
+  }
+
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12pt;
+    margin-bottom: 16pt;
+  }
+  table.data td {
+    padding: 2.5pt 0;
+    vertical-align: top;
+  }
+  table.data .lbl { width: 160pt; }
+  table.data .sep { width: 14pt; }
+
+  .isi-keterangan {
+    font-size: 12pt;
+    line-height: 2.2;
+    text-align: justify;
+    margin-bottom: 20pt;
+  }
+  .isian {
+    display: inline-block;
+    border-bottom: 1pt solid #000;
+    min-width: 70pt;
+    padding: 0 5pt;
+    text-align: center;
+  }
+  .isian-sm  { min-width: 40pt; }
+  .isian-md  { min-width: 90pt; }
+  .isian-lg  { min-width: 120pt; }
+
+  .penutup {
+    font-size: 12pt;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 36pt;
+  }
+
+  /* ===== TTD ===== */
+  .ttd-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .ttd-box {
+    text-align: center;
+    min-width: 175pt;
+    font-size: 12pt;
+  }
+  .ttd-qr {
+    margin: 8pt auto 0;
+    width: 90pt;
+    height: 90pt;
+  }
+  .ttd-qr img {
+    width: 90pt;
+    height: 90pt;
+    display: block;
+  }
+  .ttd-qr-placeholder {
+    width: 90pt;
+    height: 90pt;
+    border: 1pt solid #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7.5pt;
+    color: #aaa;
+    margin: 0 auto;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .ttd-nama {
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 10pt;
+  }
+  .ttd-gelar {
+    font-size: 11pt;
+    margin-top: 2pt;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    text-align: center;
+    font-size: 7pt;
+    color: #aaa;
+    padding-bottom: 3pt;
+    border-top: 0.5pt solid #ddd;
+  }
+
+  /* Sembunyikan saat preview di browser biasa (opsional) */
+  @media screen {
+    body {
+      background: #e5e5e5;
+      padding: 20px;
+    }
+    .halaman {
+      background: #fff;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 20mm 25mm 20mm 25mm;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .halaman { box-shadow: none; padding: 0; width: auto; }
+  }
+</style>
+  <script type="text/javascript" src="{?=url()?}/assets/jscripts/jquery.min.js"></script>
+<script type="text/javascript" src="{?=url()?}/assets/jscripts/jquery.qrcode.js"></script>
+<script type="text/javascript" src="{?=url()?}/assets/jscripts/qrcode.js"></script>
+</head>
+<body>
+
+<div class="halaman">
+
+  <!-- KOP -->
+  <div class="kop">
+    <div class=""><img src="{?=url()?}/{$settings.logo}" height="100px" style="margin-right: 20px;" alt=""></div>
+    <div class="kop-tengah">
+      <div class="rs-nama">{$settings.nama_instansi}</div>
+      <div class="rs-alamat">
+        Alamat: Brigjen Katamso, Pancuran, Kaliancar, Kec. Selogiri, Kabupaten Wonogiri, Jawa Tengah 57652<br>
+        WONOGIRI &ndash; JAWA TENGAH<br>
+        Telepon: 081369606162 &ndash; Email: rsb_fitricandra@ymail.com
+      </div>
+    </div>
+    <div class="kop-kanan"></div>
+  </div>
+
+  <hr class="garis-kop">
+
+  <!-- JUDUL -->
+  <div class="judul">SURAT KETERANGAN ISTIRAHAT</div>
+  <div class="nomor">Nomor :&nbsp;&nbsp; <span id="val-nomor">{$surat.nomor_surat}</span></div>
+
+  <!-- PEMBUKA -->
+  <div class="pembuka">
+    Yang bertanda tangan di bawah ini Dokter RSU FITRI CANDRA WONOGIRI, Menerangkan bahwa;
+  </div>
+
+  <!-- DATA PASIEN -->
+  <table class="data">
+    <tr>
+      <td class="lbl">Nama</td>
+      <td class="sep">:</td>
+      <td id="val-nama">{$surat.nm_pasien}</td>
+    </tr>
+    <tr>
+      <td class="lbl">Tanggal Lahir / Umur</td>
+      <td class="sep">:</td>
+      <td id="val-ttl">{$pasien.tgl_lahir}</td>
+    </tr>
+    <tr>
+      <td class="lbl">Jenis Kelamin</td>
+      <td class="sep">:</td>
+      <td id="val-jk">{if: $pasien.jk == 'L'}Laki-Laki{else}Perempuan{/if}</td>
+    </tr>
+    <tr id="row-rm" style="display:none">
+      <td class="lbl">No. Rekam Medis</td>
+      <td class="sep">:</td>
+      <td id="val-rm">{$pasien.no_rkm_medis}</td>
+    </tr>
+    <tr>
+      <td class="lbl">Alamat</td>
+      <td class="sep">:</td>
+      <td id="val-alamat">{$pasien.alamat}, {$pasien.nm_kel}, {$pasien.nm_kec}, {$pasien.nm_kab}, {$pasien.nm_prop}</td>
+    </tr>
+  </table>
+
+  <!-- ISI KETERANGAN -->
+  <div class="isi-keterangan">
+    Berdasarkan hasil pemeriksaan klinis, yang bersangkutan dalam keadaan
+    <span class="isian">{$surat.keadaan}</span>
+    dengan diagnosa penyakit
+    <span class="isian isian-lg" id="val-diagnosa">{$surat.diagnosa}</span>,
+    dan perlu istirahat selama
+    <span class="isian isian-sm" id="val-lama">{$surat.lama_angka}</span>
+    (&nbsp;<span class="isian isian-md" id="val-terbilang">{$surat.lama_huruf}</span>&nbsp;)
+    hari, terhitung mulai tanggal
+    <span class="isian isian-md" id="val-tgl-mulai">{$surat.tanggal_mulai}</span>
+    sampai dengan tanggal
+    <span class="isian isian-md" id="val-tgl-akhir">{$surat.tanggal_selesai}</span>.
+  </div>
+
+  <!-- PENUTUP -->
+  <div class="penutup">
+    Demikianlah surat keterangan ini dibuat dengan sebenarnya untuk digunakan sebagaimana mestinya.
+  </div>
+
+  <!-- TTD -->
+  <div class="ttd-wrap">
+    <div class="ttd-box">
+      <div>WONOGIRI, <span id="val-tgl-cetak">{$reg_periksa.tgl_registrasi}</span></div>
+      <div class="ttd-qr">
+        <!-- <div class="ttd-qr-placeholder" id="qr-placeholder">QR<br>VERIFIKASI</div>
+        <img id="qr-img" src="" alt="QR Code" style="display:none;"> -->
+          <div id="qrcode_dokter" style="margin-top:10px;width:80px;"></div><br>
+      </div>
+      <div class="ttd-nama" id="val-dokter">{$dokter}</div>
+    </div>
+  </div>
+
+</div><!-- /halaman -->
+
+<div class="footer">
+  Dicetak oleh Sistem Informasi RSU Fitri Candra Wonogiri &mdash;
+  Dokumen ini sah tanpa tanda tangan basah apabila terdapat QR Code verifikasi.
+</div>
+
+<!-- ============================================================
+     DATA BINDING
+     Isi objek `suratData` dari sistem Anda sebelum render(),
+     atau kirim via URL params: ?nomor=...&nama=...&dst
+============================================================ -->
+<script>
+/* ----------------------------------------------------------
+   1. OBJEK DATA — ubah dari sistem Anda
+      Contoh pengisian dari PHP/backend:
+        var suratData = <?= json_encode($data) ?>;
+      Atau dari JS sebelum file ini di-load.
+---------------------------------------------------------- */
+// var suratData = {
+//   nomor    : '0012545',
+//   nama     : 'SATRIA ARKA PRATAMA',
+//   ttl      : '2023-03-06 / 3 Th 1 Bl 4 Hr',
+//   jk       : 'Laki-Laki',
+//   alamat   : 'SUMBEREJO 001/010, DLEPIH, TIRTOMOYO, WONOGIRI, JAWA TENGAH',
+//   diagnosa : 'O47.0',
+//   lama     : 3,           // integer
+//   tgl_mulai: '2026-04-10',// YYYY-MM-DD
+//   dokter   : 'dr. Zustain Noor Adhim, Sp.A., M.Kes',
+//   no_rm    : '',          // kosongkan jika tidak ada
+//   qr_url   : ''           // URL verifikasi untuk QR Code
+// };
+
+/* ----------------------------------------------------------
+   2. HELPER
+---------------------------------------------------------- */
+function terbilang(n) {
+  var s = ['','Satu','Dua','Tiga','Empat','Lima','Enam','Tujuh','Delapan','Sembilan',
+    'Sepuluh','Sebelas','Dua Belas','Tiga Belas','Empat Belas','Lima Belas',
+    'Enam Belas','Tujuh Belas','Delapan Belas','Sembilan Belas'];
+  var p = ['','','Dua Puluh','Tiga Puluh','Empat Puluh','Lima Puluh',
+    'Enam Puluh','Tujuh Puluh','Delapan Puluh','Sembilan Puluh'];
+  if (n < 1)   return 'Nol';
+  if (n <= 19) return s[n];
+  if (n < 100) return p[Math.floor(n/10)] + (n%10 ? ' '+s[n%10] : '');
+  if (n < 200) return 'Seratus' + (n%100 ? ' '+terbilang(n%100) : '');
+  return s[Math.floor(n/100)] + ' Ratus' + (n%100 ? ' '+terbilang(n%100) : '');
+}
+
+function formatTanggal(str) {
+  if (!str) return '';
+  var bln = ['','Januari','Februari','Maret','April','Mei','Juni',
+    'Juli','Agustus','September','Oktober','November','Desember'];
+  var p = str.split('-');
+  return parseInt(p[2]) + ' ' + bln[parseInt(p[1])] + ' ' + p[0];
+}
+
+function tambahHari(str, n) {
+  var d = new Date(str);
+  d.setDate(d.getDate() + n - 1);
+  var yy = d.getFullYear();
+  var mm = String(d.getMonth()+1).padStart(2,'0');
+  var dd = String(d.getDate()).padStart(2,'0');
+  return yy+'-'+mm+'-'+dd;
+}
+
+function set(id, val) {
+  var el = document.getElementById(id);
+  if (el) el.textContent = val;
+}
+
+/* ----------------------------------------------------------
+   3. RENDER — isi semua elemen dari suratData
+---------------------------------------------------------- */
+function render(d) {
+  var tglAkhir = tambahHari(d.tgl_mulai, d.lama);
+
+  set('val-nomor',     d.nomor);
+  set('val-nama',      d.nama);
+  set('val-ttl',       d.ttl);
+  set('val-jk',        d.jk);
+  set('val-alamat',    d.alamat);
+  set('val-diagnosa',  d.diagnosa);
+  set('val-lama',      d.lama);
+  set('val-terbilang', terbilang(d.lama));
+  set('val-tgl-mulai', formatTanggal(d.tgl_mulai));
+  set('val-tgl-akhir', formatTanggal(tglAkhir));
+  set('val-tgl-cetak', d.tgl_mulai);
+  set('val-dokter',    d.dokter);
+
+  // No RM (opsional)
+  if (d.no_rm) {
+    set('val-rm', d.no_rm);
+    document.getElementById('row-rm').style.display = '';
+  }
+
+  // QR Code
+  if (d.qr_url) {
+    var ph  = document.getElementById('qr-placeholder');
+    var img = document.getElementById('qr-img');
+    // Gunakan Google Charts QR API (tidak butuh library eksternal)
+    var src = 'https://chart.googleapis.com/chart?cht=qr&chs=180x180&chl='
+              + encodeURIComponent(d.qr_url) + '&choe=UTF-8';
+    img.src = src;
+    img.style.display = 'block';
+    ph.style.display  = 'none';
+  }
+}
+
+/* ----------------------------------------------------------
+   4. OVERRIDE via URL params (opsional)
+      Contoh: cetak_surat_istirahat.html?nomor=0099&nama=BUDI&...
+      Berguna saat dipanggil via window.open dari modal form.
+---------------------------------------------------------- */
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.toString()) {
+    ['nomor','nama','ttl','jk','alamat','diagnosa','tgl_mulai','dokter','no_rm','qr_url'].forEach(function(k) {
+      if (params.has(k)) suratData[k] = params.get(k);
+    });
+    if (params.has('lama')) suratData.lama = parseInt(params.get('lama'));
+  }
+})();
+
+/* ----------------------------------------------------------
+   5. JALANKAN
+---------------------------------------------------------- */
+render(suratData);
+</script>
+
+<!-- QRCode.js (opsional, fallback ke Google Charts di atas) -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> -->
+
+</body>
+</html>
+<script>
+  	jQuery('#qrcode_dokter').qrcode({
+  		text	: "Ditanda tangani secara elektronik oleh Dokter: {$surat.kd_dokter}"
+  	});
+</script>

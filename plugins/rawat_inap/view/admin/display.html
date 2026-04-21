@@ -44,6 +44,7 @@
                   <li><a href="{?=url([ADMIN,'rawat_inap','suratrujukan',convertNorawat($value.no_rawat)])?}" target="_blank">Surat Rujukan</a></li>
                   <li><a href="{?=url([ADMIN,'rawat_inap','suratsehat',convertNorawat($value.no_rawat)])?}" target="_blank">Surat Keterangan Sehat</a></li>
                   <li><a href="{?=url([ADMIN,'rawat_inap','suratsakit',convertNorawat($value.no_rawat)])?}" target="_blank">Surat Keterangan Sakit</a></li>
+                  <li><a href="#suratistirahat" data-no_rawat="{$value.no_rawat}">Surat Keterangan Istirahat</a></li>
                   <li><a href="{?=url([ADMIN,'rawat_inap','observasipersalinan',convertNorawat($value.no_rawat)])?}" target="_blank">Observasi Persalinan</a></li>
                 </ul>
               </li>
@@ -149,6 +150,13 @@
     </div>
 </div>
 <div class="modal fade" id="sepModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="suratistirahat" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             ...
@@ -339,6 +347,23 @@
       $("#notif").hide();
       $("#rincian").html(data).show();
     });
+  });
+
+  $('a[href="#suratistirahat"]').click(function (event) {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    var no_rawat = $(this).attr("data-no_rawat").replace(/\//g, '');
+
+    var loadURL = baseURL + '/rawat_inap/formsuratsakit/' + no_rawat + '?t=' + mlite.token;
+
+    var modal = $('#suratistirahat');
+    var modalContent = $('#suratistirahat .modal-content');
+
+    modal.off('show.bs.modal');
+    modal.on('show.bs.modal', function () {
+      modalContent.load(loadURL);
+    }).modal();
+    return false;
   });
 
   $('a[href="#berkas_digital"]').click(function(event){

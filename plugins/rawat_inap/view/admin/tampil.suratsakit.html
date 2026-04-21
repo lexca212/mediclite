@@ -1,0 +1,46 @@
+
+    <table class="table table-striped" width="100%">
+        <thead>
+            <tr>
+                <th>Nomer Rawat</th>
+                <th>Nomer Rekam Medis</th>
+                <th>Tanggal</th>
+                <th>Jam</th>
+                <th>Aksi</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {if: $surat}
+            <tr>
+                <td>{$surat.no_rawat}</td>
+                <td>{$surat.no_rkm_medis}</td>
+                <td>{$surat.tanggal_mulai}</td>
+                <td>{$surat.jam_reg}</td>
+                 <td>
+                    <button class="btn btn-primary cetak" data-no_rawat="{$surat.no_rawat}">
+                        🖨️ Cetak
+                    </button>
+                </td>
+            </tr>
+            {else}
+            <tr>
+                <td colspan="6">Tidak ada data</td>
+            </tr>
+            {/if}
+        </tbody>
+    </table>
+<script>
+$(document).on('click', '.cetak', function (event) {
+    event.preventDefault();
+
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var no_rawat = $(this).data('no_rawat');
+    var set_no_rawat = no_rawat.replace(/\//g, '');
+
+    window.open(
+        baseURL + '/rawat_inap/cetaksuratistirahat/' + set_no_rawat + '?t=' + mlite.token,
+        '_blank' // <-- ini penting
+    );
+});
+</script>

@@ -1590,6 +1590,48 @@ class Admin extends AdminModule
     exit();
   }
 
+  public function getCetakKeluarICu($no_rawat)
+  {
+    $dokter = $this->core->getUserInfo('username', $_SESSION['mlite_user']);
+    $kd_dokter = $this->db('dokter')->where('kd_dokter', $dokter)->oneArray();
+
+    $existing = $this->db('kriteria_keluar_icu')
+        ->where('no_rawat', revertNoRawat($no_rawat))
+        ->join('dokter', 'kriteria_keluar_icu.kd_dokter=dokter.kd_dokter')
+        ->oneArray();
+
+    if ($existing) {
+        $existing['kesadaran']    = json_decode($existing['kesadaran'] ?? '[]', true);
+        $existing['jalan_nafas']  = json_decode($existing['jalan_nafas'] ?? '[]', true);
+        $existing['pernapasan']   = json_decode($existing['pernapasan'] ?? '[]', true);
+        $existing['sirkulasi']    = json_decode($existing['sirkulasi'] ?? '[]', true);
+        $existing['kondisi_lain'] = json_decode($existing['kondisi_lain'] ?? '[]', true);
+    } else {
+        $existing = [
+            'diagnosa'          => '',
+            'dokter_konsultan'  => '',
+            'lainnya'           => '',
+            'kesadaran'         => [],
+            'jalan_nafas'       => [],
+            'pernapasan'        => [],
+            'sirkulasi'         => [],
+            'kondisi_lain'      => [],
+        ];
+    }
+
+    echo $this->draw('cetak.lembar.keluar.icu.html', [
+        'pasien'           => $this->db('pasien')
+                                ->where('no_rawat', revertNoRawat($no_rawat))
+                                ->join('reg_periksa', 'pasien.no_rkm_medis=reg_periksa.no_rkm_medis')
+                                ->oneArray(),
+        'dokter_konsultan' => $this->db('dokter')->toArray(),
+        'settings'         => $this->tpl->noParse_array(htmlspecialchars_array($this->settings('settings'))),
+        'dpjp'             => $kd_dokter,
+        'existing'         => $existing,
+    ]);
+    exit();
+  }
+
 
   // END LEMBAR KELUAR ICU
 

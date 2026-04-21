@@ -1,0 +1,205 @@
+<div class="modal-header">
+    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+        <span aria-hidden="true">×</span> Tutup
+    </button>
+    <h4 class="modal-title">Form Surat Keterangan Istirahat </h4>
+</div>
+<!-- <form action="{?=url([ADMIN,'rawat_inap','simpansuratsakit'])?}" method="post"> -->
+<div class="modal-body">
+    <div class="row">
+        <div class="form-group">
+
+            <div class="col-md-6">
+
+                <label for="">Nomor Surat</label>
+                <input type="text" name="nomor_surat" class="form-control" value="">
+            </div>
+            <div class="col-md-6">
+                <label for="">Nomer Rawat</label>
+                <input type="text" name="no_rawat" id="no_rawat" class="form-control" value="{$pasien.no_rawat}"
+                    readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="nm_pasien">Nama Pasien</label>
+                <input type="text" name="nm_pasien" id="nm_pasien" class="form-control" value="{$pasien.nm_pasien}"
+                    readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="no_rkm_medis">Nomor Rekam Medis</label>
+                <input type="text" name="no_rkm_medis" id="no_rkm_medis" class="form-control"
+                    value="{$pasien.no_rkm_medis}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="tgl_lahir">Tanggal Lahir</label>
+                <input type="text" name="tgl_lahir" class="form-control" value="{$pasien.tgl_lahir}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="umur">Umur</label>
+                <input type="text" name="umur" class="form-control" value="{?=hitungUmur($pasien.tgl_lahir)?}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="jk">Jenis Kelamin</label>
+                <input type="text" name="jk" class="form-control"
+                    value="{if: $pasien.jk == 'L'}Laki-Laki{else}Perempuan{/if}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="alamat">Alamat</label>
+                <input type="text" name="alamat" class="form-control" value="{$pasien.alamat}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="keadaan">Keadaan</label>
+                <input type="text" name="keadaan" class="form-control" value="{$pasien.keadaan}">
+            </div>
+            <div class="col-md-6">
+                <label for="diagnosa">Diagnosa</label>
+                <input type="text" name="diagnosa" class="form-control" value="{$pasien.diagnosa}">
+            </div>
+            <div class="col-md-6">
+                <label for="lama_angka">Lama Angka</label>
+                <input type="number" name="lama_angka" class="form-control" value="{$pasien.lama_angka}">
+            </div>
+            <div class="col-md-6">
+                <label for="lama_huruf">Lama Huruf</label>
+                <input type="text" name="lama_huruf" class="form-control" value="{$pasien.lama_huruf}">
+            </div>
+            <div class="col-md-6">
+                <label for="tanggal_mulai">Tanggal Mulai</label>
+                <input type="date" name="tanggal_mulai" id="tanggal_mulai" class="form-control"
+                    value="{$pasien.tanggal_mulai}">
+            </div>
+            <div class="col-md-6">
+                <label for="tanggal_selesai">Tanggal Selesai</label>
+                <input type="date" name="tanggal_selesai" id="tanggal_selesai" class="form-control"
+                    value="{$pasien.tanggal_selesai}">
+            </div>
+            <div class="col-md-6">
+                <label for="dokter">Dokter</label>
+                <input type="text" class="form-control" value="{$reg_periksa.nm_dokter}">
+                <input type="hidden" name="dokter" value="{$reg_periksa.kd_dokter}">
+            </div>
+            <div class="col-md-6">
+                <label for="petugas">petugas</label>
+                <input type="text" name="petugas" class="form-control" value="{$petugas}">
+            </div>
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <div class="col-md-12">
+        <!-- <input type="submit" class="btn btn-primary" value=""> -->
+        <button class="btn btn-success" id="simpan">💾Simpan</button>
+    </div>
+</div>
+<!-- </form> -->
+<div class="tampildata">
+    <table class="table table-striped" width="100%">
+        <thead>
+            <tr>
+                <th>Nomer Rawat</th>
+                <th>Nomer Rekam Medis</th>
+                <th>Tangal</th>
+                <th>Jam</th>
+                <th>Aksi</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {if: $surat}
+            <tr>
+                <td>{$surat.no_rawat}</td>
+                <td>{$surat.no_rkm_medis}</td>
+                <td>{$surat.tgl_registrasi}</td>
+                <td>{$surat.jam_reg}</td>
+                <td>
+                    <button class="btn btn-primary cetak" data-no_rawat="{$surat.no_rawat}">
+                        🖨️ Cetak
+                    </button>
+                </td>
+            </tr>
+            {else}
+            <tr>
+                <td colspan="6">Tidak ada data</td>
+            </tr>
+            {/if}
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).off('click', '#simpan').on('click', '#simpan', function () {
+
+        var btn = $(this);
+        btn.prop('disabled', true);
+
+        var baseURL = mlite.url + '/' + mlite.admin;
+
+        var no_rawat = $('#no_rawat').val();
+        var set_no_rawat = no_rawat.replace(/\//g, '');
+
+        var url = baseURL + '/rawat_inap/simpansuratsakit/?t=' + mlite.token;
+
+        $.post(url, {
+            nomor_surat: $('input[name=nomor_surat]').val(),
+            no_rawat: no_rawat,
+            nm_pasien: $('#nm_pasien').val(),
+            tgl_lahir: $('input[name=tgl_lahir]').val(),
+            no_rkm_medis: $('#no_rkm_medis').val(),
+            umur: $('input[name=umur]').val(),
+            jk: $('input[name=jk]').val(),
+            alamat: $('input[name=alamat]').val(),
+            keadaan: $('input[name=keadaan]').val(),
+            diagnosa: $('input[name=diagnosa]').val(),
+            lama_angka: $('input[name=lama_angka]').val(),
+            lama_huruf: $('input[name=lama_huruf]').val(),
+            tanggal_mulai: $('#tanggal_mulai').val(),
+            tanggal_selesai: $('#tanggal_selesai').val(),
+            dokter: $('input[name=dokter]').val(),
+            petugas: $('input[name=petugas]').val()
+        }, function (data) {
+
+            console.log(data);
+            btn.prop('disabled', false);
+
+            try {
+                var res = (typeof data === 'string') ? JSON.parse(data) : data;
+
+                if (res.status === 'success') {
+                    alert('Data berhasil disimpan!');
+
+                    // 🔥 reload tampilan seperti IGD
+                    $('.tampildata').load(
+                        baseURL + '/rawat_inap/tampilsuratsakit/' + set_no_rawat + '?t=' + mlite.token
+                    );
+
+                } else {
+                    alert('Gagal: ' + (res.msg || 'error'));
+                }
+
+            } catch (e) {
+                alert('Response tidak valid');
+            }
+
+        }).fail(function () {
+            btn.prop('disabled', false);
+            alert('Request gagal');
+        });
+
+    });
+</script>
+<script>
+$(document).on('click', '.cetak', function (event) {
+    event.preventDefault();
+
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var no_rawat = $(this).data('no_rawat');
+    var set_no_rawat = no_rawat.replace(/\//g, '');
+
+    window.open(
+        baseURL + '/rawat_inap/cetaksuratistirahat/' + set_no_rawat + '?t=' + mlite.token,
+        '_blank' // <-- ini penting
+    );
+});
+</script>

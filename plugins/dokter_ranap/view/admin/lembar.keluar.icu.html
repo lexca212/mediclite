@@ -192,17 +192,18 @@
 </div>
 
 <div class="modal-footer">
+    <button class="btn btn-warning" id="cetak">🖨️Cetak</button>
     <button class="btn btn-danger" data-dismiss="modal" type="button">⬅️Kembali</button>
     <button class="btn btn-primary" id="simpanICU">💾Simpan</button>
 </div>
-<div class="">
-    <table class="table" width="100%">
+<div class="tampildata">
+    <table class="table table-striped" width="100%">
         <thead>
             <tr>
                 <th>Nomer Rawat</th>
                 <th>Dokter</th>
                 <th>Diagnosa</th>
-                <th>DOkter Konsultan</th>
+                <th>Tanggal dan Jam</th>
             </tr>
 
         </thead>
@@ -212,7 +213,7 @@
                 <td>{$existing.no_rawat}</td>
                 <td>{$existing.nm_dokter}</td>
                 <td>{$existing.diagnosa}</td>
-                <td>{$existing.dokter_konsultan}</td>
+                <td>{$existing.tanggal_jam}</td>
             </tr>
             {else}
             <tr>
@@ -262,4 +263,15 @@
             });
         });
     });
+</script>
+<script>
+  $("#cetak").click(function (event) {
+
+    var baseURL = mlite.url + '/' + mlite.admin;
+    event.preventDefault();
+    // var no_rawat = $('input:text[name=no_rawat_lembarMasukNicu]').val();
+    var set_no_rawat = $('input:text[name=no_rawat]').val().replace(/\//g, '');
+
+    window.open(baseURL + '/dokter_ranap/cetakkeluaricu/' + set_no_rawat + '?t=' + mlite.token);
+  });
 </script>
